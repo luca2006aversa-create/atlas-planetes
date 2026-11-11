@@ -1,0 +1,129 @@
+{
+ "limite_pente_deg": 20.0,
+ "rayons_km": [
+  1.0,
+  2.0,
+  5.0
+ ],
+ "elements": [
+  {
+   "nom": "mât 1",
+   "xy": [
+    -11.1,
+    -11.94
+   ],
+   "a_pied_km": 0.32,
+   "a_vol_d_oiseau_km": 0.31
+  },
+  {
+   "nom": "mât 2",
+   "xy": [
+    -11.54,
+    -12.42
+   ],
+   "a_pied_km": 0.34,
+   "a_vol_d_oiseau_km": 0.34
+  },
+  {
+   "nom": "mât 3",
+   "xy": [
+    -10.82,
+    -11.74
+   ],
+   "a_pied_km": 0.66,
+   "a_vol_d_oiseau_km": 0.65
+  },
+  {
+   "nom": "mât 4",
+   "xy": [
+    -11.3,
+    -12.5
+   ],
+   "a_pied_km": 0.32,
+   "a_vol_d_oiseau_km": 0.32
+  },
+  {
+   "nom": "mât 5",
+   "xy": [
+    -11.74,
+    -12.58
+   ],
+   "a_pied_km": 0.61,
+   "a_vol_d_oiseau_km": 0.59
+  },
+  {
+   "nom": "mât 6",
+   "xy": [
+    -11.06,
+    -11.66
+   ],
+   "a_pied_km": 0.62,
+   "a_vol_d_oiseau_km": 0.57
+  },
+  {
+   "nom": "mât 7",
+   "xy": [
+    -11.5,
+    -12.7
+   ],
+   "a_pied_km": 0.6,
+   "a_vol_d_oiseau_km": 0.56
+  },
+  {
+   "nom": "mât 8",
+   "xy": [
+    -10.58,
+    -11.82
+   ],
+   "a_pied_km": 0.87,
+   "a_vol_d_oiseau_km": 0.8
+  },
+  {
+   "nom": "antenne",
+   "xy": [
+    -11.1,
+    -11.42
+   ],
+   "a_pied_km": 0.84,
+   "a_vol_d_oiseau_km": 0.79
+  },
+  {
+   "nom": "aire d'atterrissage",
+   "xy": [
+    -9.26,
+    -13.74
+   ],
+   "a_pied_km": 2.69,
+   "a_vol_d_oiseau_km": 2.57
+  },
+  {
+   "nom": "station glace",
+   "xy": [
+    -4.86,
+    -11.9
+   ],
+   "a_pied_km": 6.56,
+   "a_vol_d_oiseau_km": 6.45
+  }
+ ],
+ "cable_mats_km": 4.34,
+ "surface_km2_sous_rayon": {
+  "1": 2.82,
+  "2": 10.22,
+  "5": 50.58
+ },
+ "route_glace": {
+  "km": 7.31,
+  "part_pct_sous_rayon": {
+   "1": 16,
+   "2": 31,
+   "5": 76
+  },
+  "max_a_pied_km": 6.56,
+  "point_max_xy": [
+   -4.86,
+   -11.9
+  ]
+ },
+ "hypothese": "distance à pied par le chemin le plus court, pentes > 20° interdites ; rayons de repère, pas des normes"
+}

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pôle sud lunaire · étude de site</title>
+<meta name="description" content="Choisir un site au pôle sud de la Lune : lecture d'ingénieur et lecture d'architecte, d'après les données publiques de la sonde LRO.">
+<link rel="icon" href="../logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="etude.css">
+</head>
+<body>
+<header class="bandeau">
+  <a class="marque" href="../"><img src="../logo.png" alt=""> Atlas planètes</a>
+  <span class="titre-court">Étude · pôle sud de la Lune</span>
+  <span class="roles"><b class="r-ing">ingénieur</b> · <b class="r-arc">architecte</b></span>
+</header>
+
+<div id="carte" aria-label="Carte du pôle sud lunaire"></div>
+<div id="carte-titre" aria-live="polite"></div>
+<div id="legende"></div>
+
+<main id="recit">
+
+<section class="chap intro" data-vue='{"calques":["relief"],"cadre":"tout"}' data-titre="Pôle sud de la Lune, 150 × 150 km">
+  <div class="col ing">
+    <p class="surtitre">Étude de site · novembre 2026</p>
+    <h1>Choisir un site au pôle sud de la Lune</h1>
+    <p class="chapeau">Choisir un site d'atterrissage, c'est déjà une analyse de site : pente, lumière, accès, ressources, risques. La NASA le fait pour Artemis III. Cette étude refait l'exercice avec les données publiques de la sonde LRO, et le regarde aussi avec des yeux d'architecte.</p>
+    <p class="auteur">Luca Aversa, étudiant en architecture : ENSA Normandie et Hanoi Architectural University (HAU).</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">Comment lire</h2>
+    <p>À gauche, ce que regarde <b class="r-ing">l'ingénieur</b>. À droite, ce que regarde <b class="r-arc">l'architecte</b>. Au centre, la même carte : 150 × 150 km autour du pôle, d'après le relief mesuré au laser par l'instrument LOLA, un point tous les 20 m.</p>
+    <p class="chiffre"><span data-chiffre="fav60_km2">6,7</span> km²</p>
+    <p>C'est la surface, sur <span data-chiffre="zone_fiable_km2">14 864</span> km² étudiés, où le sol est assez plat pour se poser et où le soleil brille plus de 60 % du temps.</p>
+    <p class="defiler">Faites défiler ↓</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["relief","noms"],"cadre":"tout"}' data-titre="1 · Le relief">
+  <div class="col ing">
+    <p class="num">1</p><h2>Le relief</h2>
+    <p>Le pôle sud est un pays de cratères. Shackleton, 21 km de diamètre, a le pôle presque sur son bord. De Gerlache, Shoemaker, Faustini et Sverdrup l'entourent.</p>
+    <p>Dans ce cadre, le sol va de <span data-chiffre="alt_min_km"></span> à <span data-chiffre="alt_max_km"></span> km par rapport à la sphère de référence : <span data-chiffre="denivele_km"></span> km de dénivelé.</p>
+    <p>Le relief vient de l'altimètre laser LOLA, à bord de la sonde LRO depuis 2009. Ses mesures, répétées à chaque passage, forment ici un modèle à 20 m.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>C'est d'abord une topographie : des crêtes, des cuvettes, des pentes. Les bords de cratère jouent le rôle des lignes de crête d'un paysage terrestre. C'est là que tout va se jouer.</p>
+    <p>L'échelle trompe : un cratère « moyen » ici est plus large qu'une ville. Gardez un œil sur la barre d'échelle en bas de la carte.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","soleil","noms"],"cadre":[-60,-30,25,30]}' data-titre="2 · La lumière">
+  <div class="col ing">
+    <p class="num">2</p><h2>La lumière</h2>
+    <p>L'axe de la Lune n'est incliné que de 1,5°. Au pôle, le soleil ne monte donc jamais haut : il fait le tour de l'horizon en 29,5 jours, à 4° au plus au-dessus de l'horizon dans ce cadre.</p>
+    <p>Les sommets voient le soleil presque tout le temps ; les fonds de cratère, jamais. Le meilleur point du cadre est au soleil <span data-chiffre="soleil_max"></span> % du temps (calcul de l'atlas ; les études publiées donnent environ 90 % sur les meilleures crêtes).</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Il n'y a ni midi ni façade sud. La lumière est rasante, elle vient de tous les côtés à tour de rôle, et les ombres s'étirent : un mât de 10 m projette une ombre d'environ 300 m quand le soleil est à 2°.</p>
+    <p>Une surface verticale reçoit plus de soleil qu'un toit : les panneaux solaires seront des mâts, pas des toitures. Et construire, c'est déjà faire de l'ombre à ses voisins.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","ombre","noms"],"cadre":"tout"}' data-titre="3 · L'ombre et la glace">
+  <div class="col ing">
+    <p class="num">3</p><h2>L'ombre et la glace</h2>
+    <p><span data-chiffre="ombre_permanente_part"></span> % du cadre ne voit jamais le soleil : ce sont les zones d'ombre permanente, en bleu. Ces fonds de cratère comptent parmi les endroits les plus froids du système solaire.</p>
+    <p>Le froid y piège l'eau. En 2009, la sonde LCROSS s'est écrasée dans le cratère Cabeus, un peu au-delà de ce cadre : le panache soulevé contenait de l'eau.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>La ressource est dans l'ombre, l'énergie est au soleil. Le site se joue sur la limite entre les deux, comme sur une berge.</p>
+    <p>À Hanoï, on habite le bord du fleuve Rouge ; ici, on habiterait le bord de la nuit. La distance entre la crête éclairée et le fond glacé devient la mesure du projet.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","pentes","noms"],"cadre":[-60,-30,25,30]}' data-titre="4 · Les pentes">
+  <div class="col ing">
+    <p class="num">4</p><h2>Les pentes</h2>
+    <p>Un atterrisseur se pose sur un sol presque plat et sans gros blocs. Cette étude retient un seuil de 8°.</p>
+    <p><span data-chiffre="pente_moins_8_part"></span> % du cadre est sous 8°, mais surtout dans les fonds de cratère, qui sont dans l'ombre. Sur les crêtes éclairées, les replats sont étroits.</p>
+    <p class="note">Les blocs de pierre ne se voient pas à cette résolution : il faut les images de la caméra LROC, à 50 cm par point.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Pour bâtir et circuler, on retrouve les seuils d'un terrain terrestre : au-delà de 15°, on terrasse ; au-delà de 25°, il faut des murs de soutènement.</p>
+    <p>Comme sur une île au milieu d'un fleuve, la place constructible est rare, et c'est elle qui dicte la forme.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","terre","noms"],"cadre":"tout"}' data-titre="5 · La Terre">
+  <div class="col ing">
+    <p class="num">5</p><h2>La Terre</h2>
+    <p>Pour parler directement à la Terre, il faut la voir. Vue du pôle, elle reste basse sur l'horizon, toujours du même côté : vers la longitude 0, en haut de la carte. Au fil du mois, elle ne bouge que de quelques degrés (la libration).</p>
+    <p>Les versants tournés vers elle la voient presque toujours ; derrière une crête, jamais. <span data-chiffre="terre_jamais_km2"></span> km² du cadre ne la voient jamais : il faudrait un relais.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>La Terre est le seul repère presque fixe du ciel. Elle donne une orientation, comme le nord ou la qibla : une fenêtre peut être tournée vers elle pour toujours.</p>
+    <p>C'est aussi le paysage. La vue sur la Terre sera le luxe du site.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","zonage","lieux"],"cadre":"fiable"}' data-titre="6 · Croiser les critères">
+  <div class="col ing">
+    <p class="num">6</p><h2>Croiser les critères</h2>
+    <p>On garde les points en pente douce (moins de 8°) et au soleil plus de 60 % du temps, en rouge, en écartant le bord du cadre, où l'horizon est mal connu.</p>
+    <p>Il reste <b><span data-chiffre="fav60_km2"></span> km²</b>, en <span data-chiffre="nb_lieux"></span> îlots. Au-dessus de 70 % de soleil : <span data-chiffre="fav70_km2"></span> km². Si l'on veut aussi voir la Terre plus de la moitié du temps : <span data-chiffre="fav60_terre50_km2"></span> km².</p>
+    <p class="note">Cliquez sur un cercle pour lire un îlot.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p><span data-chiffre="fav60_km2"></span> km², c'est un peu plus que le district de Hoàn Kiếm à Hanoï (environ 5,3 km²), mais émietté en <span data-chiffre="nb_lieux"></span> morceaux. Le plus grand fait <span data-chiffre="plus_grand_ha"></span> ha.</p>
+    <p>Ce n'est pas une ville qu'on implante, c'est un archipel de parcelles, reliées par des routes de crête.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","zonage","lieux","berges"],"cadre":[-50,-25,15,22]}' data-titre="7 · La berge : de la lumière à la glace">
+  <div class="col ing">
+    <p class="num">7</p><h2>De la lumière à la glace</h2>
+    <p>Pour chaque îlot, la carte trace le chemin le plus court vers une grande zone d'ombre permanente (plus de 1 km²). La moitié des îlots en sont à moins de <span data-chiffre="ombre_km_mediane"></span> km.</p>
+    <p>C'est la distance que parcourront les engins qui iront chercher la glace, et la longueur des câbles qui leur apporteront l'énergie.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Un programme se dessine :</p>
+    <ul>
+      <li>une aire d'atterrissage à l'écart, parce que le souffle des moteurs projette la poussière (en 1969, Apollo 12 s'est posé à environ 180 m de la sonde Surveyor 3, qui en est revenue sablée) ;</li>
+      <li>un champ de mâts solaires sur la crête ;</li>
+      <li>l'habitat sur l'îlot qui voit le mieux la Terre ;</li>
+      <li>une route vers la glace.</li>
+    </ul>
+    <p>Le plan suit la topographie, comme une ville de crête.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","plan_ombrage","plan_soleil","ombre","plan"],"cadre":"plan"}' data-titre="8 · Un plan sur la crête Shackleton – de Gerlache">
+  <div class="col ing">
+    <p class="num">8</p><h2>Un plan d'implantation</h2>
+    <p>On zoome sur 24 × 20 km à l'ouest de Shackleton, où se trouvent les plus grands îlots éclairés. Le soleil et la Terre y sont recalculés plus finement (un point tous les 40 m), au sol et en haut d'un mât de 20 m.</p>
+    <p>Le programme n'est pas placé à la main mais par des règles écrites, qui sont des hypothèses de l'étude :</p>
+    <ul>
+      <li><b>habitat</b> : sur un replat (pente moyenne sous 5° sur 200 m), au soleil au moins 60 % du temps, là où la Terre se voit le plus. Il est au soleil <span data-plan="habitat.soleil"></span> % du temps et voit la Terre <span data-plan="habitat.terre"></span> % du temps ;</li>
+      <li><b>mâts solaires de 20 m</b> : sur les points les plus éclairés, à 250 m les uns des autres ;</li>
+      <li><b>aire d'atterrissage</b> : à au moins 1,5 km de l'habitat et 1 km des mâts. Elle est à <span data-plan="distances_km.habitat_atterrissage"></span> km, par une route de <span data-plan="routes.atterrissage.km"></span> km ;</li>
+      <li><b>route de la glace</b> : chemin le moins pentu (pentes de plus de 20° interdites). Elle fait <span data-plan="routes.glace.km"></span> km, avec une pente maximale de <span data-plan="routes.glace.pente_max"></span>° et un dénivelé de <span data-plan="routes.glace.denivele"></span> m.</li>
+    </ul>
+    <p>Les règles ont posé l'habitat sur la crête qui relie Shackleton à de Gerlache, à 17 km du pôle. Cette crête est connue pour son éclairage. Une région « Connecting Ridge » figurait dans la liste de la NASA en 2022, mais pas dans celle de 2024.</p>
+    <p class="note">À cette finesse, notre calcul donne des valeurs hautes sur les crêtes (il les surestimait de 6 points face à la carte officielle, voir le chapitre 12). Cliquez sur un élément du plan pour lire ses chiffres.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Un plan de crête : tout tient sur un kilomètre. L'habitat est sur le replat le plus éclairé, les mâts solaires autour de lui, l'antenne au bord, côté Terre.</p>
+    <p>Monter de 20 m change tout. En haut d'un mât, le soleil brille <span data-plan="d.mat_haut_min"></span> à <span data-plan="d.mat_haut_max"></span> % du temps, contre <span data-plan="d.mat_sol_min"></span> à <span data-plan="d.mat_sol_max"></span> % au sol. Ici, la hauteur est une ressource.</p>
+    <p>La Terre, elle, se couche quand même plus d'un tiers du temps : si près du pôle, la libration la fait passer sous l'horizon, même sans relief devant. Il faudra un relais en orbite.</p>
+    <div id="coupe"></div>
+    <p>L'aire d'atterrissage est rejetée à <span data-plan="distances_km.habitat_atterrissage"></span> km et <span data-plan="d.atterrissage_sous"></span> m plus bas, comme un aéroport hors de la ville.</p>
+    <p>La glace qu'on peut atteindre est dans un petit cratère à <span data-plan="routes.glace.km"></span> km par la route. Le fond de Shackleton est <span data-plan="d.shackleton_sous_km"></span> km sous la crête, derrière une paroi trop raide pour toute route (aucun chemin sous 20°). Pour y descendre, il faudrait un câble : un ouvrage d'art, donc un projet d'architecte.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","plan_ombrage","courbes","habitat"],"cadre":"habitat"}' data-titre="9 · L'habitat, sur la crête">
+  <div class="col ing">
+    <p class="num">9</p><h2>Ce qu'on voit depuis l'habitat</h2>
+    <p>L'habitat est à <span data-hab="alt"></span> m d'altitude, sur un plateau presque plat (pente de <span data-hab="terrain.pente_deg"></span>°). Depuis ce point :</p>
+    <ul>
+      <li><b>l'horizon</b> ne monte nulle part au-dessus de l'horizontale : on est sur un toit ;</li>
+      <li><b>le soleil</b> tourne autour de l'horizon en un mois lunaire, sans jamais monter à plus de <span data-hab="soleil.h_max"></span>°. Il est visible <span data-hab="soleil.part"></span> % du temps ;</li>
+      <li><b>la Terre</b> reste dans un cadre de 16° de large, vers la longitude 0. Elle se montre <span data-hab="terre.part"></span> % du temps, et sa plus longue absence dure <span data-hab="terre.absence_max_j"></span> jours. Elle paraît <span data-hab="terre.diametre_deg"></span>° de large, <span data-hab="d.fois_lune"></span> fois la pleine Lune vue de chez nous.</li>
+    </ul>
+    <div id="panorama"></div>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Une maison de crête, couchée et couverte. Trois modules sont alignés sur la crête, sous une butte de régolithe qui protège des radiations, des micrométéorites et des écarts de température. Dans cette esquisse, la couverture fait 3 m, une épaisseur qui reste à dimensionner.</p>
+    <p>Une seule vraie fenêtre : la <b>fenêtre-Terre</b>. Elle est taillée dans la butte vers la longitude 0, et sa forme est celle du ciel où la Terre se promène. Derrière elle, la salle commune.</p>
+    <div id="fenetre"></div>
+    <p>Une fois par mois lunaire, pendant environ <span data-hab="d.jours_axe"></span> jour, le soleil passe dans l'axe et entre par cette fenêtre : une lumière horizontale traverse alors la salle.</p>
+    <div id="coupe-hab"></div>
+    <p>La butte fait environ <span data-hab="d.butte_h"></span> m de haut. Avec le soleil à 2°, son ombre s'étire sur <span data-hab="d.ombre_butte_m"></span> m : les mâts sont plantés juste au-delà, le plus proche à <span data-hab="d.mat_min_m"></span> m. Le sas est au bout est, vers la route de l'aire d'atterrissage.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage","plan_ombrage","proximite","plan"],"cadre":"plan"}' data-titre="10 · À pied depuis l'habitat">
+  <div class="col ing">
+    <p class="num">10</p><h2>À pied depuis l'habitat</h2>
+    <p>Si un véhicule tombe en panne, l'équipage doit pouvoir rentrer à pied. On calcule donc la distance de marche depuis l'habitat, par le chemin le plus court, en interdisant les pentes de plus de 20°. Les bandes de la carte marquent 1, 2 et 5 km.</p>
+    <ul>
+      <li><b>mâts solaires</b> : de <span data-prox="d.mat_min"></span> à <span data-prox="d.mat_max"></span> km à pied. Les câbles, tirés par le chemin le plus court, font <span data-prox="cable_mats_km"></span> km en tout ;</li>
+      <li><b>antenne</b> : <span data-prox="d.antenne"></span> km ;</li>
+      <li><b>aire d'atterrissage</b> : <span data-prox="d.atterrissage"></span> km à pied, contre <span data-prox="d.atterrissage_oiseau"></span> km à vol d'oiseau ;</li>
+      <li><b>station glace</b> : <span data-prox="d.glace"></span> km, c'est le point de la route le plus éloigné de l'habitat.</li>
+    </ul>
+    <p>Sur la route de la glace, <span data-prox="route_glace.part_pct_sous_rayon.1"></span> % du trajet est à moins de 1 km de l'habitat, <span data-prox="route_glace.part_pct_sous_rayon.2"></span> % à moins de 2 km et <span data-prox="route_glace.part_pct_sous_rayon.5"></span> % à moins de 5 km.</p>
+    <p class="note">Les rayons de 1, 2 et 5 km sont des repères d'étude, pas des normes : le vrai rayon de retour à pied dépend des réserves de la combinaison. La marche suit la grille de 40 m (les distances peuvent être surestimées de quelques %), sans tenir compte des blocs ni des petits cratères.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Le rayon de marche dessine le quartier : <span data-prox="surface_km2_sous_rayon.1"></span> km² à moins d'1 km, <span data-prox="surface_km2_sous_rayon.2"></span> km² à moins de 2 km, <span data-prox="surface_km2_sous_rayon.5"></span> km² à moins de 5 km.</p>
+    <p>Tout ce qui sert chaque jour (mâts, antenne) tient dans le premier kilomètre, à portée de marche. L'aire d'atterrissage et la glace sortent du quartier : on s'y rend en véhicule.</p>
+    <p>La route de la glace passe donc plusieurs kilomètres loin de tout abri. Faut-il un refuge à mi-chemin ? C'est une question de projet, que seule cette mesure permet de poser.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage_large","soleil_off","ombrage","soleil","graticule","visites","noms_large","artemis"],"cadre":"large"}' data-titre="11 · Les régions d'Artemis III">
+  <div class="col ing">
+    <p class="num">11</p><h2>Les choix de la NASA</h2>
+    <p>En octobre 2024, la NASA a gardé 9 régions candidates pour Artemis III, sur 13 annoncées en 2022 : Peak near Cabeus B, Haworth, Malapert Massif, Mons Mouton Plateau, Mons Mouton, Nobile Rim 1, Nobile Rim 2, de Gerlache Rim 2, Slater Plain.</p>
+    <p>Ses critères : les fenêtres de lancement, la pente, les blocs et les petits cratères, la lumière pendant le séjour au sol, la visibilité de la Terre et l'intérêt scientifique. Plusieurs régions sont gardées pour pouvoir partir à différentes dates.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Les noms disent la méthode : <i>rim</i> (bord), <i>peak</i> (sommet), <i>massif</i>, <i>plateau</i>. Toutes les régions sont sur des hauteurs, là où notre carte trouve la lumière.</p>
+    <p class="note">La NASA n'a publié ni les coordonnées ni les contours des régions. Sur la carte, chaque région est placée sur la formation dont elle porte le nom (coordonnées de l'UAI), pas sur la région exacte. Hors du cadre détaillé, le fond est la carte officielle d'éclairage de LOLA, à 120 m.</p>
+  </div>
+</section>
+
+<section class="chap" data-vue='{"calques":["ombrage_large","soleil_off","ombrage","soleil","graticule"],"cadre":[-110,-110,110,110]}' data-titre="12 · Notre calcul face aux cartes officielles">
+  <div class="col ing">
+    <p class="num">12</p><h2>Vérifier le calcul</h2>
+    <p>L'équipe de LOLA publie ses propres cartes d'éclairage (Mazarico et al., 2011). Dans le cadre détaillé, au centre, on voit notre calcul ; tout autour, la carte officielle. Comparées point par point dans la zone fiable :</p>
+    <ul>
+      <li>ensoleillement : corrélation <span data-chiffre="c_corr_sol"></span>, écart moyen <span data-chiffre="c_ecart_sol"></span> points de pourcentage ;</li>
+      <li>ombre permanente : <span data-chiffre="c_ombre_nous"></span> km² chez nous, <span data-chiffre="c_ombre_off"></span> km² sur la carte officielle, <span data-chiffre="c_recouv"></span> % de recouvrement ;</li>
+      <li>Terre visible : corrélation <span data-chiffre="c_corr_ter"></span>.</li>
+    </ul>
+    <p>Seul écart notable : sur les meilleures crêtes, notre méthode simplifiée donne <span data-chiffre="c_max_nous"></span> % de soleil, la carte officielle <span data-chiffre="c_max_off"></span> % dans le même cadre. Elle surestime un peu les sommets.</p>
+  </div>
+  <div class="col arc">
+    <h2 class="role">L'architecte</h2>
+    <p>Pourquoi refaire un calcul qui existe déjà ? Pour pouvoir le refaire partout, et le régler à l'échelle du projet.</p>
+    <p>Un architecte a besoin de la lumière jour après jour sur une façade, pas seulement d'une moyenne sur des années. La méthode tient en une page de code, tourne en une minute sur un ordinateur portable, et elle tient la comparaison.</p>
+  </div>
+</section>
+
+<section class="chap fin" data-vue='{"calques":["relief","noms"],"cadre":"tout","libre":true}' data-titre="Explorer la carte">
+  <div class="col ing">
+    <p class="num">13</p><h2>Méthode et limites</h2>
+    <ul class="serre">
+      <li>Relief : NASA/GSFC, LRO LOLA, LDEM_875S_20M (domaine public), de 87,5° S au pôle.</li>
+      <li>Soleil : horizon calculé tous les 7,5° d'azimut sur une grille de 160 m, jusqu'à 70 km, courbure comprise ; déclinaison du soleil entre −1,54° et +1,54°.</li>
+      <li>Terre : même horizon ; libration jusqu'à ±6,7° en latitude et ±7,9° en longitude.</li>
+      <li>Une bande de 15 km au bord du cadre est écartée : l'horizon au-delà n'est pas connu.</li>
+      <li>Comparaison : cartes officielles LOLA à 120 m (AVGVISIB, AVGVISIB_EARTH, LPSR, version 2016 ; Mazarico et al., 2011, <i>Icarus</i> 211). La carte officielle compte un point éclairé dès qu'un bout du soleil est visible ; la nôtre compte la part du disque visible.</li>
+      <li>Plan d'implantation : soleil et Terre recalculés tous les 40 m par lancer de rayons dans le relief à 20 m, au sol et à 20 m de haut. Le programme est placé par des règles écrites (pentes, soleil, Terre, distances, route la moins pentue), qui sont des hypothèses à discuter, pas des normes.</li>
+      <li>Les blocs de pierre et les cratères de moins de 100 m ne sont pas vus.</li>
+    </ul>
+  </div>
+  <div class="col arc">
+    <h2 class="role">Explorer</h2>
+    <p>Les calques sont maintenant libres : cochez-les dans la légende, sur la carte.</p>
+    <p>Sources des régions : NASA, communiqué du 28 octobre 2024 ; résumé LPSC 2026 (NTRS 20250011660) ; noms et coordonnées des formations : UAI / USGS, Gazetteer of Planetary Nomenclature. Sites visités : IM-2 (site visé, LROC), LCROSS (Marshall et al., 2011).</p>
+    <p><a class="bouton" href="../?vue=globe&corps=lune">Ouvrir la Lune en 3D dans l'atlas</a></p>
+  </div>
+</section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script type="module" src="etude.js"></script>
+</body>
+</html>

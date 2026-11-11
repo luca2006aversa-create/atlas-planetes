@@ -1,0 +1,135 @@
+:root {
+  --encre:#1d2433; --papier:#f6f4ef; --trait:#d9d4c7; --doux:#6b7280; --vif:#e4572e; --nuit:#0b0f17;
+  --ing:#3d6b8c; --arc:#b5654a; --col:360px; --haut:46px;
+}
+* { box-sizing:border-box; }
+html, body { margin:0; background:var(--papier); color:var(--encre); font:15px/1.55 Inter, system-ui, sans-serif; }
+a { color:inherit; }
+
+.bandeau { position:fixed; top:0; left:0; right:0; height:var(--haut); z-index:1000; display:flex; align-items:center; gap:14px;
+  padding:0 16px; background:var(--papier); border-bottom:1px solid var(--trait); font-size:13px; }
+.bandeau .marque { display:flex; align-items:center; gap:8px; font-weight:600; text-decoration:none; }
+.bandeau .marque img { width:26px; height:26px; }
+.bandeau .titre-court { color:var(--doux); }
+.bandeau .roles { margin-left:auto; color:var(--doux); }
+.r-ing { color:var(--ing); } .r-arc { color:var(--arc); }
+
+/* Carte fixe au centre, colonnes de texte de part et d'autre */
+#carte { position:fixed; top:var(--haut); bottom:0; left:var(--col); right:var(--col); background:var(--nuit); z-index:1; }
+#carte-titre { position:fixed; top:calc(var(--haut) + 12px); left:calc(var(--col) + 12px); z-index:500; pointer-events:none;
+  background:rgba(246,244,239,.92); padding:5px 10px; border-radius:6px; font-weight:600; font-size:13px; }
+#legende { position:fixed; bottom:12px; left:calc(var(--col) + 12px); z-index:500; max-width:300px; background:rgba(246,244,239,.95);
+  border-radius:8px; padding:8px 10px; font-size:12px; line-height:1.35; box-shadow:0 4px 16px rgba(0,0,0,.3); }
+#legende .ligne { display:flex; align-items:center; gap:6px; margin:3px 0; }
+#legende label { display:flex; align-items:center; gap:6px; cursor:pointer; }
+#legende input { margin:0; }
+#legende .degrade { height:8px; border-radius:2px; margin:2px 0 0; }
+#legende .bornes { display:flex; justify-content:space-between; gap:6px; color:var(--doux); font-size:11px; }
+#legende .case { width:12px; height:12px; border-radius:2px; flex:none; }
+#legende .plier { border:0; background:none; padding:0 0 2px; font:600 11px Inter, system-ui, sans-serif; color:var(--doux);
+  cursor:pointer; text-transform:uppercase; letter-spacing:.06em; }
+#legende .titre { font-weight:600; margin:4px 0 2px; }
+#legende .titre:first-child { margin-top:0; }
+#legende .echelle { margin-top:6px; color:var(--doux); }
+#legende .echelle i { display:block; height:4px; background:var(--encre); margin-bottom:2px; }
+
+#recit { position:relative; z-index:2; padding-top:var(--haut); pointer-events:none; }
+.chap { display:grid; grid-template-columns:var(--col) 1fr var(--col); min-height:calc(100vh - var(--haut)); }
+.chap .col { pointer-events:auto; background:var(--papier); padding:28px 26px 40px; }
+.chap .ing { grid-column:1; border-right:1px solid var(--trait); }
+.chap .arc { grid-column:3; border-left:1px solid var(--trait); }
+.chap + .chap .col { border-top:1px solid var(--trait); }
+.chap .col > :first-child { margin-top:0; }
+
+h1 { font-size:30px; line-height:1.15; margin:6px 0 14px; letter-spacing:-.01em; }
+h2 { font-size:21px; margin:0 0 12px; }
+h2.role { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--arc); font-weight:600; margin-bottom:14px; }
+.ing h2 { color:var(--encre); }
+.num { font-size:12px; font-weight:600; color:var(--ing); margin:0 0 2px; letter-spacing:.06em; }
+.num::before { content:"Lecture d'ingénieur · "; text-transform:uppercase; }
+.surtitre { color:var(--doux); font-size:12px; text-transform:uppercase; letter-spacing:.08em; margin:0; }
+.chapeau { font-size:16.5px; }
+.auteur { color:var(--doux); font-size:13px; border-top:1px solid var(--trait); padding-top:10px; }
+.chiffre { font-size:44px; font-weight:700; color:var(--vif); margin:18px 0 0; line-height:1; }
+.defiler { color:var(--doux); font-size:13px; margin-top:28px; }
+.note { color:var(--doux); font-size:13px; }
+ul { padding-left:18px; } li { margin:4px 0; }
+.serre { font-size:13.5px; }
+.bouton { display:inline-block; background:var(--encre); color:#fff; text-decoration:none; padding:7px 12px; border-radius:6px; font-size:13px; }
+
+/* Étiquettes sur la carte */
+.etiq { background:rgba(246,244,239,.85); border:0; box-shadow:none; color:var(--encre); font:600 11px Inter, system-ui, sans-serif;
+  padding:1px 5px; border-radius:3px; }
+.etiq.artemis { background:var(--encre); color:#fff; }
+.etiq.artemis small { font-weight:400; opacity:.75; }
+.etiq.pole { color:var(--vif); }
+.etiq.loin { background:rgba(246,244,239,.6); font-weight:500; font-size:10.5px; }
+.etiq.visite { background:#ffb000; }
+.etiq.plan { background:#fff; font-size:11.5px; box-shadow:0 1px 3px rgba(0,0,0,.25); }
+#coupe { margin:14px 0 4px; }
+.leaflet-tooltip.etiq::before { display:none; }
+.leaflet-container { font-family:Inter, system-ui, sans-serif; background:var(--nuit); }
+.leaflet-popup-content { font-size:13px; line-height:1.45; margin:10px 12px; }
+.leaflet-popup-content b { font-size:14px; }
+.multiplier { mix-blend-mode:multiply; }
+.leaflet-control-attribution { font-size:10px; }
+
+/* Mode vidéo (?video) : carte plein écran, titres et sous-titres par-dessus */
+body.video { overflow:hidden; }
+body.video .bandeau, body.video #recit, body.video #carte-titre, body.video .leaflet-control-zoom { display:none; }
+body.video #carte { inset:0; left:0; right:0; top:0; }
+body.video #legende { left:auto; right:40px; top:40px; bottom:auto; max-width:330px; font-size:14px; padding:10px 14px; }
+body.video #legende input, body.video #legende .plier { display:none; }
+body.video #legende label { cursor:default; }
+body.video .leaflet-control-attribution { font-size:12px; }
+body.video .etiq { font-size:14px; }
+#video-ui { position:fixed; inset:0; z-index:2000; pointer-events:none; font-family:Inter, system-ui, sans-serif; color:var(--encre); }
+#v-titre { position:absolute; left:48px; top:40px; display:flex; align-items:baseline; gap:16px; background:rgba(246,244,239,.94);
+  padding:12px 22px; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,.3); }
+#v-titre:has(b:empty) { display:none; }
+#v-num { font-size:22px; font-weight:700; color:var(--vif); }
+#v-titre b { font-size:34px; font-weight:700; letter-spacing:-.01em; }
+#v-sous { position:absolute; left:48px; right:48px; bottom:56px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+#v-sous > div { background:rgba(246,244,239,.95); border-radius:12px; padding:16px 22px 18px; box-shadow:0 6px 24px rgba(0,0,0,.3); }
+#v-sous > div:has(p:empty) { display:none; }
+#v-sous i { font-style:normal; font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+#v-sous .v-ing i { color:var(--ing); } #v-sous .v-arc i { color:var(--arc); }
+#v-sous p { margin:6px 0 0; font-size:27px; line-height:1.3; font-weight:500; }
+#v-grand { position:absolute; left:48px; top:130px; font-size:96px; font-weight:800; color:var(--vif);
+  text-shadow:0 2px 0 #fff, 0 0 24px rgba(255,255,255,.9); }
+#v-encart { position:absolute; right:40px; top:40px; width:560px; background:rgba(246,244,239,.97); border-radius:12px; padding:16px;
+  box-shadow:0 6px 24px rgba(0,0,0,.3); }
+#v-encart:empty { display:none; }
+#v-encart svg { display:block; width:100%; height:auto; }
+body.video:has(#v-encart:not(:empty)) #legende, body.video:has(#v-carton:not(:empty)) #legende { display:none; }
+#v-carton { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+  background:rgba(246,244,239,.86); }
+#v-carton:empty { display:none; }
+#v-carton h1 { font-size:68px; line-height:1.1; margin:10px 0 18px; max-width:1300px; letter-spacing:-.015em; }
+#v-carton .v-citation { font-size:54px; font-weight:600; }
+#v-carton .v-sur { font-size:20px; text-transform:uppercase; letter-spacing:.12em; color:var(--doux); margin:0; }
+#v-carton .v-roles { font-size:30px; font-weight:600; margin:0 0 30px; }
+#v-carton .v-auteur { font-size:22px; color:var(--encre); margin:0; }
+#v-carton .v-sources { font-size:16px; color:var(--doux); max-width:1100px; margin-top:26px; }
+#v-marque { position:absolute; left:48px; bottom:22px; font-size:14px; color:#fff; text-shadow:0 0 6px #000; }
+#v-barre { position:absolute; left:0; right:0; bottom:0; height:5px; background:rgba(0,0,0,.25); }
+#v-barre i { display:block; height:100%; background:var(--vif); }
+
+/* Écran moyen : colonnes plus étroites */
+@media (max-width: 1250px) { :root { --col:300px; } body { font-size:14px; } }
+
+/* Téléphone et tablette : carte en haut, texte dessous */
+@media (max-width: 900px) {
+  :root { --col:0px; }
+  #carte { left:0; right:0; bottom:auto; height:46vh; z-index:3; }   /* le texte passe sous la carte */
+  #carte-titre { left:10px; top:calc(var(--haut) + 8px); }
+  #legende { left:auto; right:8px; bottom:auto; top:calc(var(--haut) + 46vh - 8px); transform:translateY(-100%); max-width:62vw;
+    font-size:11px; padding:6px 8px; }
+  #recit { padding-top:calc(var(--haut) + 46vh); }
+  .chap { display:block; min-height:0; }
+  .chap .col { padding:20px 16px 24px; border:0 !important; }
+  .chap .arc { background:#efece4; }
+  .chap + .chap .ing { border-top:1px solid var(--trait) !important; }
+  .bandeau .titre-court { display:none; }
+  h1 { font-size:25px; }
+}

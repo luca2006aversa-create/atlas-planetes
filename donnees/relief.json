@@ -1,0 +1,23 @@
+{
+ "lune": {
+  "largeur": 2880,
+  "hauteur": 1440,
+  "min": -8729,
+  "max": 10552,
+  "ordre": "ligne 0 = 90N, colonne 0 = 180W, int16 LE, metres"
+ },
+ "mars": {
+  "largeur": 2880,
+  "hauteur": 1440,
+  "min": -8135,
+  "max": 21159,
+  "ordre": "ligne 0 = 90N, colonne 0 = 180W, int16 LE, metres"
+ },
+ "terre": {
+  "largeur": 2880,
+  "hauteur": 1440,
+  "min": -10418,
+  "max": 6563,
+  "ordre": "ligne 0 = 90N, colonne 0 = 180W, int16 LE, metres"
+ }
+}

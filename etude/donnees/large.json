@@ -1,0 +1,21 @@
+{
+ "source": "NASA/GSFC, LRO LOLA : LDEM_75S_120M ; AVGVISIB, AVGVISIB_EARTH et LPSR 75S_120M_201608 (Mazarico et al. 2011) ; domaine public",
+ "demi_km": 262.08,
+ "pas_m": 240,
+ "comparaison": {
+  "correlation_soleil": 0.954,
+  "ecart_moyen_soleil_pts": 0.5,
+  "ecart_absolu_moyen_soleil_pts": 2.1,
+  "soleil_max_nous": 88,
+  "soleil_max_officiel": 82,
+  "correlation_terre": 0.943,
+  "ecart_absolu_moyen_terre_pts": 3.7,
+  "ombre_nous_km2": 3357,
+  "ombre_officiel_km2": 3279,
+  "ombre_recouvrement": 0.91
+ },
+ "large": {
+  "ombre_permanente_km2": 18574,
+  "soleil_max": 90
+ }
+}

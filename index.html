@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas du système solaire</title>
+<link rel="icon" type="image/png" href="logo.png">
+<script src="https://cdn.jsdelivr.net/npm/cesium@1.122.0/Build/Cesium/Cesium.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/cesium@1.122.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="" class="logo">
+  <b>Atlas du système solaire</b>
+  <nav>
+    <button data-vue="systeme" class="actif">Système solaire</button>
+    <button data-vue="globe">Globes 3D</button>
+    <button data-vue="missions">Missions</button>
+    <a href="etude/">Étude · pôle sud</a>
+  </nav>
+  <span class="note">prospective planètes · essai 3</span>
+</header>
+
+<main>
+  <!-- Vue 1 : système solaire -->
+  <section id="vue-systeme" class="vue actif">
+    <div id="scene"></div>
+    <div id="etiquettes"></div>
+    <aside class="panneau" id="panneau-systeme">
+      <h2>Date</h2>
+      <div class="date" id="date-affichee">—</div>
+      <input type="range" id="curseur-date" min="0" max="1" step="1">
+      <div class="ligne">
+        <button id="lecture">▶ Lecture</button>
+        <select id="vitesse"><option value="10">10 j/s</option><option value="60" selected>2 mois/s</option><option value="365">1 an/s</option></select>
+        <button id="aujourdhui">Aujourd'hui</button>
+      </div>
+      <h2>Échelle des distances</h2>
+      <div class="ligne"><button data-echelle="racine" class="actif">Comprimée</button><button data-echelle="lineaire">Réelle</button></div>
+      <h2>Sondes en vol à cette date</h2>
+      <div id="sondes-actives" class="liste"></div>
+      <p class="aide">Glisser : tourner · molette : zoomer · clic sur une planète : l'ouvrir en globe 3D.</p>
+    </aside>
+    <div class="fiche-mission" id="fiche-systeme" hidden></div>
+  </section>
+
+  <!-- Vue 2 : globes -->
+  <section id="vue-globe" class="vue">
+    <div id="globe"></div>
+    <aside class="panneau" id="panneau-globe">
+      <h2>Corps</h2>
+      <div class="boutons" id="choix-corps"></div>
+      <h2>Fond</h2>
+      <div class="boutons" id="choix-couche"></div>
+      <h2>Relief</h2>
+      <label class="ligne">Exagération <input type="range" id="exageration" min="1" max="30" step="1" value="1"> <span id="exa-valeur">×1</span></label>
+      <div class="note-petite" id="note-relief"></div>
+      <h2>Missions posées</h2>
+      <label class="ligne"><input type="checkbox" id="sites-on" checked> afficher les sites et les trajets</label>
+      <label class="ligne">Jusqu'en <input type="range" id="sites-annee" min="1959" max="2030" step="1" value="2030"> <span id="sites-annee-valeur">tout</span></label>
+      <div id="sites-corps" class="liste"></div>
+      <div class="note-petite">Plein : posé · creux : écrasé · grand cercle : zone visée · jaune : trajet du rover.
+        Clic : la mission, le lieu, et les données à cet endroit.</div>
+      <h2>Couverture détaillée</h2>
+      <div id="couverture"></div>
+      <h2>Calques chargés</h2>
+      <div id="calques-charges"></div>
+      <h2>Lieux</h2>
+      <div class="boutons" id="choix-lieu"></div>
+      <div id="fiche-corps" class="fiche"></div>
+    </aside>
+    <div class="fiche-mission" id="fiche-zone" hidden></div>
+    <div id="coord"></div>
+  </section>
+
+  <!-- Vue 3 : missions -->
+  <section id="vue-missions" class="vue">
+    <div class="missions-entete">
+      <div class="filtres" id="filtres-agence"></div>
+      <div class="filtres" id="filtres-statut"></div>
+    </div>
+    <div id="frise"></div>
+    <div class="missions-bas">
+      <div><h2>Missions par décennie et par agence</h2><div id="histogramme"></div></div>
+      <div><h2>Premières technologiques</h2><div id="premieres" class="liste"></div></div>
+    </div>
+    <div class="fiche-mission" id="fiche-mission" hidden></div>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

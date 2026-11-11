@@ -1,0 +1,66 @@
+:root { --encre:#1d2433; --papier:#f6f4ef; --trait:#d9d4c7; --doux:#6b7280; --vif:#e4572e; --nuit:#0b0f17; }
+* { box-sizing: border-box; }
+html, body { margin:0; height:100%; background:var(--nuit); color:var(--encre); font:13px/1.45 Inter, system-ui, sans-serif; }
+header { height:46px; display:flex; align-items:center; gap:14px; padding:0 16px; background:var(--papier); border-bottom:1px solid var(--trait); }
+header .logo { width:30px; height:30px; }
+header nav { display:flex; gap:4px; margin-left:12px; }
+header nav button, header nav a { font:inherit; border:0; background:none; padding:6px 10px; border-radius:6px; cursor:pointer; color:var(--encre); text-decoration:none; }
+header nav .actif { background:var(--encre); color:#fff; }
+header .note { margin-left:auto; color:var(--doux); font-size:12px; }
+main { position:absolute; top:46px; left:0; right:0; bottom:0; }
+.vue { position:absolute; inset:0; display:none; }
+.vue.actif { display:block; }
+#scene, #globe { position:absolute; inset:0; }
+.panneau { position:absolute; top:12px; left:12px; width:290px; max-height:calc(100% - 24px); overflow:auto;
+  background:var(--papier); border-radius:10px; padding:12px 14px; box-shadow:0 6px 24px rgba(0,0,0,.35); z-index:10; }
+h2 { font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--doux); margin:12px 0 6px; font-weight:600; }
+h2:first-child { margin-top:0; }
+button, select { font:inherit; color:var(--encre); }
+.panneau button, .boutons button, .filtres button { border:1px solid var(--trait); background:#fff; border-radius:6px; padding:4px 8px; cursor:pointer; }
+.panneau button.actif, .filtres button.actif { background:var(--encre); color:#fff; border-color:var(--encre); }
+.boutons { display:flex; flex-wrap:wrap; gap:4px; }
+.ligne { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+.date { font-size:22px; font-weight:600; }
+input[type=range] { width:100%; accent-color:var(--vif); }
+.liste { max-height:220px; overflow:auto; }
+.liste .item.estompe { opacity:.35; }
+.filtre-actif { background:#fff3d6; border-radius:6px; padding:4px 8px; font-size:12px; margin:4px 0; }
+.filtre-actif button { font-size:12px; padding:1px 6px; }
+.fiche-mission .actions button.principal { background:var(--encre); color:#fff; border-color:var(--encre); }
+.liste .item { display:flex; gap:6px; align-items:baseline; padding:3px 0; border-bottom:1px solid #ece8de; cursor:pointer; }
+.pastille { width:9px; height:9px; border-radius:50%; flex:none; display:inline-block; }
+.aide, .note-petite { color:var(--doux); font-size:11.5px; }
+.fiche { margin-top:10px; }
+.fiche small { color:var(--doux); display:block; margin-top:6px; }
+#etiquettes { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+#etiquettes span { position:absolute; transform:translate(8px,-50%); color:#e9e6dd; font-size:11.5px; white-space:nowrap; pointer-events:auto; cursor:pointer; text-shadow:0 0 4px #000; }
+#etiquettes span.sonde { color:#fff; font-size:10.5px; opacity:.85; cursor:default; }
+#etiquettes span.ouvrable:hover { color:var(--vif); }
+.fiche-mission { position:absolute; right:12px; top:12px; width:340px; max-height:calc(100% - 24px); overflow:auto; background:var(--papier);
+  border-radius:10px; padding:14px 16px; box-shadow:0 6px 24px rgba(0,0,0,.35); z-index:11; }
+.fiche-mission h3 { margin:0 0 4px; font-size:16px; }
+.fiche-mission .meta { color:var(--doux); font-size:12px; margin-bottom:8px; }
+.fiche-mission ul { padding-left:18px; margin:6px 0; }
+.fiche-mission .fermer { position:absolute; right:10px; top:8px; border:0; background:none; font-size:18px; cursor:pointer; }
+.fiche-mission .actions { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
+.fiche-mission .actions button, .fiche-mission .actions a { border:1px solid var(--trait); background:#fff; border-radius:6px; padding:4px 8px; cursor:pointer; color:var(--encre); text-decoration:none; font-size:12px; }
+#coord { position:absolute; bottom:12px; right:12px; color:#fff; font-size:12px; background:rgba(0,0,0,.5); padding:4px 8px; border-radius:4px; z-index:10; }
+.cesium-viewer-bottom { display:none; }
+.calque { border:1px solid var(--trait); border-radius:6px; padding:6px 8px; margin-bottom:6px; background:#fff; }
+.calque .nom { font-size:12px; line-height:1.3; }
+.calque input[type=range] { flex:1; width:auto; }
+.calque button { padding:2px 7px; }
+.legende-couv .item { display:flex; align-items:center; gap:6px; padding:2px 0; }
+.legende-couv input { margin:0; }
+
+/* Missions */
+#vue-missions { background:var(--papier); overflow:auto; }
+.missions-entete { display:flex; gap:16px; flex-wrap:wrap; padding:12px 16px 4px; }
+.filtres { display:flex; gap:4px; flex-wrap:wrap; }
+.filtres button { font-size:12px; }
+#frise { padding:0 16px; }
+#frise svg { display:block; }
+.missions-bas { display:grid; grid-template-columns: 1fr 1fr; gap:24px; padding:8px 16px 24px; }
+.missions-bas .liste { max-height:360px; }
+#premieres .item b { min-width:42px; display:inline-block; }
+@media (max-width: 800px) { .missions-bas { grid-template-columns:1fr; } .panneau { width:calc(100% - 24px); max-height:45%; } .fiche-mission { width:calc(100% - 24px); top:auto; bottom:12px; max-height:45%; } }

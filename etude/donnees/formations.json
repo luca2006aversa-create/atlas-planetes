@@ -1,0 +1,437 @@
+{
+"source": "UAI / USGS, Gazetteer of Planetary Nomenclature, MOON_nomenclature_center_pts (téléchargé le 10/11/2026)",
+"formations": [
+{
+"nom": "Shackleton",
+"lat": -89.67,
+"lon": 129.78,
+"diam": 20.92,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/5450"
+},
+{
+"nom": "Spudis",
+"lat": -89.51,
+"lon": -84.61,
+"diam": 13.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16007"
+},
+{
+"nom": "Marvin",
+"lat": -89.13,
+"lon": -87.78,
+"diam": 4.6,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16008"
+},
+{
+"nom": "Bay",
+"lat": -88.76,
+"lon": -36.85,
+"diam": 3.5,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16417"
+},
+{
+"nom": "Haynes",
+"lat": -88.75,
+"lon": 167.39,
+"diam": 17.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16418"
+},
+{
+"nom": "Henson",
+"lat": -88.57,
+"lon": -130.63,
+"diam": 43.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16004"
+},
+{
+"nom": "de Gerlache",
+"lat": -88.4849,
+"lon": -88.3447,
+"diam": 32.71,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/1439"
+},
+{
+"nom": "Sverdrup",
+"lat": -88.3209,
+"lon": -153.3875,
+"diam": 32.83,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/5782"
+},
+{
+"nom": "Brill",
+"lat": -88.27,
+"lon": -93.41,
+"diam": 17.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16195"
+},
+{
+"nom": "Shoemaker",
+"lat": -88.137,
+"lon": 45.911,
+"diam": 51.82,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/5494"
+},
+{
+"nom": "Slater",
+"lat": -88.0792,
+"lon": 111.2881,
+"diam": 25.12,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/15325"
+},
+{
+"nom": "Tooley",
+"lat": -88.04,
+"lon": 51.31,
+"diam": 7.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/15938"
+},
+{
+"nom": "Cartwright",
+"lat": -87.65,
+"lon": -46.95,
+"diam": 17.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16416"
+},
+{
+"nom": "Haworth",
+"lat": -87.45,
+"lon": -5.17,
+"diam": 51.42,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14502"
+},
+{
+"nom": "Malinkin",
+"lat": -87.2217,
+"lon": 75.9366,
+"diam": 8.28,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/15242"
+},
+{
+"nom": "Faustini",
+"lat": -87.1832,
+"lon": 84.3099,
+"diam": 42.48,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/1919"
+},
+{
+"nom": "Lacus Tenebrarum",
+"lat": -86.71,
+"lon": -87.67,
+"diam": 85.0,
+"type": "Lacus",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16415"
+},
+{
+"nom": "Stose",
+"lat": -86.38,
+"lon": 32.13,
+"diam": 16.7,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16011"
+},
+{
+"nom": "Burbidge",
+"lat": -86.35,
+"lon": 48.6,
+"diam": 21.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16250"
+},
+{
+"nom": "Ibn Bajja",
+"lat": -86.2964,
+"lon": -75.0361,
+"diam": 11.98,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14534"
+},
+{
+"nom": "Mons Malapert",
+"lat": -85.98,
+"lon": -1.67,
+"diam": 67.0,
+"type": "Mons",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16338"
+},
+{
+"nom": "Mons Kocher",
+"lat": -85.46,
+"lon": -118.06,
+"diam": 67.0,
+"type": "Mons",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16394"
+},
+{
+"nom": "Cabeus",
+"lat": -85.3303,
+"lon": -42.1327,
+"diam": 100.58,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/953"
+},
+{
+"nom": "Nobile",
+"lat": -85.2752,
+"lon": 53.2725,
+"diam": 79.27,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/4321"
+},
+{
+"nom": "Wiechert J",
+"lat": -85.2019,
+"lon": -177.637,
+"diam": 34.89,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/13888"
+},
+{
+"nom": "Wiechert P",
+"lat": -85.1276,
+"lon": 151.7574,
+"diam": 38.62,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/13889"
+},
+{
+"nom": "Malapert",
+"lat": -84.9998,
+"lon": 11.4031,
+"diam": 72.38,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/3603"
+},
+{
+"nom": "Whitaker",
+"lat": -84.67,
+"lon": 0.69,
+"diam": 20.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16395"
+},
+{
+"nom": "Mons Mouton",
+"lat": -84.6,
+"lon": 31.0,
+"diam": 130.0,
+"type": "Mons",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16070"
+},
+{
+"nom": "Kuhn",
+"lat": -84.482,
+"lon": -152.4779,
+"diam": 16.61,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14536"
+},
+{
+"nom": "Kocher",
+"lat": -84.4671,
+"lon": -134.0244,
+"diam": 24.03,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14535"
+},
+{
+"nom": "Amundsen",
+"lat": -84.4398,
+"lon": 83.0691,
+"diam": 103.39,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/247"
+},
+{
+"nom": "Floss",
+"lat": -84.28,
+"lon": 42.27,
+"diam": 9.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16251"
+},
+{
+"nom": "Wiechert",
+"lat": -84.0334,
+"lon": 164.701,
+"diam": 40.82,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/6541"
+},
+{
+"nom": "Idel'son L",
+"lat": -83.9919,
+"lon": 118.5631,
+"diam": 28.04,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/10114"
+},
+{
+"nom": "Malapert E",
+"lat": -83.9404,
+"lon": 19.8292,
+"diam": 19.47,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/11084"
+},
+{
+"nom": "Scott M",
+"lat": -83.8646,
+"lon": 34.7362,
+"diam": 17.85,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/13016"
+},
+{
+"nom": "Mons Cabeus",
+"lat": -83.67,
+"lon": -36.16,
+"diam": 43.0,
+"type": "Mons",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16396"
+},
+{
+"nom": "Wiechert E",
+"lat": -83.5634,
+"lon": 176.0168,
+"diam": 20.87,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/13887"
+},
+{
+"nom": "Oberbeck",
+"lat": -83.55,
+"lon": 68.14,
+"diam": 58.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16449"
+},
+{
+"nom": "Wiechert U",
+"lat": -83.43,
+"lon": 149.0414,
+"diam": 29.96,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/13890"
+},
+{
+"nom": "Wapowski",
+"lat": -83.0777,
+"lon": 53.7893,
+"diam": 11.45,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14541"
+},
+{
+"nom": "Rubin",
+"lat": -82.82,
+"lon": 77.65,
+"diam": 4.0,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16273"
+},
+{
+"nom": "Mons Amundsen",
+"lat": -82.57,
+"lon": 75.71,
+"diam": 38.0,
+"type": "Mons",
+"src": "https://planetarynames.wr.usgs.gov/Feature/16397"
+},
+{
+"nom": "Wiechert A",
+"lat": -82.3752,
+"lon": 168.6353,
+"diam": 26.87,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/13886"
+},
+{
+"nom": "Scott",
+"lat": -82.3532,
+"lon": 48.5154,
+"diam": 107.82,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/5395"
+},
+{
+"nom": "Cabeus B",
+"lat": -82.2587,
+"lon": -54.5846,
+"diam": 59.62,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/8058"
+},
+{
+"nom": "Cabeus A",
+"lat": -82.077,
+"lon": -40.2403,
+"diam": 40.88,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/8057"
+},
+{
+"nom": "Braude",
+"lat": -81.8201,
+"lon": 158.8802,
+"diam": 11.28,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14564"
+},
+{
+"nom": "von Baeyer",
+"lat": -81.8013,
+"lon": 61.8738,
+"diam": 13.46,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14540"
+},
+{
+"nom": "Laveran",
+"lat": -81.7989,
+"lon": -159.7841,
+"diam": 12.52,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14537"
+},
+{
+"nom": "Hédervári",
+"lat": -81.7719,
+"lon": 85.6005,
+"diam": 74.14,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/2620"
+},
+{
+"nom": "Svedberg",
+"lat": -81.6806,
+"lon": 65.1505,
+"diam": 15.34,
+"type": "Crater",
+"src": "https://planetarynames.wr.usgs.gov/Feature/14539"
+},
+{
+"nom": "Malapert F",
+"lat": -81.5259,
+"lon": 14.7265,
+"diam": 11.41,
+"type": "Satellite Feature",
+"src": "https://planetarynames.wr.usgs.gov/Feature/11085"
+}
+]
+}

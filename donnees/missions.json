@@ -1,0 +1,2457 @@
+[
+ {
+  "id": "luna-1",
+  "nom": "Luna 1",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Lune (passage manqué), orbite héliocentrique",
+  "corps": [
+   "lune",
+   "soleil"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1959-01-02",
+  "arrivee": "1959-01-04",
+  "fin": "1959-06",
+  "statut": "échec",
+  "premieres": [
+   "premier objet humain à échapper à l'attraction terrestre (1959)"
+  ],
+  "resultats": "Passe à environ 6 000 km de la Lune sans la toucher, puis devient le premier objet placé en orbite autour du Soleil.",
+  "techno": "Fusée R-7 ; trajectoire héliocentrique",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "luna-2",
+  "nom": "Luna 2",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Lune",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "impacteur"
+  ],
+  "lancement": "1959-09-12",
+  "arrivee": "1959-09-14",
+  "fin": "1959-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier objet humain à atteindre la surface de la Lune (1959)"
+  ],
+  "resultats": "S'écrase sur la Lune, première rencontre d'un objet fabriqué par l'homme avec un autre corps céleste.",
+  "techno": "Guidage balistique précis vers une cible lunaire",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "luna-3",
+  "nom": "Luna 3",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Lune (face cachée)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1959-10-04",
+  "arrivee": "1959-10-07",
+  "fin": "1959-10",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Photographie pour la première fois la face cachée de la Lune, transmise par télévision puis numérisée sur Terre.",
+  "techno": "Caméra à film embarquée avec développement et lecture à bord",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "mariner-2",
+  "nom": "Mariner 2",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Vénus",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1962-08-27",
+  "arrivee": "1962-12-14",
+  "fin": "1962-12",
+  "statut": "terminée",
+  "premieres": [
+   "premier survol réussi d'une autre planète (Vénus, 1962)"
+  ],
+  "resultats": "Mesure la température des nuages vénusiens et confirme la nature très chaude de la planète.",
+  "techno": "Radiomètres infrarouge et micro-ondes",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mariner-2/",
+  "a_verifier": false
+ },
+ {
+  "id": "mariner-4",
+  "nom": "Mariner 4",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1964-11-28",
+  "arrivee": "1965-07-14",
+  "fin": "1967-12",
+  "statut": "terminée",
+  "premieres": [
+   "premières images rapprochées de la surface martienne (1965)"
+  ],
+  "resultats": "Envoie 21 photographies de Mars montrant des cratères et une atmosphère ténue, qui détrompent l'idée de canaux.",
+  "techno": "Caméra numérique à balayage transmise par radio",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mariner-4/",
+  "a_verifier": false
+ },
+ {
+  "id": "luna-9",
+  "nom": "Luna 9",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Lune (Oceanus Procellarum)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "1966-01-31",
+  "arrivee": "1966-02-03",
+  "fin": "1966-02",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage en douceur sur un autre corps céleste (1966)"
+  ],
+  "resultats": "Se pose en douceur sur la Lune et envoie les premières photographies panoramiques depuis sa surface.",
+  "techno": "Atterrissage en douceur par rétrofusée",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "apollo-8",
+  "nom": "Apollo 8",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (orbite)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "equipage"
+  ],
+  "lancement": "1968-12-21",
+  "arrivee": "1968-12-24",
+  "fin": "1968-12-27",
+  "statut": "terminée",
+  "premieres": [
+   "premier équipage humain à quitter l'orbite terrestre et à orbiter la Lune (1968)"
+  ],
+  "resultats": "Trois astronautes font dix orbites lunaires et photographient le lever de Terre.",
+  "techno": "Navigation vers et en orbite lunaire avec capsule Apollo",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/apollo-8/",
+  "a_verifier": false
+ },
+ {
+  "id": "apollo-11",
+  "nom": "Apollo 11",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (mer de la Tranquillité)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "equipage",
+   "atterrisseur"
+  ],
+  "lancement": "1969-07-16",
+  "arrivee": "1969-07-20",
+  "fin": "1969-07-24",
+  "statut": "terminée",
+  "premieres": [
+   "premiers humains à marcher sur la Lune (1969)"
+  ],
+  "resultats": "Armstrong et Aldrin se posent et rapportent 21,5 kg d'échantillons lunaires.",
+  "techno": "Atterrissage lunaire habité avec module LM",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/mission/apollo-11/",
+  "a_verifier": false
+ },
+ {
+  "id": "venera-7",
+  "nom": "Venera 7",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Vénus (surface)",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "1970-08-17",
+  "arrivee": "1970-12-15",
+  "fin": "1970-12",
+  "statut": "terminée",
+  "premieres": [
+   "premier engin à transmettre depuis la surface d'une autre planète (Vénus, 1970)"
+  ],
+  "resultats": "Se pose sur Vénus malgré une pression et une chaleur extrêmes et transmet environ 23 minutes de données.",
+  "techno": "Capsule renforcée avec parachute et amortissement",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "luna-16",
+  "nom": "Luna 16",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Lune (mer de la Fécondité)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "retour-echantillons"
+  ],
+  "lancement": "1970-09-12",
+  "arrivee": "1970-09-20",
+  "fin": "1970-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier retour d'échantillons lunaires par un robot (1970)"
+  ],
+  "resultats": "Prélève environ 100 g de sol lunaire et les ramène sur Terre sans équipage.",
+  "techno": "Retour d'échantillons robotisé",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "lunokhod-1",
+  "nom": "Lunokhod 1 (Luna 17)",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Lune (mer des Pluies)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "rover"
+  ],
+  "lancement": "1970-11-10",
+  "arrivee": "1970-11-17",
+  "fin": "1971-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier rover déployé sur un autre corps céleste (1970)"
+  ],
+  "resultats": "Parcourt environ 10 km pendant plusieurs mois et étudie le sol lunaire, piloté depuis la Terre.",
+  "techno": "Rover télécommandé à distance avec retour vidéo",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "mariner-9",
+  "nom": "Mariner 9",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1971-05-30",
+  "arrivee": "1971-11-13",
+  "fin": "1972-10",
+  "statut": "terminée",
+  "premieres": [
+   "premier orbiteur autour de Mars (1971)"
+  ],
+  "resultats": "Cartographie la totalité de la surface martienne pendant une tempête de poussière et révèle les grands volcans.",
+  "techno": "Insertion orbitale autour d'une autre planète",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mariner-9/",
+  "a_verifier": false
+ },
+ {
+  "id": "apollo-15",
+  "nom": "Apollo 15",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (Hadley-Apennins)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "equipage",
+   "rover"
+  ],
+  "lancement": "1971-07-26",
+  "arrivee": "1971-07-30",
+  "fin": "1971-08-07",
+  "statut": "terminée",
+  "premieres": [
+   "premier véhicule habité à rouler sur la Lune (1971)"
+  ],
+  "resultats": "Premier usage du rover lunaire habité, qui permet de parcourir plusieurs kilomètres et de réaliser des forages profonds.",
+  "techno": "Rover lunaire pliable (LRV) et atterrissage de précision",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/mission/apollo-15/",
+  "a_verifier": false
+ },
+ {
+  "id": "pioneer-10",
+  "nom": "Pioneer 10",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter, espace interstellaire",
+  "corps": [
+   "jupiter",
+   "interstellaire"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1972-03-02",
+  "arrivee": "1973-12-03",
+  "fin": "2003-01",
+  "statut": "terminée",
+  "premieres": [
+   "premier engin à traverser la ceinture d'astéroïdes et à survoler Jupiter (1973)"
+  ],
+  "resultats": "Survole Jupiter et envoie les premières images rapprochées de la planète ; quitte le système solaire, contact perdu en 2003.",
+  "techno": "Assistance gravitationnelle et générateur RTG",
+  "horizons_id": "-23",
+  "lien": "https://science.nasa.gov/mission/pioneer-10/",
+  "a_verifier": false
+ },
+ {
+  "id": "apollo-17",
+  "nom": "Apollo 17",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (vallée Taurus-Littrow)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "equipage",
+   "atterrisseur"
+  ],
+  "lancement": "1972-12-07",
+  "arrivee": "1972-12-11",
+  "fin": "1972-12-19",
+  "statut": "terminée",
+  "premieres": [
+   "dernière mission habitée sur la Lune à ce jour (1972)"
+  ],
+  "resultats": "Explore Taurus-Littrow avec le rover lunaire et rapporte le plus grand volume d'échantillons lunaires.",
+  "techno": "Rover lunaire habité et atterrissage habité",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/mission/apollo-17/",
+  "a_verifier": false
+ },
+ {
+  "id": "pioneer-11",
+  "nom": "Pioneer 11",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter, Saturne, espace interstellaire",
+  "corps": [
+   "jupiter",
+   "saturne",
+   "interstellaire"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1973-04-05",
+  "arrivee": "1974-12-02",
+  "fin": "1995-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier survol de Saturne (1979)"
+  ],
+  "resultats": "Passe près de Jupiter, puis survole Saturne et découvre son anneau F ; contact perdu en 1995.",
+  "techno": "Assistance gravitationnelle et RTG",
+  "horizons_id": "-24",
+  "lien": "https://science.nasa.gov/mission/pioneer-11/",
+  "a_verifier": false
+ },
+ {
+  "id": "mariner-10",
+  "nom": "Mariner 10",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Vénus puis Mercure",
+  "corps": [
+   "venus",
+   "mercure"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1973-11-03",
+  "arrivee": "1974-02-05",
+  "fin": "1975-03",
+  "statut": "terminée",
+  "premieres": [
+   "premier usage de l'assistance gravitationnelle pour une mission interplanétaire (1974)"
+  ],
+  "resultats": "Survole Vénus puis Mercure à trois reprises et photographie la surface mercurienne.",
+  "techno": "Assistance gravitationnelle entre Vénus et Mercure",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mariner-10/",
+  "a_verifier": false
+ },
+ {
+  "id": "helios-1",
+  "nom": "Helios 1",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Soleil (orbite héliocentrique proche)",
+  "corps": [
+   "soleil"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1974-12-10",
+  "arrivee": null,
+  "fin": "1985",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Mission germano-américaine qui approche le Soleil plus près que toute sonde jusqu'alors.",
+  "techno": "Orbite solaire très excentrique avec protection thermique",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/helios/",
+  "a_verifier": false
+ },
+ {
+  "id": "venera-9",
+  "nom": "Venera 9",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Vénus (surface et orbite)",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur"
+  ],
+  "lancement": "1975-06-08",
+  "arrivee": "1975-10-22",
+  "fin": "1975-10",
+  "statut": "terminée",
+  "premieres": [
+   "premières images de la surface d'une autre planète (Vénus, 1975)"
+  ],
+  "resultats": "Se pose sur Vénus et transmet la première image en noir et blanc de sa surface.",
+  "techno": "Module d'atterrissage avec caméra et orbiteur relais",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "viking-1",
+  "nom": "Viking 1",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars (orbite et surface)",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur"
+  ],
+  "lancement": "1975-08-20",
+  "arrivee": "1976-06",
+  "fin": "1982-11",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage américain réussi sur Mars (1976)"
+  ],
+  "resultats": "Se pose dans les plaines de Chryse et analyse le sol à la recherche de vie, sans résultat concluant.",
+  "techno": "Entrée atmosphérique, parachute et atterrissage par rétrofusées",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/viking/",
+  "a_verifier": false
+ },
+ {
+  "id": "voyager-2",
+  "nom": "Voyager 2",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter, Saturne, Uranus, Neptune, espace interstellaire",
+  "corps": [
+   "jupiter",
+   "saturne",
+   "uranus",
+   "neptune",
+   "interstellaire"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1977-08-20",
+  "arrivee": "1979-07-09",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier survol d'Uranus et de Neptune (1986, 1989)"
+  ],
+  "resultats": "Seule sonde à avoir visité Uranus et Neptune, elle est entrée dans l'espace interstellaire en 2018.",
+  "techno": "Assistance gravitationnelle exploitant l'alignement des planètes externes",
+  "horizons_id": "-32",
+  "lien": "https://science.nasa.gov/mission/voyager/",
+  "a_verifier": false
+ },
+ {
+  "id": "voyager-1",
+  "nom": "Voyager 1",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter, Saturne, espace interstellaire",
+  "corps": [
+   "jupiter",
+   "saturne",
+   "interstellaire"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1977-09-05",
+  "arrivee": "1979-03",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier objet humain dans l'espace interstellaire (2012)"
+  ],
+  "resultats": "Survole Jupiter et Saturne, puis entre dans l'espace interstellaire ; toujours en communication à grande distance.",
+  "techno": "Assistance gravitationnelle et RTG",
+  "horizons_id": "-31",
+  "lien": "https://science.nasa.gov/mission/voyager/",
+  "a_verifier": false
+ },
+ {
+  "id": "venera-13",
+  "nom": "Venera 13",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Vénus (surface)",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "1981-10-30",
+  "arrivee": "1982-03-01",
+  "fin": "1982-03",
+  "statut": "terminée",
+  "premieres": [
+   "premières images couleur de la surface de Vénus (1982)"
+  ],
+  "resultats": "Se pose sur Vénus, prélève un échantillon de sol et enregistre le premier son d'une autre planète.",
+  "techno": "Atterrisseur résistant à la pression vénusienne, foreuse de sol",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "vega-1",
+  "nom": "Vega 1",
+  "agence": "URSS",
+  "operateur": null,
+  "cible": "Vénus et comète de Halley",
+  "corps": [
+   "venus",
+   "comete"
+  ],
+  "type": [
+   "ballon",
+   "atterrisseur",
+   "survol"
+  ],
+  "lancement": "1984-12-15",
+  "arrivee": "1985-06-11",
+  "fin": "1986-03",
+  "statut": "terminée",
+  "premieres": [
+   "premier ballon déployé dans l'atmosphère d'une autre planète (Vénus, 1985)"
+  ],
+  "resultats": "Un ballon atmosphérique vénusien flotte plusieurs jours, puis la sonde survole la comète de Halley.",
+  "techno": "Ballon aérostatique dans une atmosphère planétaire",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "giotto",
+  "nom": "Giotto",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Comète de Halley",
+  "corps": [
+   "comete"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1985-07-02",
+  "arrivee": "1986-03-14",
+  "fin": "1992-07",
+  "statut": "terminée",
+  "premieres": [
+   "premières images rapprochées du noyau d'une comète (1986)"
+  ],
+  "resultats": "Passe à moins de 600 km du noyau de Halley et révèle sa forme et son activité.",
+  "techno": "Bouclier antipoussière pour survol de comète",
+  "horizons_id": null,
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Giotto",
+  "a_verifier": false
+ },
+ {
+  "id": "magellan",
+  "nom": "Magellan",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Vénus",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1989-05-04",
+  "arrivee": "1990-08-10",
+  "fin": "1994-10-12",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Cartographie par radar environ 98 % de la surface vénusienne ; la sonde est volontairement précipitée dans l'atmosphère.",
+  "techno": "Radar à synthèse d'ouverture et aérofreinage",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/magellan/",
+  "a_verifier": false
+ },
+ {
+  "id": "galileo",
+  "nom": "Galileo",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter",
+  "corps": [
+   "jupiter"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1989-10-18",
+  "arrivee": "1995-12-07",
+  "fin": "2003-09-21",
+  "statut": "terminée",
+  "premieres": [
+   "premier orbiteur autour de Jupiter et premier largage de sonde dans son atmosphère (1995)"
+  ],
+  "resultats": "Survole Gaspra et Ida, découvre la lune Dactyl, et étudie les lunes glacées de Jupiter ; son antenne haut gain n'a jamais pu se déployer.",
+  "techno": "Assistance gravitationnelle multiple (Vénus, Terre x2) et sonde atmosphérique",
+  "horizons_id": "-77",
+  "lien": "https://science.nasa.gov/mission/galileo/",
+  "a_verifier": false
+ },
+ {
+  "id": "ulysses",
+  "nom": "Ulysses",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Soleil (orbite polaire), Jupiter",
+  "corps": [
+   "soleil",
+   "jupiter"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1990-10-06",
+  "arrivee": "1992-02",
+  "fin": "2009-06-30",
+  "statut": "terminée",
+  "premieres": [
+   "premier engin à survoler les pôles du Soleil (1994)"
+  ],
+  "resultats": "Mission conjointe ESA-NASA qui passe au-dessus des pôles solaires et mesure le vent solaire en trois dimensions.",
+  "techno": "Assistance gravitationnelle de Jupiter pour sortir du plan de l'écliptique",
+  "horizons_id": "-55",
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Ulysses",
+  "a_verifier": false
+ },
+ {
+  "id": "mars-observer",
+  "nom": "Mars Observer",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1992-09-25",
+  "arrivee": null,
+  "fin": "1993-08",
+  "statut": "échec",
+  "premieres": [],
+  "resultats": "Perdue trois jours avant son insertion orbitale autour de Mars, probablement à cause d'une explosion de réservoir.",
+  "techno": "Insertion orbitale autour de Mars (échec)",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mars-observer/",
+  "a_verifier": false
+ },
+ {
+  "id": "near-shoemaker",
+  "nom": "NEAR Shoemaker",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Éros (astéroïde)",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur"
+  ],
+  "lancement": "1996-02-17",
+  "arrivee": "2000-02-14",
+  "fin": "2001-02",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage sur un astéroïde (2001)"
+  ],
+  "resultats": "Passe en orbite autour d'Éros, cartographie l'astéroïde et s'y pose en 2001 ; l'atterrissage n'était pas prévu.",
+  "techno": "Mise en orbite autour d'un petit corps et atterrissage sur astéroïde",
+  "horizons_id": "-93",
+  "lien": "https://science.nasa.gov/mission/near/",
+  "a_verifier": false
+ },
+ {
+  "id": "mars-global-surveyor",
+  "nom": "Mars Global Surveyor",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1996-11-07",
+  "arrivee": "1997-09-12",
+  "fin": "2006-11",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Cartographie Mars pendant près de dix ans et révèle des signes d'eau liquide récente sur des pentes.",
+  "techno": "Aérofreinage pour passer en orbite basse",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mgs/",
+  "a_verifier": false
+ },
+ {
+  "id": "mars-pathfinder",
+  "nom": "Mars Pathfinder",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars (surface)",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "1996-12-04",
+  "arrivee": "1997-07-04",
+  "fin": "1997-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier rover déployé sur Mars (Sojourner, 1997)"
+  ],
+  "resultats": "Dépose le petit rover Sojourner, qui explore le sol martien pendant plusieurs mois.",
+  "techno": "Atterrissage par airbags gonflables",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mars-pathfinder/",
+  "a_verifier": false
+ },
+ {
+  "id": "cassini-huygens",
+  "nom": "Cassini-Huygens",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Saturne et Titan",
+  "corps": [
+   "saturne"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur"
+  ],
+  "lancement": "1997-10-15",
+  "arrivee": "2004-07-01",
+  "fin": "2017-09-15",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage sur Titan (2005)"
+  ],
+  "resultats": "Orbite Saturne pendant 13 ans ; la sonde Huygens se pose sur Titan et révèle des lacs d'hydrocarbures.",
+  "techno": "Assistance gravitationnelle multiple et générateurs RTG",
+  "horizons_id": "-82",
+  "lien": "https://science.nasa.gov/mission/cassini/",
+  "a_verifier": false
+ },
+ {
+  "id": "deep-space-1",
+  "nom": "Deep Space 1",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Astéroïde Braille, comète Borrelly",
+  "corps": [
+   "asteroide",
+   "comete"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "1998-10-24",
+  "arrivee": "1999-07",
+  "fin": "2001-12",
+  "statut": "terminée",
+  "premieres": [
+   "premier usage de la propulsion ionique sur une mission interplanétaire (1998)"
+  ],
+  "resultats": "Démontre la propulsion ionique en vol, survole un astéroïde puis la comète Borrelly.",
+  "techno": "Propulsion ionique à xénon",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/deep-space-1/",
+  "a_verifier": false
+ },
+ {
+  "id": "mars-climate-orbiter",
+  "nom": "Mars Climate Orbiter",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "1998-12-11",
+  "arrivee": null,
+  "fin": "1999-09",
+  "statut": "échec",
+  "premieres": [],
+  "resultats": "Perdue à l'arrivée à cause d'une confusion entre unités anglaises et métriques dans le logiciel de navigation.",
+  "techno": "Navigation et insertion orbitale (échec)",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mars-climate-orbiter/",
+  "a_verifier": false
+ },
+ {
+  "id": "stardust",
+  "nom": "Stardust",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Comète Wild 2",
+  "corps": [
+   "comete"
+  ],
+  "type": [
+   "survol",
+   "retour-echantillons"
+  ],
+  "lancement": "1999-02-07",
+  "arrivee": "2004-01",
+  "fin": "2011",
+  "statut": "terminée",
+  "premieres": [
+   "premier retour d'échantillons d'une comète (2006)"
+  ],
+  "resultats": "Survole la comète Wild 2 et ramène une capsule de poussières cométaires en 2006.",
+  "techno": "Retour d'échantillons par capsule de rentrée",
+  "horizons_id": "-29",
+  "lien": "https://science.nasa.gov/mission/stardust/",
+  "a_verifier": false
+ },
+ {
+  "id": "hayabusa",
+  "nom": "Hayabusa",
+  "agence": "JAXA",
+  "operateur": null,
+  "cible": "Astéroïde Itokawa",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur",
+   "retour-echantillons"
+  ],
+  "lancement": "2003-05-09",
+  "arrivee": "2005-09-12",
+  "fin": "2010-06-13",
+  "statut": "terminée",
+  "premieres": [
+   "premier retour d'échantillons d'un astéroïde (2010)"
+  ],
+  "resultats": "Se pose brièvement sur Itokawa, prélève des grains de sol et revient sur Terre après une panne de moteurs.",
+  "techno": "Propulsion ionique et atterrissage par rebond",
+  "horizons_id": null,
+  "lien": "https://www.isas.jaxa.jp/",
+  "a_verifier": false
+ },
+ {
+  "id": "mars-express",
+  "nom": "Mars Express",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2003-06-02",
+  "arrivee": "2003-12-25",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier radar sondeur (MARSIS) en orbite martienne (2005)"
+  ],
+  "resultats": "Orbite Mars depuis plus de vingt ans, cartographie la planète et détecte de l'eau souterraine possible.",
+  "techno": "Orbiteur multi-instruments avec radar sondeur",
+  "horizons_id": "-41",
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Mars_Express",
+  "a_verifier": false
+ },
+ {
+  "id": "spirit",
+  "nom": "Spirit (MER-A)",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars, cratère Gusev",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "rover"
+  ],
+  "lancement": "2003-06-10",
+  "arrivee": "2004-01-04",
+  "fin": "2010-03",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Explore le cratère Gusev, trouve des preuves d'eau ancienne et reste bloqué dans le sable avant son silence.",
+  "techno": "Atterrissage par airbags et rover solaire autonome",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mer/",
+  "a_verifier": false
+ },
+ {
+  "id": "opportunity",
+  "nom": "Opportunity (MER-B)",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars, Meridiani Planum",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "rover"
+  ],
+  "lancement": "2003-07-07",
+  "arrivee": "2004-01-25",
+  "fin": "2018-02",
+  "statut": "terminée",
+  "premieres": [
+   "premier rover à parcourir plus de 40 km sur Mars (2014)"
+  ],
+  "resultats": "Découvre de l'hématite formée en présence d'eau et parcourt plus de 45 km avant de s'arrêter lors d'une tempête.",
+  "techno": "Rover solaire autonome et navigation par images",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mer/",
+  "a_verifier": false
+ },
+ {
+  "id": "rosetta",
+  "nom": "Rosetta (avec Philae)",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Comète 67P/Churyumov-Gerasimenko",
+  "corps": [
+   "comete"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur"
+  ],
+  "lancement": "2004-03-02",
+  "arrivee": "2014-08-06",
+  "fin": "2016-09-30",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage sur une comète (2014)"
+  ],
+  "resultats": "Accompagne la comète pendant deux ans ; le module Philae se pose sur le noyau, rebondit, puis s'immobilise.",
+  "techno": "Propulsion et orbite autour d'un noyau cométaire de faible gravité",
+  "horizons_id": "-226",
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+  "a_verifier": false
+ },
+ {
+  "id": "messenger",
+  "nom": "MESSENGER",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mercure",
+  "corps": [
+   "mercure"
+  ],
+  "type": [
+   "survol",
+   "orbiteur"
+  ],
+  "lancement": "2004-08-03",
+  "arrivee": "2011-03-18",
+  "fin": "2015-04-30",
+  "statut": "terminée",
+  "premieres": [
+   "premier orbiteur de Mercure (2011)"
+  ],
+  "resultats": "Cartographie Mercure en orbite pendant quatre ans et trouve de la glace d'eau dans les cratères polaires.",
+  "techno": "Bouclier thermique en céramique et assistance gravitationnelle multiple",
+  "horizons_id": "-236",
+  "lien": "https://science.nasa.gov/mission/messenger/",
+  "a_verifier": false
+ },
+ {
+  "id": "deep-impact",
+  "nom": "Deep Impact",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Comète Tempel 1",
+  "corps": [
+   "comete"
+  ],
+  "type": [
+   "impacteur",
+   "survol"
+  ],
+  "lancement": "2005-01-12",
+  "arrivee": "2005-07-04",
+  "fin": "2013-08",
+  "statut": "terminée",
+  "premieres": [
+   "premier impact contrôlé sur une comète (2005)"
+  ],
+  "resultats": "Un impacteur frappe le noyau de Tempel 1 et soulève un nuage de poussières analysé depuis la sonde.",
+  "techno": "Impacteur cinétique et survol de comète",
+  "horizons_id": "-140",
+  "lien": "https://science.nasa.gov/mission/deep-impact-epoxi/",
+  "a_verifier": false
+ },
+ {
+  "id": "mro",
+  "nom": "Mars Reconnaissance Orbiter",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2005-08-12",
+  "arrivee": "2006-03-10",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Imagerie haute résolution de Mars (HiRISE) et relais de données pour les rovers.",
+  "techno": "Aérofreinage et imageur à très haute résolution",
+  "horizons_id": "-74",
+  "lien": "https://science.nasa.gov/mission/mars-reconnaissance-orbiter/",
+  "a_verifier": false
+ },
+ {
+  "id": "new-horizons",
+  "nom": "New Horizons",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter, Pluton, Arrokoth",
+  "corps": [
+   "jupiter",
+   "pluton",
+   "asteroide"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "2006-01-19",
+  "arrivee": "2015-07-14",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier survol de Pluton (2015)",
+   "premier survol d'un objet de la ceinture de Kuiper (2019)"
+  ],
+  "resultats": "Survole Pluton et Charon en 2015 puis Arrokoth en 2019, le plus lointain objet visité.",
+  "techno": "Assistance gravitationnelle et RTG",
+  "horizons_id": "-98",
+  "lien": "https://science.nasa.gov/mission/new-horizons/",
+  "a_verifier": false
+ },
+ {
+  "id": "phoenix",
+  "nom": "Phoenix",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars (pôle nord)",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2007-08-04",
+  "arrivee": "2008-05-25",
+  "fin": "2008-11-10",
+  "statut": "terminée",
+  "premieres": [
+   "premier engin à analyser directement de la glace d'eau martienne (2008)"
+  ],
+  "resultats": "Se pose près du pôle nord, découvre la glace d'eau sous la surface et analyse le sol jusqu'à l'hiver.",
+  "techno": "Atterrissage polaire avec bras robotisé et analyse chimique",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/phoenix/",
+  "a_verifier": false
+ },
+ {
+  "id": "dawn",
+  "nom": "Dawn",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Vesta puis Cérès",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2007-09-27",
+  "arrivee": "2011-07-16",
+  "fin": "2018-10-31",
+  "statut": "terminée",
+  "premieres": [
+   "premier engin à orbiter deux corps distincts de la ceinture principale (Vesta, Cérès)"
+  ],
+  "resultats": "Orbite Vesta puis Cérès, dont elle révèle les taches brillantes de sel.",
+  "techno": "Propulsion ionique multi-orbites",
+  "horizons_id": "-203",
+  "lien": "https://science.nasa.gov/mission/dawn/",
+  "a_verifier": false
+ },
+ {
+  "id": "chandrayaan-1",
+  "nom": "Chandrayaan-1",
+  "agence": "ISRO",
+  "operateur": null,
+  "cible": "Lune",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "orbiteur",
+   "impacteur"
+  ],
+  "lancement": "2008-10-22",
+  "arrivee": "2008-11-08",
+  "fin": "2009-08-29",
+  "statut": "terminée",
+  "premieres": [
+   "première mission lunaire indienne et détection d'eau sur la Lune (2009)"
+  ],
+  "resultats": "Un instrument détecte de l'eau sur la Lune ; un impacteur est largué sur la surface.",
+  "techno": "Orbite lunaire et instrument spectromètre infrarouge",
+  "horizons_id": null,
+  "lien": "https://www.isro.gov.in/",
+  "a_verifier": false
+ },
+ {
+  "id": "lro",
+  "nom": "Lunar Reconnaissance Orbiter (LRO)",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "orbiteur",
+   "impacteur"
+  ],
+  "lancement": "2009-06-18",
+  "arrivee": "2009-06-23",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Cartographie la Lune à haute résolution ; la mission LCROSS frappe un cratère polaire pour y chercher de l'eau.",
+  "techno": "Orbite polaire lunaire et imagerie très haute résolution",
+  "horizons_id": "-85",
+  "lien": "https://science.nasa.gov/mission/lro/",
+  "a_verifier": false
+ },
+ {
+  "id": "juno",
+  "nom": "Juno",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter",
+  "corps": [
+   "jupiter"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2011-08-05",
+  "arrivee": "2016-07-04",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier orbiteur jovien à voler sous les nuages dans une orbite polaire (2016)"
+  ],
+  "resultats": "Étudie l'intérieur de Jupiter, son champ magnétique et sa structure profonde, en orbite polaire.",
+  "techno": "Panneaux solaires à grande surface pour l'orbite jovienne",
+  "horizons_id": "-61",
+  "lien": "https://science.nasa.gov/mission/juno/",
+  "a_verifier": true
+ },
+ {
+  "id": "curiosity",
+  "nom": "Curiosity (MSL)",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars, cratère Gale",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "rover"
+  ],
+  "lancement": "2011-11-26",
+  "arrivee": "2012-08-06",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Explore le cratère Gale, découvre des molécules organiques et des preuves d'un ancien lac.",
+  "techno": "Atterrissage par grue volante (sky crane) et rover nucléaire",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/msl-curiosity/",
+  "a_verifier": false
+ },
+ {
+  "id": "mangalyaan",
+  "nom": "Mangalyaan (MOM)",
+  "agence": "ISRO",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2013-11-05",
+  "arrivee": "2014-09-24",
+  "fin": "2022-09-27",
+  "statut": "terminée",
+  "premieres": [
+   "premier succès d'une mission martienne au premier essai pour l'Inde (2014)"
+  ],
+  "resultats": "Atteint Mars au premier essai, étudie l'atmosphère et l'hydrogène supérieur ; mission très peu coûteuse.",
+  "techno": "Mission interplanétaire à faible coût",
+  "horizons_id": null,
+  "lien": "https://www.isro.gov.in/",
+  "a_verifier": false
+ },
+ {
+  "id": "maven",
+  "nom": "MAVEN",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars (atmosphère)",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2013-11-18",
+  "arrivee": "2014-09-22",
+  "fin": "2026-06",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Étudie la haute atmosphère de Mars et sa fuite vers l'espace depuis 2014. Contact perdu le 6 décembre 2025 ; la NASA a déclaré la fin de mission le 3 juin 2026.",
+  "techno": "Orbite elliptique pour échantillonner la haute atmosphère",
+  "horizons_id": "-202",
+  "lien": "https://science.nasa.gov/mission/maven/",
+  "a_verifier": false
+ },
+ {
+  "id": "chang-e-3",
+  "nom": "Chang'e 3 (Yutu)",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Lune",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2013-12-02",
+  "arrivee": "2013-12-14",
+  "fin": "2016",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage doux chinois sur la Lune (2013)"
+  ],
+  "resultats": "Se pose dans la mer des Pluies et dépose le rover Yutu, qui explore le sol lunaire.",
+  "techno": "Atterrissage doux et rover autonome",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": false
+ },
+ {
+  "id": "hayabusa2",
+  "nom": "Hayabusa2",
+  "agence": "JAXA",
+  "operateur": null,
+  "cible": "Astéroïde Ryugu",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur",
+   "impacteur",
+   "retour-echantillons"
+  ],
+  "lancement": "2014-12-03",
+  "arrivee": "2018-06-27",
+  "fin": "2020-12-06",
+  "statut": "terminée",
+  "premieres": [
+   "premier impact artificiel sur un astéroïde suivi d'un prélèvement du sous-sol (2019)"
+  ],
+  "resultats": "Frappe Ryugu avec un impacteur, prélève des échantillons sous la surface et les rapporte sur Terre.",
+  "techno": "Retour d'échantillons et impacteur explosif",
+  "horizons_id": "-37",
+  "lien": "https://www.isas.jaxa.jp/",
+  "a_verifier": false
+ },
+ {
+  "id": "osiris-rex",
+  "nom": "OSIRIS-REx",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Astéroïde Bennu",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur",
+   "retour-echantillons"
+  ],
+  "lancement": "2016-09-08",
+  "arrivee": "2018-12-03",
+  "fin": "2023-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier retour d'échantillons d'astéroïde par les États-Unis (2023)"
+  ],
+  "resultats": "Prélève du sol de Bennu et livre la capsule d'échantillons sur Terre en 2023.",
+  "techno": "Retour d'échantillons par capsule et prélèvement par bras",
+  "horizons_id": "-64",
+  "lien": "https://science.nasa.gov/mission/osiris-rex/",
+  "a_verifier": false
+ },
+ {
+  "id": "insight",
+  "nom": "InSight",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2018-05-05",
+  "arrivee": "2018-11-26",
+  "fin": "2022-12-21",
+  "statut": "terminée",
+  "premieres": [
+   "premier sismomètre déployé sur Mars (2019)"
+  ],
+  "resultats": "Détecte plus de 1 300 séismes martiens et mesure la structure interne de la planète.",
+  "techno": "Sismomètre à très haute sensibilité",
+  "horizons_id": "-189",
+  "lien": "https://science.nasa.gov/mission/insight/",
+  "a_verifier": false
+ },
+ {
+  "id": "parker-solar-probe",
+  "nom": "Parker Solar Probe",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Soleil (couronne)",
+  "corps": [
+   "soleil"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2018-08-12",
+  "arrivee": null,
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier engin à traverser la couronne solaire (2018)"
+  ],
+  "resultats": "Passe à moins de 6 millions de km du Soleil, dans sa couronne, et mesure le vent solaire sur place.",
+  "techno": "Bouclier thermique en carbone et assistances gravitationnelles vénusiennes",
+  "horizons_id": "-96",
+  "lien": "https://science.nasa.gov/mission/parker-solar-probe/",
+  "a_verifier": false
+ },
+ {
+  "id": "bepicolombo",
+  "nom": "BepiColombo",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Mercure",
+  "corps": [
+   "mercure"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2018-10-20",
+  "arrivee": "2026-11",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Arrivée à Mercure prévue fin 2026 pour deux orbiteurs (ESA et JAXA) ; mise en orbite en cours de préparation.",
+  "techno": "Propulsion ionique et assistances gravitationnelles multiples",
+  "horizons_id": "-121",
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/BepiColombo",
+  "a_verifier": true
+ },
+ {
+  "id": "chang-e-4",
+  "nom": "Chang'e 4 (Yutu-2)",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Lune (face cachée)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2018-12-08",
+  "arrivee": "2019-01-03",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier atterrissage sur la face cachée de la Lune (2019)"
+  ],
+  "resultats": "Se pose dans le bassin von Kármán, première exploration au sol de la face cachée.",
+  "techno": "Relais en orbite (Queqiao) pour communiquer avec la face cachée",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": true
+ },
+ {
+  "id": "solar-orbiter",
+  "nom": "Solar Orbiter",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Soleil (pôles)",
+  "corps": [
+   "soleil",
+   "venus"
+  ],
+  "type": [
+   "orbiteur",
+   "survol"
+  ],
+  "lancement": "2020-02-10",
+  "arrivee": null,
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premières images des pôles du Soleil (2022)"
+  ],
+  "resultats": "Utilise des survols de Vénus pour s'incliner vers les pôles solaires et les photographier.",
+  "techno": "Assistances gravitationnelles vénusiennes pour incliner l'orbite",
+  "horizons_id": "-144",
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Solar_Orbiter",
+  "a_verifier": false
+ },
+ {
+  "id": "hope",
+  "nom": "Hope (EMM)",
+  "agence": "EAU",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2020-07-19",
+  "arrivee": "2021-02-09",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "première mission martienne des Émirats arabes unis (2021)"
+  ],
+  "resultats": "Étudie l'atmosphère martienne et ses variations saisonnières et journalières.",
+  "techno": "Orbiteur d'étude atmosphérique",
+  "horizons_id": "-62",
+  "lien": "https://www.mbrsc.ae/",
+  "a_verifier": false
+ },
+ {
+  "id": "tianwen-1",
+  "nom": "Tianwen-1 (Zhurong)",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur",
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2020-07-23",
+  "arrivee": "2021-02-10",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "première mission martienne chinoise réussie au premier essai (2021)"
+  ],
+  "resultats": "Orbiteur, atterrisseur et rover Zhurong explorent la plaine d'Utopia ; le rover est mis en veille en 2022.",
+  "techno": "Atterrissage autonome avec rover solaire",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": false
+ },
+ {
+  "id": "perseverance",
+  "nom": "Perseverance",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars, cratère Jezero",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "rover"
+  ],
+  "lancement": "2020-07-30",
+  "arrivee": "2021-02-18",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [
+   "premier engin à produire de l'oxygène sur une autre planète (MOXIE, 2021)"
+  ],
+  "resultats": "Collecte des échantillons de roches en vue d'un futur retour sur Terre et teste MOXIE.",
+  "techno": "Atterrissage par grue volante et prélèvement d'échantillons",
+  "horizons_id": "-168",
+  "lien": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+  "a_verifier": false
+ },
+ {
+  "id": "ingenuity",
+  "nom": "Ingenuity",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "helicoptere"
+  ],
+  "lancement": "2020-07-30",
+  "arrivee": "2021-02-18",
+  "fin": "2024-01",
+  "statut": "terminée",
+  "premieres": [
+   "premier vol motorisé et contrôlé sur une autre planète (2021)"
+  ],
+  "resultats": "Réalise 72 vols dans l'air ténu de Mars, bien au-delà de sa durée de démonstration prévue.",
+  "techno": "Hélicoptère léger avec rotors à grande vitesse",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/mars-helicopter/",
+  "a_verifier": false
+ },
+ {
+  "id": "chang-e-5",
+  "nom": "Chang'e 5",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Lune (Océan des Tempêtes)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "retour-echantillons"
+  ],
+  "lancement": "2020-11-23",
+  "arrivee": "2020-12-01",
+  "fin": "2020-12",
+  "statut": "terminée",
+  "premieres": [
+   "premier retour d'échantillons lunaires depuis 1976 (2020)"
+  ],
+  "resultats": "Prélève environ 1,7 kg de sol lunaire et le ramène sur Terre.",
+  "techno": "Retour d'échantillons lunaires automatisé",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": false
+ },
+ {
+  "id": "lucy",
+  "nom": "Lucy",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Astéroïdes troyens de Jupiter",
+  "corps": [
+   "asteroide",
+   "jupiter"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "2021-10-16",
+  "arrivee": "2027-08",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Survole l'astéroïde Dinkinesh puis poursuit son trajet vers les astéroïdes troyens de Jupiter.",
+  "techno": "Trois assistances gravitationnelles terrestres et panneaux solaires déployables",
+  "horizons_id": "-49",
+  "lien": "https://science.nasa.gov/mission/lucy/",
+  "a_verifier": false
+ },
+ {
+  "id": "dart",
+  "nom": "DART",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Astéroïde Dimorphos",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "impacteur"
+  ],
+  "lancement": "2021-11-24",
+  "arrivee": "2022-09-26",
+  "fin": "2022-09-26",
+  "statut": "terminée",
+  "premieres": [
+   "premier test de déviation d'un astéroïde par impact (2022)"
+  ],
+  "resultats": "Percute Dimorphos, qui modifie son orbite autour de Didymos d'environ 33 minutes.",
+  "techno": "Impact cinétique de déviation d'astéroïde",
+  "horizons_id": "-135",
+  "lien": "https://science.nasa.gov/mission/dart/",
+  "a_verifier": false
+ },
+ {
+  "id": "capstone",
+  "nom": "CAPSTONE",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (orbite NRHO)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2022-06-28",
+  "arrivee": "2022-11-13",
+  "fin": "2026-06",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Petit cubesat qui valide l'orbite quasi-rectiligne autour de la Lune prévue pour la station Gateway.",
+  "techno": "Cubesat à propulsion et navigation autonome",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/mission/capstone/",
+  "a_verifier": false
+ },
+ {
+  "id": "artemis-i",
+  "nom": "Artemis I",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (orbite rétrograde)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2022-11-16",
+  "arrivee": "2022-11-21",
+  "fin": "2022-12-11",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Vol sans équipage autour de la Lune qui valide le vaisseau Orion et son bouclier thermique au retour.",
+  "techno": "Vaisseau Orion et bouclier thermique en conditions de retour lunaire",
+  "horizons_id": "-1023",
+  "lien": "https://www.nasa.gov/mission/artemis-i/",
+  "a_verifier": false
+ },
+ {
+  "id": "hakuto-r-m1",
+  "nom": "Hakuto-R M1",
+  "agence": "privée",
+  "operateur": "ispace",
+  "cible": "Lune (mer des Pluies)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2022-12-11",
+  "arrivee": "2023-04-25",
+  "fin": "2023-04",
+  "statut": "échec",
+  "premieres": [],
+  "resultats": "S'écrase lors de la descente, premier essai privé japonais d'atterrissage lunaire.",
+  "techno": "Atterrissage lunaire privé (échec)",
+  "horizons_id": null,
+  "lien": "https://ispace-inc.com/",
+  "a_verifier": false
+ },
+ {
+  "id": "juice",
+  "nom": "JUICE",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Jupiter et lunes glacées",
+  "corps": [
+   "jupiter"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2023-04-14",
+  "arrivee": "2031-07",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "En route vers Jupiter pour étudier Europe, Ganymède et Callisto ; arrivée prévue en 2031.",
+  "techno": "Assistances gravitationnelles terrestres et vénusiennes",
+  "horizons_id": "-28",
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Juice",
+  "a_verifier": false
+ },
+ {
+  "id": "chandrayaan-3",
+  "nom": "Chandrayaan-3",
+  "agence": "ISRO",
+  "operateur": null,
+  "cible": "Lune (pôle sud)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2023-07-14",
+  "arrivee": "2023-08-23",
+  "fin": "2023-09",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage réussi près du pôle sud lunaire (2023)"
+  ],
+  "resultats": "Son module Vikram se pose près du pôle sud, et le rover Pragyan explore le sol pendant environ deux semaines.",
+  "techno": "Atterrissage autonome de précision",
+  "horizons_id": null,
+  "lien": "https://www.isro.gov.in/",
+  "a_verifier": false
+ },
+ {
+  "id": "luna-25",
+  "nom": "Luna 25",
+  "agence": "Roscosmos",
+  "operateur": null,
+  "cible": "Lune (pôle sud)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2023-08-10",
+  "arrivee": null,
+  "fin": "2023-08-19",
+  "statut": "échec",
+  "premieres": [],
+  "resultats": "S'écrase sur la Lune lors d'une manœuvre de descente, premier échec lunaire russe depuis 1976.",
+  "techno": "Atterrissage lunaire polaire (échec)",
+  "horizons_id": null,
+  "lien": "https://www.roscosmos.ru/",
+  "a_verifier": false
+ },
+ {
+  "id": "slim",
+  "nom": "SLIM",
+  "agence": "JAXA",
+  "operateur": null,
+  "cible": "Lune",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2023-09-07",
+  "arrivee": "2024-01-19",
+  "fin": "2024-04",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage de précision japonais sur la Lune (2024)"
+  ],
+  "resultats": "Atterrit à quelques dizaines de mètres de la cible visée, mais se pose sur le nez et perd son énergie solaire.",
+  "techno": "Atterrissage autonome de précision",
+  "horizons_id": null,
+  "lien": "https://www.isas.jaxa.jp/",
+  "a_verifier": false
+ },
+ {
+  "id": "psyche",
+  "nom": "Psyche",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Astéroïde (16) Psyché",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2023-10-13",
+  "arrivee": "2029-08",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Vers un astéroïde métallique supposé être le noyau d'un protoplanète ; arrivée prévue en 2029.",
+  "techno": "Propulsion électrique à effet Hall",
+  "horizons_id": "-255",
+  "lien": "https://science.nasa.gov/mission/psyche/",
+  "a_verifier": true
+ },
+ {
+  "id": "im-1",
+  "nom": "IM-1 Odysseus",
+  "agence": "privée",
+  "operateur": "Intuitive Machines",
+  "cible": "Lune (cratère Malapert)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2024-02-15",
+  "arrivee": "2024-02-22",
+  "fin": "2024-02",
+  "statut": "terminée",
+  "premieres": [
+   "premier atterrissage lunaire d'un engin privé américain réussi (2024)"
+  ],
+  "resultats": "Se pose sur la Lune mais s'incline et cesse de fonctionner après quelques jours.",
+  "techno": "Atterrissage lunaire commercial sous contrat NASA (CLPS)",
+  "horizons_id": null,
+  "lien": "https://www.intuitivemachines.com/",
+  "a_verifier": false
+ },
+ {
+  "id": "chang-e-6",
+  "nom": "Chang'e 6",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Lune (face cachée, bassin Pôle Sud-Aitken)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "retour-echantillons"
+  ],
+  "lancement": "2024-05-03",
+  "arrivee": "2024-06-02",
+  "fin": "2024-06-25",
+  "statut": "terminée",
+  "premieres": [
+   "premier retour d'échantillons de la face cachée de la Lune (2024)"
+  ],
+  "resultats": "Prélève environ 1,9 kg de sol de la face cachée et le ramène sur Terre.",
+  "techno": "Retour d'échantillons depuis la face cachée via relais",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": false
+ },
+ {
+  "id": "hera",
+  "nom": "Hera",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Astéroïde Didymos et Dimorphos",
+  "corps": [
+   "asteroide"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2024-10-07",
+  "arrivee": "2026-11",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Suit le résultat du test DART : arrivée prévue fin 2026 pour cartographier le cratère et mesurer la masse de Dimorphos.",
+  "techno": "Propulsion électrique et deux petits cubesats d'exploration",
+  "horizons_id": "-91",
+  "lien": "https://www.esa.int/Space_Safety/Hera",
+  "a_verifier": true
+ },
+ {
+  "id": "europa-clipper",
+  "nom": "Europa Clipper",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Jupiter et Europe",
+  "corps": [
+   "jupiter"
+  ],
+  "type": [
+   "survol",
+   "orbiteur"
+  ],
+  "lancement": "2024-10-14",
+  "arrivee": "2030-04",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Doit survoler Europe plusieurs dizaines de fois pour évaluer son océan et son habitabilité ; arrivée prévue en 2030.",
+  "techno": "Assistances gravitationnelles terrestre et martienne, grands panneaux solaires",
+  "horizons_id": "-159",
+  "lien": "https://science.nasa.gov/mission/europa-clipper/",
+  "a_verifier": false
+ },
+ {
+  "id": "blue-ghost-m1",
+  "nom": "Blue Ghost M1",
+  "agence": "privée",
+  "operateur": "Firefly Aerospace",
+  "cible": "Lune (mer de la Fécondité)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2025-01-15",
+  "arrivee": "2025-03-02",
+  "fin": "2025-03",
+  "statut": "terminée",
+  "premieres": [],
+  "resultats": "Atterrit sur la Lune et fonctionne environ deux semaines, un des plus longs séjours d'un engin privé.",
+  "techno": "Atterrissage lunaire commercial sous contrat NASA (CLPS)",
+  "horizons_id": null,
+  "lien": "https://fireflyspace.com/",
+  "a_verifier": false
+ },
+ {
+  "id": "hakuto-r-m2",
+  "nom": "Hakuto-R M2 Resilience",
+  "agence": "privée",
+  "operateur": "ispace",
+  "cible": "Lune (mer des Crises)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2025-01-15",
+  "arrivee": "2025-06-05",
+  "fin": "2025-06",
+  "statut": "échec",
+  "premieres": [],
+  "resultats": "S'écrase à l'atterrissage le 5 juin 2025 à cause d'un télémètre laser défaillant.",
+  "techno": "Atterrissage lunaire privé (échec)",
+  "horizons_id": null,
+  "lien": "https://ispace-inc.com/",
+  "a_verifier": false
+ },
+ {
+  "id": "im-2",
+  "nom": "IM-2 Athena",
+  "agence": "privée",
+  "operateur": "Intuitive Machines",
+  "cible": "Lune (pôle sud)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur"
+  ],
+  "lancement": "2025-02-26",
+  "arrivee": "2025-03-06",
+  "fin": "2025-03",
+  "statut": "échec",
+  "premieres": [],
+  "resultats": "Se pose près du pôle sud mais se couche sur le côté, ce qui limite fortement la mission.",
+  "techno": "Atterrissage lunaire commercial sous contrat NASA (CLPS)",
+  "horizons_id": null,
+  "lien": "https://www.intuitivemachines.com/",
+  "a_verifier": true
+ },
+ {
+  "id": "tianwen-2",
+  "nom": "Tianwen-2",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Astéroïde Kamoʻoalewa, puis comète",
+  "corps": [
+   "asteroide",
+   "comete"
+  ],
+  "type": [
+   "retour-echantillons",
+   "survol"
+  ],
+  "lancement": "2025-05-29",
+  "arrivee": "2026-07",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Mission de prélèvement sur un petit astéroïde quasi-satellite de la Terre, avec retour d'échantillons prévu vers 2027.",
+  "techno": "Prélèvement d'échantillons en surface d'astéroïde",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": false
+ },
+ {
+  "id": "escapade",
+  "nom": "ESCAPADE",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars (deux sondes, via L2)",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2025-11-13",
+  "arrivee": "2027-09",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Deux petites sondes lancées sur le 2e vol de New Glenn ; elles attendent près du point L2 avant la fenêtre vers Mars de fin 2026, pour une arrivée vers 2027.",
+  "techno": "Lancement par New Glenn et trajectoire à faible énergie",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/escapade/",
+  "a_verifier": false
+ },
+ {
+  "id": "artemis-ii",
+  "nom": "Artemis II",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (survol habité)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "equipage"
+  ],
+  "lancement": "2026-04-01",
+  "arrivee": null,
+  "fin": "2026-04",
+  "statut": "terminée",
+  "premieres": [
+   "premier vol habité autour de la Lune depuis 1972"
+  ],
+  "resultats": "Quatre astronautes (Wiseman, Glover, Koch, Hansen) font un survol lunaire et amerrissent le 10 avril 2026 au large de San Diego.",
+  "techno": "Vaisseau Orion habité en vol lunaire",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/mission/artemis-ii/",
+  "a_verifier": false
+ },
+ {
+  "id": "mmx",
+  "nom": "MMX",
+  "agence": "JAXA",
+  "operateur": null,
+  "cible": "Phobos",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "retour-echantillons"
+  ],
+  "lancement": "2026-10-20",
+  "arrivee": "2027-08",
+  "fin": null,
+  "statut": "en cours",
+  "premieres": [],
+  "resultats": "Prélèvement sur Phobos avec retour d'échantillons ; lancement prévu fin 2026, non confirmé.",
+  "techno": "Atterrissage sur petit satellite et retour d'échantillons",
+  "horizons_id": null,
+  "lien": "https://www.isas.jaxa.jp/",
+  "a_verifier": false
+ },
+ {
+  "id": "chang-e-7",
+  "nom": "Chang'e 7",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Lune (pôle sud)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2027",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Mission vers le pôle sud lunaire avec atterrisseur, rover et petit orbiteur ; lancement prévu au second semestre 2026, non confirmé. Lancement prévu fin août 2026 reporté le 23 août 2026 ; nouvelle date non annoncée (2027 possible).",
+  "techno": "Atterrissage polaire avec rover et sauts",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": false
+ },
+ {
+  "id": "artemis-iii",
+  "nom": "Artemis III",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (pôle sud)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "equipage",
+   "atterrisseur"
+  ],
+  "lancement": "2027-06",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Premier atterrissage habité depuis 1972 prévu ; calendrier et architecture encore en évolution.",
+  "techno": "Atterrissage lunaire habité",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/mission/artemis-iii/",
+  "a_verifier": true
+ },
+ {
+  "id": "lunar-gateway",
+  "nom": "Lunar Gateway",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Lune (orbite NRHO)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2027-10",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Station prévue en orbite lunaire. Programme suspendu par la NASA en mars 2026, au profit d'un projet de base lunaire.",
+  "techno": "Station en orbite lunaire NRHO avec propulsion électrique",
+  "horizons_id": null,
+  "lien": "https://www.nasa.gov/gateway/",
+  "a_verifier": false
+ },
+ {
+  "id": "tianwen-3",
+  "nom": "Tianwen-3",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Mars et retour d'échantillons",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "retour-echantillons"
+  ],
+  "lancement": "2028-05",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Mission de retour d'échantillons martiens prévue après 2028, calendrier non confirmé.",
+  "techno": "Retour d'échantillons martiens (projet)",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": true
+ },
+ {
+  "id": "dragonfly",
+  "nom": "Dragonfly",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Titan",
+  "corps": [
+   "saturne"
+  ],
+  "type": [
+   "helicoptere"
+  ],
+  "lancement": "2028-07",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Drone-hélicoptère à rotors multiples destiné à survoler la surface de Titan, arrivée prévue vers 2034.",
+  "techno": "Vol motorisé dans l'atmosphère dense de Titan",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/dragonfly/",
+  "a_verifier": false
+ },
+ {
+  "id": "rosalind-franklin",
+  "nom": "Rosalind Franklin (ExoMars)",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2028-10",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Rover européen chargé de forer jusqu'à deux mètres pour chercher des traces de vie passée.",
+  "techno": "Foreuse profonde et laboratoire embarqué",
+  "horizons_id": null,
+  "lien": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars",
+  "a_verifier": false
+ },
+ {
+  "id": "mars-sample-return",
+  "nom": "Mars Sample Return",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Mars",
+  "corps": [
+   "mars"
+  ],
+  "type": [
+   "retour-echantillons"
+  ],
+  "lancement": "2028-12",
+  "arrivee": null,
+  "fin": null,
+  "statut": "annulée",
+  "premieres": [],
+  "resultats": "Devait rapporter les échantillons collectés par Perseverance. Annulée : pas de crédits dans la loi de finances FY2026 (janvier 2026), et l'ESA a renoncé à son orbiteur de retour.",
+  "techno": "Retour d'échantillons depuis Mars (projet)",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mars/msr/",
+  "a_verifier": true
+ },
+ {
+  "id": "comet-interceptor",
+  "nom": "Comet Interceptor",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Comète vierge ou objet interstellaire",
+  "corps": [
+   "comete",
+   "interstellaire"
+  ],
+  "type": [
+   "survol"
+  ],
+  "lancement": "2028-12",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Sonde attendant dans l'espace une comète vierge ou un objet interstellaire à survoler. Lancement annoncé par l'ESA pour fin 2028 – début 2029.",
+  "techno": "Mission en attente sur orbite de Lagrange",
+  "horizons_id": null,
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Comet_Interceptor",
+  "a_verifier": false
+ },
+ {
+  "id": "chang-e-8",
+  "nom": "Chang'e 8",
+  "agence": "CNSA",
+  "operateur": null,
+  "cible": "Lune (pôle sud)",
+  "corps": [
+   "lune"
+  ],
+  "type": [
+   "atterrisseur",
+   "rover"
+  ],
+  "lancement": "2029-06",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Mission lunaire de démonstration pour une future base de recherche au pôle sud.",
+  "techno": "Atterrissage et rover pour base lunaire",
+  "horizons_id": null,
+  "lien": "http://www.cnsa.gov.cn/",
+  "a_verifier": true
+ },
+ {
+  "id": "veritas",
+  "nom": "VERITAS",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Vénus",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2031-06",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Orbiteur radar prévu pour cartographier la géologie et la structure interne de Vénus.",
+  "techno": "Radar à synthèse d'ouverture en orbite vénusienne",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/veritas/",
+  "a_verifier": true
+ },
+ {
+  "id": "davinci",
+  "nom": "DAVINCI",
+  "agence": "NASA",
+  "operateur": null,
+  "cible": "Vénus (atmosphère)",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "ballon",
+   "atterrisseur"
+  ],
+  "lancement": "2031-06",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Sonde qui plonge dans l'atmosphère de Vénus pour analyser sa composition.",
+  "techno": "Sonde atmosphérique à entrée directe",
+  "horizons_id": null,
+  "lien": "https://science.nasa.gov/mission/davinci/",
+  "a_verifier": true
+ },
+ {
+  "id": "envision",
+  "nom": "EnVision",
+  "agence": "ESA",
+  "operateur": null,
+  "cible": "Vénus",
+  "corps": [
+   "venus"
+  ],
+  "type": [
+   "orbiteur"
+  ],
+  "lancement": "2031-10",
+  "arrivee": null,
+  "fin": null,
+  "statut": "à venir",
+  "premieres": [],
+  "resultats": "Orbiteur européen destiné à étudier la géologie et l'activité volcanique de Vénus.",
+  "techno": "Orbiteur radar en orbite vénusienne",
+  "horizons_id": null,
+  "lien": "https://www.esa.int/Science_Exploration/Space_Science/Envision",
+  "a_verifier": true
+ }
+]
