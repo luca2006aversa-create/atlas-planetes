@@ -133,3 +133,12 @@ body.video:has(#v-encart:not(:empty)) #legende, body.video:has(#v-carton:not(:em
   .bandeau .titre-court { display:none; }
   h1 { font-size:25px; }
 }
+
+/* Temps de marche (chapitre 10) */
+h3 { font-size:16px; margin:18px 0 6px; }
+table.temps { border-collapse:collapse; width:100%; font-size:13px; margin:6px 0 10px; }
+table.temps th, table.temps td { border-bottom:1px solid var(--trait); padding:5px 4px; text-align:right; vertical-align:top; }
+table.temps thead th { font-weight:600; color:var(--doux); }
+table.temps tbody th { text-align:left; font-weight:600; }
+table.temps small { font-weight:400; color:var(--doux); }
+table.temps td:nth-child(3) { background:#fbeee8; }

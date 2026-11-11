@@ -187,23 +187,28 @@
   </div>
 </section>
 
-<section class="chap" data-vue='{"calques":["ombrage","plan_ombrage","proximite","plan"],"cadre":"plan"}' data-titre="10 · À pied depuis l'habitat">
+<section class="chap" data-vue='{"calques":["ombrage","plan_ombrage","proximite","courbes_plan","plan"],"cadre":"plan"}' data-titre="10 · À pied depuis l'habitat">
   <div class="col ing">
     <p class="num">10</p><h2>À pied depuis l'habitat</h2>
     <p>Si un véhicule tombe en panne, l'équipage doit pouvoir rentrer à pied. On calcule donc la distance de marche depuis l'habitat, par le chemin le plus court, en interdisant les pentes de plus de 20°. Les bandes de la carte marquent 1, 2 et 5 km.</p>
     <ul>
-      <li><b>mâts solaires</b> : de <span data-prox="d.mat_min"></span> à <span data-prox="d.mat_max"></span> km à pied. Les câbles, tirés par le chemin le plus court, font <span data-prox="cable_mats_km"></span> km en tout ;</li>
-      <li><b>antenne</b> : <span data-prox="d.antenne"></span> km ;</li>
-      <li><b>aire d'atterrissage</b> : <span data-prox="d.atterrissage"></span> km à pied, contre <span data-prox="d.atterrissage_oiseau"></span> km à vol d'oiseau ;</li>
-      <li><b>station glace</b> : <span data-prox="d.glace"></span> km, c'est le point de la route le plus éloigné de l'habitat.</li>
+      <li><b>mâts solaires</b> : de <span data-prox="d.mat_min"></span> à <span data-prox="d.mat_max"></span> km à pied (<span data-tm="mats"></span> de marche au retour). Les câbles, tirés par le chemin le plus court, font <span data-prox="cable_mats_km"></span> km en tout ;</li>
+      <li><b>antenne</b> : <span data-prox="d.antenne"></span> km, <span data-tm="antenne"></span> ;</li>
+      <li><b>aire d'atterrissage</b> : <span data-prox="d.atterrissage"></span> km à pied, contre <span data-prox="d.atterrissage_oiseau"></span> km à vol d'oiseau, <span data-tm="atterrissage"></span> de marche ;</li>
+      <li><b>station glace</b> : <span data-prox="d.glace"></span> km, <span data-tm="glace"></span> de marche. C'est le point de la route le plus éloigné de l'habitat.</li>
     </ul>
     <p>Sur la route de la glace, <span data-prox="route_glace.part_pct_sous_rayon.1"></span> % du trajet est à moins de 1 km de l'habitat, <span data-prox="route_glace.part_pct_sous_rayon.2"></span> % à moins de 2 km et <span data-prox="route_glace.part_pct_sous_rayon.5"></span> % à moins de 5 km.</p>
+    <h3>Combien de temps à pied ?</h3>
+    <p>Temps de marche pour <b>rentrer à l'habitat</b>, en scaphandre, selon trois allures :</p>
+    <table class="temps"><thead><tr><th></th><th>Prudent<br><small>1,6 km/h</small></th><th>Référence<br><small>2,7 km/h</small></th><th>Rapide<br><small>3,6 km/h</small></th></tr></thead><tbody data-temps></tbody></table>
+    <p class="note">Les allures viennent des missions Apollo (<a href="https://www.nasa.gov/wp-content/uploads/static/history/alsj/a11/a11.gaits.html" target="_blank" rel="noopener">Apollo Lunar Surface Journal</a>) : 1,1 à 2,2 km/h mesurés à Apollo 15 en travaillant autour du module ; 2,7 km/h retenus pour planifier un retour à pied de plus d'une heure ; 3,6 km/h pour la foulée bondissante d'Armstrong. La pente ralentit la montée et accélère la descente comme sur Terre (formule de Tobler) : c'est une hypothèse, pas une mesure lunaire. Le temps ne compte que la marche, pas l'autonomie de la combinaison.</p>
     <p class="note">Les rayons de 1, 2 et 5 km sont des repères d'étude, pas des normes : le vrai rayon de retour à pied dépend des réserves de la combinaison. La marche suit la grille de 40 m (les distances peuvent être surestimées de quelques %), sans tenir compte des blocs ni des petits cratères.</p>
   </div>
   <div class="col arc">
     <h2 class="role">L'architecte</h2>
     <p>Le rayon de marche dessine le quartier : <span data-prox="surface_km2_sous_rayon.1"></span> km² à moins d'1 km, <span data-prox="surface_km2_sous_rayon.2"></span> km² à moins de 2 km, <span data-prox="surface_km2_sous_rayon.5"></span> km² à moins de 5 km.</p>
     <p>Tout ce qui sert chaque jour (mâts, antenne) tient dans le premier kilomètre, à portée de marche. L'aire d'atterrissage et la glace sortent du quartier : on s'y rend en véhicule.</p>
+    <p>Au pas lunaire, le quartier se traverse en un quart d'heure. L'aire d'atterrissage est à plus d'une heure de marche, la glace à près de quatre heures. Une limite de 10 km est souvent retenue pour pouvoir rentrer à pied (hypothèse de planification d'après Apollo) : la station glace est en dessous, mais il faudrait plus de 3 h 30 de marche à plat pour couvrir ces 10 km.</p>
     <p>La route de la glace passe donc plusieurs kilomètres loin de tout abri. Faut-il un refuge à mi-chemin ? C'est une question de projet, que seule cette mesure permet de poser.</p>
   </div>
 </section>

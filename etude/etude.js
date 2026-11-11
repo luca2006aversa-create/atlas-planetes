@@ -13,7 +13,7 @@ const LL = ([x, y]) => L.latLng(y, x);
 const fr = (v, d = 0) => Number(v).toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d });
 const latTxt = (la, lo) => `${fr(Math.abs(la), 2)}° S, ${fr(Math.abs(lo), 2)}° ${lo < 0 ? 'O' : 'E'}`;
 
-const [meta, uai, large, plan, hab, prox] = await Promise.all(['etude.json', 'formations.json', 'large.json', 'plan.json', 'habitat.json', 'proximite.json']
+const [meta, uai, large, plan, hab, prox, cplan] = await Promise.all(['etude.json', 'formations.json', 'large.json', 'plan.json', 'habitat.json', 'proximite.json', 'courbes_plan.json']
   .map((f) => fetch(`donnees/${f}`).then((r) => (r.ok ? r.json() : null)).catch(() => null)));
 const FORMATIONS = uai?.formations || [];
 const D = meta.demi_km, BANDE = meta.bande_km;
@@ -45,8 +45,14 @@ document.querySelectorAll('[data-chiffre]').forEach((e) => {
 });
 
 // --- carte ---
+// fond complet à 240 m (±457 km, tout le MNT à 120 m) sous les images fines : plus de vide ni de bord carré
+const FOND = 457.44, BORNES_TOUT = L.latLngBounds([[-FOND, -FOND], [FOND, FOND]]);
 const carte = L.map('carte', { crs: L.CRS.Simple, minZoom: -1.5, maxZoom: 11.5, zoomSnap: 0.25, zoomDelta: 0.5,
-  maxBounds: CADRES.large.pad(0.3), zoomControl: false });
+  maxBounds: BORNES_TOUT, maxBoundsViscosity: 1, zoomControl: false });
+// on ne peut pas s'éloigner au point de voir le vide autour du fond complet
+const minZoomFond = () => carte.setMinZoom(carte.getBoundsZoom(BORNES_TOUT, true));
+carte.on('resize', minZoomFond);
+minZoomFond();
 L.control.zoom({ position: 'topright' }).addTo(carte);
 carte.attributionControl.setPrefix(false)
   .addAttribution('Relief : NASA/GSFC, LRO LOLA · calculs : Atlas planètes · noms : UAI/USGS');
@@ -54,6 +60,13 @@ carte.createPane('vecteurs').style.zIndex = 450;
 const svg = L.svg({ pane: 'vecteurs' });
 
 const img = (f, o = {}) => L.imageOverlay(`donnees/${f}`, BORNES, o);
+const groupe = (...cs) => { const g = L.layerGroup(cs); g._urls = cs.map((c) => c._url).filter(Boolean); return g; };
+const traitCourbe = (c, fort) => L.polyline(c.pts.map(LL), { renderer: svg, color: '#5b5443', weight: c.z % fort === 0 ? 1.1 : 0.5, opacity: 0.8, interactive: false });
+const courbesPlan = L.layerGroup(cplan ? cplan.courbes.map((c) => traitCourbe(c, cplan.indice_m)) : []);
+// courbes de tout le MNT : chargées à la première activation (fichier de 1,8 Mo)
+const courbesTout = L.layerGroup();
+courbesTout.once('add', () => fetch('donnees/courbes_tout.json').then((r) => r.json())
+  .then((j) => j.courbes.forEach((c) => courbesTout.addLayer(traitCourbe(c, j.indice_m)))).catch(() => {}));
 const degrade = (cs) => `linear-gradient(90deg, ${cs.join(',')})`;
 
 const lieux = L.layerGroup(meta.lieux.map((l, i) => L.circleMarker(LL([l.x, l.y]), {
@@ -171,6 +184,18 @@ if (prox) {
   const mats = prox.elements.filter((e) => e.nom.startsWith('mât')).map((e) => e.a_pied_km);
   prox.d = { mat_min: Math.min(...mats), mat_max: Math.max(...mats), antenne: el('antenne').a_pied_km,
     atterrissage: el("aire d'atterrissage").a_pied_km, atterrissage_oiseau: el("aire d'atterrissage").a_vol_d_oiseau_km, glace: el('station glace').a_pied_km };
+  // temps de marche (retour vers l'habitat) : « 8 min », « 1 h 33 »
+  const tf = (m) => (m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, '0')}`);
+  const matsT = prox.elements.filter((e) => e.nom.startsWith('mât')).map((e) => e.retour_min.ref);
+  const tm = { mats: `de ${Math.min(...matsT)} à ${Math.max(...matsT)} min`, antenne: tf(el('antenne').retour_min.ref),
+    atterrissage: tf(el("aire d'atterrissage").retour_min.ref), glace: tf(el('station glace').retour_min.ref) };
+  document.querySelectorAll('[data-tm]').forEach((e) => { e.textContent = tm[e.dataset.tm] ?? ''; });
+  const lignes = [['antenne', 'Antenne'], ["aire d'atterrissage", "Aire d'atterrissage"], ['station glace', 'Station glace']];
+  const loin = prox.elements.filter((e) => e.nom.startsWith('mât')).sort((a, b) => b.retour_min.ref - a.retour_min.ref)[0];
+  document.querySelectorAll('[data-temps]').forEach((tb) => {
+    tb.innerHTML = [[loin.nom + ' (le plus loin)', loin], ...lignes.map(([n, t]) => [t, el(n)])].map(([t, e]) =>
+      `<tr><th>${t}<br><small>${fr(e.a_pied_km, 1)} km</small></th><td>${tf(e.retour_min.lent)}</td><td><b>${tf(e.retour_min.ref)}</b></td><td>${tf(e.retour_min.rapide)}</td></tr>`).join('');
+  });
   document.querySelectorAll('[data-prox]').forEach((e) => {
     const v = e.dataset.prox.split('.').reduce((o, k) => o?.[k], prox);
     if (typeof v === 'number') e.textContent = fr(v, Number.isInteger(v) ? 0 : 1);
@@ -377,23 +402,25 @@ const CLE_SOLEIL = { degrade: ['#151b28', '#3c4a66', '#a39a86', '#f2d98d', '#fff
 const CLE_TERRE = { degrade: ['#1d2433', '#3d5a6c', '#7fa7a0', '#cfe3c4', '#f6f4ef'], bornes: ['jamais', 'part du temps', 'toujours'] };
 const CALQUES = {
   ombrage_large: { nom: 'Relief ombré élargi (120 m)', couche: imgL('ombrage_large.jpg') },
-  soleil_off: { nom: 'Ensoleillement officiel LOLA', couche: imgL('soleil_off.jpg', { className: 'multiplier' }), cle: CLE_SOLEIL },
-  terre_off: { nom: 'Terre visible, carte officielle', couche: imgL('terre_off.jpg', { className: 'multiplier' }), cle: CLE_TERRE },
+  soleil_off: { nom: 'Ensoleillement officiel LOLA', couche: imgL('soleil_off.webp', { className: 'multiplier' }), cle: CLE_SOLEIL },
+  terre_off: { nom: 'Terre visible, carte officielle', couche: imgL('terre_off.webp', { className: 'multiplier' }), cle: CLE_TERRE },
   ombre_off: { nom: 'Ombre permanente officielle', couche: imgL('ombre_off.png'), cle: { cases: [['#7fb6d9', 'jamais de soleil']] } },
-  relief: { nom: 'Relief (altitude)', fond: true, couche: img('relief.jpg'),
+  relief: { nom: 'Relief (altitude)', fond: true, couche: groupe(L.imageOverlay('donnees/relief_tout.jpg', BORNES_TOUT), img('relief.webp')),
     cle: { degrade: ['#2b3a55', '#8fa3bf', '#e8e1cf', '#d9a88a', '#b5654a'], bornes: ['−5 km', '+3,5 km'] } },
-  ombrage: { nom: 'Relief ombré', fond: true, couche: img('ombrage.jpg') },
-  soleil: { nom: 'Ensoleillement (calcul de l\'atlas)', couche: img('soleil.png', { className: 'multiplier' }), cle: CLE_SOLEIL },
+  ombrage: { nom: 'Relief ombré', fond: true, couche: groupe(L.imageOverlay('donnees/ombrage_tout.jpg', BORNES_TOUT), img('ombrage.webp')) },
+  soleil: { nom: 'Ensoleillement (calcul de l\'atlas)', couche: img('soleil.webp', { className: 'multiplier' }), cle: CLE_SOLEIL },
   ombre: { nom: 'Ombre permanente', couche: img('ombre.png'), cle: { cases: [['#7fb6d9', 'jamais de soleil']] } },
-  pentes: { nom: 'Pentes', couche: img('pentes.png', { className: 'multiplier' }),
+  pentes: { nom: 'Pentes', couche: img('pentes.webp', { className: 'multiplier' }),
     cle: { cases: [['#e9efe4', '< 5°'], ['#c9dcc0', '5–8°'], ['#f2dfa7', '8–15°'], ['#e9a77f', '15–25°'], ['#b5654a', '> 25°']] } },
-  terre: { nom: 'Terre visible', couche: img('terre.png', { className: 'multiplier' }), cle: CLE_TERRE },
+  terre: { nom: 'Terre visible', couche: img('terre.webp', { className: 'multiplier' }), cle: CLE_TERRE },
   zonage: { nom: 'Zonage', couche: img('zonage.png'),
     cle: { cases: [['#e4572e', 'pente < 8°, soleil ≥ 60 %'], ['#f2b38f', 'pente < 8°, soleil 50–60 %'], ['#7fb6d9', 'ombre permanente, pente < 15°']] } },
-  plan_ombrage: { nom: 'Relief ombré du site (20 m)', couche: L.imageOverlay('donnees/plan_ombrage.jpg', planBornes) },
-  plan_soleil: { nom: 'Ensoleillement du site (40 m)', couche: L.imageOverlay('donnees/plan_soleil.png', planBornes, { className: 'multiplier' }), cle: CLE_SOLEIL },
+  plan_ombrage: { nom: 'Relief ombré du site (20 m)', couche: L.imageOverlay('donnees/plan_ombrage.webp', planBornes) },
+  plan_soleil: { nom: 'Ensoleillement du site (40 m)', couche: L.imageOverlay('donnees/plan_soleil.webp', planBornes, { className: 'multiplier' }), cle: CLE_SOLEIL },
   proximite: { nom: "Distance à pied depuis l'habitat", couche: L.imageOverlay('donnees/proximite.png', planBornes),
-    cle: { cases: [['#ffb000', 'moins de 1 km'], ['#ff7828', '1 à 2 km'], ['#c83c3c', '2 à 5 km']] } },
+    cle: { cases: [['#ffb000', 'moins de 1 km (≈ 22 min à plat)'], ['#ff7828', '1 à 2 km (22 à 44 min)'], ['#c83c3c', '2 à 5 km (44 min à 1 h 50)']] } },
+  courbes_plan: { nom: 'Courbes de niveau (100 m)', couche: courbesPlan, cle: { cases: [['#5b5443', 'courbe tous les 100 m, trait épais tous les 500 m', 'trait']] } },
+  courbes_tout: { nom: 'Courbes de niveau, toute la carte (1 000 m)', couche: courbesTout, cle: { cases: [['#5b5443', 'courbe tous les 1 000 m, trait épais tous les 2 000 m', 'trait']] } },
   plan: { nom: 'Plan d\'implantation (clic)', couche: planCouche, cle: { cases: [
     ['#e4572e', 'habitat', true], ['#f2d98d', 'mât solaire', true], ['#fff', 'antenne', true], ['#f6f4ef', 'aire d\'atterrissage', true],
     ['#7fb6d9', 'station glace', true], ['#1d2433', 'route', 'trait'], ['#3d6b8c', 'route de la glace', 'trait']] } },
@@ -409,7 +436,9 @@ const CALQUES = {
   noms_large: { nom: 'Noms (grandes formations)', couche: nomsLarges },
   noms: { nom: 'Noms', couche: noms },
 };
-if (!large) ['ombrage_large', 'soleil_off', 'terre_off', 'ombre_off'].forEach((k) => delete CALQUES[k]);
+delete CALQUES.ombrage_large;                       // remplacé par le fond complet (ombrage_tout)
+if (!large) ['soleil_off', 'terre_off', 'ombre_off'].forEach((k) => delete CALQUES[k]);
+if (!cplan) delete CALQUES.courbes_plan;
 if (!plan || !prox) delete CALQUES.proximite;
 if (!plan) ['plan_ombrage', 'plan_soleil', 'plan'].forEach((k) => delete CALQUES[k]);
 if (!plan || !hab) ['courbes', 'habitat'].forEach((k) => delete CALQUES[k]);

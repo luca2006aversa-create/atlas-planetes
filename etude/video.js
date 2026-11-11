@@ -125,7 +125,7 @@ export function lancer(ctx) {
 
   // préchargement des images de calques, puis prêt
   const urls = [...document.querySelectorAll('img')].map((im) => im.src);
-  Object.values(ctx.CALQUES).forEach((cl) => cl.couche._url && urls.push(cl.couche._url));
+  Object.values(ctx.CALQUES).forEach((cl) => { if (cl.couche._url) urls.push(cl.couche._url); (cl.couche._urls || []).forEach((u) => urls.push(u)); });
   Promise.all([document.fonts.ready, ...urls.map((u) => new Promise((r) => { const im = new Image(); im.onload = im.onerror = r; im.src = u; }))])
     .then(() => { aller(0); window.videoPret = true; });
 

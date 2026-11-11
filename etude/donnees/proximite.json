@@ -13,7 +13,13 @@
     -11.94
    ],
    "a_pied_km": 0.32,
-   "a_vol_d_oiseau_km": 0.31
+   "a_vol_d_oiseau_km": 0.31,
+   "retour_min": {
+    "lent": 13,
+    "ref": 8,
+    "rapide": 6
+   },
+   "aller_min_ref": 7
   },
   {
    "nom": "mât 2",
@@ -22,7 +28,13 @@
     -12.42
    ],
    "a_pied_km": 0.34,
-   "a_vol_d_oiseau_km": 0.34
+   "a_vol_d_oiseau_km": 0.34,
+   "retour_min": {
+    "lent": 13,
+    "ref": 8,
+    "rapide": 6
+   },
+   "aller_min_ref": 8
   },
   {
    "nom": "mât 3",
@@ -31,7 +43,13 @@
     -11.74
    ],
    "a_pied_km": 0.66,
-   "a_vol_d_oiseau_km": 0.65
+   "a_vol_d_oiseau_km": 0.65,
+   "retour_min": {
+    "lent": 26,
+    "ref": 16,
+    "rapide": 12
+   },
+   "aller_min_ref": 14
   },
   {
    "nom": "mât 4",
@@ -40,7 +58,13 @@
     -12.5
    ],
    "a_pied_km": 0.32,
-   "a_vol_d_oiseau_km": 0.32
+   "a_vol_d_oiseau_km": 0.32,
+   "retour_min": {
+    "lent": 12,
+    "ref": 7,
+    "rapide": 6
+   },
+   "aller_min_ref": 7
   },
   {
    "nom": "mât 5",
@@ -49,7 +73,13 @@
     -12.58
    ],
    "a_pied_km": 0.61,
-   "a_vol_d_oiseau_km": 0.59
+   "a_vol_d_oiseau_km": 0.59,
+   "retour_min": {
+    "lent": 24,
+    "ref": 14,
+    "rapide": 11
+   },
+   "aller_min_ref": 13
   },
   {
    "nom": "mât 6",
@@ -58,7 +88,13 @@
     -11.66
    ],
    "a_pied_km": 0.62,
-   "a_vol_d_oiseau_km": 0.57
+   "a_vol_d_oiseau_km": 0.57,
+   "retour_min": {
+    "lent": 25,
+    "ref": 15,
+    "rapide": 11
+   },
+   "aller_min_ref": 13
   },
   {
    "nom": "mât 7",
@@ -67,7 +103,13 @@
     -12.7
    ],
    "a_pied_km": 0.6,
-   "a_vol_d_oiseau_km": 0.56
+   "a_vol_d_oiseau_km": 0.56,
+   "retour_min": {
+    "lent": 24,
+    "ref": 14,
+    "rapide": 10
+   },
+   "aller_min_ref": 13
   },
   {
    "nom": "mât 8",
@@ -76,7 +118,13 @@
     -11.82
    ],
    "a_pied_km": 0.87,
-   "a_vol_d_oiseau_km": 0.8
+   "a_vol_d_oiseau_km": 0.8,
+   "retour_min": {
+    "lent": 35,
+    "ref": 21,
+    "rapide": 16
+   },
+   "aller_min_ref": 18
   },
   {
    "nom": "antenne",
@@ -85,7 +133,13 @@
     -11.42
    ],
    "a_pied_km": 0.84,
-   "a_vol_d_oiseau_km": 0.79
+   "a_vol_d_oiseau_km": 0.79,
+   "retour_min": {
+    "lent": 39,
+    "ref": 23,
+    "rapide": 17
+   },
+   "aller_min_ref": 17
   },
   {
    "nom": "aire d'atterrissage",
@@ -94,7 +148,13 @@
     -13.74
    ],
    "a_pied_km": 2.69,
-   "a_vol_d_oiseau_km": 2.57
+   "a_vol_d_oiseau_km": 2.57,
+   "retour_min": {
+    "lent": 157,
+    "ref": 93,
+    "rapide": 70
+   },
+   "aller_min_ref": 66
   },
   {
    "nom": "station glace",
@@ -103,9 +163,21 @@
     -11.9
    ],
    "a_pied_km": 6.56,
-   "a_vol_d_oiseau_km": 6.45
+   "a_vol_d_oiseau_km": 6.45,
+   "retour_min": {
+    "lent": 391,
+    "ref": 232,
+    "rapide": 174
+   },
+   "aller_min_ref": 171
   }
  ],
+ "vitesses_kmh": {
+  "lent": 1.6,
+  "ref": 2.7,
+  "rapide": 3.6
+ },
+ "temps_note": "à plat, vitesse × facteur de pente de Tobler (formule terrestre) ; retour = de l'élément vers l'habitat",
  "cable_mats_km": 4.34,
  "surface_km2_sous_rayon": {
   "1": 2.82,
