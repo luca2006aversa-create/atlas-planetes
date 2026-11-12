@@ -100,21 +100,21 @@ function frise(vis, ouvrir) {
     });
     const h = Math.max(1, rangs.length) * 15 + 14;
     svg += `<rect x="0" y="${y - 6}" width="${W}" height="${h}" fill="${VOIES.findIndex(v => v[0] === nom) % 2 ? '#f6f4ef' : '#efece4'}"/>`;
-    svg += `<text x="8" y="${y + 8}" font-size="12" font-weight="600" fill="#1d2433">${nom}</text><text x="8" y="${y + 22}" font-size="11" fill="#6b7280">${ms.length} mission(s)</text>`;
+    svg += `<text x="8" y="${y + 8}" font-size="12" font-weight="600" fill="#141414">${nom}</text><text x="8" y="${y + 22}" font-size="11" fill="#6b6b6b">${ms.length} mission(s)</text>`;
     for (const b of barres) {
       const yy = y + b.r * 15, c = AGENCES[agence(b.m)] || '#999';
       const avenir = b.m.statut === 'à venir' || b.m.statut === 'annulée', echec = b.m.statut === 'échec' || b.m.statut === 'annulée';
       svg += `<g class="barre" data-id="${b.m.id}" style="cursor:pointer"><title>${b.m.nom} — ${b.m.lancement} · ${b.m.statut}</title>
         <rect x="${b.x0}" y="${yy}" width="${b.x1 - b.x0}" height="9" rx="2" fill="${avenir || echec ? 'none' : c}" stroke="${c}" stroke-width="1.3" ${avenir ? 'stroke-dasharray="3 2"' : ''}/>
         ${echec ? `<line x1="${b.x0}" y1="${yy}" x2="${b.x1}" y2="${yy + 9}" stroke="${c}" stroke-width="1.3"/>` : ''}
-        <text x="${b.x1 + 4}" y="${yy + 8}" font-size="10" fill="#1d2433">${b.m.nom}</text></g>`;
+        <text x="${b.x1 + 4}" y="${yy + 8}" font-size="10" fill="#141414">${b.m.nom}</text></g>`;
     }
     y += h + 4;
   }
   let axe = '';
-  for (let a = 1960; a <= AN1; a += 10) axe += `<line x1="${x(a)}" y1="18" x2="${x(a)}" y2="${y}" stroke="#d9d4c7"/><text x="${x(a)}" y="13" font-size="11" text-anchor="middle" fill="#6b7280">${a}</text>`;
+  for (let a = 1960; a <= AN1; a += 10) axe += `<line x1="${x(a)}" y1="18" x2="${x(a)}" y2="${y}" stroke="#d9d4c7"/><text x="${x(a)}" y="13" font-size="11" text-anchor="middle" fill="#6b6b6b">${a}</text>`;
   axe += `<line x1="${x(auj)}" y1="18" x2="${x(auj)}" y2="${y}" stroke="#e4572e" stroke-width="1.5"/><text x="${x(auj) - 4}" y="13" font-size="11" text-anchor="end" fill="#e4572e" stroke="#f6f4ef" stroke-width="3" paint-order="stroke">aujourd'hui</text>`;
-  const leg = `<text x="${W - 16}" y="${y + 16}" font-size="11" fill="#6b7280" text-anchor="end">plein : terminée ou en cours · pointillé : à venir · barré : échec · clic : fiche</text>`;
+  const leg = `<text x="${W - 16}" y="${y + 16}" font-size="11" fill="#6b6b6b" text-anchor="end">plein : terminée ou en cours · pointillé : à venir · barré : échec · clic : fiche</text>`;
   $('frise').innerHTML = `<svg width="${W}" height="${y + 24}" font-family="Inter, system-ui, sans-serif">${svg}${axe}${leg}</svg>`;
   $('frise').querySelectorAll('.barre').forEach(g => (g.onclick = () => ouvrir(vis.find(m => m.id === g.dataset.id))));
 }
@@ -136,7 +136,7 @@ function histogramme(vis) {
       s += `<rect x="${30 + i * bw + 3}" y="${y - h}" width="${bw - 6}" height="${h}" fill="${AGENCES[a]}"><title>${a} : ${n}</title></rect>`;
       y -= h;
     });
-    s += `<text x="${30 + i * bw + bw / 2}" y="${H - 5}" font-size="10.5" text-anchor="middle" fill="#6b7280">${d}s</text>`;
+    s += `<text x="${30 + i * bw + bw / 2}" y="${H - 5}" font-size="10.5" text-anchor="middle" fill="#6b6b6b">${d}s</text>`;
   });
   $('histogramme').innerHTML = `<svg width="${W}" height="${H}" font-family="Inter, system-ui, sans-serif">${s}</svg>
     <div class="aide">Des deux puissances de la guerre froide à une dizaine d'acteurs : agences chinoise, indienne, japonaise, émiratie, et entreprises privées depuis les années 2020.</div>`;

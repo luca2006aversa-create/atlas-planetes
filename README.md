@@ -1,4 +1,4 @@
-# Atlas planètes
+# Kibsu · atlas du système solaire
 
 Atlas du système solaire en 3D et étude de site « Choisir un site au pôle sud de la Lune » (lecture d'ingénieur et lecture d'architecte).
 

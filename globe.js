@@ -11,14 +11,28 @@ let ETAT = { missions: [], sites: [], traces: {}, trajectoires: {} }, ACTIONS = 
 let reliefActif = null, sitesCorps = [], tracesCorps = [], anneeMax = 9999;
 let couchesActives = [], filtreCouv = null;   // filtreCouv : { re, nom, n } = seulement les mosaïques d'une mission
 const reliefs = {}, couvertures = {}, chargees = [];
+
+// Rendu à la demande (requestRenderMode) : Cesium ne dessine que si la caméra, les tuiles ou la scène changent.
+// Les réglages du panneau (fond, transparence, exagération...) n'étant pas toujours vus par Cesium, on redemande un
+// rendu après chaque action sur la vue ; un battement lent rattrape le reste (police chargée, tuile tardive).
+// Vue masquée : la boucle de rendu est arrêtée.
+const vueGlobeVisible = () => !!$('vue-globe')?.classList.contains('actif');
+const redessiner = () => viewer && !viewer.isDestroyed() && viewer.scene.requestRender();
+window.addEventListener('atlas-vue', (e) => {
+  if (!viewer || viewer.isDestroyed()) return;
+  viewer.useDefaultRenderLoop = e.detail === 'globe';
+  if (e.detail === 'globe') redessiner();
+});
+['input', 'change', 'click', 'pointerup', 'wheel'].forEach(ev => $('vue-globe')?.addEventListener(ev, () => { redessiner(); setTimeout(redessiner, 150); setTimeout(redessiner, 800); }, { capture: true, passive: true }));
+setInterval(() => { if (vueGlobeVisible()) redessiner(); }, 1000);
 const INSTRUMENTS = {
-  'HiRISE': '#e4572e', 'LROC NAC': '#e4572e', 'CTX': '#f2b38f', 'HRSC': '#7fb6d9', 'Kaguya TC': '#7fb6d9',
-  'Apollo': '#c9a227', 'THEMIS': '#9b8ec4', 'CRISM': '#2f9c95', 'LOLA': '#8fa3bf', 'LROC WAC': '#8fa3bf', 'autre': '#b8b2a4',
+  'HiRISE': '#e4572e', 'LROC NAC': '#e4572e', 'CTX': '#f2b38f', 'HRSC': '#e9e6dd', 'Kaguya TC': '#e9e6dd',
+  'Apollo': '#c9a227', 'THEMIS': '#9a9a9a', 'CRISM': '#8c8c8c', 'LOLA': '#a9a9a9', 'LROC WAC': '#a9a9a9', 'autre': '#b8b2a4',
 };
 const actifs = new Set(Object.keys(INSTRUMENTS));
-window.atlasGlobe = { get viewer() { return viewer; } };   // pour inspecter depuis la console
+window.atlasGlobe = { get viewer() { return viewer; }, lireRelief };   // pour inspecter depuis la console
 
-export async function initGlobe(etat, actions) {
+export async function initGlobe(etat, actions, corps) {
   if (etat) ETAT = etat;
   if (actions) ACTIONS = actions;
   GLOBES.forEach(cle => {
@@ -39,15 +53,28 @@ export async function initGlobe(etat, actions) {
     $('sites-annee-valeur').textContent = anneeMax === 9999 ? 'tout' : a.value;
     filtrerSites();
   };
-  if (!corpsActif) await ouvrirCorps('lune');
+  if (!corpsActif) await ouvrirCorps(corps && CORPS[corps]?.rayon ? corps : 'lune');
 }
 
-async function lireRelief(nom) {
-  if (!reliefs[nom]) {
-    const [meta, bin] = await Promise.all([fetch('donnees/relief.json').then(r => r.json()),
-      fetch(`donnees/relief_${nom}.bin`).then(r => r.arrayBuffer())]);
-    reliefs[nom] = { ...meta[nom], g: new Int16Array(bin) };
+// Relief : grille int16 2880 × 1440, stockée compressée (relief_*.bin.z, voir outils/preparer.py : compresser_relief).
+// Décompression native (DecompressionStream) puis inversion de la prédiction (gauche / haut). Chaque corps n'est lu qu'une fois.
+let metaRelief = null;
+async function decoderRelief(nom, meta) {
+  const buf = await fetch(`donnees/relief_${nom}.bin.z`).then(r => r.arrayBuffer());
+  const out = new Uint8Array(await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('deflate'))).arrayBuffer());
+  const W = meta.largeur, N = W * meta.hauteur, g = new Int16Array(N);
+  for (let i = 0; i < N; i++) {
+    const r = ((out[N + i] << 8) | out[i]) << 16 >> 16, x = i % W;
+    g[i] = i < W ? (x ? r + g[i - 1] : r) : (x ? r + ((g[i - 1] + g[i - W]) >> 1) : r + g[i - W]);
   }
+  return g;
+}
+function lireRelief(nom) {
+  reliefs[nom] ??= (async () => {
+    metaRelief ??= fetch('donnees/relief.json').then(r => r.json());
+    const meta = (await metaRelief)[nom];
+    return { ...meta, g: await decoderRelief(nom, meta) };
+  })();
   return reliefs[nom];
 }
 
@@ -93,9 +120,14 @@ function couleur(t) {
   }
   return RAMPE[RAMPE.length - 1][1];
 }
+const estompages = {};                                  // le calcul (4 M de pixels) n'est fait qu'une fois par corps
 function estompage(R, cle) {
+  return (estompages[cle] ??= estompageCalcul(R, cle));
+}
+function estompageCalcul(R, cle) {
   const W = R.largeur, H = R.hauteur, g = R.g;
-  const tri = Array.from(g.filter((_, i) => i % 97 === 0)).sort((a, b) => a - b);
+  const tri = new Int16Array(Math.ceil(g.length / 97)); for (let i = 0, k = 0; i < g.length; i += 97) tri[k++] = g[i];
+  tri.sort();
   const lo = tri[Math.floor(tri.length * 0.01)], hi = tri[Math.floor(tri.length * 0.99)];
   const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
   const ctx = cv.getContext('2d'), img = ctx.createImageData(W, H);
@@ -142,7 +174,10 @@ export async function ouvrirCorps(cle) {
     animation: false, timeline: false, geocoder: false, homeButton: false, sceneModePicker: false,
     baseLayerPicker: false, navigationHelpButton: false, fullscreenButton: false, infoBox: false,
     selectionIndicator: false, skyAtmosphere: c.atmosphere ? new Cesium.SkyAtmosphere(ell) : false,
+    requestRenderMode: true, maximumRenderTimeChange: Infinity,   // on ne dessine que si quelque chose change
   });
+  viewer.useDefaultRenderLoop = vueGlobeVisible();
+  viewer.scene.requestRender();
   const sc = viewer.scene;
   sc.globe.showGroundAtmosphere = !!c.atmosphere;
   sc.globe.enableLighting = false;
@@ -368,6 +403,7 @@ const posé = (s) => s.type === 'atterrissage' || s.type === 'impact';
 const kmTxt = (km) => String(km).replace('.', ',');
 
 function poserSites(cle) {
+  dernierePosCam = null;
   const c = CORPS[cle], zone = $('sites-corps');
   sitesCorps = ETAT.sites.filter(s => s.corps === cle).sort((a, b) => String(a.date).localeCompare(String(b.date)));
   tracesCorps = [];
@@ -376,7 +412,7 @@ function poserSites(cle) {
   // (masquerFaceCachee), le test de profondeur de Cesium laissant passer les étiquettes à travers le globe.
   const pres = Number.POSITIVE_INFINITY;
   const etiquette = (texte, taille) => ({ text: texte, font: `500 ${taille}px Inter, system-ui, sans-serif`, fillColor: Cesium.Color.WHITE,
-    outlineColor: Cesium.Color.fromCssColorString('#1d2433'), outlineWidth: 3, style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+    outlineColor: Cesium.Color.fromCssColorString('#141414'), outlineWidth: 3, style: Cesium.LabelStyle.FILL_AND_OUTLINE,
     horizontalOrigin: Cesium.HorizontalOrigin.LEFT, pixelOffset: new Cesium.Cartesian2(10, -6),
     heightReference: Cesium.HeightReference.CLAMP_TO_GROUND, disableDepthTestDistance: pres });
   sitesCorps.forEach((s, k) => {
@@ -419,8 +455,12 @@ function poserSites(cle) {
 }
 
 // Une épingle derrière l'horizon (vue depuis la caméra) est cachée ; on ne touche aux entités que si ça change.
+let dernierePosCam = null;
 function masquerFaceCachee() {
-  const occ = new Cesium.EllipsoidalOccluder(ell, viewer.camera.positionWC);
+  const pos = viewer.camera.positionWC;
+  if (dernierePosCam && Cesium.Cartesian3.equals(dernierePosCam, pos)) return;
+  dernierePosCam = Cesium.Cartesian3.clone(pos, dernierePosCam);
+  const occ = new Cesium.EllipsoidalOccluder(ell, pos);
   for (const x of tracesCorps) {
     for (const [ent, lon, lat] of [[x.e, x.s.lon, x.s.lat], ...(x.fin ? [[x.fin, ...x.t.pts[x.t.pts.length - 1]]] : [])]) {
       ent._pos ??= Cesium.Cartesian3.fromDegrees(lon, lat, 0, ell);

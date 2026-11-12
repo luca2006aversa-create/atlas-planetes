@@ -1,0 +1,24 @@
+/* Jetons de la refonte (refonte/RELOOKING.md). Deux thèmes pour l'interface : « clair » (la planche : papier, encre) et
+   « sombre » (nuit). La scène (globe, orbites) reste toujours sombre. Orange = « maintenant / ici », jamais du texte. */
+:root {
+  --encre:#141414; --papier:#f6f4ef; --vif:#e4572e;
+  --nuit:#0a0a0a; --nuit-2:#161616; --nuit-3:#222222; --craie:#f2ede4; --craie-2:#a8a8a8;
+  --papier-2:#efece4; --blanc:#fff; --encre-2:#555555; --trait:#d9d4c7; --doux:#555555;
+  --soleil:#f2c14e; --mercure:#a39a8f; --venus:#e3c58f; --terre:#e9e6dd; --lune:#c8c6be; --mars:#d98f6c;
+  --jupiter:#d9b48f; --saturne:#e3cf9b; --uranus:#c9cfcc; --neptune:#8d8d8d; --pluton:#cbb8a4; --petits:#b0a79a;
+  --cta:#e4572e; --cta-texte:#141414;
+  --sans:Inter, "Segoe UI", system-ui, sans-serif;
+  --mono:"Atkinson Hyperlegible Mono", "Cascadia Mono", Consolas, ui-monospace, monospace;
+  --t-corps:14px; --t-etiq:12.5px; --e1:8px; --e2:16px; --e3:24px;
+}
+/* clair = la planche */
+:root, [data-theme="clair"] {
+  --fond:var(--papier); --surface:var(--blanc); --surface-2:var(--papier-2);
+  --texte:var(--encre); --texte-2:var(--encre-2); --filet:#cfc9ba; --grille:var(--trait);
+  --plein-fond:var(--encre); --plein-texte:#fff; --ombre:0 6px 24px rgba(0,0,0,.35);
+}
+[data-theme="sombre"] {
+  --fond:var(--nuit-2); --surface:var(--nuit-3); --surface-2:var(--nuit-3);
+  --texte:var(--craie); --texte-2:var(--craie-2); --filet:#4d4d4d; --grille:#3a3a3a;
+  --plein-fond:var(--craie); --plein-texte:var(--encre); --ombre:0 6px 24px rgba(0,0,0,.6);
+}

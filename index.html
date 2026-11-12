@@ -1,14 +1,19 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="clair">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Atlas du système solaire</title>
-<link rel="icon" type="image/png" href="logo.png">
-<script src="https://cdn.jsdelivr.net/npm/cesium@1.122.0/Build/Cesium/Cesium.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/cesium@1.122.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Kibsu · atlas du système solaire</title><!-- « Kibsu » : nom PROVISOIRE (refonte/NOM.md), à changer à un seul endroit : ici et dans le <b> du bandeau -->
+<script>try{var t=(/[?&]theme=(sombre|clair)/.exec(location.search)||[])[1]||localStorage.getItem("atlas-theme");if(t==="sombre"||t==="clair")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" type="image/png" href="logo-d.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- CesiumJS (et ses widgets.css) : chargé par app.js à la première ouverture d'un globe -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Atkinson+Hyperlegible+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="tokens.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
+<link href="projets.css" rel="stylesheet">
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
@@ -16,15 +21,17 @@
 </head>
 <body>
 <header>
-  <img src="logo.png" alt="" class="logo">
-  <b>Atlas du système solaire</b>
+  <img src="logo-d.png" alt="" class="logo">
+  <b>Kibsu</b>
   <nav>
-    <button data-vue="systeme" class="actif">Système solaire</button>
-    <button data-vue="globe">Globes 3D</button>
+    <button data-vue="systeme" class="actif">Système</button>
+    <button data-vue="globe">Planètes</button>
     <button data-vue="missions">Missions</button>
-    <a href="etude/">Étude · pôle sud</a>
+    <button data-vue="projets">Projets</button>
+    <a href="etude/">Étude</a>
   </nav>
-  <span class="note">prospective planètes · essai 3</span>
+  <span class="note">prospective planètes</span>
+  <button id="theme" type="button" aria-label="Thème clair ou sombre" title="Thème clair / sombre">◐</button>
 </header>
 
 <main>
@@ -92,6 +99,8 @@
     </div>
     <div class="fiche-mission" id="fiche-mission" hidden></div>
   </section>
+  <!-- Vue 4 : projets (plan, coupe, 3D, simulations) -->
+  <section id="vue-projets" class="vue"></section>
 </main>
 <script type="module" src="app.js"></script>
 </body>

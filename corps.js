@@ -19,7 +19,7 @@ export const CORPS = {
     fiche: "Rayon 6 052 km. Surface à 465 °C sous 92 bar : on ne la voit qu'au radar. Les projets d'habitat visent l'atmosphère à 50 km d'altitude.",
   },
   terre: {
-    nom: 'Terre', rayon: 6378137, rayonPolaire: 6356752, couleur: '#7fb6d9', taille: 3.6, orbite: 'terre', atmosphere: true,
+    nom: 'Terre', rayon: 6378137, rayonPolaire: 6356752, couleur: '#e9e6dd', taille: 3.6, orbite: 'terre', atmosphere: true,
     relief: 'terre',
     couches: [
       { nom: 'Blue Marble', type: 'gibs', url: 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/2004-08-01/GoogleMapsCompatible_Level8/{TileMatrix}/{TileRow}/{TileCol}.jpeg', max: 8, credit: 'NASA GIBS — Blue Marble' },
@@ -83,8 +83,8 @@ export const CORPS = {
   encelade: { nom: 'Encelade', rayon: 252100, couleur: '#eef0f2', taille: 1, parent: 'saturne',
     couches: [{ nom: 'Cassini ISS', ...trek('Enceladus', 'Enceladus_Cassini_mosaic_global_110m', 'png', 5), credit: 'NASA/JPL/Space Science Institute' }],
     fiche: "Geysers d'eau au pôle sud, vus par Cassini." },
-  uranus: { nom: 'Uranus', couleur: '#a9d8de', taille: 4.4, orbite: 'uranus' },
-  neptune: { nom: 'Neptune', couleur: '#6f8fd9', taille: 4.3, orbite: 'neptune' },
+  uranus: { nom: 'Uranus', couleur: '#c9cfcc', taille: 4.4, orbite: 'uranus' },
+  neptune: { nom: 'Neptune', couleur: '#8d8d8d', taille: 4.3, orbite: 'neptune' },
   pluton: { nom: 'Pluton', couleur: '#cbb8a4', taille: 1.4, orbite: 'pluton' },
 };
 
@@ -142,6 +142,6 @@ export const CARTOGRAPHIE = {
 };
 
 export const AGENCES = {
-  NASA: '#3f6fb5', ESA: '#2f9c95', URSS: '#c0392b', Roscosmos: '#c0392b', CNSA: '#e4572e',
-  JAXA: '#8e5bb5', ISRO: '#e39b2d', EAU: '#7a8b3a', ISA: '#5a7d9a', 'privée': '#6b7280',
+  NASA: '#262626', ESA: '#8c8c8c', URSS: '#c0392b', Roscosmos: '#c0392b', CNSA: '#e4572e',
+  JAXA: '#757575', ISRO: '#e39b2d', EAU: '#7a8b3a', ISA: '#5a5a5a', 'privée': '#6b6b6b',
 };
