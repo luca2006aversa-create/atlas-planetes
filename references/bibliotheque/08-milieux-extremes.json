@@ -1,0 +1,506 @@
+{
+  "theme": "Architecture en milieu extrême sur Terre (Antarctique, Arctique, sous-marin, plateformes, sous-marins), utile pour un habitat lunaire",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "halley-vi",
+      "nom": "Halley VI",
+      "annee": "2013 (à vérifier)",
+      "auteurs": "Hugh Broughton Architects pour British Antarctic Survey",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station antarctique de huit modules reliés par des couloirs souples. Les modules reposent sur des pattes hydrauliques montées sur skis, qui les laissent au-dessus de la neige.",
+      "dimensions": [
+        { "quoi": "module standard (bleu)", "valeur": "10 m x 20 m", "source": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/" },
+        { "quoi": "nombre de modules", "valeur": "8", "source": "https://www.esa.int/ESA_Multimedia/Images/2015/03/Halley_VI" },
+        { "quoi": "module central social", "valeur": "deux fois plus grand que les modules standard, sur deux niveaux", "source": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Halley VI plans", "url": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "page_source": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Légende de la page : plan de la station. Le dessin lui-même n'a pas été lu." },
+        { "type": "coupe", "titre": "Central module cross section", "url": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "page_source": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Coupe du module central social. Légende vue, dessin non lu." },
+        { "type": "3d", "titre": "Central module CGI cut-away view", "url": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "page_source": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Vue 3D éclatée du module central (pas une coupe technique)." },
+        { "type": "image", "titre": "The British Antarctic Survey station Halley VI (BAS / Karl Tuplin)", "url": "https://www.esa.int/ESA_Multimedia/Images/2015/03/Halley_VI", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2015/03/Halley_VI", "licence": "ESA Standard Licence", "verifie": true, "note": "Photo de la station, sans plan." },
+        { "type": "plan", "titre": "Plans, sections et vues orthographiques des modules (AJ Buildings Library)", "url": "https://www.ajbuildingslibrary.co.uk/projects/display/id/934", "page_source": "https://www.ajbuildingslibrary.co.uk/projects/display/id/934", "licence": "payant (abonnement)", "verifie": false, "note": "Repéré dans les résultats de recherche : liste de dessins par module, images soumises à abonnement. Non ouvert en détail." }
+      ],
+      "pour_kibsu": "Modules de 10 x 20 m, séparables et tractables puis reconnectables : bon modèle pour un habitat lunaire assemblé de modules transportables. Module central social sur deux niveaux, distinct des modules de vie. Pieds hydrauliques réglables : utile pour la poussière et les surfaces irrégulières.",
+      "a_verifier": [
+        "Surface totale, nombre de personnes et hauteur des pieds non trouvés dans les pages ouvertes.",
+        "Plans détaillés payants (AJ Buildings Library) : contenu non vérifié.",
+        "Année de mise en service : 2013 vient de la recherche, non confirmée sur une page ouverte."
+      ]
+    },
+    {
+      "id": "concordia",
+      "nom": "Concordia",
+      "annee": "2005 (à vérifier)",
+      "auteurs": "IPEV / PNRA (Italie-France), architecte d'intérieur italien selon une source secondaire",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Station du plateau antarctique au dôme C, faite de deux tours reliées par un passage couvert. La tour bruyante regroupe restaurant, espaces sociaux, sport et ateliers. La tour calme regroupe laboratoires, dortoirs, infirmerie et radio.",
+      "dimensions": [
+        { "quoi": "surface totale", "valeur": "environ 1 500 m2", "source": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan" },
+        { "quoi": "capacité", "valeur": "16 personnes, soit près de 100 m2 par personne", "source": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan" },
+        { "quoi": "isolement", "valeur": "plus de 600 km de toute autre habitation", "source": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Concordia floor plan (IPEV / S. Malo)", "url": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan", "licence": "?", "verifie": true, "note": "Titre du plan vu sur la page ESA ; le dessin n'a pas été lu, la page ne donne ni échelle ni légende." }
+      ],
+      "pour_kibsu": "Séparation nette entre zone bruyante (technique, sport, cuisine) et zone calme (dortoirs, labo), reliées par une circulation couverte qui évite de sortir par grand froid. Densité de 100 m2 par personne : référence haute pour une station polaire.",
+      "a_verifier": [
+        "Année 2005 non vérifiée sur une page ouverte.",
+        "Architecte d'intérieur italien : mention d'une source secondaire, non confirmée.",
+        "Autres chiffres trouvés en recherche seulement (températures, générateurs) : non repris ici."
+      ]
+    },
+    {
+      "id": "juan-carlos-i",
+      "nom": "Base Juan Carlos I",
+      "annee": "2018 (chantier 2007-2019)",
+      "auteurs": "Hugh Broughton Architects",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Base espagnole sur pilotis, composée d'un module d'habitation à trois ailes autour d'un noyau central, d'un module scientifique séparé et de modules de services et de stockage.",
+      "dimensions": [
+        { "quoi": "couchages", "valeur": "24, extensibles à 48", "source": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/" },
+        { "quoi": "capacité de l'ancienne base", "valeur": "20 personnes au maximum", "source": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "arc_crosssection (coupe du bâtiment)", "url": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/", "page_source": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/", "licence": "?", "verifie": true, "note": "Nom de fichier vu sur la page, sans légende. Dessin non lu." },
+        { "type": "image", "titre": "arc_aerialview (vue aérienne)", "url": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/", "page_source": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/", "licence": "?", "verifie": true, "note": "Vue aérienne du site et de l'habitat." }
+      ],
+      "pour_kibsu": "Habitat, module scientifique et services séparés : trois niveaux de programme bien distincts. Bâtiments sur pilotis avec espace suspendu dessous (rangement ou circulation technique).",
+      "a_verifier": [
+        "Dimensions chiffrées (longueur, hauteur sur pilotis) : absentes de la page ouverte.",
+        "Une autre source (Dezeen) indique une capacité de 20 personnes ; la page de l'architecte donne 24 couchages. Vérifier laquelle concerne le bâtiment neuf.",
+        "Catalogue CSIC/COMNAP de la station (https://www.comnap.aq/s/Spain_Antarctic_Station_Catalogue_Aug2017.pdf) : non ouvert."
+      ]
+    },
+    {
+      "id": "jang-bogo",
+      "nom": "Jang Bogo",
+      "annee": "2014 (à vérifier)",
+      "auteurs": "Concours : Hugh Broughton Architects, Samoo Architects, Space Group",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station coréenne du plateau antarctique, bâtiment principal sur pilotis en trois ailes autour d'un noyau. Deux ailes abritent les logements, la troisième les laboratoires et une grande salle à manger.",
+      "dimensions": [
+        { "quoi": "bâtiment principal", "valeur": "environ 4 000 m2", "source": "https://www.dezeen.com/2026/02/05/antarctic-architecture-highlights/" }
+      ],
+      "documents": [
+        { "type": "3d", "titre": "3D floorplan for CAD of Jang Bogo Station (KOPRI-KPDC-00000707)", "url": "https://kpdc.kopri.re.kr/search/122916b1-d56a-46a1-8e5e-1d524e5a0e6c", "page_source": "https://kpdc.kopri.re.kr/search/122916b1-d56a-46a1-8e5e-1d524e5a0e6c", "licence": "CC BY-NC-ND 4.0 (usage non commercial, pas de modification, demande obligatoire)", "verifie": true, "note": "Jeu de données KOPRI, 169 Mo en 4 archives ZIP (SketchUp 2016) : plan 3D, plan de récolement (장보고과학기지_준공도면.zip, 23,5 Mo), résultats 3D et sources. Chaque fichier demande une demande préalable. Rien téléchargé." },
+        { "type": "image", "titre": "04_elevation (élévation Jang Bogo)", "url": "https://hbarchitects.co.uk/jang-bogo-korean-antarctic-research-station", "page_source": "https://hbarchitects.co.uk/jang-bogo-korean-antarctic-research-station", "licence": "?", "verifie": true, "note": "Nom de fichier d'une élévation, vu dans une page de liste de projets de l'architecte. Image non lue." }
+      ],
+      "pour_kibsu": "Le plan de récolement et le modèle 3D SketchUp seraient une très bonne référence de cotes, mais la licence interdit l'usage commercial et les modifications : à ne citer que comme référence, et à demander avant tout usage. Trois ailes en étoile : bonne référence de zonage (dormir, travailler, manger).",
+      "a_verifier": [
+        "Année 2014 non vérifiée sur une page ouverte.",
+        "Environ 16 personnes en hiver et 60 en été : source douteuse, non retenu.",
+        "Nombre de bâtiments (16) et disposition en étoile : extrait de recherche (Korea Herald, repository KOPRI), non ouverts.",
+        "Plan de récolement : dans le jeu KOPRI, fichier non ouvert (demande requise)."
+      ]
+    },
+    {
+      "id": "princess-elisabeth",
+      "nom": "Princess Elisabeth Station",
+      "annee": "2009 (à vérifier)",
+      "auteurs": "Philippe Samyn and Partners, International Polar Foundation, Prefalux",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station belge à émission nulle sur la crête de Terre de la Reine-Maud, posée sur pilotis, avec enveloppe en acier inoxydable et structure bois visible à l'intérieur.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Photos de la station (crédit International Polar Foundation)", "url": "https://www.dezeen.com/2026/02/05/antarctic-architecture-highlights/", "page_source": "https://www.dezeen.com/2026/02/05/antarctic-architecture-highlights/", "licence": "?", "verifie": true, "note": "Photos et renvoi vers une galerie externe des intérieurs. Pas de plan dans l'article." },
+        { "type": "image", "titre": "Section 'Drawings' de l'architecte : fichiers 523_P04.jpg et 523_P52.jpg", "url": "https://samynandpartners.com/portfolio/antarctica/", "page_source": "https://samynandpartners.com/portfolio/antarctica/", "licence": "?", "verifie": true, "note": "Deux fichiers listés sans légende. La page renvoie aux plans, coupes et élévations dans ses archives (menu 'references'). Contenu non lu." }
+      ],
+      "pour_kibsu": "Énergie : panneaux solaires sur toutes les façades et neuf éoliennes. Structure bois visible à l'intérieur : cas d'étude pour un habitat qui doit garder une ambiance chaleureuse. Forme compacte pour limiter matériaux et énergie. Détail de paroi utile : panneaux multiplis 42 mm et 74 mm, polystyrène expansé 400 mm.",
+      "a_verifier": [
+        "Plans et coupes officiels : dans les archives de samynandpartners.com (menu 'references'), non ouvertes.",
+        "Nombre de modules (8 ou près de 100 selon les sources), capacité (40), hauteur de levage : extraits de recherche non ouverts (polarfoundation.org), à vérifier.",
+        "Architecte de l'intérieur (Bjorn Hacker) : non trouvé dans les résultats."
+      ]
+    },
+    {
+      "id": "neumayer-iii",
+      "nom": "Neumayer III",
+      "annee": "2009 (à vérifier)",
+      "auteurs": "Alfred Wegener Institut (AWI)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Station allemande sur plateforme surélevée sur vérins hydrauliques, composée de containers empilés et de logements à plusieurs niveaux.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Polarforschung 78 (3) 133-136 : construction de la station", "url": "https://epic2-clone.awi.de/29143/1/Polarforschung_78_3_133-136.pdf", "page_source": "https://epic2-clone.awi.de/29143/1/Polarforschung_78_3_133-136.pdf", "licence": "?", "verifie": false, "note": "Repéré dans les résultats de recherche, non ouvert." },
+        { "type": "coupe", "titre": "Structure section (Gerüstschnitt Neumayer-Station III)", "url": "https://en.wikipedia.org/wiki/Neumayer_Station_III", "page_source": "https://en.wikipedia.org/wiki/Neumayer_Station_III", "licence": "?", "verifie": false, "note": "Nom de fichier vu dans un miroir de Wikipédia (non ouvert). Coupe de la structure avec la neige simulée ; les girders verts indiquent le niveau de neige." }
+      ],
+      "pour_kibsu": "Plateforme surélevée et containers : base de modularité et de réservation de volumes pour les services.",
+      "a_verifier": [
+        "Chiffres trouvés en recherche seulement, non vus dans la page AWI ouverte (texte tronqué) : plateforme 68 x 24 m, environ 4 890 m2 intérieurs sur 4 niveaux, environ 100 containers, 15 chambres, 40 lits, hauteur 29,2 m.",
+        "Labo de 210 m2 en 12 compartiments : source Wikipédia-dérivée, non fiable.",
+        "Coupe Commons : fichier non confirmé sur Wikimedia Commons (page 403/404 à l'ouverture)."
+      ]
+    },
+    {
+      "id": "comandante-ferraz",
+      "nom": "Comandante Ferraz",
+      "annee": "2020 (réouverture)",
+      "auteurs": "Estúdio 41 (projet) ; marine brésilienne ; construction par China Electronics Import & Export Corp. (CEIEC) selon les résultats de recherche",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Station brésilienne sur pilotis de l'île du Roi-Georges, reconstruite après l'incendie de février 2012. Trois volumes principaux : bloc supérieur logements et services, bloc inférieur laboratoires et exploitation, et grange centrale avec garages.",
+      "dimensions": [
+        { "quoi": "niveau du bloc inférieur (laboratoires)", "valeur": "+5,95 m", "source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/" },
+        { "quoi": "niveau du bloc supérieur (logements, cabines)", "valeur": "+9,10 m", "source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/" },
+        { "quoi": "niveau de la grange centrale et des garages", "valeur": "+2,50 m", "source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Site plan (plan de site)", "url": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "page_source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Image 6 de la galerie, légende 'site plan'. Dessin non lu." },
+        { "type": "coupe", "titre": "Section (coupe)", "url": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "page_source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Image 10 de la galerie, légende 'section'. Dessin non lu." },
+        { "type": "image", "titre": "Elevations des volumes (3 images)", "url": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "page_source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Images 4, 7, 8 et 9 de la galerie, légendes 'elevation' ou 'élévations des volumes'. Non lues." },
+        { "type": "image", "titre": "Diagram (diagramme) et rendu d'ensemble", "url": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "page_source": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "licence": "?", "verifie": true, "note": "Image 11 (diagramme) et image 1 (rendu dans son environnement) de la galerie." }
+      ],
+      "pour_kibsu": "Trois volumes superposés par fonction, avec une grange et des garages au sol : bonne référence de zonage vertical. Trame de 4,3 x 10,5 m à vérifier (voir a_verifier) : une trame standard simplifie fabrication et transport.",
+      "a_verifier": [
+        "Module standard 4,3 m x 10,5 m : vu sur une page de liste de l'architecte (hbarchitects), la page dédiée ouverte ne le donne pas ; probablement issu d'une version de concours, à confirmer.",
+        "Surface de 4 500 m2, 64 ou 65 personnes, nombre de labos (14 ou 17) : sources contradictoires, non ouvertes.",
+        "Plans officiels : marinha.mil.br (secirm/reconstrucao), non ouverts."
+      ]
+    },
+    {
+      "id": "davis",
+      "nom": "Station Davis (renouvellement)",
+      "annee": "2023-2029 (programme en cours)",
+      "auteurs": "Australian Antarctic Division ; WSP (pilote), Hugh Broughton Architects",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Renouvellement de la station australienne de Davis (Terre de Vestfold, Antarctique de l'Est), en plusieurs phases. La phase 1 vise à renouveler les infrastructures vieillissantes et à porter la capacité à environ 120 personnes.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Conception en phases et modules préfabriqués : utile pour penser une extension progressive d'un habitat lunaire.",
+      "a_verifier": [
+        "Plans et chiffres absents de la page de l'architecte ouverte (programme seulement).",
+        "Capacité de 120 personnes : extrait de recherche (WSP/AAD), non ouvert.",
+        "Plans de la station Davis : pages WSP ou AAD non ouvertes (la recherche a renvoyé des pages WSP en erreur de contenu)."
+      ]
+    },
+    {
+      "id": "amundsen-scott",
+      "nom": "Amundsen-Scott South Pole",
+      "annee": "à vérifier",
+      "auteurs": "NSF / USAP",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station américaine du pôle Sud, nouvelle station surélevée sur pilotis, dont le bâtiment scientifique est une rangée de deux modules en C reliés par un pont de deux niveaux.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "South Pole Map 2012 (USAP)", "url": "https://www.usap.gov/scienceSupport/documents/South%20Pole%20Map_2012.pdf", "page_source": "https://www.usap.gov/scienceSupport/documents/South%20Pole%20Map_2012.pdf", "licence": "?", "verifie": false, "note": "Repéré dans les résultats de recherche, non ouvert. Contiendrait la feuille de disposition (C-102)." }
+      ],
+      "pour_kibsu": "Deux bâtiments en C reliés par un pont : organisation par ailes reliées, adaptée aux climats extrêmes.",
+      "a_verifier": [
+        "Surface d'environ 65 000 pieds carrés : extrait de recherche, non vérifié.",
+        "Plans d'étage de la station surélevée : southpolestation.com (page non lue, erreur d'analyse).",
+        "Année non vérifiée."
+      ]
+    },
+    {
+      "id": "canadian-high-arctic-research-station",
+      "nom": "CHARS (Canadian High Arctic Research Station)",
+      "annee": "2018 (date de la page, à vérifier)",
+      "auteurs": "Polar Knowledge Canada",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Campus de recherche de l'Arctique canadien : un bâtiment principal de recherche en plan long et linéaire, un bâtiment terrain et entretien, deux triplex d'habitation et un qaggiq (espace communautaire en forme d'igloo).",
+      "dimensions": [
+        { "quoi": "habitation", "valeur": "2 triplex, chacun avec 3 logements de 4 chambres", "source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html" },
+        { "quoi": "stationnement", "valeur": "26 places publiques, 8 places pour les logements, 12 places motoneiges et VTT, 11 places préférentielles", "source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Site Plan", "url": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "page_source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "licence": "?", "verifie": true, "note": "Plan d'ensemble : entrée publique, cour de marshalling, stockage terrain, habitations, qaggiq." },
+        { "type": "plan", "titre": "Ground floor plan of the main research building", "url": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "page_source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "licence": "?", "verifie": true, "note": "Plan long et linéaire : zone publique qui entoure les labos, ateliers, bureaux, cuisine, quais de chargement." },
+        { "type": "plan", "titre": "Second floor plan of the main research building", "url": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "page_source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "licence": "?", "verifie": true, "note": "Labos analytiques, bureaux, salles de réunion, chambre de croissance, locaux techniques." },
+        { "type": "plan", "titre": "Ground floor plan of the field and maintenance building", "url": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "page_source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "licence": "?", "verifie": true, "note": "Entrées multiples (public, marshalling, garage, chaufferie), installations de plongée, stockage." },
+        { "type": "plan", "titre": "Second floor of the field and maintenance building", "url": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "page_source": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "licence": "?", "verifie": true, "note": "Bureaux logistique, salle télécom, sanitaires, salle mécanique." }
+      ],
+      "pour_kibsu": "Référence la plus complète de cette série : plans d'ensemble et deux niveaux par bâtiment, légendés, avec séparation nette entre public, science, technique et logistique. Le couloir de laboratoires avec fenêtres sur circulation et le sas de chargement sont directement transposables.",
+      "a_verifier": [
+        "Surfaces et nombre de personnes : non donnés sur la page.",
+        "Date de construction : la seule date de la page est celle de publication (2018-02-08)."
+      ]
+    },
+    {
+      "id": "summit-station",
+      "nom": "Summit Station (Groenland)",
+      "annee": "à vérifier",
+      "auteurs": "NSF ; GEOSummit ; campus existant puis projets AWO et MSF",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station scientifique du sommet de la calotte glaciaire du Groenland, à 3 225 m d'altitude. Un campus principal de trois bâtiments, deux bâtiments de recherche isolés dans un secteur d'air pur, et des structures d'été sous tente.",
+      "dimensions": [
+        { "quoi": "Big House", "valeur": "26 x 56 pieds", "source": "https://geo-summit.org/summit-station/working-at-summit" },
+        { "quoi": "Summit Mobile Garage", "valeur": "32 x 97 pieds (9,7 x 29,5 m)", "source": "https://geo-summit.org/summit-station/working-at-summit" },
+        { "quoi": "Atmospheric Watch Observatory (AWO)", "valeur": "150 pieds carrés", "source": "https://geo-summit.org/summit-station/working-at-summit" },
+        { "quoi": "Mobile Science Facility (MSF)", "valeur": "16 x 36 pieds", "source": "https://geo-summit.org/summit-station/working-at-summit" },
+        { "quoi": "personnes", "valeur": "hivernage 4 à 6 personnes ; été jusqu'à 45 personnes", "source": "https://geo-summit.org/summit-station/working-at-summit" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Summit Station Site Plan (2014, 2016, 2020)", "url": "https://geo-summit.org/summit-station/working-at-summit", "page_source": "https://geo-summit.org/summit-station/working-at-summit", "licence": "?", "verifie": false, "note": "Trois plans de site mentionnés par la page (dont celui de 2020 sur le secteur d'air pur). Liens non trouvés dans le texte ouvert." },
+        { "type": "image", "titre": "Big House, station Summit (crédit Peter West, NSF)", "url": "https://geo-summit.org/summit-station/working-at-summit", "page_source": "https://geo-summit.org/summit-station/working-at-summit", "licence": "?", "verifie": true, "note": "Photo du bâtiment principal." },
+        { "type": "image", "titre": "Greenhouse/Berthing Module", "url": "https://geo-summit.org/summit-station/working-at-summit", "page_source": "https://geo-summit.org/summit-station/working-at-summit", "licence": "?", "verifie": true, "note": "Photo, légende seule." },
+        { "type": "image", "titre": "Science and Operations Barn (SOB)", "url": "https://geo-summit.org/summit-station/working-at-summit", "page_source": "https://geo-summit.org/summit-station/working-at-summit", "licence": "?", "verifie": true, "note": "Photo, légende seule." },
+        { "type": "image", "titre": "Atmospheric Watch Observatory (AWO)", "url": "https://geo-summit.org/summit-station/working-at-summit", "page_source": "https://geo-summit.org/summit-station/working-at-summit", "licence": "?", "verifie": true, "note": "Photo, légende seule." }
+      ],
+      "pour_kibsu": "Secteur d'air pur : une zone à protéger de la pollution des bâtiments, leçon directe pour un habitat lunaire (zone de science sans contamination). Bâtiments de quelques dizaines de m2 séparés : modularité par fonction.",
+      "a_verifier": [
+        "Altitude 3 225 m : vue dans un extrait, non confirmée sur cette page.",
+        "Plans de site 2014, 2016 et 2020 : liens non ouverts."
+      ]
+    },
+    {
+      "id": "proteus",
+      "nom": "Proteus",
+      "annee": "2020 (date de l'article, à vérifier)",
+      "auteurs": "Fabien Cousteau ; Yves Béhar / fuseproject",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat sous-marin conçu pour les océans, à architecture en spirale : laboratoires, cabines, moon pool, serre sous-marine, studio de production vidéo et espaces sociaux.",
+      "dimensions": [
+        { "quoi": "profondeur d'implantation prévue", "valeur": "60 pieds (3 atmosphères), au large de Curaçao", "source": "https://www.designboom.com/design/yves-behar-fuseproject-proteus-underwater-scientific-research-station-fabien-cousteau-07-22-2020/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "yves béhar proteus (rendus Yves Béhar / fuseproject)", "url": "https://www.designboom.com/design/yves-behar-fuseproject-proteus-underwater-scientific-research-station-fabien-cousteau-07-22-2020/", "page_source": "https://www.designboom.com/design/yves-behar-fuseproject-proteus-underwater-scientific-research-station-fabien-cousteau-07-22-2020/", "licence": "?", "verifie": true, "note": "Images de l'article, légendées seulement 'yves béhar proteus'. Pas de plan décrit." }
+      ],
+      "pour_kibsu": "Moon pool (ouverture sous la structure) comme sas d'accès direct depuis l'extérieur : analogue utile pour un accès au sol lunaire. Serre intégrée : référence pour la production alimentaire en milieu clos.",
+      "a_verifier": [
+        "Surface : des sources disent 370 m2 et 4 000 pieds carrés (cohérents), non relu sur une page ouverte.",
+        "Nombre de niveaux, équipage et plan : non précisés dans la page ouverte.",
+        "Statut actuel : un article de 2025 annonçait une installation en 2025, non confirmé."
+      ]
+    },
+    {
+      "id": "maitri-ii-concours",
+      "nom": "Maitri II (concours, 3e prix)",
+      "annee": "2024-2025 (concours NCPOR)",
+      "auteurs": "Philippe Samyn and Partners avec R.dx architects (Chennai) et Extreme Planet R+D (Chamonix) ; concours NCPOR",
+      "lieu": "terre",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Proposition pour la nouvelle base antarctique indienne : un système modulaire, un master plan de bâtiments dispersés, et des exigences d'énergie et de support de vie.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "NE-View-Front (rendu de façade nord-est)", "url": "https://samynandpartners.com/portfolio/2025-01-17/", "page_source": "https://samynandpartners.com/portfolio/2025-01-17/", "licence": "?", "verifie": true, "note": "Rendu de la façade, nom de fichier seulement. Pas de plan ni de coupe décrit." }
+      ],
+      "pour_kibsu": "Le concours exigeait un master plan pour des bâtiments dispersés : utile pour un habitat lunaire réparti (sas, énergie, logistique séparés).",
+      "a_verifier": [
+        "Surface 14 436 m2 : chiffre d'une source, non confirmé sur la page ouverte.",
+        "Gagnant du concours et plans du projet retenu : non trouvés.",
+        "Proposition HB Architects (kit-of-parts, trame alignée sur les containers) : page non lue correctement."
+      ]
+    },
+    {
+      "id": "bharati",
+      "nom": "Bharati",
+      "annee": "2012 (mise en service)",
+      "auteurs": "NCPOR (Inde) ; architecte bof architekten selon archello (non confirmé)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Station indienne de la baie de Larsemann : un bâtiment principal, un dépôt et une station de carburant, une station de pompage d'eau de mer, un camp d'été et des modules conteneurisés.",
+      "dimensions": [
+        { "quoi": "capacité", "valeur": "47 personnes dans le bâtiment principal (chambres à deux), 25 personnes en été sous abris ou camps, total 72", "source": "https://ncpor.res.in/pages/display/377-bharati" },
+        { "quoi": "mise en service", "valeur": "18 mars 2012", "source": "https://ncpor.res.in/pages/display/377-bharati" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Photographie de la station", "url": "https://ncpor.res.in/pages/display/377-bharati", "page_source": "https://ncpor.res.in/pages/display/377-bharati", "licence": "?", "verifie": true, "note": "Une photographie seule, aucun plan ni dessin signalé sur la page." }
+      ],
+      "pour_kibsu": "Un seul bâtiment de vie et de travail, des modules annexes séparés (carburant, eau) : séparation des risques, à reprendre pour un habitat lunaire.",
+      "a_verifier": [
+        "Dimensions 30 m x 50 m et surface 2 162 m2 : vues dans un extrait de recherche (page NCPOR des réalisations), non ouvertes.",
+        "Étages : sources contradictoires (trois niveaux ou un seul bâtiment), non résolu.",
+        "Plans : aucun trouvé. Architecte à confirmer sur archello.com (page en erreur 403)."
+      ]
+    },
+    {
+      "id": "conshelf",
+      "nom": "Conshelf I, II, III",
+      "annee": "1962 / 1963 / 1965",
+      "auteurs": "Jacques-Yves Cousteau",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Série d'habitats sous-marins de Cousteau : Conshelf I au large de Marseille à 10 m, Conshelf II en mer Rouge avec la Starfish House (maison à quatre bras) et un hangar à sous-marin à piscine lunaire, et Conshelf III à 100 m au large de la France.",
+      "dimensions": [
+        { "quoi": "Conshelf I, profondeur", "valeur": "10 m, au large de Marseille (1962)", "source": "https://cousteau.org/legacy/technology/conshelf" },
+        { "quoi": "Conshelf II, Starfish House", "valeur": "environ 10 m de profondeur (33 pieds), six hommes pendant un mois (1963)", "source": "https://braindrippings.substack.com/p/jacque-cousteaus-conshelf-program" },
+        { "quoi": "Conshelf II, Deep Cabin", "valeur": "environ 27 m de profondeur (90 pieds), deux hommes pendant une semaine", "source": "https://braindrippings.substack.com/p/jacque-cousteaus-conshelf-program" },
+        { "quoi": "Conshelf III, profondeur", "valeur": "100 m, six aquanautes pendant trois semaines (1965)", "source": "https://cousteau.org/legacy/technology/conshelf" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Cut-away diagrams : Starfish House, Deep Cabin, hangar du sous-marin", "url": "https://braindrippings.substack.com/p/jacque-cousteaus-conshelf-program", "page_source": "https://braindrippings.substack.com/p/jacque-cousteaus-conshelf-program", "licence": "?", "verifie": true, "note": "Trois schémas en coupe annoncés par le texte, sans légende lisible (fichier pRECONTINENTE2.jpg). Dessins non lus." }
+      ],
+      "pour_kibsu": "Starfish House : quatre bras autour d'un noyau central, avec cuisine et labo dans un bras : organisation rayonnante, à reprendre pour un habitat à centre technique. Le hangar à piscine lunaire est une référence d'accès de véhicule sous pression.",
+      "a_verifier": [
+        "Dimensions de Conshelf I (environ 5 m x 2,5 m) : trouvées en recherche, pas sur la page Cousteau ouverte, qui ne les donne pas.",
+        "Conshelf III sphère d'environ 20 pieds de diamètre : extrait de recherche, non vérifié.",
+        "Dimensions de la Starfish House (diamètre et hauteur sur pilotis, environ 2,1 m) : extrait de recherche, non vérifié."
+      ]
+    },
+    {
+      "id": "mdrs-hab",
+      "nom": "MDRS Hab (Mars Desert Research Station)",
+      "annee": "à vérifier",
+      "auteurs": "Mars Society",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Habitat analogue à Mars, dans le désert de l'Utah : cylindre de deux niveaux. Le bas abrite labo, sas, préparation EVA et atelier ; le haut abrite chambres, espace commun, cuisine et radio.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Plan du niveau inférieur (HI-SEAS)", "url": "https://www.hi-seas.org/missions-i-vi-mission-updates/mars-desert-research-station", "page_source": "https://www.hi-seas.org/missions-i-vi-mission-updates/mars-desert-research-station", "licence": "?", "verifie": false, "note": "Page annoncée dans les résultats ; la lecture a renvoyé une erreur 401. Plan non vu." }
+      ],
+      "pour_kibsu": "Analogue lunaire direct : deux niveaux dans un cylindre, sas EVA au rez-de-chaussée, chambres individuelles au niveau supérieur.",
+      "a_verifier": [
+        "Diamètre : 10 m pour une source, 7,3 m pour une autre : conflit, non résolu.",
+        "Surfaces des chambres : non trouvées.",
+        "Année non vérifiée."
+      ]
+    },
+    {
+      "id": "uss-cod-quartier-equipage",
+      "nom": "Sous-marin USS Cod, quartier d'équipage (after battery)",
+      "annee": "à vérifier",
+      "auteurs": "US Navy",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "tore",
+      "resume": "Quartier d'équipage d'un sous-marin de la Seconde Guerre mondiale : 36 couchettes sur trois niveaux, avec sanitaires et compartiments de torpilles aménagés en couchage.",
+      "dimensions": [
+        { "quoi": "couchettes principales", "valeur": "36, empilées sur 3 niveaux", "source": "https://usscod.org/afterbattery_crewsleep.html" },
+        { "quoi": "capacité avec hot-bunking", "valeur": "jusqu'à 54 hommes (deux couchettes pour trois hommes)", "source": "https://usscod.org/afterbattery_crewsleep.html" },
+        { "quoi": "couchettes des compartiments de torpilles", "valeur": "15 à l'avant, 12 à l'arrière", "source": "https://usscod.org/afterbattery_crewsleep.html" },
+        { "quoi": "sanitaires d'équipage", "valeur": "2 toilettes, un lavabo, douches et une machine à laver", "source": "https://usscod.org/afterbattery_crewsleep.html" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Photo de la zone de couchage (USS Cod)", "url": "https://usscod.org/afterbattery_crewsleep.html", "page_source": "https://usscod.org/afterbattery_crewsleep.html", "licence": "?", "verifie": true, "note": "Photo seule, pas de plan." }
+      ],
+      "pour_kibsu": "Couchage empilé sur trois niveaux et hot-bunking : référence de densité extrême. Un habitat lunaire peut réserver des couchettes à rotation, avec rideaux ou cloisons légères pour l'intimité.",
+      "a_verifier": [
+        "Dimensions des couchettes (environ 1,8 m x 0,9 m, 0,6 m de hauteur) : trouvées sur une page PBS non ouverte, à vérifier.",
+        "Surface par marin, portes étanches et plans : non trouvés.",
+        "Date de service non vérifiée."
+      ]
+    },
+    {
+      "id": "gullfaks-a-hebergement",
+      "nom": "Gullfaks A, bloc d'hébergement",
+      "annee": "à vérifier",
+      "auteurs": "Statoil / Equinor",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Plateforme pétrolière de la mer du Nord. Le bloc d'hébergement est formé de trois blocs reliés de huit étages, avec une chambre par travailleur et des sanitaires partagés entre deux chambres.",
+      "dimensions": [
+        { "quoi": "bloc d'hébergement", "valeur": "trois blocs interconnectés, chacun de huit étages", "source": "https://gullfaks.industriminne.no/en/where-is-what-on-gullfaks-a/" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Étages fonctionnels (communications et accueil en haut, infirmerie et cabines, puis bureaux et cabines, services aux étages bas) : modèle de stratification verticale par fonction. Sanitaires partagés entre deux chambres : économie de surface.",
+      "a_verifier": [
+        "Nombre de cabines et de sanitaires : non indiqué.",
+        "Plan détaillé des étages d'hébergement : non trouvé (seul un plan de 1983 des modules de la plateforme, non vu).",
+        "Date de mise en service non vérifiée."
+      ]
+    },
+    {
+      "id": "sealab-i-ii",
+      "nom": "SEALAB I et II",
+      "annee": "à vérifier",
+      "auteurs": "US Navy",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Habitats sous-marins de l'US Navy. SEALAB II était un cylindre de 50 pieds de long, avec entrée par une piscine lunaire, labo, cuisine et couchages.",
+      "dimensions": [
+        { "quoi": "SEALAB II", "valeur": "50 pieds de long, 12 pieds de diamètre, quatre zones (entrée, labo, cuisine, couchage), 11 hublots", "source": "https://navalunderseamuseum.org/?p=476" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Sea Lab II habitat (photo 1965, James Ronald Stewart Papers)", "url": "https://library.ucsd.edu/dc/object/bb97963557?counter=16", "page_source": "https://library.ucsd.edu/dc/object/bb97963557?counter=16", "licence": "?", "verifie": false, "note": "Photo d'archive repérée en recherche, non ouverte." }
+      ],
+      "pour_kibsu": "Entrée par une piscine lunaire sous l'habitat, puis sas : séquence d'entrée sous pression à reprendre.",
+      "a_verifier": [
+        "SEALAB I : 9 pieds de diamètre sur 40 pieds de long : extrait de recherche, non ouvert.",
+        "Aucun plan de SEALAB II trouvé. Le rapport DTIC AD0702060 pourrait en contenir (page en erreur 403)."
+      ]
+    },
+    {
+      "id": "scott-base",
+      "nom": "Scott Base (renouvellement)",
+      "annee": "2017-2024 (projet, non abouti selon une source)",
+      "auteurs": "Antarctica New Zealand ; Hugh Broughton Architects (conception), Jasmax (masterplan), WSP",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "boite",
+      "resume": "Projet de remplacement de la base néo-zélandaise de l'île de Ross : trois bâtiments interconnectés de deux niveaux, très isolés, en gradins sur la pente de Pram Point et surélevés pour limiter l'accumulation de neige.",
+      "dimensions": [
+        { "quoi": "surface", "valeur": "10 000 m2", "source": "https://nla.london/projects/scott-base-redevelopment" },
+        { "quoi": "capacité", "valeur": "100 personnes en été, 15 en hivernage", "source": "https://hbarchitects.co.uk/projects/scott-base-redevelopment" },
+        { "quoi": "bâtiments", "valeur": "3 bâtiments interconnectés, de deux niveaux chacun", "source": "https://hbarchitects.co.uk/projects/scott-base-redevelopment" }
+      ],
+      "documents": [
+        { "type": "maquette", "titre": "Scott Base Model View (crédit Sam Hartnett)", "url": "https://nla.london/projects/scott-base-redevelopment", "page_source": "https://nla.london/projects/scott-base-redevelopment", "licence": "?", "verifie": true, "note": "Vue de la maquette, seule image de la page. Contenu visuel non décrit." },
+        { "type": "maquette", "titre": "model02 (maquette)", "url": "https://hbarchitects.co.uk/projects/scott-base-redevelopment", "page_source": "https://hbarchitects.co.uk/projects/scott-base-redevelopment", "licence": "?", "verifie": true, "note": "Nom de fichier vu sur la page, sans légende." },
+        { "type": "image", "titre": "Illustrated storyline of the proposed construction process", "url": "https://hbarchitects.co.uk/projects/scott-base-redevelopment", "page_source": "https://hbarchitects.co.uk/projects/scott-base-redevelopment", "licence": "?", "verifie": true, "note": "Séquence illustrée des étapes de construction (image du 9 octobre 2020). Non lue." },
+        { "type": "image", "titre": "View of the existing base", "url": "https://hbarchitects.co.uk/projects/scott-base-redevelopment", "page_source": "https://hbarchitects.co.uk/projects/scott-base-redevelopment", "licence": "?", "verifie": true, "note": "Vue de la base existante, sans plan." }
+      ],
+      "pour_kibsu": "Trois bâtiments interconnectés en gradins, surélevés et très isolés : modèle de programme éclaté sur plusieurs volumes. La séquence de chantier illustrée est une référence de construction par étapes sur milieu hostile.",
+      "a_verifier": [
+        "Aucun plan ni coupe publié dans les pages ouvertes ; les plans circulent dans la presse (Weekend Herald, NZ Herald) et les sites officiels, non ouverts.",
+        "Statut : hbarchitects indique que le projet n'a pas abouti (budget dépassé) ; NLA le donne comme 'projet proposé'. Vérifier.",
+        "Achèvement estimé en décembre 2028 (NLA) : non confirmé."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "Concordia floor plan (ESA)", "url": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan", "note": "Plan et chiffres de Concordia, page ouverte." },
+    { "titre": "Halley VI (Hugh Broughton Architects)", "url": "https://hbarchitects.co.uk/halley-vibritish-antarctic-research-station/", "note": "Plans, coupe et CGI du module central ; dimensions des modules." },
+    { "titre": "Juan Carlos I (Hugh Broughton Architects)", "url": "https://hbarchitects.co.uk/juan-carlos-1-spanish-antarctic-base/", "note": "Couchages, modules, coupe et vue aérienne." },
+    { "titre": "Antarctic architecture highlights (Dezeen, 2026)", "url": "https://www.dezeen.com/2026/02/05/antarctic-architecture-highlights/", "note": "Princess Elisabeth, Jang Bogo (4 000 m2), Juan Carlos I, Halley VI." },
+    { "titre": "Halley VI (ESA, image BAS)", "url": "https://www.esa.int/ESA_Multimedia/Images/2015/03/Halley_VI", "note": "8 modules sur pattes hydrauliques." },
+    { "titre": "Hugh Broughton Architects, Davis station", "url": "https://hbarchitects.co.uk/davis-station", "note": "Programme de renouvellement 2023-2029, sans plan." },
+    { "titre": "Aquarius (FIU, facilities & vessels)", "url": "https://environment.fiu.edu/aquarius/working-with-aquarius/facilities-vessels/", "note": "Dimensions, sas, couchages, plans en images." },
+    { "titre": "Aquarius (NOAA, meet Aquarius)", "url": "https://sanctuaries.noaa.gov/missions/2010aquarius/meet_aquarius.html", "note": "Diamètre, longueur, profondeur, plan d'ensemble en image." },
+    { "titre": "Conshelf (Cousteau Society)", "url": "https://cousteau.org/legacy/technology/conshelf", "note": "Dates, profondeurs et occupation des Conshelf I, II, III." },
+    { "titre": "Conshelf II, cut-away diagrams (blog)", "url": "https://braindrippings.substack.com/p/jacque-cousteaus-conshelf-program", "note": "Starfish House, Deep Cabin et hangar, schémas en coupe." },
+    { "titre": "USS Cod, after battery crew sleeping quarters", "url": "https://usscod.org/afterbattery_crewsleep.html", "note": "36 couchettes sur 3 niveaux, hot-bunking, sanitaires." },
+    { "titre": "Gullfaks A, where is what", "url": "https://gullfaks.industriminne.no/en/where-is-what-on-gullfaks-a/", "note": "Bloc d'hébergement en trois blocs de huit étages." },
+    { "titre": "KOPRI, 3D floorplan for CAD of Jang Bogo Station", "url": "https://kpdc.kopri.re.kr/search/122916b1-d56a-46a1-8e5e-1d524e5a0e6c", "note": "Jeu 3D SketchUp et plan de récolement, CC BY-NC-ND 4.0, demande obligatoire." },
+    { "titre": "Comandante Ferraz (Designboom, Estúdio 41)", "url": "https://www.designboom.com/architecture/estudio-41-comandante-ferraz-antarctic-research-station/", "note": "Galerie : plan de site, coupe, élévations, diagramme ; niveaux +2,50 / +5,95 / +9,10 m." },
+    { "titre": "CHARS campus floor plans (Polar Knowledge Canada)", "url": "https://www.canada.ca/en/polar-knowledge/CHARScampus/charsfloorplan.html", "note": "Plan de site et quatre plans de niveaux, légendés." },
+    { "titre": "Summit Station, working at Summit (GEOSummit)", "url": "https://geo-summit.org/summit-station/working-at-summit", "note": "Disposition du campus, dimensions des bâtiments, renvois aux plans de site." },
+    { "titre": "Proteus (Designboom)", "url": "https://www.designboom.com/design/yves-behar-fuseproject-proteus-underwater-scientific-research-station-fabien-cousteau-07-22-2020/", "note": "Concept, espaces, profondeur, images Béhar / fuseproject." },
+    { "titre": "Maitri II concours (Samyn and Partners)", "url": "https://samynandpartners.com/portfolio/2025-01-17/", "note": "Troisième prix, partenaires, rendu de façade." },
+    { "titre": "Bharati (NCPOR)", "url": "https://ncpor.res.in/pages/display/377-bharati", "note": "Capacité 72 personnes, mise en service 18 mars 2012, photo." },
+    { "titre": "Modular Arctic Research Station competition (ArchDaily)", "url": "https://www.archdaily.com/en/1037065/modular-arctic-research-station-architecture-competition", "note": "Concours soumis par un utilisateur, aucun plan publié : écarté." }
+  ],
+  "pistes_non_explorees": [
+    "Tektite (Navy/GE, 1969-1970) : rapport Navy (https://www.history.navy.mil/content/dam/museums/Seabee/Online%20Reading%20Room/OFP/Project.Tektite.I.pdf) en erreur de certificat ; rapport DTIC AD0702060 (https://apps.dtic.mil/sti/pdfs/AD0702060.pdf) en erreur 403 ; rapport NASA Nowlis 71-6192-2 (NTRS). Non ouverts.",
+    "Stations arctiques Alert, Eureka, Ny-Ålesund, Samoylov, Svalbard : recherche sans plan trouvé. CHARS est la seule station arctique avec plans ouverts.",
+    "Haughton-Mars / Flashline Mars Arctic Research Station (Devon, Nunavut) : recherche sans plan trouvé ; piste à relancer avec « Flashline ».",
+    "Mars Dune Alpha (NASA, Houston) : plan publié mentionné dans un extrait, à ouvrir ; hors Terre mais analogue direct.",
+    "Quartiers de sous-marins modernes (classe Virginia) : aucun plan trouvé ; PBS NOVA a des diagrammes génériques (non ouverts). Documents NAVSEA à chercher.",
+    "Plates-formes offshore : NORSOK C-001 et rapport NOPSEMA (https://www.nopsema.gov.au/sites/default/files/documents/2021-06/Technical-Report-Offshore-Petroleum-Facility-Accommodation.pdf), non ouverts.",
+    "Halley VI : rapport NERC final CEE (https://nora.nerc.ac.uk/id/eprint/15413/1/Halley%20VI%20Final%20CEE.pdf) non ouvert.",
+    "Aquarius : fiche technique FIU 2019 (https://environment.fiu.edu/aquarius/working-with-aquarius/_assets/arb_factsheet_2019.pdf) et manuel utilisateur (https://environment.fiu.edu/aquarius/missions-research/_assets/aquarius-user-manual.pdf) non ouverts ; résoudraient le conflit de dimensions.",
+    "Scott Base : plans publiés dans la presse (Weekend Herald, NZ Herald) et sur scottbaseredevelopment.govt.nz, non ouverts.",
+    "Maitri II : gagnant du concours NCPOR et plans du projet retenu, non trouvés (tender NCPOR092024 à ouvrir).",
+    "Samyn and Partners, archives 'references' : plans, coupes et élévations de Princess Elisabeth, non ouverts."
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "theme": "Habitats construits sur place : impression 3D, régolithe, frittage, glace (NASA 3D-Printed Habitat Challenge, ICON/BIG, ESA, Chine, Contour Crafting)",
+  "date": "2026-11-13",
+  "avertissement": "Deuxième passe : limite de recherche web à nouveau atteinte (too_many_requests) après 9 recherches. Les pages ouvertes (verifie: true) donnent les plans et coupes des Mars Ice House et Mars X-House. Aucun chiffre d'épaisseur de paroi ni de surface vérifié pour les projets lunaires. Les PDF NTRS (AIAA 2005-2424, rapport final phase 3) et domusweb renvoient 403 : non lus.",
+  "projets": [
+    {
+      "id": "mars-ice-house",
+      "nom": "Mars Ice House (SEArch+ / Clouds AO)",
+      "annee": "2015 (publication du 28 septembre 2015)",
+      "auteurs": "Space Exploration Architecture (SEArch), Clouds Architecture Office (Clouds AO) : Michael Morris (chef d'équipe), Melodie Yashar, Ostap Rudakevych, Masayuki et Yuko Sono et autres",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien imprimé en glace translucide, en double coque, autour d'un habitat-atterrisseur. Une serre verticale entre les deux coques forme la cour des occupants. Premier prix de la première étape du NASA 3D-Printed Habitat Challenge (25 000 USD), pour quatre occupants.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Plans des niveaux 1 à 4 (Mars Ice House)", "url": "https://www.architectmagazine.com/project-gallery/nasa-3d-printed-habitat-challenge-ice-house_o", "page_source": "https://www.architectmagazine.com/project-gallery/nasa-3d-printed-habitat-challenge-ice-house_o", "licence": "?", "verifie": true, "note": "Fiche Architect Magazine ouverte : plans d'étage des niveaux 1 à 4, crédits CloudsAO / SEArch. Pas de cote lisible dans le texte." },
+        { "type": "coupe", "titre": "Vue en coupe perspective : double coque de glace autour de l'habitat-atterrisseur", "url": "https://www.architectmagazine.com/project-gallery/nasa-3d-printed-habitat-challenge-ice-house_o", "page_source": "https://www.architectmagazine.com/project-gallery/nasa-3d-printed-habitat-challenge-ice-house_o", "licence": "?", "verifie": true, "note": "Galerie ouverte. Coupe en perspective, coupes intérieure et extérieure du prototype en glace (images 3, 6, 7 sur la galerie Archinect)." },
+        { "type": "plan", "titre": "Galerie Archinect : plans niveaux 1 à 4 et coupes du concept Mars Ice House", "url": "https://www.archinect.com/news/gallery/138591099/3/the-mars-ice-house-envisions-the-day-earthlings-can-live-with-ease-atop-the-martian-surface", "page_source": "https://www.archinect.com/news/gallery/138591099/3/the-mars-ice-house-envisions-the-day-earthlings-can-live-with-ease-atop-the-martian-surface", "licence": "?", "verifie": true, "note": "Galerie de 12 images, toutes créditées CloudsAO / SEArch. Images 3, 6, 7 : coupes ; images 8 à 11 : plans des niveaux 1 à 4. Aucun chiffre." },
+        { "type": "image", "titre": "Article Make: sur les bases martiennes en régolithe et glace", "url": "https://makezine.com/2019/10/04/the-martian-bases-of-the-future-may-be-made-from-regolith-and-water-ice", "page_source": "https://makezine.com/2019/10/04/the-martian-bases-of-the-future-may-be-made-from-regolith-and-water-ice", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert. Même coupe perspective que la galerie Archinect." }
+      ],
+      "pour_kibsu": "Serre verticale entre habitat et coque : un espace tampon qui protège de la contamination et apporte la lumière. Les nervures en spirale servent de guidage aux robots d'impression, à retenir pour la circulation de chantier.",
+      "a_verifier": [
+        "Diamètre, hauteur, épaisseur de la coque de glace : non donnés (la page dit seulement « coque de glace verticale mince »).",
+        "Le concept Mars Ice Home de Langley est distinct (galerie Domus, non ouverte)."
+      ]
+    },
+    {
+      "id": "mars-x-house-seaarch-apis-cor",
+      "nom": "Mars X-House (SEArch+ / Apis Cor)",
+      "annee": "2018-2019",
+      "auteurs": "SEArch+, Apis Cor (équipe de New York du NASA 3D-Printed Habitat Challenge)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien imprimé de manière autonome avec un bras robot, en régolithe. Deux versions : V.1 avec bouclier radiatif et deux laboratoires en modules gonflables séparés, V.2 multiniveau dont la structure imprimée assure la frontière pressurisée.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Figure « Mars X-House 1 / Mars X-House 2 » : plans des laboratoires (étage) et murs en couches", "url": "https://3dprint.com/255142/mars-x-house-continuing-quest-3d-print-extraterrestrial-habitat/", "page_source": "https://3dprint.com/255142/mars-x-house-continuing-quest-3d-print-extraterrestrial-habitat/", "licence": "?", "verifie": true, "note": "Article 3DPrint.com ouvert. Légendes : « Layered Wall concept Mars X-House 1 », « Layered Wall Composition Mars X-House 2 », « Left: Mars X-House 1 showing two labs on the same floor in separate inflatables. Right: Mars X-House 2 separate lab spaces. » Crédit : article de recherche. Pas de cote." },
+        { "type": "rapport", "titre": "Mars X-House: Design Principles for an Autonomously 3D-Printed ISRU Surface Habitat (notice TTU)", "url": "https://ttu-ir.tdl.org/items/d0829ba0-aa7a-487d-8f27-0465f0fe44c3", "page_source": "https://ttu-ir.tdl.org/items/d0829ba0-aa7a-487d-8f27-0465f0fe44c3", "licence": "?", "verifie": false, "note": "Notice vue en résultat de recherche, non ouverte. Les plans complets sont dans l'article." }
+      ],
+      "pour_kibsu": "Murs en couches (layered wall) pour un bouclier radiatif en régolithe : à comparer avec la coque de la Mars Ice House. Deux labs séparés par modules gonflables : utile pour une découpe par cellules.",
+      "a_verifier": [
+        "Épaisseur, surfaces, dimensions : non données dans l'article ouvert.",
+        "Protection d'environ 1 m au-dessus, par deux coques : source de presse non ouverte (dochub.sk.ru).",
+        "Classement : premier prix des étapes de construction 1 et 2, selon une notice non ouverte."
+      ]
+    },
+    {
+      "id": "ai-spacefactory-marsha",
+      "nom": "MARSHA (AI SpaceFactory)",
+      "annee": "2018-2019",
+      "auteurs": "AI SpaceFactory",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien multiniveau imprimé en 3D pour le NASA 3D-Printed Habitat Challenge. Une double coque isole les espaces habitables des écarts de température.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Page MARSHA (AI SpaceFactory)", "url": "https://spacefactory.ai/marsha", "page_source": "https://spacefactory.ai/marsha", "licence": "?", "verifie": true, "note": "Page ouverte (redirigée depuis aispacefactory.com/marsha). Présentation seule : aucun plan, coupe, chiffre ni modèle 3D." }
+      ],
+      "pour_kibsu": "Double coque séparant l'habitat de la coque extérieure : piste pour une protection thermique sur un volume multiniveau.",
+      "a_verifier": [
+        "Matériaux contradictoires : basalte et PLA selon une source, composite basalte-biopolymère selon une autre.",
+        "Démonstrateur d'environ 15 pieds imprimé en 30 h : source de presse non ouverte.",
+        "Classement contradictoire : premier ou deuxième selon les sources."
+      ]
+    },
+    {
+      "id": "team-zopherus",
+      "nom": "Team Zopherus",
+      "annee": "2018-2019",
+      "auteurs": "Team Zopherus (Rogers, Arkansas)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe d'Arkansas, premier prix de la phase 3 niveau 1 selon la presse. Modules hexagonaux imprimés dans une chambre pressurisée, à l'intérieur d'un atterrisseur.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA : top 10 du modèle virtuel, phase 3 (liste des équipes)", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "page_source": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte : liste de 10 équipes par ordre alphabétique avec leur ville, article du 28 juin 2018. Aucun plan, aucun lien vers une fiche." },
+        { "type": "image", "titre": "Article Mymodernmet sur le concours NASA (Zopherus 1er prix)", "url": "https://mymodernmet.com/nasa-3d-mars-habitat-contest", "page_source": "https://mymodernmet.com/nasa-3d-mars-habitat-contest", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Impression en chambre pressurisée et modules hexagonaux : piste de structure par cellules.",
+      "a_verifier": [
+        "Dôme et surface : non trouvés. Le cahier des charges demandait 1 000 pi² pour 4 astronautes (source à retrouver).",
+        "Le classement premier prix est à confirmer sur une page NASA."
+      ]
+    },
+    {
+      "id": "kahn-yates",
+      "nom": "Team Kahn-Yates",
+      "annee": "2018-2019",
+      "auteurs": "Team Kahn-Yates (Jackson, Mississippi)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe finaliste de la phase 3 niveau 1 (troisième, selon la page NASA de première étape). Habitat conçu contre les tempêtes de poussière. Un bras d'impression à cinq axes sort d'un noyau préfabriqué pour imprimer la coque.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA : top 10 du modèle virtuel, phase 3 (liste des équipes)", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "page_source": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte : Kahn-Yates figure dans le top 10 (Jackson, Mississippi). Aucun plan." }
+      ],
+      "pour_kibsu": "Bras d'impression sur noyau préfabriqué : une stratégie hybride pour une coque imprimée.",
+      "a_verifier": [
+        "Plans et dimensions : aucun trouvé.",
+        "Article de presse sur le bras à cinq axes : non ouvert."
+      ]
+    },
+    {
+      "id": "penn-state-3dphc",
+      "nom": "Penn State (NASA 3D-Printed Habitat Challenge, impression au tiers d'échelle)",
+      "annee": "2019",
+      "auteurs": "Penn State (Colleges of Arts and Architecture, Engineering, Agricultural Sciences, Materials Research Institute), avec Autodesk, Gulf Concrete Technologies, Tilcon",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe de Penn State, deuxième à la dernière étape de la phase 3 (200 000 USD), contre AI SpaceFactory. Habitat imprimé au tiers de l'échelle. Un seul modèle BIM sert au dessin, aux trajectoires d'impression et à l'assemblage.",
+      "dimensions": [
+        { "quoi": "échelle de l'habitat imprimé", "valeur": "1/3 de l'échelle réelle", "source": "https://arts.psu.edu/news/phase-3-nasa-3d-printed-habitat-challenge" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Page Penn State : phase 3 du concours NASA 3D-Printed Habitat Challenge", "url": "https://arts.psu.edu/news/phase-3-nasa-3d-printed-habitat-challenge", "page_source": "https://arts.psu.edu/news/phase-3-nasa-3d-printed-habitat-challenge", "licence": "?", "verifie": true, "note": "Page ouverte : deux photos de l'habitat, sans légende, sans plan ni coupe. Hassell n'est pas cité." },
+        { "type": "rapport", "titre": "Conférence 2020 : impression d'un habitat martien à sous-échelle (Penn State)", "url": "https://3dcp.fyi/naza_duar_bile_mema.2020.AOotEo3PSSHoM/", "page_source": "https://3dcp.fyi/naza_duar_bile_mema.2020.AOotEo3PSSHoM/", "licence": "?", "verifie": false, "note": "Résumé vu en résultat de recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Chaîne BIM unique, du dessin à l'impression : utile pour un outil dense et sobre.",
+      "a_verifier": [
+        "Hassell : absent de la page Penn State ; il figure dans le top 10 sous le nom « Hassell & EOC » (San Francisco). Lien éventuel non confirmé.",
+        "Gain de 500 000 USD au total : source école, non recoupée."
+      ]
+    },
+    {
+      "id": "mars-incubator",
+      "nom": "Mars Incubator (New Haven, Connecticut)",
+      "annee": "2018-2019",
+      "auteurs": "Mars Incubator",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe de New Haven, dans le top 10 de la phase 3 du NASA 3D-Printed Habitat Challenge, avec un habitat modulaire.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA : top 10 du modèle virtuel, phase 3 (liste des équipes)", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "page_source": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte : Mars Incubator figure dans le top 10 (New Haven, Connecticut). Aucun plan." },
+        { "type": "image", "titre": "Article SlashGear : les trois finalistes de la phase 3", "url": "https://www.slashgear.com/nasa-3d-printed-habitat-challenge-three-finalists-phase-3-designs-01571758", "page_source": "https://www.slashgear.com/nasa-3d-printed-habitat-challenge-three-finalists-phase-3-designs-01571758", "licence": "?", "verifie": false, "note": "Non ouvert. Les listes de finalistes diffèrent selon les sources." }
+      ],
+      "pour_kibsu": "Assemblage modulaire : utile pour une extension par modules.",
+      "a_verifier": [
+        "Rang exact (troisième selon une source) : sources contradictoires.",
+        "Aucun plan trouvé."
+      ]
+    },
+    {
+      "id": "team-gamma-foster-ny",
+      "nom": "Team Gamma (Foster + Partners New York)",
+      "annee": "2015",
+      "auteurs": "Foster + Partners (bureau de New York)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien en modules compacts, construit par un essaim de robots d'impression semi-autonomes avant l'arrivée des astronautes. Deuxième de la première étape du NASA 3D-Printed Habitat Challenge (15 000 USD).",
+      "dimensions": [
+        { "quoi": "surface par module d'habitat", "valeur": "93 m²", "source": "https://www.architectmagazine.com/project-gallery/modular-habitat-on-mars_o" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Fiche Architect Magazine « Modular habitat on Mars » (Team Gamma)", "url": "https://www.architectmagazine.com/project-gallery/modular-habitat-on-mars_o", "page_source": "https://www.architectmagazine.com/project-gallery/modular-habitat-on-mars_o", "licence": "?", "verifie": true, "note": "Fiche ouverte : 8 visuels crédités Foster + Partners, nommés par fichier (marshabitat-fosterpartners-02...), sans légende plan ou coupe. Date du 25 septembre 2015. Un cratère de 1,5 m de profondeur est mentionné." }
+      ],
+      "pour_kibsu": "Impression en essaim de robots avant occupation : une logique de chantier séquencé à garder en tête pour la phase de construction.",
+      "a_verifier": [
+        "Nombre de modules, épaisseur de paroi : non précisés.",
+        "Rang : deuxième selon l'annonce NASA, premier mentionné dans une autre source : à recouper."
+      ]
+    },
+    {
+      "id": "lavahive",
+      "nom": "Team LavaHive",
+      "annee": "2015",
+      "auteurs": "LIQUIFER Systems Group (Vienne), ESA European Astronaut Centre (Cologne) et experts de neuf pays européens",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien modulaire : la coque arrière du système d'entrée, descente et atterrissage sert de toit, avec un module gonflable dessous. Deux rovers construisent des couloirs et sous-habitats en régolithe fritté et « lava-casting ».",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Fiche Architect Magazine « Team LavaHive »", "url": "https://www.architectmagazine.com/?p=239449", "page_source": "https://www.architectmagazine.com/?p=239449", "licence": "?", "verifie": true, "note": "Fiche ouverte : une seule image, sans légende ni crédit. Pas de plan ni de coupe. Date du 28 septembre 2015." }
+      ],
+      "pour_kibsu": "Coque de récupération en toit plus module gonflable en dessous : une approche hybride à garder pour les matériaux locaux.",
+      "a_verifier": [
+        "Rang : troisième selon une source, classement contesté par Designcurial.",
+        "Aucune cote ni épaisseur."
+      ]
+    },
+    {
+      "id": "icon-big-olympus-lunar-lantern",
+      "nom": "Project Olympus (ICON, BIG, SEArch+, NASA Marshall) et « Lunar Lantern »",
+      "annee": "2021",
+      "auteurs": "BIG (Bjarke Ingels Group), ICON, SEArch+, NASA Marshall Space Flight Center (SBIR)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat lunaire en béton de régolithe. La coque de protection double a valu le nom « Lunar Lantern ». Elle utilise trois éléments structurels : un isolateur de base, des câbles de tension et un bouclier Whipple. La lumière est captée à la surface puis diffusée à l'intérieur.",
+      "dimensions": [
+        { "quoi": "surface de l'habitat", "valeur": "195,5 m² (2 104 pi²)", "source": "https://designboom.com/?p=730455" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Article New Atlas : Project Olympus (BIG)", "url": "https://newatlas.com/3d-printing/bjarke-ingels-group-project-olympus/?amp=true", "page_source": "https://newatlas.com/3d-printing/bjarke-ingels-group-project-olympus/?amp=true", "licence": "?", "verifie": true, "note": "Article ouvert : 3 images créditées BIG ou Search+, dont une citation. Ni plan ni coupe décrits. Aucun chiffre." },
+        { "type": "rapport", "titre": "Project Olympus: Off-World Additive Construction for Lunar Surface Infrastructure (ICES 2021, dépôt TTU)", "url": "https://ttu-ir.tdl.org/items/bf69430d-42ad-409c-bd99-4e5ff5c484f9", "page_source": "https://ttu-ir.tdl.org/items/bf69430d-42ad-409c-bd99-4e5ff5c484f9", "licence": "?", "verifie": false, "note": "Dépôt en réponse 403 : contenu non lu. Piste la plus prometteuse pour les schémas de conception." },
+        { "type": "image", "titre": "Page Inexhibit : Project Olympus, BIG et ICON", "url": "https://www.inexhibit.com/marker/project-olympus-the-sustainable-lunar-habitat-designed-by-big-and-icon/", "page_source": "https://www.inexhibit.com/marker/project-olympus-the-sustainable-lunar-habitat-designed-by-big-and-icon/", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Double coque (extérieure protectrice, intérieure habitée) et lumière captée puis diffusée : pistes pour une enveloppe imprimée qui gère le jour.",
+      "a_verifier": [
+        "Surface 195,5 m² : vue sur la page Designboom, non ouverte.",
+        "Dates et statut exacts : à confirmer dans l'ICES 2021."
+      ]
+    },
+    {
+      "id": "ai-spacefactory-lina",
+      "nom": "LINA (AI SpaceFactory, NASA KSC)",
+      "annee": "2020-2022",
+      "auteurs": "AI SpaceFactory, NASA Kennedy Space Center",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "voute",
+      "resume": "Concept d'abri lunaire imprimé en composite polymère-régolithe, avec une coque très mince renforcée par des arcs imprimés. Partenariat NASA KSC issu de l'appel ACO 2020.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Page NASA : partenariat KSC et AI SpaceFactory (régolithe imprimable)", "url": "https://www.nasa.gov/feature/kennedy-to-partner-with-previous-nasa-challenge-winner-for-lunar-research", "page_source": "https://www.nasa.gov/feature/kennedy-to-partner-with-previous-nasa-challenge-winner-for-lunar-research", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte. Décrit le composite et une structure de test à imprimer sous vide. Aucune cote ni plan." },
+        { "type": "image", "titre": "Designboom : AI SpaceFactory publie les designs LINA (2022)", "url": "https://www.designboom.com/technology/ai-spacefactory-nasa-lina-first-human-foothold-on-moon-07-04-2022/", "page_source": "https://www.designboom.com/technology/ai-spacefactory-nasa-lina-first-human-foothold-on-moon-07-04-2022/", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert. Probablement les images de LINA." }
+      ],
+      "pour_kibsu": "Voûte mince à arcs imprimés : piste pour un volume de protection léger, sans coque épaisse.",
+      "a_verifier": [
+        "Épaisseur de coque et portée des arcs : non trouvées.",
+        "Forme de la structure de test sous vide : non précisée."
+      ]
+    },
+    {
+      "id": "redwire-regolith-print",
+      "nom": "Redwire Regolith Print (RRP) : impression de régolithe en orbite",
+      "annee": "2021-2023",
+      "auteurs": "Redwire (ex Made In Space), NASA",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Démonstration en orbite d'impression 3D avec simulant de régolithe lunaire JSC-1A et liant polymère. Les éprouvettes sont testées au sol par NASA. Vise terrains d'atterrissage, fondations, routes et habitats.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Page Redwire : développer les technologies clés pour la construction lunaire durable", "url": "https://redwirespace.com/newsroom/developing-key-technologies-to-build-sustainable-lunar-infrastructure", "page_source": "https://redwirespace.com/newsroom/developing-key-technologies-to-build-sustainable-lunar-infrastructure", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Impression en orbite avec régolithe : utile pour comprendre la chaîne de tests matériaux avant un habitat.",
+      "a_verifier": [
+        "Pas de géométrie d'habitat chez Redwire trouvée.",
+        "Le CONSIGNES classe ce projet comme technologie, pas comme habitat : à garder en piste."
+      ]
+    },
+    {
+      "id": "hassell-eoc",
+      "nom": "Hassell & EOC (top 10 phase 3)",
+      "annee": "2018",
+      "auteurs": "Hassell (architectes), EOC, San Francisco",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe de San Francisco du top 10 de la phase 3 du NASA 3D-Printed Habitat Challenge (modèle virtuel). Aucun document de conception trouvé.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA : top 10 du modèle virtuel, phase 3 (liste des équipes)", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "page_source": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte : Hassell & EOC figure dans le top 10. Aucun plan." }
+      ],
+      "pour_kibsu": "Équipe d'architectes de cabinet : à chercher sur le site de Hassell.",
+      "a_verifier": [
+        "Lien avec Penn State : non confirmé."
+      ]
+    },
+    {
+      "id": "colorado-mines-icon",
+      "nom": "Colorado School of Mines et ICON (top 10 phase 3)",
+      "annee": "2018",
+      "auteurs": "Colorado School of Mines, ICON",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe de Golden (Colorado) du top 10 de la phase 3 du NASA 3D-Printed Habitat Challenge, en partenariat avec ICON. Aucun document de conception trouvé.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA : top 10 du modèle virtuel, phase 3 (liste des équipes)", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "page_source": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte : équipe citée à Golden (Colorado). Aucun plan." }
+      ],
+      "pour_kibsu": "Impression par ICON : même constructeur que le projet Olympus, à rapprocher.",
+      "a_verifier": [
+        "Design et dimensions : aucun trouvé."
+      ]
+    },
+    {
+      "id": "x-arc",
+      "nom": "X-Arc (San Antonio)",
+      "annee": "2018",
+      "auteurs": "X-Arc, San Antonio (Texas)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Équipe de San Antonio du top 10 de la phase 3 du NASA 3D-Printed Habitat Challenge. Aucun document de conception trouvé.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA : top 10 du modèle virtuel, phase 3 (liste des équipes)", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "page_source": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "licence": "domaine public (NASA)", "verifie": true, "note": "Page ouverte : X-Arc listé à San Antonio. Aucun plan." }
+      ],
+      "pour_kibsu": "À chercher en priorité sur le site de l'équipe.",
+      "a_verifier": [
+        "Design : non trouvé."
+      ]
+    },
+    {
+      "id": "esa-foster-d-shape",
+      "nom": "Base lunaire ESA / Foster + Partners (impression D-Shape)",
+      "annee": "2013 (étude ESA GSP)",
+      "auteurs": "Foster + Partners, ESA, Monolite UK (D-Shape), Alta SpA, Scuola Superiore Sant'Anna",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "dome",
+      "resume": "Habitat lunaire pour quatre personnes au pôle sud. Un dôme gonflable sert de coffrage à une coque imprimée en simulant de régolithe, en structure cellulaire creuse pour limiter le liant.",
+      "dimensions": [
+        { "quoi": "bloc de démonstration imprimé", "valeur": "1,5 tonne", "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing" },
+        { "quoi": "vitesse de l'imprimante actuelle", "valeur": "environ 2 m/h", "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing" },
+        { "quoi": "vitesse prévue (génération suivante)", "valeur": "3,5 m/h", "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Page ESA « Building a lunar base with 3D printing »", "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing", "page_source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing", "licence": "?", "verifie": true, "note": "Page ouverte. Plusieurs images annoncées : base imprimée, dômes multiples, imprimante D-Shape, schéma de conception. Pas de plan coté dans le texte." }
+      ],
+      "pour_kibsu": "Dôme funiculaire autoporteur et coque cellulaire : piste pour une protection radiative et contre les micrométéorites sans coque pleine.",
+      "a_verifier": [
+        "Diamètre, hauteur, surface et épaisseur de coque : non publiés dans la page ouverte.",
+        "Schéma de conception : confirmé par la page, non ouvert."
+      ]
+    },
+    {
+      "id": "esa-dlr-brique-frittee",
+      "nom": "Brique de régolithe frittée au soleil (DLR pour ESA)",
+      "annee": "2017",
+      "auteurs": "DLR, ESA",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Briques de simulant de régolithe frittées par énergie solaire concentrée, sans liant. Trois démonstrateurs de la taille d'une brique ont été produits pour l'enveloppe extérieure d'une base lunaire.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Page ESA « 3D printing of a model building block for a lunar base outer shell »", "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Shaping_the_Future/3D_printing_of_a_model_building_block_for_a_lunar_base_outer_shell", "page_source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Shaping_the_Future/3D_printing_of_a_model_building_block_for_a_lunar_base_outer_shell", "licence": "?", "verifie": true, "note": "Page ouverte, texte seul. Aucune cote, forme ou épaisseur de paroi, pas de voûte." }
+      ],
+      "pour_kibsu": "Matériau de frittage solaire sans liant : pour une enveloppe en briques de régolithe, à rapprocher d'une voûte appareillée.",
+      "a_verifier": [
+        "Aucune source ne relie ces briques à une voûte signée Foster : les deux projets semblent distincts.",
+        "Format exact de la brique : « taille d'une brique » seulement."
+      ]
+    },
+    {
+      "id": "contour-crafting-khoshnevis",
+      "nom": "Lunar Contour Crafting (Khoshnevis)",
+      "annee": "2005",
+      "auteurs": "Behrokh Khoshnevis, NASA Marshall (co-auteurs)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Concept d'impression par extrusion sur la Lune : béton de régolithe renforcé de fibres de verre fondues sur place. Présenté dans l'AIAA 2005-2424.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "AIAA 2005-2424 : Lunar Contour Crafting (préprint NTRS)", "url": "https://ntrs.nasa.gov/api/citations/20050111578/downloads/20050111578.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20050111578/downloads/20050111578.pdf", "licence": "domaine public (NASA)", "verifie": false, "note": "PDF refusé en 403 : non lu. Document à ouvrir à la main pour la géométrie de paroi." },
+        { "type": "rapport", "titre": "Contour Crafting Simulation Plan for Lunar Settlement Infrastructure Build-Up (NIAC 2012, NTRS)", "url": "https://ntrs.nasa.gov/api/citations/20160010607/downloads/20160010607.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20160010607/downloads/20160010607.pdf", "licence": "domaine public (NASA)", "verifie": false, "note": "Non ouvert." }
+      ],
+      "pour_kibsu": "Impression continue de murs en régolithe : à comparer avec les épaisseurs de l'AIAA 2005-2424 une fois le PDF lu.",
+      "a_verifier": [
+        "Épaisseur de paroi et armatures : non trouvées dans les extraits.",
+        "Les deux PDF NTRS ont été refusés (403)."
+      ]
+    },
+    {
+      "id": "china-lunar-super-mason",
+      "nom": "« Lunar Super Mason » (HUST, Chine)",
+      "annee": "2023",
+      "auteurs": "Ding Lieyun, Huazhong University of Science and Technology (HUST)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Robot à six pattes qui assemble des briques de régolithe à emboîtement type tenon-mortaise, imprimées ou fondues au laser. Projet relié à la station de recherche lunaire internationale (ILRS). Impressions faites sur simulant seulement.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Article Space.com : la Chine prévoit d'imprimer des briques en sol lunaire", "url": "https://www.space.com/china-moon-3d-printing-bricks-change-8-2028", "page_source": "https://www.space.com/china-moon-3d-printing-bricks-change-8-2028", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert." },
+        { "type": "rapport", "titre": "Page HUST (english.hust.edu.cn)", "url": "https://english.hust.edu.cn/info/1102/3596.htm", "page_source": "https://english.hust.edu.cn/info/1102/3596.htm", "licence": "?", "verifie": false, "note": "Résultat de recherche, non ouvert. Annonce du projet par l'université." }
+      ],
+      "pour_kibsu": "Briques emboîtables sans mortier : une logique d'assemblage à côté de la voûte en briques.",
+      "a_verifier": [
+        "Calendrier Chang'e 8 (vers 2028) : annoncé, pas confirmé.",
+        "Nom : « Super Mason » ou « Super Mud Mason » selon les sources."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "NASA 3D-Printed Habitat Challenge (programme Centennial Challenges)", "url": "https://www.nasa.gov/prizes-challenges-and-crowdsourcing/centennial-challenges/3d-printed-habitat-challenge", "note": "Programme et classements ; non ouvert." },
+    { "titre": "NASA : top 10 du modèle virtuel, phase 3", "url": "https://www.nasa.gov/directorates/spacetech/centennial_challenges/3DPHab/top-10-virtual-model-stage", "note": "Ouvert. Liste des 10 équipes avec ville, sans rang ni document." },
+    { "titre": "NASA : partenariat KSC et AI SpaceFactory (ISRU, régolithe imprimable)", "url": "https://www.nasa.gov/feature/kennedy-to-partner-with-previous-nasa-challenge-winner-for-lunar-research", "note": "Ouvert. Pas de plans, liens vers ACO 2020 et la solicitation NSPIRES." },
+    { "titre": "ESA : Building a lunar base with 3D printing", "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing", "note": "Ouvert. Base Foster + D-Shape, images listées, pas de cote." },
+    { "titre": "NASA NTRS : NASA Centennial Challenge 3D Printed Habitat, Phase 3 Final Results", "url": "https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20190032473.pdf", "note": "Repéré en résultat de recherche, non ouvert. Rapport officiel à lire en priorité." }
+  ],
+  "pistes_non_explorees": [
+    "Plans et coupes cotés manquent pour les projets lunaires : le PDF AIAA 2005-2424 (Contour Crafting) et l'ICES 2021 Project Olympus (ttu-ir bf69430d) restent à ouvrir à la main (403).",
+    "Mars Ice Home (Langley) : galerie Domus avec plan et coupe (2016), renvoyée en 403 : à ouvrir à la main.",
+    "NASA NTRS 20190032473 (rapport final phase 3) : la liste officielle des documents de conception reste à lire (403 ou non tenté).",
+    "ALPHA Team (Marina Del Rey) et Northwestern University (Evanston) : dans le top 10, non recherchés.",
+    "Modèles 3D (NASA 3D Resources, Sketchfab) : non interrogés. Aucun modèle téléchargeable repéré.",
+    "Épaisseurs de paroi et géométries de voûte chiffrées : aucune valeur vérifiée pour les projets lunaires.",
+    "Limite de recherche web atteinte après 9 recherches : LavaHive et Team Gamma ont été traités par pages ouvertes, pas par recherche complète."
+  ]
+}

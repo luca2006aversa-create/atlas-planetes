@@ -1,0 +1,489 @@
+{
+  "theme": "Sas, écoutilles, mécanismes d'amarrage, quartiers et équipements intérieurs d'habitats spatiaux",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "quest",
+      "nom": "Quest Joint Airlock",
+      "annee": "2001",
+      "auteurs": "NASA / Boeing (ISS)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Sas double de l'ISS avec une chambre d'équipement et une chambre d'équipage. Il permet les sorties EVA en combinaison, à 1 atm côté intérieur.",
+      "dimensions": [
+        { "quoi": "diamètre", "valeur": "4 m (13,1 ft)", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" },
+        { "quoi": "longueur", "valeur": "5,5 m (18 ft)", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" },
+        { "quoi": "masse", "valeur": "6 064 kg", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" },
+        { "quoi": "volume", "valeur": "34 m³", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "« Main Dimensions (mm) with High Pressure Gas Tanks » (dessin coté, page rdataspace)", "url": "https://rdataspace.github.io/station_iss/tech/quest.html", "page_source": "https://rdataspace.github.io/station_iss/tech/quest.html", "licence": "?", "verifie": true, "note": "Dessin vu sur la page ; les cotes en mm sont dans l'image, non lues." },
+        { "type": "image", "titre": "Photos de l'intérieur du sas Quest (page NASA)", "url": "https://www.nasa.gov/international-space-station/quest-airlock/", "page_source": "https://www.nasa.gov/international-space-station/quest-airlock/", "licence": "domaine public (NASA)", "verifie": true, "note": "Photos seulement, pas de plan coté." },
+        { "type": "image", "titre": "Fichiers SVG « Quest Airlock (1) » et « (2) » (Wikimedia Commons)", "url": "https://commons.wikimedia.org/wiki/Category:Quest_Joint_Airlock", "page_source": "https://commons.wikimedia.org/wiki/Category:Quest_Joint_Airlock", "licence": "?", "verifie": true, "note": "Titres vus dans la catégorie ; contenu des SVG non ouvert, donc à confirmer comme plans (2 000 x 1 466 px et 2 000 x 1 870 px)." }
+      ],
+      "pour_kibsu": "Référence de sas double à deux chambres. Ordre de grandeur réel : 4 m de diamètre, 5,5 m de long, 34 m³.",
+      "a_verifier": [
+        "Une source secondaire donne 20 ft de longueur ; on retient les 18 ft de la NASA.",
+        "Le dessin « Main Dimensions (mm) » contient les cotes en mm : à relever à partir de l'image."
+      ]
+    },
+    {
+      "id": "bishop",
+      "nom": "Bishop Airlock (Nanoracks / Voyager)",
+      "annee": "2020",
+      "auteurs": "Nanoracks LLC (Voyager Space)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Sas commercial fixé sur le port d'amarrage de Tranquility, pour mettre des charges hors de la station. Il n'a pas d'écoutille propre : il s'arrime à l'écoutille du module.",
+      "dimensions": [
+        { "quoi": "diamètre", "valeur": "2,014 m", "source": "https://en.wikipedia.org/wiki/Nanoracks_Bishop_Airlock" },
+        { "quoi": "hauteur", "valeur": "1,80 m", "source": "https://en.wikipedia.org/wiki/Nanoracks_Bishop_Airlock" },
+        { "quoi": "masse", "valeur": "1 059 kg", "source": "https://en.wikipedia.org/wiki/Nanoracks_Bishop_Airlock" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Nanoracks Bishop Airlock IDD (PDF)", "url": "https://nanoracks.com/wp-content/uploads/Nanoracks-Bishop-Airlock-IDD.pdf", "page_source": "https://nanoracks.com/wp-content/uploads/Nanoracks-Bishop-Airlock-IDD.pdf", "licence": "?", "verifie": false, "note": "Erreur de certificat à la lecture (nanoracks.com) ; non ouvert." }
+      ],
+      "pour_kibsu": "Exemple de sas sans écoutille propre, arrimé à une écoutille de module. Diamètre utile d'environ 2 m.",
+      "a_verifier": [
+        "Spaceflight Now donne 2,1 m de diamètre et 1,8 m de long ; Digital Trends donne 8 ft de diamètre. Les valeurs divergent."
+      ]
+    },
+    {
+      "id": "kibo-airlock",
+      "nom": "Kibo Airlock (JEM)",
+      "annee": "2008",
+      "auteurs": "JAXA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Petit sas du module japonais Kibo, pour transférer matériel et expériences sans sortie complète.",
+      "dimensions": [
+        { "quoi": "diamètre de la section EF", "valeur": "1 724 mm", "source": "https://iss.jaxa.jp/iss/kibo/al_e.html" },
+        { "quoi": "diamètre de la section PM", "valeur": "1 410 mm", "source": "https://iss.jaxa.jp/iss/kibo/al_e.html" },
+        { "quoi": "longueur", "valeur": "2 001 mm", "source": "https://iss.jaxa.jp/iss/kibo/al_e.html" },
+        { "quoi": "taille maximale d'objet", "valeur": "576 x 830 x 800 mm", "source": "https://iss.jaxa.jp/iss/kibo/al_e.html" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Sas de transfert de matériel. Donne une taille de charge réelle pour les portes d'un sas de service.",
+      "a_verifier": [
+        "La page JAXA est archivée ; les chiffres peuvent être anciens.",
+        "Les deux images de la page n'ont pas été vues ; pas de plan coté confirmé."
+      ]
+    },
+    {
+      "id": "dcis",
+      "nom": "Dual-Compartment Inflatable Suitlock (DCIS), aussi « Dual-Chamber Hybrid Inflatable Suitlock »",
+      "annee": "2012-2015",
+      "auteurs": "NASA JSC et JPL (A. Scott Howe, Kriss J. Kennedy, Peggy L. Guirgis)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Suitlock gonflable à deux compartiments séparés par trois cloisons rigides. L'intérieur reste pressurisé et l'extérieur reste sous vide en fonctionnement normal.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Dual-Chamber Hybrid Inflatable Suitlock (NTRS 20150006986)", "url": "https://ntrs.nasa.gov/citations/20150006986", "page_source": "https://ntrs.nasa.gov/citations/20150006986", "licence": "?", "verifie": false, "note": "Résumé par recherche ; 403 à la lecture." },
+        { "type": "rapport", "titre": "NASA Tech Brief NPO-47786 (suitlock gonflable)", "url": "https://www.techbriefs.com/component/content/article/13581", "page_source": "https://www.techbriefs.com/component/content/article/13581", "licence": "Public Use Permitted (NASA Tech Brief)", "verifie": false, "note": "Non ouvert." },
+        { "type": "rapport", "titre": "Inflatable airlock pour Deep Space Gateway (NTRS 20180007209)", "url": "https://ntrs.nasa.gov/citations/20180007209", "page_source": "https://ntrs.nasa.gov/citations/20180007209", "licence": "?", "verifie": false, "note": "403 à la lecture." }
+      ],
+      "pour_kibsu": "Concept de sas à deux volumes : intérieur pressurisé, extérieur sous vide. Utile pour séparer la poussière entre sas et habitat.",
+      "a_verifier": [
+        "Aucune dimension trouvée ; le rapport complet est bloqué (403).",
+        "Le nom varie selon les rapports."
+      ]
+    },
+    {
+      "id": "skylab-airlock",
+      "nom": "Skylab Airlock Module",
+      "annee": "1973",
+      "auteurs": "NASA MSFC / McDonnell Douglas",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module de sas de Skylab qui relie le Workshop, l'amarrage et le télescope Apollo. Il a une écoutille d'EVA latérale inspirée des écoutilles Gemini.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "5,1 m", "source": "https://rdataspace.github.io/station_skylab/skylab-tech-airlock.html" },
+        { "quoi": "diamètre", "valeur": "3 m", "source": "https://rdataspace.github.io/station_skylab/skylab-tech-airlock.html" },
+        { "quoi": "masse chargée", "valeur": "22 050 kg", "source": "https://rdataspace.github.io/station_skylab/skylab-tech-airlock.html" },
+        { "quoi": "diamètre du carénage fixe", "valeur": "22 ft (même diamètre que le Workshop)", "source": "https://commons.wikimedia.org/wiki/File:Skylab_Airlock_Module_cutaway_(0101643).jpg" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Skylab Airlock Module cutaway (artist's concept, NASA/MSFC, c. 1972)", "url": "https://commons.wikimedia.org/wiki/File:Skylab_Airlock_Module_cutaway_(0101643).jpg", "page_source": "https://commons.wikimedia.org/wiki/File:Skylab_Airlock_Module_cutaway_(0101643).jpg", "licence": "domaine public (NASA)", "verifie": true, "note": "Coupe illustrée vue dans la description ; cotes non lues dans l'image." },
+        { "type": "plan", "titre": "Airlock Module Interior (coupe) et Airlock Module Interior (identification des composants)", "url": "https://www.nasa.gov/history/diagrams/skylab.html", "page_source": "https://www.nasa.gov/history/diagrams/skylab.html", "licence": "domaine public (NASA)", "verifie": false, "note": "Listés sur l'index (sk008.gif et sk009.gif) ; les GIF n'ont pas été ouverts (la page renvoie un autre contenu)." },
+        { "type": "rapport", "titre": "Expandable Airlock Experiment (rapport Goodyear, 1972)", "url": "https://apps.dtic.mil/sti/pdfs/AD0749131.pdf", "page_source": "https://apps.dtic.mil/sti/pdfs/AD0749131.pdf", "licence": "?", "verifie": false, "note": "403 ; dimensions d'écoutille inconnues." }
+      ],
+      "pour_kibsu": "Sas à deux écoutilles d'extrémité plus une écoutille EVA latérale, sur le modèle Gemini. Le carénage fixe est aussi large que le Workshop.",
+      "a_verifier": [
+        "Une recherche donnait 18 ft x 10 ft ; écarté, en conflit avec 5,1 m x 3 m.",
+        "Dimensions de l'écoutille EVA absentes des pages ouvertes."
+      ]
+    },
+    {
+      "id": "skylab-habitat",
+      "nom": "Skylab : quartiers, douche, gestion des déchets, table",
+      "annee": "1973",
+      "auteurs": "NASA MSFC",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Habitat de Skylab avec couchettes fixées aux parois en cabines, douche au centre et compartiment de gestion des déchets à côté. Un plancher inférieur regroupe couchage, hygiène, repas et expériences.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Index des dessins Skylab (12 dessins : Crew Quarters, Sleep Compartment, Waste Management, Wardroom Table, Workshop cutaway A/B, MDA)", "url": "https://www.nasa.gov/history/diagrams/skylab.html", "page_source": "https://www.nasa.gov/history/diagrams/skylab.html", "licence": "domaine public (NASA)", "verifie": true, "note": "Liste vue sur la page ; les GIF liés (sk004 Crew Quarters, etc.) n'ont pas été ouverts." },
+        { "type": "plan", "titre": "Crew Quarters (coupe transversale, sk004.gif)", "url": "https://www.nasa.gov/history/diagrams/skylab.html", "page_source": "https://www.nasa.gov/history/diagrams/skylab.html", "licence": "domaine public (NASA)", "verifie": false, "note": "Lien vu, GIF non ouvert." }
+      ],
+      "pour_kibsu": "Disposition hygiène-couchage-repas sur un même étage. Les dessins existent ; cotes à relever.",
+      "a_verifier": [
+        "Cotes des couchettes et de la douche absentes : NASA TM X-64825 (1974) non trouvé en ligne ; SP-400 non ouvert (chapitres non accessibles).",
+        "Volume habitable Skylab d'environ 283 m³ (10 000 ft³) : source non ouverte, à vérifier."
+      ]
+    },
+    {
+      "id": "idss-nds",
+      "nom": "International Docking System Standard (IDSS) / NASA Docking System (NDS)",
+      "annee": "2016-2022",
+      "auteurs": "Consortium IDSS ; NASA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Norme d'amarrage commune à plusieurs agences. Le passage entre les deux vaisseaux est une écoutille circulaire de 800 mm pour le passage d'équipage et de fret.",
+      "dimensions": [
+        { "quoi": "diamètre du passage crew/cargo", "valeur": "0,8 m (31 in)", "source": "https://en.wikipedia.org/wiki/International_Docking_System_Standard" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "IDSS Interface Definition Document, Rev F (juillet 2022)", "url": "https://ntrs.nasa.gov/api/citations/20220011643/downloads/IDSS%20IDD%20Rev%20F%20Final_07262022.pdf", "page_source": "https://ntrs.nasa.gov/citations/20220011643", "licence": "?", "verifie": false, "note": "Non ouvert." },
+        { "type": "rapport", "titre": "IDSS, article NTRS 20190030368", "url": "https://ntrs.nasa.gov/citations/20190030368", "page_source": "https://ntrs.nasa.gov/citations/20190030368", "licence": "?", "verifie": false, "note": "403." }
+      ],
+      "pour_kibsu": "Diamètre de passage de 800 mm à reprendre pour toute écoutille d'équipage entre deux modules.",
+      "a_verifier": [
+        "Un article NASA Marshall signale que l'écoutille d'environ 32 po est jugée trop petite ; source non ouverte.",
+        "Anneau et tunnel : à lire dans l'IDD."
+      ]
+    },
+    {
+      "id": "poisk",
+      "nom": "Poisk (MRM-2), compartiment d'amarrage et sas",
+      "annee": "2009",
+      "auteurs": "RKK Energia / Roscosmos",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module russe d'amarrage qui sert de sas EVA depuis 2020. Il a deux écoutilles de sortie de 1 m de diamètre.",
+      "dimensions": [
+        { "quoi": "diamètre maximal de la coque", "valeur": "2,55 m", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" },
+        { "quoi": "longueur entre plans d'amarrage", "valeur": "4,049 m", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" },
+        { "quoi": "volume pressurisé / habitable", "valeur": "14,8 m³ / 10,7 m³", "source": "https://rdataspace.github.io/station_iss/tech/pirs-rassvet-poisk.html" },
+        { "quoi": "diamètre des écoutilles de sortie", "valeur": "1 m (x2)", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Deux écoutilles de sortie de 1 m sur un module cylindrique de 2,55 m : sas d'EVA avec passage généreux.",
+      "a_verifier": [
+        "Longueurs de 4,1 à 4,9 m selon qu'on inclut le bloc de propulsion."
+      ]
+    },
+    {
+      "id": "pirs",
+      "nom": "Pirs (DC-1), compartiment d'amarrage",
+      "annee": "2001",
+      "auteurs": "RKK Energia / Roscosmos",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "ovoïde",
+      "resume": "Module russe jumeau de Poisk, désamorcé en 2021. Il servait de sas EVA avant Poisk.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "4,1 m", "source": "https://rdataspace.github.io/station_iss/tech/pirs-rassvet-poisk.html" },
+        { "quoi": "diamètre", "valeur": "2,6 m (ovoïde)", "source": "https://rdataspace.github.io/station_iss/tech/pirs-rassvet-poisk.html" },
+        { "quoi": "masse", "valeur": "3 900 kg", "source": "https://rdataspace.github.io/station_iss/tech/pirs-rassvet-poisk.html" },
+        { "quoi": "volume habitable", "valeur": "13 m³", "source": "https://rdataspace.github.io/station_iss/tech/pirs-rassvet-poisk.html" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Coque ovoïde à deux écoutilles : forme non cylindrique à comparer avec un sas classique.",
+      "a_verifier": [
+        "Diamètre d'écoutille non listé.",
+        "Une source NASA donne 16 ft de long et 8,4 ft de diamètre, avec une masse plus élevée (avec le bloc de propulsion)."
+      ]
+    },
+    {
+      "id": "suitport-cohen",
+      "nom": "Suitport de Marc Cohen (brevet US 4 842 224, « Suitport extra-vehicular access facility »)",
+      "annee": "1987-1989",
+      "auteurs": "Marc M. Cohen (NASA Ames)",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "sphere",
+      "resume": "Cloison avec écoutille où la combinaison se fixe par l'arrière. L'astronaute entre dans la combinaison depuis le sas sphérique sans repressuriser la cabine.",
+      "dimensions": [
+        { "quoi": "écoutille générale", "valeur": "50 in carrés (127 cm), coins arrondis de 12 in", "source": "https://patents.google.com/patent/US4842224A/en" },
+        { "quoi": "unité remplaçable (ORU) la plus grande", "valeur": "84 x 42 x 36 in", "source": "https://patents.google.com/patent/US4842224A/en" },
+        { "quoi": "sas sphérique (préféré)", "valeur": "12 ft de diamètre", "source": "https://patents.google.com/patent/US4842224A/en" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Brevet US 4 842 224 : figures 1 à 18F (descriptions)", "url": "https://patents.google.com/patent/US4842224A/en", "page_source": "https://patents.google.com/patent/US4842224A/en", "licence": "domaine public (brevet US)", "verifie": true, "note": "Descriptions des figures vues (FIG. 5A-5D écoutille arrière, 14-17 sas sphérique, 18A-18F modes) ; les dessins eux-mêmes non ouverts." },
+        { "type": "rapport", "titre": "Suitport, tests sur véhicule lunaire (NTRS 20120011640)", "url": "https://ntrs.nasa.gov/citations/20120011640", "page_source": "https://ntrs.nasa.gov/citations/20120011640", "licence": "?", "verifie": false, "note": "403." },
+        { "type": "rapport", "titre": "Suitport (NTRS 19900007544)", "url": "https://ntrs.nasa.gov/api/citations/19900007544/downloads/19900007544.pdf", "page_source": "https://ntrs.nasa.gov/citations/19900007544", "licence": "?", "verifie": false, "note": "403." }
+      ],
+      "pour_kibsu": "Alternative au sas : la combinaison reste hors de la cabine, donc moins de poussière entrant. Écoutille de 50 in : base pour le dimensionnement d'une entrée.",
+      "a_verifier": [
+        "Date de dépôt : 20 octobre 1987 ; publication 27 juin 1989.",
+        "Les chiffres viennent du texte du brevet, pas des dessins."
+      ]
+    },
+    {
+      "id": "suitport-airlock-2023",
+      "nom": "Comparaison sas / suitlock / suitport-airlock pour habitat lunaire",
+      "annee": "2023",
+      "auteurs": "Stromgren, Lynch, Burke, Cho (NASA)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Étude qui compare un sas classique, un suitlock et un suitport-airlock pour un habitat de surface lunaire. Elle recommande le suitport-airlock, qui reste sous vide entre deux sorties.",
+      "dimensions": [
+        { "quoi": "surface au sol du sas (selon présentation IEEE 2023)", "valeur": "environ 4,7 m²", "source": "https://ntrs.nasa.gov/api/citations/20230002484/downloads/IEEE%20EVA%20Access%20March%202023%20V3.pdf" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Evaluating EVA Access Options for a Lunar Surface Habitat (NTRS 20230000121)", "url": "https://ntrs.nasa.gov/api/citations/20230000121/downloads/Evaluating%20Extravehicular%20Activity%20Access%20Options%20for%20a%20Lunar%20Surface%20Habitat%20Final%20V3%20STRIVES.pdf", "page_source": "https://ntrs.nasa.gov/citations/20230000121", "licence": "?", "verifie": false, "note": "403." },
+        { "type": "rapport", "titre": "Présentation IEEE EVA Access, mars 2023 (NTRS 20230002484)", "url": "https://ntrs.nasa.gov/api/citations/20230002484/downloads/IEEE%20EVA%20Access%20March%202023%20V3.pdf", "page_source": "https://ntrs.nasa.gov/citations/20230002484", "licence": "?", "verifie": false, "note": "403 ; surface 4,7 m² vue seulement dans un extrait de recherche." }
+      ],
+      "pour_kibsu": "Argument pour un sas qui ne se repressurise pas à chaque sortie, donc moins de poussière apportée à l'intérieur.",
+      "a_verifier": [
+        "Surface 4,7 m² : extrait de recherche, non vérifié sur la présentation."
+      ]
+    },
+    {
+      "id": "cbm",
+      "nom": "Common Berthing Mechanism (CBM)",
+      "annee": "2000-2010",
+      "auteurs": "NASA / Boeing / MSFC",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Mécanisme d'amarrage à bride boulonnée qui relie les modules de l'ISS entre eux. Il y a une écoutille de passage et un vestibule entre les deux anneaux.",
+      "dimensions": [
+        { "quoi": "vestibule", "valeur": "0,4 m (16 in) de long, 1,8 m (6 ft) de large", "source": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism" },
+        { "quoi": "écoutille (vue dans l'étude 50 in carré)", "valeur": "50 in (127 cm)", "source": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism" },
+        { "quoi": "boulons de verrouillage", "valeur": "16 boulons Ø 0,625 in (15,9 mm)", "source": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism" },
+        { "quoi": "diamètre de paroi (étude avancée)", "valeur": "63 in (1,6 m)", "source": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Vestibule_Wall_Span.jpg (coupe des anneaux CBM accouplés) et Vestibule_Wall_-_Bolt.jpg (coupe du joint boulonné)", "url": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism", "page_source": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism", "licence": "?", "verifie": true, "note": "Légendes vues sur la page ; images non ouvertes." }
+      ],
+      "pour_kibsu": "Interface boulonnée entre deux volumes : un vestibule court de 0,4 m, avec des boulons espacés régulièrement sur 16 points.",
+      "a_verifier": [
+        "Le diamètre de 1,6 m vient de l'étude avancée des années 1980, pas du CBM de vol (environ 1,8 m pour le vestibule).",
+        "Le document NASA de conception CBM n'a pas été ouvert."
+      ]
+    },
+    {
+      "id": "cupola",
+      "nom": "Cupola",
+      "annee": "2010",
+      "auteurs": "ESA / Thales Alenia Space",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "dome",
+      "resume": "Module d'observation de l'ISS, avec sept fenêtres dont une grande fenêtre circulaire au-dessus.",
+      "dimensions": [
+        { "quoi": "diamètre de la fenêtre supérieure", "valeur": "80 cm", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Node-3_Cupola/Cupola" },
+        { "quoi": "hauteur", "valeur": "1 500 mm", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Node-3_Cupola/Cupola" },
+        { "quoi": "diamètre maximal (volets fermés)", "valeur": "2 955 mm", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Node-3_Cupola/Cupola" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Grande vitre circulaire de 80 cm au sommet d'un dôme d'observation, avec six fenêtres latérales trapézoïdales.",
+      "a_verifier": [
+        "Une source NASA ancienne donne 70,6 cm pour la fenêtre centrale ; retenir les 80 cm de l'ESA.",
+        "Pas de taille donnée pour les six fenêtres latérales."
+      ]
+    },
+    {
+      "id": "node3",
+      "nom": "Node 3 (Tranquility)",
+      "annee": "2010",
+      "auteurs": "ESA / NASA / Thales Alenia Space",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Nœud de l'ISS qui relie plusieurs modules et abrite le recyclage d'eau, les toilettes et la salle d'exercice. Le nœud porte aussi le dôme Cupola.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6 706 mm", "source": "https://www.esa.int/esaHS/ESAFQL0VMOC_iss_0.html" },
+        { "quoi": "diamètre", "valeur": "4 480 mm", "source": "https://www.esa.int/esaHS/ESAFQL0VMOC_iss_0.html" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Nœud à plusieurs ports d'amarrage et hygiène regroupée : toilettes et recyclage dans un même volume de 4,5 m de diamètre.",
+      "a_verifier": [
+        "Page ESA renvoyée 404 : chiffres issus d'un résumé de recherche, non vérifiés.",
+        "Une source de pré-lancement prévoyait des compartiments de sommeil dans Node 3 ; les sources récentes indiquent un compartiment d'hygiène."
+      ]
+    },
+    {
+      "id": "node2-harmony",
+      "nom": "Node 2 (Harmony)",
+      "annee": "2007",
+      "auteurs": "NASA / ESA / ASI",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Nœud de l'ISS qui relie Destiny, Kibo, Columbus et le module Centrifuge.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "7,2 m", "source": "https://space.skyrocket.de/doc_sdat/node-2.htm" },
+        { "quoi": "diamètre", "valeur": "4,4 m", "source": "https://space.skyrocket.de/doc_sdat/node-2.htm" },
+        { "quoi": "masse au lancement", "valeur": "13 600 kg (environ)", "source": "https://space.skyrocket.de/doc_sdat/node-2.htm" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Nœud à plusieurs écoutilles de connexion : carrefour de circulation à quatre modules.",
+      "a_verifier": [
+        "Gunter's Space Page ne mentionne pas de quartiers d'équipage dans Node 2, alors que Wikipédia parle des cabines de Harmony : à recouper.",
+        "Le nombre exact d'écoutilles n'est pas donné."
+      ]
+    },
+    {
+      "id": "harmony-quarters",
+      "nom": "Quartiers d'équipage de Harmony (cabines de sommeil)",
+      "annee": "2007",
+      "auteurs": "NASA / ESA / JAXA (ISS)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Quatre cabines de sommeil installées dans le module Harmony en 2007. Peu de rangement et pas de poste de travail dédié.",
+      "dimensions": [
+        { "quoi": "volume par cabine (installée)", "valeur": "2,1 m³ (74 cu ft)", "source": "https://en.wikipedia.org/wiki/Habitation_Module" },
+        { "quoi": "volume par cabine (prévue)", "valeur": "3,2 m³ (110 cu ft)", "source": "https://en.wikipedia.org/wiki/Habitation_Module" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Ordre de grandeur pour une cabine individuelle : 2 à 3 m³ suffisent pour dormir sans poste de travail.",
+      "a_verifier": [
+        "Chiffre cité d'après Broyan, Borrego et Bahr (2008), rapport NASA non ouvert.",
+        "Aucune cote intérieure de cabine trouvée."
+      ]
+    },
+    {
+      "id": "crew-quarters-iss-personal",
+      "nom": "Crew quarter personnel pour l'ISS (« Sleeping with the stars »)",
+      "annee": "2001",
+      "auteurs": "Susan Fairburn et Stuart Walker",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Étude d'une cabine individuelle pour l'ISS, qui permet à l'occupant de contrôler sa position et l'agencement intérieur.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Sleeping with the stars (eprints Lancaster)", "url": "https://eprints.lancs.ac.uk/id/eprint/151533", "page_source": "https://eprints.lancs.ac.uk/id/eprint/151533", "licence": "?", "verifie": true, "note": "Notice vue ; pas de cotes ni de figures décrites ; texte complet absent du dépôt." }
+      ],
+      "pour_kibsu": "Référence de cabine individuelle où le contrôle de l'agencement compte autant que le volume.",
+      "a_verifier": [
+        "Pas de dimension trouvée ; chercher le texte complet."
+      ]
+    },
+    {
+      "id": "crew-quarters-ices-2018",
+      "nom": "Next generation crew quarters (ICES 2018)",
+      "annee": "2018",
+      "auteurs": "Maryatt, Van Wie, Clark",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Recommandations pour une cabine d'équipage de nouvelle génération : ventilation, éclairage, bruit, couchage polyvalent.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Recommendations for Next Generation Crew Quarters (ICES 2018, TTU)", "url": "https://ttu-ir.tdl.org/items/f898dc36-8ef0-41c9-b824-12a35f0d7e27", "page_source": "https://ttu-ir.tdl.org/items/f898dc36-8ef0-41c9-b824-12a35f0d7e27", "licence": "?", "verifie": false, "note": "Repéré par recherche ; 403 à la lecture." }
+      ],
+      "pour_kibsu": "Cabine qui sert au sommeil, au travail et aux conversations privées : à prévoir dans le programme d'un quartier.",
+      "a_verifier": [
+        "Volumes de sommeil non trouvés."
+      ]
+    },
+    {
+      "id": "apollo-uch",
+      "nom": "Apollo Unified Crew Hatch (écoutille d'équipage du CM)",
+      "annee": "1966-1972",
+      "auteurs": "North American Rockwell / NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "capsule",
+      "resume": "Écoutille unique de la capsule Apollo, utilisée pour entrer et sortir. Elle pèse 102 kg.",
+      "dimensions": [
+        { "quoi": "hauteur", "valeur": "29 po (74 cm)", "source": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module" },
+        { "quoi": "largeur", "valeur": "34 po (86 cm)", "source": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module" },
+        { "quoi": "masse", "valeur": "225 lb (102 kg)", "source": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module" }
+      ],
+      "documents": [
+        { "type": "maquette", "titre": "Hatch, Crew, Apollo 11 : modèle CAO (Smithsonian)", "url": "https://si.edu/object/3d/hatch-crew-apollo-11-cad-model%3A936d1822-b237-4431-bb3f-a1f9d39a2e90", "page_source": "https://si.edu/object/3d/hatch-crew-apollo-11-cad-model%3A936d1822-b237-4431-bb3f-a1f9d39a2e90", "licence": "?", "verifie": false, "note": "Repéré par recherche ; non ouvert." }
+      ],
+      "pour_kibsu": "Écoutille de 74 x 86 cm : taille de passage réelle pour un habitat à capsule.",
+      "a_verifier": [
+        "Cotes à recouper sur un plan NASA ou un dessin de capsule."
+      ]
+    },
+    {
+      "id": "apollo-forward-hatch",
+      "nom": "Apollo, écoutille d'amarrage avant (CM)",
+      "annee": "1966-1972",
+      "auteurs": "North American Rockwell / NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "capsule",
+      "resume": "Écoutille d'amarrage avant de la capsule Apollo, pour le transfert entre le CM et le LM.",
+      "dimensions": [
+        { "quoi": "diamètre", "valeur": "30 po (76 cm)", "source": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module" },
+        { "quoi": "masse", "valeur": "80 lb (36 kg)", "source": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Écoutille circulaire de 76 cm de diamètre entre deux vaisseaux.",
+      "a_verifier": [
+        "Source Wikipédia, non recoupée sur un plan NASA."
+      ]
+    },
+    {
+      "id": "foundation-habitat",
+      "nom": "Artemis Foundation Habitat (surface lunaire)",
+      "annee": "2022-2024",
+      "auteurs": "Burke, Howard, Kessler (2022) ; présentation par AmericaSpace",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat lunaire à trois niveaux : socle métallique avec sas, puis deux étages dans un volume gonflable. Le sas occupe presque la moitié du premier niveau.",
+      "dimensions": [
+        { "quoi": "socle métallique", "valeur": "4 m (13 ft) de diamètre", "source": "https://www.americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" },
+        { "quoi": "volume gonflable", "valeur": "6,5 m (21 ft) de diamètre", "source": "https://www.americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" },
+        { "quoi": "volume habitable", "valeur": "127 m³", "source": "https://www.americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Internal Layout of a Lunar Surface Habitat (NTRS 20220013669), Burke, Howard, Kessler, 2022", "url": "https://ntrs.nasa.gov/citations/20220013669", "page_source": "https://ntrs.nasa.gov/citations/20220013669", "licence": "?", "verifie": false, "note": "Notice trouvée par recherche (PDF 403) ; figure 5 (plan) non vue." }
+      ],
+      "pour_kibsu": "Référence de disposition intérieure à étages : sas au rez-de-chaussée, sanitaires privés et cabines au-dessus, repas commun au dernier niveau. Sas occupant la moitié du rez-de-chaussée : à comparer avec les 4,7 m² du sas de l'étude 2023.",
+      "a_verifier": [
+        "Source secondaire (AmericaSpace) : les dimensions et le volume sont à vérifier sur le rapport Burke 2022.",
+        "Les cabines d'équipage n'ont pas de dimensions dans l'article."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "NASA Quest Joint Airlock (page officielle)", "url": "https://www.nasa.gov/international-space-station/quest-airlock/", "note": "Photos du sas Quest ; pas de cotes sur la page." },
+    { "titre": "ESA Cupola (page officielle)", "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Node-3_Cupola/Cupola", "note": "Cotes de la Cupola." },
+    { "titre": "JAXA Kibo, sas (archivé)", "url": "https://iss.jaxa.jp/iss/kibo/al_e.html", "note": "Dimensions du sas Kibo." },
+    { "titre": "NASA Skylab diagrams (index des dessins)", "url": "https://www.nasa.gov/history/diagrams/skylab.html", "note": "12 dessins listés, sans cotes dans le texte." },
+    { "titre": "Wikimedia Commons : Skylab Airlock Module cutaway", "url": "https://commons.wikimedia.org/wiki/File:Skylab_Airlock_Module_cutaway_(0101643).jpg", "note": "Coupe illustrée, domaine public, carénage fixe de 22 ft." },
+    { "titre": "Brevet US 4 842 224 (Google Patents)", "url": "https://patents.google.com/patent/US4842224A/en", "note": "Descriptions des figures et cotes d'écoutille générale (50 in)." },
+    { "titre": "Wikipedia : Common Berthing Mechanism", "url": "https://en.wikipedia.org/wiki/Common_Berthing_Mechanism", "note": "Vestibule, boulons, légendes de coupes." },
+    { "titre": "Wikipedia : International Docking System Standard", "url": "https://en.wikipedia.org/wiki/International_Docking_System_Standard", "note": "Passage de 0,8 m." },
+    { "titre": "Wikipedia : Apollo CSM (écoutilles)", "url": "https://en.wikipedia.org/wiki/Apollo_Command/Service_Module", "note": "Écoutille d'équipage 29 x 34 po ; écoutille avant 30 po." },
+    { "titre": "Wikipedia : Habitation Module", "url": "https://en.wikipedia.org/wiki/Habitation_Module", "note": "Cabines de sommeil de Harmony : 2,1 m³ installées, 3,2 m³ prévues." },
+    { "titre": "AmericaSpace : Artemis Foundation Habitat", "url": "https://www.americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/", "note": "Article secondaire sur l'habitat de Burke 2022 : 4 m, 6,5 m, 127 m³." },
+    { "titre": "NTRS 20220013669 : Internal Layout of a Lunar Surface Habitat", "url": "https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf", "note": "PDF 403 ; à ouvrir pour les dimensions." },
+    { "titre": "NTRS 20140016951 : volume habitable net (consensus)", "url": "https://ntrs.nasa.gov/citations/20140016951", "note": "Valeur Mars 30 mois non lue (403)." },
+    { "titre": "NASA-STD-3000B Vol. 1 (MSIS)", "url": "https://everyspec.com/NASA/NASA-NASA-STD/NASA-STD-3000B_VOL-1_16180/", "note": "Norme MSIS ; msis.jsc.nasa.gov injoignable (DNS), figures non lues." },
+    { "titre": "SP-400 Skylab, Our First Space Station (archive UNT)", "url": "https://webarchive.library.unt.edu/web/20130213211415/http://history.nasa.gov/SP-400/sp400.htm", "note": "Index archivé ; chapitres non lus." }
+  ],
+  "pistes_non_explorées": [
+    "MSIS NASA-STD-3000 : msis.jsc.nasa.gov injoignable (DNS) ; figures cotées de volume net habitable, couchettes, toilettes, sport à chercher sur une autre adresse NASA.",
+    "NTRS bloqués (403) : 20220013669 (Burke 2022, plan Figure 5), 20230000121 et 20230002484 (sas 2023), 20140016951 (volume habitable), 20120011640 et 19900007544 (suitport), 20080047456 et 20080018968 (poussière), 20180007209 (sas gonflable), 19750002896 (Skylab), 20190030368 (IDSS).",
+    "Nanoracks Bishop IDD : erreur de certificat sur nanoracks.com ; à ouvrir dans un navigateur pour les cotes du dessin.",
+    "Skylab : ouvrir les GIF sk004 (Crew Quarters), sk008 et sk009 (Airlock Module Interior) depuis la page diagrams, ou le lien direct NASA images, pour relever les cotes.",
+    "Quest : ouvrir le dessin « Main Dimensions (mm) » sur rdataspace pour relever les cotes en mm ; ouvrir les SVG Commons (Quest Airlock 1 et 2).",
+    "TM X-64825 (1974) : rapport non trouvé en PDF ; chercher sur NTRS par numéro ou sur la bibliothèque UAH.",
+    "Brevet Cohen : ouvrir les dessins (figures 5 à 18) sur USPTO ou Google Patents pour les cotes en pouces.",
+    "ICES 2018 (ttu-ir) et Fairburn 2001 : texte complet non accessible ; chercher une copie NASA.",
+    "Mir Kvant, Shuttle airlock (Spacehab), Tiangong, Gateway et Artemis (sas et suitlock lunaires), Orion (écoutille), Gemini (écoutilles latérales) : non explorés.",
+    "Postes de travail, sport, poussière à l'entrée (chiffrée) : non explorés faute de recherche ou de source ouverte."
+  ]
+}

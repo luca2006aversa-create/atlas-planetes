@@ -1,0 +1,407 @@
+{
+  "theme": "Habitats gonflables et deployables",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "transhab",
+      "nom": "TransHab",
+      "annee": "1997-2000",
+      "auteurs": "NASA JSC (Kriss Kennedy, Kim Dismukes)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Module gonflable multicouche concu par la NASA pour l'ISS, avec quatre niveaux interieurs. Le programme a ete arrete en 2000, et les brevets sont passes a Bigelow.",
+      "dimensions": [
+        { "quoi": "diametre gonfle", "valeur": "8,2 m", "source": "https://en.wikipedia.org/wiki/TransHab" },
+        { "quoi": "longueur", "valeur": "11 m", "source": "https://en.wikipedia.org/wiki/TransHab" },
+        { "quoi": "diametre replie", "valeur": "4,3 m", "source": "https://en.wikipedia.org/wiki/TransHab" },
+        { "quoi": "volume pressurise gonfle", "valeur": "339,8 m3", "source": "https://en.wikipedia.org/wiki/TransHab" },
+        { "quoi": "masse", "valeur": "13 154 kg", "source": "https://en.wikipedia.org/wiki/TransHab" },
+        { "quoi": "espace par cabine individuelle (niveau 2)", "valeur": "2,3 m3 chacun, six cabines", "source": "https://en.wikipedia.org/wiki/TransHab" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "TransHab shell cutaway (NASA JSC, photo S99-05362, 30 aout 2001)", "url": "https://commons.wikimedia.org/wiki/File:TransHab_shell_cutaway.jpg", "page_source": "https://commons.wikimedia.org/wiki/File:TransHab_shell_cutaway.jpg", "licence": "domaine public (NASA, Wikimedia Commons)", "verifie": true, "note": "Coupe calculee de la paroi, avec couches et bouclier MOD (debris et micrometeorites). Image 537 x 693 px, sans cotes ni liste des couches dans la page." },
+        { "type": "coupe", "titre": "TransHab multi-layer, space debris and micrometeoroid ballistic-shield (legende Wikipedia)", "url": "https://en.wikipedia.org/wiki/TransHab", "page_source": "https://en.wikipedia.org/wiki/TransHab", "licence": "?", "verifie": true, "note": "Vue en coupe de la paroi multicouche, legendee dans la page Wikipedia. Sans cotes lisibles dans le texte." },
+        { "type": "image", "titre": "Niveaux 4, 3, 2, 1 du concept TransHab (legendes Wikipedia)", "url": "https://en.wikipedia.org/wiki/TransHab", "page_source": "https://en.wikipedia.org/wiki/TransHab", "licence": "?", "verifie": true, "note": "Images par niveau. Pas de plan cote dans le texte de la page." },
+        { "type": "rapport", "titre": "TransHab Concept (NASA, Kim Dismukes, 2003)", "url": "https://ntrs.nasa.gov/api/citations/20010067265/downloads/20010067265.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20010067265/downloads/20010067265.pdf", "licence": "?", "verifie": false, "note": "PDF NTRS non lu : HTTP 403. Cite par Wikipedia." },
+        { "type": "rapport", "titre": "Kennedy, AIAA 2002-6105 (TransHab, symposium d'architecture spatiale)", "url": "https://spacearchitect.org/pubs/AIAA-2002-6105.pdf", "page_source": "https://spacearchitect.org/pubs/AIAA-2002-6105.pdf", "licence": "?", "verifie": false, "note": "PDF telecharge en binaire, non lisible (pas de texte extrait). Contient selon une source la coupe a quatre niveaux et l'air inflation. A lire a la main." }
+      ],
+      "pour_kibsu": "Quatre niveaux superposes : tunnel et sas en haut (niveau 4), exercice, sante et hygiene (niveau 3), six cabines individuelles et local technique (niveau 2), cuisine et table de 12 places en bas (niveau 1). Peut servir de base pour une coupe a niveaux avec sas standard et paroi de protection.",
+      "a_verifier": [
+        "Dimensions et masse viennent de Wikipedia (page secondaire) : a recouper avec un rapport NASA lisible.",
+        "Couches de paroi (environ deux douzaines de couches, Nextel + mousse a cellules ouvertes, retenue Kevlar, trois vessies Combitherm, Nomex interieur, MLI) : source secondaire, a confirmer dans le rapport NASA.",
+        "Un resultat de recherche indique que Kevlar a ete retenu plutot que Vectran, et que le Spectra a ete ecarte (froid) : non ouvert, a verifier.",
+        "Le niveau 2 indique 2,3 m3 par cabine : a verifier.",
+        "Aucun plan cote trouve : les niveaux sont des images legendees ; les plans cotes restent a chercher dans les rapports NTRS."
+      ]
+    },
+    {
+      "id": "beam",
+      "nom": "BEAM (Bigelow Expandable Activity Module)",
+      "annee": "2013-2016",
+      "auteurs": "Bigelow Aerospace, pour la NASA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module gonflable en orbite, installe sur l'ISS en avril 2016 et gonfle en mai 2016. Il est reste en service et a ete confie a la NASA en 2021.",
+      "dimensions": [
+        { "quoi": "emballe, longueur", "valeur": "2,16 m", "source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module" },
+        { "quoi": "emballe, diametre", "valeur": "2,36 m", "source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module" },
+        { "quoi": "gonfle, longueur", "valeur": "4,01 m", "source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module" },
+        { "quoi": "gonfle, diametre", "valeur": "3,23 m", "source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module" },
+        { "quoi": "volume pressurise", "valeur": "16,0 m3", "source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module" },
+        { "quoi": "masse", "valeur": "1 413 kg", "source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Page Wikipedia BEAM (photos et legendes)", "url": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module", "page_source": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module", "licence": "?", "verifie": true, "note": "Dimensions et chronologie. Pas de plan ni de coupe dans le texte lu." },
+        { "type": "maquette", "titre": "origaBEAMi, modele papier a plier (NASA STEM)", "url": "https://www.nasa.gov/stem-content/origabeami-paper-model-an-origami-paper-folding-activity", "page_source": "https://www.nasa.gov/stem-content/origabeami-paper-model-an-origami-paper-folding-activity", "licence": "?", "verifie": false, "note": "Modele a imprimer et plier, vu dans un resultat de recherche seulement. Donne une forme depliee a l'echelle reduite." }
+      ],
+      "pour_kibsu": "Dimensions reelles d'un module gonflable de 16 m3 : utile pour l'echelle d'un logement minimal gonflable et pour l'entree par sas.",
+      "a_verifier": [
+        "La page indique une extension de 170 cm, qui ne correspond pas a 4,01 m moins 2,16 m : incoherence interne, a verifier.",
+        "Une recherche indique Vectran comme materiau principal de la paroi, mais la page Wikipedia lue parle de materiaux Kevlar-like : a trancher avec une source NASA.",
+        "Couches (bladder, restraint, MMOD, MLI, BETA) vues dans un resultat de recherche seulement : a verifier.",
+        "Un rapport NASA avec figure CAD du capteur BEAM existe (NTRS 20170008538) mais n'a pas pu etre lu (HTTP 403).",
+        "Pas de plan ni de coupe cotee trouves."
+      ]
+    },
+    {
+      "id": "b330",
+      "nom": "B330 (Bigelow)",
+      "annee": "2010-2020",
+      "auteurs": "Bigelow Aerospace",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Habitat gonflable prive, issu du concept TransHab, prevu pour six membres d'equipage. Il n'a jamais vole en tant que tel.",
+      "dimensions": [
+        { "quoi": "volume (nom du module)", "valeur": "330 m3 (12 000 ft3), a verifier", "source": "https://sites.google.com/site/exosnews/space-tourism/bigelow-aerospace/ba-330" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Fiche B330 (site fan exosnews)", "url": "https://sites.google.com/site/exosnews/space-tourism/bigelow-aerospace/ba-330", "page_source": "https://sites.google.com/site/exosnews/space-tourism/bigelow-aerospace/ba-330", "licence": "?", "verifie": false, "note": "Vu seulement dans un resultat de recherche. Source fan, a recouper." }
+      ],
+      "pour_kibsu": "Reference de volume pour un module gonflable de six personnes ; aucun plan trouve.",
+      "a_verifier": [
+        "Page Wikipedia B330 : HTTP 404 a la lecture, non verifiee (une recherche la cite a l'adresse en.wikipedia.org/wiki/B330).",
+        "Le volume de 330 m3 est tire du nom du module : a confirmer par une source Bigelow.",
+        "Donnee de six personnes et part de 110 m3 a louer : resultats de recherche non ouverts.",
+        "Une recherche indique 210 % d'espace habitable en plus, pour 53 % de masse en plus, compare a Destiny : baseline non confirmee.",
+        "Aucun plan, coupe ni dimension par niveau trouves."
+      ]
+    },
+    {
+      "id": "ba2100",
+      "nom": "BA 2100 (Olympus)",
+      "annee": "2010-2013",
+      "auteurs": "Bigelow Aerospace",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Concept de station gonflable de tres grand volume, avec ports d'amarrage aux deux extremites, pour 16 membres d'equipage. Aucun lancement n'est prevu a ce stade.",
+      "dimensions": [
+        { "quoi": "volume pressurise", "valeur": "2 250 m3", "source": "https://en.wikipedia.org/wiki/BA_2100" },
+        { "quoi": "diametre total", "valeur": "12,6 m", "source": "https://en.wikipedia.org/wiki/BA_2100" },
+        { "quoi": "longueur", "valeur": "17,8 m", "source": "https://en.wikipedia.org/wiki/BA_2100" },
+        { "quoi": "masse", "valeur": "65 000 a 70 000 kg", "source": "https://en.wikipedia.org/wiki/BA_2100" },
+        { "quoi": "diametre des extremites d'amarrage", "valeur": "7,6 m", "source": "https://en.wikipedia.org/wiki/BA_2100" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Modele conceptuel BA 2100 (page Wikipedia)", "url": "https://en.wikipedia.org/wiki/BA_2100", "page_source": "https://en.wikipedia.org/wiki/BA_2100", "licence": "?", "verifie": true, "note": "Modele conceptuel avec ports d'amarrage aux deux bouts. Pas de plan d'agencement ni de coupe dans le texte." }
+      ],
+      "pour_kibsu": "Echelle d'un grand habitat gonflable ; sans interet direct pour les niveaux d'un habitat lunaire.",
+      "a_verifier": [
+        "Volume : la page donne 2 250 m3 et 79 000 ft3, mais aussi 74 000 ft3 : incoherence, a verifier.",
+        "Pas de plan ni de coupe trouves."
+      ]
+    },
+    {
+      "id": "life-sierra",
+      "nom": "LIFE (Sierra Space)",
+      "annee": "2021-2023",
+      "auteurs": "Sierra Space (avec ILC Dover pour la validation)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Habitat gonflable a structure en tissus haute resistance (Vectran), rigidifie a la pressurisation. Un module grandeur reelle a ete mis a l'epreuve de rupture en novembre 2023.",
+      "dimensions": [
+        { "quoi": "diametre gonfle (module grandeur reelle)", "valeur": "8,2 m (27 ft)", "source": "https://news.satnews.com/2023/11/14/sierra-space-set-for-full-scale-burst-test-of-expandable-space-station-module" },
+        { "quoi": "volume", "valeur": "10 000 ft3 (environ 283 m3)", "source": "https://news.satnews.com/2023/11/14/sierra-space-set-for-full-scale-burst-test-of-expandable-space-station-module" },
+        { "quoi": "hauteur", "valeur": "20,5 ft (environ 6,2 m)", "source": "https://news.satnews.com/2023/11/14/sierra-space-set-for-full-scale-burst-test-of-expandable-space-station-module" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Communique Sierra Space du 13 nov. 2023 (test de rupture)", "url": "https://www.businesswire.com/news/home/20231113334211/en", "page_source": "https://www.businesswire.com/news/home/20231113334211/en", "licence": "?", "verifie": false, "note": "Lecture refusee (HTTP 403). Chiffres tires d'un resultat de recherche." }
+      ],
+      "pour_kibsu": "Retenue en Vectran (sangles) et paroi souple : exemple recent d'un habitat gonflable a structure textile, utile pour l'echelle d'un volume de 280 m3.",
+      "a_verifier": [
+        "Volume et diametre viennent de la presse : a verifier avec le communique.",
+        "Un article donne 6 m de long et 9 m de diametre pour une premiere version, et un autre une ouverture de 9 m par 16 m : contradictoires avec 8,2 m, a ne pas retenir sans source.",
+        "Un article indique que le prototype a explose au banc d'essai du MSFC : non verifie.",
+        "Pas de plan ni de coupe trouves."
+      ]
+    },
+    {
+      "id": "nasa-antarctique-2008",
+      "nom": "Habitat lunaire gonflable de test, Antarctique (McMurdo)",
+      "annee": "2007-2009",
+      "auteurs": "NASA (Innovative Partnerships Program), NSF, ILC Dover",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "dome",
+      "resume": "Prototype de habitat lunaire gonflable teste pendant 13 mois en Antarctique, pour evaluer la vie et le deploiement en milieu extreme. ILC Dover a construit l'enveloppe et l'amenagement.",
+      "dimensions": [
+        { "quoi": "emprise (environ 16 x 24 ft, a convertir)", "valeur": "16 x 24 ft (environ 4,9 x 7,3 m), non verifie", "source": "https://honoluluadvertiser.com/article/2008/Feb/22/bz/hawaii802220338.html" },
+        { "quoi": "masse", "valeur": "900 lb (environ 408 kg), non verifie", "source": "https://honoluluadvertiser.com/article/2008/Feb/22/bz/hawaii802220338.html" },
+        { "quoi": "isolation centrale", "valeur": "1,5 in (environ 3,8 cm), non verifie", "source": "https://honoluluadvertiser.com/article/2008/Feb/22/bz/hawaii802220338.html" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Fiche NASA 'Living on the Moon: Inflatable Habitat Research' (archive 2009)", "url": "https://webarchive.library.unt.edu/web/20090511180722/http:/nctn.hq.nasa.gov/pdf/inflatable.pdf", "page_source": "https://webarchive.library.unt.edu/web/20090511180722/http:/nctn.hq.nasa.gov/pdf/inflatable.pdf", "licence": "?", "verifie": false, "note": "Lecture sans texte exploitable. A ouvrir a la main." },
+        { "type": "rapport", "titre": "Roida et al., Inflatable Habitat Health Monitoring (NTRS 20090029953), Figure 1 'Inflatable habitat design by ILC Dover'", "url": "https://ntrs.nasa.gov/api/citations/20090029953/downloads/20090029953.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20090029953/downloads/20090029953.pdf", "licence": "?", "verifie": false, "note": "Figure 1 de dessin ILC Dover et coupe avec capteurs de temperature, selon un resultat de recherche. PDF non lu (HTTP 403)." },
+        { "type": "image", "titre": "Galerie d'images SpaceRef (interieur, sas, dessins de construction ILC Dover)", "url": "https://spaceref.com/?p=25184", "page_source": "https://spaceref.com/?p=25184", "licence": "?", "verifie": false, "note": "Legendes de dessins ILC Dover (plan de construction, dimensions) selon un resultat de recherche. Page non lue (HTTP 403)." }
+      ],
+      "pour_kibsu": "Paroi en nylon tisse enduit d'uréthane avec couche isolante centrale : base de paroi simple pour un habitat gonflable terrestre de test. Figure ILC Dover a retrouver.",
+      "a_verifier": [
+        "Aucun plan ni coupe lu : les figures ILC Dover sont a ouvrir a la main.",
+        "Les dimensions viennent d'un article de presse, a recouper.",
+        "Articles SpaceNews et USAP : non lus (HTTP 429 et erreur DNS)."
+      ]
+    },
+    {
+      "id": "goodyear-1961",
+      "nom": "Station gonflable toroidale Goodyear (NASA Langley)",
+      "annee": "1961",
+      "auteurs": "Goodyear, avec NASA Langley",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "tore",
+      "resume": "Station gonflable en anneau, concue pour l'orbite et testee au sol au debut des annees 1960. Le projet a ete abandonne, notamment par crainte des micrometeorites.",
+      "dimensions": [
+        { "quoi": "diametre (version la plus grande), a verifier", "valeur": "9,1 m (30 ft)", "source": "https://www.space.com/18772-inflatable-station-concept.html" },
+        { "quoi": "diametre (version plus petite), a verifier", "valeur": "7,2 m (24 ft)", "source": "https://www.space.com/18772-inflatable-station-concept.html" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Inflatable station concept, 1961 (legende NASA, toroide)", "url": "https://en.wikipedia.org/wiki/Inflatable_space_habitat", "page_source": "https://en.wikipedia.org/wiki/Inflatable_space_habitat", "licence": "?", "verifie": true, "note": "Image legendee 'toroid inflatable station concept during testing (NASA 1961)' dans la page Wikipedia." }
+      ],
+      "pour_kibsu": "Forme toroidale gonflable pour gravite artificielle : seule forme de ce corpus qui sert la rotation, pas l'habitat direct.",
+      "a_verifier": [
+        "Les dimensions 9,1 m et 7,2 m viennent d'un resultat de recherche : la page Wikipedia ne les donne pas, a verifier.",
+        "Le statut (production ou non) est contradictoire selon les sources.",
+        "Pas de plan ni de coupe trouves."
+      ]
+    },
+    {
+      "id": "lunar-1989-jsc",
+      "nom": "Avant-projet d'avant-poste lunaire gonflable (JSC, 1989)",
+      "annee": "1989",
+      "auteurs": "NASA Johnson Space Center, Man Systems Division",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Avant-projet d'habitat lunaire gonflable de forme spherique, partiellement enterre dans le regolite. Il ne depasse pas le stade de l'etude.",
+      "dimensions": [
+        { "quoi": "diametre", "valeur": "16 m", "source": "https://en.wikipedia.org/wiki/Inflatable_space_habitat" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Inflatable lunar habitat proposal (NASA 1989), legende Wikipedia", "url": "https://en.wikipedia.org/wiki/Inflatable_space_habitat", "page_source": "https://en.wikipedia.org/wiki/Inflatable_space_habitat", "licence": "?", "verifie": true, "note": "Image legendee de l'avant-projet, page Wikipedia. Pas de plan cote dans le texte." }
+      ],
+      "pour_kibsu": "Habitat lunaire gonflable enterre : piste directe pour un habitat au pole sud avec protection par regolite.",
+      "a_verifier": [
+        "Aucun volume, aucune couche de paroi, aucun plan trouves.",
+        "Source unique : Wikipedia."
+      ]
+    },
+    {
+      "id": "lockheed-martin",
+      "nom": "Habitat gonflable Lockheed Martin (Starlab)",
+      "annee": "2023-2024",
+      "auteurs": "Lockheed Martin (partenaires Voyager, Nanoracks)",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat gonflable en Vectran prevu comme module principal de la station Starlab, avec des tests d'eclatement. Il a ete annule et remplace par un module rigide.",
+      "dimensions": [
+        { "quoi": "volume (station Starlab, une source)", "valeur": "340 m3 (12 000 ft3), a verifier", "source": "https://lockheedmartin.com/en-us/news/features/2024/inflatable-habitats-expanding-space-exploration.html" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Lockheed Martin, 'Inflatable Habitats: Expanding Space Exploration' (2024)", "url": "https://lockheedmartin.com/en-us/news/features/2024/inflatable-habitats-expanding-space-exploration.html", "page_source": "https://lockheedmartin.com/en-us/news/features/2024/inflatable-habitats-expanding-space-exploration.html", "licence": "?", "verifie": true, "note": "Article lu : Vectran, tests d'eclatement six fois la pression de vol. Pas de plan ni de coupe." }
+      ],
+      "pour_kibsu": "Cas de paroi en Vectran avec validation par eclatement : exemple de demarche de test, sans graphique utile.",
+      "a_verifier": [
+        "Le volume de 340 m3 vient d'un resultat de recherche, non verifie.",
+        "Pas de plan ni de coupe trouves."
+      ]
+    },
+    {
+      "id": "lunark-origami",
+      "nom": "LUNARK (habitat origami, Greenland et Lune)",
+      "annee": "2020-2023",
+      "auteurs": "SAGA (Danemark)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat origami qui se deplie d'une forme compacte en un ovoide. Il est concu pour un usage terrestre et lunaire, avec un volume qui augmente de 750 % au deploiement (selon la page).",
+      "dimensions": [
+        { "quoi": "volume deploye", "valeur": "17,2 m3", "source": "https://saga.dk/projects/lunark/habitat" },
+        { "quoi": "volume replie", "valeur": "2,2 m3", "source": "https://saga.dk/projects/lunark/habitat" },
+        { "quoi": "encombrement replie", "valeur": "2,23 x 2,23 x 2,23 m", "source": "https://saga.dk/projects/lunark/habitat" },
+        { "quoi": "masse", "valeur": "1 738 kg", "source": "https://saga.dk/projects/lunark/habitat" },
+        { "quoi": "equipage", "valeur": "2 personnes", "source": "https://saga.dk/projects/lunark/habitat" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Trois plans d'etage (sous-plancher, partie basse, partie haute)", "url": "https://saga.dk/projects/lunark/habitat", "page_source": "https://saga.dk/projects/lunark/habitat", "licence": "?", "verifie": true, "note": "Trois plans d'etage presents sur la page, sans legende visible. Seul le texte alternatif a ete lu, pas l'image." },
+        { "type": "axonometrie", "titre": "Vue axonometrique et schema eclate 'dissected' de l'organisation spatiale", "url": "https://saga.dk/projects/lunark/habitat", "page_source": "https://saga.dk/projects/lunark/habitat", "licence": "?", "verifie": true, "note": "Axonometrie et schema anime presents sur la page. Pas de coupe explicite mentionnee." }
+      ],
+      "pour_kibsu": "Organisation en trois niveaux : dome de stockage en bas, cylindre central pour postes de travail, sas et toilettes, dome de couchage en haut. Bon modele de pliage pour un habitat compact a deploiement sur 10 heures.",
+      "a_verifier": [
+        "Ce sont des plans du site : les cotes ne sont pas dans le texte, a relire sur les images.",
+        "Parois : coque en fibre de carbone en panneaux sandwich, panneaux reliés par composite caoutchouc, cadre aluminium, cellules solaires. Epaisseurs non donnees.",
+        "Deploiement : 10 heures a deux personnes, sans engin lourd (page)."
+      ]
+    },
+    {
+      "id": "genesis-i",
+      "nom": "Genesis I (Bigelow)",
+      "annee": "2006",
+      "auteurs": "Bigelow Aerospace",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Prototype gonflable de station, lance le 12 juillet 2006 et gonfle en orbite en une dizaine de minutes. Il a servi de banc d'essai sans equipage.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "4,40 m", "source": "https://en.wikipedia.org/wiki/Genesis_I" },
+        { "quoi": "diametre gonfle", "valeur": "2,54 m", "source": "https://en.wikipedia.org/wiki/Genesis_I" },
+        { "quoi": "diametre au lancement", "valeur": "1,60 m", "source": "https://en.wikipedia.org/wiki/Genesis_I" },
+        { "quoi": "volume interieur", "valeur": "11,5 m3", "source": "https://en.wikipedia.org/wiki/Genesis_I" },
+        { "quoi": "masse au lancement", "valeur": "1 360 kg", "source": "https://en.wikipedia.org/wiki/Genesis_I" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Photo de camera exterieure Genesis I (legende Wikipedia)", "url": "https://en.wikipedia.org/wiki/Genesis_I", "page_source": "https://en.wikipedia.org/wiki/Genesis_I", "licence": "?", "verifie": true, "note": "Une des sept cameras exterieures. Pas de plan ni de coupe." }
+      ],
+      "pour_kibsu": "Tres petit volume (11,5 m3) deploye d'un diametre 1,60 m au lancement : repere pour un module compact de deploiement rapide.",
+      "a_verifier": [
+        "Volume : 406 ft3 dans l'infobox, 410 ft3 dans le texte : ecart mineur.",
+        "Space.com donne 8 ft de diametre (coherent avec 2,54 m) : non verifie.",
+        "Parois et materiaux non decrits dans la page lue. Pas de plan."
+      ]
+    },
+    {
+      "id": "max-space",
+      "nom": "Max Space (demo et Thunderbird)",
+      "annee": "2024-2026",
+      "auteurs": "Max Space (startup)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Startup qui developpe des habitats gonflables extensibles, de 20 a 1 000 m3. Une demo de 20 m3 doit voler en orbite terrestre en 2026, et le concept Thunderbird de 350 m3 est prevu pour un seul lancement Falcon 9.",
+      "dimensions": [
+        { "quoi": "volume demo", "valeur": "20 m3, a verifier", "source": "https://payloadspace.com/max-space-unveils-expandable-habitat/" },
+        { "quoi": "volume Thunderbird", "valeur": "350 m3, a verifier", "source": "https://globetrender.com/2026/09/03/max-spaces-thunderbird-space-station-rethinks-life-orbit/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Max Space, annonce du habitat extensible (Payload)", "url": "https://payloadspace.com/max-space-unveils-expandable-habitat/", "page_source": "https://payloadspace.com/max-space-unveils-expandable-habitat/", "licence": "?", "verifie": false, "note": "Page non lue (HTTP 403). Chiffres tires de resultats de recherche." }
+      ],
+      "pour_kibsu": "Gamme de volumes modulaires : utile pour dimensionner un habitat extensible par modules.",
+      "a_verifier": [
+        "Couches signalees : Kevlar, Nextel, Zylon, Technora, avec tension entre couches. Non verifie et nombre de couches inconnu.",
+        "Expansion annoncee de 20 fois le volume replie : a verifier.",
+        "Pas de plan ni de coupe trouves."
+      ]
+    },
+    {
+      "id": "x-hab",
+      "nom": "X-Hab (ILC Dover, NASA Langley)",
+      "annee": "2020-2025",
+      "auteurs": "ILC Dover, sous contrat NASA Langley, avec NASA JSC",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Habitat lunaire extensible hybride : deux bouts rigides et une section centrale souple qui se deploie. Des rapports universitaires FY22 et 2025 l'etudient, dont les planchers.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "UMd FY22 X-Hab (NTRS 20220009209), section planchers", "url": "https://ntrs.nasa.gov/api/citations/20220009209/downloads/FY22_UMd_XHab.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20220009209/downloads/FY22_UMd_XHab.pdf", "licence": "?", "verifie": false, "note": "Vu seulement dans un resultat de recherche (sommaire). A ouvrir pour les plans de planchers." },
+        { "type": "image", "titre": "Expandable Lunar Habitat (X-Hab), image Google Arts and Culture", "url": "https://artsandculture.google.com/asset/expandable-lunar-habitat-x-hab-george-homich/jQH4YXA2PIBekw", "page_source": "https://artsandculture.google.com/asset/expandable-lunar-habitat-x-hab-george-homich/jQH4YXA2PIBekw", "licence": "?", "verifie": false, "note": "Image de presentation, vue en resultat de recherche seulement." }
+      ],
+      "pour_kibsu": "Deux bouts rigides (planchers, equipements, sas) et section souple au centre : repartition proche de ce qu'un architecte dessinerait pour un habitat au pole sud.",
+      "a_verifier": [
+        "Aucune dimension trouvee dans une source ouverte.",
+        "Aucun plan ni coupe ILC Dover trouve (la recherche n'a rendu qu'un sommaire)."
+      ]
+    },
+    {
+      "id": "hassell-esa-lunar",
+      "nom": "Master plan lunaire ESA / Hassell (modules gonflables)",
+      "annee": "2024",
+      "auteurs": "ESA, Hassell (architectes)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Master plan d'une base lunaire pour jusqu'a 144 personnes. Des modules gonflables y sont places a l'interieur d'une coque de tetrapodes imprimes en 3D pour la protection contre les radiations.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Hassell, Lunar Master Plan: Moon base for the ESA (page projet)", "url": "https://hassellstudio.com/project/lunar-master-plan-moon-base-for-the-european-space-agency", "page_source": "https://hassellstudio.com/project/lunar-master-plan-moon-base-for-the-european-space-agency", "licence": "?", "verifie": false, "note": "Page non lue (erreur de certificat, puis resultats de recherche)." }
+      ],
+      "pour_kibsu": "Coque de protection faite de tetrapodes imprimes en 3D et modules gonflables a l'interieur : repere pour une protection contre les radiations au pole sud.",
+      "a_verifier": [
+        "Presse : 144 personnes et tetrapodes imprimes ; a verifier sur la page Hassell.",
+        "Pas de plan ni de coupe trouves. Aucune dimension chiffree.",
+        "Etude TU Delft (H.O.M.E.) citee dans une recherche : cylindre couche sur le cote, enfoui jusqu'a 1 m (non verifie)."
+      ]
+    },
+    {
+      "id": "origami-langley-tops",
+      "nom": "Structure origami composite (NASA Langley, TOPS 372)",
+      "annee": "2020-2023",
+      "auteurs": "NASA Langley (inventeurs)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Structure deployable en composite carbone-polymere a memoire de forme, durcie aux UV, pliee pour le transport puis deployee par chauffage. Niveau technologique TRL 4.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA TOPS 372 (fiche technologie origami composite)", "url": "https://technology.nasa.gov/t2media/tops/pdf/LAR-TOPS-372.pdf", "page_source": "https://technology.nasa.gov/t2media/tops/pdf/LAR-TOPS-372.pdf", "licence": "?", "verifie": false, "note": "Vu seulement dans un resultat de recherche. Fiche de technologie, sans dessin lu." }
+      ],
+      "pour_kibsu": "Panneaux rigides pliables par memoire de forme : piste pour les structures deployables rigides (origami) du theme.",
+      "a_verifier": [
+        "Aucune dimension ni plan lu.",
+        "Le TRL 4 vient d'un resultat de recherche : a verifier dans la fiche."
+      ]
+    },
+    {
+      "id": "kaist-origami-shelter",
+      "nom": "Abri origami (KAIST)",
+      "annee": "2023-2024",
+      "auteurs": "KAIST (Coree du Sud)",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Abri a pans inclines qui se plie a plat et se deploie sans deformer ses panneaux rigides. Une vingtaine d'unites peuvent etre lancees ensemble.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "KAIST Research Webzine, origami space shelter", "url": "https://breakthroughs.kaist.ac.kr/sub03/view/id/502", "page_source": "https://breakthroughs.kaist.ac.kr/sub03/view/id/502", "licence": "?", "verifie": false, "note": "Vu seulement dans un resultat de recherche." }
+      ],
+      "pour_kibsu": "Panneaux rigides qui ne se deforment pas au deploiement : piste pour un abri pour l'exterieur lunaire.",
+      "a_verifier": [
+        "Aucune dimension ni plan lu.",
+        "Le nombre de 20 unites par lancement vient d'un resultat de recherche : a verifier."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "Inflatable space habitat (Wikipedia, EN)", "url": "https://en.wikipedia.org/wiki/Inflatable_space_habitat", "note": "Vue d'ensemble des projets, avec dates et legendes d'images. Lue." },
+    { "titre": "TransHab (Wikipedia, EN)", "url": "https://en.wikipedia.org/wiki/TransHab", "note": "Dimensions, niveaux et couches, sources NASA citees. Lue." },
+    { "titre": "TransHab shell cutaway (Wikimedia Commons)", "url": "https://commons.wikimedia.org/wiki/File:TransHab_shell_cutaway.jpg", "note": "Coupe NASA JSC, domaine public. Lue." },
+    { "titre": "Bigelow Expandable Activity Module (Wikipedia, EN)", "url": "https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module", "note": "Dimensions emballe et gonfle de BEAM. Lue." },
+    { "titre": "BA 2100 (Wikipedia, EN)", "url": "https://en.wikipedia.org/wiki/BA_2100", "note": "Dimensions du concept BA 2100. Lue." },
+    { "titre": "Genesis I (Wikipedia, EN)", "url": "https://en.wikipedia.org/wiki/Genesis_I", "note": "Dimensions et volume de Genesis I. Lue." },
+    { "titre": "SAGA, habitat LUNARK", "url": "https://saga.dk/projects/lunark/habitat", "note": "Volumes, masse, plans d'etage et axonometrie (images). Lue." },
+    { "titre": "NTRS 20010067265 (TransHab Concept, 2003)", "url": "https://ntrs.nasa.gov/api/citations/20010067265/downloads/20010067265.pdf", "note": "Source primaire NASA a lire : HTTP 403 a la lecture." }
+  ],
+  "pistes_non_explorees": [
+    "Rapports NASA NTRS (TransHab, BEAM, X-Hab, Antarctique 2008) : HTTP 403 ou binaire illisible ; a ouvrir a la main pour les plans et coupes cotes.",
+    "Plans cotes de TransHab et de Genesis : non trouves ; voir archives NASA JSC et les images NASA S99-05362 et S99-05363 (crew).",
+    "Modeles 3D : NASA 3D Resources et Sketchfab non interroges ; aucun modele telechargeable trouve pour BEAM.",
+    "Lawrence Livermore, SICSA : aucune trace trouvee dans les recherches. A considerer comme non confirme.",
+    "Budget de recherche atteint en cours de passe 2 : ILC Dover X-Hab (dessins), Lockheed (plans Starlab), B330 (plans), Max Space (page Payload non lue) restent a faire.",
+    "Shape-memory origami SHEE : terme non trouve ; la recherche a rendu les travaux Langley et KAIST, deja inclus.",
+    "Voskhod 2 (sas gonflable de 1965) : hors theme strict, mentionne dans la page Wikipedia."
+  ]
+}

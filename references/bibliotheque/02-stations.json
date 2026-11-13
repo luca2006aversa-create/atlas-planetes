@@ -1,0 +1,1493 @@
+{
+  "theme": "Stations spatiales hors ISS : Skylab, Saliout, Almaz, Mir, Tiangong, Spacelab, MOL, Space Station Freedom, stations commerciales",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "skylab",
+      "nom": "Skylab",
+      "annee": "1973-1979",
+      "auteurs": "NASA (MSFC, JSC) ; étude d'habitabilité : Raymond Loewy et William Snaith",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Station américaine construite à partir d'un étage S-IVB du Saturn V. Trois équipes d'astronautes y ont vécu entre 1973 et 1974.",
+      "dimensions": [
+        {
+          "quoi": "Atelier orbital (OWS) : longueur",
+          "valeur": "14,7 m",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        },
+        {
+          "quoi": "Atelier orbital (OWS) : diamètre",
+          "valeur": "6,6 m (6,61 m)",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        },
+        {
+          "quoi": "Atelier orbital (OWS) : volume habitable",
+          "valeur": "270 m³ (9 550 ft³)",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        },
+        {
+          "quoi": "Atelier orbital (OWS) : masse",
+          "valeur": "35 000 kg",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        },
+        {
+          "quoi": "Sas (airlock) : longueur / diamètre",
+          "valeur": "5,4 m / 3,2 m ; volume habitable 17,4 m³",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        },
+        {
+          "quoi": "Adaptateur multiple (MDA) : longueur / diamètre",
+          "valeur": "5,3 m / 3,2 m ; volume 32 m³",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        },
+        {
+          "quoi": "Station complète : volume pressurisé",
+          "valeur": "351,6 m³ ; masse 76 540 kg sans le CSM",
+          "source": "https://en.wikipedia.org/wiki/Skylab"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Skylab – Configuration générale (General Characteristics, SP-400, 1977)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk001.jpg",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme de caractéristiques générales avec données de spécification ; image listée sur la page NASA, non ouverte directement."
+        },
+        {
+          "type": "plan",
+          "titre": "Skylab – Configuration détaillée (News Reference, mars 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk001a.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Configuration détaillée de la station ; image listée sur la page NASA."
+        },
+        {
+          "type": "coupe",
+          "titre": "Skylab – Atelier, vue en coupe A (Presentation Reference, mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk002.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Vue en coupe de l'atelier orbital ; image listée sur la page NASA."
+        },
+        {
+          "type": "coupe",
+          "titre": "Skylab – Atelier, vue en coupe B (mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk003.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Deuxième vue en coupe de l'atelier ; image listée sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Skylab – Quartiers d'équipage (crew quarters, mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk004.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Aménagement des cabines individuelles ; image listée sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Skylab – Table du wardroom (mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk005.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Table de la salle commune (wardroom) ; image listée sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Skylab – Compartiment de sommeil (mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk007.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Compartiment de sommeil ; image listée sur la page NASA."
+        },
+        {
+          "type": "coupe",
+          "titre": "Skylab – Module sas, intérieur (coupe transversale, mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk008.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Coupe transversale du sas ; une légende de composants existe aussi (sk009.gif)."
+        },
+        {
+          "type": "coupe",
+          "titre": "Skylab – Adaptateur multiple d'amarrage (coupe transversale, mai 1973)",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/sk010.gif",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Coupe transversale du MDA ; légende de composants en sk011.gif."
+        },
+        {
+          "type": "coupe",
+          "titre": "Skylab – Vue en coupe (cutaway) de la station",
+          "url": "https://rdataspace.github.io/station_skylab",
+          "page_source": "https://rdataspace.github.io/station_skylab",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page qui contient le dessin « skylab-cutaway.jpg » ; l'URL exacte de l'image n'a pas été relevée."
+        },
+        {
+          "type": "image",
+          "titre": "Skylab – Page de référence NASA (diagrammes)",
+          "url": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "page_source": "https://www.nasa.gov/history/diagrams/skylab.html",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Page avec les 12 diagrammes listés ci-dessus."
+        },
+        {
+          "type": "plan",
+          "titre": "Skylab – table du wardroom (dessin en ligne, « Skylab Wardroom Table »)",
+          "url": "https://www.nasa.gov/wp-content/uploads/2024/01/sk005.png",
+          "page_source": "https://www.nasa.gov/image-detail/sk005",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Dessin en ligne de la table (SP Presentation Reference, mai 1973) ; pas de cotes sur la page."
+        },
+        {
+          "type": "3d",
+          "titre": "NASA 3D Models : Skylab (3DS, 27 533 polygones)",
+          "url": "https://catalog.data.gov/dataset/nasa-3d-models-skylab",
+          "page_source": "https://catalog.data.gov/dataset/nasa-3d-models-skylab",
+          "licence": "? (accès public, licence non indiquée)",
+          "verifie": true,
+          "note": "Fichier 3DS. Lien de téléchargement relevé, non téléchargé : http://nasa3d.arc.nasa.gov/shared_assets/models/skylab-c/skylab-c.zip"
+        },
+        {
+          "type": "3d",
+          "titre": "Skylab C – modèle 3D (MAX, FBX, OBJ, BLEND, C4D)",
+          "url": "https://www.3dcadbrowser.com/3d-model/skylab-c",
+          "page_source": "https://www.3dcadbrowser.com/3d-model/skylab-c",
+          "licence": "?",
+          "verifie": false,
+          "note": "Page non ouverte ; licence à vérifier avant usage."
+        }
+      ],
+      "pour_kibsu": "Référence directe pour un habitat à plusieurs niveaux : atelier sur deux étages, sas, adaptateur à deux ports, cabines individuelles d'environ la taille d'un placard, table commune. Montre une circulation centrale verticale et des cabines en périphérie.",
+      "a_verifier": [
+        "Les dimensions du wardroom et des cabines ne sont pas chiffrées dans les pages consultées : chercher dans SP-400 ou le Guidebook EP-107.",
+        "Les deux valeurs d'OWS (14,7 m / 6,6 m) et le volume de 270 m³ viennent de Wikipedia, à recouper avec le document NASA SP-400.",
+        "Les diagrammes 1973 sont des GIF/JPG : pas encore ouverts un par un, seulement listés.",
+        "Modèle 3D NASA : 27 533 polygones, échelle et cotes non indiquées : à vérifier avant usage."
+      ]
+    },
+    {
+      "id": "loewy-skylab",
+      "nom": "Étude d'habitabilité Skylab (Raymond Loewy)",
+      "annee": "1967-1973",
+      "auteurs": "Raymond Loewy, William Snaith et équipe (habitability consultants pour la NASA)",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Série de rapports d'habitabilité sur les stations orbitales (« Habitability Study, Earth Orbital Space Stations », 1967-1968). Ils ont influencé le wardroom, la fenêtre d'observation et les cabines de Skylab.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Habitability Study, Earth Orbital Space Stations (Loewy, 1967-1968) – article du Henry Ford",
+          "url": "https://www.thehenryford.org/collections/explore/articles/detail/articles/2022/03/17/habitability-study-earth-orbital-space-station-reports",
+          "page_source": "https://www.thehenryford.org/collections/explore/articles/detail/articles/2022/03/17/habitability-study-earth-orbital-space-station-reports",
+          "licence": "?",
+          "verifie": true,
+          "note": "Article illustré des planches (THF701089, THF701090) ; figure 55 : enveloppe plastique en arc, cloison géométrique, silhouette d'équipement. Pas de cotes."
+        },
+        {
+          "type": "rapport",
+          "titre": "Loewy, Raymond – esquisses pour Skylab (Drawing Matter)",
+          "url": "https://drawingmatter.org/one-small-sketch-for-mankind/",
+          "page_source": "https://drawingmatter.org/one-small-sketch-for-mankind/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Signalé par la recherche comme contenant les croquis de Loewy pour Skylab ; page non ouverte."
+        }
+      ],
+      "pour_kibsu": "Méthode plutôt que plan : fenêtre placée sur une cloison, table triangulaire pour une vie sans hiérarchie, séparation entre espace commun et cabines personnelles.",
+      "a_verifier": [
+        "Aucun plan coté de la salle commune (wardroom) de Loewy n'a été trouvé. Les planches du Henry Ford et de Drawing Matter sont à consulter.",
+        "Le « triangular table » est cité par une source de recherche, non ouverte directement."
+      ]
+    },
+    {
+      "id": "saliout",
+      "nom": "Saliout 1 à 7 (DOS-17K et Saliout 6/7)",
+      "annee": "1971-1991",
+      "auteurs": "Bureau Tchelomeï / OKB Tchelomeï (URSS)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Famille de stations soviétiques. Saliout 7 était l'une des dernières stations de conception DOS-17K, avec deux ports d'amarrage.",
+      "dimensions": [
+        {
+          "quoi": "Saliout 7 : longueur",
+          "valeur": "environ 16 m (minimum)",
+          "source": "https://en.wikipedia.org/wiki/Salyut_7"
+        },
+        {
+          "quoi": "Saliout 7 : diamètre maximal",
+          "valeur": "4,15 m",
+          "source": "https://en.wikipedia.org/wiki/Salyut_7"
+        },
+        {
+          "quoi": "Saliout 7 : volume pressurisé",
+          "valeur": "90 m³ (minimum)",
+          "source": "https://en.wikipedia.org/wiki/Salyut_7"
+        },
+        {
+          "quoi": "Saliout 7 : masse au lancement",
+          "valeur": "19 824 kg",
+          "source": "https://en.wikipedia.org/wiki/Salyut_7"
+        },
+        {
+          "quoi": "Saliout 7 : envergure des panneaux solaires",
+          "valeur": "17 m",
+          "source": "https://en.wikipedia.org/wiki/Salyut_7"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Salyut 7 avec le TKS Kosmos 1686 amarré (dessin de configuration)",
+          "url": "https://en.wikipedia.org/wiki/Salyut_7",
+          "page_source": "https://en.wikipedia.org/wiki/Salyut_7",
+          "licence": "?",
+          "verifie": true,
+          "note": "Légende d'un dessin de configuration (sans cotes) ; image non ouverte."
+        }
+      ],
+      "pour_kibsu": "Deux ports opposés, un compartiment de travail large et un compartiment de vie plus petit séparés par des réservoirs : utile pour penser une station en plusieurs volumes reliés.",
+      "a_verifier": [
+        "Les cotes de Saliout 2/3/5 (dessins 'Salyut 2, 3, 5' sur rdataspace) n'ont pas été lues : à vérifier.",
+        "Saliout 6 et le DOS-17K n'ont pas de cotes vérifiées.",
+        "Les valeurs de Saliout 2/3 trouvées par recherche (14,55 m, 4,15 m, 90 m³) sont concordantes mais non ouvertes en détail.",
+        "Plan intérieur coté non trouvé : chercher la fiche DOS-17K ou la documentation RKK Energia."
+      ]
+    },
+    {
+      "id": "almaz",
+      "nom": "Almaz (OPS)",
+      "annee": "1973-1977",
+      "auteurs": "Bureau Tchelomeï (programme militaire soviétique)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Station militaire soviétique de reconnaissance. Elle avait une grande section de travail et une petite section d'habitation, séparées par des réservoirs.",
+      "dimensions": [
+        {
+          "quoi": "Diamètre maximal",
+          "valeur": "4,15 m",
+          "source": "https://en.wikipedia.org/wiki/Almaz"
+        },
+        {
+          "quoi": "Masse",
+          "valeur": "environ 20 t",
+          "source": "https://en.wikipedia.org/wiki/Almaz"
+        },
+        {
+          "quoi": "Volume habitable (article Wikipedia)",
+          "valeur": "47,5 m³ (conflit avec 90 m³ pour Saliout)",
+          "source": "https://en.wikipedia.org/wiki/Almaz"
+        },
+        {
+          "quoi": "Longueur (OPS-3)",
+          "valeur": "14,55 m selon la plupart des sources ; 11,61 m sur un site (conflit)",
+          "source": "https://mail.russianspaceweb.com/almaz_ops3.html"
+        }
+      ],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "Almaz – dessin au trait de la station (Line drawing of an Almaz space station)",
+          "url": "https://en.wikipedia.org/wiki/Almaz",
+          "page_source": "https://en.wikipedia.org/wiki/Almaz",
+          "licence": "?",
+          "verifie": true,
+          "note": "Dessin au trait mentionné sur la page ; cotes non lisibles dans le texte. Photos de l'Almaz à VDNKh et Baïkonour sur la même page."
+        },
+        {
+          "type": "image",
+          "titre": "Almaz – dessin au trait (Almaz drawing.svg, NASA, Mir Hardware Heritage Part 2, p. 68)",
+          "url": "https://commons.wikimedia.org/wiki/File:Almaz_drawing.svg",
+          "page_source": "https://commons.wikimedia.org/wiki/File:Almaz_drawing.svg",
+          "licence": "domaine public (NASA, selon Wikimedia Commons)",
+          "verifie": true,
+          "note": "Dessin au trait en noir et blanc, vue extérieure ou coupe non précisée ; pas de légende ni de cote lue."
+        }
+      ],
+      "pour_kibsu": "Montre la séparation d'un sas, d'une grande section de travail et d'une petite section de vie, avec un stockage gazeux entre les deux.",
+      "a_verifier": [
+        "Conflit de volume : 47,5 m³ (Wikipedia Almaz) contre 90 m³ (Saliout 2/3). À trancher avant usage.",
+        "Le dessin au trait n'a pas été examiné visuellement. Cotes à chercher sur Encyclopedia Astronautica ou russianspaceweb.",
+        "Le dessin Commons est en domaine public : vérifier s'il s'agit d'une coupe avant de le classer comme tel."
+      ]
+    },
+    {
+      "id": "mir",
+      "nom": "Mir (modules)",
+      "annee": "1986-2001",
+      "auteurs": "OKB / NPO Energia (URSS puis Russie)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station modulaire : le module central DOS-7 a reçu des modules d'expérience (Kvant, Kristall, Spektr, Priroda) ajoutés entre 1987 et 1996.",
+      "dimensions": [
+        {
+          "quoi": "Station : longueur",
+          "valeur": "19 m",
+          "source": "https://en.wikipedia.org/wiki/Mir"
+        },
+        {
+          "quoi": "Station : envergure",
+          "valeur": "31 m",
+          "source": "https://en.wikipedia.org/wiki/Mir"
+        },
+        {
+          "quoi": "Station : hauteur",
+          "valeur": "27,5 m",
+          "source": "https://en.wikipedia.org/wiki/Mir"
+        },
+        {
+          "quoi": "Station : masse",
+          "valeur": "129 700 kg",
+          "source": "https://en.wikipedia.org/wiki/Mir"
+        },
+        {
+          "quoi": "Station : volume pressurisé",
+          "valeur": "350 m³",
+          "source": "https://en.wikipedia.org/wiki/Mir"
+        },
+        {
+          "quoi": "DOS-7 (module central) : longueur / diamètre",
+          "valeur": "environ 13,1 m / 4,2 m ; masse environ 21 000 kg",
+          "source": "https://space.skyrocket.de/doc_sdat/mir.htm"
+        },
+        {
+          "quoi": "Kvant-1 : longueur / diamètre / masse",
+          "valeur": "environ 5,8 m / 4,15 m / environ 11 t",
+          "source": "https://space.skyrocket.de/doc_sdat/mir.htm"
+        },
+        {
+          "quoi": "Kvant-2 : longueur / diamètre / masse",
+          "valeur": "11,9 m / 4,35 m / 19,5 t",
+          "source": "https://space.skyrocket.de/doc_sdat/mir.htm"
+        },
+        {
+          "quoi": "Spektr : masse",
+          "valeur": "23,5 t",
+          "source": "https://space.skyrocket.de/doc_sdat/mir.htm"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Mir – diagramme général des éléments (Station elements as of May 1996)",
+          "url": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme linéaire coloré par module, vue d'ensemble de la station."
+        },
+        {
+          "type": "plan",
+          "titre": "Mir – Module central (Core / Base Block), PDF",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/imagery/diagrams/mir/mir.pdf",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Fichier PDF listé sur la page NASA SP-4225 ; non ouvert."
+        },
+        {
+          "type": "plan",
+          "titre": "Mir – Kristall, PDF",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/imagery/diagrams/mir/kristall.pdf",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme par module, listé sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Mir – Kvant-1, PDF",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/imagery/diagrams/mir/kvant.pdf",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme par module, listé sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Mir – Kvant-2, PDF",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/imagery/diagrams/mir/kvant2.pdf",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme par module, listé sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Mir – Priroda, PDF",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/imagery/diagrams/mir/priroda.pdf",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme par module, listé sur la page NASA."
+        },
+        {
+          "type": "plan",
+          "titre": "Mir – Spektr, PDF",
+          "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/imagery/diagrams/mir/spektr.pdf",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Diagramme par module, listé sur la page NASA."
+        },
+        {
+          "type": "image",
+          "titre": "Mir – Diagrammes SP-4225 (15 pages : core, Kvant, Kristall, ODS, Priroda, Soyuz, Progress, Spektr)",
+          "url": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram-1.htm",
+          "page_source": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Chaque page montre un module isolé ; vues « isolated » et « station »."
+        },
+        {
+          "type": "3d",
+          "titre": "NASA 3D Models : Mir (3DS, 5 836 polygones)",
+          "url": "https://catalog.data.gov/dataset/nasa-3d-models-mir",
+          "page_source": "https://catalog.data.gov/dataset/nasa-3d-models-mir",
+          "licence": "? (accès public, licence non indiquée)",
+          "verifie": true,
+          "note": "Fichier 3DS. Lien de téléchargement relevé, non téléchargé : http://nasa3d.arc.nasa.gov/shared_assets/models/mir/Mir.3ds.zip"
+        }
+      ],
+      "pour_kibsu": "Modèle d'un centre à plusieurs branches : un noyau sphérique qui distribue vers des modules en étoile, chacun avec sa fonction (labo, observation, stockage). Utile pour un nœud de distribution.",
+      "a_verifier": [
+        "Dimensions de Kristall, Spektr, Priroda non trouvées (Kristall ~ comme Kvant-2 selon une source). Chercher les fiches RKK ou le SP-4225.",
+        "Le noyau DOS-7 est décrit comme cylindrique à gradins avec un « nœud » sphérique (Wikipedia) : vérifier sur les PDF."
+      ]
+    },
+    {
+      "id": "tiangong",
+      "nom": "Tiangong (Tianhe, Wentian, Mengtian)",
+      "annee": "2021-",
+      "auteurs": "CMSA (Chine)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station chinoise en T : le module central Tianhe gère l'équipage et les systèmes, Wentian et Mengtian portent les expériences.",
+      "dimensions": [
+        {
+          "quoi": "Tianhe : longueur / diamètre / masse",
+          "valeur": "16,6 m / 4,2 m / 22 500 kg",
+          "source": "https://en.wikipedia.org/wiki/Tiangong_space_station"
+        },
+        {
+          "quoi": "Wentian : longueur / diamètre / masse",
+          "valeur": "17,9 m / 4,2 m / 23 200 kg",
+          "source": "https://en.wikipedia.org/wiki/Tiangong_space_station"
+        },
+        {
+          "quoi": "Mengtian : longueur / diamètre / masse",
+          "valeur": "17,9 m / 4,2 m / environ 23 000 kg",
+          "source": "https://en.wikipedia.org/wiki/Tiangong_space_station"
+        },
+        {
+          "quoi": "Station complète : volume pressurisé",
+          "valeur": "340 m³ ; volume habitable 122 m³",
+          "source": "https://en.wikipedia.org/wiki/Tiangong_space_station"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Tiangong – éléments de la station, vue éclatée (exploded view, avril 2024)",
+          "url": "https://en.wikipedia.org/wiki/Tiangong_space_station",
+          "page_source": "https://en.wikipedia.org/wiki/Tiangong_space_station",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vue éclatée nommée dans l'infobox ; image non ouverte."
+        },
+        {
+          "type": "plan",
+          "titre": "Tiangong – configuration 2022 (EN)",
+          "url": "https://en.wikipedia.org/wiki/Tiangong_space_station",
+          "page_source": "https://en.wikipedia.org/wiki/Tiangong_space_station",
+          "licence": "?",
+          "verifie": true,
+          "note": "Fichier nommé Tiangong_Space_Station_config_2022_EN.jpg ; image non ouverte."
+        },
+        {
+          "type": "rapport",
+          "titre": "Design and application prospect of China's Tiangong space station (Space: Science & Technology, 2023, doi 10.34133/space.0035)",
+          "url": "https://phys.org/news/2023-08-scientists-application-prospect-china-tiangong.html",
+          "page_source": "https://phys.org/news/2023-08-scientists-application-prospect-china-tiangong.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article qui cite la Figure 1 (configuration) et les diagrammes Tianhe / Wentian ; article non ouvert."
+        }
+      ],
+      "pour_kibsu": "Organisation en T : un noyau de vie et deux bras de labo. Montre comment séparer la vie (équipage, commandes) des laboratoires.",
+      "a_verifier": [
+        "Dimensions de Wentian/Mengtian : source Wikipedia qui cite une revue chinoise (« 天宫空间站关键技术特点综述 »). À recouper.",
+        "Plan intérieur de Tianhe (cabines, sanitaires) non trouvé. Chercher les publications CMSA ou la revue Space: Science & Technology."
+      ]
+    },
+    {
+      "id": "spacelab",
+      "nom": "Spacelab",
+      "annee": "1983-1998",
+      "auteurs": "ESA, construit par ERNO/MBB (Allemagne)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module pressurisé européen transporté dans la soute de la navette. Il est assemblé en segments, avec un petit module Igloo à l'extérieur.",
+      "dimensions": [
+        {
+          "quoi": "Diamètre extérieur",
+          "valeur": "4,12 m (ESA) ; 4,1 m dans une autre fiche ESA",
+          "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Space_Shuttle/Spacelab"
+        },
+        {
+          "quoi": "Longueur d'un segment",
+          "valeur": "2,7 m",
+          "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Space_Shuttle/Spacelab"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "NASA/ESA – document de référence Spacelab (NTRS 19900066918)",
+          "url": "https://ntrs.nasa.gov/api/citations/19900066918/downloads/19900066918.pdf",
+          "page_source": "https://ntrs.nasa.gov/api/citations/19900066918/downloads/19900066918.pdf",
+          "licence": "domaine public (NASA)",
+          "verifie": false,
+          "note": "Table des matières citée par la recherche : armoire de contrôle, racks d expérience, allée centrale, sous-plancher, containers de rangement. Non ouvert."
+        }
+      ],
+      "pour_kibsu": "Référence de sections standard : un segment de 2,7 m assemblé en longueurs variables, avec des équipements en racks.",
+      "a_verifier": [
+        "La page ESA (www.esa.int/.../Spacelab) a répondu 404 à l'ouverture : les cotes viennent des extraits de recherche, pas de la page ouverte.",
+        "Longueur totale : 5,4 m à 7 m selon les sources (configuration long/court), à trancher.",
+        "Aucun plan coté trouvé ; chercher sur Wikimedia Commons (catégorie Spacelab) et le site NASA Spacelab."
+      ]
+    },
+    {
+      "id": "mol",
+      "nom": "MOL (Manned Orbiting Laboratory)",
+      "annee": "1966-1969 (annulé)",
+      "auteurs": "US Air Force ; Boeing (module de labo)",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Laboratoire militaire américain prévu pour 30 jours avec un équipage de deux, lancé sur un Titan IIIC. Le programme a été annulé en 1969 sans vol habité.",
+      "dimensions": [
+        {
+          "quoi": "Laboratoire : dimensions indicatives (légende Boeing)",
+          "valeur": "10 pieds x 40 pieds (environ 3 m x 12 m)",
+          "source": "https://boeingimages-a.orangelogic.com/asset-management/2F3XC5YZHFG"
+        },
+        {
+          "quoi": "Laboratoire : longueur (NASM, légende de modèle)",
+          "valeur": "19 pieds (environ 5,8 m) ; Popular Science donne 25 pieds (7,6 m)",
+          "source": "https://airandspace.si.edu/collection-objects/model-manned-orbiting-laboratory-148/nasm_A19860097000"
+        }
+      ],
+      "documents": [
+        {
+          "type": "maquette",
+          "titre": "Modèle MOL au 1:30 (NASM A19720969000)",
+          "url": "https://airandspace.si.edu/collection-objects/model-manned-orbiting-laboratory-130/nasm_A19720969000",
+          "page_source": "https://www.si.edu/es/object/model-manned-orbiting-laboratory-130%3Anasm_A19720969000",
+          "licence": "?",
+          "verifie": false,
+          "note": "Maquette au 1:30 du Smithsonian, 71,1 x 18,1 x 25,4 cm ; fiche non ouverte directement."
+        },
+        {
+          "type": "maquette",
+          "titre": "Modèle MOL au 1:48 (NASM A19860097000)",
+          "url": "https://airandspace.si.edu/collection-objects/model-manned-orbiting-laboratory-148/nasm_A19860097000",
+          "page_source": "https://airandspace.si.edu/collection-objects/model-manned-orbiting-laboratory-148/nasm_A19860097000",
+          "licence": "?",
+          "verifie": false,
+          "note": "Maquette au 1:48 du Smithsonian ; fiche non ouverte directement."
+        },
+        {
+          "type": "rapport",
+          "titre": "Document déclassifié NRO sur MOL (FOIA, dossier 395)",
+          "url": "https://www.nro.gov/Portals/65/documents/foia/declass/mol/395.pdf",
+          "page_source": "https://www.nro.gov/Portals/65/documents/foia/declass/mol/395.pdf",
+          "licence": "déclassifié (domaine public présumé)",
+          "verifie": false,
+          "note": "Document de la collection NRO ; contenu non lu. Les dossiers 336, 206 et 191 existent aussi."
+        },
+        {
+          "type": "coupe",
+          "titre": "MOL Lab Module – vues en coupe (McDonnell Douglas, selon Astronautix)",
+          "url": "https://dcmpx.remotevs.com/com/astronautix/www/PL/m/mol.html",
+          "page_source": "https://dcmpx.remotevs.com/com/astronautix/www/PL/m/mol.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Deux vues de coupe citées par la recherche ; la page n'a pas pu être ouverte (erreur réseau)."
+        }
+      ],
+      "pour_kibsu": "Le module de labo est un cylindre court relié à une capsule de vie : une séparation nette entre zone de travail et capsule de retour.",
+      "a_verifier": [
+        "Cotes de la légende Boeing (10 x 40 pieds) : une seule source, à recouper avec le rapport déclassifié.",
+        "Une grande publication déclassifiée de l'USAF contient des centaines de dessins de MOL (The Space Review) : non retrouvée.",
+        "Aucun plan coté ni coupe trouvé dans les pages consultées.",
+        "Dimensions contradictoires : 10 x 40 pieds (Boeing) contre 19 pieds (NASM) ou 25 pieds (Popular Science) pour le module de labo."
+      ]
+    },
+    {
+      "id": "freedom",
+      "nom": "Space Station Freedom",
+      "annee": "1984-1993 (remplacée par l'ISS)",
+      "auteurs": "NASA, avec partenaires Europe, Japon, Canada",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Projet américain de station à 8 modules, abandonné en 1993 au profit de l'ISS. Un module d'habitation de 8,2 m était prévu lors d'une refonte.",
+      "dimensions": [
+        {
+          "quoi": "Module d'habitation redessiné : diamètre",
+          "valeur": "8,2 m",
+          "source": "https://ntrs.nasa.gov/citations/19910029157"
+        },
+        {
+          "quoi": "Volume pressurisé total (refonte)",
+          "valeur": "878 m³",
+          "source": "https://www.pmview.com/spaceodysseytwo/station/sld051.htm"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "NASA-TM-102779 – Gould, Heck, Mazanek (1991), modules communs de 28 pieds",
+          "url": "https://ntrs.nasa.gov/citations/19910029157",
+          "page_source": "https://ntrs.nasa.gov/citations/19910029157",
+          "licence": "domaine public (NASA)",
+          "verifie": false,
+          "note": "Rapport sur des modules communs de 28 ft (environ 8,5 m) à trois ports radiaux ; texte intégral non ouvert."
+        },
+        {
+          "type": "rapport",
+          "titre": "NASA-CR-4010 – Nixon (1986), étude du module d'habitation (Habitability Module)",
+          "url": "https://ntrs.nasa.gov/citations/19870012152",
+          "page_source": "https://ntrs.nasa.gov/citations/19870012152",
+          "licence": "domaine public (NASA)",
+          "verifie": false,
+          "note": "Plusieurs concepts d'intérieur illustrés de dessins et de photos de maquette ; non ouvert."
+        },
+        {
+          "type": "rapport",
+          "titre": "Hopson, Aaron, Grant (1990), NASA-CR-181297 / IAF 90-071 – aménagement intérieur des éléments pressurisés",
+          "url": "https://ntrs.nasa.gov/citations/19900019281",
+          "page_source": "https://ntrs.nasa.gov/citations/19900019281",
+          "licence": "domaine public (NASA)",
+          "verifie": false,
+          "note": "Croquis et images de l'aménagement des nœuds, du labo et du module d'habitation ; PDF non ouvert."
+        },
+        {
+          "type": "rapport",
+          "titre": "Rockwell SSS86-0056 (1986) – habitabilité et maquettes d'intérieur (PDF)",
+          "url": "https://spacearchitect.org/pubs/Rockwell-SSS86-0056.pdf",
+          "page_source": "https://spacearchitect.org/pubs/Rockwell-SSS86-0056.pdf",
+          "licence": "?",
+          "verifie": false,
+          "note": "PDF ouvert : texte encodé illisible (JBIG2), figures non lues. Source probable de dessins d intérieur."
+        }
+      ],
+      "pour_kibsu": "Modèle de module commun répété (un seul gabarit, plusieurs ports) : utile pour la modularité d'un habitat lunaire.",
+      "a_verifier": [
+        "Aucun plan coté de l'habitation Freedom trouvé dans les pages ouvertes : ouvrir les PDF NTRS (CR-4010, CR-181297).",
+        "Le volume de 878 m³ vient d'une diapositive (non ouverte directement).",
+        "PDF Rockwell SSS86-0056 ouvert mais illisible : à ouvrir dans un lecteur PDF pour les figures d'intérieur."
+      ]
+    },
+    {
+      "id": "starlab",
+      "nom": "Starlab",
+      "annee": "2029 (prévu)",
+      "auteurs": "Voyager Technologies, Airbus (partenaire), Journey (design intérieur)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Station commerciale à deux modules lancés d'un seul coup sur Starship, prévue vers 2029. Une maquette grandeur nature a été assemblée à Houston pour tester l'intérieur.",
+      "dimensions": [
+        {
+          "quoi": "Diamètre / largeur",
+          "valeur": "8 m",
+          "source": "https://en.wikipedia.org/wiki/Starlab_(space_station)"
+        },
+        {
+          "quoi": "Longueur",
+          "valeur": "au moins 8 m",
+          "source": "https://en.wikipedia.org/wiki/Starlab_(space_station)"
+        },
+        {
+          "quoi": "Volume pressurisé",
+          "valeur": "450 m³",
+          "source": "https://en.wikipedia.org/wiki/Starlab_(space_station)"
+        },
+        {
+          "quoi": "Hauteur (page Starlab)",
+          "valeur": "17 m",
+          "source": "https://starlab-space.com/space-station/"
+        },
+        {
+          "quoi": "Largeur (page Starlab)",
+          "valeur": "7,7 m",
+          "source": "https://starlab-space.com/space-station/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "maquette",
+          "titre": "Starlab – maquette grandeur nature (JSC, décembre 2025)",
+          "url": "https://behindtheblack.com/behind-the-black/points-of-information/starlab-assembles-a-full-scale-mock-up-of-its-proposed-space-station",
+          "page_source": "https://behindtheblack.com/behind-the-black/points-of-information/starlab-assembles-a-full-scale-mock-up-of-its-proposed-space-station",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article sur la maquette ; photos non ouvertes."
+        },
+        {
+          "type": "coupe",
+          "titre": "Starlab – images « cutaway » de la page station (Cutaway-01, decks 00 à 06)",
+          "url": "https://starlab-space.com/space-station/",
+          "page_source": "https://starlab-space.com/space-station/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Huit images listées par la page ; les textes alternatifs décrivent des objets sans rapport (smartphone, wagon, machine). Ne pas utiliser sans vérification."
+        }
+      ],
+      "pour_kibsu": "Référence pour un habitat de 8 m de diamètre à trois niveaux : espace de vie, labo, service. Intérêt pour la hauteur utile d'un volume rond.",
+      "a_verifier": [
+        "Aucun plan intérieur coté. Les trois niveaux (environ 150 m² ou 1 600 ft²) viennent d'une source secondaire.",
+        "Dimensions du dossier Voyager Technologies (voyagertechnologies.com) à rechercher.",
+        "Conflit de diamètre : 8 m (Wikipedia) contre largeur de 7,7 m (page Starlab) ; hauteur 17 m (page Starlab)."
+      ]
+    },
+    {
+      "id": "axiom",
+      "nom": "Axiom Station (Orbital Segment, Hab-1)",
+      "annee": "2026-2028 (prévu)",
+      "auteurs": "Axiom Space ; design intérieur Philippe Starck",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Station commerciale qui commence par des modules pressurisés amarrés au port d'Harmony de l'ISS. Le premier module a un intérieur dessiné par Philippe Starck.",
+      "dimensions": [
+        {
+          "quoi": "Hab-1 : longueur",
+          "valeur": "environ 11 m",
+          "source": "https://en.wikipedia.org/wiki/Axiom_Orbital_Segment"
+        },
+        {
+          "quoi": "Hab-1 : diamètre au plus large",
+          "valeur": "4,2 m",
+          "source": "https://en.wikipedia.org/wiki/Axiom_Orbital_Segment"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Axiom – infographie des modules de station",
+          "url": "https://en.wikipedia.org/wiki/Axiom_Orbital_Segment",
+          "page_source": "https://en.wikipedia.org/wiki/Axiom_Orbital_Segment",
+          "licence": "?",
+          "verifie": true,
+          "note": "Infographie des modules listée sur la page ; image non ouverte. Présence d'un rendu de cupola et de chambre à LEDs."
+        },
+        {
+          "type": "coupe",
+          "titre": "Hab One – section verticale de l'intérieur (PDF Liquifer, 2026)",
+          "url": "https://liquifer.com/wp-content/uploads/2026/04/Zennaro-eng-1.pdf",
+          "page_source": "https://liquifer.com/wp-content/uploads/2026/04/Zennaro-eng-1.pdf",
+          "licence": "?",
+          "verifie": false,
+          "note": "PDF de 2 pages ouvert : texte illisible ; une image CMYK de 2604 x 1633 px est présente et pourrait être la coupe. Non lue."
+        }
+      ],
+      "pour_kibsu": "Référence pour un intérieur de vie à matériaux doux et éclairage variable ; cupola vitrée comme point de vue.",
+      "a_verifier": [
+        "Aucun plan intérieur coté trouvé ; à demander au dossier de presse d'Axiom.",
+        "Les 8 m de diamètre cités sur une autre page concernent l'habitat lunaire, pas la station : exclu."
+      ]
+    },
+    {
+      "id": "orbital-reef",
+      "nom": "Orbital Reef (LIFE, Core, Node)",
+      "annee": "2025 (prévu)",
+      "auteurs": "Blue Origin, Sierra Space, Boeing ; design Hassell Studio",
+      "lieu": "orbite",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Parc commercial en orbite basse, avec un module de cœur de grand diamètre et des modules gonflables LIFE de Sierra Space. Les modules dépendent du lanceur New Glenn.",
+      "dimensions": [
+        {
+          "quoi": "Module LIFE : volume pressurisé",
+          "valeur": "environ 300 m³ (plus de 300 m³ annoncés)",
+          "source": "https://satnews.com/2023/11/14/sierra-space-set-for-full-scale-burst-test-of-expandable-space-station-module/"
+        },
+        {
+          "quoi": "Module LIFE gonflé : diamètre et longueur",
+          "valeur": "27 pieds (8,2 m) chacun, sas inclus pour la longueur ; 3 niveaux",
+          "source": "https://www.space.com/sierra-nevada-inflatable-habitat-moon-gateway.html"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Orbital Reef – projet Hassell Studio",
+          "url": "https://www.hassellstudio.com/project/orbital-reef-space-station",
+          "page_source": "https://www.hassellstudio.com/project/orbital-reef-space-station",
+          "licence": "?",
+          "verifie": false,
+          "note": "Page du cabinet d'architecture, non ouverte : images d'intérieur et de design à vérifier."
+        }
+      ],
+      "pour_kibsu": "Modules gonflables à grand volume : une seule enveloppe souple pour une chambre et des espaces communs, utile pour un habitat à volume important mais léger.",
+      "a_verifier": [
+        "Aucun plan coté publié par Blue Origin trouvé ; le module central « sphérique » est seulement signalé par une source.",
+        "Hypothèse de diamètre lié au fairing de 7 m de New Glenn : non confirmée."
+      ]
+    },
+    {
+      "id": "haven-1",
+      "nom": "Vast Haven-1",
+      "annee": "2026 (prévu)",
+      "auteurs": "Vast Space",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Première station commerciale à un seul module, prévue pour accueillir des équipages courts. Un intérieur conçu en pièces séparées (zone commune, couloir de stockage, cabines privées) a été publié.",
+      "dimensions": [
+        {
+          "quoi": "Diamètre",
+          "valeur": "3,8 m",
+          "source": "https://www.spacefacts.de/vast/english/haven-1.htm"
+        },
+        {
+          "quoi": "Hauteur",
+          "valeur": "10,1 m",
+          "source": "https://www.spacefacts.de/vast/english/haven-1.htm"
+        },
+        {
+          "quoi": "Masse",
+          "valeur": "environ 14 000 kg",
+          "source": "https://www.spacefacts.de/vast/english/haven-1.htm"
+        },
+        {
+          "quoi": "Volume utilisable",
+          "valeur": "45 m³",
+          "source": "https://www.sciencefocus.com/space/vast-haven-1-space-station"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Haven-1 – rendus de l'intérieur (zone commune, couloir de stockage, cabines)",
+          "url": "https://www.vastspace.com/updates/vast-unveils-its-final-haven-1-space-station-design",
+          "page_source": "https://www.vastspace.com/updates/vast-unveils-its-final-haven-1-space-station-design",
+          "licence": "?",
+          "verifie": false,
+          "note": "Page annonçant le design final ; rendus non ouverts. Hublot de dôme d'observation de 1,1 m mentionné."
+        }
+      ],
+      "pour_kibsu": "Cylindre de 3,8 m avec volume utilisable de 45 m³ : repère de taille pour un module d'habitation compact.",
+      "a_verifier": [
+        "Dates de lancement contradictoires selon les sources (2025 puis 2026) ; à recouper.",
+        "La page spacefacts a répondu 429 (trop de requêtes) : la fiche de dimensions vient d'un extrait, pas de la page ouverte.",
+        "Aucun plan coté de l'intérieur publié : demander les rendus au site Vast.",
+        "Diamètre : 3,8 m (spacefacts) contre 4,4 m (article TechSpot cité par la recherche, qui le donne comme identique à Haven-2). À trancher sur vastspace.com."
+      ]
+    },
+    {
+      "id": "stanford-torus",
+      "nom": "Stanford Torus",
+      "annee": "1975-1977",
+      "auteurs": "NASA Ames, Summer Study (Stanford) ; peintures Don Davis et Rick Guidice",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "tore",
+      "resume": "Colonie spatiale en anneau qui tourne sur elle-même pour créer la pesanteur. Elle a été publiée dans le rapport NASA SP-413.",
+      "dimensions": [
+        {
+          "quoi": "Diamètre (version 10 000 habitants)",
+          "valeur": "environ 1,8 km (Wikipedia) ; une mile, soit 1,6 km (NSS)",
+          "source": "https://en.wikipedia.org/wiki/Stanford_torus"
+        },
+        {
+          "quoi": "Population (version de base)",
+          "valeur": "10 000 personnes",
+          "source": "https://nss.org/stanford-torus-space-settlement/"
+        },
+        {
+          "quoi": "Rotation",
+          "valeur": "1 tour par minute",
+          "source": "https://nss.org/stanford-torus-space-settlement/"
+        },
+        {
+          "quoi": "Protection radiative",
+          "valeur": "1,7 m de sol lunaire",
+          "source": "https://en.wikipedia.org/wiki/Stanford_torus"
+        }
+      ],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "Stanford Torus – vue en coupe de l'intérieur de l'anneau (Rick Guidice, courtoisie NASA)",
+          "url": "https://nss.org/stanford-torus-space-settlement/",
+          "page_source": "https://nss.org/stanford-torus-space-settlement/",
+          "licence": "courtoisie NASA (à vérifier)",
+          "verifie": true,
+          "note": "Coupe-perspective montrant la rotation qui crée la pesanteur ; peinture, pas de cotes."
+        },
+        {
+          "type": "image",
+          "titre": "Stanford Torus – intérieur (Don Davis, courtoisie NASA)",
+          "url": "https://nss.org/stanford-torus-space-settlement/",
+          "page_source": "https://nss.org/stanford-torus-space-settlement/",
+          "licence": "courtoisie NASA (à vérifier)",
+          "verifie": true,
+          "note": "Vue intérieure ; la page note une densité de population faible."
+        },
+        {
+          "type": "image",
+          "titre": "Stanford Torus – extérieur (Don Davis, courtoisie NASA)",
+          "url": "https://nss.org/stanford-torus-space-settlement/",
+          "page_source": "https://nss.org/stanford-torus-space-settlement/",
+          "licence": "courtoisie NASA (à vérifier)",
+          "verifie": true,
+          "note": "Vue extérieure avec miroirs qui envoient la lumière dans l anneau."
+        },
+        {
+          "type": "rapport",
+          "titre": "Space Settlements: A Design Study (NASA SP-413)",
+          "url": "https://nss.org/stanford-torus-space-settlement/",
+          "page_source": "https://nss.org/stanford-torus-space-settlement/",
+          "licence": "domaine public (NASA)",
+          "verifie": false,
+          "note": "Rapport cité par la page ; l'URL NTRS n'a pas été relevée."
+        }
+      ],
+      "pour_kibsu": "Anneau tournant : pesanteur dans la périphérie, axe sans gravité. Utile pour penser un habitat lunaire tournant ou des niveaux de gravité différents.",
+      "a_verifier": [
+        "Diamètre : 1,8 km (Wikipedia) contre 1 mile (NSS), à trancher avec SP-413.",
+        "Population : 10 000 (base) contre 10 000 à 140 000 selon les sources : garder 10 000."
+      ]
+    },
+    {
+      "id": "oneill-island-three",
+      "nom": "O'Neill Island Three",
+      "annee": "1975-1976",
+      "auteurs": "Gerard K. O'Neill (The High Frontier) ; illustrations Don Davis et autres",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Paire de cylindres géants qui tournent en sens inverse. Chaque cylindre alterne des bandes habitables et des bandes de fenêtres.",
+      "dimensions": [
+        {
+          "quoi": "Longueur",
+          "valeur": "32 km (non sourcée dans l article)",
+          "source": "https://en.wikipedia.org/wiki/O%27Neill_cylinder"
+        },
+        {
+          "quoi": "Diamètre",
+          "valeur": "6,4 km ou 8,0 km (sources NSS et Popular Mechanics)",
+          "source": "https://en.wikipedia.org/wiki/O%27Neill_cylinder"
+        },
+        {
+          "quoi": "Rotation",
+          "valeur": "environ 28 tours par heure, ou 2,8 degrés par seconde (article)",
+          "source": "https://en.wikipedia.org/wiki/O%27Neill_cylinder"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Island Three – diagramme d'un couple de cylindres d'O'Neill",
+          "url": "https://en.wikipedia.org/wiki/O%27Neill_cylinder",
+          "page_source": "https://en.wikipedia.org/wiki/O%27Neill_cylinder",
+          "licence": "?",
+          "verifie": true,
+          "note": "Diagramme listé sur la page ; artiste et date non donnés."
+        },
+        {
+          "type": "coupe",
+          "titre": "Vue intérieure : alternance de bandes habitables et de fenêtres",
+          "url": "https://en.wikipedia.org/wiki/O%27Neill_cylinder",
+          "page_source": "https://en.wikipedia.org/wiki/O%27Neill_cylinder",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vue de l'intérieur ; pas de cotes."
+        },
+        {
+          "type": "image",
+          "titre": "Impression de l'intérieur d'un cylindre d'O'Neill (Don Davis)",
+          "url": "https://en.wikipedia.org/wiki/O%27Neill_cylinder",
+          "page_source": "https://en.wikipedia.org/wiki/O%27Neill_cylinder",
+          "licence": "?",
+          "verifie": true,
+          "note": "Seul artiste nommé sur la page."
+        }
+      ],
+      "pour_kibsu": "Six bandes égales sur la longueur : trois de fenêtres, trois de terre. Modèle de répartition entre espaces habités et lumière naturelle.",
+      "a_verifier": [
+        "La longueur de 32 km n'est pas sourcée ; le calcul rotation / gravité n'est pas vérifié (chiffres contradictoires dans l'article).",
+        "Population non donnée sur la page."
+      ]
+    },
+    {
+      "id": "bernal-sphere",
+      "nom": "Sphère de Bernal",
+      "annee": "1929 (concept) ; Island One 1975",
+      "auteurs": "J. D. Bernal (1929) ; O'Neill (Island One)",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Concept d'habitat sphérique de Bernal (1929), non tournant, rempli d'air. Island One en est une version tournante, avec un hublot de lumière.",
+      "dimensions": [
+        {
+          "quoi": "Diamètre (proposition de Bernal, 1929)",
+          "valeur": "environ 16 km (10 miles)",
+          "source": "https://en.wikipedia.org/wiki/Bernal_sphere"
+        },
+        {
+          "quoi": "Diamètre (Island One)",
+          "valeur": "environ 500 m",
+          "source": "https://en.wikipedia.org/wiki/Bernal_sphere"
+        },
+        {
+          "quoi": "Population (Island One)",
+          "valeur": "environ 10 000 personnes",
+          "source": "https://en.wikipedia.org/wiki/Bernal_sphere"
+        },
+        {
+          "quoi": "Rotation (Island One)",
+          "valeur": "1,9 tr/min",
+          "source": "https://en.wikipedia.org/wiki/Bernal_sphere"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Exemple d'aménagement d'une sphère de Bernal de type Island One",
+          "url": "https://en.wikipedia.org/wiki/Bernal_sphere",
+          "page_source": "https://en.wikipedia.org/wiki/Bernal_sphere",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan d aménagement listé sur la page (fichier Commons) ; cotes non lues."
+        },
+        {
+          "type": "image",
+          "titre": "Bernal sphere – intérieur (vue depuis le « portail » de lumière)",
+          "url": "https://en.wikipedia.org/wiki/Bernal_sphere",
+          "page_source": "https://en.wikipedia.org/wiki/Bernal_sphere",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vues intérieures listées sur la page."
+        }
+      ],
+      "pour_kibsu": "Forme qui enferme le plus grand volume pour la plus petite surface. Utile pour un habitat lunaire pressurisé en sphère.",
+      "a_verifier": [
+        "Population de Bernal (20 000 à 30 000) contre celle d'Island One (10 000) : deux projets différents, à ne pas mélanger.",
+        "Aucune cote de volume habitable trouvée."
+      ]
+    },
+    {
+      "id": "transhab",
+      "nom": "TransHab",
+      "annee": "1997-2000",
+      "auteurs": "NASA JSC (Bigelow Aerospace a repris les brevets en 2000)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Module gonflable de la NASA, plié au lancement puis déployé en orbite. Le projet a été arrêté en 2000 ; Bigelow a repris ses brevets.",
+      "dimensions": [
+        {
+          "quoi": "Masse",
+          "valeur": "13 154 kg",
+          "source": "https://en.wikipedia.org/wiki/TransHab"
+        },
+        {
+          "quoi": "Longueur",
+          "valeur": "11 m",
+          "source": "https://en.wikipedia.org/wiki/TransHab"
+        },
+        {
+          "quoi": "Diamètre replié / déployé",
+          "valeur": "4,3 m / 8,2 m",
+          "source": "https://en.wikipedia.org/wiki/TransHab"
+        },
+        {
+          "quoi": "Volume pressurisé (déployé)",
+          "valeur": "339,8 m³",
+          "source": "https://en.wikipedia.org/wiki/TransHab"
+        },
+        {
+          "quoi": "Niveau 2 : six cabines individuelles",
+          "valeur": "2,3 m³ chacune",
+          "source": "https://en.wikipedia.org/wiki/TransHab"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "TransHab – niveau 1 (cuisine, table pour 12)",
+          "url": "https://en.wikipedia.org/wiki/TransHab",
+          "page_source": "https://en.wikipedia.org/wiki/TransHab",
+          "licence": "domaine public (NASA, source « HSF – Transhab », archive 2003)",
+          "verifie": true,
+          "note": "Plan d étage (TransHab_level_1.jpg) listé sur la page."
+        },
+        {
+          "type": "plan",
+          "titre": "TransHab – niveau 2 (six cabines individuelles)",
+          "url": "https://en.wikipedia.org/wiki/TransHab",
+          "page_source": "https://en.wikipedia.org/wiki/TransHab",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Plan d étage (TransHab_crew_quaters_level_2.jpg) listé sur la page."
+        },
+        {
+          "type": "plan",
+          "titre": "TransHab – niveaux 3 et 4 (santé, exercice)",
+          "url": "https://en.wikipedia.org/wiki/TransHab",
+          "page_source": "https://en.wikipedia.org/wiki/TransHab",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Plan d étage (TransHab_level_3.jpg) listé sur la page."
+        },
+        {
+          "type": "coupe",
+          "titre": "TransHab – coupe de la coque multicouche anti-débris (NASA S99-05362, 30 août 2001)",
+          "url": "https://en.wikipedia.org/wiki/TransHab",
+          "page_source": "https://en.wikipedia.org/wiki/TransHab",
+          "licence": "domaine public (NASA)",
+          "verifie": true,
+          "note": "Coupe montrant les couches du bouclier ; image listée sur la page."
+        },
+        {
+          "type": "image",
+          "titre": "TransHab – coupe conceptuelle (Commons)",
+          "url": "https://en.wikipedia.org/wiki/TransHab",
+          "page_source": "https://en.wikipedia.org/wiki/TransHab",
+          "licence": "?",
+          "verifie": true,
+          "note": "Coupe conceptuelle listée sur la page."
+        }
+      ],
+      "pour_kibsu": "Référence directe pour un habitat gonflable à quatre niveaux, avec cabines en périphérie et cuisine au niveau d'entrée.",
+      "a_verifier": [
+        "Diamètre replié 4,3 m : à vérifier avec le rapport NASA.",
+        "Les plans de niveau viennent d'une archive NASA de 2003 : URL d'origine non relevée."
+      ]
+    },
+    {
+      "id": "mir-2",
+      "nom": "Mir-2 (projet)",
+      "annee": "1987-1993",
+      "auteurs": "NPO Energia (URSS puis Russie)",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Successeur de Mir, prévu avec un module central DOS-8 plus lourd et des modules de 3 à 4 tonnes. Le projet a été arrêté en 1993 et remplacé par le segment orbital russe.",
+      "dimensions": [
+        {
+          "quoi": "Station (infobox, non sourcée)",
+          "valeur": "59,3 m de long, 36,2 m de large, 17,7 m de haut, 90 000 kg",
+          "source": "https://en.wikipedia.org/wiki/Mir-2"
+        },
+        {
+          "quoi": "Modules prévus",
+          "valeur": "90 t chacun (variante 1987) ; 3 à 4 t (variante 1992)",
+          "source": "https://en.wikipedia.org/wiki/Mir-2"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Mir-2 – un concept (Mir-2_concept.jpg)",
+          "url": "https://en.wikipedia.org/wiki/Mir-2",
+          "page_source": "https://en.wikipedia.org/wiki/Mir-2",
+          "licence": "?",
+          "verifie": true,
+          "note": "Concept listé dans l'infobox ; image non ouverte, pas de cotes."
+        }
+      ],
+      "pour_kibsu": "Modules de service et de vie séparés, lancés l un après l autre sur un même noyau : logique de croissance par étapes.",
+      "a_verifier": [
+        "Les dimensions de l'infobox ne sont pas sourcées et ne correspondent pas aux modules de 90 t : ne pas utiliser sans source primaire (Astronautix, Russian Space Web).",
+        "Pas de plan de module trouvé."
+      ]
+    },
+    {
+      "id": "salyut-1",
+      "nom": "Saliout 1 (DOS-17K)",
+      "annee": "1971",
+      "auteurs": "OKB Tchelomeï (URSS)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Première station soviétique. Elle était composée d un compartiment de transfert, d un compartiment de travail principal et d un observatoire.",
+      "dimensions": [
+        {
+          "quoi": "Longueur totale",
+          "valeur": "14,6 à 16 m",
+          "source": "https://www.russianspaceweb.com/salyut1-design.html"
+        },
+        {
+          "quoi": "Diamètre maximal",
+          "valeur": "4,15 m",
+          "source": "https://www.russianspaceweb.com/salyut1-design.html"
+        },
+        {
+          "quoi": "Compartiment de transfert : diamètre",
+          "valeur": "2,1 m",
+          "source": "https://www.russianspaceweb.com/salyut1-design.html"
+        },
+        {
+          "quoi": "Compartiment principal : diamètres",
+          "valeur": "4,1 m et 2,9 m, reliés par un anneau conique",
+          "source": "https://www.russianspaceweb.com/salyut1-design.html"
+        },
+        {
+          "quoi": "Volume habitable",
+          "valeur": "100 m³",
+          "source": "https://www.russianspaceweb.com/salyut1-design.html"
+        },
+        {
+          "quoi": "Masse en orbite",
+          "valeur": "18 900 kg",
+          "source": "https://www.russianspaceweb.com/salyut1-design.html"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Salyut 1 – diagramme légendé (repères 1 à 23)",
+          "url": "https://www.russianspaceweb.com/salyut1-design.html",
+          "page_source": "https://www.russianspaceweb.com/salyut1-design.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Diagramme avec repères numérotés (antennes, module de propulsion) ; pas de cotes."
+        },
+        {
+          "type": "image",
+          "titre": "DOS-7K – intérieur, poste de contrôle (photo historique)",
+          "url": "https://www.russianspaceweb.com/salyut1-design.html",
+          "page_source": "https://www.russianspaceweb.com/salyut1-design.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vue intérieure et poste du pilote, listées sur la page."
+        }
+      ],
+      "pour_kibsu": "Station à trois sections en ligne : sas de transfert étroit, grand volume de travail, petit volume d instruments.",
+      "a_verifier": [
+        "Une autre source donne 20 m, 4 m et 99 m³ : conflit avec la longueur de 14,6 à 16 m. À trancher avec Astronautix.",
+        "Longueur de chaque compartiment non donnée."
+      ]
+    },
+    {
+      "id": "bigelow-b330",
+      "nom": "Bigelow B330",
+      "annee": "2016-2020 (prototype)",
+      "auteurs": "Bigelow Aerospace (dérivé de TransHab)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Station gonflable commerciale. Elle a été testée en prototype puis abandonnée à la fermeture de Bigelow en 2020.",
+      "dimensions": [
+        {
+          "quoi": "Longueur",
+          "valeur": "13,7 m (45 pieds)",
+          "source": "https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/"
+        },
+        {
+          "quoi": "Diamètre",
+          "valeur": "6,7 m (22 pieds)",
+          "source": "https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/"
+        },
+        {
+          "quoi": "Volume intérieur",
+          "valeur": "330 m³ (11 654 pieds cubes)",
+          "source": "https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/"
+        },
+        {
+          "quoi": "Équipage",
+          "valeur": "4 personnes en permanence ; 5 et plus pendant plusieurs mois",
+          "source": "https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Bigelow's B330 autonomous expandable station (NASASpaceflight, 2019)",
+          "url": "https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/",
+          "page_source": "https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Page en erreur 403 ; cotes tirées de l extrait de recherche."
+        }
+      ],
+      "pour_kibsu": "Volume de 330 m³ pour 4 à 5 personnes : repère de densité pour un habitat gonflable.",
+      "a_verifier": [
+        "Plan intérieur non trouvé ; les dossiers de conception Bigelow ne sont pas publics depuis 2020.",
+        "Les cotes viennent d un extrait de recherche : à recouper."
+      ]
+    },
+    {
+      "id": "vast-haven-2",
+      "nom": "Vast Haven-2",
+      "annee": "2028-2032 (prévu)",
+      "auteurs": "Vast Space",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Station commerciale prévue pour succéder à l ISS. Elle est composée de modules Haven de 16 m, d un noyau et de 9 modules en 2032.",
+      "dimensions": [
+        {
+          "quoi": "Module Haven-2 : diamètre",
+          "valeur": "4,4 m",
+          "source": "https://www.vastspace.com/haven-2"
+        },
+        {
+          "quoi": "Module Haven-2 : longueur",
+          "valeur": "16 m",
+          "source": "https://www.vastspace.com/haven-2"
+        },
+        {
+          "quoi": "Module : volume habitable / pressurisé",
+          "valeur": "55 m³ / 125 m³",
+          "source": "https://www.vastspace.com/haven-2"
+        },
+        {
+          "quoi": "Station complète : volume habitable / pressurisé",
+          "valeur": "510 m³ / 1 160 m³",
+          "source": "https://www.vastspace.com/haven-2"
+        },
+        {
+          "quoi": "Noyau (Haven Core) : volume équipage",
+          "valeur": "70 m³",
+          "source": "https://www.vastspace.com/haven-2"
+        },
+        {
+          "quoi": "Équipage (station complète)",
+          "valeur": "12 personnes",
+          "source": "https://www.vastspace.com/haven-2"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Haven-2 – page officielle (modules, cupole 3,8 m, comparaison Haven-1 / Haven-2, configurations 2 à 9 modules)",
+          "url": "https://www.vastspace.com/haven-2",
+          "page_source": "https://www.vastspace.com/haven-2",
+          "licence": "?",
+          "verifie": true,
+          "note": "Images listées : configurations à 2, 3, 4, 5 et 9 modules, Haven Core, sas EVA. Pas de plan coté."
+        }
+      ],
+      "pour_kibsu": "Module allongé de 16 m qui se répète : bonne référence pour un habitat à modules en série.",
+      "a_verifier": [
+        "Une source tierce (non officielle) donne 14 000 kg et 80 m³ : ne pas utiliser.",
+        "Une autre source (TechSpot) donne 29 000 kg de masse au lancement.",
+        "Diamètre du noyau non donné ; 7 m annoncés par Behind the Black (2030-2032)."
+      ]
+    }
+  ],
+  "sources_generales": [
+    {
+      "titre": "NASA – Skylab, diagrammes (12 planches 1973-1977)",
+      "url": "https://www.nasa.gov/history/diagrams/skylab.html",
+      "note": "Source primaire, domaine public. Plans, coupes, wardroom, cabines, sas, MDA."
+    },
+    {
+      "titre": "NASA SP-4225 – Mir, diagrammes des modules",
+      "url": "https://www.nasa.gov/history/SP-4225/diagrams/mir/mir-diagram.htm",
+      "note": "15 pages par module, PDF par module."
+    },
+    {
+      "titre": "Wikipedia – Skylab",
+      "url": "https://en.wikipedia.org/wiki/Skylab",
+      "note": "Cotes de l'atelier, sas et MDA ; citations NASA. A recouper avec SP-400."
+    },
+    {
+      "titre": "Wikipedia – Salyut 7",
+      "url": "https://en.wikipedia.org/wiki/Salyut_7",
+      "note": "Dimensions de Saliout 7 ; cite le NASA Mir Hardware Heritage."
+    },
+    {
+      "titre": "Wikipedia – Almaz",
+      "url": "https://en.wikipedia.org/wiki/Almaz",
+      "note": "Dessin au trait ; volume en conflit avec Saliout."
+    },
+    {
+      "titre": "Wikipedia – Tiangong",
+      "url": "https://en.wikipedia.org/wiki/Tiangong_space_station",
+      "note": "Cotes Tianhe / Wentian / Mengtian ; images de configuration nommées."
+    },
+    {
+      "titre": "Gunter's Space Page – Mir (DOS 7)",
+      "url": "https://space.skyrocket.de/doc_sdat/mir.htm",
+      "note": "Masses et longueurs des modules Mir."
+    },
+    {
+      "titre": "The Henry Ford – Habitability Study, Earth Orbital Space Stations",
+      "url": "https://www.thehenryford.org/collections/explore/articles/detail/articles/2022/03/17/habitability-study-earth-orbital-space-station-reports",
+      "note": "Rapports de Loewy (1967-1968), planches THF."
+    },
+    {
+      "titre": "rdataspace – Skylab",
+      "url": "https://rdataspace.github.io/station_skylab",
+      "note": "Page avec un dessin en coupe (skylab-cutaway.jpg)."
+    },
+    {
+      "titre": "NASA – Skylab, wardroom table (image-detail sk005)",
+      "url": "https://www.nasa.gov/image-detail/sk005",
+      "note": "Dessin en ligne de la table ; domaine public."
+    },
+    {
+      "titre": "NASA 3D Models – Skylab et Mir (catalogue data.gov)",
+      "url": "https://catalog.data.gov/dataset/nasa-3d-models-mir",
+      "note": "Modèles 3DS publics, licence non indiquée."
+    },
+    {
+      "titre": "National Space Society – Stanford Torus",
+      "url": "https://nss.org/stanford-torus-space-settlement/",
+      "note": "Peintures NASA (Guidice, Davis) et renvoi au rapport SP-413."
+    },
+    {
+      "titre": "Wikipedia – TransHab",
+      "url": "https://en.wikipedia.org/wiki/TransHab",
+      "note": "Cotes, plans de niveaux et coupe de la coque (images NASA)."
+    },
+    {
+      "titre": "Vast – Haven-2",
+      "url": "https://www.vastspace.com/haven-2",
+      "note": "Cotes officielles du module Haven-2 et volumes."
+    }
+  ],
+  "pistes_non_explorees": [
+    "Freedom : figures d'intérieur du PDF Rockwell SSS86-0056 et du NTRS 1991 (texte illisible dans l'outil : ouvrir dans un lecteur PDF).",
+    "MOL : vues de coupe McDonnell Douglas (Astronautix, page en erreur réseau) et dossiers NRO 336, 206, 191 (non lus).",
+    "Skylab : SP-400 (ntrs), EP-107 Guidebook et plan du wardroom TM X-64825 (NTRS, non trouvé).",
+    "Almaz : dessins de Salyut 3 sur Commons et PDF NASA Mir Hardware Heritage Part 2 (p. 68).",
+    "Modèles 3D Tiangong, Saliout et Almaz : seules des places payantes ou non vérifiées ont été trouvées.",
+    "Starlab, Axiom Hab One, Orbital Reef : dossiers de presse à demander (cotes intérieures non publiées).",
+    "Bigelow B330 : plan intérieur non trouvé (dossiers non publics depuis 2020)."
+  ]
+}

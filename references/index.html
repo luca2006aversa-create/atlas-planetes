@@ -30,6 +30,14 @@ h2 { font: 600 19px/1.3 var(--sans); margin: 40px 0 12px; text-wrap: balance; }
 .navsite { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; margin-bottom: 18px; }
 .navsite a { color: var(--encre-2); text-decoration: none; }
 .navsite a:hover { color: var(--vif); }
+.biblio { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin: 16px 0 0; padding: 14px 18px; background: var(--carte); border: 2px solid var(--vif); border-radius: 12px; color: var(--encre); text-decoration: none; }
+.biblio:hover { background: var(--vif-doux); }
+.b-titre { display: flex; flex-direction: column; gap: 2px; flex: 1 1 260px; }
+.b-titre b { font: 600 18px/1.3 var(--sans); } .b-titre span { font-size: 13px; color: var(--encre-2); }
+.b-chiffres { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.b-chiffres span { display: flex; flex-direction: column; font-size: 12px; color: var(--encre-2); }
+.b-chiffres b { font: 700 20px/1.1 var(--mono); color: var(--encre); }
+.b-ouvrir { font: 600 14px var(--sans); background: var(--vif); color: #fff; border-radius: 8px; padding: 8px 14px; white-space: nowrap; }
 .etiq { font: 700 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--encre-2); }
 a { color: var(--vif); text-underline-offset: 2px; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--vif); outline-offset: 2px; }
@@ -92,6 +100,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--vif); outline-o
   <div class="etiq">Kibsu · habitat du pôle sud lunaire · 13/11/2026</div>
   <h1>Références d'habitats : du réel à la fiction</h1>
   <p class="chapeau">63 projets, films, séries, jeux et artistes qui ont pensé la forme et l'espace d'un habitat hors de la Terre. Pour chacun : l'idée à retenir, ce qu'il faut corriger pour la Lune, et ce que Kibsu peut en faire. Clique une famille de formes ou une catégorie pour filtrer.</p>
+  <a class="biblio" href="bibliotheque.html">
+    <span class="b-titre"><b>Bibliothèque de projets</b><span>Plans, coupes, modèles 3D et images de projets réels, étudiés ou imaginés</span></span>
+    <span class="b-chiffres" id="b-chiffres"></span>
+    <span class="b-ouvrir">Ouvrir →</span>
+  </a>
+  <script type="module">
+  const F = ['01-iss','02-stations','03-vehicules-gateway','04-gonflables','05-bases-lunaires-agences','06-impression-3d-isru','07-analogues','08-milieux-extremes','09-historique','10-architectes','11-films','12-cyberpunk-utopies','13-enterre-tubes-de-lave','14-modeles-3d','15-sas-portes-interieurs','16-serres-mars'];
+  const L = await Promise.all(F.map(f => fetch('bibliotheque/' + f + '.json').then(r => r.ok ? r.json() : null).catch(() => null)));
+  const P = L.flatMap(j => Array.isArray(j?.projets) ? j.projets : []), D = P.flatMap(p => Array.isArray(p.documents) ? p.documents : []);
+  const n = t => D.filter(d => String(d.type || '').toLowerCase().startsWith(t)).length;
+  if (P.length) document.getElementById('b-chiffres').innerHTML = [[P.length, 'projets'], [n('plan'), 'plans'], [n('coupe'), 'coupes'], [n('3d'), 'modèles 3D'], [L.filter(Boolean).length, 'thèmes']]
+    .map(([a, b]) => `<span><b>${a}</b>${b}</span>`).join('');
+  </script>
 
   <h2>Les 7 familles de formes</h2>
   <div class="familles" id="familles"></div>

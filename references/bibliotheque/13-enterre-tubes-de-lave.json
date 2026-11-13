@@ -1,0 +1,335 @@
+{
+  "theme": "Habitats lunaires enterrés : tubes de lave et puits, couverture de régolithe, habitats en cratère, tranchées, architecture troglodyte terrestre, protection radiative, protection par eau ou glace",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "armor-jpl",
+      "nom": "ARMOR (Archway for Radiation and Micrometeorite Occurrence Resistance)",
+      "annee": "2012",
+      "auteurs": "Louis R. Giersch (Caltech) pour le JPL (NASA)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "voute",
+      "resume": "Arche en régolithe local maintenue par une jacket en membrane déployable, montée autour d'un gonflable temporaire. Les modules d'habitat sont placés sous l'arche.",
+      "dimensions": [
+        { "quoi": "épaisseur de régolithe de l'arche", "valeur": "environ 3 m", "source": "https://www.techbriefs.com/component/content/article/15262-npo-47686" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Views of ARMOR Construction (5 étapes : gonflable, jacket, régolithe versé, modules)", "url": "https://www.techbriefs.com/component/content/article/15262-npo-47686", "page_source": "https://www.techbriefs.com/component/content/article/15262-npo-47686", "licence": "?", "verifie": true, "note": "Figure en étapes ; la jacket est montrée en coupe (cutaway) aux étapes ii à iv. Pas de lien direct vers l'image dans la page lue." }
+      ],
+      "pour_kibsu": "Référence directe de couverture de 3 m en régolithe porté par une arche. Montre une séquence de construction autonome avant l'arrivée des humains.",
+      "a_verifier": [ "Le texte dit que 3 m réduisent aussi l'exposition aux éruptions solaires : pas de dose chiffrée lue." ]
+    },
+    {
+      "id": "lina-ai-spacefactory",
+      "nom": "LINA (Vaulted Lunar Outpost)",
+      "annee": "2022",
+      "auteurs": "AI SpaceFactory, avec le Kennedy Space Center de la NASA",
+      "lieu": "lune",
+      "statut": "concours",
+      "forme": "voute",
+      "resume": "Avant-poste imprimé en 3D par robots autonomes, toit voûté sur arches en plein cintre. Impression en polymère terrestre et régolithe lunaire, près du bord du cratère Shackleton.",
+      "dimensions": [
+        { "quoi": "épaisseur de régolithe de protection", "valeur": "2,7 m", "source": "https://www.archinect.com/news/article/150315409/nasa-and-ai-spacefactory-s-vaulted-lunar-outpost-will-be-3d-printed-by-autonomous-robots" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Images de présentation AI SpaceFactory (plusieurs, légendées « Image via AI SpaceFactory »)", "url": "https://www.archinect.com/news/article/150315409/nasa-and-ai-spacefactory-s-vaulted-lunar-outpost-will-be-3d-printed-by-autonomous-robots", "page_source": "https://www.archinect.com/news/article/150315409/nasa-and-ai-spacefactory-s-vaulted-lunar-outpost-will-be-3d-printed-by-autonomous-robots", "licence": "?", "verifie": true, "note": "Images dans l'article, contenu non décrit. Vidéo YouTube d'AI SpaceFactory citée, non ouverte." }
+      ],
+      "pour_kibsu": "Couverture de 2,7 m de régolithe sur une voûte : comparable à ARMOR. Arches à 60 degrés d'impression, utile pour la géométrie de voûte.",
+      "a_verifier": [ "Dimensions des arches non données dans l'article.", "Plans ou coupes cotés non trouvés." ]
+    },
+    {
+      "id": "esa-grottes-sysnova",
+      "nom": "Exploration des grottes lunaires (ESA, SysNova et études PANGAEA)",
+      "annee": "2020",
+      "auteurs": "ESA (études SysNova : DFKI, Canadensys, Manchester, Oviedo, Würzburg)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Programme ESA qui cherche à explorer les puits (skylights) menant à des tubes de lave, avec des rovers et des grues. Les grottes sont vues comme abri contre radiations et micrométéorites.",
+      "dimensions": [
+        { "quoi": "largeur des tubes", "valeur": "comparable à Central Park (aucun chiffre en m)", "source": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves" },
+        { "quoi": "longueur des tubes", "valeur": "centaines de km (estimation)", "source": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Three key stages of a mission to explore and map lunar caves (schéma)", "url": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves", "page_source": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves", "licence": "?", "verifie": true, "note": "Schéma des 3 étapes de mission, sans cotes lues." },
+        { "type": "video", "titre": "Lava tube fly-through (ESA)", "url": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves", "page_source": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves", "licence": "?", "verifie": true, "note": "Vidéo listée dans l'article ; lien direct non extrait." }
+      ],
+      "pour_kibsu": "Pour le concept de tube : accès par puits, puis cartographie avant installation. Pas de cotes, donc à traiter comme cadre et non comme dimensionnement.",
+      "a_verifier": [ "Profondeur des puits et épaisseur de toit : non donnés dans l'article ESA.", "Les études SysNova détaillées (rapports) non ouvertes ; NTRS sans résultat sur ce thème." ]
+    },
+    {
+      "id": "marius-hills-pit",
+      "nom": "Fosse de Marius Hills (skylight)",
+      "annee": "2017",
+      "auteurs": "Étude publiée dans Geophysical Research Letters (données SELENE/Kaguya et GRAIL, Purdue University)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Puits d'un grand tube de lave, dans une région de dômes volcaniques. Serait assez vaste pour un habitat souterrain.",
+      "dimensions": [
+        { "quoi": "dimensions de la fosse", "valeur": "environ 65 × 90 m ; sol à environ 34 m sous la surface", "source": "https://www.astronomy.com/space-exploration/lunar-lava-tube-could-shelter-a-future-moon-base/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Photo de l'ouverture de Marius Hills (SELENE/Kaguya)", "url": "https://www.earthsky.org/space/lava-tube-human-habitat-on-moon/", "page_source": "https://www.earthsky.org/space/lava-tube-human-habitat-on-moon/", "licence": "NASA/Goddard/ASU (crédit de l'article)", "verifie": true, "note": "Photo dans l'article EarthSky, sans lien direct vers le fichier." },
+        { "type": "image", "titre": "Illustration de Philadelphie dans un tube de lave lunaire théorique (Purdue/David Blair)", "url": "https://www.earthsky.org/space/lava-tube-human-habitat-on-moon/", "page_source": "https://www.earthsky.org/space/lava-tube-human-habitat-on-moon/", "licence": "Purdue University (crédit)", "verifie": true, "note": "Illustration d'échelle, pas un plan." }
+      ],
+      "pour_kibsu": "Montre l'échelle d'une fosse : un puits de 65 m environ ouvre sur un volume habitable. Utile pour une entrée en puits.",
+      "a_verifier": [ "Les sources divergent : une version donne 65 m de large et 50 m de profondeur, une autre 80 à 88 m de profondeur (trouvé en recherche, pas ouvert).", "Radar Kaguya (vide de plus de 100 m) : vu seulement dans un résultat de recherche, non ouvert." ]
+    },
+    {
+      "id": "tranquillitatis-pit",
+      "nom": "Fosse de Mare Tranquillitatis (skylight) et concept gonflable",
+      "annee": "2024",
+      "auteurs": "Robert Reeves (Astronomy.com)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Fosse d'environ 65 m de large donnant sur un tunnel d'au moins 30 m. Température intérieure d'environ 17 °C. Un module gonflable de type BEAM pourrait y être installé.",
+      "dimensions": [
+        { "quoi": "diamètre de la fosse", "valeur": "environ 65 m", "source": "https://www.astronomy.com/space-exploration/lunar-lava-tube-could-shelter-a-future-moon-base/" },
+        { "quoi": "profondeur du sol de la fosse", "valeur": "environ 36 m", "source": "https://www.astronomy.com/space-exploration/lunar-lava-tube-could-shelter-a-future-moon-base/" },
+        { "quoi": "largeur possible d'un tube sous gravité lunaire, à 65 m de profondeur", "valeur": "jusqu'à 385 m (hypothèse)", "source": "https://www.astronomy.com/space-exploration/lunar-lava-tube-could-shelter-a-future-moon-base/" },
+        { "quoi": "température dans la fosse", "valeur": "environ 17 °C", "source": "https://www.astronomy.com/space-exploration/lunar-lava-tube-could-shelter-a-future-moon-base/" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Chiffres de tube et de température pour un habitat en cavité. Le module gonflable est un bon cas de comparaison pour un dôme enterré.",
+      "a_verifier": [ "Les 385 m sont une extrapolation, pas une mesure.", "Aucun plan ou coupe trouvé pour cette fosse." ]
+    },
+    {
+      "id": "shackleton-foster-esa",
+      "nom": "Base du cratère Shackleton (concept ESA / Foster + Partners)",
+      "annee": "?",
+      "auteurs": "ESA et Foster + Partners",
+      "lieu": "lune",
+      "statut": "concept",
+      "forme": "dome",
+      "resume": "Dôme gonflable livré par atterrisseur, servant de moule à une coque en régolithe imprimée par robots. Un cylindre sert de sas.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Dôme enterré sous coque de régolithe : même famille que le dôme en cratère.",
+      "a_verifier": [ "Source lue seulement en résumé de recherche (Gizmodo renvoie 403).", "Épaisseur de coque et diamètre non vérifiés." ]
+    },
+    {
+      "id": "som-shackleton",
+      "nom": "Habitat sous couverture de régolithe au bord de Shackleton (SOM)",
+      "annee": "2019",
+      "auteurs": "Skidmore, Owings & Merrill (SOM), article IAC",
+      "lieu": "lune",
+      "statut": "concept",
+      "forme": "dome",
+      "resume": "Cuve pressurisée sous couverture de régolithe, parois imprimées en sol lunaire contre radiations. Site choisi au bord de Shackleton, près de la glace et du soleil.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Article IAC (SOM Research), PDF", "url": "https://www.som.com/wp-content/uploads/2021/07/20191213_som_research_iac_paper.pdf", "page_source": "https://www.som.com/wp-content/uploads/2021/07/20191213_som_research_iac_paper.pdf", "licence": "?", "verifie": false, "note": "PDF ouvert mais texte illisible via l'outil (flux compressé) : cotes et figures non lues." }
+      ],
+      "pour_kibsu": "Source à lire en entier pour l'épaisseur de régolithe et les coupes.",
+      "a_verifier": [ "Relire le PDF avec un outil d'extraction de texte.", "Le PDF a été enregistré automatiquement par l'outil dans un dossier de résultats temporaires (hors bibliothèque) : à supprimer si besoin." ]
+    },
+    {
+      "id": "dome-regolithe-vignaud",
+      "nom": "Dôme géodésique rempli de régolithe (voussoirs)",
+      "annee": "2021",
+      "auteurs": "Pierre Vignaud, Adrien Lafontan (présentation MVA 2021)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "dome",
+      "resume": "Demi-sphère de prismes en régolithe, pour protéger des radiations et micrométéorites. Site supposé : région de Shackleton.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Présentation PDF MVA 2021 (7 pages)", "url": "https://mva2021.cseo.org.cy/live/presentations/08 - Pierre Vignaud - Radiations and micro-meteoroids protection for lunar infrastructures  regolith-filled geodesic dome.pdf", "page_source": "https://mva2021.cseo.org.cy/live/presentations/08 - Pierre Vignaud - Radiations and micro-meteoroids protection for lunar infrastructures  regolith-filled geodesic dome.pdf", "licence": "?", "verifie": false, "note": "PDF ouvert mais texte illisible via l'outil ; deux images intégrées non décrites. Le PDF a été enregistré automatiquement par l'outil (hors bibliothèque)." }
+      ],
+      "pour_kibsu": "Dôme en voussoirs de régolithe : une option de couverture pour un habitat en cratère.",
+      "a_verifier": [ "Relire le PDF : épaisseur, diamètre, figures." ]
+    },
+    {
+      "id": "pathfinder-sacs-regolithe",
+      "nom": "Mission pathfinder : sacs de régolithe et berme",
+      "annee": "2026",
+      "auteurs": "Cameron S. Dickinson (MDA Space) et al. ; Michigan Technological University (van Susante)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "boite",
+      "resume": "Mission robotique pour tester des sacs remplis de régolithe empilés en berme. Mesure aussi l'environnement radiatif près d'une station.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "A Pathfinder Lunar Construction Mission Concept Using Regolith Filled Bags (Aerospace, 2026, DOI 10.3390/aerospace13030223)", "url": "https://digitalcommons.mtu.edu/michigantech-p2/2573", "page_source": "https://digitalcommons.mtu.edu/michigantech-p2/2573", "licence": "?", "verifie": true, "note": "Page du dépôt lue ; PDF complet (15 Mo) non lu. Pas d'épaisseur chiffrée dans le résumé." }
+      ],
+      "pour_kibsu": "Mode de construction par sacs et berme : base de la couverture ajoutée sur un habitat.",
+      "a_verifier": [ "Épaisseur de berme et schémas : à lire dans le PDF complet." ]
+    },
+    {
+      "id": "lacus-mortis-asce",
+      "nom": "Habitat en tube de lave au pied de la fosse de Lacus Mortis (« Lunar Lava Living »)",
+      "annee": "2026",
+      "auteurs": "Marta Rossi, Federica Joe Gardella, Mariapia Mammino, Elif Kirmiziyeşil, Ebru Nur Yavuz, Valentina Sumini (ASCE, Civil Engineering, mars 2026)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat de deux spirales de modules gonflables à plusieurs niveaux, dans un tube de lave au pied de la fosse de Lacus Mortis. Deux cheminements extérieurs suivent les spirales.",
+      "dimensions": [
+        { "quoi": "longueur du tube", "valeur": "environ 500 m", "source": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna" },
+        { "quoi": "largeur du tube", "valeur": "environ 90 m à l'entrée, environ 60 m vers le fond", "source": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna" },
+        { "quoi": "hauteur du tube", "valeur": "environ 70 m à l'entrée, environ 45 m vers le fond", "source": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "SECTION PLAN (schéma des auteurs)", "url": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna", "page_source": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna", "licence": "?", "verifie": true, "note": "Légende lue dans la page (« Image courtesy of the authors »). Image elle-même non décrite par l'outil : contenu à regarder." },
+        { "type": "plan", "titre": "MASTER PLAN (schéma des auteurs)", "url": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna", "page_source": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna", "licence": "?", "verifie": true, "note": "Légende lue dans la page. Image non décrite par l'outil." },
+        { "type": "image", "titre": "Rendu des deux spirales de modules gonflables", "url": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna", "page_source": "https://www.asce.org/publications-and-news/civil-engineering-source/civil-engineering-magazine/issues/magazine-issue/article/2026/03/design-of-proposed-lunar-settlement-based-on-human-dna", "licence": "?", "verifie": true, "note": "Légende lue : habitat à deux spirales de modules gonflables, plusieurs niveaux." }
+      ],
+      "pour_kibsu": "Un tube de 500 m avec des hauteurs de 45 à 70 m : échelle d'un habitat sous couverture rocheuse. Les spirales donnent une référence de circulation en hélice.",
+      "a_verifier": [ "Épaisseur de couverture non donnée dans l'article.", "Les plans et coupes n'ont été lus que par leurs légendes." ]
+    },
+    {
+      "id": "genesis-ii-uwm",
+      "nom": "Genesis II: Advanced Lunar Outpost",
+      "annee": "1991",
+      "auteurs": "Gary T. Moore, Janis Huebner-Moths, Joseph P. Fieber, Kerry L. Paruleski (monographie UWM, NASA et USRA)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Avant-poste lunaire dans un tube de lave, avec des modules dérivés de Space Station Freedom et des gonflables en laminé Kevlar, pour 11 personnes sur 20 mois.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Chapitre 3 : Genesis II Advanced Lunar Outpost Design (plans d'étage, coupes, axonométries, selon le résumé de recherche)", "url": "https://dc.uwm.edu/caupr_mono/52", "page_source": "https://dc.uwm.edu/caupr_mono/52", "licence": "?", "verifie": false, "note": "Page du dépôt non lue (erreur réseau). Contenu connu seulement par un résumé de recherche." }
+      ],
+      "pour_kibsu": "Monographie d'architecture spatiale avec plans d'étage et coupes : à lire pour la section du tube.",
+      "a_verifier": [ "Vérifier les coupes cotées du chapitre 3.", "Copie NASA NTRS N93-29760 : non ouverte (403)." ]
+    },
+    {
+      "id": "moon-rocks-mines",
+      "nom": "Moon Rocks Lunar Habitat (Colorado School of Mines, capstone)",
+      "annee": "?",
+      "auteurs": "Équipe capstone Colorado School of Mines (défi NASA M2M X-Hab)",
+      "lieu": "lune",
+      "statut": "concours",
+      "forme": "dome",
+      "resume": "Dôme central en béton lunaire et armature, coulé autour d'une forme gonflable, dans un tube de lave. Conçu pour six astronautes pendant trois mois.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Assembly drawing de la fondation (cité dans la page capstone)", "url": "https://www.mines.edu/capstoneseniordesign/project/moon-rocks-lunar-habitat", "page_source": "https://www.mines.edu/capstoneseniordesign/project/moon-rocks-lunar-habitat", "licence": "?", "verifie": false, "note": "Page redirigée (301) puis 404 : non lue. Vu seulement dans un résumé de recherche." }
+      ],
+      "pour_kibsu": "Dôme central dans un tube, avec une forme gonflable comme coffrage : méthode de construction à garder en tête.",
+      "a_verifier": [ "Dimensions du dôme non trouvées.", "Date du projet non trouvée." ]
+    },
+    {
+      "id": "lunar-safe-haven-nasa",
+      "nom": "Lunar Safe Haven (NASA Langley, ASCEND 2021)",
+      "annee": "2021",
+      "auteurs": "Melanie Grande, Robert Moses, Patrick Cosgrove, Robert Mueller (NASA Langley)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat recouvert de régolithe dont la peau ne touche jamais le régolithe : une structure est bâtie autour et au-dessus de l'habitat, puis remplie. Alternative à l'enfouissement complet.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Grande et al., ASCEND 2021 (PDF NTRS, figure 5 citée)", "url": "https://ntrs.nasa.gov/api/citations/20210022066/downloads/Grande_Lunar%20Safe%20Haven_ASCEND%202021_Full_v2b.docx.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20210022066/downloads/Grande_Lunar%20Safe%20Haven_ASCEND%202021_Full_v2b.docx.pdf", "licence": "?", "verifie": false, "note": "PDF renvoie 403 : non lu. La figure 5 est citée dans le texte vu en recherche, sans être vue." }
+      ],
+      "pour_kibsu": "Principe de recouvrement sans contact entre peau et régolithe : utile pour un habitat en cratère ou sous talus.",
+      "a_verifier": [ "Épaisseur de couverture 2021 non trouvée.", "Un chiffre d'1 m de régolithe appartient à une présentation 2026 distincte, non ouverte : ne pas le mélanger." ]
+    },
+    {
+      "id": "matmata-tunisie",
+      "nom": "Habitations troglodytes de Matmata",
+      "annee": "XXe siècle",
+      "auteurs": "Habitants berbères (tradition)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Maisons creusées dans une grande fosse au sol, avec des cellules sur le pourtour. Certaines ont plusieurs fosses reliées par des tranchées.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Référence de cour creusée et de cellules rayonnantes : un modèle de tranchée et de puits pour un habitat enterré.",
+      "a_verifier": [ "Profondeur et dimension des cours : non trouvées dans la page lue.", "Inondation de 1969 citée dans l'article (22 jours de pluie) : source non ouverte." ]
+    },
+    {
+      "id": "yaodong-chine",
+      "nom": "Yaodong (habitat troglodyte du loess)",
+      "annee": "traditionnel",
+      "auteurs": "Populations du plateau du loess (nord de la Chine)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "voute",
+      "resume": "Habitat creusé dans la falaise, enterré autour d'une cour en fosse, ou construit en voûte. La terre isole naturellement.",
+      "dimensions": [
+        { "quoi": "épaisseur de terre sur la voûte d'un yaodong construit (voûté)", "valeur": "au moins 2 m", "source": "https://en.wikipedia.org/wiki/Yaodong" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Voûte de terre au moins 2 m, forme de cour en fosse : référence réelle pour la couverture et la voûte.",
+      "a_verifier": [ "Population : 30 à 40 millions au début des années 2000 (sources de livres, non ouvertes).", "Pas de coupe cotée trouvée." ]
+    },
+    {
+      "id": "cappadoce-derinkuyu",
+      "nom": "Villes souterraines de Cappadoce (Derinkuyu, Kaymaklı)",
+      "annee": "époque byzantine (sources générales)",
+      "auteurs": "Communautés chrétiennes (sources générales)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Villes creusées dans du tuf volcanique, avec portes rondes bloquantes et trous de défense. Protection contre raids et persécutions.",
+      "dimensions": [
+        { "quoi": "profondeur maximale de Derinkuyu", "valeur": "environ 85 m", "source": "https://en.wikipedia.org/wiki/Derinkuyu_Underground_City" },
+        { "quoi": "capacité (personnes, avec bétail et réserves)", "valeur": "jusqu'à 20 000", "source": "https://en.wikipedia.org/wiki/Derinkuyu_Underground_City" },
+        { "quoi": "puits de ventilation", "valeur": "nombre non donné ; un puits de 55 m servait aussi de puits d'eau", "source": "https://en.wikipedia.org/wiki/Derinkuyu_Underground_City" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Appendix A: Section of Derinkuyu Underground City (Ecem Sungur, U. Toronto, 2021)", "url": "https://assets.zapnito.com/users/476393/documents/130763/abacf1d4-ba78-4e43-a133-15368ac47074.pdf", "page_source": "https://assets.zapnito.com/users/476393/documents/130763/abacf1d4-ba78-4e43-a133-15368ac47074.pdf", "licence": "?", "verifie": false, "note": "Lien PDF probablement la thèse, non confirmé ni lu (texte illisible via l'outil)." }
+      ],
+      "pour_kibsu": "Dispositifs de fermeture et de défense d'une entrée enterrée : porte roulante, puits de ventilation.",
+      "a_verifier": [ "Niveaux : Wikipédia cite 5 (déduction) ; une recherche donne 18 au total et 8 ouverts au public. Trancher avec une source spécialisée.", "Pas de plan ni coupe lu : voir l'appendice de la thèse Sungur." ]
+    },
+    {
+      "id": "coober-pedy",
+      "nom": "Habitations souterraines de Coober Pedy",
+      "annee": "XXe siècle",
+      "auteurs": "Habitants (opale)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Maisons creusées dans grès et silstone, avec température relativement constante. Une maison de trois chambres peut être creusée au coût d'une maison de surface.",
+      "dimensions": [
+        { "quoi": "couche de grès et silstone sous la ville (géologie, pas la profondeur des habitations)", "valeur": "environ 30 m", "source": "https://en.wikipedia.org/wiki/Coober_Pedy" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Référence de climat stable pour un habitat enterré ; la roche tendre est un analogue pour la découpe.",
+      "a_verifier": [ "Température constante : affirmation sans chiffre ni source identifiable dans la page.", "Profondeur des habitations et population souterraine : non données." ]
+    },
+    {
+      "id": "shackleton-dome-nss",
+      "nom": "Shackleton Dome (ville sous dôme, spéculatif)",
+      "annee": "2008",
+      "auteurs": "Edward McCullough (Ad Astra, NSS), illustration Pat Rawlings (NASA)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "dome",
+      "resume": "Ville lunaire sous dôme très grand, sur la lèvre de Shackleton. L'auteur souligne que l'azote manque dans le régolithe.",
+      "dimensions": [
+        { "quoi": "diamètre du dôme", "valeur": "25 miles (environ 40 km)", "source": "https://www.nss.org/shackleton-dome-is-a-domed-lunar-city-possible/" },
+        { "quoi": "hauteur du dôme", "valeur": "5 000 pieds (environ 1 524 m)", "source": "https://www.nss.org/shackleton-dome-is-a-domed-lunar-city-possible/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Illustration d'une colonie lunaire sous dôme (Pat Rawlings, NASA)", "url": "https://www.nss.org/shackleton-dome-is-a-domed-lunar-city-possible/", "page_source": "https://www.nss.org/shackleton-dome-is-a-domed-lunar-city-possible/", "licence": "NASA (crédit de l'article)", "verifie": true, "note": "Illustration dans l'article, sans lien direct vers le fichier." }
+      ],
+      "pour_kibsu": "Échelle extrême : dôme de 40 km. Utile pour montrer une limite de faisabilité, pas comme modèle de couverture.",
+      "a_verifier": [ "Épaisseur de régolithe absente de l'article." ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "Lunarpedia, « Roof Support » (tableau régolithe / pression, densité 1,9 g/cm³)", "url": "https://lunarpedia.org/w/Roof_Support", "note": "Calcul de structure : épaisseur de régolithe pour équilibrer une pression interne (5,4 m au niveau de la mer). Ce n'est pas un calcul radiatif. Densité utilisée : 1,9 g/cm³." },
+    { "titre": "Utilisation of Moon Regolith for Radiation Protection and Thermal Insulation in Permanent Lunar Habitats (Akisheva & Gourinat, Applied Sciences 2021)", "url": "https://www.mdpi.com/2076-3417/11/9/3853", "note": "Mur multicouche : régolithe + aluminium + polyéthylène, simulations OLTARIS. Pages MDPI et DOAJ bloquées (403) : chiffres non lus. A lire en priorité." },
+    { "titre": "IAC 2024, paper sur habitat en régolithe seul (cité par recherche)", "url": "https://iafastro.directory/iac/paper/id/82864/abstract-pdf/IAC-24,D3,IP,1,x82864.brief.pdf", "note": "Résumé de recherche : au moins 2 m de régolithe, 3 m réduisent l'exposition à environ 100 mSv par mission de 180 jours. Non ouvert ; à vérifier." },
+    { "titre": "ESA, « En route to exploring lunar caves » (6 oct. 2020)", "url": "https://www.esa.int/articles/en-route-to-exploring-lunar-caves", "note": "Vue d'ensemble ESA sur les grottes lunaires et les schémas de mission." }
+  ],
+  "pistes_non_explorees": [
+    "Cueva de los Verdes (Lanzarote) : site analogue PANGAEA 2017, chambres assez grandes pour un prototype d'habitat (résumé IAFI, non ouvert).",
+    "Rapports ESA PANGAEA et SysNova : chercher sur NTRS (aucun résultat trouvé pour « Pangaea lunar lava tube »). Chercher aussi sur esa.int ou ESA CAVES.",
+    "Kaku et al. 2017 (GRL, DOI 10.1002/2017GL074998) : résumé ADS seulement (ADS renvoie 405) ; texte intégral non trouvé.",
+    "Akisheva & Gourinat 2021 (MDPI) : lire en entier, il contient la paroi multicouche chiffrée. Accès bloqué à l'outil, à ouvrir dans un navigateur.",
+    "Murray (APS, 2019) : mesure de transmission des neutrons en simulant le régolithe, épaisseur pour dose sûre. Poster d'archives APS.",
+    "Matmata, Tunisie : article Wikipédia dédié (« Matmata, Tunisia ») : chiffres de cours et de cellules, non lus en détail.",
+    "Derinkuyu : niveaux, profondeur, plans cotés : chercher une source spécialisée (Demir, Cradle of History).",
+    "Habitats de Coober Pedy : profondeur réelle et températures mesurées (sources du gouvernement d'Australie-Méridionale).",
+    "Concepts de protection par eau ou glace (cavités remplies d'eau, abris de glace au pôle sud) : pas encore cherchés.",
+    "Plans et coupes de Shackleton (ESA / Foster) : relire la page ESA ou Foster + Partners quand elle est accessible."
+  ]
+}

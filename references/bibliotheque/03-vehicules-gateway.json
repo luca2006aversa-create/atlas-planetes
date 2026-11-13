@@ -1,0 +1,307 @@
+{
+  "theme": "Véhicules habités lunaires et cislunaires : module Apollo, Altair, Starship HLS, Blue Moon, Gateway (I-Hab), Orion, rovers pressurisés (Lunar Cruiser, MMSEV/SEV, LER), Argonaut, MPLM",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "apollo-lm",
+      "nom": "Apollo Lunar Module (LM)",
+      "annee": "1969-1972",
+      "auteurs": "Grumman pour la NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Module lunaire à deux étages (descente et remontée) qui a posé six équipages sur la Lune. L'étage de remontée abrite la cabine d'équipage, avec une écoutille avant et une écoutille supérieure d'amarrage.",
+      "dimensions": [
+        { "quoi": "écoutille avant (côté, carrée)", "valeur": "environ 32 pouces (≈ 81 cm)", "source": "https://user.xmission.com/~jwindley/lmdoors.html" },
+        { "quoi": "volume intérieur de l'étage de remontée", "valeur": "6,65 m³ (235 pi³)", "source": "https://www.universetoday.com/24646/take-a-spin-around-the-altair-lunar-lander" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Lunar Module Ascent Stage Interior Looking Forward", "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/ad016.gif", "page_source": "https://www.nasa.gov/history/diagrams/apollo.html", "licence": "domaine public (NASA)", "verifie": true, "note": "Intérieur de l'étage de remontée vu vers l'avant (Press Information Notebook 1972). Lien relevé sur la page source ; l'image elle-même n'a pas été ouverte." },
+        { "type": "coupe", "titre": "Lunar Module Ascent Stage Interior Looking Aft", "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/ad017.gif", "page_source": "https://www.nasa.gov/history/diagrams/apollo.html", "licence": "domaine public (NASA)", "verifie": true, "note": "Intérieur de l'étage de remontée vu vers l'arrière. Lien relevé sur la page source ; image non ouverte." },
+        { "type": "image", "titre": "Lunar Module Ascent Stage", "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/ad015.gif", "page_source": "https://www.nasa.gov/history/diagrams/apollo.html", "licence": "domaine public (NASA)", "verifie": true, "note": "Vue extérieure de l'étage de remontée. Lien relevé sur la page source ; image non ouverte." },
+        { "type": "image", "titre": "Lunar Module Descent Stage", "url": "https://www.nasa.gov/wp-content/uploads/static/history/diagrams/ad018.gif", "page_source": "https://www.nasa.gov/history/diagrams/apollo.html", "licence": "domaine public (NASA)", "verifie": true, "note": "Vue de l'étage de descente. Lien relevé sur la page source ; image non ouverte." }
+      ],
+      "pour_kibsu": "Cabine réelle très compacte, deux niveaux de travail limités, une écoutille avant de taille modeste et une trappe de plafond pour l'amarrage. Utile pour dimensionner une porte basse, un sas et la circulation entre cabine et plate-forme.",
+      "a_verifier": [
+        "Volume 6,65 m³ : source secondaire (article Universe Today). Recouper avec le NTRS TN D-7084 (1973), non ouvert (accès 403).",
+        "Écoutille avant : 32 pouces sur un site personnel ; la même page dit qu'un article du New York Times donnant 42 pouces est une erreur. Vérifier sur un document NASA.",
+        "Cotes basiques du LM (« Basic LM dimensions ») dans NTRS TN D-7084 : non lues."
+      ]
+    },
+    {
+      "id": "orion",
+      "nom": "Orion (module d'équipage)",
+      "annee": "2014-",
+      "auteurs": "Lockheed Martin (maître d'œuvre) pour la NASA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "capsule",
+      "resume": "Capsule d'équipage américaine pour les vols cislunaires d'Artemis. Cabine pressurisée d'environ 9 m³ pour quatre personnes, avec une écoutille latérale d'équipage, une écoutille de secours et une écoutille d'amarrage.",
+      "dimensions": [
+        { "quoi": "volume habitable", "valeur": "330 pi³ (≈ 9,3 m³, conversion)", "source": "https://www.nasa.gov/reference/crew-module/" },
+        { "quoi": "diamètre du bouclier thermique", "valeur": "16,5 pi", "source": "https://www.nasa.gov/reference/crew-module/" },
+        { "quoi": "volume habitable de la capsule Apollo (comparaison)", "valeur": "210 pi³ (≈ 5,9 m³, conversion)", "source": "https://www.nasa.gov/reference/crew-module/" },
+        { "quoi": "espace habitable par rapport à Apollo", "valeur": "+57 % (comparaison, sans cote en m³)", "source": "https://www.dezeen.com/2026/02/25/orion-spacecraft-artemis-ii-nasa-lockheed-martin-interview/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Crew Module (page de référence NASA)", "url": "https://www.nasa.gov/reference/crew-module/", "page_source": "https://www.nasa.gov/reference/crew-module/", "licence": "domaine public (NASA)", "verifie": true, "note": "Page de spécifications : volume habitable, trois écoutilles (équipage, secours, amarrage) sans cotes, photos légendées." },
+        { "type": "image", "titre": "Orion Pressure Vessel Diagram", "url": "https://www.nasa.gov/reference/crew-module/", "page_source": "https://www.nasa.gov/reference/crew-module/", "licence": "domaine public (NASA)", "verifie": true, "note": "Schéma de la cuve pressurisée avec ses sept soudures, présent sur la même page. Pas une coupe intérieure." },
+        { "type": "rapport", "titre": "Life encapsulated inside NASA's Orion (page NASA, Artemis II)", "url": "https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii-moon-mission/", "page_source": "https://www.nasa.gov/humans-in-space/life-encapsulated-inside-nasas-orion-for-artemis-ii-moon-mission/", "licence": "domaine public (NASA)", "verifie": true, "note": "Volume 330 pi³ et comparaison avec Apollo (210 pi³). Photos de maquette intérieure, sans cotes ni plan." },
+        { "type": "rapport", "titre": "Interview de l'ingénieur Orion (Dezeen, 2026)", "url": "https://www.dezeen.com/2026/02/25/orion-spacecraft-artemis-ii-nasa-lockheed-martin-interview/", "page_source": "https://www.dezeen.com/2026/02/25/orion-spacecraft-artemis-ii-nasa-lockheed-martin-interview/", "licence": "?", "verifie": true, "note": "Cabine +57 % d'espace habitable vs Apollo, équipage non amarré jusqu'à 21 jours. Pas de plan ni coupe." }
+      ],
+      "pour_kibsu": "Cabine de quatre personnes très dense. Bonne référence pour comparer une cabine conique avec ses trois écoutilles et l'emplacement de chacune.",
+      "a_verifier": [
+        "Volume habitable : 330 pi³ (page NASA) contre 316 pi³ (Wikipedia, Space.com). Définitions différentes possibles, à trancher.",
+        "Écoutille latérale : 32 pouces cité dans un document NTRS (non ouvert), peut-être l'écoutille d'amarrage. Diamètre de l'écoutille latérale non trouvé.",
+        "Plan intérieur coté : non trouvé."
+      ]
+    },
+    {
+      "id": "lunar-cruiser",
+      "nom": "Lunar Cruiser (rover pressurisé Toyota-JAXA)",
+      "annee": "2023-2029 (prévu)",
+      "auteurs": "Toyota avec JAXA ; Mitsubishi Heavy Industries sur le système",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "boite",
+      "resume": "Rover pressurisé pour deux astronautes, qui pourraient y vivre environ 30 jours. Une maquette intérieure grandeur nature a été présentée en 2023 ; le lancement est visé pour 2029.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Toyota Times : rapport JAXA sur le Lunar Cruiser", "url": "https://toyotatimes.jp/en/report/jaxa/002.html", "page_source": "https://toyotatimes.jp/en/report/jaxa/002.html", "licence": "?", "verifie": true, "note": "Article : deux occupants pour environ 30 jours, accès à l'arrière, lancement 2029. Aucune cote ni plan." },
+        { "type": "rapport", "titre": "Lunar Cruiser : communiqué Toyota Europe (2023)", "url": "https://www.toyota-europe.com/news/2023/lunar-cruiser-future-mobility", "page_source": "https://www.toyota-europe.com/news/2023/lunar-cruiser-future-mobility", "licence": "?", "verifie": false, "note": "Trouvé en recherche, non ouvert." },
+        { "type": "rapport", "titre": "Presse Mitsubishi Heavy Industries (PDF de présentation Toyota)", "url": "https://www.mhi.com/news/pdf/23072102_02.pdf", "page_source": "https://www.mhi.com/news/pdf/23072102_02.pdf", "licence": "?", "verifie": false, "note": "Présentation de juillet 2023 qui pourrait contenir un agencement. Non ouverte : à lire en priorité." }
+      ],
+      "pour_kibsu": "Cas d'un habitat mobile : entrée par l'arrière, la cabine doit permettre de retirer la combinaison sans la quitter. Utile pour penser le sas d'entrée et la circulation d'un véhicule pressurisé.",
+      "a_verifier": [
+        "Volume intérieur : 6 × 5 × 4 m (une presse) contre 13 m³ et 7 m² (d'autres sources). Contradictoire, rien de sûr.",
+        "Plan d'agencement et cotes d'écoutille : non trouvés. Piste : le PDF MHI ci-dessus."
+      ]
+    },
+    {
+      "id": "argonaut-ahu",
+      "nom": "Argonaut (atterrisseur ESA) et Argonaut Habitat Unit",
+      "annee": "2025-2030 (prévu)",
+      "auteurs": "ESA (Centre européen des astronautes pour l'étude de l'habitat)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Argonaut est l'atterrisseur lunaire cargo de l'ESA. Une étude du centre européen des astronautes propose une unité d'habitat posée sur cet atterrisseur, pour deux astronautes, sur une base de 14 jours.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Argonaut lander on the Moon (rendu ESA)", "url": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Argonaut_lander_on_the_Moon", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2026/10/Argonaut_lander_on_the_Moon", "licence": "© ESA", "verifie": true, "note": "Rendu de l'atterrisseur sur la Lune, sans chiffres. Pour la page Argonaut on the Moon, même type de rendu." }
+      ],
+      "pour_kibsu": "Habitat posé au sol pour deux personnes sur une durée courte : bon cas pour un module d'habitat démontable ou transportable.",
+      "a_verifier": [
+        "Volume et dimensions de l'Argonaut Habitat Unit : non trouvés. Lire le papier IAC 24 (IAC-24,A3,2B,2,x88747) et le papier de thèse du Polito.",
+        "Charge utile de 1 500 kg : source secondaire, à recouper.",
+        "Rover pressurisé ESA-JAXA : lien décrit par une source secondaire (miroir Wikipedia), non vérifié."
+      ]
+    },
+    {
+      "id": "lunar-i-hab",
+      "nom": "Lunar I-Hab (module habitable de Gateway)",
+      "annee": "2019-2028 (prévu)",
+      "auteurs": "ESA",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Module habitable européen destiné à la station Gateway en orbite lunaire. Environ 10 m³ de volume habitable et quatre ports d'amarrage. La page ESA indique que la NASA a suspendu Gateway sous sa forme actuelle en 2026.",
+      "dimensions": [
+        { "quoi": "volume habitable", "valeur": "environ 10 m³", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Gateway_Lunar_I-Hab" },
+        { "quoi": "masse au lancement", "valeur": "10 t", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Gateway_Lunar_I-Hab" },
+        { "quoi": "ailes de radiateurs déployables", "valeur": "12 m de long chacune", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Gateway_Lunar_I-Hab" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Gateway: Lunar I-Hab (page ESA)", "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Gateway_Lunar_I-Hab", "page_source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Gateway_Lunar_I-Hab", "licence": "© ESA", "verifie": true, "note": "Fiche chiffrée : volume, masse, lancement prévu, quatre ports (deux vers la station, deux pour visiteurs). Pas de plan." }
+      ],
+      "pour_kibsu": "Module cylindrique orbital à quatre ports : bon exemple de répartition des ports entre station et visiteurs, et de la circulation entre modules.",
+      "a_verifier": [
+        "Diamètre intérieur : 3,4 m (IAC, réduit après le passage à Falcon Heavy) contre 4,2 m dans une version antérieure ; Wikipedia indique 5,4 m. Recouper, non ouvert.",
+        "Volume brut de 36 m³ (Wikipedia) contre habitable de 10 m³ : ne pas confondre.",
+        "Diamètre de l'écoutille : non trouvé."
+      ]
+    },
+    {
+      "id": "starship-hls",
+      "nom": "Starship HLS (Human Landing System)",
+      "annee": "2021-2028 (prévu)",
+      "auteurs": "SpaceX pour la NASA (programme Artemis)",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Version de Starship destinée à descendre des astronautes sur la Lune. SpaceX annonce plus de 600 m³ de volume pressurisé, avec deux sas.",
+      "dimensions": [
+        { "quoi": "volume pressurisé (cabine et deux sas), selon SpaceX", "valeur": "plus de 600 m³ (613 m³ selon un article)", "source": "https://www.xataka.com.br/ciencia/do-aperto-para-conforto-a-nave-starship-sera-incrivelmente-espacosa" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Humans to the Moon (page SpaceX)", "url": "https://new.spacex.com/humanspaceflight/moon", "page_source": "https://new.spacex.com/humanspaceflight/moon", "licence": "?", "verifie": false, "note": "Page trouvée en recherche ; accès refusé (522), rien vu." }
+      ],
+      "pour_kibsu": "Cabine de grand volume avec sas doubles : intéressant pour une circulation avec sas et une cabine partagée. Les rendus restent des illustrations, pas des plans cotés.",
+      "a_verifier": [
+        "Volume : 600 m³ (SpaceX) contre 613 m³ (article) et environ 100 m³ (Orbital Radar). Définitions différentes, non résolu.",
+        "Taille des sas : affirmations contradictoires (double du volume de l'Apollo LM, ou volume d'une capsule Dragon). À vérifier sur une source SpaceX.",
+        "Intérieur : une source affirme avoir vu des captures de l'intérieur de HLS en octobre 2026. Non confirmé."
+      ]
+    },
+    {
+      "id": "altair",
+      "nom": "Altair (lander du programme Constellation)",
+      "annee": "2007-2010",
+      "auteurs": "NASA (programme Constellation)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Lander lunaire prévu par Constellation, annulé en 2010. Son étage de remontée avait une cabine pressurisée pour quatre astronautes en combinaison, un sas et deux écoutilles (une de plafond pour l'amarrage à Orion, une principale vers la surface).",
+      "dimensions": [
+        { "quoi": "volume d'un concept de cabine", "valeur": "31,8 m³ (1 120 pi³)", "source": "https://www.universetoday.com/24646/take-a-spin-around-the-altair-lunar-lander" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Take a Spin Around The Inside of Altair (blog NASA Constellation)", "url": "https://blogs.nasa.gov/Constellation/?p=99", "page_source": "https://blogs.nasa.gov/Constellation/?p=99", "licence": "domaine public (NASA)", "verifie": false, "note": "Article de blog sur l'intérieur d'Altair, trouvé en recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Cabine à quatre places avec sas centré et écoutille de plafond pour l'amarrage. Cas proche de la cabine Apollo, mais plus grande.",
+      "a_verifier": [
+        "Le volume de 31,8 m³ est un concept de 2009 ; il est près de cinq fois celui d'Apollo (6,65 m³). Ouvrir l'article NASA.",
+        "Deux écoutilles (docking et principale) : vu sur une source secondaire, à confirmer sur doc NASA.",
+        "Aucun schéma de coupe trouvé."
+      ]
+    },
+    {
+      "id": "mmsev-sev",
+      "nom": "MMSEV / SEV (Space Exploration Vehicle)",
+      "annee": "2008-2015",
+      "auteurs": "NASA (Johnson Space Center)",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "boite",
+      "resume": "Véhicule pressurisé de la NASA pour missions en microgravité ou à la surface, avec un noyau habitable et des sas pour combinaisons. Une maquette GEN 2A existe au centre Johnson.",
+      "dimensions": [
+        { "quoi": "volume de cabine (cas à deux équipiers, 10,2 psi)", "valeur": "550 pi³ (≈ 15,6 m³, conversion)", "source": "https://ntrs.nasa.gov/api/citations/20130011629/downloads/20130011629.pdf" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Document ECLSS sur le MMSEV (NTRS 20130011629)", "url": "https://ntrs.nasa.gov/api/citations/20130011629/downloads/20130011629.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20130011629/downloads/20130011629.pdf", "licence": "domaine public (NASA)", "verifie": false, "note": "Document cité par la recherche ; accès refusé (403). Le volume ci-dessus vient d'un extrait de recherche." }
+      ],
+      "pour_kibsu": "Noyau habitable avec sas pour combinaisons : bon cas pour une cabine où l'on enfile sa combinaison avant de sortir.",
+      "a_verifier": [
+        "Volume de 550 pi³ : valeur d'un cas précis du tableau, pas un volume total. Document non ouvert.",
+        "Dimensions d'écoutille : non trouvées. Ne pas utiliser sans source.",
+        "Filiation SPR, LER, SEV : source secondaire."
+      ]
+    },
+    {
+      "id": "ler",
+      "nom": "Lunar Electric Rover (LER)",
+      "annee": "2007-2009",
+      "auteurs": "NASA",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "boite",
+      "resume": "Petit rover pressurisé pour deux astronautes, issu du concept SPR, qui a mené au SEV. Environ 4,5 m de long et 3 m de haut selon une fiche encyclopédique.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "4,5 m", "source": "https://wikipedia.com/wiki/Lunar_Electric_Rover" },
+        { "quoi": "empattement", "valeur": "4 m", "source": "https://wikipedia.com/wiki/Lunar_Electric_Rover" },
+        { "quoi": "hauteur", "valeur": "3 m", "source": "https://wikipedia.com/wiki/Lunar_Electric_Rover" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Lunar Electric Rover (American Spacecraft)", "url": "https://www.american-spacecraft.org/lunar-rovers/lunar-electric-rover.html", "page_source": "https://www.american-spacecraft.org/lunar-rovers/lunar-electric-rover.html", "licence": "?", "verifie": false, "note": "Fiche trouvée en recherche, non ouverte." }
+      ],
+      "pour_kibsu": "Cabine de deux personnes sur un châssis dérivé : utile pour comparer un habitat fixe et un module mobile.",
+      "a_verifier": [
+        "Dimensions : source Wikipedia (miroir), fiche NASA non trouvée. À recouper.",
+        "Volume intérieur : non trouvé."
+      ]
+    },
+    {
+      "id": "blue-moon-mk2",
+      "nom": "Blue Moon (MK1 cargo, MK2 équipage)",
+      "annee": "2023-2029 (prévu)",
+      "auteurs": "Blue Origin",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Atterrisseur lunaire de Blue Origin. La version équipage MK2 a une cabine pour deux astronautes à la base du véhicule. Une maquette d'entraînement de plus de 5 m de haut a été livrée à la NASA.",
+      "dimensions": [
+        { "quoi": "hauteur de la maquette d'entraînement", "valeur": "plus de 5 m (15 ft)", "source": "https://www.space.com/space-exploration/artemis/blue-origins-lunar-lander-mockup-is-ready-for-nasa-artemis-astronaut-training" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Maquette d'entraînement Blue Origin (Space.com)", "url": "https://www.space.com/space-exploration/artemis/blue-origins-lunar-lander-mockup-is-ready-for-nasa-artemis-astronaut-training", "page_source": "https://www.space.com/space-exploration/artemis/blue-origins-lunar-lander-mockup-is-ready-for-nasa-artemis-astronaut-training", "licence": "?", "verifie": false, "note": "Article trouvé en recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Cabine placée à la base du véhicule, au ras du sol : cas à comparer avec Altair ou Apollo.",
+      "a_verifier": [
+        "Volume de la cabine MK2 : non trouvé.",
+        "La version MK1 semble sans cabine d'équipage, mais la source ne le dit pas explicitement.",
+        "Écoutille : non trouvée."
+      ]
+    },
+    {
+      "id": "lanyue",
+      "nom": "Lanyue (atterrisseur lunaire chinois, CMSA)",
+      "annee": "2023-2030 (prévu)",
+      "auteurs": "CMSA (Chine)",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Atterrisseur lunaire chinois prévu pour amener deux taïkonautes à la surface, avec un rover de 200 kg. Un prototype a passé des tests d'atterrissage et de décollage simulés en 2025.",
+      "dimensions": [
+        { "quoi": "masse de l'atterrisseur", "valeur": "environ 26 t", "source": "https://www.universetoday.com/articles/china-reveals-its-lunar-lander-design" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Article Universe Today : design de l'atterrisseur chinois", "url": "https://www.universetoday.com/articles/china-reveals-its-lunar-lander-design", "page_source": "https://www.universetoday.com/articles/china-reveals-its-lunar-lander-design", "licence": "?", "verifie": true, "note": "Deux rendus d'artiste de l'atterrisseur. Pas de coupe ni de plan légendé." }
+      ],
+      "pour_kibsu": "Cas d'un atterrisseur à deux parties (cabine d'atterrissage et module de propulsion), avec cabine d'équipage à l'avant : à comparer avec Apollo LM et Altair.",
+      "a_verifier": [
+        "Volume, diamètre et hauteur de la cabine : non trouvés. Chercher les communiqués CMSA ou Xinhua.",
+        "La page citée ne nomme pas Lanyue : l'identification vient du texte et reste à confirmer sur la page Wikipedia Lanyue (non ouverte).",
+        "Écoutille : non trouvée."
+      ]
+    },
+    {
+      "id": "mplm",
+      "nom": "MPLM (Multi-Purpose Logistics Module)",
+      "annee": "1994-2011",
+      "auteurs": "programme ISS (NASA, ASI) : auteurs à vérifier",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module cylindrique pressurisé transportant du fret pressurisé dans la soute de la navette jusqu'à l'ISS. Modèle de module de liaison à deux écoutilles d'extrémité.",
+      "dimensions": [
+        { "quoi": "longueur hors tout", "valeur": "6,6 m (partie cylindrique 4,8 m)", "source": "https://en.wikipedia.org/wiki/Multi-Purpose_Logistics_Module" },
+        { "quoi": "largeur", "valeur": "4,57 m", "source": "https://en.wikipedia.org/wiki/Multi-Purpose_Logistics_Module" },
+        { "quoi": "volume habitable", "valeur": "31 m³", "source": "https://en.wikipedia.org/wiki/Multi-Purpose_Logistics_Module" },
+        { "quoi": "longueur et diamètre (fiche ESA)", "valeur": "6,5 m × 4,5 m, extrémités coniques avec mécanismes d'amarrage et écoutilles", "source": "https://www.esa.int/ESA_Multimedia/Images/2003/07/Multi-Purpose_Logistics_Module_MPLM_Qualification_Module" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Multi-Purpose Logistics Module (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Multi-Purpose_Logistics_Module", "page_source": "https://en.wikipedia.org/wiki/Multi-Purpose_Logistics_Module", "licence": "CC BY-SA", "verifie": false, "note": "Non ouvert." },
+        { "type": "image", "titre": "MPLM Qualification Module (ESA)", "url": "https://www.esa.int/ESA_Multimedia/Images/2003/07/Multi-Purpose_Logistics_Module_MPLM_Qualification_Module", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2003/07/Multi-Purpose_Logistics_Module_MPLM_Qualification_Module", "licence": "© ESA", "verifie": true, "note": "Page image ESA : dimensions du module et extrémités coniques. Type de représentation (plan ou photo) non déterminé, image non ouverte." }
+      ],
+      "pour_kibsu": "Cylindre à écoutilles d'extrémité : modèle de module de liaison ou de sas à deux accès.",
+      "a_verifier": [
+        "31 m³ est un volume habitable (Wikipedia), pas un chiffre NASA. Aucun volume pressurisé NASA trouvé pour le MPLM.",
+        "Mémo NTRS : 21 pi × 15 pi (≈ 6,4 m × 4,6 m). Écart léger avec Wikipedia, à recouper.",
+        "Auteurs et contractant : à vérifier."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "NASA : dessins et coupes du module lunaire Apollo (1972-1975)", "url": "https://www.nasa.gov/history/diagrams/apollo.html", "note": "Index des dessins LM, domaine public. Page ouverte." },
+    { "titre": "Notes sur les écoutilles du LM (site personnel)", "url": "https://user.xmission.com/~jwindley/lmdoors.html", "note": "Source secondaire : écoutille avant d'environ 32 pouces. Page ouverte." },
+    { "titre": "NASA TN D-7084 : Apollo Experience Report, LM Structural Subsystem (1973)", "url": "https://ntrs.nasa.gov/api/citations/19730010174/downloads/19730010174.pdf", "note": "À lire en priorité pour les cotes du LM. Accès refusé (403) pendant la recherche." },
+    { "titre": "IAC 24 : papier Argonaut (IAC-24,A3,2B,2,x88747)", "url": "https://iafastro.directory/iac/paper/id/88747/abstract-pdf/IAC-24,A3,2B,2,x88747.brief.pdf", "note": "Pour l'Argonaut Habitat Unit. Non ouvert." },
+    { "titre": "ESA Exploration Science : plateforme Argonaut", "url": "https://explorationscience.esa.int/platforms/argonaut/", "note": "Page de référence Argonaut, non ouverte." }
+  ],
+  "pistes_non_explorees": [
+    "Gateway HALO (Northrop Grumman) : volume, diamètre et écoutilles non recherchés (quota de recherche épuisé deux fois pendant cette session).",
+    "Gateway Airlock (sas) : diamètre d'écoutille inconnu. Pistes NTRS : 20180007209 et 20230013256 (IAC 2023, Gateway).",
+    "Lanyue : plan ou coupe non trouvés (recherche bloquée). Communiqués CMSA ou Xinhua à lire.",
+    "Mengzhou (CMSA, Chine) : non recherché.",
+    "Rover pressurisé chinois (Tansuo, CMSA/GAC) : aucun agencement trouvé ; la recherche ne donne que des données de masse (200 kg) et de déploiement.",
+    "Orion : coupe intérieure cotée, non trouvée ; la page NASA et l'interview n'en ont pas.",
+    "MPLM : coupe NASA ou ASI, non trouvée.",
+    "Altair : coupe de la cabine et des écoutilles, non trouvée (article NASA Constellation à ouvrir).",
+    "Lunar Cruiser : page Toyota Europe et PDF MHI non ouverts.",
+    "Starship HLS : cotes officielles SpaceX (page 522, à rouvrir plus tard).",
+    "Lunar Cruiser : presse MHI de juillet 2023 (PDF) à lire pour un agencement.",
+    "NASA Docking System : écoutille d'amarrage de 800 mm, NTRS. Ce n'est pas un sas, à relire séparément.",
+    "Blue Moon MK1 : cabine et volume non trouvés.",
+    "Orion : diamètre exact de l'écoutille latérale non trouvé."
+  ]
+}

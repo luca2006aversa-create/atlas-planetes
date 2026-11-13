@@ -1,0 +1,519 @@
+{
+  "theme": "Projets d'agences d'architecture pour la Lune et Mars",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "foster-mars-habitat",
+      "nom": "Foster + Partners : habitat martien imprimé en 3D (regolithe)",
+      "annee": "2015",
+      "auteurs": "Foster + Partners (NASA 3D Printed Habitat Challenge)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "dome",
+      "resume": "Habitat de 93 m² pour quatre astronautes, imprimé à partir de régolithe martien par des robots. Des creuseurs préparent une fosse avant l'impression.",
+      "dimensions": [
+        { "quoi": "surface habitable", "valeur": "93 m²", "source": "https://www.dezeen.com/2015/09/25/foster-partners-concept-3d-printed-mars-habitat-robots-regolith/" },
+        { "quoi": "équipage", "valeur": "4 astronautes", "source": "https://www.dezeen.com/2015/09/25/foster-partners-concept-3d-printed-mars-habitat-robots-regolith/" },
+        { "quoi": "profondeur de la fosse de départ", "valeur": "1,5 m", "source": "https://www.dezeen.com/2015/09/25/foster-partners-concept-3d-printed-mars-habitat-robots-regolith/" }
+      ],
+      "documents": [
+        { "type": "3d", "titre": "Diagramme 3D du projet (légende « 3D diagram – click for larger image »)", "url": "http://static-2026.dezeen.com/uploads/2015/09/Mars-Habitat-Design-Competition_Foster-Partners_New-York_dezeen_1_1000.gif", "page_source": "https://www.dezeen.com/2015/09/25/foster-partners-concept-3d-printed-mars-habitat-robots-regolith/", "licence": "?", "verifie": true, "note": "Seul schéma de la page ; le type exact (axonométrie ou autre) n'est pas indiqué. Pas de plan ni de coupe dans l'article." }
+      ],
+      "pour_kibsu": "Référence de construction robotisée par impression du sol sur site. Plan à 93 m² pour quatre personnes : ordre de grandeur utile pour un programme de base. Les espaces privés et communs se mêlent dans des volumes qui se recouvrent.",
+      "a_verifier": [
+        "Aucun plan ni coupe cotés trouvés ; la page projet fosterandpartners.com n'a pas pu être ouverte (403).",
+        "Diamètre et hauteur des volumes non donnés dans la source."
+      ]
+    },
+    {
+      "id": "foster-lunar-esa",
+      "nom": "Foster + Partners : habitat lunaire imprimé (ESA)",
+      "annee": "2012",
+      "auteurs": "Foster + Partners (Xavier De Kestelier) avec Monolite (Enrico Dini), Alta, SSSC_PERCO et l'ESA (Laurent Pambaguian)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "dome",
+      "resume": "Dôme porteur en voûte caténaire, à paroi alvéolaire fermée, imprimé avec du sol lunaire simulé, avec un gonflable pressurisé à l'intérieur. Base pour quatre personnes.",
+      "dimensions": [
+        { "quoi": "équipage", "valeur": "4 personnes", "source": "https://spacearchitect.org/portfolio-item/lunar-outpost-design-for-esa/" },
+        { "quoi": "masse du sol simulé de la maquette", "valeur": "1,5 t", "source": "https://spacearchitect.org/portfolio-item/lunar-outpost-design-for-esa/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Image d'en-tête du projet Lunar Outpost (crédits NASA, ESA, SpaceX, DLR, LIQUIFER, SEArch+)", "url": "https://spacearchitect.org/wp-content/uploads/2020/06/hero_p07337_fp470839-1500x630.jpg", "page_source": "https://spacearchitect.org/portfolio-item/lunar-outpost-design-for-esa/", "licence": "?", "verifie": true, "note": "Une seule image, sans légende de plan ni coupe." },
+        { "type": "rapport", "titre": "Page ESA : image de la base imprimée en 3D (2018)", "url": "https://www.esa.int/ESA_Multimedia/Images/2018/10/3D-printed_lunar_base_design", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2018/10/3D-printed_lunar_base_design", "licence": "?", "verifie": false, "note": "Page introuvable à l'ouverture (404) ; lien issu d'une recherche." }
+      ],
+      "pour_kibsu": "Piste pour la voûte porteuse imprimée et la paroi alvéolaire (protection micrométéorites et radiation). Le gonflable intérieur sert d'abri pendant la construction.",
+      "a_verifier": [
+        "Dates : 2012 selon spacearchitect.org ; d'autres résumés disent 2013.",
+        "Plans et coupes non trouvés : fosterandpartners.com/projects/lunar-habitation (403) et image ESA (404) n'ont pas été lues.",
+        "Forme caténaire et paroi alvéolaire : vient de résumés ESA, non vérifiée sur la page projet."
+      ]
+    },
+    {
+      "id": "som-moon-village",
+      "nom": "SOM : Moon Village (avec ESA et MIT)",
+      "annee": "2019",
+      "auteurs": "SOM avec l'ESA et le MIT",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Masterplan d'une colonie lunaire permanente au bord du cratère Shackleton, près du pôle Sud, proche des dépôts de glace d'eau. Le projet est phasé, avec une première étape pour vivre, travailler et construire.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Rapport d'étude ESA-ESTEC : Conceptual Design of a Lunar Habitat (Moon Village)", "url": "https://www.lpi.usra.edu/lunar/strategies/ESA-ESTEC_2020_MoonVillageLunarHabitatStudy.pdf", "page_source": "https://www.lpi.usra.edu/lunar/strategies/ESA-ESTEC_2020_MoonVillageLunarHabitatStudy.pdf", "licence": "?", "verifie": false, "note": "Source la plus probable pour les sections détaillées. Ouverture refusée (403)." },
+        { "type": "rapport", "titre": "SOM : Master Planning and Space Architecture for a Moon Village (article IAC 2019)", "url": "https://www.som.com/wp-content/uploads/2021/07/20191213_som_research_iac_paper.pdf", "page_source": "https://www.som.com/ideas/research/master_planning_and_space_architecture_for_a_moon_village", "licence": "?", "verifie": false, "note": "Le PDF n'a pas pu être lu (flux binaire, plus de 10 Mo)." }
+      ],
+      "pour_kibsu": "Modèle de masterplan phasé avec des modules spécialisés et une logique de protection contre la poussière lunaire par les sas. Utile pour l'implantation près de Shackleton, donc pour le pôle Sud comme Kibsu.",
+      "a_verifier": [
+        "Aucun plan, coupe ni dimension de module confirmés : à extraire du rapport ESA-ESTEC ou de l'article IAC.",
+        "Position près de Shackleton : vient des résumés de presse, à confirmer sur le rapport."
+      ]
+    },
+    {
+      "id": "big-mars-science-city",
+      "nom": "BIG : Mars Science City",
+      "annee": "2017",
+      "auteurs": "BIG (Bjarke Ingels Group) pour le gouvernement des Émirats arabes unis, avec le Mohammed bin Rashid Space Centre et Dubai Municipality",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "dome",
+      "resume": "Ville de simulation martienne dans le désert près de Dubaï, avec des laboratoires sous dômes pressurisés pour tester l'énergie, l'eau et l'alimentation. Le projet est au stade d'idée.",
+      "dimensions": [
+        { "quoi": "surface du projet", "valeur": "56 810 m²", "source": "https://big.dk/projects/mars-city-6213" },
+        { "quoi": "surface du campus", "valeur": "17,5 ha", "source": "https://arquitecturaviva.com/works/mars-science-city" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Galerie BIG : images légendées (dôme pressurisé, nœuds imprimés en 3D, couche de protection)", "url": "https://media.big.dk/2022/07/19_17034_N78_webproject.jpg?width=1200", "page_source": "https://big.dk/projects/mars-city-6213", "licence": "?", "verifie": true, "note": "Rendus légendés : robots qui creusent un périmètre, dôme pressurisé, espaces interconnectés, protection avec végétation. Aucun plan ni coupe identifié." },
+        { "type": "image", "titre": "Galerie BIG : espaces interconnectés", "url": "https://media.big.dk/2022/07/19_17034_N77_webproject.jpg?width=1200", "page_source": "https://big.dk/projects/mars-city-6213", "licence": "?", "verifie": true, "note": "Légende : « Interconnected spaces are created. » Image non examinée visuellement." }
+      ],
+      "pour_kibsu": "Référence de dômes en nœuds reliés, avec une protection de radiation par eau dans les lucarnes et une couche végétale au-dessus des nœuds imprimés.",
+      "a_verifier": [
+        "Aucun plan ni coupe trouvés : une vingtaine d'images non légendées sur big.dk restent à identifier.",
+        "Diamètre des dômes non donné dans les sources ouvertes.",
+        "Le lien arquitecturaviva.com (17,5 ha) n'a pas été ouvert ; chiffre repris d'un résultat de recherche."
+      ]
+    },
+    {
+      "id": "hassell-lunar-master-plan",
+      "nom": "Hassell : Lunar Habitat Master Plan (ESA)",
+      "annee": "2024",
+      "auteurs": "Hassell avec l'ESA et Cranfield University",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Masterplan modulaire pour jusqu'à 144 personnes, fait de pods gonflables recouverts de sol lunaire imprimé. Une coque hexagonale en blocs emboîtables protège des radiations.",
+      "dimensions": [
+        { "quoi": "capacité", "valeur": "144 personnes", "source": "https://www.archdaily.com/1012946/hassell-unveils-lunar-habitat-masterplan-aiming-to-revolutionize-interstellar-living" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Image principale : base lunaire Hassell", "url": "https://static-2026.dezeen.com/uploads/2024/01/hassell-lunar-habitat-master-plan_dezeen_2364_col_hero-852x479.jpg", "page_source": "https://www.dezeen.com/2024/01/19/hassell-inflatable-moon-base-european-space-agency/", "licence": "© Hassell / Imigo (crédit Dezeen)", "verifie": true, "note": "Pods avec panneaux solaires satellites et habitation à l'intérieur." },
+        { "type": "image", "titre": "Pods recouverts de sol lunaire imprimé", "url": "https://static-2026.dezeen.com/uploads/2024/01/hassell-lunar-habitat-master-plan_dezeen_2364_col_8-411x635.jpg", "page_source": "https://www.dezeen.com/2024/01/19/hassell-inflatable-moon-base-european-space-agency/", "licence": "© Hassell / Imigo (crédit Dezeen)", "verifie": true, "note": "Pods couverts de sol lunaire imprimé en 3D." },
+        { "type": "image", "titre": "Blocs emboîtables (coque de protection)", "url": "https://static-2026.dezeen.com/uploads/2024/01/hassell-lunar-habitat-master-plan_dezeen_2364_col_6-411x274.jpg", "page_source": "https://www.dezeen.com/2024/01/19/hassell-inflatable-moon-base-european-space-agency/", "licence": "© Hassell / Imigo (crédit Dezeen)", "verifie": true, "note": "Éléments imbriqués comme des briques pour la protection contre les radiations." },
+        { "type": "image", "titre": "Intérieur", "url": "https://static-2026.dezeen.com/uploads/2024/01/hassell-lunar-habitat-master-plan_dezeen_2364_col_2-411x252.jpg", "page_source": "https://www.dezeen.com/2024/01/19/hassell-inflatable-moon-base-european-space-agency/", "licence": "© Hassell / Imigo (crédit Dezeen)", "verifie": true, "note": "Vue intérieure, pas de plan coté." },
+        { "type": "image", "titre": "Galerie ArchDaily Hassell (8 images, crédit Hassell)", "url": "https://images.adsttc.com/media/images/65c0/8c5f/f342/4e01/7c33/526a/medium_jpg/hassell-unveils-lunar-habitat-masterplan-aiming-to-revolutionize-interstellar-living_7.jpg?1707117753", "page_source": "https://www.archdaily.com/1012946/hassell-unveils-lunar-habitat-masterplan-aiming-to-revolutionize-interstellar-living", "licence": "© Hassell", "verifie": true, "note": "Images légendées « Courtesy of Hassell » sans type précis ; à examiner pour trouver un plan." }
+      ],
+      "pour_kibsu": "Référence pour un habitat modulaire évolutif en pods, avec une enveloppe de blocs de protection assemblés à sec. Programme partagé : restauration, sport, serres.",
+      "a_verifier": [
+        "Aucun plan ni coupe trouvés : la page hassellstudio.com n'a pas pu être ouverte (erreur de certificat).",
+        "Dimensions des pods et épaisseur de protection non publiées dans les sources ouvertes.",
+        "Implantation près de Shackleton : vient d'un résumé de presse."
+      ]
+    },
+    {
+      "id": "clouds-ao-mars-ice-house",
+      "nom": "Clouds AO et SEArch : Mars Ice House",
+      "annee": "2015",
+      "auteurs": "Clouds AO et SEArch (NASA 3D Printed Habitat Challenge, 1er prix)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien en double coque de glace imprimée en 3D, sous une membrane ETFE transparente, pour quatre explorateurs. La serre verticale entre les coques sert de tampon.",
+      "dimensions": [
+        { "quoi": "équipage", "valeur": "4 explorateurs", "source": "https://cloudsao.com/MARS-ICE-HOUSE" },
+        { "quoi": "épaisseur de la coque de glace", "valeur": "5 cm", "source": "https://cloudsao.com/MARS-ICE-HOUSE" },
+        { "quoi": "régolithe recouvrant la glace", "valeur": "30 cm", "source": "https://cloudsao.com/MARS-ICE-HOUSE" },
+        { "quoi": "échelle de la maquette", "valeur": "1:75", "source": "https://cloudsao.com/MARS-ICE-HOUSE" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Figure 6 : double coque de glace imprimée autour d'un habitat-atterrisseur, serre verticale entre les deux", "url": "https://cloudsao.com/MARS-ICE-HOUSE", "page_source": "https://cloudsao.com/MARS-ICE-HOUSE", "licence": "?", "verifie": true, "note": "Page projet avec 8 figures non identifiées comme plans ou coupes ; URLs d'images non fournies par la page." },
+        { "type": "maquette", "titre": "Photos de la maquette imprimée 1:75 (résine) et de la maquette de l'université McGill", "url": "https://cloudsao.com/MARS-ICE-HOUSE", "page_source": "https://cloudsao.com/MARS-ICE-HOUSE", "licence": "?", "verifie": true, "note": "Figures 7 et 8 de la page projet." }
+      ],
+      "pour_kibsu": "Référence de coque double avec espace tampon (serre, sas) entre enveloppe et habitat, et de protection par épaisseur de matière.",
+      "a_verifier": [
+        "Aucun plan ni coupe cotés : diamètre, hauteur et surface non donnés sur la page Clouds AO.",
+        "Chercher les plans dans les publications NASA 3D Printed Habitat Challenge."
+      ]
+    },
+    {
+      "id": "nuwa-abiboo-mars",
+      "nom": "ABIBOO : Nüwa, ville de falaise sur Mars",
+      "annee": "2021",
+      "auteurs": "ABIBOO",
+      "lieu": "mars",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Ville taillée dans une falaise de 1 km, avec des tunnels qui amènent la lumière et des cultures au sommet. Elle est prévue pour 250 000 habitants.",
+      "dimensions": [
+        { "quoi": "population", "valeur": "250 000 habitants", "source": "https://www.dezeen.com/2021/04/07/nuwa-mars-city-cliffside-abiboo/" },
+        { "quoi": "hauteur de la falaise", "valeur": "1 km", "source": "https://www.dezeen.com/2021/04/07/nuwa-mars-city-cliffside-abiboo/" },
+        { "quoi": "surface bâtie", "valeur": "55 000 000 m²", "source": "https://www.dezeen.com/2021/04/07/nuwa-mars-city-cliffside-abiboo/" },
+        { "quoi": "volume d'air respirable", "valeur": "188 000 000 m³", "source": "https://www.dezeen.com/2021/04/07/nuwa-mars-city-cliffside-abiboo/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Rendus Dezeen : ville creusée dans la falaise, lumière par tunnels", "url": "https://www.dezeen.com/2021/04/07/nuwa-mars-city-cliffside-abiboo/", "page_source": "https://www.dezeen.com/2021/04/07/nuwa-mars-city-cliffside-abiboo/", "licence": "?", "verifie": true, "note": "Légendes : ville dans la falaise, nourriture au sommet, tunnels qui laissent passer la lumière. Aucun plan ni coupe dans l'article." }
+      ],
+      "pour_kibsu": "Référence de habitat enterré ou adossé : protection radiologique par la masse, lumière par puits, production au sommet.",
+      "a_verifier": [
+        "Modules de 10 × 60 m à deux niveaux et tunnels : vus dans des résumés (Inhabitat, Designboom), non ouverts ; à confirmer.",
+        "Aucun plan ni coupe trouvés : la source ABIBOO n'a pas été consultée."
+      ]
+    },
+    {
+      "id": "spacefactory-marsha",
+      "nom": "AI SpaceFactory : MARSHA",
+      "annee": "2018-2019",
+      "auteurs": "AI SpaceFactory (NASA 3D Printed Habitat Challenge)",
+      "lieu": "mars",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Habitat martien vertical imprimé en 3D, à double coque, sur quatre niveaux : garage et laboratoire humide, social et laboratoire sec, espaces privés, loisirs.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Concept layout de MARSHA à quatre niveaux (figure ResearchGate)", "url": "https://www.researchgate.net/figure/Concept-layout-of-MARSHA-habitat-by-AI-Space-Factory-with-4-floors-10_fig1_387939688", "page_source": "https://www.researchgate.net/figure/Concept-layout-of-MARSHA-habitat-by-AI-Space-Factory-with-4-floors-10_fig1_387939688", "licence": "?", "verifie": false, "note": "Repéré dans un résultat de recherche, non ouvert. Titre indique un plan de concept à 4 étages." },
+        { "type": "image", "titre": "Page de présentation MARSHA", "url": "https://spacefactory.ai/marsha", "page_source": "https://spacefactory.ai/marsha", "licence": "?", "verifie": true, "note": "Page ouverte : aucun plan ni dimension de l'habitat ; seulement des mentions du prototype de 2019." }
+      ],
+      "pour_kibsu": "Référence d'empilement vertical avec zones de service en bas et de vie en haut ; sas et garage au rez-de-chaussée.",
+      "a_verifier": [
+        "Répartition des étages vient de résumés, non de la source primaire : à confirmer sur la figure ResearchGate.",
+        "Diamètre et hauteur non trouvés.",
+        "La page spacefactory.ai annonce quatre images de plan qui n'ont pas pu être lues."
+      ]
+    },
+    {
+      "id": "moontopia-eleven",
+      "nom": "Moontopia (Eleven Magazine) : concours de colonies lunaires",
+      "annee": "2016-2017",
+      "auteurs": "Eleven Magazine, jury avec des concepteurs de la NASA et des chercheurs",
+      "lieu": "lune",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Premier concours international d'idées de l'Eleven Magazine : une colonie lunaire autonome pour vivre, travailler, faire de la recherche et du tourisme. Neuf projets primés ont été annoncés en janvier 2017.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Moontopia : les neuf projets primés (Dezeen, 2017)", "url": "https://www.dezeen.com/2017/01/17/nine-visions-lunar-architecture-moon-moontopia-competition/", "page_source": "https://www.dezeen.com/2017/01/17/nine-visions-lunar-architecture-moon-moontopia-competition/", "licence": "?", "verifie": true, "note": "Page ouverte : liste des neuf lauréats (Test Lab, Momentum Virium, Modulpia, Platinum City, Upside Down, Womb, Looking through the Moon Eye, Lunar Oasis, The Aerosphere). Images sans type de dessin." }
+      ],
+      "pour_kibsu": "Source de concepts étudiants pour comparer des colonies lunaires. Les projets primés sont à ouvrir un par un pour chercher des plans.",
+      "a_verifier": [
+        "« Volume Zero » non confirmé comme lié à Moontopia : rien dans les résultats.",
+        "Les images des neuf lauréats n'ont pas été ouvertes une à une.",
+        "Le lien ArchDaily (archdaily.com/803985/whatsapp:/send) semble mal formé : ne pas utiliser."
+      ]
+    },
+    {
+      "id": "lunark-saga",
+      "nom": "SAGA Space Architects : LUNARK (Mark 1)",
+      "annee": "2018-2020",
+      "auteurs": "SAGA Space Architects (Copenhague), Sebastian Aristotelis et Karl-Johan Sørensen",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Habitat analogue lunaire pliant en origami, à deux dômes et un cylindre central, en fibre de carbone. Il a été testé pendant 60 jours dans le Nord du Groenland par deux occupants.",
+      "dimensions": [
+        { "quoi": "volume intérieur déployé", "valeur": "17,2 m³", "source": "https://www.saga.dk/projects/lunark/habitat" },
+        { "quoi": "volume replié (stockage)", "valeur": "2,2 m³", "source": "https://www.saga.dk/projects/lunark/habitat" },
+        { "quoi": "masse", "valeur": "1 738 kg", "source": "https://www.saga.dk/projects/lunark/habitat" },
+        { "quoi": "dimensions d'expédition", "valeur": "2,23 × 2,23 × 2,23 m", "source": "https://www.saga.dk/projects/lunark/habitat" },
+        { "quoi": "équipage", "valeur": "2 personnes", "source": "https://www.saga.dk/projects/lunark/habitat" },
+        { "quoi": "augmentation de volume au déploiement", "valeur": "750 %", "source": "https://www.saga.dk/projects/lunark/habitat" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Plan d'étage : niveau bas (Bottom Dome, stockage)", "url": "https://www.saga.dk/next_assets/lunark/lunark_plan_floor.jpg", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "© SAGA Space Architects", "verifie": true, "note": "Plan de la coupole basse : stockage, nourriture, équipement de sport, réservoir d'urine, batteries." },
+        { "type": "plan", "titre": "Plan d'étage : demi-inférieur (Middle cylinder)", "url": "https://www.saga.dk/next_assets/lunark/lunark_plan_lower.jpg", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "© SAGA Space Architects", "verifie": true, "note": "Cylindre central : bureaux, sas, toilettes, chauffage, réacteur à algues, poste de contrôle." },
+        { "type": "plan", "titre": "Plan d'étage : demi-supérieur (Top Dome)", "url": "https://www.saga.dk/next_assets/lunark/lunark_plan_upper.jpg", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "© SAGA Space Architects", "verifie": true, "note": "Coupole haute : deux couchettes, panneaux lumineux circadiens, barre de traction." },
+        { "type": "3d", "titre": "Axonométrie de l'habitat", "url": "https://www.saga.dk/next_assets/lunark/hab_axo.jpg", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "© SAGA Space Architects", "verifie": true, "note": "Dessin axonométrique (alt : « Axonometric drawing of the habitat »)." },
+        { "type": "coupe", "titre": "Section longitudinale et plan de disposition (LUNARK)", "url": "https://www.stirworld.com/images/see/1607_Lunark_6.jpg", "page_source": "https://www.stirworld.com/see-features-what-does-living-on-the-moon-look-like-sagas-lunar-habitat-explores", "licence": "?", "verifie": true, "note": "Légende : « Longitudinal cross section and layout plan of the LUNARK habitat ». Image non examinée visuellement." },
+        { "type": "coupe", "titre": "Section montrant la division de l'espace dans la coque", "url": "https://www.stirworld.com/images/see/1607_Lunark_5.jpg", "page_source": "https://www.stirworld.com/see-features-what-does-living-on-the-moon-look-like-sagas-lunar-habitat-explores", "licence": "?", "verifie": true, "note": "Légende : « Section through the LUNARK habitat showing space division within the pod »." },
+        { "type": "3d", "titre": "Coupe éclatée animée (« The habitat dissected »)", "url": "https://www.saga.dk/next_assets/lunark/hab_layers.gif", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "© SAGA Space Architects", "verifie": true, "note": "Montre l'aluminium, les parois intérieures, le sas, les cabines et le logement." }
+      ],
+      "pour_kibsu": "Référence très proche d'un plan d'habitat à trois niveaux (stockage, vie, couchage) avec sas au centre. Les plans d'étage sont directement cotables une fois l'échelle trouvée. Pour Kibsu : séparation sas / cabines / vie dans un volume compact.",
+      "a_verifier": [
+        "Les plans n'ont pas d'échelle ni de cotes sur la page : chercher les fichiers sources ou calculer à partir de 17,2 m³.",
+        "Surface au sol : une source donne 4,5 m² (ICON Magazine, iconeye.com) et une autre 17,2 m³ de volume : mesures différentes, ne pas mélanger.",
+        "Durée du test : 60 jours sur la page projet, 100 jours ailleurs ; retenir 60 jours.",
+        "Nombre d'occupants dans les lectures d'Archpaper et de SAGA : toilettes au milieu, à confirmer."
+      ]
+    },
+    {
+      "id": "liquifer-ihab",
+      "nom": "LIQUIFER (avec Airbus) : I-Hab, module habitable de la station lunaire Gateway",
+      "annee": "2018-2019",
+      "auteurs": "Airbus (maître d'œuvre), LIQUIFER Systems Group (conception architecturale), Thales Alenia Space, Sener, Quinetiq et autres",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Module habitable de la station Gateway, étudié pendant la phase A/B1 de l'ESA. LIQUIFER a travaillé sur les aménagements intérieurs : zone de travail scientifique, rangement, circulation d'évacuation.",
+      "dimensions": [
+        { "quoi": "volume intérieur", "valeur": "48 m³", "source": "https://liquifer.com/gateway-i-hab/" },
+        { "quoi": "équipage", "valeur": "4 personnes", "source": "https://liquifer.com/gateway-i-hab/" },
+        { "quoi": "durée de mission", "valeur": "30 jours", "source": "https://liquifer.com/gateway-i-hab/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Visuel I-Hab (crédit Gateway i-HAB)", "url": "https://i0.wp.com/liquifer.com/wp-content/uploads/2020/04/10_I-Hab_Web_Thumb.jpg?resize=800%2C534&ssl=1", "page_source": "https://liquifer.com/gateway-i-hab/", "licence": "?", "verifie": true, "note": "Vignette de la page LIQUIFER ; pas de plan visible dans le texte." },
+        { "type": "rapport", "titre": "IAC-19 : Interior Configuration Concepts for the Gateway I-Hab (E5.1A.1)", "url": "https://spacearchitect.org/pubs/IAC-19-E5.1A.1.pdf", "page_source": "https://iafastro.directory/iac/archive/browse/IAC-19/E5/1A/49818/", "licence": "?", "verifie": false, "note": "Article contenant les figures d'aménagement intérieur (crédit Airbus DS et LIQUIFER) ; PDF illisible à l'ouverture (binaire, tronqué)." }
+      ],
+      "pour_kibsu": "Référence pour la circulation d'évacuation et le rangement sur un petit volume à quatre personnes. Chiffres à croiser avant usage.",
+      "a_verifier": [
+        "Autre volume trouvé : 78 m³ (une source, sans précision) : à trancher sur l'article IAC-19.",
+        "Plans d'aménagement non lus : les figures sont dans l'article IAC-19, PDF illisible.",
+        "Statut du programme Gateway (annulation annoncée en mars 2026 selon Wikipedia) : une seule source, à vérifier auprès de l'ESA ou de la NASA."
+      ]
+    },
+    {
+      "id": "liquifer-rama",
+      "nom": "LIQUIFER : RAMA, rover pressurisé Lune / Mars",
+      "annee": "2007-2009",
+      "auteurs": "LIQUIFER Systems Group, sous-traitance Thales Alenia Space pour l'ESA (Surface Architecture Studies)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "capsule",
+      "resume": "Rover pressurisé pour l'exploration de surface de la Lune et de Mars, pour deux ou trois personnes pendant environ 40 jours. Le nom vient de « Rendez-vous with Rama ».",
+      "dimensions": [
+        { "quoi": "équipage", "valeur": "2 à 3 personnes", "source": "https://liquifer.com/rama/" },
+        { "quoi": "durée", "valeur": "environ 40 jours", "source": "https://liquifer.com/rama/" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Coupes RAMA (fichier « cut_01 »)", "url": "https://i0.wp.com/liquifer.com/wp-content/uploads/2020/03/cut_01.jpg?resize=800%2C410&ssl=1", "page_source": "https://liquifer.com/rama/", "licence": "?", "verifie": true, "note": "Nom de fichier suggérant une coupe ; image non examinée visuellement, pas de légende sur la page." },
+        { "type": "coupe", "titre": "Coupes RAMA (fichier « neue_schnitte_09a », « Schnitte » = coupes)", "url": "https://i0.wp.com/liquifer.com/wp-content/uploads/2020/03/neue_schnitte_09a.jpg?resize=800%2C433&ssl=1", "page_source": "https://liquifer.com/rama/", "licence": "?", "verifie": true, "note": "Type déduit du nom de fichier allemand ; à confirmer en ouvrant l'image." },
+        { "type": "3d", "titre": "Visualisation RAMA (crédit LIQUIFER)", "url": "https://i0.wp.com/liquifer.com/wp-content/uploads/2020/03/6_Rama_Web_Thumb.jpg?resize=800%2C534&ssl=1", "page_source": "https://liquifer.com/rama/", "licence": "?", "verifie": true, "note": "« Image: RAMA, visualization: LIQUIFER »." }
+      ],
+      "pour_kibsu": "Référence pour un volume pressurisé mobile à deux ou trois personnes, avec combinaisons et sas. Utile pour une cellule d'exploration.",
+      "a_verifier": [
+        "Dimensions non données sur la page LIQUIFER.",
+        "Les deux coupes sont identifiées par leur nom de fichier, pas par une légende : les ouvrir pour confirmer."
+      ]
+    },
+    {
+      "id": "liquifer-shee-moonwalk",
+      "nom": "LIQUIFER : SHEE et MOONWALK (habitats déployables)",
+      "annee": "2015-2016",
+      "auteurs": "LIQUIFER Systems Group",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "SHEE : habitat analogue déployable sans intervention humaine, reliable en « village » de modules. MOONWALK : habitat autonome pour deux personnes, avec une interface suitport pour les combinaisons, testé à Rio Tinto et près de Marseille (gravité lunaire, 2016).",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Brochure SHEE (LIQUIFER, 2015)", "url": "https://liquifer.com/wp-content/uploads/2021/05/SHEEbrochure_2015.pdf", "page_source": "https://liquifer.com/wp-content/uploads/2021/05/SHEEbrochure_2015.pdf", "licence": "?", "verifie": false, "note": "PDF de 3 Mo, illisible à l'ouverture (binaire). À extraire pour voir les plans." },
+        { "type": "rapport", "titre": "Executive Study MOONWALK (ResearchGate)", "url": "https://www.researchgate.net/publication/310589002_Executive_Study_MOONWALK_-_a_step_further_into_the_future_of_human_space_exploration", "page_source": "https://www.researchgate.net/publication/310589002_Executive_Study_MOONWALK_-_a_step_further_into_the_future_of_human_space_exploration", "licence": "?", "verifie": false, "note": "Repéré dans un résultat de recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Référence pour un habitat déployable et la connexion entre habitat et combinaison (suitport), donc pour les sas.",
+      "a_verifier": [
+        "Aucune dimension trouvée dans les sources ouvertes.",
+        "Statut de MOONWALK actuel inconnu."
+      ]
+    },
+    {
+      "id": "starport-mars",
+      "nom": "Jacques Rougerie (Database) : Starport Mars",
+      "annee": "2021",
+      "auteurs": "Walaiporn Nakapan (chef de projet), Nuttawat Pai-Angkoon, Ruwan Fernando ; Fondation Jacques Rougerie",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "capsule",
+      "resume": "Village martien vertical : un port d'amarrage en haut, une base de recherche au sol, des habitats souterrains reliés par des ascenseurs spatiaux. Tour autonome, répliquable en réseau.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Galerie Starport Mars (10 vues, sans légende)", "url": "https://www.jacquesrougeriedatabase.com/fileadmin/_processed_/c/9/csm_picture_0_5c17a11a6e.jpg", "page_source": "https://www.jacquesrougeriedatabase.com/project/starport-mars", "licence": "?", "verifie": true, "note": "Galerie ouverte : aucune légende ni alt text indiquant plan ou coupe. Images à examiner." },
+        { "type": "rapport", "titre": "Poster A3 du projet (PDF, mention spéciale Focus 2021)", "url": "https://www.jacquesrougeriedatabase.com/fileadmin/jacques_rougerie_database/projects/PDFs/21_S_Mention_speciale_GP_NAKAPAN-_STARPORT-MARS-A3.pdf", "page_source": "https://www.jacquesrougeriedatabase.com/project/starport-mars", "licence": "?", "verifie": false, "note": "PDF de 10 Mo, non lu (trop volumineux). Susceptible de contenir coupe et plan." }
+      ],
+      "pour_kibsu": "Idée d'empilement vertical avec une tête d'accès au-dessus et des habitats enterrés en dessous. Utile pour une coupe de principe.",
+      "a_verifier": [
+        "Aucune dimension publiée sur la page de la base.",
+        "Aucun plan ni coupe identifié : le poster A3 est à ouvrir par un outil PDF."
+      ]
+    },
+    {
+      "id": "seaspace-rougerie",
+      "nom": "Jacques Rougerie : SeaSpace (habitat sous-marin pour entraînement Lune / Mars)",
+      "annee": "2008",
+      "auteurs": "Jacques Rougerie Architectes Associés (Rougerie-Tangram)",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "capsule",
+      "resume": "Coque en aluminium suspendue en pleine eau, à 12 à 100 m de profondeur, pour entraîner des équipages aux missions lunaires et martiennes. Prévue pour huit personnes.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "27 m", "source": "https://www.rougerie-tangram.com/en/project/seaspace/" },
+        { "quoi": "largeur", "valeur": "9 m", "source": "https://www.rougerie-tangram.com/en/project/seaspace/" },
+        { "quoi": "hauteur", "valeur": "5,8 m", "source": "https://www.rougerie-tangram.com/en/project/seaspace/" },
+        { "quoi": "profondeur de fonctionnement", "valeur": "12 à 100 m", "source": "https://www.rougerie-tangram.com/en/project/seaspace/" },
+        { "quoi": "équipage", "valeur": "8 personnes (séjours de 3 à 6 mois)", "source": "https://architizer.com/projects/seaspace-1/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "SeaSpace #1", "url": "https://www.rougerie-tangram.com/wp-content/uploads/2021/10/SEASPACE1.jpg", "page_source": "https://www.rougerie-tangram.com/en/project/seaspace/", "licence": "?", "verifie": true, "note": "Image de la page ; pas de légende de plan ni de coupe." },
+        { "type": "image", "titre": "SeaSpace #3", "url": "https://www.rougerie-tangram.com/wp-content/uploads/2021/10/SEASPACE2.jpg", "page_source": "https://www.rougerie-tangram.com/en/project/seaspace/", "licence": "?", "verifie": true, "note": "Image de la page ; type non indiqué." },
+        { "type": "image", "titre": "SeaSpace #4", "url": "https://www.rougerie-tangram.com/wp-content/uploads/2021/10/SEASPACE3.jpg", "page_source": "https://www.rougerie-tangram.com/en/project/seaspace/", "licence": "?", "verifie": true, "note": "Image de la page ; type non indiqué." }
+      ],
+      "pour_kibsu": "Référence de dimensions compactes (27 × 9 × 5,8 m) pour huit personnes : ordre de grandeur utile pour un habitat à modules. Les coupes manquent.",
+      "a_verifier": [
+        "Aucun plan ni coupe trouvé dans les sources ouvertes.",
+        "Année 2008 : vient de résumés (Architizer), non confirmée sur la page Rougerie-Tangram."
+      ]
+    },
+    {
+      "id": "searchplus-spacexarch",
+      "nom": "SEArch+ et ApisCor : SpaceXArch (Mars Habitat)",
+      "annee": "2018",
+      "auteurs": "Melodie Yashar (SEArch+, chef de projet), Christina Ciardullo, Michael Morris, Rebeccah Pailes-Friedman, ApisCor (Sergey Nefedov, Nikita Chen-iun-tai), NASA Langley (Robert Moses) et autres",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "dome",
+      "resume": "Habitat martien gonflable et imprimé en 3D, conçu pour le troisième cycle du concours NASA. Une maquette au tiers d'échelle a été testée sur 4,5 × 4,5 m d'emprise.",
+      "dimensions": [
+        { "quoi": "emprise (événement Level 3)", "valeur": "4,5 m × 4,5 m", "source": "http://spacearchitect.org/portfolio-item/mars-x-house-v1/" },
+        { "quoi": "échelle de la maquette", "valeur": "1/3", "source": "http://spacearchitect.org/portfolio-item/mars-x-house-v1/" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Coupe de paroi du gonflable (wall section inflatable-01)", "url": "https://spacearchitect.org/wp-content/uploads/2020/03/wall-section-inflatable-01-Christina-Ciardullo-2000x1210.png", "page_source": "http://spacearchitect.org/portfolio-item/mars-x-house-v1/", "licence": "© Christina Ciardullo", "verifie": true, "note": "Nom de fichier « wall section » : coupe de paroi d'après le titre de l'image." },
+        { "type": "coupe", "titre": "Section du gonflable 01 (Inflatable Section 01 – final)", "url": "https://spacearchitect.org/wp-content/uploads/2020/03/Inflatable-Section-01-final_small-Christina-Ciardullo-2000x1500.jpg", "page_source": "http://spacearchitect.org/portfolio-item/mars-x-house-v1/", "licence": "© Christina Ciardullo", "verifie": true, "note": "Titre « Section » : coupe, non examinée visuellement." },
+        { "type": "image", "titre": "Mars Habitat au midi martien (rendu)", "url": "https://spacearchitect.org/wp-content/uploads/2020/03/Mars-Habitat_Noon_MY-Christina-Ciardullo-2000x1125.jpg", "page_source": "http://spacearchitect.org/portfolio-item/mars-x-house-v1/", "licence": "© Christina Ciardullo", "verifie": true, "note": "Rendu." }
+      ],
+      "pour_kibsu": "Référence de coupe de paroi gonflable (multicouche) et d'emprise compacte. Les coupes permettent de voir l'épaisseur de la paroi.",
+      "a_verifier": [
+        "Diamètre, hauteur, surface et équipage non donnés : la page ne les précise pas.",
+        "Les deux coupes sont identifiées par leur titre de fichier : à ouvrir pour confirmer.",
+        "Lien version v2 (spacearchitect.org/portfolio-item/mars-x-house-v2/) non ouvert."
+      ]
+    },
+    {
+      "id": "alpha-mars-city-design",
+      "nom": "Mars City Design : Alpha (dunes barchanes)",
+      "annee": "2016-2017",
+      "auteurs": "Christina Ciardullo (CMU Space Architecture Studio) avec Mars City Design, CRP USA, Walter P. Moore, Labtop",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien inspiré des dunes en croissant (barchanes), avec une coque qui protège des radiations et des impacts de météorites. Sélectionné dans le top 10 du NASA 3D Printed Habitat Challenge 2019.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Alpha Dune Habitats (© Mars City Design 2017)", "url": "https://images.squarespace-cdn.com/content/v1/5da6456e819a515847d4c00e/078775df-8979-48ef-8ea6-da961cebf1d3/MCD+Habitats", "page_source": "https://www.marscitydesign.com/alpha-40", "licence": "© Mars City Design", "verifie": true, "note": "Légende « Alpha Dune Habitats » ; type non précisé." },
+        { "type": "image", "titre": "Alpha 2.0 (sélection top 10 NASA 2019)", "url": "https://images.squarespace-cdn.com/content/v1/5da6456e819a515847d4c00e/1633824458760-NE79E9590CYFVRO4IXKZ/MCD_Alpha2.0.jpeg", "page_source": "https://www.marscitydesign.com/alpha-40", "licence": "© Mars City Design", "verifie": true, "note": "Image de la version 2.0 du projet." }
+      ],
+      "pour_kibsu": "Référence de forme d'enveloppe adaptée au vent et au rayonnement (dune), et de coque imprimée qui protège des micrométéorites.",
+      "a_verifier": [
+        "Aucun plan ni coupe identifié : la page n'en publie pas.",
+        "Le statut « Winner » ou « Top 10 » diverge selon les légendes de la page : retenir « Top 10 ».",
+        "Page marscitydesign.com/alpha-40 ouverte ; l'adresse lunark.space/news a renvoyé 404 (non utilisée)."
+      ]
+    },
+    {
+      "id": "mit-redwood-forest",
+      "nom": "MIT : Redwood Forest (Mars City Design 2017)",
+      "annee": "2017",
+      "auteurs": "Équipe MIT (lauréate du prix Mars City Design 2017)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "dome",
+      "resume": "Habitats-arbres : dômes gonflables qui abritent des cultures hydroponiques, reliés par des tunnels « racines » souterrains. Chaque dôme accueille environ 50 personnes.",
+      "dimensions": [
+        { "quoi": "personnes par dôme", "valeur": "environ 50", "source": "https://www.space.com/38881-mit-team-wins-mars-city-design-competition.html" },
+        { "quoi": "population totale visée", "valeur": "environ 10 000 (environ 200 structures)", "source": "https://inhabitat.com/mits-winning-solar-powered-dome-tree-habitats-for-mars-mimic-earthly-forests/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Image MIT Redwood Forest (Inhabitat)", "url": "https://inhabitat.com/mits-winning-solar-powered-dome-tree-habitats-for-mars-mimic-earthly-forests/mit-redwood-forest/", "page_source": "https://inhabitat.com/mits-winning-solar-powered-dome-tree-habitats-for-mars-mimic-earthly-forests/", "licence": "?", "verifie": false, "note": "Repéré dans un résultat de recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Référence de dôme au-dessus du sol et de réseau souterrain pour les espaces privés. Utile pour la séparation public / privé.",
+      "a_verifier": [
+        "Aucun plan ni coupe trouvé ; le site MIT n'a pas été ouvert.",
+        "Les 50 personnes et les 10 000 habitants viennent de presse : à confirmer sur le concours Mars City Design."
+      ]
+    },
+    {
+      "id": "yac-moon-station",
+      "nom": "Young Architects Competitions : Moon Station (concours 2023)",
+      "annee": "2023",
+      "auteurs": "Concours YAC avec l'ESA (Topical Team on Planetary Caves) ; lauréats : Silvio De Mio (« Earth + Beyond »), Maksim Bazaev, Seongha Han et Seunghyun Wang (« TEAM_SH »)",
+      "lieu": "lune",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Concours de bases lunaires dans la fosse de Lacus Mortis et dans les tubes de lave souterrains. Prix de 15 000 € et plusieurs mentions dont « lunae abyssi », « Lunar Tardigrade » et « Future Manned Lunar Research Station ».",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Page du concours Moon Station (liste des lauréats)", "url": "https://www.youngarchitectscompetitions.com/past-competitions/moon-station", "page_source": "https://www.youngarchitectscompetitions.com/past-competitions/moon-station", "licence": "?", "verifie": true, "note": "Page ouverte : liste des prix et mentions ; pas de plan ni de coupe légendés, seulement des images d'illustration." }
+      ],
+      "pour_kibsu": "Source d'idées pour habitats dans les tubes de lave (protection radiation et température stable). Chaque lauréat est à ouvrir pour chercher les plans.",
+      "a_verifier": [
+        "Le nom « Maksim Bazaev » apparaît sans titre de projet : à vérifier.",
+        "Plans des lauréats non trouvés ; certaines paires nom / projet sont à relire sur la page d'origine."
+      ]
+    },
+    {
+      "id": "instarz-remnant",
+      "nom": "Instarz : Remnant (habitat lunaire extensible)",
+      "annee": "2019",
+      "auteurs": "Instarz (Mayagüez, Porto Rico, fondée en 2018)",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Habitat lunaire compact et extensible, pour huit astronautes pendant jusqu'à 12 mois, qui tient dans un lanceur commercial de 5 m. Au stade de financement de départ.",
+      "dimensions": [
+        { "quoi": "volume pressurisé", "valeur": "1 000 m³", "source": "https://www.dezeen.com/2019/08/05/instarz-expandable-lunar-habitat-technology/" },
+        { "quoi": "diamètre du lanceur", "valeur": "5 m", "source": "https://www.dezeen.com/2019/08/05/instarz-expandable-lunar-habitat-technology/" },
+        { "quoi": "équipage", "valeur": "8 astronautes", "source": "https://www.dezeen.com/2019/08/05/instarz-expandable-lunar-habitat-technology/" },
+        { "quoi": "durée de mission", "valeur": "jusqu'à 12 mois", "source": "https://www.dezeen.com/2019/08/05/instarz-expandable-lunar-habitat-technology/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Remnant : image principale (hero)", "url": "https://static-2026.dezeen.com/uploads/2019/07/instarz-moon-habitat-technology-space-design-astronauts-_dezeen_2364_hero-852x480.jpg", "page_source": "https://www.dezeen.com/2019/08/05/instarz-expandable-lunar-habitat-technology/", "licence": "?", "verifie": true, "note": "Image sans type précisé." },
+        { "type": "image", "titre": "Remnant : image de corps de texte n° 2", "url": "https://static-2026.dezeen.com/uploads/2019/07/instarz-moon-habitat-technology-space-design-astronauts-_dezeen_2364_col_2-411x545.jpg", "page_source": "https://www.dezeen.com/2019/08/05/instarz-expandable-lunar-habitat-technology/", "licence": "?", "verifie": true, "note": "Alt : « The Remnant lunar surface habitat by Instarz »." }
+      ],
+      "pour_kibsu": "Référence de volume pressurisé pour huit personnes et de l'idée d'un habitat qui tient dans un lanceur de 5 m (repliage).",
+      "a_verifier": [
+        "Aucun plan ni coupe trouvé : Dezeen ne légende pas ses images.",
+        "Mars : une seule liste de catalogue (Factories in Space) la cite ; pas de projet martien confirmé.",
+        "Statut Dormant / early stage selon Factories in Space, non ouvert."
+      ]
+    },
+    {
+      "id": "eurohab-spartan",
+      "nom": "Spartan Space : EuroHab (habitat gonflable de surface)",
+      "annee": "2021-2022",
+      "auteurs": "Spartan Space (Peter Weiss), prix de la Fondation Jacques Rougerie",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "capsule",
+      "resume": "Habitat gonflable de surface lunaire pour jusqu'à quatre astronautes, abri secondaire pour les excursions. Premier mock-up exposé à l'IAC 2021 ; prototype présenté à Abu Dhabi en 2022.",
+      "dimensions": [
+        { "quoi": "diamètre de la structure d'origine", "valeur": "7 m (réduit ensuite)", "source": "https://en.wikipedia.org/wiki/Spartan_Space" },
+        { "quoi": "équipage", "valeur": "4 astronautes", "source": "https://www.thenationalnews.com/uae/2022/02/09/lunar-habitat-prototype-on-display-at-abu-dhabi-university/" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Référence pour un abri gonflable à sas multiples contre la poussière lunaire ; la leçon du sas insuffisant est utile.",
+      "a_verifier": [
+        "Aucun plan ni coupe trouvé : l'article GLEX-2021 (Peter Weiss) peut contenir les dessins, non lu.",
+        "Les 196 m² de surface viennent d'un projet étudiant LUMAX, pas de Spartan : ne pas les utiliser.",
+        "Diamètre de 7 m : issu de résumé, non vérifié sur page Spartan."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "Lunar and Mars Habitat Studies (StudioMatrx)", "url": "https://www.studiomatrx.org/guides/lunar-mars-habitat-studies", "note": "Synthèse des habitats lunaires et martiens (Foster, BIG, AI SpaceFactory, Hassell). Non ouverte : sert seulement de piste." },
+    { "titre": "SOM : Moon Village (page recherche)", "url": "https://www.som.com/ideas/research/master_planning_and_space_architecture_for_a_moon_village", "note": "Page recherche SOM, point d'entrée pour le rapport IAC 2019." },
+    { "titre": "Eleven Magazine : Moontopia (résumé)", "url": "https://thecompetitionsblog.com/2016/08/6299/", "note": "Présentation du concours Moontopia, non ouverte." },
+    { "titre": "Jacques Rougerie Database : prix Architecture et Innovation pour l'espace", "url": "https://www.jacquesrougeriedatabase.com/categories/space", "note": "Liste de 44 projets spatiaux, sans plan ni coupe ; les pages projet sont à ouvrir une par une (Centre Pompidou pour les archives Rougerie)." }
+  ],
+  "pistes_non_explorees": [
+    "Foster + Partners : fosterandpartners.com (projets lunar-habitation et Mars) refusé à la lecture (403) ; retenter avec une autre adresse.",
+    "SOM : extraire les figures du rapport ESA-ESTEC (lpi.usra.edu, 403) et de l'article IAC 2019 (PDF trop lourd).",
+    "Hassell : ouvrir hassellstudio.com/projects/outer-space (certificat refusé à la lecture).",
+    "BIG : identifier les images non légendées de big.dk (une vingtaine).",
+    "SAGA : les fichiers de plan et de coupe sont trouvés, mais aucune échelle n'est donnée : chercher les dessins techniques ou le rapport SAGA.",
+    "LIQUIFER : brochure SHEE et article IAC-19 (figures d'aménagement) à extraire avec un outil PDF.",
+    "Rougerie : poster A3 Starport Mars (10 Mo) et pages SeaSpace sur Architizer.",
+    "Xtend Design : aucune trace de projet lunaire ou martien trouvé ; à chercher sur son site.",
+    "Zaha Hadid Architects : aucune trace de projet lunaire ; « Moon System » est un canapé pour B&B Italia, à exclure.",
+    "Interstellar Lab (BioPod, EBIOS) : résultats trouvés, pages projet non ouvertes ; chiffre de 70 000 m² à vérifier.",
+    "Volume Zero : aucune trace dans les résultats. Moontopia : ouvrir un par un les neuf lauréats (Test Lab, Momentum Virium, Modulpia, Platinum City, Upside Down, Womb, Looking through the Moon Eye, Lunar Oasis, The Aerosphere).",
+    "Mars City Design : Redwood Forest (MIT) et Alpha à ouvrir sur les pages des concours pour trouver des plans.",
+    "Clouds AO : chercher les plans dans les publications NASA 3D Printed Habitat Challenge.",
+    "Architecture étudiante et concours : YAC (liste des lauréats 2023 ouverte, plans à trouver) ; Jacques Rougerie Database (44 projets spatiaux, pages individuelles à ouvrir)."
+  ]
+}

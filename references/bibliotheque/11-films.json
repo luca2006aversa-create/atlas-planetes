@@ -1,0 +1,920 @@
+{
+  "theme": "Habitats spatiaux au cinéma et dans les séries : décor et dessin de production",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "2001-station-v",
+      "nom": "Station V (roue tournante)",
+      "annee": "1968",
+      "auteurs": "Stanley Kubrick (réalisation) ; Harry Lange et Frederick Ordway (conception du matériel, selon un résultat de recherche)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "tore",
+      "resume": "Station en roue qui tourne pour créer une gravité artificielle, avec des baies d'amarrage sur l'axe. Dans le film, une deuxième roue vient compléter la station.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Maquette imprimable 3D de la Station V",
+          "url": "https://cgtrader.com/3d-print-models/miniatures/other/2001-space-station-v-scale-model",
+          "page_source": "https://cgtrader.com/3d-print-models/miniatures/other/2001-space-station-v-scale-model",
+          "licence": "?",
+          "verifie": false,
+          "note": "Maquette de fan, pas un plan de production."
+        },
+        {
+          "type": "image",
+          "titre": "Concepts de Space Station 5 (Richard McKenna), via Starship Modeler",
+          "url": "https://starshipmodeler.com/2001/2001ref.htm",
+          "page_source": "https://starshipmodeler.com/2001/2001ref.htm",
+          "licence": "?",
+          "verifie": true,
+          "note": "Deux peintures de concept : un design à deux roues et un anneau unique plus ancien. Pas de cotes."
+        }
+      ],
+      "pour_kibsu": "Anneau tournant : circulation en boucle, couloirs courbes, axe fixe pour l'amarrage. La gravité lunaire (1/6) rend le principe peu transposable tel quel, mais la circulation en anneau reste utile.",
+      "a_verifier": [
+        "Diamètre non établi. Une liste Wikipédia cite 560 m (1 836 pieds) ; un blog up-ship.com cite environ 768 pieds à partir d'une échelle de dessin. Aucun des deux n'est confirmé dans une page ouverte.",
+        "Dessins de Harry Lange (livre The 2001 File, cité par un résultat de recherche) : non consultés."
+      ]
+    },
+    {
+      "id": "2001-clavius",
+      "nom": "Base Clavius",
+      "annee": "1968",
+      "auteurs": "Stanley Kubrick (réalisation) ; Harry Lange (conception, selon un résultat de recherche)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Base lunaire du film, vue au début de l'histoire. Aucun plan coté n'a été trouvé.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Référence d'ambiance pour une base enterrée ou posée, à partir des photos de film plutôt que de cotes.",
+      "a_verifier": [
+        "Un blog hobby (up-ship.com, page ouverte) dit que les dimensions doivent être estimées à partir du film : aucun chiffre sourcé.",
+        "Plans de production : non trouvés."
+      ]
+    },
+    {
+      "id": "2001-discovery",
+      "nom": "Discovery One",
+      "annee": "1968",
+      "auteurs": "Stanley Kubrick (réalisation) ; Harry Lange (conception, selon Starship Modeler) ; Frederick Ordway (conception, selon un résultat de recherche)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Vaisseau d'exploration de Jupiter, long véhicule dont la conception initiale fait 700 pieds de long. Kubrick a détruit les plans : il ne reste que des concepts et des maquettes.",
+      "dimensions": [
+        {
+          "quoi": "longueur de conception initiale",
+          "valeur": "700 pieds (environ 213 m)",
+          "source": "https://starshipmodeler.com/2001/2001ref.htm"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Fiche de référence 2001 (Starship Modeler)",
+          "url": "https://starshipmodeler.com/2001/2001ref.htm",
+          "page_source": "https://starshipmodeler.com/2001/2001ref.htm",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : concepts de Space Station 5, croquis Lange d'Orion III, maquettes de 15 et 54 pieds. Pas de plan de Discovery."
+        }
+      ],
+      "pour_kibsu": "Vaisseau à long fût avec zones de vie séparées : une idée de découpage entre vie et technique.",
+      "a_verifier": [
+        "La page estime la maquette de 54 pieds à 324 pieds de long : chiffre incohérent, à vérifier.",
+        "Concept art de Lange (Filming the Future, Bizony) : non consulté."
+      ]
+    },
+    {
+      "id": "moon-sarang",
+      "nom": "Base Sarang",
+      "annee": "2009",
+      "auteurs": "Gavin Rothery (design de la base, selon son blog) ; Duncan Jones (réalisation) ; Gary Shaw (directeur de la photographie, selon des sources)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Base enterrée dans une excavation, dont le toit porte des cubes de régolite. Des cloisons d'urgence se referment pour isoler des segments en cas de perte d'atmosphère.",
+      "dimensions": [
+        {
+          "quoi": "décor intérieur complet à 360 degrés",
+          "valeur": "près de 90 pieds (environ 27 m) de long, 70 pieds (environ 21 m) de large",
+          "source": "https://blubrry.com/forcefedscifi/58610067/moon-film/"
+        },
+        {
+          "quoi": "échelle de la maquette extérieure",
+          "valeur": "1/12",
+          "source": "https://www.gavinrothery.com/making-of-moon-blog/blog-post-title-four-myyx5-yb85y-fjf6k-h93l8-nalmb-ar7r6-c3grw-dd5xz"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Blog de Gavin Rothery : schéma d'ensemble de la base",
+          "url": "https://www.gavinrothery.com/making-of-moon-blog/blog-post-title-four-myyx5-yb85y-fjf6k-h93l8-nalmb-ar7r6-c3grw-dd5xz",
+          "page_source": "https://www.gavinrothery.com/making-of-moon-blog/blog-post-title-four-myyx5-yb85y-fjf6k-h93l8-nalmb-ar7r6-c3grw-dd5xz",
+          "licence": "?",
+          "verifie": false,
+          "note": "Le post annonce un schéma d'ensemble (outline) de la base qui met en évidence le rail de Gerty ; image non lue, pas de cotes. Photos du décor complet dans le même post."
+        },
+        {
+          "type": "rapport",
+          "titre": "Interview de Gavin Rothery (10 questions)",
+          "url": "https://creativebloq.com/inspiration/10-questions-how-gavin-rothery-created-the-iconic-design-for-moon-1233649",
+          "page_source": "https://creativebloq.com/inspiration/10-questions-how-gavin-rothery-created-the-iconic-design-for-moon-1233649",
+          "licence": "?",
+          "verifie": false,
+          "note": "Entretien sur la conception de la base."
+        }
+      ],
+      "pour_kibsu": "Base enterrée sous régolite, cloisons d'urgence qui isolent des segments : utile pour la protection et le découpage par zones étanches.",
+      "a_verifier": [
+        "Gary Hunter, indiqué comme designer de plateau, n'apparaît dans aucune source trouvée ; le nom le plus proche est Gary Shaw (directeur de la photographie).",
+        "Plan de la base : non trouvé. Les dimensions viennent d'un résumé de podcast."
+      ]
+    },
+    {
+      "id": "martian-hab",
+      "nom": "Hab d'Arès III",
+      "annee": "2015",
+      "auteurs": "Ridley Scott (réalisation)",
+      "lieu": "mars",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Habitat martien de la mission Arès III, qui sert de refuge pendant la tempête. Le plan exact du décor n'a pas été trouvé.",
+      "dimensions": [
+        {
+          "quoi": "surface au sol d'une maquette de fan (d'après le livre, pas le film)",
+          "valeur": "environ 92 pieds carrés (environ 8,5 m²)",
+          "source": "https://3dgo.app/models/thingiverse/363000"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Modèle 3D de l'Hab Arès 3 (OpenFabPDX)",
+          "url": "https://3dgo.app/models/thingiverse/363000",
+          "page_source": "https://3dgo.app/models/thingiverse/363000",
+          "licence": "?",
+          "verifie": false,
+          "note": "Interprétation de fan, fondée sur le roman d'Andy Weir."
+        }
+      ],
+      "pour_kibsu": "Petite surface au sol pour une vie en huis clos : utile pour calibrer la taille d'une unité d'habitation.",
+      "a_verifier": [
+        "Plans ou concept art du film : non trouvés. Chercher les livres d'art du film.",
+        "Arthur Max (production design, indiqué dans la demande) : non confirmé par les résultats, retiré des auteurs."
+      ]
+    },
+    {
+      "id": "interstellar-endurance",
+      "nom": "Endurance",
+      "annee": "2014",
+      "auteurs": "Christopher Nolan (réalisation) ; Nathan Crowley (production design) ; New Deal Studios (VFX)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Vaisseau en anneau, proche de la station V de 2001 et de l'ISS. Sa partie extérieure est surtout numérique.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Interstellar : miniatures et effets",
+          "url": "https://www.fxguide.com/fxfeatured/real-and-raw-the-miniature-fx-behind-interstellar/",
+          "page_source": "https://www.fxguide.com/fxfeatured/real-and-raw-the-miniature-fx-behind-interstellar/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article sur les miniatures et les effets, pas de plan."
+        }
+      ],
+      "pour_kibsu": "Anneau à douze modules : référence pour un plan circulaire avec des modules autour d'un noyau.",
+      "a_verifier": [
+        "Nombre de modules (douze) : source fan, non vérifiée.",
+        "Plans de production : non trouvés. Chercher l'art book du film."
+      ]
+    },
+    {
+      "id": "interstellar-cooper-station",
+      "nom": "Cooper Station",
+      "annee": "2014",
+      "auteurs": "Christopher Nolan (réalisation) ; Nathan Crowley (production design)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "cylindre",
+      "resume": "Station cylindrique en rotation qui donne une gravité artificielle. Son extérieur est un matte painting plaqué sur un cylindre, à partir de photos aériennes de l'Alberta.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Cylindre en rotation avec des paysages sur la paroi intérieure : idée à retenir pour une habitation en cylindre.",
+      "a_verifier": [
+        "Affirmation d'un type O'Neill : une source de recherche l'évoque sans URL précise.",
+        "Dimensions : aucune trouvée."
+      ]
+    },
+    {
+      "id": "ad-astra-base",
+      "nom": "Base lunaire (aéroport lunaire)",
+      "annee": "2019",
+      "auteurs": "James Gray (réalisation) ; Kevin Thompson (production design, selon un article ASC)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Base lunaire grande et propre, pensée comme construite par des entreprises privées. Le hall principal et les tunnels sont en béton poli et brut, gris et brun.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Article de l'ASC sur Ad Astra",
+          "url": "https://theasc.com/articles/ad-astra",
+          "page_source": "https://theasc.com/articles/ad-astra",
+          "licence": "?",
+          "verifie": false,
+          "note": "Entretien et design, pas de plan."
+        }
+      ],
+      "pour_kibsu": "Matériaux et ambiance d'une base privée : béton brut et poli, palette neutre.",
+      "a_verifier": [
+        "Plans du décor : non trouvés.",
+        "Plusieurs projets successifs avant la version retenue : détail non vérifié."
+      ]
+    },
+    {
+      "id": "for-all-mankind-jamestown",
+      "nom": "Jamestown (base lunaire)",
+      "annee": "2019",
+      "auteurs": "Apple TV+ ; conseil technique Garrett Reisman (selon un article space.com)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Base lunaire solaire de la saison 1, qui reprend du matériel Apollo. Le décor intérieur est petit mais a demandé trois mois de construction.",
+      "dimensions": [
+        {
+          "quoi": "diamètre du décor intérieur (une documentation d'artiste)",
+          "valeur": "20 pieds (environ 6,1 m)",
+          "source": "https://drjennings7.artstation.com/projects/obQ4GJ"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Documentation d'un décor intérieur (ArtStation)",
+          "url": "https://drjennings7.artstation.com/projects/obQ4GJ",
+          "page_source": "https://drjennings7.artstation.com/projects/obQ4GJ",
+          "licence": "?",
+          "verifie": false,
+          "note": "Travail d'artiste, pas de plan officiel."
+        }
+      ],
+      "pour_kibsu": "Base solaire avec du matériel de vaisseau réutilisé : ce qui pèse sur une base réelle est là, et la compacité du décor est une leçon de circulation.",
+      "a_verifier": [
+        "Lien Apollo et Skylab : source de recherche, page space.com non lue en entier.",
+        "Concepteurs de la saison 1 : non trouvés."
+      ]
+    },
+    {
+      "id": "for-all-mankind-happy-valley",
+      "nom": "Happy Valley (colonie martienne)",
+      "annee": "2023-2026",
+      "auteurs": "Apple TV+ ; Seth Reed (production design, selon un article collectSPACE) ; DNEG (VFX)",
+      "lieu": "mars",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Colonie martienne de la série. Les anciens couloirs ont l'air faits de régolite, les plus récents d'iridium. Le VFX a agrandi l'environnement de deux à trois fois en saison 5.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Visite du décor martien, saison 5 (collectSPACE)",
+          "url": "https://www.collectspace.com/news/news-032726a-for-all-mankind-season-five-mars-set-tour.html",
+          "page_source": "https://www.collectspace.com/news/news-032726a-for-all-mankind-season-five-mars-set-tour.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Visite des décors de saison 5."
+        }
+      ],
+      "pour_kibsu": "Matériaux mis en scène par couches (régolite puis iridium) : une façon de montrer l'évolution d'une colonie.",
+      "a_verifier": [
+        "Plans de la colonie : non trouvés."
+      ]
+    },
+    {
+      "id": "space1999-moonbase-alpha",
+      "nom": "Moonbase Alpha",
+      "annee": "1975-1977",
+      "auteurs": "Gerry et Sylvia Anderson (production) ; Keith Wilson (design des décors)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Base lunaire modulaire : les décors de la série 2 peuvent se réarranger et se raccorder à ceux de la série 1.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Plans muraux fan de l'annexe laboratoire (saison 2)",
+          "url": "https://catacombs.space1999.net/main/cguide/umresearchplan.html",
+          "page_source": "https://catacombs.space1999.net/main/cguide/umresearchplan.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plans muraux dessinés par un fan (Craig Rohloff) d'après le décor à l'écran : pas de cotes, pas d'échelle, annexe de laboratoire adjacente à la caverne de préparation."
+        },
+        {
+          "type": "plan",
+          "titre": "Main Mission : plan lettré A à JJ (Technical Notebook)",
+          "url": "https://catacombs.space1999.net/cybermuseum/MATN/matn1009.html",
+          "page_source": "https://catacombs.space1999.net/cybermuseum/MATN/matn1009.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan bleu de la salle de contrôle (image 1009.jpg) avec légende. Dimensions : 22,25 m x 13,36 m x 4,88 m. Pas d'échelle."
+        },
+        {
+          "type": "coupe",
+          "titre": "Ascenseurs de la Main Mission (Technical Notebook)",
+          "url": "https://catacombs.space1999.net/cybermuseum/MATN/matn1007.html",
+          "page_source": "https://catacombs.space1999.net/cybermuseum/MATN/matn1007.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Élévation bleue du complexe Main Mission avec ascenseurs (image 1007.jpg). Longueur 91,44 m, largeur 88,39 m, hauteur 33,53 m. Pas d'échelle."
+        },
+        {
+          "type": "plan",
+          "titre": "Command Center (Technical Notebook)",
+          "url": "https://catacombs.space1999.net/cybermuseum/MATN/matn1010.html",
+          "page_source": "https://catacombs.space1999.net/cybermuseum/MATN/matn1010.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan bleu légendé (image 1010.jpg). Dimensions 9,91 m x 9,75 m, hauteur 3,66 m. Pas d'échelle."
+        },
+        {
+          "type": "plan",
+          "titre": "Centre médical (Technical Notebook)",
+          "url": "https://catacombs.space1999.net/cybermuseum/MATN/matn1011.html",
+          "page_source": "https://catacombs.space1999.net/cybermuseum/MATN/matn1011.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan bleu (image 1011.jpg) avec 18 zones légendées, de l'entrée à l'unité de soins intensifs. Pas de cotes ni d'échelle."
+        },
+        {
+          "type": "plan",
+          "titre": "Niveau J des structures internes (Technical Notebook)",
+          "url": "https://catacombs.space1999.net/cybermuseum/MATN/matn1006.html",
+          "page_source": "https://catacombs.space1999.net/cybermuseum/MATN/matn1006.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan bleu (image 1006.jpg). La page ne décrit pas son contenu ; pas de cotes."
+        },
+        {
+          "type": "coupe",
+          "titre": "Ascenseurs de la Main Mission (plans fan, Catacombs)",
+          "url": "https://catacombs.space1999.net/main/cguide/umelevatorplan.html",
+          "page_source": "https://catacombs.space1999.net/main/cguide/umelevatorplan.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vues en coupe et intérieures de la cabine et des portes, dessinées par Craig Rohloff. Pas d'échelle."
+        },
+        {
+          "type": "plan",
+          "titre": "Plan de Moonbase Alpha et cartes murales (Catacombs)",
+          "url": "https://catacombs.space1999.net/main/cguide/umlayout.html",
+          "page_source": "https://catacombs.space1999.net/main/cguide/umlayout.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan de Bergman (images intégrées), cartes murales et carte des tubes de transport (Andrew Novinc). Pas d'échelle."
+        }
+      ],
+      "pour_kibsu": "Décor modulaire réarrangeable entre séries : une logique de plan par modules standard.",
+      "a_verifier": [
+        "Moonbase Alpha Technical Notebook (publication officielle, avec plans) : non consultée.",
+        "Blueprints de Keith Young (publication fan) : non consultée.",
+        "Aucun plan de Keith Wilson trouvé en ligne."
+      ]
+    },
+    {
+      "id": "silent-running-valley-forge",
+      "nom": "Valley Forge (vaisseau-serre)",
+      "annee": "1972",
+      "auteurs": "Douglas Trumbull (réalisation et effets) ; Silent Running (Universal)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Vaisseau cargo qui transporte six serres-habitats géodésiques en acrylique, inspirées du Climatron de Saint-Louis. Le tournage intérieur a eu lieu à bord du porte-avions USS Valley Forge.",
+      "dimensions": [
+        {
+          "quoi": "longueur de la maquette",
+          "valeur": "25 pieds (environ 7,6 m)",
+          "source": "https://www.wikipedia.org/wiki/Silent_Running"
+        },
+        {
+          "quoi": "longueur dans la fiction (fiche du kit)",
+          "valeur": "environ 1 mile (environ 1,6 km)",
+          "source": "https://fantastic-plastic.com/ValleyForgePage.htm"
+        }
+      ],
+      "documents": [
+        {
+          "type": "maquette",
+          "titre": "Fiche du kit Valley Forge (Fantastic Plastic)",
+          "url": "https://fantastic-plastic.com/ValleyForgePage.htm",
+          "page_source": "https://fantastic-plastic.com/ValleyForgePage.htm",
+          "licence": "?",
+          "verifie": true,
+          "note": "Fiche de maquette avec photos du kit ; pas de plan ni de cotes de dômes."
+        },
+        {
+          "type": "3d",
+          "titre": "Valley Forge (modèle 3D, Sketchfab)",
+          "url": "https://sketchfab.com/3d-models/valley-forge-greenhouse-space-freighter-35e40bd143d34277b61e5647c27440a9",
+          "page_source": "https://sketchfab.com/3d-models/valley-forge-greenhouse-space-freighter-35e40bd143d34277b61e5647c27440a9",
+          "licence": "?",
+          "verifie": false,
+          "note": "Modèle de fan."
+        },
+        {
+          "type": "3d",
+          "titre": "Valley Forge (modèle SketchUp, 3D Warehouse)",
+          "url": "https://3dwarehouse-classic.sketchup.com/model/846f837ba72374c7932c511df6d2aa45/Valley-Forge-Spaceship-in-Silent-Running",
+          "page_source": "https://3dwarehouse-classic.sketchup.com/model/846f837ba72374c7932c511df6d2aa45/Valley-Forge-Spaceship-in-Silent-Running",
+          "licence": "?",
+          "verifie": false,
+          "note": "Modèle de fan."
+        }
+      ],
+      "pour_kibsu": "Serres-habitats géodésiques : une structure en barreaux et nœuds autour d'une enveloppe transparente, adaptée à la végétation et à la lumière.",
+      "a_verifier": [
+        "Diamètre des dômes : non trouvé. La fiche du kit ne donne pas de cotes.",
+        "Nombre de dômes (six) et quatre larguées dans l'histoire : sources de recherche, non ouvertes en entier.",
+        "Plans du lunadude.com (valley_forge) annoncés mais non consultés."
+      ]
+    },
+    {
+      "id": "alien-nostromo",
+      "nom": "Nostromo",
+      "annee": "1979",
+      "auteurs": "Ridley Scott (réalisation) ; Ron Cobb et Chris Foss (design) ; Brian Johnson (réalisation des maquettes, selon la fiche) ; Alan Tomkins (directeur artistique, dessin des baies de stockage, selon Propstore)",
+      "lieu": "fiction",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Remorqueur minier, avec des decks et une signalétique industrielle conçue par Ron Cobb. Les intérieurs ont été construits en décors complets.",
+      "dimensions": [
+        {
+          "quoi": "longueur",
+          "valeur": "334 m",
+          "source": "https://avpcentral.com/uscss-nostromo-origins-specifications"
+        },
+        {
+          "quoi": "largeur",
+          "valeur": "215 m",
+          "source": "https://avpcentral.com/uscss-nostromo-origins-specifications"
+        },
+        {
+          "quoi": "masse",
+          "valeur": "63 000 t",
+          "source": "https://avpcentral.com/uscss-nostromo-origins-specifications"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Fiche USCSS Nostromo : origines et caractéristiques (AVP Central)",
+          "url": "https://avpcentral.com/uscss-nostromo-origins-specifications",
+          "page_source": "https://avpcentral.com/uscss-nostromo-origins-specifications",
+          "licence": "?",
+          "verifie": true,
+          "note": "Fiche de fan avec cotes, qui cite le livre Alien: The Blueprints (Graham Langridge, 2019) comme meilleure source de plans. Pas de plan dans la page."
+        },
+        {
+          "type": "image",
+          "titre": "Images de production : Original Nostromo Tug Design (Ron Cobb)",
+          "url": "https://roncobb.net/film.html",
+          "page_source": "https://roncobb.net/film.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page de Ron Cobb qui liste les images de production d'Alien (Original Nostromo Tug Design) ; pas de cotes."
+        },
+        {
+          "type": "maquette",
+          "titre": "Nostromo (Prop Store)",
+          "url": "https://propstore.com/the-prop-store-collection/alien/alien-nostromo/",
+          "page_source": "https://propstore.com/the-prop-store-collection/alien/alien-nostromo/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Restauration du modèle physique, photos de référence de l'atelier."
+        },
+        {
+          "type": "plan",
+          "titre": "Plans du pont et du pont A (Alien Explorations)",
+          "url": "https://alienexplorations.blogspot.com/1979/05/aboard-nostromo.html",
+          "page_source": "https://alienexplorations.blogspot.com/1979/05/aboard-nostromo.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Deux plans intégrés (« plan for the Nostromo bridge », « plan for A deck »). Pas de cotes ; designer non indiqué pour ces plans."
+        },
+        {
+          "type": "plan",
+          "titre": "Dessin à la main des baies de stockage (Alan Tomkins, 1978)",
+          "url": "https://alienexplorations.blogspot.com/1979/09/alien-hand-drawn-nostromo-garage-pencil.html",
+          "page_source": "https://alienexplorations.blogspot.com/1979/09/alien-hand-drawn-nostromo-garage-pencil.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Crayon sur papier calque, 75 cm x 123 cm : plans et élévations des baies, détails des portes. Pas d'échelle indiquée. Daté du 14 juin 1978 (Propstore)."
+        },
+        {
+          "type": "image",
+          "titre": "Esquisses de Ron Cobb pour le Nostromo (Alien Explorations)",
+          "url": "https://alienexplorations.blogspot.com/2009/05/chris-foss-inspiration-for-nostromo.html",
+          "page_source": "https://alienexplorations.blogspot.com/2009/05/chris-foss-inspiration-for-nostromo.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Deux esquisses de Ron Cobb (version antérieure, version finale sur papier jaune). Pas de cotes."
+        }
+      ],
+      "pour_kibsu": "Decks empilés avec échelles et couloirs signalés par un système graphique : référence pour l'orientation et la lisibilité des niveaux.",
+      "a_verifier": [
+        "Alien: The Blueprints (Graham Langridge, 2019) : plans de ponts, non consultés. Un critique note que les échelles ne correspondent pas toujours d'un plan à l'autre.",
+        "Dimensions : source fan, à croiser avec le livre."
+      ]
+    },
+    {
+      "id": "total-recall-mars",
+      "nom": "Colonie martienne et complexe minier",
+      "annee": "1990",
+      "auteurs": "Paul Verhoeven (réalisation) ; Ron Cobb (concept du complexe minier et du Marsliner, selon sa page) ; William Sandell (production design, selon un blog)",
+      "lieu": "mars",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Colonie et mines de Mars : taxis, engins de forage « mole », Marsliner, dans un désert froid peuplé de chevaux et de chameaux en combinaison.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Ron Cobb : prodart du film (Recall Machine)",
+          "url": "https://roncobb.net/film.html",
+          "page_source": "https://roncobb.net/film.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Liste d'images de production (Recall Machine, Marsliner) ; pas de plan coté."
+        },
+        {
+          "type": "maquette",
+          "titre": "Marsliner (kit Fantastic Plastic)",
+          "url": "https://fantastic-plastic.com/total-recall-mars-liner.html",
+          "page_source": "https://fantastic-plastic.com/total-recall-mars-liner.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Maquette du vaisseau, pas un plan."
+        }
+      ],
+      "pour_kibsu": "Colonie souterraine et mines : une référence pour les dômes et les engins de chantier.",
+      "a_verifier": [
+        "Un décor de terrain martien a été monté aux studios Churubusco (Mexico), trop petit pour les extérieurs : source ASC, non lue en entier.",
+        "William Sandell (production design) : source blog, non confirmée."
+      ]
+    },
+    {
+      "id": "sunshine-icarus-ii",
+      "nom": "Icarus II",
+      "annee": "2007",
+      "auteurs": "Danny Boyle (réalisation) ; Mark Tildesley (production design) ; MPC (VFX des modules)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Vaisseau modulaire : la salle de vol et le réfectoire forment le noyau, les modules s'ajoutent autour. Les décors ont des plafonds rigides pour renforcer l'impression de confinement.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Sunshine : le travail VFX (fxguide)",
+          "url": "https://www.fxguide.com/?p=21550",
+          "page_source": "https://www.fxguide.com/?p=21550",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article sur le travail VFX et les modules."
+        }
+      ],
+      "pour_kibsu": "Noyau de vie commune avec des modules qui s'ajoutent autour : principe de circulation et de réparabilité.",
+      "a_verifier": [
+        "Plan des modules et du plateau de vol : non trouvés.",
+        "Une influence de sous-marin nucléaire est citée par une source peu fiable : non retenue."
+      ]
+    },
+    {
+      "id": "passengers-avalon",
+      "nom": "Avalon",
+      "annee": "2016",
+      "auteurs": "Morten Tyldum (réalisation) ; Guy Hendrix Dyas (production design) ; MPC (VFX)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Vaisseau à trois bras hélicoïdaux qui tournent autour d'un axe central, inspiré de la graine de sycamore. Les espaces publics sont des décors réels, de l'ancien bar art déco aux piscines.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Le design de l'Avalon (fxguide)",
+          "url": "https://www.fxguide.com/featured/passengers-on-mpcs-avalon/",
+          "page_source": "https://www.fxguide.com/featured/passengers-on-mpcs-avalon/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article VFX sur la reconstruction numérique."
+        }
+      ],
+      "pour_kibsu": "Trois bras en rotation autour d'un axe : une disposition qui sépare zones de vie et zones techniques.",
+      "a_verifier": [
+        "Capacité de 5 000 passagers : citée par un résultat de recherche, source exacte non identifiée.",
+        "Plans de Dyas : non trouvés."
+      ]
+    },
+    {
+      "id": "elysium-station",
+      "nom": "Station Elysium",
+      "annee": "2013",
+      "auteurs": "Neill Blomkamp (réalisation) ; Syd Mead (concept, selon une source) ; VFX",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "tore",
+      "resume": "Station-roue ouverte à cinq rayons, dérivée du Stanford Torus de la NASA (1975). Les habitants vivent à l'intérieur de l'anneau.",
+      "dimensions": [
+        {
+          "quoi": "diamètre de la station (Wikipédia)",
+          "valeur": "60 km",
+          "source": "https://en.wikipedia.org/wiki/Rotating_wheel_space_station"
+        },
+        {
+          "quoi": "diamètre du Stanford Torus (référence, pas Elysium)",
+          "valeur": "1,8 km",
+          "source": "https://en.wikipedia.org/wiki/Rotating_wheel_space_station"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Concept art du vaisseau-hangar d'Elysium (Gizmodo)",
+          "url": "https://gizmodo.com/breathtaking-concept-art-of-elysiums-spaceship-hangar-1137256383",
+          "page_source": "https://gizmodo.com/breathtaking-concept-art-of-elysiums-spaceship-hangar-1137256383",
+          "licence": "?",
+          "verifie": false,
+          "note": "Concept art du hangar."
+        },
+        {
+          "type": "image",
+          "titre": "Galerie de concept art d'Elysium (Wired)",
+          "url": "https://wirednews.pages.dev/gallery/elysium-concept-drawings",
+          "page_source": "https://wirednews.pages.dev/gallery/elysium-concept-drawings",
+          "licence": "?",
+          "verifie": false,
+          "note": "Galerie miroir, à vérifier sur wired.com."
+        }
+      ],
+      "pour_kibsu": "Anneau ouvert à rayons : la référence la plus directe pour une station-roue lunaire ou orbitale.",
+      "a_verifier": [
+        "Diamètre : Wikipédia donne 60 km ; un autre passage de la même page donne 20 à 45 km. Source conflictuelle, à trancher dans l'art book d'Elysium.",
+        "Deux anneaux intérieurs (épuration d'air, télécom) : source de recherche, non vérifiée.",
+        "arXiv 2408.00152 cite un rayon majeur de 30 km et un rayon mineur de 1,5 km pour la station du film. PDF non lisible en WebFetch : à vérifier."
+      ]
+    },
+    {
+      "id": "oblivion-sky-tower",
+      "nom": "Sky Tower",
+      "annee": "2013",
+      "auteurs": "Joseph Kosinski (réalisation) ; Darren Gilford (production design) ; Kevin Ishioka (supervising art director) ; Andrée Wallin (concept art)",
+      "lieu": "terre",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Tour de verre et d'acier avec un héliport prolongé au-dessus d'une piscine d'acrylique transparent. Le décor a été filmé sur plateau à Baton Rouge.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Concept art de Andrée Wallin (Concept Art World)",
+          "url": "https://conceptartworld.com/news/oblivion-concept-illustrations-by-andree-wallin",
+          "page_source": "https://conceptartworld.com/news/oblivion-concept-illustrations-by-andree-wallin",
+          "licence": "?",
+          "verifie": false,
+          "note": "Illustrations de concept, dont des tours."
+        },
+        {
+          "type": "rapport",
+          "titre": "Analyse architecturale de Oblivion (blog)",
+          "url": "https://architectoid.blogspot.com/2013/04/oblivion-movie-architecture.html",
+          "page_source": "https://architectoid.blogspot.com/2013/04/oblivion-movie-architecture.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Lecture de blogueur, plan en L décrit mais non coté."
+        }
+      ],
+      "pour_kibsu": "Tour-belvédère avec bassin transparent : une idée de dalle en porte-à-faux et de vide intérieur.",
+      "a_verifier": [
+        "Claude Paré : aucun résultat ne le relie au projet.",
+        "Tet (station orbitale) : non recherchée, faute de quota.",
+        "Plans de la Sky Tower : non trouvés."
+      ]
+    },
+    {
+      "id": "high-life-vaisseau",
+      "nom": "Vaisseau de High Life",
+      "annee": "2018",
+      "auteurs": "Claire Denis (réalisation) ; Olafur Eliasson (conception du vaisseau, selon Wikipédia) ; François-Renaud Labarthe (production design, selon les crédits)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "boite",
+      "resume": "Vaisseau utilitaire, au contour massif et sans aérodynamisme. Denis dit avoir modelé son couloir intérieur sur un bloc cellulaire.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Critique de High Life (The Playlist)",
+          "url": "https://theplaylist.net/high-life-nyff-20181013/",
+          "page_source": "https://theplaylist.net/high-life-nyff-20181013/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Critique, description du vaisseau."
+        }
+      ],
+      "pour_kibsu": "Vaisseau-boîte pensé pour la fonction : un modèle de couloir cellulaire et de sas étroit.",
+      "a_verifier": [
+        "Tenenbaum et Ulf Hanke (indiqués dans la demande) : aucun résultat ne les mentionne.",
+        "Plans du vaisseau : non trouvés."
+      ]
+    },
+    {
+      "id": "destination-moon-luna",
+      "nom": "Fusée Luna",
+      "annee": "1950",
+      "auteurs": "Robert Heinlein (scénario, concept) ; Chesley Bonestell (concept) ; Ernst Fegté (design) ; George Pal (production)",
+      "lieu": "fiction",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Fusée à un étage, dérivée du V-2, avec des empennages qui servent de pieds d'atterrissage. La cabine de pilotage aurait été redessinée plusieurs fois.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "maquette",
+          "titre": "Fusée Luna (kit Fantastic Plastic)",
+          "url": "https://fantastic-plastic.com/rocketship-luna-from-destination-moon-by-lunar-models.html",
+          "page_source": "https://fantastic-plastic.com/rocketship-luna-from-destination-moon-by-lunar-models.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Maquette, pas de plan."
+        },
+        {
+          "type": "rapport",
+          "titre": "Destination Moon : 70e anniversaire (Centauri Dreams)",
+          "url": "https://www.centauri-dreams.org/2020/06/12/destination-moon-a-70th-anniversary-appreciation/",
+          "page_source": "https://www.centauri-dreams.org/2020/06/12/destination-moon-a-70th-anniversary-appreciation/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article sur le film et ses concepts."
+        }
+      ],
+      "pour_kibsu": "Fusée à un étage : pour la logistique de mise en place d'une base, le principe de l'atterrisseur à empennages.",
+      "a_verifier": [
+        "Hans Hoffman : aucun résultat ne le relie au film.",
+        "Plans de Bonestell : non trouvés."
+      ]
+    },
+    {
+      "id": "stowaway-vaisseau",
+      "nom": "Vaisseau de Stowaway",
+      "annee": "2021",
+      "auteurs": "Joe Penna (réalisation) ; Marco Bittner Rosser (production design, selon IMDb) ; Netflix",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Vaisseau de mission vers Mars, aux intérieurs fonctionnels et moins étroits que les vraies stations. Une critique compare ses couloirs à ceux d'Alien.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Critique de Stowaway (Deep Focus Review)",
+          "url": "https://www.deepfocusreview.com/reviews/stowaway/",
+          "page_source": "https://www.deepfocusreview.com/reviews/stowaway/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Critique du décor et des couloirs."
+        },
+        {
+          "type": "rapport",
+          "titre": "Entretien avec les cinéastes (Science and Film)",
+          "url": "https://scienceandfilm.org/articles/3392/filmmaker-interview-stowaway",
+          "page_source": "https://scienceandfilm.org/articles/3392/filmmaker-interview-stowaway",
+          "licence": "?",
+          "verifie": false,
+          "note": "Exactitude scientifique visée dans le design."
+        }
+      ],
+      "pour_kibsu": "Intérieur fonctionnel plutôt que spectaculaire : référence pour un habitat de travail et de vie.",
+      "a_verifier": [
+        "Ross Anthony et Ruth Ross (indiqués dans la demande) : aucune source ne les mentionne.",
+        "Plans du vaisseau : non trouvés."
+      ]
+    },
+    {
+      "id": "mars-natgeo-olympus",
+      "nom": "Habitat Olympus et vaisseau Daedalus",
+      "annee": "2016",
+      "auteurs": "Framestore (VFX et habitats) ; Robert Zubrin (consultant, selon un article)",
+      "lieu": "mars",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Habitat souterrain Olympus et vaisseau Daedalus, construits pour la série. Une maquette publique d'habitat a été montée au Royal Observatory de Greenwich.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Maquette d'habitat au Royal Observatory de Greenwich (Nature)",
+          "url": "https://blogs.nature.com/blog/show-home-for-the-red-planet/",
+          "page_source": "https://blogs.nature.com/blog/show-home-for-the-red-planet/",
+          "licence": "?",
+          "verifie": false,
+          "note": "Liste des pièces de la maquette (chambre, escalier, plate-forme botanique, imprimante 3D)."
+        },
+        {
+          "type": "image",
+          "titre": "Framestore : travail sur la série Mars",
+          "url": "https://framestore.com/work/mars-season-1",
+          "page_source": "https://framestore.com/work/mars-season-1",
+          "licence": "?",
+          "verifie": false,
+          "note": "Page de studio, images VFX."
+        }
+      ],
+      "pour_kibsu": "Habitat souterrain et tube de lave : référence pour un habitat enterré et ses pièces de vie.",
+      "a_verifier": [
+        "Nom « Ares » pour la base : non confirmé par les résultats.",
+        "Saison 2 : base construite sur plateau à Budapest, source de recherche, non lue."
+      ]
+    },
+    {
+      "id": "outland-con-am-27",
+      "nom": "Con-Am 27 (station minière sur Io)",
+      "annee": "1981",
+      "auteurs": "Peter Hyams (réalisation) ; Philip Harrison (production design, selon une fiche de crédits) ; John Stears (effets spéciaux) ; H.R. Giger, Ron Cobb, Moebius (contributions, selon une critique)",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Station minière de la compagnie Con-Am sur Io, conçue sur un principe de fonction, inspirée des plates-formes pétrolières et des sous-marins. Les extérieurs sont des maquettes tournées dès mai 1980.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Set design et world-building de Outland (fan site)",
+          "url": "https://checkplease.neocities.org/p/set-design-and-world-building",
+          "page_source": "https://checkplease.neocities.org/p/set-design-and-world-building",
+          "licence": "?",
+          "verifie": false,
+          "note": "Analyse de décor, pas de cotes."
+        },
+        {
+          "type": "maquette",
+          "titre": "Con-Am (catalogue Fantastic Plastic)",
+          "url": "https://fantastic-plastic.com/con_am_shuttle_catalog.html",
+          "page_source": "https://fantastic-plastic.com/con_am_shuttle_catalog.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Maquettes de la compagnie Con-Am."
+        }
+      ],
+      "pour_kibsu": "Station industrielle conçue par la fonction : une référence pour un habitat de chantier ou d'extraction.",
+      "a_verifier": [
+        "Al Dombrowski (indiqué dans la demande) : aucun résultat ne le mentionne ; le nom trouvé est Philip Harrison.",
+        "Nom de la station : Con-Am 27 dans la plupart des sources, Con-Am 7 dans une critique.",
+        "Plans : non trouvés."
+      ]
+    }
+  ],
+  "sources_generales": [
+    {
+      "titre": "2001 : fiche de référence (Starship Modeler)",
+      "url": "https://starshipmodeler.com/2001/2001ref.htm",
+      "note": "Cite Fred Ordway et Harry Lange comme concepteurs du matériel ; pas de cotes (résultat de recherche, non ouvert)."
+    },
+    {
+      "titre": "Blog up-ship.com sur 2001 et Clavius",
+      "url": "https://up-ship.com/blog/?p=40990",
+      "note": "Ouvert : mentionne Clavius, Discovery, et une échelle à estimer ; pas de cotes sourcées."
+    },
+    {
+      "titre": "Rotating wheel space station (Wikipédia)",
+      "url": "https://en.wikipedia.org/wiki/Rotating_wheel_space_station",
+      "note": "Ouvert : Elysium 60 km, Stanford Torus 1,8 km."
+    },
+    {
+      "titre": "Alien: The Blueprints (Graham Langridge, 2019)",
+      "url": "https://avpcentral.com/uscss-nostromo-origins-specifications",
+      "note": "Livre cité comme meilleure source de plans du Nostromo ; non consulté."
+    }
+  ],
+  "pistes_non_explorees": [
+    "Harry Lange : The 2001 File et The Lost Worlds of 2001 (Bizony) pour les dessins de Discovery et de la station V : non trouvés en ligne.",
+    "Arthur Max : livre d'art de The Martian : non trouvé.",
+    "Art books d'Interstellar, Elysium, Oblivion, Passengers, Moon : non trouvés en ligne.",
+    "Oblivion : station orbitale Tet, non recherchée.",
+    "Elysium : plan de production non trouvé ; arXiv 2408.00152 non lisible en WebFetch.",
+    "Interstellar Endurance : plans non trouvés ; interstellarfilm.fandom.com refusé (402), irc.pcper.com en erreur.",
+    "Silent Running : lunadude.com/pet_proj/valley_forge (plans annoncés) inaccessible (erreur de connexion).",
+    "Ad Astra, Stowaway, High Life, Sunshine, Passengers, Outland, Total Recall, Mars (National Geographic) : plans non trouvés.",
+    "Moonbase Alpha : art.cleberg.net (plans fan) : hôte introuvable.",
+    "Moon (Sarang) : schéma d'ensemble annoncé par Gavin Rothery, image non lue.",
+    "Recherche web de la passe 2 : environ 9 requêtes utilisées sur 25."
+  ]
+}

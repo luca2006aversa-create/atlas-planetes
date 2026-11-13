@@ -1,0 +1,551 @@
+{
+  "theme": "Concepts actuels de bases lunaires par les agences et leurs partenaires (2005 à aujourd'hui)",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "foundation-surface-habitat",
+      "nom": "Foundation Surface Habitat (NASA Artemis)",
+      "annee": "2022",
+      "auteurs": "NASA (Callie Burke, Robert Howard, Paul Kessler), présenté à ASCEND 2022",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Habitat de surface de référence de la NASA, hybride : un étage inférieur métallique rigide et un volume gonflable au-dessus. Trois niveaux, sas au rez-de-chaussée, laboratoires, couchages au dernier niveau.",
+      "dimensions": [
+        { "quoi": "diamètre du module métallique (rez-de-chaussée)", "valeur": "4 m", "source": "https://americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" },
+        { "quoi": "diamètre du volume gonflable", "valeur": "6,5 m", "source": "https://americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" },
+        { "quoi": "volume habitable", "valeur": "127 m³", "source": "https://americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" },
+        { "quoi": "masse maximale", "valeur": "12 t", "source": "https://americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Internal Layout of a Lunar Surface Habitat (Burke, Howard, Kessler, 2022), NTRS 20220013669", "url": "https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf", "page_source": "https://ntrs.nasa.gov/citations/20220013669", "licence": "domaine public (NASA) ?", "verifie": false, "note": "PDF et page NTRS renvoient HTTP 403 à la consultation. Contient la figure 3 « Surface Habitat Dimensions » et les plans d'étages (figures 5 à 8 selon AmericaSpace). Copie alternative non trouvée." },
+        { "type": "plan", "titre": "Plans d'étages du Foundation Surface Habitat (niveaux 1 à 3 et laboratoires annexes)", "url": "https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf", "page_source": "https://americaspace.com/2024/01/13/living-on-the-moon-inside-artemis-foundation-habitat/", "licence": "domaine public (NASA) ?", "verifie": false, "note": "Figures 5 à 8 de Burke et al. selon AmericaSpace (article de presse lu). Le PDF original n'a pas pu être ouvert." },
+        { "type": "image", "titre": "Lunar Surface Habitat dimensions (program Artemis), fichier Wikimedia Commons (miroir)", "url": "https://wiki.riteme.site/wiki/File:Lunar_Surface_Habitat_dimensions_(program_Artemis).jpg", "page_source": "https://wiki.riteme.site/wiki/File:Lunar_Surface_Habitat_dimensions_(program_Artemis).jpg", "licence": "domaine public NASA (étiquette de la recherche, à revérifier sur Commons)", "verifie": false, "note": "Nature (plan ou coupe) non confirmée par la recherche." }
+      ],
+      "pour_kibsu": "Référence de niveaux : sas et atelier au rez-de-chaussée, volume de vie au-dessus, circulation verticale par échelle. Montre une séparation nette zone sèche / zone sanitaire / zone de sommeil. Diamètre de 4 m à 6,5 m : base de comparaison pour un cylindre de niveaux.",
+      "a_verifier": [
+        "Diamètre du module métallique : AmericaSpace donne 4 m, un extrait NTRS donne 4,4 m. Vérifier dans le PDF Burke.",
+        "Hauteur non trouvée. Le volume de 127 m³ et la masse de 12 t viennent d'AmericaSpace, pas du rapport original.",
+        "Contenu par niveau tiré d'AmericaSpace (article de presse), pas vérifié dans le PDF."
+      ]
+    },
+    {
+      "id": "artemis-base-camp",
+      "nom": "Artemis Base Camp (NASA)",
+      "annee": "2020-2024",
+      "auteurs": "NASA Artemis (blog et documents techniques)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Campement de base au pôle Sud : habitat de surface, rover pressurisé, véhicule terrestre lunaire, systèmes d'énergie et ISRU. Concept à plusieurs éléments, pas un plan unique.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Lunar Living : NASA's Artemis Base Camp Concept (blog NASA, 28 oct. 2020)", "url": "https://blogs.nasa.gov/artemis/2020/10/28/lunar-living-nasas-artemis-base-camp-concept/", "page_source": "https://blogs.nasa.gov/artemis/2020/10/28/lunar-living-nasas-artemis-base-camp-concept/", "licence": "domaine public (NASA) ?", "verifie": false, "note": "Page trouvée par recherche, non ouverte. Présente le concept de base camp." },
+        { "type": "rapport", "titre": "Artemis Deep Space Habitation : Enabling a Sustained Human Presence on the Moon and Beyond, NTRS 20220000245", "url": "https://ntrs.nasa.gov/api/citations/20220000245/downloads/Artemis%20Deep%20Space%20Habitation%20Enabling%20a%20Sustained%20Human%20Presence%20on%20the%20Moon%20and%20Beyond%20(3).pdf", "page_source": "https://ntrs.nasa.gov/citations/20220000245", "licence": "domaine public (NASA) ?", "verifie": false, "note": "Source citée pour les diamètres du Surface Habitat. Non ouverte (extrait de table des matières seulement)." }
+      ],
+      "pour_kibsu": "Montre comment un campement se découpe en éléments : habitat, rover pressurisé, énergie, ISRU. Utile pour un plan de masse à plusieurs bâtiments reliés.",
+      "a_verifier": [
+        "Pas de plan de masse ni de dimension trouvé dans les résultats. A chercher dans le PDF NTRS 20220000245.",
+        "Le rover pressurisé et la phase 2 ont été décrits différemment selon les sources (2020-2021 vs presse de 2025). Vérifier sur nasa.gov."
+      ]
+    },
+    {
+      "id": "constellation-scenario-12-1",
+      "nom": "HDU-PEM (Habitat Demonstration Unit, Pressurized Excursion Module, Constellation Scenario 12.1)",
+      "annee": "2008-2010",
+      "auteurs": "NASA JSC (Tri, Kennedy, Gill, Howe), Desert RATS 2010",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Maquette d'habitat vertical testée sur le terrain : un cylindre de 5 m à un niveau, quatre ports, aménagé en PEM avec laboratoire géologie, maintenance des combinaisons, zone médicale et maintenance générale. Un sas est prévu en module accolé.",
+      "dimensions": [
+        { "quoi": "diamètre de l'enveloppe (cylindre vertical, un niveau)", "valeur": "5 m", "source": "https://spacearchitect.org/pubs/ASCE-2010-HDU-TestOperations.pdf" },
+        { "quoi": "barrel (partie cylindrique)", "valeur": "2 m de haut", "source": "https://ntrs.nasa.gov/api/citations/20140002352/downloads/20140002352.pdf" },
+        { "quoi": "dômes d'extrémité", "valeur": "0,6 m de haut", "source": "https://ntrs.nasa.gov/api/citations/20140002352/downloads/20140002352.pdf" },
+        { "quoi": "volume pressurisé", "valeur": "56 m³", "source": "https://ntrs.nasa.gov/api/citations/20140002352/downloads/20140002352.pdf" },
+        { "quoi": "surface au sol", "valeur": "19 m²", "source": "https://ntrs.nasa.gov/api/citations/20140002352/downloads/20140002352.pdf" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Figure 2 : Plan view of the HDU in the PEM configuration (ASCE, Earth and Space 2010)", "url": "https://spacearchitect.org/pubs/ASCE-2010-HDU-TestOperations.pdf", "page_source": "https://spacearchitect.org/pubs/ASCE-2010-HDU-TestOperations.pdf", "licence": "?", "verifie": true, "note": "PDF ouvert (texte extrait). Vue en plan du HDU en configuration PEM : quatre zones internes (géosciences, maintenance des combinaisons EVA, opérations médicales, maintenance générale), trois ports sur quatre utilisés, cloison temporaire sur le quatrième. Le plan lui-même est une image, non décrite cotée." },
+        { "type": "plan", "titre": "Desert RATS 2010 : HDU Pressurized Excursion Module (NTRS 20110013501)", "url": "https://ntrs.nasa.gov/api/citations/20110013501/downloads/20110013501.pdf", "page_source": "https://ntrs.nasa.gov/citations/20110013501", "licence": "domaine public (NASA) ?", "verifie": false, "note": "PDF et page NTRS renvoient 403 ou 404. Figure 2 signalée par la recherche, non vue." }
+      ],
+      "pour_kibsu": "Un cylindre vertical de 5 m à un niveau, quatre ports et une zone de sas ou de maintenance accolée : gabarit concret. Le scénario prévoyait un sortie vers Malapert à 120 km depuis un avant-poste près de Shackleton (28 jours), donc un PEM qui se détache de la base.",
+      "a_verifier": [
+        "Le diamètre de 5 m est confirmé par le PDF ASCE 2010. Les hauteurs de barrel et de dômes, le volume de 56 m³ et la surface de 19 m² viennent d'un extrait NTRS 2014 non ouvert.",
+        "Le sas est prévu via le programme Centennial Challenges (ASCE 2010) : il n'est pas encore construit dans cette version.",
+        "Lien avec le scénario 12.1 (modulaire en arc) : non confirmé dans le PDF ASCE 2010."
+      ]
+    },
+    {
+      "id": "constellation-ls1-horizontal-torus",
+      "nom": "LS1 : habitat horizontal cylindrique et torus gonflable (CxAT-Lunar)",
+      "annee": "2008",
+      "auteurs": "Larry Toups et Kriss J. Kennedy (NASA JSC), AIAA Space 2008, paper 2008-7633",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Deux configurations d'avant-poste lunaire testées face à la même base : un cylindre métallique horizontal et une alternative gonflable en torus. Les deux visent quatre astronautes pendant six mois.",
+      "dimensions": [
+        { "quoi": "lander du scénario (diamètre octogonal)", "valeur": "environ 8,8 m", "source": "https://spacearchitect.org/pubs/AIAA-2008-7633.pdf" },
+        { "quoi": "hauteur du pont du lander au sol", "valeur": "environ 6,3 m", "source": "https://spacearchitect.org/pubs/AIAA-2008-7633.pdf" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Figure 1 : LS1 Horizontal Cylindrical Habitat Outpost ; Figure 2 : LS1 Alternative Inflatable Torus Habitat Outpost (AIAA 2008-7633)", "url": "https://spacearchitect.org/pubs/AIAA-2008-7633.pdf", "page_source": "https://spacearchitect.org/pubs/AIAA-2008-7633.pdf", "licence": "?", "verifie": true, "note": "PDF ouvert (texte extrait). Figures 1 et 2 de configuration notionnelle, avec légendes confirmées. Pas de cotes lues sur les images." }
+      ],
+      "pour_kibsu": "Comparaison directe cylindre rigide contre torus gonflable pour un même programme : utile pour décider de la forme d'un habitat à niveaux.",
+      "a_verifier": [
+        "Les dimensions chiffrées concernent le lander, pas l'habitat.",
+        "Surface et volume de l'habitat non trouvés. Le texte dit que les deux options ont un peu moins de volume que le LS1 de référence."
+      ]
+    },
+    {
+      "id": "hdu-dsh-2011",
+      "nom": "Deep Space Habitat HDU (version 2011, Kennedy)",
+      "annee": "2011",
+      "auteurs": "Kriss J. Kennedy (NASA JSC) et équipe projet HDU, AIAA 2011-5020",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Reconfiguration de l'HDU-PEM de 2010 en habitat de type Deep Space Habitat, avec ajout d'un second niveau gonflable pour l'habitation et le stockage, et des EVA. Teste en 2011 sur le terrain.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Figure 4 : concept DSH avec second niveau gonflable (AIAA 2011-5020)", "url": "https://spacearchitect.org/pubs/AIAA-2011-5020.pdf", "page_source": "https://spacearchitect.org/pubs/AIAA-2011-5020.pdf", "licence": "?", "verifie": true, "note": "PDF ouvert (texte extrait). Le texte renvoie à la Figure 4 pour le concept avec volume gonflable de second niveau pour habitation et stockage. Image non décrite cotée." }
+      ],
+      "pour_kibsu": "Cas d'un niveau supplémentaire ajouté à une coque existante : utile pour penser la circulation verticale et l'accès au second niveau.",
+      "a_verifier": [
+        "Aucune dimension chiffrée lue dans le texte extrait (les mots de cotes sont fragmentés).",
+        "Vérifier la figure 4 pour les cotes de niveaux."
+      ]
+    },
+    {
+      "id": "esa-moon-village-som",
+      "nom": "Moon Village (ESA, master plan SOM)",
+      "annee": "2019",
+      "auteurs": "ESA, SOM (Skidmore, Owings & Merrill), MIT",
+      "lieu": "lune",
+      "statut": "concept",
+      "forme": "autre",
+      "resume": "Village lunaire permanent prévu au rebord du cratère Shackleton, près du pôle Sud. Modules gonflables livrés séparément puis reliés sur place, avec une coque hybride rigide-souple et une protection environnementale.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Vue aérienne du plan du village Moon Village (© SOM | Slashcube GmbH)", "url": "https://www.som.com/research/moon-village/", "page_source": "https://www.som.com/research/moon-village/", "licence": "© SOM | Slashcube GmbH", "verifie": true, "note": "Page SOM ouverte. Vue aérienne du plan du village. Pas de coupe décrite." },
+        { "type": "maquette", "titre": "Maquette de l'habitat vertical : structure en acier, planchers composites, échelles entre niveaux", "url": "https://www.som.com/research/moon-village/", "page_source": "https://www.som.com/research/moon-village/", "licence": "© SOM | Slashcube GmbH", "verifie": true, "note": "Image décrite sur la page SOM. Montre l'habitat vertical emballé avant lancement." }
+      ],
+      "pour_kibsu": "Plan de village à modules reliés sur un site contraint au pôle Sud : utile pour l'organisation de la masse et l'implantation des modules autour d'un axe de circulation.",
+      "a_verifier": [
+        "Nombre de modules, diamètres et surfaces non précisés sur la page SOM.",
+        "Date de la présentation : 9 avril 2019 selon la presse. Page SOM sans date.",
+        "Statut actuel du projet non confirmé : présenté comme cadre hypothétique."
+      ]
+    },
+    {
+      "id": "esa-foster-3d-printed-base",
+      "nom": "Base lunaire imprimée en 3D (ESA et Foster + Partners)",
+      "annee": "2013",
+      "auteurs": "ESA (Advanced Concepts), Foster + Partners, D-Shape",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "dome",
+      "resume": "Coupole en caténaire imprimée en régolithe, à paroi cellulaire contre micrométéorites et radiations. Un gonflable pressurisé abrite les astronautes à l'intérieur.",
+      "dimensions": [
+        { "quoi": "bloc de démonstration imprimé", "valeur": "1,5 t", "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing" },
+        { "quoi": "vitesse d'impression (imprimante actuelle)", "valeur": "2 m/h", "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing" },
+        { "quoi": "vitesse d'impression (version future)", "valeur": "3,5 m/h", "source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Building a lunar base with 3D printing (article ESA, 31 janv. 2013)", "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing", "page_source": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing", "licence": "?", "verifie": true, "note": "Article ouvert. Aucun plan, aucune coupe et aucune dimension de la coque dans le texte." }
+      ],
+      "pour_kibsu": "Coupole en caténaire : forme porteuse à paroi épaisse et cellulaire, à comparer avec un dôme protecteur autour d'un volume gonflable.",
+      "a_verifier": [
+        "Diamètre, hauteur et épaisseur de la coupole non trouvés.",
+        "Le cadre de 6 m mentionné dans l'article concerne la matrice de buses de l'imprimante, pas la base."
+      ]
+    },
+    {
+      "id": "esa-flexhab-luna",
+      "nom": "FLEXHab (SAGA Space Architects, ESA/DLR LUNA, Cologne)",
+      "annee": "2024",
+      "auteurs": "SAGA Space Architects, ESA, DLR (origine : Manfred Thallner, TU Wien 2018)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "boite",
+      "resume": "Habitat d'entraînement analogue lunaire construit sur une base de conteneur 40 pieds high-cube, imprimé en 3D pour les parois. Il est installé à côté du hall LUNA au centre des astronautes de Cologne, et accueille quatre personnes.",
+      "dimensions": [
+        { "quoi": "surface intérieure", "valeur": "28 m²", "source": "https://www.saga.dk/projects/flexhab" },
+        { "quoi": "dimensions extérieures", "valeur": "13 x 4 m", "source": "https://www.saga.dk/projects/flexhab" },
+        { "quoi": "équipage", "valeur": "4 personnes", "source": "https://www.saga.dk/projects/flexhab" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "FLEXHab : plan et coupes A-A, B-B, C-C (images sur la page projet SAGA)", "url": "https://www.saga.dk/projects/flexhab", "page_source": "https://www.saga.dk/projects/flexhab", "licence": "© SAGA Space Architects ?", "verifie": true, "note": "Page SAGA ouverte. Plan et trois coupes présents en image, sans légende textuelle. Zones listées : galerie (cuisine, salle à manger, sport), laboratoire, sas faisant aussi office de sanitaire, quatre cabines de couchage insonorisées." },
+        { "type": "3d", "titre": "Photo de FLEXHab (SAGA)", "url": "https://www.saga.dk/projects/flexhab", "page_source": "https://www.saga.dk/projects/flexhab", "licence": "© SAGA Space Architects ?", "verifie": true, "note": "Image sur la page projet." }
+      ],
+      "pour_kibsu": "Plan linéaire compact : sas et sanitaire à une extrémité, cabines en retrait, galerie au centre. Excellent gabarit de répartition zones sèches / zones calmes / sanitaire.",
+      "a_verifier": [
+        "Date d'installation : la page donne seulement EAC2024 et le statut Completed. La presse de 2025 indique une installation en avril 2025, non vérifiée.",
+        "Les dimensions de 28 m² intérieur et 13 x 4 m extérieur n'ont pas été recoupées : l'emprise au sol de 13 x 4 m est plus grande que 28 m² suggère (52 m²).",
+        "Le lieu est Cologne (Terre), habitat analogue, pas un habitat lunaire réel."
+      ]
+    },
+    {
+      "id": "hassell-esa-lunar-habitat-masterplan",
+      "nom": "Lunar Habitat Master Plan (Hassell, ESA, Cranfield)",
+      "annee": "2024",
+      "auteurs": "Hassell (architecture), ESA, Cranfield University",
+      "lieu": "lune",
+      "statut": "concept",
+      "forme": "autre",
+      "resume": "Système évolutif de pods gonflables, blocs hexagonaux imbriqués, partiellement construits à partir de matériaux lunaires et imprimés en 3D sur place. Prévu pour 144 personnes près de Shackleton, présenté en janvier 2024.",
+      "dimensions": [
+        { "quoi": "capacité prévue", "valeur": "144 personnes", "source": "https://satnews.com/2024/02/22/esa-hassell-design-an-inflatable-lunar-habitat/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Hassell unveils Lunar Habitat Masterplan (ArchDaily)", "url": "https://www.archdaily.com/1012946/hassell-unveils-lunar-habitat-masterplan-aiming-to-revolutionize-interstellar-living/", "page_source": "https://www.archdaily.com/1012946/hassell-unveils-lunar-habitat-masterplan-aiming-to-revolutionize-interstellar-living/", "licence": "?", "verifie": false, "note": "Lien trouvé par recherche, non ouvert." },
+        { "type": "image", "titre": "Moon base by Hassell (Dezeen, 19 janv. 2024)", "url": "https://www.dezeen.com/2024/01/19/hassell-inflatable-moon-base-european-space-agency/amp/", "page_source": "https://www.dezeen.com/2024/01/19/hassell-inflatable-moon-base-european-space-agency/amp/", "licence": "?", "verifie": false, "note": "Page renvoie 403 à la consultation." },
+        { "type": "image", "titre": "Hassell Studio and ESA create the shape and structure of a future moon base (Wallpaper*)", "url": "https://www.wallpaper.com/tech/hassell-studio-esa-lunar-habitat-master-plan", "page_source": "https://www.wallpaper.com/tech/hassell-studio-esa-lunar-habitat-master-plan", "licence": "?", "verifie": false, "note": "Lien trouvé par recherche, non ouvert. Renders et images intérieures selon le résumé de recherche." },
+        { "type": "image", "titre": "ESA and Hassell design an inflatable lunar habitat (Payload)", "url": "https://payloadspace.com/esa-and-hassell-design-an-inflatable-lunar-habitat/", "page_source": "https://payloadspace.com/esa-and-hassell-design-an-inflatable-lunar-habitat/", "licence": "?", "verifie": false, "note": "Lien trouvé par recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Logique de pods agglomérés : une grappe de modules gonflables autour d'un noyau, à comparer avec une organisation en modules reliés.",
+      "a_verifier": [
+        "Aucun plan, coupe ni dimension trouvé. A chercher dans les communiqués Hassell et ESA.",
+        "Le lien entre ce concept et Moon Village (SOM) est décrit par la presse, pas par les auteurs.",
+        "Le chiffre de 144 personnes vient de la recherche (SatNews), non ouvert."
+      ]
+    },
+    {
+      "id": "ilrs-chine-russie",
+      "nom": "International Lunar Research Station (ILRS, Chine et Russie)",
+      "annee": "2021-2050",
+      "auteurs": "CNSA (Chine), Roscosmos (Russie), partenaires internationaux",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Station de recherche lunaire en réseau : station de surface au pôle Sud, hub orbital, phases jusqu'en 2035 puis 2045-2050. Habitat décrit seulement en termes généraux (quartiers de vie, laboratoires, énergie, véhicules).",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "China forges ahead with ambitious plans for international lunar research station (New Space Economy, 2024)", "url": "https://newspaceeconomy.ca/2024/09/16/china-forges-ahead-with-ambitious-plans-for-international-lunar-research-station/", "page_source": "https://newspaceeconomy.ca/2024/09/16/china-forges-ahead-with-ambitious-plans-for-international-lunar-research-station/", "licence": "?", "verifie": false, "note": "Article de presse trouvé par recherche, non ouvert." },
+        { "type": "rapport", "titre": "Blueprints for a lunar civilization (New Space Economy, 2025)", "url": "https://newspaceeconomy.ca/2025/06/30/blueprints-for-a-lunar-civilization/", "page_source": "https://newspaceeconomy.ca/2025/06/30/blueprints-for-a-lunar-civilization/", "licence": "?", "verifie": false, "note": "Article de presse trouvé par recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Aucun plan trouvé. Intérêt : organisation en réseau (orbite, surface pôle Sud, véhicules pressurisés).",
+      "a_verifier": [
+        "Aucun plan ni dimension d'habitat trouvé. Sources presse seulement.",
+        "Dates variables selon les sources (2035 / 2045 / 2050). Vérifier auprès du CNSA."
+      ]
+    },
+    {
+      "id": "jaxa-toyota-rover-pressurise",
+      "nom": "Rover pressurisé JAXA et Toyota",
+      "annee": "2019-2029",
+      "auteurs": "JAXA, Toyota",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "boite",
+      "resume": "Rover lunaire à six roues et pile à combustible, pressurisé, pour deux personnes (quatre en urgence). Lancement visé en 2029 dans le cadre de l'accord NASA-Japon.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6,0 m", "source": "https://www.zmescience.com/space/toyota-moon-rover-0432432" },
+        { "quoi": "largeur", "valeur": "5,2 m", "source": "https://www.zmescience.com/space/toyota-moon-rover-0432432" },
+        { "quoi": "hauteur", "valeur": "3,8 m", "source": "https://www.zmescience.com/space/toyota-moon-rover-0432432" },
+        { "quoi": "espace de vie", "valeur": "13 m³ (environ 140 pieds carrés, soit environ 13 m²)", "source": "https://www.caradvice.com.au/735471/toyota-designs-moon-rover-concept/photos/" }
+      ],
+      "documents": [
+        { "type": "3d", "titre": "Toyota designs moon rover concept (CarAdvice, galerie)", "url": "https://www.caradvice.com.au/735471/toyota-designs-moon-rover-concept/photos/", "page_source": "https://www.caradvice.com.au/735471/toyota-designs-moon-rover-concept/photos/", "licence": "?", "verifie": false, "note": "Galerie trouvée par recherche, non ouverte." },
+        { "type": "rapport", "titre": "JSASS-2019 : article de conférence JAXA (architecture de transport lunaire)", "url": "https://jaxa.repo.nii.ac.jp/record/48430/files/AC2100001000.pdf", "page_source": "https://jaxa.repo.nii.ac.jp/record/48430/files/AC2100001000.pdf", "licence": "?", "verifie": false, "note": "Mentionne le rover pressurisé sans dimensions selon la recherche." }
+      ],
+      "pour_kibsu": "Volume habitable très compact (environ 13 m²) : gabarit pour une cabine de vie mobile avec couchage, sanitaire et poste de travail.",
+      "a_verifier": [
+        "Les sources de presse donnent 13 m³ et 140 pieds carrés pour le même espace, avec des unités différentes. Non recoupé.",
+        "Sources de presse sur un concept préliminaire, pas de document technique JAXA ouvert."
+      ]
+    },
+    {
+      "id": "italie-mph-thales-alenia",
+      "nom": "Multi-Purpose Habitat (MPH, Italie, Thales Alenia Space, ASI)",
+      "annee": "2023-2033",
+      "auteurs": "Agence spatiale italienne (ASI), Thales Alenia Space",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Module habitat lunaire italien, cylindrique, pour deux astronautes par mission (une mission par an, 7 à 30 jours), avec expériences autonomes les 11 autres mois. Aménagement modulaire, sans chambre : couchage au sol sur matelas.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6 m", "source": "https://europeanspaceflight.com/thales-program-manager-shares-italian-lunar-habitat-details/" },
+        { "quoi": "diamètre", "valeur": "3 m", "source": "https://europeanspaceflight.com/thales-program-manager-shares-italian-lunar-habitat-details/" },
+        { "quoi": "masse", "valeur": "15 t", "source": "https://europeanspaceflight.com/thales-program-manager-shares-italian-lunar-habitat-details/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Thales Program Manager Shares Italian Lunar Habitat Details (European Spaceflight, 24 août 2024)", "url": "https://europeanspaceflight.com/thales-program-manager-shares-italian-lunar-habitat-details/", "page_source": "https://europeanspaceflight.com/thales-program-manager-shares-italian-lunar-habitat-details/", "licence": "?", "verifie": true, "note": "Article ouvert. Pas de plan ni de coupe : l'agence et Thales n'ont pas publié de layout intérieur." },
+        { "type": "image", "titre": "Italy proposes minimalist lunar outpost for Artemis (Hackaday, déc. 2023)", "url": "https://hackaday.com/2023/12/04/italy-proposes-minimalist-lunar-outpost-for-artemis", "page_source": "https://hackaday.com/2023/12/04/italy-proposes-minimalist-lunar-outpost-for-artemis", "licence": "?", "verifie": false, "note": "Lien trouvé par recherche, non ouvert. Indique que ASI et Thales n'ont pas publié d'information technique." }
+      ],
+      "pour_kibsu": "Gabarit de cylindre compact (3 m x 6 m) pour un volume de vie très contraint : à utiliser pour tester des cloisons mobiles et des couchages au sol.",
+      "a_verifier": [
+        "Dimensions extérieures, pas surface utile. Ne pas les lire comme volume habitable.",
+        "Un article agrégateur (Pulse.bot, mai 2026) annonce le passage de la revue SRR et une PDR en 2027, lancement 2033. Non confirmé par ASI ou Thales Alenia Space.",
+        "Aucun plan trouvé."
+      ]
+    },
+    {
+      "id": "kth-bliss-shackleton",
+      "nom": "BLISS (KTH, Team Blue, station de 50 astronautes sur la crête de Shackleton)",
+      "annee": "2023",
+      "auteurs": "KTH Royal Institute of Technology, équipe Blue (SD2905)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Étude étudiante d'une station pour jusqu'à 50 astronautes, sur la crête de Shackleton, opérationnelle vers 2040. Tubes gonflables semi-cylindriques disposés en rectangle compact, divisés en zones de vie.",
+      "dimensions": [
+        { "quoi": "diamètre des tubes gonflables semi-cylindriques", "valeur": "4,5 m", "source": "https://intra.kth.se/polopoly_fs/1.1307775.1704820071!/20230313%20FINAL%20REPORT%20Lunar%20Base%20Team%20Blue%20Station%20Design%20%281%29-compressed.pdf" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "FINAL REPORT Lunar Base Team Blue Station Design (KTH, 13 mars 2023)", "url": "https://intra.kth.se/polopoly_fs/1.1307775.1704820071!/20230313%20FINAL%20REPORT%20Lunar%20Base%20Team%20Blue%20Station%20Design%20%281%29-compressed.pdf", "page_source": "https://intra.kth.se/polopoly_fs/1.1307775.1704820071!/20230313%20FINAL%20REPORT%20Lunar%20Base%20Team%20Blue%20Station%20Design%20%281%29-compressed.pdf", "licence": "?", "verifie": false, "note": "Rapport trouvé par recherche. Ouverture du PDF non confirmée (erreurs 403/404 sur les tentatives). Le plan de masse n'a pas été vu." },
+        { "type": "rapport", "titre": "Station Design Report Red Team (KTH)", "url": "https://www.kth.se/polopoly_fs/1.1307781.1704823167!/Station_Design_Report_Red_Team.pdf", "page_source": "https://www.kth.se/polopoly_fs/1.1307781.1704823167!/Station_Design_Report_Red_Team.pdf", "licence": "?", "verifie": false, "note": "Rapport d'une autre équipe KTH, trouvé par recherche, non ouvert. Comparaison possible." },
+        { "type": "rapport", "titre": "Team Blue: Vehicle Concept and Layout Final Report (KTH)", "url": "https://www.kth.se/polopoly_fs/1.654930.1550155106!/Blue%20-%20Vehicle%20Concept.pdf", "page_source": "https://www.kth.se/polopoly_fs/1.654930.1550155106!/Blue%20-%20Vehicle%20Concept.pdf", "licence": "?", "verifie": false, "note": "Contient peut-être une figure d'agencement intérieur (module Bigelow B330), à vérifier : rattachement à BLISS incertain." }
+      ],
+      "pour_kibsu": "Organisation en tubes gonflables à zones de vie séparées, sur un site de crête. Utile pour une disposition de type village compact.",
+      "a_verifier": [
+        "Ouverture du PDF non confirmée : les dimensions sont tirées de l'extrait de recherche.",
+        "Une étude étudiante, pas une agence.",
+        "Aucun plan de masse ni coupe trouvé."
+      ]
+    },
+    {
+      "id": "uh-sicsa-shackleton",
+      "nom": "Lunar Habitat, studio de la Sasakawa Center (Univ. de Houston, ARCH 7610, printemps 2012)",
+      "annee": "2012",
+      "auteurs": "Sasakawa International Center for Space Architecture, University of Houston (studio ARCH 7610, Stacy Henze)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat au rebord de Shackleton : site d'atterrissage, deux fermes solaires et habitat gonflable. Chaque volume gonflable est divisé en cinq sections et accueille trois familles, avec espaces privés, espace commun, couloir et fonctions de vie.",
+      "dimensions": [
+        { "quoi": "surface totale de l'habitat (un volume gonflable)", "valeur": "1 062 ft² (environ 99 m²)", "source": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf" },
+        { "quoi": "surface par espace familial privé", "valeur": "203 ft² (environ 19 m²)", "source": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf" },
+        { "quoi": "surface de l'espace commun", "valeur": "348 ft² (environ 32 m²)", "source": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf" },
+        { "quoi": "surface du couloir de circulation", "valeur": "105 ft² (environ 10 m²)", "source": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Plan of Habitat (deck SICSA, Lunar Habitat, 2012)", "url": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf", "page_source": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf", "licence": "?", "verifie": true, "note": "PDF ouvert (texte extrait). Diapositive « Plan of Habitat » et « Site Layout » avec vue aérienne des éléments fonctionnels (landing site, habitat, deux fermes solaires, ligne d'obscurité permanente)." },
+        { "type": "coupe", "titre": "Section Through Habitat (deck SICSA, Lunar Habitat, 2012)", "url": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf", "page_source": "https://sicsa.egr.uh.edu/sites/sicsa/files/files/projects/lunarsettlement.pdf", "licence": "?", "verifie": true, "note": "PDF ouvert. Diapositive de coupe à travers l'habitat, avec les modules core (quartiers, réfectoire, sport, laboratoire, centre de commande, serres)." }
+      ],
+      "pour_kibsu": "Plan et coupe d'un habitat gonflable à cinq sections : répartition privée / commune / circulation, avec surfaces chiffrées. Bon gabarit pour une grille de surfaces par pièce.",
+      "a_verifier": [
+        "Ce deck est un travail de studio d'étudiants, pas un article IAC. L'attribution à Hockenberry (IAC-12) du texte de recherche précédent n'est pas confirmée.",
+        "Les conversions en m² sont calculées (1 ft² = 0,0929 m²).",
+        "Les coordonnées lunaires et le chiffre de 16 000 m³ pour 80 occupants (extrait de recherche d'un autre texte) ne sont pas repris : non vérifiés dans ce deck."
+      ]
+    },
+    {
+      "id": "tudelft-crete-shackleton",
+      "nom": "Projet étudiant TU Delft (crête à l'ouest de Shackleton)",
+      "annee": "2023",
+      "auteurs": "TU Delft, projet Moonshot (P4 Regina Tania Tan)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Projet étudiant placé sur la crête à l'ouest de Shackleton, entre deux sites d'atterrissage Artemis possibles. Sépare les espaces de travail des quartiers résidentiels, avec une disposition organique.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "P4 Presentation Regina Tania Tan (TU Delft Moonshot)", "url": "https://moonshotplus.tudelft.nl/images/2/20/P4_Regina_Tania_Tan.pdf", "page_source": "https://moonshotplus.tudelft.nl/images/2/20/P4_Regina_Tania_Tan.pdf", "licence": "?", "verifie": false, "note": "Présentation trouvée par recherche, non ouverte." },
+        { "type": "rapport", "titre": "Rapport final TU Delft Moonshot (Report.pdf)", "url": "https://moonshotplus.tudelft.nl/images/7/7d/Report.pdf", "page_source": "https://moonshotplus.tudelft.nl/images/7/7d/Report.pdf", "licence": "?", "verifie": false, "note": "Rapport trouvé par recherche, non ouvert. Plans et coupes à vérifier." }
+      ],
+      "pour_kibsu": "Séparation travail / vie et disposition organique sur une crête : cas proche du pôle Sud visé par Kibsu.",
+      "a_verifier": [
+        "Pas de dimensions trouvées. Ouvrir la présentation pour vérifier plans et surfaces."
+      ]
+    },
+    {
+      "id": "kajima-kyoto-neo-lunar-glass",
+      "nom": "Neo Lunar Glass (Université de Kyoto et Kajima)",
+      "annee": "2024",
+      "auteurs": "Université de Kyoto, Kajima",
+      "lieu": "lune",
+      "statut": "concept",
+      "forme": "autre",
+      "resume": "Habitat tournant pour gravité artificielle, de forme paraboloïde, pour jusqu'à 10 000 habitants. Prototype au sol visé dans les années 2030.",
+      "dimensions": [
+        { "quoi": "largeur", "valeur": "200 m", "source": "https://www.weforum.org/stories/all/japanese-space-extra-terrestrial-architecture-earth-mars-moon/" },
+        { "quoi": "hauteur", "valeur": "400 m", "source": "https://www.weforum.org/stories/all/japanese-space-extra-terrestrial-architecture-earth-mars-moon/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Japanese researchers are developing artificial-gravity buildings for space (World Economic Forum)", "url": "https://www.weforum.org/stories/all/japanese-space-extra-terrestrial-architecture-earth-mars-moon/", "page_source": "https://www.weforum.org/stories/all/japanese-space-extra-terrestrial-architecture-earth-mars-moon/", "licence": "?", "verifie": false, "note": "Article trouvé par recherche, non ouvert." }
+      ],
+      "pour_kibsu": "Référence de forme extrême (paraboloïde tournant) : hors sujet pour un habitat de pôle Sud, mais utile pour la comparaison de formes.",
+      "a_verifier": [
+        "Concept universitaire et industriel, pas une agence spatiale. Sa rattache à un programme lunaire n'est pas confirmée.",
+        "Dimensions à vérifier dans la source primaire (Kyoto ou Kajima)."
+      ]
+    },
+    {
+      "id": "ispace-shimizu-habitat",
+      "nom": "Habitat à membrane autodéployable (ispace et Shimizu)",
+      "annee": "2024-2025",
+      "auteurs": "ispace, Shimizu Corporation, Université de Chuo (lave)",
+      "lieu": "lune",
+      "statut": "concept",
+      "forme": "autre",
+      "resume": "Accord de collaboration entre ispace et Shimizu sur des études d'infrastructure cislunaire. Shimizu développe un module d'habitat à structure membranaire, autodéployable. Une étude de lave tubes avec Chuo University mentionne une base dans les tubes de lave vers 2050.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "ispace news (ispace-inc.com)", "url": "https://www.ispace-inc.com/?p=8819", "page_source": "https://www.ispace-inc.com/?p=8819", "licence": "?", "verifie": false, "note": "Page trouvée par recherche, non ouverte." }
+      ],
+      "pour_kibsu": "Piste de modules membranaires autodéployables. Lave tubes : intérêt pour un habitat protégé de la radiation.",
+      "a_verifier": [
+        "Aucune dimension trouvée pour le module Shimizu.",
+        "Visuels de lave tube : concept, sans plan."
+      ]
+    },
+    {
+      "id": "iaac-expandable-space-habitats",
+      "nom": "Expandable Space Habitats (IAAC, Master Advanced Computation, faculté Hassell)",
+      "annee": "2021-2022",
+      "auteurs": "Maria Papadimitraki et Alexander Lopez (IAAC), faculté Xavier de Kestelier (Hassell)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitats extensibles au pôle Sud près de Shackleton : unités de quatre personnes en plan abordable, unités à deux niveaux pour groupes plus grands, unités de six personnes autour d'un espace de rassemblement. Coque imprimée en 3D posée sur des pods préfabriqués.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Living on Lunar Base (IAAC blog, programme Moon Living Studio)", "url": "https://www.iaacblog.com/programs/moon-living-studio-expandable-space-habitats/", "page_source": "https://www.iaacblog.com/programs/moon-living-studio-expandable-space-habitats/", "licence": "?", "verifie": false, "note": "Page trouvée par recherche. L'ouverture a expiré (délai). Les images de plan ou de coupe n'ont pas été vues." }
+      ],
+      "pour_kibsu": "Organisation en unités de tailles variables autour d'un espace commun : utile pour une grille de logements de 4 à 6 personnes.",
+      "a_verifier": [
+        "Aucun plan ni coupe lu. Vérifier la galerie IAAC.",
+        "Dates indiquées par la recherche : 2021/2022, à confirmer."
+      ]
+    },
+    {
+      "id": "howard-notional-habitat-2021",
+      "nom": "Notional Habitat (Howard, NASA, 2021) : habitat de surface à deux niveaux",
+      "annee": "2021",
+      "auteurs": "Robert L. Howard (NASA JSC)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Étude de l'agencement scientifique d'un habitat lunaire ou martien : un mockup horizontal à deux niveaux (étage supérieur et inférieur). Discute le choix entre 3 m et 3,5 m de diamètre pour les modules.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Notional Habitat Science Outfitting for a Lunar Surface Habitat or Mars Transit Habitat, NTRS 20210021308", "url": "https://ntrs.nasa.gov/api/citations/20210021308/downloads/Notional%20Habitat%20Science%20Outfitting%20for%20a%20Lunar%20Surface%20Habitat%20or%20Mars%20Transit%20Habitat.pdf", "page_source": "https://ntrs.nasa.gov/citations/20210021308", "licence": "domaine public (NASA) ?", "verifie": false, "note": "PDF renvoie 404 ou 403 à la consultation. Plans et coupes du mockup à vérifier (signalés par la recherche : niveaux supérieur et inférieur)." }
+      ],
+      "pour_kibsu": "Mockup horizontal à deux niveaux avec outillage scientifique : compare la densité d'équipement à la surface utile.",
+      "a_verifier": [
+        "Les dimensions 3 m et 3,5 m viennent d'un résumé de recherche, pas du document lu.",
+        "Non ouvert : pas de figure vérifiée."
+      ]
+    },
+    {
+      "id": "nasa-lunar-surface-base-ops-2020",
+      "nom": "Lunar Surface Base (NASA, 2020) : module Ops",
+      "annee": "2020",
+      "auteurs": "NASA (rapport NTRS 20205005833)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Concept de base de surface avec un module Ops prévu pour deux membres d'équipage. Le rapport décrit un plan et des coupes de ce module.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Lunar Surface Base paper final (073020), NTRS 20205005833 : plan et coupes du module Ops", "url": "https://ntrs.nasa.gov/api/citations/20205005833/downloads/Lunar%20Surface%20Base%20paper-final-073020.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20205005833/downloads/Lunar%20Surface%20Base%20paper-final-073020.pdf", "licence": "domaine public (NASA) ?", "verifie": false, "note": "PDF renvoie 403 à la consultation. Plan et coupes du module Ops signalés par la recherche." }
+      ],
+      "pour_kibsu": "Module Ops à deux occupants : gabarit de plan et de coupe pour un poste de contrôle et de surveillance.",
+      "a_verifier": [
+        "Dimensions non lues.",
+        "PDF non ouvert."
+      ]
+    },
+    {
+      "id": "common-habitat-variants-2020",
+      "nom": "Common Habitat : variantes Lune et Mars (NASA, 2020)",
+      "annee": "2020",
+      "auteurs": "NASA (rapport NTRS 20205001678)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Variantes d'un même habitat commun, pour la Lune et pour Mars. Le rapport compare les configurations.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Design Variants of a Common Habitat for Moon and Mars Exploration, NTRS 20205001678", "url": "https://ntrs.nasa.gov/api/citations/20205001678/downloads/FINAL%20%20-%20Design%20Variants%20of%20a%20Common%20Habitat%20for%20Moon%20and%20Mars%20Exploration.docx.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20205001678/downloads/FINAL%20%20-%20Design%20Variants%20of%20a%20Common%20Habitat%20for%20Moon%20and%20Mars%20Exploration.docx.pdf", "licence": "domaine public (NASA) ?", "verifie": false, "note": "PDF renvoie 403 à la consultation. Trouvé par recherche." }
+      ],
+      "pour_kibsu": "Variantes d'un même habitat : utile pour une comparaison de configurations à volume constant.",
+      "a_verifier": [
+        "Aucun plan ni dimension lu."
+      ]
+    },
+    {
+      "id": "moonbase-contest-shackleton-2020",
+      "nom": "Project Shackleton (Moon Base Design Contest, finaliste)",
+      "annee": "2020",
+      "auteurs": "Shuhan Zheng (concours Moon Base, Moon Society)",
+      "lieu": "lune",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Projet finaliste d'un concours de base lunaire, placé à Shackleton, sur deux niveaux : L2 en surface et B1 souterrain, avec un extérieur conceptuel.",
+      "dimensions": [],
+      "documents": [
+        { "type": "plan", "titre": "Floor plans L2 (surface) et B1 (souterrain), Project Shackleton (Moon Society)", "url": "https://strabo.moonsociety.org/2020-MoonBaseDesignContest/Finalist-Shackleton/Project%20Shackleton%20-%20Shuhan%20Zheng.pdf", "page_source": "https://strabo.moonsociety.org/2020-MoonBaseDesignContest/Finalist-Shackleton/Project%20Shackleton%20-%20Shuhan%20Zheng.pdf", "licence": "?", "verifie": false, "note": "Tentative d'ouverture : erreur de connexion (ECONNRESET). Plans L2 et B1 signalés par la recherche." }
+      ],
+      "pour_kibsu": "Deux niveaux, un en surface et un enterré : cas direct pour la stratégie de protection par enterrement.",
+      "a_verifier": [
+        "Surfaces et occupants non lus.",
+        "Contenu des plans à vérifier dans le PDF."
+      ]
+    },
+    {
+      "id": "dia-moonbase-2021",
+      "nom": "Domi Inter Astra (concours Moon Base, rapport 2021)",
+      "annee": "2021",
+      "auteurs": "Alice Muller, équipe Domi Inter Astra (Moon Base Design Contest)",
+      "lieu": "lune",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Rapport final du concours Moon Base 2021 par l'équipe Domi Inter Astra.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "DIA Moonbase Competition Final Report 2021 (Alice Muller)", "url": "https://strabo.moonsociety.org/2020-MoonBaseDesignContest/1-Domi-Inter-Astra/DIA%20Moonbase%20Competition%20Final%20Report%202021%20-%20Alice%20Muller.pdf", "page_source": "https://strabo.moonsociety.org/2020-MoonBaseDesignContest/1-Domi-Inter-Astra/DIA%20Moonbase%20Competition%20Final%20Report%202021%20-%20Alice%20Muller.pdf", "licence": "?", "verifie": false, "note": "Tentative d'ouverture : erreur de connexion (ECONNRESET). Trouvé par recherche." }
+      ],
+      "pour_kibsu": "Rapport de concours : sources de plans et de dimensions à vérifier.",
+      "a_verifier": [
+        "Contenu non lu. Plans à chercher."
+      ]
+    },
+    {
+      "id": "polimi-moon-base-iac-2015",
+      "nom": "Moon Base POLIMI (IAC 2015, Politecnico di Milano)",
+      "annee": "2015",
+      "auteurs": "Politecnico di Milano (IAC-15-A3-IP-43)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Base lunaire proposée par le Politecnico di Milano pour le congrès IAC 2015.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "IAC-15,A3,IP,43 MOON BASE POLIMI (article de congrès)", "url": "https://re.public.polimi.it/retrieve/e0c31c09-9bda-4599-e053-1705fe0aef77/IAC-15%2cA3%2cIP%2c43-MOON-BASE-POLIMI_Upload.pdf", "page_source": "https://re.public.polimi.it/retrieve/e0c31c09-9bda-4599-e053-1705fe0aef77/IAC-15%2cA3%2cIP%2c43-MOON-BASE-POLIMI_Upload.pdf", "licence": "?", "verifie": false, "note": "PDF renvoie 403 à la consultation. Trouvé par recherche." }
+      ],
+      "pour_kibsu": "Article de congrès italien : à ouvrir pour un plan de base éventuel.",
+      "a_verifier": [
+        "Contenu non lu."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "NTRS (NASA Technical Reports Server)", "url": "https://ntrs.nasa.gov", "note": "Source primaire pour les rapports Constellation, Artemis et Surface Habitat. Plusieurs PDF renvoient 403 à la consultation." },
+    { "titre": "SOM : page Moon Village", "url": "https://www.som.com/research/moon-village/", "note": "Plan aérien du village et description des modules, ouvert." },
+    { "titre": "SAGA Space Architects : FLEXHab", "url": "https://www.saga.dk/projects/flexhab", "note": "Plan et coupes en image, dimensions, ouvert." },
+    { "titre": "ESA : Building a lunar base with 3D printing", "url": "https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing", "note": "Article 2013 sur la coupole Foster + Partners, ouvert." },
+    { "titre": "AIAA 2008-7633 (Toups, Kennedy), copie spacearchitect.org", "url": "https://spacearchitect.org/pubs/AIAA-2008-7633.pdf", "note": "Copie hébergée, ouverte. Figures 1 et 2 LS1." },
+    { "titre": "ASCE 2010, HDU Test Operations (Tri, Kennedy, Gill, Howe), copie spacearchitect.org", "url": "https://spacearchitect.org/pubs/ASCE-2010-HDU-TestOperations.pdf", "note": "Copie hébergée, ouverte. Plan HDU-PEM (figure 2), cylindre de 5 m." },
+    { "titre": "AIAA 2011-5020 (Kennedy), copie spacearchitect.org", "url": "https://spacearchitect.org/pubs/AIAA-2011-5020.pdf", "note": "Copie hébergée, ouverte. Concept DSH à second niveau gonflable." },
+    { "titre": "NASA Artemis : Lunar Living (concept Base Camp, 2020)", "url": "https://blogs.nasa.gov/artemis/2020/10/28/lunar-living-nasas-artemis-base-camp-concept/", "note": "Non ouvert." }
+  ],
+  "pistes_non_explorees": [
+    "Burke et al. 2022 (NTRS 20220013669) : PDF toujours en 403 après tentative. Chercher une copie sur nss.org, archive.org ou lpi.usra.edu pour les figures 3 et 5 à 8.",
+    "NTRS 20110013501 (Desert RATS 2010, plan HDU-PEM) : 403 ou 404. Chercher une copie hébergée (spacearchitect.org ou archive.org).",
+    "NTRS 20080014092 (Kennedy 2008, horizontal et torus) : 403. La copie spacearchitect (AIAA 2008-7633) a été utilisée à la place.",
+    "NTRS 20140002352 (HDU vertical, barrel 2 m, 56 m³, 19 m²) : 403. Chercher une copie hébergée pour confirmer.",
+    "Scenario 12.0 (Kennedy, Toups, Rudisill, Habitation Overview) : scispace.com renvoie une page vide. Chercher une autre copie.",
+    "IAAC Expandable Space Habitats : page iaacblog expirée. Ouvrir la galerie pour les plans et coupes.",
+    "Moon Base contest Shackleton et DIA 2021 : strabo.moonsociety.org en erreur de connexion. Réessayer plus tard.",
+    "Hassell / ESA Lunar Habitat Master Plan : Dezeen en 403. Communiqué ESA ou Hassell à trouver pour plans et dimensions.",
+    "JAXA : documents techniques officiels sur le rover pressurisé (les sources sont de presse).",
+    "ILRS : communiqués CNSA et Roscosmos pour un plan d'habitat.",
+    "ispace : communiqués sur les habitats Shimizu, pour les dimensions du module membranaire.",
+    "KTH BLISS : rapport final non ouvert. Chercher le plan de masse dans le PDF.",
+    "TU Delft A2 Report Peixing : PDF lu, page unique en chinois, sans texte extrait. Pas exploité.",
+    "Surfaces de Scenario 12.0 et de Constellation LSS : Lunar Surface Scenario 12.0 (habitat horizontal) : plan à trouver."
+  ]
+}

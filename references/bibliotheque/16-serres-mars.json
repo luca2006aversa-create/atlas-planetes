@@ -1,0 +1,474 @@
+{
+  "theme": "Serres spatiales et espaces de culture ; habitats martiens transposables à la Lune",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "eden-iss",
+      "nom": "EDEN ISS (serre antarctique)",
+      "annee": "2016-2021",
+      "auteurs": "DLR, groupe EDEN (Institut des systèmes spatiaux, Brême)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "boite",
+      "resume": "Serre de recherche installée près de la station Neumayer III en Antarctique, construite à partir de deux conteneurs de 20 pieds. Elle sert à tester la culture de légumes en milieu fermé et isolé, comme en mission spatiale.",
+      "dimensions": [
+        { "quoi": "surface de culture (Mobile Test Facility)", "valeur": "12,5 m² (environ 13 m² dans un autre papier DLR)", "source": "https://www.frontiersin.org/articles/10.3389/fpls.2020.00656" },
+        { "quoi": "surface de culture (design adapté, version suivante)", "valeur": "30,8 m²", "source": "https://link.springer.com/article/10.1007/s12567-020-00318-4" },
+        { "quoi": "productivité annuelle 2018", "valeur": "27,4 kg/m²", "source": "https://www.frontiersin.org/articles/10.3389/fpls.2020.00656" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Zabel et al. 2020, EDEN ISS Mobile Test Facility (Frontiers in Plant Science)", "url": "https://www.frontiersin.org/articles/10.3389/fpls.2020.00656", "page_source": "https://www.frontiersin.org/articles/10.3389/fpls.2020.00656", "licence": "?", "verifie": false, "note": "Article de référence sur la serre ; la page n'a pas pu être ouverte (erreur 500). Chiffre de 12,5 m² relevé dans le résultat de recherche." },
+        { "type": "rapport", "titre": "The EDEN ISS Antarctic Greenhouse Project - Final Design and Outcome of the Assembly, Integration and Testing Phase", "url": "https://openpolar.no/Record/ftdlr:oai:elib.dlr.de:116032/Details", "page_source": "https://openpolar.no/Record/ftdlr:oai:elib.dlr.de:116032/Details", "licence": "?", "verifie": false, "note": "Notice du rapport final de conception (DLR), miroir openpolar ; PDF non ouvert." },
+        { "type": "rapport", "titre": "IAC 2018 EDEN ISS (IAC-18B3714x47710)", "url": "https://elib.dlr.de/132076/1/IAC-18B3714x47710.pdf", "page_source": "https://elib.dlr.de/132076/1/IAC-18B3714x47710.pdf", "licence": "?", "verifie": false, "note": "Source de la surface d'environ 13 m² et de la description des niveaux de culture sous LED. Non ouvert." },
+        { "type": "coupe", "titre": "ICES 2017 EDEN ISS (elib DLR 118462) : vues en coupe nord et sud annoncées", "url": "https://elib.dlr.de/118462/1/ICES_2017_220%20v2.pdf", "page_source": "https://elib.dlr.de/118462", "licence": "?", "verifie": false, "note": "PDF téléchargé mais illisible (données compressées) ; figures de coupe non vues. Le résumé de recherche annonce des vues en coupe nord et sud de la disposition interne." }
+      ],
+      "pour_kibsu": "Référence de surface réelle : environ 12,5 m² de culture sur quatre niveaux, dans un volume de deux conteneurs. Utile pour dimensionner une serre lunaire compacte (surface de culture par personne à comparer).",
+      "a_verifier": [
+        "Surface de 30,8 m² : chiffre issu d'un résumé de recherche (DLR, design adapté), pas d'un document ouvert.",
+        "Distance à la station : 400 m (Frontiers) ou 300 m (source DLR, plan de déploiement) : à vérifier.",
+        "Dimensions au sol de la serre et plan coté : non trouvés."
+      ]
+    },
+    {
+      "id": "lunar-greenhouse-arizona",
+      "nom": "Lunar Greenhouse / Prototype Lunar-Mars Greenhouse (Université d'Arizona, Giacomelli)",
+      "annee": "2008-2012",
+      "auteurs": "Université d'Arizona (CEAC, Gene Giacomelli ; SSEL, Roberto Furfaro) ; Sadler Machine Company ; NASA Kennedy",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Module de serre hydroponique cylindrique et repliable, conçu comme segment d'un tube d'habitat lunaire. Il est aussi présenté comme prototype pour Mars.",
+      "dimensions": [
+        { "quoi": "longueur du module", "valeur": "18 pieds (environ 5,5 m)", "source": "https://www.ssel.arizona.edu/missions/prototype-lunarmars-greenhouse" },
+        { "quoi": "diamètre de la chambre CEAC", "valeur": "7 pieds 3 pouces (environ 2,2 m)", "source": "https://www.ssel.arizona.edu/missions/prototype-lunarmars-greenhouse" },
+        { "quoi": "diamètre des prototypes (NASA)", "valeur": "plus de 8 pieds (plus de 2,4 m)", "source": "https://www.ssel.arizona.edu/missions/prototype-lunarmars-greenhouse" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Prototype Lunar/Mars Greenhouse (page projet SSEL, Université d'Arizona)", "url": "https://www.ssel.arizona.edu/missions/prototype-lunarmars-greenhouse", "page_source": "https://www.ssel.arizona.edu/missions/prototype-lunarmars-greenhouse", "licence": "?", "verifie": true, "note": "Page projet ouverte : dimensions, concepteur (Sadler), équipe. Pas de plan ni de coupe trouvés sur la page." }
+      ],
+      "pour_kibsu": "Module cylindrique de 5,5 m de long pour la culture hydroponique : bon gabarit pour une serre intégrée à un tube d'habitat lunaire, à enterrer sous le régolite (protection radiative).",
+      "a_verifier": [
+        "Diamètre : 7 pieds 3 pouces (CEAC) contre plus de 8 pieds (prototypes NASA) : pas tranché.",
+        "Surface de culture au sol : non publiée ; environ 12 à 13 m² de sol si la base est de 5,5 m × 2,2 à 2,4 m (calcul personnel, non sourcé).",
+        "Plan et coupe : rechercher les documents NASA KSC ou CEAC."
+      ]
+    },
+    {
+      "id": "south-pole-food-growth-chamber",
+      "nom": "South Pole Food Growth Chamber",
+      "annee": "2004-2006",
+      "auteurs": "Université d'Arizona (CEAC, Gene Giacomelli ; éclairage Phil Sadler) pour l'Amundsen-Scott South Pole Station",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Serre hydroponique automatisée installée dans la station antarctique du pôle Sud. Elle produit des légumes frais pour les chercheurs et sert de référence pour les serres de Lune.",
+      "dimensions": [
+        { "quoi": "surface de culture", "valeur": "environ 45 m²", "source": "https://experts.arizona.edu/en/publications/description-operation-and-production-of-the-south-pole-food-growt/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Description, operation and production of the South Pole Food Growth Chamber (Université d'Arizona)", "url": "https://experts.arizona.edu/en/publications/description-operation-and-production-of-the-south-pole-food-growt/", "page_source": "https://experts.arizona.edu/en/publications/description-operation-and-production-of-the-south-pole-food-growt/", "licence": "?", "verifie": false, "note": "Notice de publication ; non ouverte. Un article de 2004 (SpaceRef / SpaceNews) donne la surface de 45 m² avant installation." },
+        { "type": "rapport", "titre": "Resource and Production Model for the South Pole Food Growth Chamber (SAE 2008-01-2011)", "url": "https://saemobilus.sae.org/content/2008-01-2011", "page_source": "https://saemobilus.sae.org/content/2008-01-2011", "licence": "?", "verifie": false, "note": "Modèle de production de la chambre ; non ouvert." }
+      ],
+      "pour_kibsu": "Exemple de serre en milieu extrême conçue par la même équipe que la serre lunaire : chiffre de surface utile pour comparer avec EDEN ISS.",
+      "a_verifier": [
+        "Surface 45 m² : chiffre d'un article de 2004 écrit avant installation (surface prévue, pas mesurée).",
+        "Plans et coupes non trouvés."
+      ]
+    },
+    {
+      "id": "bios-3",
+      "nom": "BIOS-3",
+      "annee": "1965-1984",
+      "auteurs": "Institut de physique biophysique de Krasnoïarsk (URSS)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Installation soviétique de vie fermée, enterrée sous terre, avec des compartiments pour l'équipage, des phytotrons et des algues. Elle a accueilli des expériences de fermeture de 1 à 3 personnes, dont une de 180 jours.",
+      "dimensions": [
+        { "quoi": "emprise au sol", "valeur": "14 × 9 m", "source": "https://en.wikipedia.org/wiki/BIOS-3" },
+        { "quoi": "volume de la structure", "valeur": "315 m³", "source": "https://en.wikipedia.org/wiki/BIOS-3" },
+        { "quoi": "nombre de compartiments", "valeur": "4 (dont une zone d'équipage)", "source": "https://en.wikipedia.org/wiki/BIOS-3" },
+        { "quoi": "chlorelle exposée nécessaire par personne", "valeur": "8 m²", "source": "https://en.wikipedia.org/wiki/BIOS-3" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "BIOS-3 (article Wikipédia en anglais)", "url": "https://en.wikipedia.org/wiki/BIOS-3", "page_source": "https://en.wikipedia.org/wiki/BIOS-3", "licence": "CC BY-SA", "verifie": true, "note": "Dimensions, volume, compartiments et équipage ouverts sur la page. Pas de plan ni de coupe sur la page." }
+      ],
+      "pour_kibsu": "Exemple de serre enterrée et fermée avec un ratio de surface végétale par personne : 8 m² de chlorelle par personne (chiffre Wikipédia, à recouper avec le papier source).",
+      "a_verifier": [
+        "Surface totale de culture : un résumé cite 63 m² de surface d'ensemencement, avec une coquille sur le volume (315 m² au lieu de m³) : non ouvert, à vérifier.",
+        "Un papier de 2007 (Gitelson, Lisovsky) donne des compartiments de 7 × 4,5 m et 30 m² pour une personne : non ouvert.",
+        "Plans et coupes détaillés non trouvés."
+      ]
+    },
+    {
+      "id": "lunar-palace-1",
+      "nom": "Lunar Palace 1 (Yuegong-1)",
+      "annee": "2014",
+      "auteurs": "Beijing Institute of Astronautical Systems Engineering (Chine)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Base expérimentale fermée à Pékin où trois personnes ont vécu 105 jours en 2014. Elle combine une zone de vie et deux cabines de culture végétale.",
+      "dimensions": [
+        { "quoi": "surface totale", "valeur": "160 m²", "source": "https://en.wikipedia.org/wiki/Yuegong-1" },
+        { "quoi": "volume total", "valeur": "500 m³", "source": "https://en.wikipedia.org/wiki/Yuegong-1" },
+        { "quoi": "surface de culture (végétation, deux cabines)", "valeur": "58 m²", "source": "https://en.wikipedia.org/wiki/Yuegong-1" },
+        { "quoi": "surface habitable", "valeur": "42 m²", "source": "https://en.wikipedia.org/wiki/Yuegong-1" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Yuegong-1 (article Wikipédia en anglais)", "url": "https://en.wikipedia.org/wiki/Yuegong-1", "page_source": "https://en.wikipedia.org/wiki/Yuegong-1", "licence": "CC BY-SA", "verifie": true, "note": "Surfaces et volume ouverts sur la page. Pas de plan ni de coupe sur la page." }
+      ],
+      "pour_kibsu": "Ratio réel de culture sur habitat : 58 m² de culture pour 42 m² de vie, soit environ 1,4 m² de culture par m² habitable, pour 3 personnes (environ 19 m² de culture par personne). Très utile pour dimensionner la serre d'un habitat lunaire.",
+      "a_verifier": [
+        "Le ratio par personne (19 m²) est un calcul personnel à partir des chiffres Wikipédia.",
+        "Plan coté de la base à trouver (sources chinoises)."
+      ]
+    },
+    {
+      "id": "aph-iss",
+      "nom": "Advanced Plant Habitat (APH)",
+      "annee": "2017-",
+      "auteurs": "NASA Kennedy Space Center",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Chambre de culture fermée à bord de l'ISS, pilotée par ordinateur, qui contrôle lumière, air, eau et nutriments. Elle succède à Veggie pour les expériences scientifiques sur les plantes.",
+      "dimensions": [
+        { "quoi": "surface de culture scientifique", "valeur": "1 708 cm² (environ 0,17 m²)", "source": "https://ntrs.nasa.gov/api/citations/20160005065/downloads/20160005065.pdf" },
+        { "quoi": "volume de culture scientifique", "valeur": "112 500 cm³ (environ 0,11 m³)", "source": "https://ntrs.nasa.gov/api/citations/20160005065/downloads/20160005065.pdf" },
+        { "quoi": "hauteur maximale des tiges", "valeur": "45 cm (une autre source dit 43 cm)", "source": "https://ntrs.nasa.gov/api/citations/20160005065/downloads/20160005065.pdf" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "NTRS 20160005065 (document NASA sur l'APH, consulté par recherche)", "url": "https://ntrs.nasa.gov/api/citations/20160005065/downloads/20160005065.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20160005065", "licence": "domaine public NASA", "verifie": false, "note": "PDF bloqué (erreur 403) ; le chiffre vient du résultat de recherche, source exacte à confirmer." }
+      ],
+      "pour_kibsu": "Référence de petite échelle : une chambre de 0,17 m² de surface sert à valider des protocoles ; à utiliser comme ordre de grandeur de la donnée de culture par unité.",
+      "a_verifier": [
+        "Surface 1 708 cm² : issue d'une présentation NASA, non ouverte.",
+        "Hauteur des tiges : 43 ou 45 cm selon les sources.",
+        "Pas de plan ni de coupe trouvés."
+      ]
+    },
+    {
+      "id": "veggie-iss",
+      "nom": "Veggie (VEG)",
+      "annee": "2014-",
+      "auteurs": "NASA Kennedy Space Center ; Orbital Technologies",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Petit système de culture en sac souple installé dans l'ISS pour faire pousser de la laitue et du chou frisé, avec une lumière LED. Il a servi de base à l'APH.",
+      "dimensions": [
+        { "quoi": "surface de culture par module", "valeur": "0,17 m²", "source": "https://saemobilus.sae.org/papers/a-low-equivalent-system-mass-plant-growth-unit-space-exploration-2005-01-2843" },
+        { "quoi": "hauteur réglable", "valeur": "de 5 à 45 cm", "source": "https://saemobilus.sae.org/papers/a-low-equivalent-system-mass-plant-growth-unit-space-exploration-2005-01-2843" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "A Low Equivalent System Mass Plant Growth Unit for Space Exploration (SAE 2005-01-2843)", "url": "https://saemobilus.sae.org/papers/a-low-equivalent-system-mass-plant-growth-unit-space-exploration-2005-01-2843", "page_source": "https://saemobilus.sae.org/papers/a-low-equivalent-system-mass-plant-growth-unit-space-exploration-2005-01-2843", "licence": "?", "verifie": false, "note": "Article non ouvert ; chiffre 0,17 m² vu dans le résultat de recherche." }
+      ],
+      "pour_kibsu": "Ordre de grandeur pour un module de culture léger : 0,17 m² par unité. Une serre d'habitat demande des dizaines de tels modules.",
+      "a_verifier": [
+        "Dimensions : une source donne 53 × 40 cm et 0,16 m² de tapis racinaire ; une autre donne 11,5 × 14,5 pouces (environ 0,11 m²) : contradictoire.",
+        "Pages NASA et Spaceflight101 non ouvertes (erreur 404)."
+      ]
+    },
+    {
+      "id": "mars-dune-alpha-chapea",
+      "nom": "Mars Dune Alpha (habitat CHAPEA, NASA JSC)",
+      "annee": "2023-",
+      "auteurs": "NASA (programme CHAPEA) ; BIG (Bjarke Ingels Group) et ICON (impression 3D, système Vulcan)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Habitat imprimé en 3D à Houston, à échelle réelle, conçu comme analogue d'une base martienne. Quatre astronautes simulés y vivent un an pour des études de comportement.",
+      "dimensions": [
+        { "quoi": "surface habitable", "valeur": "1 700 pieds carrés (environ 158 m²)", "source": "https://www.nasa.gov/chapea/habitat" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "NASA CHAPEA habitat (page officielle)", "url": "https://www.nasa.gov/chapea/habitat", "page_source": "https://www.nasa.gov/chapea/habitat", "licence": "domaine public NASA", "verifie": true, "note": "Page ouverte : 1 700 pieds carrés, 4 quartiers privés, postes de travail, poste médical, cuisine et stations de culture alimentaire. Pas de plan coté sur la page." }
+      ],
+      "pour_kibsu": "Référence d'organisation : quartiers privés à une extrémité, espaces de travail et de culture à l'autre, espaces communs entre les deux. Les stations de culture alimentaire sont dans le même volume que l'habitat (pas de serre séparée).",
+      "a_verifier": [
+        "Surface : 158 m² (1 700 pi²) ; le site BIG indique 139 m² (1 500 pi²) : contradiction non tranchée (site BIG en erreur 403, non ouvert).",
+        "Surface de culture exacte : non trouvée.",
+        "Plans cotés : à chercher sur le site BIG ou dans les documents CHAPEA.",
+        "Plan d'étage téléchargeable signalé sur la galerie ICON (non ouverte, verifie false)."
+      ]
+    },
+    {
+      "id": "interstellar-biopod",
+      "nom": "Interstellar Lab BioPod",
+      "annee": "2022-",
+      "auteurs": "Interstellar Lab (Floride), avec Dassault Systèmes (design)",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "dome",
+      "resume": "Dôme gonflable à membrane transparente, avec culture hydroponique ou aquaponique et contrôle automatique de l'air. Il doit fonctionner presque sans équipage, et une version doit voler vers l'ISS.",
+      "dimensions": [
+        { "quoi": "surface au sol ou d'enveloppe", "valeur": "environ 55 m²", "source": "https://www.designboom.com/architecture/interstellar-lab-self-sustainable-space-pods-dassault-systemes-02-17-2023/" },
+        { "quoi": "hauteur maximale", "valeur": "environ 5 m (environ 16 pieds)", "source": "https://www.designboom.com/architecture/interstellar-lab-self-sustainable-space-pods-dassault-systemes-02-17-2023/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Interstellar shoots for the moon, mars, and more (Designboom)", "url": "https://www.designboom.com/architecture/interstellar-lab-self-sustainable-space-pods-dassault-systemes-02-17-2023/", "page_source": "https://www.designboom.com/architecture/interstellar-lab-self-sustainable-space-pods-dassault-systemes-02-17-2023/", "licence": "?", "verifie": false, "note": "Article presse cité dans la recherche ; non ouvert. Les dimensions viennent de résumés de recherche (dont un article français)." }
+      ],
+      "pour_kibsu": "Exemple de serre gonflable autonome : on voit la forme dôme et la fermeture automatique. Piste pour une serre lunaire gonflable sous régolite.",
+      "a_verifier": [
+        "Dimensions : plusieurs sources, mais aucune ouverte. La taille en m² peut être une surface d'enveloppe et non une surface au sol.",
+        "Capacité d'équipage : non trouvée.",
+        "Autre jeu de dimensions trouvé : 6 m × 10 m × 4,5 m (un seul article, non confirmé)."
+      ]
+    },
+    {
+      "id": "melissa-greenmoss",
+      "nom": "MELiSSA GreenMOSS (serre lunaire ESA/DLR)",
+      "annee": "2016-2017",
+      "auteurs": "DLR (groupe EDEN) pour l'ESA, dans le cadre de MELiSSA",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Étude de conception d'un module de serre sur la Lune, au pôle Sud, pour nourrir six personnes pendant deux ans. L'option retenue combine une enveloppe gonflable et un noyau rigide qui porte les sous-systèmes.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Zeidler et al. 2017, Greenhouse Module for Space System: A Lunar Greenhouse Design", "url": "https://elib.dlr.de/110816/", "page_source": "https://elib.dlr.de/110816/", "licence": "?", "verifie": false, "note": "Article de conception GreenMOSS ; page non ouverte. Le résumé de recherche donne le contexte (six personnes, deux ans, pôle Sud)." }
+      ],
+      "pour_kibsu": "Architecture à retenir : coque gonflable qui se déploie autour d'un noyau rigide où passent les réseaux. Très proche du concept d'un habitat lunaire avec serre intégrée.",
+      "a_verifier": [
+        "Surface de culture de la serre : non trouvée ; à lire dans le papier Zeidler 2017 ou Boscheri (ICES 2016).",
+        "Pour la productivité de référence : 0,96 mol/(m²·j) de CO2 et 400 plantes/m² au départ (chambre MELiSSA, document non ouvert)."
+      ]
+    },
+    {
+      "id": "mars-direct-hab",
+      "nom": "Mars Direct - Hab (Zubrin)",
+      "annee": "1993-1996",
+      "auteurs": "Robert Zubrin, David Baker, Owen Gwynne (Mars Direct)",
+      "lieu": "mars",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat de surface martien pour quatre astronautes, pré-déployé par un lanceur de fret avant l'arrivée de l'équipage. L'équipage habite le niveau supérieur et le fret occupe le niveau inférieur.",
+      "dimensions": [
+        { "quoi": "masse de l'habitat de surface", "valeur": "environ 40 t (dans la comparaison Semi-Direct / Direct)", "source": "https://marspapers.org/paper/Zubrin_1993_2.pdf" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Zubrin 1993, Mars Direct (marspapers.org)", "url": "https://marspapers.org/paper/Zubrin_1993_2.pdf", "page_source": "https://marspapers.org/paper/Zubrin_1993_2.pdf", "licence": "?", "verifie": false, "note": "Article source ; non ouvert (la recherche a remonté le lien). Chiffre de masse non vérifié." }
+      ],
+      "pour_kibsu": "Schéma d'organisation à retenir : pré-déploiement du fret et de l'habitat avant l'équipage, habitat sur deux niveaux (vie en haut, fret en bas).",
+      "a_verifier": [
+        "Volume habitable (m³) : non trouvé. Un forum cite 1 100 pi² (environ 31 m³) : non sourcé, à ne pas utiliser sans vérification.",
+        "Diamètre 8,4 m, hauteur 4,9 m, masse 35 t : relevés dans une page d'histoire Mars Direct dont l'URL n'a pas été identifiée ; à sourcer avant usage. Deux étages (fret en bas, équipage en haut) selon la même page.",
+        "Diamètre et longueur de l'Hab : non trouvés (fplib en erreur 404).",
+        "Présence d'une serre : non trouvée dans les sources ouvertes."
+      ]
+    },
+    {
+      "id": "mars-ice-house",
+      "nom": "Mars Ice House / Mars Ice Home (Clouds AO, SEArch, NASA Langley)",
+      "annee": "2015-2017",
+      "auteurs": "Clouds Architecture Office, SEArch, NASA Langley ; Jeffrey Hoffman (MIT) dans l'équipe",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Habitat martien imprimé en 3D avec de la glace et protégé par une coque de glace, vainqueur du concours NASA de 2015. Le projet prévoit une serre verticale dans l'habitat.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Mars Ice House: Tour a Concept Martian Home in Pictures (Space.com)", "url": "https://www.space.com/39761-mars-ice-house-concept-in-pictures.html", "page_source": "https://www.space.com/39761-mars-ice-house-concept-in-pictures.html", "licence": "?", "verifie": false, "note": "Page ouverte mais texte tronqué ; ne montre pas de dimensions. Les images et coupes du projet ne sont pas consultées." },
+        { "type": "plan", "titre": "Mars Ice Home (Domus, 2017)", "url": "https://domusweb.it/en/news/2017/01/04/mars_ice_home_clouds_architecture_office.html", "page_source": "https://domusweb.it/en/news/2017/01/04/mars_ice_home_clouds_architecture_office.html", "licence": "?", "verifie": false, "note": "Article qui renvoie vers les plans et coupes ; non ouvert." }
+      ],
+      "pour_kibsu": "Référence de protection par glace ou régolite et de serre verticale intégrée dans un habitat. Pour une transposition lunaire, la protection radiative serait assurée par le régolite.",
+      "a_verifier": [
+        "Forme : une source parle de tore gonflable (Mars Ice Home), une autre de dôme gonflable : à trancher.",
+        "Dimensions et surface de la serre : non trouvées.",
+        "Le lien entre le nom Lynch et ce projet n'a pas été trouvé dans les sources."
+      ]
+    },
+    {
+      "id": "mit-team-ten-2004",
+      "nom": "Mission 2004 : Team Ten (MIT), habitat martien",
+      "annee": "2000-2004",
+      "auteurs": "Équipe étudiante du MIT (Team Ten), projet de mission martienne",
+      "lieu": "mars",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Habitat de surface martien à plan octogonal, pensé pour loger l'équipage et séparer zones de sommeil et zones de vie. Le schéma de disposition des grands espaces est présenté en légende.",
+      "dimensions": [
+        { "quoi": "forme du plan au sol", "valeur": "octogone (sans dimension publiée sur la page)", "source": "https://web.mit.edu/12.000/www/finalpresentation/environment/structure.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Simple layout of the Habitat with major areas labeled (page Structure, MIT Team Ten)", "url": "https://web.mit.edu/12.000/www/finalpresentation/environment/structure.html", "page_source": "https://web.mit.edu/12.000/www/finalpresentation/environment/structure.html", "licence": "?", "verifie": true, "note": "Légende vue sur la page ; le plan lui-même n'est pas reproduit dans le texte récupéré. Une page floor.html est liée mais bloquée (403)." }
+      ],
+      "pour_kibsu": "Plan octogonal facilitant le contreventement et le découpage des zones de sommeil et de vie : à comparer avec un plan circulaire de tube lunaire.",
+      "a_verifier": [
+        "Dimensions : aucune trouvée sur les pages ouvertes ; un chiffre de diamètre est à chercher sur floor.html.",
+        "Le lien avec Mars Direct (Zubrin) n'est pas établi par la page."
+      ]
+    },
+    {
+      "id": "nasa-dra-5",
+      "nom": "NASA Design Reference Architecture 5.0 (habitats martiens)",
+      "annee": "2009",
+      "auteurs": "Bret G. Drake (éd.), NASA Johnson Space Center, et équipe NASA",
+      "lieu": "mars",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Architecture de référence NASA pour trois missions habitées martiennes, avec habitats de surface et modules de transit. Les documents d'habitat (plans, coupes) sont dans le rapport principal et son addenda.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "NASA SP-2009-566 ADD (addendum DRA 5.0, juillet 2009)", "url": "https://www.nasa.gov/pdf/373667main_NASA-SP-2009-566-ADD.pdf", "page_source": "https://www.nasa.gov/pdf/373667main_NASA-SP-2009-566-ADD.pdf", "licence": "domaine public NASA", "verifie": false, "note": "Addenda hébergé sur nasa.gov (non ouvert). Le rapport principal est NASA SP-2009-566." },
+        { "type": "rapport", "titre": "NTRS 20100028285 (Drake, résumé DRA 5.0)", "url": "https://ntrs.nasa.gov/api/citations/20100028285/downloads/20100028285.pdf", "page_source": "https://ntrs.nasa.gov/citations/20100028285", "licence": "domaine public NASA", "verifie": false, "note": "PDF bloqué (403)." }
+      ],
+      "pour_kibsu": "Référence de programme : trois missions, habitats de surface pré-déployés. Les plans d'habitat sont à extraire du rapport principal.",
+      "a_verifier": [
+        "Aucun chiffre d'habitat extrait : PDF bloqués (403). À ouvrir depuis une autre copie.",
+        "Addendum 2 (mars 2014, Drake et Watts) : URL non trouvée."
+      ]
+    },
+    {
+      "id": "biosphere-2",
+      "nom": "Biosphere 2",
+      "annee": "1984-2011",
+      "auteurs": "Space Biosphere Ventures (1984-1994), puis Columbia University (1995-2003), puis Université d'Arizona (2007-2011)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Grande enceinte fermée près de Tucson, avec sept biomes dont un biome agricole. Deux missions de fermeture ont eu lieu en 1991-1993 et en 1994, avec huit personnes.",
+      "dimensions": [
+        { "quoi": "emprise du bâtiment", "valeur": "12 700 m² (3,14 acres)", "source": "https://en.wikipedia.org/wiki/Biosphere_2" },
+        { "quoi": "surface du biome agricole", "valeur": "2 500 m²", "source": "https://en.wikipedia.org/wiki/Biosphere_2" },
+        { "quoi": "biome forêt tropicale / savane / désert de brouillard", "valeur": "1 900 m² / 1 300 m² / 1 400 m²", "source": "https://en.wikipedia.org/wiki/Biosphere_2" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Biosphere 2 (article Wikipédia en anglais)", "url": "https://en.wikipedia.org/wiki/Biosphere_2", "page_source": "https://en.wikipedia.org/wiki/Biosphere_2", "licence": "CC BY-SA", "verifie": true, "note": "Surfaces de chaque biome et dates ouvertes. Pas de plan ni de coupe sur la page." }
+      ],
+      "pour_kibsu": "Exemple de sept biomes séparés dans une même enceinte : le biome agricole (2 500 m²) est une valeur haute pour une référence de serre de grande taille.",
+      "a_verifier": [
+        "Surface agricole : 2 500 m² (Wikipédia) contre environ 2 000 m² (ecotechnics.edu, qui inclut ou non la zone animale) : à trancher sur ecotechnics ?p=189.",
+        "Volumes non trouvés dans la page ouverte.",
+        "Plans et coupes : Table 1 (Dimensions and Volumes) d'ecotechnics.edu à ouvrir."
+      ]
+    },
+    {
+      "id": "lockheed-deep-space-habitat",
+      "nom": "Lockheed Martin Deep Space Habitat (prototype)",
+      "annee": "2018-2019",
+      "auteurs": "Lockheed Martin ; NASA KSC (contrat NextSTEP)",
+      "lieu": "lune",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Prototype d'habitat cylindrique reconditionné depuis un conteneur de fret de la navette, avec une zone de serre parmi les équipements. Il est destiné à des missions lunaires et de transit.",
+      "dimensions": [
+        { "quoi": "dimensions intérieures", "valeur": "environ 13 pieds de large sur 8 pieds (sources divergentes)", "source": "https://www.militaryaerospace.com/computers/article/16711466/inside-lockheed-martins-prototype-astronaut-habitat-computers-and-even-a-greenhouse-in-deep-space" },
+        { "quoi": "longueur et diamètre (NBC News / PopSci)", "valeur": "environ 22 pieds de long ; 15 pieds de diamètre (PopSci) ou 16,5 pieds de large (NBC)", "source": "https://www.nbcnews.com/mach/science/astronauts-could-stay-space-motel-way-mars-ncna903166" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Inside Lockheed Martin's prototype astronaut habitat (Military & Aerospace Electronics, 2019)", "url": "https://www.militaryaerospace.com/computers/article/16711466/inside-lockheed-martins-prototype-astronaut-habitat-computers-and-even-a-greenhouse-in-deep-space", "page_source": "https://www.militaryaerospace.com/computers/article/16711466/inside-lockheed-martins-prototype-astronaut-habitat-computers-and-even-a-greenhouse-in-deep-space", "licence": "?", "verifie": false, "note": "Page en erreur 403 ; seul le résumé de recherche a été lu. Mention d'une zone serre." }
+      ],
+      "pour_kibsu": "Exemple de serre intégrée à un habitat cylindrique de conteneur réemployé : pertinent pour un habitat lunaire recyclant un étage de fret.",
+      "a_verifier": [
+        "Dimensions contradictoires (13 pieds ou 8 pieds, 22 pieds, 15 ou 16,5 pieds) : non tranchées.",
+        "Surface de culture de la serre : non trouvée."
+      ]
+    },
+    {
+      "id": "nuwa-abiboo",
+      "nom": "Nüwa (ABIBOO Studio / SONet)",
+      "annee": "2021",
+      "auteurs": "ABIBOO Studio, SONet (rendus Gonzalo Rojas, Sebastián Rodríguez, Verónica Florido)",
+      "lieu": "mars",
+      "statut": "concours",
+      "forme": "autre",
+      "resume": "Ville martienne creusée jusqu'à 150 m de profondeur dans une falaise, avec logements, espaces de travail, vergers urbains et dômes verts. Les zones agricoles sont sur la crête de la falaise.",
+      "dimensions": [
+        { "quoi": "profondeur des tunnels", "valeur": "jusqu'à 150 m", "source": "https://www.sciencefocus.com/space/the-plans-to-build-a-martian-mega-city-youd-actually-want-to-travel-300-million-km-to-live-in/" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Green Dome and tunnel section (légende Domus, ABIBOO / SONet)", "url": "https://domusweb.it/en/architecture/gallery/2021/11/13/immaginare-il-futuro--nwa-una-citt-su-marte-.html", "page_source": "https://domusweb.it/en/architecture/gallery/2021/11/13/immaginare-il-futuro--nwa-una-citt-su-marte-.amp.html", "licence": "?", "verifie": false, "note": "Légende lue dans un résumé de recherche ; page Domus en erreur 403 (redirection non suivie). Plan de circulation et coupe d'excavation également listés." }
+      ],
+      "pour_kibsu": "Référence de serre-dôme en profondeur dans une falaise : transposable à un cratère lunaire du pôle Sud pour la protection radiative.",
+      "a_verifier": [
+        "Dimensions des dômes verts et des serres : non trouvées.",
+        "Population : 200 000 à 250 000 par ville selon les sources."
+      ]
+    },
+    {
+      "id": "mars-one",
+      "nom": "Mars One (habitat et serre)",
+      "annee": "2013-2016",
+      "auteurs": "Mars One (fondation néerlandaise) ; images Bryan Versteeg",
+      "lieu": "mars",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Projet de colonie martienne avec modules d'habitation, atterrisseurs et serres. Les images d'intérieur et de serre existent mais sans cotes publiées.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "The space series: What will our homes look like on Mars? (Designcurial)", "url": "https://old.designcurial.com/news/the-space-series-what-will-our-homes-look-like-on-mars-4630111", "page_source": "https://old.designcurial.com/news/the-space-series-what-will-our-homes-look-like-on-mars-4630111", "licence": "?", "verifie": false, "note": "Article cité dans les résultats ; non ouvert. Rendus d'intérieur et de serre crédités à Versteeg et Mars One." }
+      ],
+      "pour_kibsu": "Exemple de programme mixte habitation + serre pour un petit équipage ; à comparer avec les ratios réels.",
+      "a_verifier": [
+        "Surface de culture : une source peu fiable cite 80 m² ; un papier de faisabilité (MIT) cite 50 m² pour 12 personnes et environ 200 m² de rayonnages pour 4 personnes : contradictoire.",
+        "Liens entre Bjarke Ingels et Mars One : non confirmé (BIG est lié à Mars Dune Alpha)."
+      ]
+    },
+    {
+      "id": "nasa-common-habitat",
+      "nom": "NASA Common Habitat (variantes lune et Mars)",
+      "annee": "2020-2023",
+      "auteurs": "NASA (étude d'architecture Common Habitat)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Habitat commun à partir d'un réservoir d'oxygène liquide du SLS, décliné en quatre variantes pour quatre ou huit personnes, en disposition horizontale ou verticale. Une étude de disposition intérieure existe pour la Lune.",
+      "dimensions": [],
+      "documents": [
+        { "type": "rapport", "titre": "Design Variants of a Common Habitat for Moon and Mars Exploration (NTRS 20205001678)", "url": "https://ntrs.nasa.gov/api/citations/20205001678/downloads/FINAL%20%20-%20Design%20Variants%20of%20a%20Common%20Habitat%20for%20Moon%20and%20Mars%20Exploration.docx.pdf", "page_source": "https://ntrs.nasa.gov/citations/20205001678", "licence": "domaine public NASA", "verifie": false, "note": "Non ouvert. Le résumé de recherche indique quatre variantes (4 ou 8 équipiers, horizontal ou vertical)." },
+        { "type": "plan", "titre": "Internal Layout of a Lunar Surface Habitat (NTRS 20220013669)", "url": "https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf", "page_source": "https://ntrs.nasa.gov/citations/20220013669", "licence": "domaine public NASA", "verifie": false, "note": "Titre évoquant un plan intérieur des systèmes et postes de travail ; non ouvert, pas de serre vue dans le résumé." }
+      ],
+      "pour_kibsu": "Disposition intérieure de référence pour un habitat lunaire : systèmes et postes autour d'un volume commun, à croiser avec les zones de culture.",
+      "a_verifier": [
+        "Aucune serre ni surface de culture trouvée dans les résumés.",
+        "Plan intérieur (NTRS 20220013669) : à ouvrir pour vérifier la présence d'une zone de culture."
+      ]
+    },
+    {
+      "id": "bcp-nasa",
+      "nom": "NASA Biomass Production Chamber (Kennedy)",
+      "annee": "1989-1995",
+      "auteurs": "NASA Kennedy Space Center, Biomass Production Chamber team",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Chambre de culture verticale à étagères, ancienne chambre d'essais hypobares Mercury, utilisée pour le blé et les légumes en boucle fermée. Elle reste une référence pour la surface de culture par volume.",
+      "dimensions": [
+        { "quoi": "surface de culture", "valeur": "environ 20 m², sur quatre étagères de 5 m² chacune", "source": "https://ntrs.nasa.gov/api/citations/19900016140/downloads/19900016140.pdf" },
+        { "quoi": "volume", "valeur": "113 m³ (résumé des années 1990)", "source": "https://ntrs.nasa.gov/api/citations/19900016140/downloads/19900016140.pdf" },
+        { "quoi": "hauteur et diamètre", "valeur": "7,5 m de haut ; 3 m ou 3,7 m de diamètre (sources divergentes)", "source": "https://ntrs.nasa.gov/api/citations/19900016140/downloads/19900016140.pdf" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "NTRS 19900016140 (NASA Biomass Production Chamber, testbed)", "url": "https://ntrs.nasa.gov/api/citations/19900016140/downloads/19900016140.pdf", "page_source": "https://ntrs.nasa.gov/citations/19900016140", "licence": "domaine public NASA", "verifie": false, "note": "PDF bloqué (403) ; chiffres issus du résumé de recherche." }
+      ],
+      "pour_kibsu": "Ratio utile : 20 m² de culture dans environ 113 m³, réparti sur quatre étagères verticales ; transposable à une serre lunaire en hauteur.",
+      "a_verifier": [
+        "Diamètre : 3 m ou 3,7 m ; hauteur allongée de 2,7 m selon une histoire du KSC : à vérifier sur le PDF.",
+        "Plan et coupe : non trouvés."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "BIOS-3 (Wikipédia en anglais)", "url": "https://en.wikipedia.org/wiki/BIOS-3", "note": "Dimensions et compartiments ouverts." },
+    { "titre": "Yuegong-1 (Wikipédia en anglais)", "url": "https://en.wikipedia.org/wiki/Yuegong-1", "note": "Surfaces de culture et d'habitat de Lunar Palace 1 ouvertes." },
+    { "titre": "Prototype Lunar/Mars Greenhouse (SSEL, Université d'Arizona)", "url": "https://www.ssel.arizona.edu/missions/prototype-lunarmars-greenhouse", "note": "Dimensions du module lunaire ouvertes." },
+    { "titre": "NASA CHAPEA habitat", "url": "https://www.nasa.gov/chapea/habitat", "note": "Surface 1 700 pi² et organisation de Mars Dune Alpha ouvertes." },
+    { "titre": "EDEN ISS (Springer, 2020)", "url": "https://link.springer.com/article/10.1007/s12567-020-00318-4", "note": "Article de référence, non ouvert." }
+  ],
+  "pistes_non_explorees": [
+    "NASA DRA 5.0 : rapport principal NASA SP-2009-566 à ouvrir (copies nasa.gov, NTRS) pour les plans et coupes d'habitat martien ; PDF bloqués (403) dans cette passe.",
+    "Mars Direct Hab : dessins d'étage et coupes à trouver (marspapers, NTRS 19940021213 listé mais non ouvert).",
+    "Lunar Palace 1 / 365 : plan coté de la base, sources chinoises ; Wikimedia Commons sans résultat.",
+    "BIOS-3 : figure de disposition (Gitelson et Lisovsky 2007 ; Salisbury 1997, simoc.space PDF listé mais non ouvert).",
+    "Recherche de plans non aboutie pour : EDEN ISS (zenodo et core.ac.uk en 403), Mars Dune Alpha (ICON et BIG bloqués), Interstellar BioPod (aucun plan trouvé), Lockheed Martin (403).",
+    "Mars One : une surface de culture d'environ 80 m² et 50 m² pour 12 personnes sont citées dans des sources peu fiables ; à vérifier sur le papier de faisabilité ouvert.",
+    "Nüwa (ABIBOO / SONet, concours Mars Society) : cité en ville souterraine avec serres et vergers, sans dimension trouvée ; site ABIBOO à ouvrir.",
+    "SpaceX Mars base : aucun rendu officiel de serre ni dimension trouvé ; rechercher les présentations de Musk (IAC 2016/2017).",
+    "Vertical farms et surface de culture par personne : aucune source ouverte ; à chercher dans les études NASA BVAD / Hoffman.",
+    "Lunar Palace 365 (370 jours, 2017) : étude de culture plus longue, plans à chercher.",
+    "Protocole Veggie et APH : pages NASA (404) à ouvrir à nouveau avec une autre URL.",
+    "Recherche interrompue : le quota de recherche web de ce tour est épuisé. Les points ci-dessus restent à relancer dans une nouvelle session."
+  ]
+}

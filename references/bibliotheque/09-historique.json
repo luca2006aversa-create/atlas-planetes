@@ -1,0 +1,650 @@
+{
+  "theme": "Études historiques de bases lunaires (1950-2004)",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "horizon",
+      "nom": "Project Horizon",
+      "annee": "1959",
+      "auteurs": "US Army, Army Ballistic Missile Agency (H.-H. Koelle ; A. G. Trudeau pour le volume I)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Étude de l'armée américaine pour une base militaire permanente sur la Lune, avec 12 soldats. Les sources donnent une mise en service vers 1966 ou 1967. Les modules de base sont des réservoirs cylindriques enterrés.",
+      "dimensions": [
+        {
+          "quoi": "module de base (réservoir cylindrique), diamètre",
+          "valeur": "3,05 m",
+          "source": "http://www.astronautix.com/h/horizonlunaroutpost.html"
+        },
+        {
+          "quoi": "module de base (réservoir cylindrique), longueur",
+          "valeur": "6,10 m",
+          "source": "http://www.astronautix.com/h/horizonlunaroutpost.html"
+        },
+        {
+          "quoi": "effectif permanent",
+          "valeur": "12 hommes",
+          "source": "http://www.astronautix.com/h/horizonlunaroutpost.html"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Horizon First Camp : « Layout of Project Horizon Lunar Basic 12-Man Outpost » (US Army, 18 juin 1959)",
+          "url": "https://commons.wikimedia.org/wiki/File:Project_Horizon_-_Layout_Basic_12-Man_Outpost.png",
+          "page_source": "http://www.astronautix.com/h/horizonlunaroutpost.html",
+          "licence": "domaine public (US Army, Creative Commons Public Domain Mark 1.0)",
+          "verifie": true,
+          "note": "Page du fichier ouverte : légende et crédit lus, image non vue. Le titre dit « layout » : à confirmer comme plan."
+        },
+        {
+          "type": "coupe",
+          "titre": "« Cross Section of Typical Project Horizon Lunar Outpost Compartment » (US Army, 18 juin 1959)",
+          "url": "https://commons.wikimedia.org/wiki/File:Project_Horizon_-_Cross_Section_of_Typical_Outpost_Compartment.gif",
+          "page_source": "http://www.astronautix.com/h/horizonlunaroutpost.html",
+          "licence": "domaine public (US Army, Creative Commons Public Domain Mark 1.0)",
+          "verifie": true,
+          "note": "Page du fichier ouverte : légende lue, image 423 x 215 px, non vue. Pas de cotes imprimées selon la page."
+        },
+        {
+          "type": "image",
+          "titre": "« Project Horizon Lunar Outpost as it would appear by late 1965 » (rendu, US Army)",
+          "url": "https://commons.wikimedia.org/wiki/File:Project_Horizon_-_Final_Base.png",
+          "page_source": "http://www.astronautix.com/h/horizonlunaroutpost.html",
+          "licence": "domaine public (US Army, Creative Commons Public Domain Mark 1.0)",
+          "verifie": true,
+          "note": "Page du fichier ouverte : légende lue, image non vue."
+        },
+        {
+          "type": "image",
+          "titre": "« Overall View of Initial Project Horizon Lunar Construction Camp » (US Army)",
+          "url": "https://commons.wikimedia.org/wiki/File:Project_Horizon_-_Overall_View_of_Initial_Lunar_Construction_Camp.gif",
+          "page_source": "http://www.astronautix.com/h/horizonlunaroutpost.html",
+          "licence": "domaine public (US Army, Creative Commons Public Domain Mark 1.0)",
+          "verifie": true,
+          "note": "Page du fichier ouverte : légende lue, image 546 x 363 px, non vue."
+        },
+        {
+          "type": "image",
+          "titre": "Article Wikipedia « Project Horizon » (illustrations listées)",
+          "url": "https://en.wikipedia.org/wiki/Project_Horizon",
+          "page_source": "https://en.wikipedia.org/wiki/Project_Horizon",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : rendus et plans d'avant-poste, sans auteur précisé dans l'article."
+        }
+      ],
+      "pour_kibsu": "Premier cas d'avant-poste militaire autonome : plan en « layout » 12 personnes et coupe de compartiment. Utile pour penser une enceinte, une zone de sécurité, une protection enterrée.",
+      "a_verifier": [
+        "Date du rapport : 8 ou 9 juin 1959 selon les sources.",
+        "Mise en service : 1966 ou 1967 selon les sources.",
+        "Plans et coupes non vus : seuls les titres et légendes ont été lus.",
+        "Rapport déclassifié (deux volumes) non consulté."
+      ]
+    },
+    {
+      "id": "lunex",
+      "nom": "Lunex",
+      "annee": "1958-1961",
+      "auteurs": "US Air Force, Ballistic Missile Division",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Projet concurrent de l'USAF : base souterraine de 21 personnes, envisagée vers 1968. Le plan final date de mai 1961 et compte 227 pages.",
+      "dimensions": [
+        {
+          "quoi": "effectif de la garnison",
+          "valeur": "21 personnes",
+          "source": "https://www.theblackvault.com/documentarchive/the-lunex-project-air-force-lunar-landing-project-1958-1961/"
+        },
+        {
+          "quoi": "coût total",
+          "valeur": "7,5 milliards $",
+          "source": "https://en.wikipedia.org/wiki/Lunex_Project"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "« Lunar Expedition Plan, LUNEX, May 1961 » (227 pages, PDF)",
+          "url": "https://www.theblackvault.com/documentarchive/the-lunex-project-air-force-lunar-landing-project-1958-1961/",
+          "page_source": "https://www.theblackvault.com/documentarchive/the-lunex-project-air-force-lunar-landing-project-1958-1961/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : le PDF y est proposé (9,5 Mo). Le PDF lui-même n'a pas été ouvert : figures à chercher dedans."
+        },
+        {
+          "type": "image",
+          "titre": "« Lunex spacecraft concept » (légende de l'article Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Lunex_Project",
+          "page_source": "https://en.wikipedia.org/wiki/Lunex_Project",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : une image légendée, sans crédit ni date. Image non vue."
+        }
+      ],
+      "pour_kibsu": "Base enterrée au sous-sol avec une garnison de 21 personnes : référence pour la protection par le sous-sol.",
+      "a_verifier": [
+        "Dates : 1967 ou 1968 selon les sources.",
+        "Le site du plan est choisi par des sondes automatiques ; Kepler cité comme site étudié.",
+        "Plans et coupes de la base non trouvés dans les pages lues ; à chercher dans le PDF de 227 pages."
+      ]
+    },
+    {
+      "id": "lesa",
+      "nom": "LESA (Lunar Exploration System for Apollo)",
+      "annee": "1964",
+      "auteurs": "Boeing (étude « Initial Concept of Lunar Exploration Systems for Apollo », 1964)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Abri lunaire avec une cabine circulaire intérieure, une cabine annulaire extérieure et un sas. Il devait accueillir 3 personnes pendant 90 jours au départ.",
+      "dimensions": [
+        {
+          "quoi": "équipage initial, durée",
+          "valeur": "3 personnes, 90 jours",
+          "source": "https://www.fplib.org/partners/mwade/craft/leselter.htm"
+        },
+        {
+          "quoi": "masse de charge utile LESA I",
+          "valeur": "10 500 kg (12 500 kg avec MOLAB)",
+          "source": "https://en.wikipedia.org/wiki/Apollo_Applications_Program"
+        }
+      ],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Pages LESA d'Encyclopedia Astronautica (images annoncées)",
+          "url": "https://www.fplib.org/partners/mwade/craft/leselter.htm",
+          "page_source": "https://www.fplib.org/partners/mwade/craft/leselter.htm",
+          "licence": "?",
+          "verifie": false,
+          "note": "Erreur 404 à la consultation."
+        },
+        {
+          "type": "rapport",
+          "titre": "NTRS 19660054605 (LESA : soutien de vie, énergie, communications, phases d'évolution)",
+          "url": "https://ntrs.nasa.gov/citations/19660054605",
+          "page_source": "https://ntrs.nasa.gov/citations/19660054605",
+          "licence": "?",
+          "verifie": false,
+          "note": "NTRS bloqué (403)."
+        }
+      ],
+      "pour_kibsu": "Plan circulaire avec anneau de service autour d'un noyau : schéma simple de séparation vie / service.",
+      "a_verifier": [
+        "Aucun dessin de l'abri LESA retrouvé.",
+        "Dates exactes de l'étude Boeing 1964 à confirmer."
+      ]
+    },
+    {
+      "id": "apollo_aes_1968",
+      "nom": "Apollo Extension System (AES), base lunaire",
+      "annee": "1968-1970",
+      "auteurs": "NASA, programme Apollo Applications",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Programme de bases lunaires à partir de modules Apollo : abri dérivé du module lunaire (LM Shelter), rover MOLAB et abri LESA. Les masses de charge utile sont données par la page.",
+      "dimensions": [
+        {
+          "quoi": "masse LM Shelter",
+          "valeur": "2 050 kg",
+          "source": "https://en.wikipedia.org/wiki/Apollo_Applications_Program"
+        },
+        {
+          "quoi": "masse LESA II avec abri et rover étendu",
+          "valeur": "25 000 kg",
+          "source": "https://en.wikipedia.org/wiki/Apollo_Applications_Program"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "« Apollo Extension Systems Lunar Base concept » (AES_Lunar_Base.png)",
+          "url": "https://en.wikipedia.org/wiki/Apollo_Applications_Program",
+          "page_source": "https://en.wikipedia.org/wiki/Apollo_Applications_Program",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : légende lue, sans date ni crédit. Image non vue."
+        }
+      ],
+      "pour_kibsu": "Abri dérivé d'un module existant : on réutilise une enveloppe déjà qualifiée.",
+      "a_verifier": [
+        "Aucun dessin d'époque du LM Shelter trouvé.",
+        "Dates et auteurs de l'image AES à confirmer."
+      ]
+    },
+    {
+      "id": "zvezda_dlb",
+      "nom": "Zvezda (DLB, « Barmingrad »)",
+      "annee": "1962-1974",
+      "auteurs": "Bureau de Vladimir Barmin, programme spatial soviétique",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Base soviétique prévue après le programme N1-L3 : 9 modules d'habitation livrés séparément, pour 9 à 12 cosmonautes. Le programme a été abandonné en 1974.",
+      "dimensions": [
+        {
+          "quoi": "module d'habitation, longueur déployée",
+          "valeur": "8,6 m",
+          "source": "https://en.wikipedia.org/wiki/Zvezda_(moonbase)"
+        },
+        {
+          "quoi": "module d'habitation, diamètre",
+          "valeur": "3,3 m",
+          "source": "https://en.wikipedia.org/wiki/Zvezda_(moonbase)"
+        },
+        {
+          "quoi": "module d'habitation, masse chargée",
+          "valeur": "18 t",
+          "source": "https://en.wikipedia.org/wiki/Zvezda_(moonbase)"
+        },
+        {
+          "quoi": "module d'habitation, longueur au lancement",
+          "valeur": "4,5 m",
+          "source": "https://en.wikipedia.org/wiki/Zvezda_(moonbase)"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "« Soviet lunar lander » (dessin, légende de l'article Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Zvezda_(moonbase)",
+          "page_source": "https://en.wikipedia.org/wiki/Zvezda_(moonbase)",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : un dessin est légendé, sans crédit. Image non vue."
+        }
+      ],
+      "pour_kibsu": "Module qui se déploie après atterrissage (4,5 m au lancement, 8,6 m ensuite) : idée de module compact à expansion.",
+      "a_verifier": [
+        "Chiffres issus de Wikipedia : à recouper avec Encyclopedia Astronautica (erreur 404 à la consultation).",
+        "Les rendus attribués à Spetsmash ne sont pas retrouvés.",
+        "Documents soviétiques publiés après 1990 seulement."
+      ]
+    },
+    {
+      "id": "lunar_outpost_alred",
+      "nom": "Lunar Outpost (JSC, Alred, habitat gonflable sphérique)",
+      "annee": "1989",
+      "auteurs": "Alred et al., NASA JSC, Systems Definition Branch ; structure préliminaire attribuée à Paul Yin (ASEE)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Habitat gonflable sphérique de 16 m de diamètre, sur quatre à cinq niveaux. Le tiers inférieur est enterré et les deux tiers supérieurs sont recouverts de régolite.",
+      "dimensions": [
+        {
+          "quoi": "diamètre",
+          "valeur": "16 m",
+          "source": "https://en.wikipedia.org/wiki/Inflatable_space_habitat"
+        },
+        {
+          "quoi": "pression intérieure",
+          "valeur": "14,7 psi",
+          "source": "https://ntrs.nasa.gov/citations/19900015683"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "« Inflatable lunar habitat proposal (NASA 1989) » (légende de l'article Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Inflatable_space_habitat",
+          "page_source": "https://en.wikipedia.org/wiki/Inflatable_space_habitat",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : légende lue ; l'article décrit une proposition JSC 1989 de 16 m de diamètre. Image non vue."
+        },
+        {
+          "type": "rapport",
+          "titre": "Paul Yin, structure préliminaire d'un habitat gonflable lunaire (ASEE, 1989)",
+          "url": "https://ntrs.nasa.gov/citations/19900015683",
+          "page_source": "https://ntrs.nasa.gov/citations/19900015683",
+          "licence": "?",
+          "verifie": false,
+          "note": "NTRS bloqué (403). Résumé vu dans les résultats seulement."
+        }
+      ],
+      "pour_kibsu": "Enfouissement d'un tiers et régolite sur le reste : protection contre radiations et micrométéorites. Étage multiple dans une sphère : à tester pour les niveaux.",
+      "a_verifier": [
+        "Nombre de niveaux : cinq (Yin) ou quatre (diapositive JSC) : à trancher.",
+        "Le rapport Alred 1989 original n'a pas été retrouvé.",
+        "Plans et coupes non vus."
+      ]
+    },
+    {
+      "id": "lbss_habitat_1987",
+      "nom": "Lunar Base Systems Study, habitat gonflable",
+      "annee": "1987-1989",
+      "auteurs": "NASA (Lunar Base Systems Study)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Habitat gonflable conçu pour 10 personnes. Si on le place dans un petit cratère, ses niveaux bas sont en partie enterrés pour la protection contre les radiations. Une coupe éclatée le montre.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "« Cutaway of the inflatable habitat from the 1987-1988 Lunar Base Systems Study » (NASA)",
+          "url": "https://wirednews.pages.dev/2012/08/lunar-oasis-1989",
+          "page_source": "https://wirednews.pages.dev/2012/08/lunar-oasis-1989",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : la coupe éclatée est légendée et créditée NASA. Repub d'un article de 2012, image non vue. Date : 1987-1988 ou 1987-1989 selon les sources."
+        }
+      ],
+      "pour_kibsu": "Coupe éclatée d'un habitat gonflable à plusieurs niveaux : référence directe pour la répartition verticale.",
+      "a_verifier": [
+        "Dates : 1987-1988 (Wired) ou 1987-1989 (autres sources).",
+        "Dimensions non données dans l'article.",
+        "Rapport LBSS d'origine non trouvé."
+      ]
+    },
+    {
+      "id": "sei_modular_1990",
+      "nom": "Avant-poste lunaire modulaire (SEI, 1990)",
+      "annee": "1989-1990",
+      "auteurs": "NASA, Space Exploration Initiative",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "boite",
+      "resume": "Avant-poste de conception modulaire relié par un tunnel aux atterrisseurs, rovers et autres modules. L'équipement est rangé dans des racks standards.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "« An early lunar outpost design based on a modular design » (NASA, 1990)",
+          "url": "https://en.wikipedia.org/wiki/NASA_lunar_outpost_concepts",
+          "page_source": "https://en.wikipedia.org/wiki/NASA_lunar_outpost_concepts",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : légende lue, crédit NASA 1990. Image non vue."
+        }
+      ],
+      "pour_kibsu": "Tunnel de liaison et racks standard : modèle de circulation entre modules et de rangement.",
+      "a_verifier": [
+        "Plans et coupes non trouvés."
+      ]
+    },
+    {
+      "id": "jsc_moon_base_1984",
+      "nom": "JSC Moon Base (étude 1984) et concept SEI 1989",
+      "annee": "1984-1989",
+      "auteurs": "Équipe JSC (auteurs non cités dans l'article)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Base permanente pour 18 personnes, bâtie avec navette, lanceur dérivé et station. Un concept SEI de 1989 prévoit un habitat gonflable sphérique pour 6 à 12 personnes, avec le matériel lourd au niveau le plus bas et une piste de course sur le toit.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "« A lunar base for six to twelve people, built into an inflatable spherical habitat » (NASA, 1989)",
+          "url": "https://en.wikipedia.org/wiki/NASA_lunar_outpost_concepts",
+          "page_source": "https://en.wikipedia.org/wiki/NASA_lunar_outpost_concepts",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : légende lue, crédit NASA 1989. Image non vue. Pas de diamètre donné."
+        }
+      ],
+      "pour_kibsu": "Habitat sphérique à niveaux : niveau lourd en bas, passerelle ou piste en haut.",
+      "a_verifier": [
+        "Diamètre de l'habitat SEI non donné.",
+        "Article Wikipedia signalé comme partiellement périmé."
+      ]
+    },
+    {
+      "id": "flo_boeing_1992",
+      "nom": "First Lunar Outpost, habitat (Boeing, 1992)",
+      "annee": "1992",
+      "auteurs": "Boeing, Technical Directive 13 (Gordon Woodcock, responsable d'étude) ; NASA-CR-199188",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Habitat du First Lunar Outpost, dérivé des éléments de la Station spatiale Freedom. Une présentation du MSFC le prévoit pour 4 personnes et un séjour de 45 jours.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "« First Lunar Outpost Habitat, Plan View » et « Section View » (liste des figures)",
+          "url": "https://ntrs.nasa.gov/api/citations/19930013516/downloads/19930013516.pdf",
+          "page_source": "https://ntrs.nasa.gov/citations/19930013516",
+          "licence": "?",
+          "verifie": false,
+          "note": "Titres des figures vus dans la liste de recherche. NTRS bloqué (403)."
+        }
+      ],
+      "pour_kibsu": "Plan et coupe d'habitat de station : référence directe pour niveaux et circulation, à relire dans le PDF.",
+      "a_verifier": [
+        "Masse de 35,9 t (Wikipedia, non ouvert).",
+        "Rapport NASA-CR-199188 (mai 1992) repéré, non ouvert."
+      ]
+    },
+    {
+      "id": "roberts_inflatable_1992",
+      "nom": "Inflatable Habitation for the Lunar Base (Roberts)",
+      "annee": "1992",
+      "auteurs": "M. Roberts, NASA JSC",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Article qui défend les habitats gonflables : compacts au transport, extensibles et intérieur ouvert reconfigurable. Il prend comme cas l'habitat gonflable de la Lunar Base Systems Study.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Roberts, Inflatable Habitation for the Lunar Base (NTRS 19930008253)",
+          "url": "https://ntrs.nasa.gov/citations/19930008253",
+          "page_source": "https://ntrs.nasa.gov/citations/19930008253",
+          "licence": "?",
+          "verifie": false,
+          "note": "NTRS bloqué (403). Résumé vu dans les résultats seulement."
+        },
+        {
+          "type": "rapport",
+          "titre": "Miroir NSS de l'article (PDF)",
+          "url": "https://nss.org/wp-content/uploads/2017/07/Lunar-Bases-conference-2-303-Inflatable-Habitation.pdf",
+          "page_source": "https://nss.org/wp-content/uploads/2017/07/Lunar-Bases-conference-2-303-Inflatable-Habitation.pdf",
+          "licence": "?",
+          "verifie": false,
+          "note": "PDF scanné : texte et figures illisibles par l'outil."
+        }
+      ],
+      "pour_kibsu": "Argument sur la reconfiguration : un grand volume ouvert se réorganise sans agrandir la structure.",
+      "a_verifier": [
+        "Dimensions de l'habitat de référence à relire dans le PDF.",
+        "Figures plan et coupe à chercher."
+      ]
+    },
+    {
+      "id": "habitat_tube_lave_horz",
+      "nom": "Habitat en tube de lave (Hörz)",
+      "annee": "1985",
+      "auteurs": "F. Hörz, NASA JSC",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Les tubes de lave lunaires offrent un abri naturel contre radiations et impacts. Kuck (1991) rapporte qu'un habitat gonflable placé dans un tube demanderait une voûte d'au moins 16 m d'épaisseur pour contenir une atmosphère.",
+      "dimensions": [
+        {
+          "quoi": "épaisseur minimale de toit pour 1 atm (rapporté)",
+          "valeur": "16 m",
+          "source": "https://ntrs.nasa.gov/citations/19910016734"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Hörz 1985, habitats en tubes de lave (NTRS 19860045409)",
+          "url": "https://ntrs.nasa.gov/citations/19860045409",
+          "page_source": "https://ntrs.nasa.gov/citations/19860045409",
+          "licence": "?",
+          "verifie": false,
+          "note": "NTRS bloqué (403). Résumé seulement."
+        }
+      ],
+      "pour_kibsu": "Abri naturel : une enveloppe creusée réduit le besoin de protection construite.",
+      "a_verifier": [
+        "Le chiffre de 16 m vient de Kuck (1991), pas du texte de Hörz.",
+        "Pas de plan ni de coupe trouvé."
+      ]
+    },
+    {
+      "id": "lave_nasa_1988",
+      "nom": "Grotte lunaire habitable (concept NASA, 1988)",
+      "annee": "1988",
+      "auteurs": "NASA (dessin de concept)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Dessin de concept NASA montrant des astronautes explorant une grotte lunaire, présentée comme abri possible.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "« NASA concept drawing of astronauts exploring a cave on the Moon, 1988 » (NASA)",
+          "url": "https://en.wikipedia.org/wiki/Lunar_base",
+          "page_source": "https://en.wikipedia.org/wiki/Lunar_base",
+          "licence": "?",
+          "verifie": true,
+          "note": "Page ouverte : légende lue, crédit NASA. Image non vue, pas de plan."
+        }
+      ],
+      "pour_kibsu": "Illustration de grotte : utile pour l'ambiance, pas pour les cotes.",
+      "a_verifier": [
+        "Aucune cote ni plan associé."
+      ]
+    },
+    {
+      "id": "lunox_1993",
+      "nom": "LUNOX / International Lunar Resources Exploration Concept",
+      "annee": "1993",
+      "auteurs": "K. Joosten, NASA JSC (briefing du 7 mai 1993)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Concept international d'exploration lunaire qui utilise l'oxygène lunaire pour réduire le coût des premières missions. Il comprend une usine LUNOX, des rovers pressurisés et des lanceurs russes Energia.",
+      "dimensions": [
+        {
+          "quoi": "coût des systèmes de surface lunaire (1999 $)",
+          "valeur": "4,6 milliards $",
+          "source": "https://nss.org/lunar-base-studies-1993-lunox/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Lindroos, « Lunar Base Studies 1993 : LUNOX » (National Space Society)",
+          "url": "https://nss.org/lunar-base-studies-1993-lunox/",
+          "page_source": "https://nss.org/lunar-base-studies-1993-lunox/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Article de synthèse ouvert ; pas un document d'époque. Pas de plan."
+        }
+      ],
+      "pour_kibsu": "Peu pour l'habitat ; utile pour le lien entre base et usine de ressources.",
+      "a_verifier": [
+        "Coûts non recoupés avec un document primaire.",
+        "Briefing Joosten 1993 non trouvé."
+      ]
+    },
+    {
+      "id": "90_day_study_1989",
+      "nom": "90-Day Study (TM-102999)",
+      "annee": "1989",
+      "auteurs": "Aaron Cohen, NASA JSC",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Rapport de novembre 1989 qui juge l'Initiative d'exploration humaine faisable. Il s'appuie sur des études de base lunaire menées à JSC en 1986-1989.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "TM-102999 (NTRS 19910017741, scan)",
+          "url": "https://ntrs.nasa.gov/citations/19910017741",
+          "page_source": "https://ntrs.nasa.gov/citations/19910017741",
+          "licence": "?",
+          "verifie": false,
+          "note": "NTRS bloqué (403)."
+        }
+      ],
+      "pour_kibsu": "Référence de programme plus que de projet.",
+      "a_verifier": [
+        "Contenu habitat non lu."
+      ]
+    },
+    {
+      "id": "clarke_1954",
+      "nom": "Base gonflable (Clarke, 1954)",
+      "annee": "1954",
+      "auteurs": "Arthur C. Clarke",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Une des premières propositions de base lunaire gonflable, citée par Wikipedia dans la liste des concepts de base lunaire.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Précurseur de l'habitat gonflable : à lire en source primaire.",
+      "a_verifier": [
+        "Statut (concept ou fiction) à confirmer.",
+        "Aucun document visuel trouvé ; seule la mention dans Wikipedia (https://en.wikipedia.org/wiki/Lunar_base) a été lue."
+      ]
+    },
+    {
+      "id": "rinehart_1959",
+      "nom": "Base sur l'océan de poussière (Rinehart, 1959)",
+      "annee": "1959",
+      "auteurs": "Rinehart",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Proposition de base lunaire sur l'océan de poussière, citée par Wikipedia dans la liste des concepts de base lunaire.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Base posée sur le régolite : à relire pour les questions de portance et de dépôt.",
+      "a_verifier": [
+        "Aucun document visuel trouvé ; seule la mention dans Wikipedia a été lue."
+      ]
+    },
+    {
+      "id": "denike_zahn_1962",
+      "nom": "Base souterraine (DeNike et Zahn, 1962)",
+      "annee": "1962",
+      "auteurs": "DeNike, Zahn",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Proposition de base lunaire souterraine, citée par Wikipedia dans la liste des concepts de base lunaire.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Base enterrée : comparer avec Lunex (1961) pour la protection par le sous-sol.",
+      "a_verifier": [
+        "Aucun document visuel trouvé ; seule la mention dans Wikipedia a été lue."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "NASA NTRS (portail)", "url": "https://ntrs.nasa.gov", "note": "Source principale. Bloquée (403) pendant cette recherche : beaucoup de documents n'ont pu être vérifiés." },
+    { "titre": "Project Horizon : fichiers Wikimedia Commons (catégorie)", "url": "https://commons.wikimedia.org/wiki/Category:Project_Horizon", "note": "Liste de 9 fichiers, domaine public US Army. Ouverte." },
+    { "titre": "Encyclopedia Astronautica, Horizon Lunar Outpost", "url": "http://www.astronautix.com/h/horizonlunaroutpost.html", "note": "Légendes et cotes de base ; © Mark Wade pour certaines images." },
+    { "titre": "Wired, Lunar Oasis (republication 2012)", "url": "https://wirednews.pages.dev/2012/08/lunar-oasis-1989", "note": "Coupe éclatée LBSS, créditée NASA ; repub. secondaire." },
+    { "titre": "Wikipedia, Lunar base", "url": "https://en.wikipedia.org/wiki/Lunar_base", "note": "Liste de concepts historiques ; secondaire." },
+    { "titre": "Wikipedia, Inflatable space habitat", "url": "https://en.wikipedia.org/wiki/Inflatable_space_habitat", "note": "Légende 1989 et 16 m ; secondaire." },
+    { "titre": "NSS, Lunar Base Studies 1993 : LUNOX", "url": "https://nss.org/lunar-base-studies-1993-lunox/", "note": "Secondaire." },
+    { "titre": "NSS, Lunar bases conference (copies PDF)", "url": "https://nss.org/wp-content/uploads/2017/07/Lunar-Bases-conference-2-0-Contents-And-Prologue.pdf", "note": "Repéré ; PDF scanné." }
+  ],
+  "pistes_non_explorees": [
+    "Mendell (1985), Lunar Bases and Space Activities of the 21st Century : entrée ADS (ads.harvard.edu/books/lbsa) redirige vers ui.adsabs.harvard.edu, non ouvert correctement.",
+    "Collier's, 18 octobre 1952 (Bonestell) : cutaway de base lunaire non confirmé par une source.",
+    "Madhu Thangavelu (MALEO) : aucune image trouvée ; recherche non aboutie.",
+    "David Nixon : non recherché.",
+    "SICSA / Larry Bell : rien trouvé pour 1960-1980 ; travaux FLO 1990-1991 à explorer.",
+    "MOLAB (rover habitable, GM 1964 / Northrop 1964) : page Wikipedia en 404, Encyclopedia Astronautica en 403 ; à retrouver.",
+    "Genesis II (NTRS 19930020571, base dans tube de lave, Kevlar) : PDF bloqué (403).",
+    "Boeing NASA-CR-199188 (mai 1992) et Partial Gravity Habitat Study (NASA-CR-186048, NTRS 90N14267).",
+    "Lunex : figures du PDF de 227 pages (Black Vault) à relever.",
+    "Horizon : rapport déclassifié (deux volumes) à relever pour plans cotés."
+  ]
+}

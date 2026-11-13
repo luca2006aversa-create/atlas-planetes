@@ -1,0 +1,684 @@
+{
+  "theme": "Modèles 3D libres ou ouverts d'habitats, modules, véhicules et terrains lunaires",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "nasa-habitat-demonstration-unit",
+      "nom": "Habitat Demonstration Unit (NASA)",
+      "annee": "?",
+      "auteurs": "NASA (Habitation Systems), dépôt NASA-3D-Resources",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Module d'habitat de démonstration de la NASA, publié en deux fichiers GLB. Le modèle peut servir de gabarit de volume.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Habitat Demonstration Unit (part 1).glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Habitat%20Demonstration%20Unit/Habitat%20Demonstration%20Unit%20(part%201).glb",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Habitat%20Demonstration%20Unit",
+          "licence": "libre de droits (README du dépôt NASA : « free and without copyright »)",
+          "verifie": true,
+          "note": "Format GLB, partie 1 sur 2. Taille non indiquée. Non téléchargé."
+        },
+        {
+          "type": "3d",
+          "titre": "Habitat Demonstration Unit (part 2).glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Habitat%20Demonstration%20Unit/Habitat%20Demonstration%20Unit%20(part%202).glb",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Habitat%20Demonstration%20Unit",
+          "licence": "libre de droits (README du dépôt NASA : « free and without copyright »)",
+          "verifie": true,
+          "note": "Format GLB, partie 2 sur 2. Une image PNG est aussi dans le dossier."
+        }
+      ],
+      "pour_kibsu": "Deux parties à assembler : voir si la coupure sépare des niveaux ou des tronçons. Utile comme gabarit de volume pour un habitat horizontal.",
+      "a_verifier": [
+        "Dimensions non trouvées sur la page (aucun chiffre repris).",
+        "Licence déduite du README général du dépôt, pas d'un texte propre à ce modèle."
+      ]
+    },
+    {
+      "id": "nasa-gateway-core",
+      "nom": "Gateway Core (NASA)",
+      "annee": "?",
+      "auteurs": "NASA, dépôt NASA-3D-Resources",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Modèle GLB du noyau de la station Gateway, prévu en orbite lunaire basse. Le dossier contient une image d'orbite lunaire basse.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Gateway Core.glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Gateway/Gateway%20Core.glb",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Gateway",
+          "licence": "libre de droits (README du dépôt NASA : « free and without copyright »)",
+          "verifie": true,
+          "note": "Format GLB. Taille non indiquée. Liste du dossier tronquée (« View all files »)."
+        }
+      ],
+      "pour_kibsu": "Module de station en orbite lunaire, pas un habitat posé. Intéressant pour un noyau avec modules accrochés.",
+      "a_verifier": [
+        "Nature exacte du noyau (forme, nombre de ports) non lue dans une description."
+      ]
+    },
+    {
+      "id": "nasa-base-station",
+      "nom": "Base Station (NASA)",
+      "annee": "?",
+      "auteurs": "NASA, dépôt NASA-3D-Resources",
+      "lieu": "lune",
+      "statut": "?",
+      "forme": "autre",
+      "resume": "Modèle GLB intitulé « Base Station » dans le dépôt NASA. La page n'en décrit pas le contenu.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Base Station.glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Base%20Station/Base%20Station.glb",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Base%20Station",
+          "licence": "libre de droits (README du dépôt NASA : « free and without copyright »)",
+          "verifie": true,
+          "note": "Format GLB. Image PNG jointe. Contenu non décrit."
+        }
+      ],
+      "pour_kibsu": "À ouvrir pour voir ce qu'il représente avant tout usage.",
+      "a_verifier": [
+        "Lieu (lune) et statut inconnus : seul le nom du dossier le suggère.",
+        "Contenu du modèle non vérifié."
+      ]
+    },
+    {
+      "id": "nasa-esas-crew-module",
+      "nom": "ESAS Crew Module (NASA)",
+      "annee": "?",
+      "auteurs": "NASA, dépôt NASA-3D-Resources",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "capsule",
+      "resume": "Module d'équipage ESAS au format GLB, dans le dépôt NASA. C'est un véhicule, pas un habitat lunaire.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "ESAS Crew Module.glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/ESAS%20Crew%20Module/ESAS%20Crew%20Module.glb",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/ESAS%20Crew%20Module",
+          "licence": "libre de droits (README du dépôt NASA : « free and without copyright »)",
+          "verifie": true,
+          "note": "Format GLB. Taille non indiquée. Image PNG jointe."
+        }
+      ],
+      "pour_kibsu": "Référence de forme pour une capsule d'équipage et ses accès (sas, hublots).",
+      "a_verifier": [
+        "Forme « capsule » déduite du nom du modèle, non confirmée par une description."
+      ]
+    },
+    {
+      "id": "nasa-apollo-lunar-module",
+      "nom": "Apollo Lunar Module (NASA)",
+      "annee": "1969",
+      "auteurs": "NASA, dépôt NASA-3D-Resources",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Modèle GLB du module lunaire Apollo, le véhicule qui se posait sur la Lune. Utile comme référence de module d'atterrissage.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Apollo Lunar Module.glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/blob/master/3D%20Models/Apollo%20Lunar%20Module/Apollo%20Lunar%20Module.glb",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/Apollo%20Lunar%20Module",
+          "licence": "libre de droits (README du dépôt NASA : « free and without copyright »)",
+          "verifie": true,
+          "note": "Format GLB. Taille non indiquée. Image PNG jointe."
+        }
+      ],
+      "pour_kibsu": "Référence de module posé sur sol lunaire : jambes, hauteur de plancher, sas.",
+      "a_verifier": [
+        "Dimensions non lues sur la page."
+      ]
+    },
+    {
+      "id": "nasa-iss-a",
+      "nom": "Station spatiale internationale ISS (A) (NASA/Ames)",
+      "annee": "?",
+      "auteurs": "NASA/Ames Research Center",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Modèle GLB de la station spatiale internationale, d'environ 39 Ko. Il vient du dépôt NASA/Ames sur GitHub.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "International Space Station (ISS) (A).glb",
+          "url": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/International%20Space%20Station%20(ISS)%20(A)",
+          "page_source": "https://science.nasa.gov/3d-resources/international-space-station-iss-a/",
+          "licence": "libre de droits (page NASA : « free to download and use » ; pas de texte de licence sur la fiche)",
+          "verifie": true,
+          "note": "Format GLB uniquement (38,78 Ko, mis en ligne le 7 avr. 2025)."
+        }
+      ],
+      "pour_kibsu": "Exemple de modules reliés par un nœud central. Utile pour la circulation entre volumes.",
+      "a_verifier": [
+        "Dates de l'ISS non lues sur la fiche : à compléter depuis une source NASA.",
+        "Le modèle est très léger (39 Ko), donc peu détaillé."
+      ]
+    },
+    {
+      "id": "nasa-iss-b",
+      "nom": "Station spatiale internationale ISS (B) (NASA)",
+      "annee": "?",
+      "auteurs": "NASA / Michael D. Carbajal",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Second modèle GLB de l'ISS, de 466 Ko, plus détaillé que la version A. Crédit NASA / Michael D. Carbajal.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "International Space Station (ISS) (B).glb",
+          "url": "https://science.nasa.gov/3d-resources/international-space-station-iss-b/",
+          "page_source": "https://github.com/nasa/NASA-3D-Resources/tree/master/3D%20Models/International%20Space%20Station%20(ISS)%20(B)",
+          "licence": "libre de droits (README du dépôt NASA ; pas de texte de licence sur la fiche)",
+          "verifie": true,
+          "note": "Format GLB, 465,81 Ko. Une seule version « Original » proposée."
+        }
+      ],
+      "pour_kibsu": "Version plus lourde pour comparer la finesse des modules avec l'ISS (A).",
+      "a_verifier": [
+        "Licence : seule la règle générale du dépôt est connue."
+      ]
+    },
+    {
+      "id": "iss-mimic",
+      "nom": "ISS-Mimic (modèles CAD de l'ISS pour impression)",
+      "annee": "?",
+      "auteurs": "Projet ISS-Mimic (GitHub)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Projet ouvert de maquette de l'ISS. Les fichiers STL sont prêts à imprimer, en version basse et haute définition.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "maquette",
+          "titre": "Mimic : fichiers STL pour impression (dossier 3D_Printing)",
+          "url": "https://github.com/ISS-Mimic/Mimic",
+          "page_source": "https://github.com/ISS-Mimic/Mimic",
+          "licence": "MIT (fichier LICENSE du dépôt)",
+          "verifie": true,
+          "note": "STL basse et haute définition. Les sources STEP ne sont pas publiées. Un dossier Blender existe, formats non précisés."
+        }
+      ],
+      "pour_kibsu": "Maquette imprimable pour tester des volumes à l'échelle. Les sources CAD ne sont pas encore publiées.",
+      "a_verifier": [
+        "Dossier 3D_Printing : URL exacte des STL non ouverte, seul le dépôt a été vérifié.",
+        "Le README indique que les STL sont peut-être anciens et en cours de changement."
+      ]
+    },
+    {
+      "id": "moonwards-polar-hab-cutaway",
+      "nom": "Polar Hab Cutaway (Moonwards, colonie de Peary)",
+      "annee": "2016",
+      "auteurs": "briligg (projet Moonwards)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Coupe intérieure d'un habitat polaire lunaire pour la colonie de Peary. C'est une esquisse de début de projet.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Polar Hab Cutaway (Sketchfab)",
+          "url": "https://sketchfab.com/s/XFFJ",
+          "page_source": "https://skfb.ly/XFFJ",
+          "licence": "CC BY (Creative Commons Attribution)",
+          "verifie": true,
+          "note": "47 k triangles. Formats non affichés (bouton « Download 3D Model »). Pas de restriction NoAI vue."
+        }
+      ],
+      "pour_kibsu": "Coupe d'intérieur d'habitat polaire : hauteur, circulation et répartition des volumes. Attribution obligatoire.",
+      "a_verifier": [
+        "Date 14 déc. 2016 vue dans un extrait de recherche, non relue sur la page.",
+        "Formats de téléchargement à confirmer sur la page."
+      ]
+    },
+    {
+      "id": "moonwards-gallery-cutaway-lalande",
+      "nom": "Gallery Cutaway (Moonwards, habitat de Lalande)",
+      "annee": "?",
+      "auteurs": "briligg (projet Moonwards)",
+      "lieu": "lune",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Section d'un grand habitat lunaire pour des centaines de colons, encastré dans la paroi du cratère Lalande.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Gallery Cutaway (Sketchfab)",
+          "url": "https://sketchfab.com/3d-models/gallery-cutaway-d7f2c0d87ef1419db1bd4308ba3d0a45",
+          "page_source": "https://sketchfab.com/3d-models/gallery-cutaway-d7f2c0d87ef1419db1bd4308ba3d0a45",
+          "licence": "CC BY (Creative Commons Attribution)",
+          "verifie": true,
+          "note": "78,6 k triangles. Formats non affichés. Brouillon du projet Moonwards."
+        }
+      ],
+      "pour_kibsu": "Habitat encastré dans une paroi : utile pour l'idée de protection par le relief et les galeries.",
+      "a_verifier": [
+        "Formats de téléchargement à confirmer."
+      ]
+    },
+    {
+      "id": "nasa-apollo-11-landing-site",
+      "nom": "Apollo 11 - Landing Site (carte de terrain NASA)",
+      "annee": "1969",
+      "auteurs": "NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Relief en STL de 30 x 30 km autour du site d'Apollo 11, exagéré 60 fois en Z. Utile pour le relief lunaire.",
+      "dimensions": [
+        {
+          "quoi": "emprise du terrain",
+          "valeur": "30 x 30 km",
+          "source": "https://science.nasa.gov/3d-resources/apollo-11-landing-site/"
+        },
+        {
+          "quoi": "exagération verticale",
+          "valeur": "x60 sur l'axe Z",
+          "source": "https://science.nasa.gov/3d-resources/apollo-11-landing-site/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Apollo 11 - Landing Site.stl",
+          "url": "https://science.nasa.gov/3d-resources/apollo-11-landing-site/",
+          "page_source": "https://science.nasa.gov/3d-resources/apollo-11-landing-site/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Format STL, 6,81 Mo (mis en ligne le 21 avr. 2025). Carte de hauteur."
+        }
+      ],
+      "pour_kibsu": "Base de relief lunaire pour le site de travail, mais pas au pôle sud.",
+      "a_verifier": [
+        "Licence : la fiche ne donne pas de texte, seulement un lien vers les consignes d'usage NASA.",
+        "Source des données (LRO, LOLA ou autre) non précisée."
+      ]
+    },
+    {
+      "id": "nasa-apollo-12-landing-site",
+      "nom": "Apollo 12 - Landing Site (carte de terrain NASA)",
+      "annee": "1969",
+      "auteurs": "NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Relief en STL de 60 x 60 km autour du site d'Apollo 12, exagéré 50 fois en Z.",
+      "dimensions": [
+        {
+          "quoi": "emprise du terrain",
+          "valeur": "60 x 60 km",
+          "source": "https://science.nasa.gov/3d-resources/apollo-12-landing-site/"
+        },
+        {
+          "quoi": "exagération verticale",
+          "valeur": "x50 sur l'axe Z",
+          "source": "https://science.nasa.gov/3d-resources/apollo-12-landing-site/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Apollo 12 - Landing Site.stl",
+          "url": "https://science.nasa.gov/3d-resources/apollo-12-landing-site/",
+          "page_source": "https://science.nasa.gov/3d-resources/apollo-12-landing-site/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Format STL, 25,19 Mo (21 avr. 2025). Carte de hauteur."
+        }
+      ],
+      "pour_kibsu": "Relief plus large que les autres sites Apollo : utile pour des échelles de paysage.",
+      "a_verifier": [
+        "Licence non indiquée sur la fiche."
+      ]
+    },
+    {
+      "id": "nasa-apollo-14-landing-site",
+      "nom": "Apollo 14 - Landing Site (carte de terrain NASA)",
+      "annee": "1971",
+      "auteurs": "NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Relief en STL de 30 x 30 km autour du site d'Apollo 14, à Fra Mauro, exagéré 35 fois en Z.",
+      "dimensions": [
+        {
+          "quoi": "emprise du terrain",
+          "valeur": "30 x 30 km",
+          "source": "https://science.nasa.gov/3d-resources/apollo-14-landing-site/"
+        },
+        {
+          "quoi": "exagération verticale",
+          "valeur": "x35 sur l'axe Z",
+          "source": "https://science.nasa.gov/3d-resources/apollo-14-landing-site/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Apollo 14 - Landing Site.stl",
+          "url": "https://science.nasa.gov/3d-resources/apollo-14-landing-site/",
+          "page_source": "https://science.nasa.gov/3d-resources/apollo-14-landing-site/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Format STL, 6,64 Mo (21 avr. 2025). Carte de hauteur."
+        }
+      ],
+      "pour_kibsu": "Relief de Fra Mauro, terrain plus accidenté que la plaine d'Apollo 11.",
+      "a_verifier": [
+        "Année 1971 : date de mission de mémoire, à vérifier."
+      ]
+    },
+    {
+      "id": "nasa-apollo-15-landing-site",
+      "nom": "Apollo 15 - Landing Site (carte de terrain NASA)",
+      "annee": "1971",
+      "auteurs": "NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Relief en STL de 30 x 30 km dans les Apennins, autour du site d'Apollo 15, exagéré 25 fois en Z.",
+      "dimensions": [
+        {
+          "quoi": "emprise du terrain",
+          "valeur": "30 x 30 km",
+          "source": "https://science.nasa.gov/3d-resources/apollo-15-landing-site/"
+        },
+        {
+          "quoi": "exagération verticale",
+          "valeur": "x25 sur l'axe Z",
+          "source": "https://science.nasa.gov/3d-resources/apollo-15-landing-site/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Apollo 15 - Landing Site.stl",
+          "url": "https://science.nasa.gov/3d-resources/apollo-15-landing-site/",
+          "page_source": "https://science.nasa.gov/3d-resources/apollo-15-landing-site/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Format STL, 6,74 Mo (21 avr. 2025). Carte de hauteur."
+        }
+      ],
+      "pour_kibsu": "Relief montagneux des Apennins : contraste utile avec les plaines.",
+      "a_verifier": [
+        "Source des données non indiquée sur la fiche.",
+        "Année 1971 : date de mission de mémoire, à vérifier."
+      ]
+    },
+    {
+      "id": "nasa-apollo-16-landing-site",
+      "nom": "Apollo 16 - Landing Site (carte de terrain NASA)",
+      "annee": "1972",
+      "auteurs": "NASA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Relief en STL de 30 x 30 km dans les Highlands de Descartes, autour du site d'Apollo 16, exagéré 35 fois en Z.",
+      "dimensions": [
+        {
+          "quoi": "emprise du terrain",
+          "valeur": "30 x 30 km",
+          "source": "https://science.nasa.gov/3d-resources/apollo-16-landing-site/"
+        },
+        {
+          "quoi": "exagération verticale",
+          "valeur": "x35 sur l'axe Z",
+          "source": "https://science.nasa.gov/3d-resources/apollo-16-landing-site/"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Apollo 16 - Landing Site.stl",
+          "url": "https://science.nasa.gov/3d-resources/apollo-16-landing-site/",
+          "page_source": "https://science.nasa.gov/3d-resources/apollo-16-landing-site/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Format STL, 6,62 Mo (21 avr. 2025). Carte de hauteur."
+        }
+      ],
+      "pour_kibsu": "Relief de Descartes : terrain de hauts plateaux, moins plat.",
+      "a_verifier": [
+        "Année 1972 : date de mission de mémoire, à vérifier."
+      ]
+    },
+    {
+      "id": "nasa-svs-moon-models",
+      "nom": "Modèles 3D de la Lune pour le web et l'AR (NASA SVS)",
+      "annee": "2026",
+      "auteurs": "NASA Goddard, Scientific Visualization Studio",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "sphere",
+      "resume": "Lot de sphères lunaires en GLB et USDZ, en trois variantes : couleur seule, avec grille, avec relief. Publié le 29 janvier 2026.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Moon 3D Models for Web, AR, and Animation (lot de GLB)",
+          "url": "https://svs.gsfc.nasa.gov/14959/",
+          "page_source": "https://svs.gsfc.nasa.gov/14959/",
+          "licence": "? (crédit demandé : NASA's Goddard Space Flight Center ; lien vers « Reproduction Guidelines »)",
+          "verifie": true,
+          "note": "GLB de 6,9 Mo à 298,9 Mo (variantes couleur, grille et relief, 8 k ou 15 k), et USDZ. Pas d'OBJ ni de STL. Mise à jour le 1er avril 2026."
+        }
+      ],
+      "pour_kibsu": "Sphère lunaire à relief pour tester la texture du pôle sud. La version « Small » est légère.",
+      "a_verifier": [
+        "Licence : seul un crédit est demandé, pas de licence explicite. Lire les consignes de reproduction NASA avant usage.",
+        "Les pôles sont pincés dans la version GLB (artefact signalé par NASA)."
+      ]
+    },
+    {
+      "id": "nasa-svs-cgi-moon-kit",
+      "nom": "CGI Moon Kit (cartes couleur et relief LRO, NASA SVS)",
+      "annee": "2019",
+      "auteurs": "NASA Goddard, Scientific Visualization Studio",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "sphere",
+      "resume": "Cartes couleur et de relief de la Lune à plaquer sur une sphère, issues de LRO. Ce n'est pas un maillage 3D.",
+      "dimensions": [
+        {
+          "quoi": "résolution la plus fine du relief",
+          "valeur": "23 040 x 11 520 px (64 px par degré)",
+          "source": "https://svs.gsfc.nasa.gov/4720"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "CGI Moon Kit : relief LDEM 16 bits (ldem_16_uint.tif, 5760 x 2880)",
+          "url": "https://svs.gsfc.nasa.gov/4720",
+          "page_source": "https://svs.gsfc.nasa.gov/4720",
+          "licence": "? (crédit demandé : NASA's Scientific Visualization Studio)",
+          "verifie": true,
+          "note": "TIFF 16 bits en demi-mètres, 31,7 Mo ; version 2025 : couleur en 16 bits sRGB jusqu'à 16 k (909,4 Mo). Source : LRO LOLA et LROC WAC."
+        }
+      ],
+      "pour_kibsu": "Relief lunaire à plaquer sur une sphère ou un terrain : bon point de départ pour le pôle sud si on découpe la zone.",
+      "a_verifier": [
+        "Ce lot ne couvre pas le pôle sud en priorité : vérifier la projection avant découpe.",
+        "Pas d'usage explicite ; crédit NASA SVS demandé."
+      ]
+    },
+    {
+      "id": "lro-lola-south-pole-ldem",
+      "nom": "Terrains du pôle sud lunaire (LOLA, PGDA)",
+      "annee": "?",
+      "auteurs": "NASA Goddard (PGDA), données LRO LOLA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Modèles d'altitude à 5 m par pixel pour les sites de pôle sud, en GeoTIFF, avec nuages de points XYZI. Chaque site est un lot de fichiers.",
+      "dimensions": [
+        {
+          "quoi": "résolution des GeoTIFF",
+          "valeur": "5 m par pixel",
+          "source": "https://pgda.gsfc.nasa.gov/products/78"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "High-Resolution LOLA Topography for Lunar South Pole Sites (LDEM GeoTIFF)",
+          "url": "https://pgda.gsfc.nasa.gov/products/78",
+          "page_source": "https://pgda.gsfc.nasa.gov/products/78",
+          "licence": "?",
+          "verifie": true,
+          "note": "GeoTIFF 5 m/pix en coordonnées stéréographiques polaires sud (MOON_ME). Sites : Site01, Site04, Site06, Site07, Site11, Site20, Site23, Site42, Haworth, Shoemaker, etc. Tailles non indiquées. Ce n'est pas un maillage : à convertir."
+        }
+      ],
+      "pour_kibsu": "Source la plus directe pour le relief du pôle sud. À convertir en maillage (GIS ou outil 3D) avant usage.",
+      "a_verifier": [
+        "Licence et conditions d'usage non trouvées dans la partie lue ; le README lié n'a pas été ouvert.",
+        "Page longue (286 k caractères) : seule la première partie a été lue."
+      ]
+    },
+    {
+      "id": "wikimedia-moon-elevation-stl",
+      "nom": "Moon elevation.stl (Wikimedia Commons)",
+      "annee": "2018",
+      "auteurs": "Cmglee (CMG Lee), données LRO LOLA",
+      "lieu": "lune",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Modèle STL de la Lune exagéré 10 fois, généré depuis une carte LOLA. Le fichier est libre sur Wikimedia Commons.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "File:Moon elevation.stl",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Moon_elevation.stl",
+          "page_source": "https://commons.wikimedia.org/wiki/File:Moon_elevation.stl",
+          "licence": "CC BY-SA 4.0",
+          "verifie": true,
+          "note": "STL de 25,07 Mo, dérivé d'une carte de 5 120 x 2 880 px. Script Python fourni sur la page pour générer le STL depuis une image."
+        }
+      ],
+      "pour_kibsu": "STL libre à partager, utile pour un test d'impression ou d'import. Partage à l'identique (BY-SA) à respecter.",
+      "a_verifier": [
+        "Ce n'est pas le pôle sud : relief global.",
+        "Exagération x10 sur l'axe Z."
+      ]
+    },
+    {
+      "id": "holoxica-deep-space-habitat",
+      "nom": "Deep Space Habitat (modèle Holoxica, d'après NASA)",
+      "annee": "?",
+      "auteurs": "Holoxica (compte Sketchfab), description créditant la NASA",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "boite",
+      "resume": "Habitat spatial à un niveau et quatre ports, d'environ 56 m3. La coque peut recevoir un volume gonflable en loft.",
+      "dimensions": [
+        {
+          "quoi": "volume de l'habitat",
+          "valeur": "56 m3",
+          "source": "https://sketchfab.com/3d-models/mars-habitat-demonstration-unit-4b927b92b26a49ffbcc75ff392b8b160"
+        }
+      ],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Mars Habitat Demonstration Unit (Holoxica, Sketchfab)",
+          "url": "https://sketchfab.com/3d-models/mars-habitat-demonstration-unit-4b927b92b26a49ffbcc75ff392b8b160",
+          "page_source": "https://sketchfab.com/3d-models/mars-habitat-demonstration-unit-4b927b92b26a49ffbcc75ff392b8b160",
+          "licence": "?",
+          "verifie": true,
+          "note": "Compte Holoxica, pas confirmé comme compte NASA. Formats non affichés. 6,6 k triangles, 3,5 k sommets."
+        }
+      ],
+      "pour_kibsu": "Référence de habitat à quatre ports pour un plan en croix. Le volume de 56 m3 sert de comparaison.",
+      "a_verifier": [
+        "Licence inconnue : ne pas réutiliser avant vérification.",
+        "Le titre Sketchfab parle de Mars, la description parle du Deep Space Habitat : vérifier le sujet."
+      ]
+    },
+    {
+      "id": "quaternius-ultimate-space-kit",
+      "nom": "Ultimate Space Kit (Quaternius)",
+      "annee": "?",
+      "auteurs": "Quaternius",
+      "lieu": "fiction",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Lot de 92 modèles de jeu vidéo, dont des vaisseaux et des planètes. Libre en CC0. Pas de module d'habitat lunaire confirmé.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Ultimate Space Kit",
+          "url": "https://quaternius.com/packs/ultimatespacekit.html",
+          "page_source": "https://quaternius.com/packs/ultimatespacekit.html",
+          "licence": "CC0",
+          "verifie": true,
+          "note": "Formats FBX, OBJ, Blend et glTF. 92 modèles. Le Sketchfab associé indique CC Attribution : la page du créateur fait foi (CC0)."
+        }
+      ],
+      "pour_kibsu": "Source de vaisseaux et de modules pour des vues d'ambiance, pas pour des plans cotés.",
+      "a_verifier": [
+        "Aucun module d'habitat lunaire confirmé dans la description.",
+        "Contradiction de licence entre le site (CC0) et Sketchfab (CC Attribution)."
+      ]
+    }
+  ],
+  "sources_generales": [
+    {
+      "titre": "NASA 3D Resources (catalogue)",
+      "url": "https://science.nasa.gov/3d-resources",
+      "note": "Libre de téléchargement et d'usage selon la page. Filtres de formats : glb, stl, blender, 3ds, max, maya, openvsp, lwo. Pas d'OBJ ni de FBX listés."
+    },
+    {
+      "titre": "NASA-3D-Resources (dépôt GitHub)",
+      "url": "https://github.com/nasa/NASA-3D-Resources",
+      "note": "README : ressources « free and without copyright ». Dossiers 3D Models, 3D Printing, Images and Textures. Liste complète non lue (« View all files »)."
+    },
+    {
+      "titre": "NASA SVS, CGI Moon Kit",
+      "url": "https://svs.gsfc.nasa.gov/4720",
+      "note": "Cartes couleur et relief LRO, gratuites, crédit demandé à NASA SVS."
+    },
+    {
+      "titre": "Sketchfab, compte @esa (ESA)",
+      "url": "https://sketchfab.com/esa",
+      "note": "Un seul modèle : une comète Rosetta imprimable en 3D. Aucun modèle lunaire ou d'habitat sur ce compte."
+    },
+    {
+      "titre": "Wikimedia Commons, Moon elevation.stl",
+      "url": "https://commons.wikimedia.org/wiki/File:Moon_elevation.stl",
+      "note": "STL libre CC BY-SA 4.0, vérifié."
+    }
+  ],
+  "pistes_non_explorees": [
+    "Smithsonian 3D (3d.si.edu) : accès refusé (HTTP 403), rien vérifié.",
+    "Printables / 3dgo : MarsCosy et « Moon Base - Water Tank » indiqués CC BY-NC-SA par un miroir (3dgo.app), mais la page est en 403 : à ouvrir sur printables.com avant usage.",
+    "Thingiverse : Modular Mars Base, Dynamic Terrestrial Habitat, Briscoe Mars Habitat : licences et formats non vérifiés.",
+    "CGTrader (payant ou sous licence royalty-free, non ouvert) : Gateway I-HAB Module (25 $, GLB et STL indiqués par un extrait), First Lunar Outpost habitat module, NASA Artemis lunar lander (indiqué gratuit), Lunar habitat (page vide à la lecture).",
+    "GrabCAD : certains modules lunaires (Gateway cargo, challenges NASA) existent, mais l'exigence d'un compte et la licence n'ont pas été confirmées. Page du dossier Gateway Cargo introuvable (404).",
+    "ESA : pas de modèle 3D d'habitat lunaire ouvert trouvé (HASSELL / Lunar Master Plan, Lunar I-Hab mock-up : images ou plans, à regarder sur esa.int).",
+    "USGS Astrogeology : DEM LROC du pôle sud (environ 310 Mo) indiqué dans un extrait, non ouvert.",
+    "Bibliothèques d'intérieurs (Sketchfab, Poly Haven) : non explorées."
+  ]
+}

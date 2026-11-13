@@ -1,0 +1,539 @@
+{
+  "theme": "Station spatiale internationale (ISS) : modules, racks, coupes, dimensions et modeles 3D",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "destiny",
+      "nom": "Destiny (laboratoire americain)",
+      "annee": "2001",
+      "auteurs": "NASA / Boeing",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Laboratoire scientifique americain de l'ISS. Trois sections cylindriques et deux cônes d'extremite.",
+      "dimensions": [
+        { "quoi": "racks systeme et experience", "valeur": "23 (11 systeme, 12 experience)", "source": "https://rdataspace.github.io/station_iss/tech/destiny.html" },
+        { "quoi": "hublot optique, diametre", "valeur": "50,9 cm", "source": "https://rdataspace.github.io/station_iss/tech/destiny.html" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Destiny Cutaway Drawing (ecorche, GIF)", "url": "https://rdataspace.github.io/station_iss/images/destiny-cutaway-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/destiny.html", "licence": "?", "verifie": true, "note": "Ecorche du module, section Construction de la page." },
+        { "type": "coupe", "titre": "Destiny installed on the ISS (2006), dessin couleur", "url": "https://rdataspace.github.io/station_iss/images/destiny-cutaway-color-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/destiny.html", "licence": "?", "verifie": true, "note": "Dessin couleur du module installe sur l'ISS." },
+        { "type": "image", "titre": "Destiny Laboratory - Side and End views", "url": "https://rdataspace.github.io/station_iss/images/destiny-side-end-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/destiny.html", "licence": "?", "verifie": true, "note": "Vues de cote et de bout (elevations), cotes non lues." },
+        { "type": "image", "titre": "Inside Destiny shortly after installation", "url": "https://rdataspace.github.io/station_iss/images/destiny-inside-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/destiny.html", "licence": "?", "verifie": true, "note": "Photo interieure peu apres l'installation." }
+      ],
+      "pour_kibsu": "23 racks repartis : 6 babord, 6 tribord, 6 en hauteur, 5 au sol (rdataspace). Exemple de module cylindrique a racks standardises autour d'un couloir central.",
+      "a_verifier": [
+        "Longueur et diametre exterieurs de Destiny non trouves sur une source ouverte (une recherche donne 8,5 m x 4,3 m sans URL ouverte).",
+        "Volume pressurise et volume interieur non trouves.",
+        "Licence des images rdataspace non indiquee."
+      ]
+    },
+    {
+      "id": "harmony",
+      "nom": "Harmony (Node 2)",
+      "annee": "2007",
+      "auteurs": "NASA / ESA-Thales Alenia Space (noeuds)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Noeud de connexion pressurise de l'ISS. Il relie plusieurs modules et porte 8 racks ainsi que les quartiers d'equipage.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6706 mm", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "diametre", "valeur": "4480 mm", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "volume pressurise", "valeur": "70 m3", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "masse au lancement", "valeur": "14 500 kg", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "racks", "valeur": "8 (4 avionique, 2 stockage approvisionnement, 2 stockage apesanteur)", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Inside Harmony (credit NASA)", "url": "https://rdataspace.github.io/station_iss/images/node-harmony-inside-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/nodes.html", "licence": "?", "verifie": true, "note": "Photo interieure, credit NASA." }
+      ],
+      "pour_kibsu": "Noeud a 6 ports : repartition des racks en avionique, stockage et apesanteur. Bon exemple de module-carrefour avec racks par fonction.",
+      "a_verifier": [
+        "Pas de coupe Harmony trouvee (la page rdataspace dediee renvoie 404). Dimensions a recouper avec une fiche NASA."
+      ]
+    },
+    {
+      "id": "unity",
+      "nom": "Unity (Node 1)",
+      "annee": "1998",
+      "auteurs": "NASA / Boeing",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Premier noeud de connexion americain de l'ISS, relie les modules entre eux.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "5,5 m (18 ft)", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "diametre", "valeur": "4,3 m (14 ft)", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "masse", "valeur": "11 895 kg", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "racks d'equipement", "valeur": "4", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Unity cutaway view", "url": "https://rdataspace.github.io/station_iss/images/node-unity-cutaway-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/nodes.html", "licence": "?", "verifie": true, "note": "Ecorche du noeud 1, legende Cutaway view." }
+      ],
+      "pour_kibsu": "Ecorche de noeud a 6 ports avec 4 racks : base pour un hall de distribution entre espaces de vie.",
+      "a_verifier": [
+        "Volume interieur non indique sur la source."
+      ]
+    },
+    {
+      "id": "tranquility",
+      "nom": "Tranquility (Node 3)",
+      "annee": "2010",
+      "auteurs": "NASA / ESA / Thales Alenia Space",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Noeud pressurise de l'ISS, avec embouts coniques. Il porte la Cupola, le module BEAM et 8 racks de support de vie.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6706 mm (6,706 m)", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "diametre", "valeur": "4480 mm (4,48 m)", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "volume pressurise", "valeur": "70 m3", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "masse", "valeur": "17 992 kg", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" },
+        { "quoi": "racks", "valeur": "8 (2 avionique, 1 recyclage air, 1 production O2, 2 recyclage eau, 1 dechets et hygiene, 1 tapis de course)", "source": "https://rdataspace.github.io/station_iss/tech/nodes.html" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Inside Tranquility (racks vides en bas et a droite)", "url": "https://rdataspace.github.io/station_iss/images/node-tranquility-inside-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/nodes.html", "licence": "?", "verifie": true, "note": "Photo interieure, credit ESA/S. Corvaja." }
+      ],
+      "pour_kibsu": "Support de vie : 8 racks par fonction (air, eau, dechets, sport). Modele pour regrouper les equipements techniques d'un habitat.",
+      "a_verifier": [
+        "Masse : 17 992 kg (rdataspace) contre 19 000 kg (Wikipedia, https://en.wikipedia.org/wiki/Tranquility_(ISS_module)) et 15 500 kg (ESA, page 404 a la lecture). A recouper.",
+        "La page ESA Node 3 renvoie 404 ; les dimensions 6706 mm / 4480 mm viennent de rdataspace et Wikipedia."
+      ]
+    },
+    {
+      "id": "cupola",
+      "nom": "Cupola",
+      "annee": "2010",
+      "auteurs": "ESA / Thales Alenia Space",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "dome",
+      "resume": "Dome d'observation de l'ISS a sept hublots, fixe sous le noeud Tranquility, avec volets de protection.",
+      "dimensions": [
+        { "quoi": "hauteur hors tout", "valeur": "1,5 m", "source": "https://rdataspace.github.io/station_iss/tech/cupola.html" },
+        { "quoi": "diametre max", "valeur": "2,95 m", "source": "https://rdataspace.github.io/station_iss/tech/cupola.html" },
+        { "quoi": "hublot superieur, diametre", "valeur": "80 cm", "source": "https://rdataspace.github.io/station_iss/tech/cupola.html" },
+        { "quoi": "masse au lancement / en orbite", "valeur": "1 805 kg / 1 880 kg", "source": "https://rdataspace.github.io/station_iss/tech/cupola.html" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Cupola cutaway drawing (volets ouverts)", "url": "https://rdataspace.github.io/station_iss/images/cupola-drawing-cutaway.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/cupola.html", "licence": "?", "verifie": true, "note": "Ecorche de la Cupola, volets ouverts." },
+        { "type": "image", "titre": "Cupola drawing with shutters open", "url": "https://rdataspace.github.io/station_iss/images/cupola-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/cupola.html", "licence": "?", "verifie": true, "note": "Dessin exterieur, volets ouverts." },
+        { "type": "image", "titre": "Cupola with Workstations in place", "url": "https://rdataspace.github.io/station_iss/images/cupola-workstations-photo-1.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/cupola.html", "licence": "?", "verifie": true, "note": "Photo des postes de travail installes." }
+      ],
+      "pour_kibsu": "Forme en dome avec vitrage : point de vue panoramique a integrer dans un habitat, a prevoir en plus des cylindres.",
+      "a_verifier": [
+        "Autres sources (EO Portal, fiche JSC) donnent 2,955 m de diametre et 1,5 m / 2 m / 2,9 m : coherent avec rdataspace, non ouvertes."
+      ]
+    },
+    {
+      "id": "columbus",
+      "nom": "Columbus",
+      "annee": "2008",
+      "auteurs": "ESA / Airbus",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Laboratoire europeen de l'ISS. Il porte 10 racks ISPR, 8 sur les parois et 2 au plafond.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6,9 m (ESA : 6 871 mm)", "source": "https://rdataspace.github.io/station_iss/tech/columbus.html" },
+        { "quoi": "diametre", "valeur": "4,5 m (ESA : 4 477 mm)", "source": "https://rdataspace.github.io/station_iss/tech/columbus.html" },
+        { "quoi": "volume interieur total", "valeur": "75 m3", "source": "https://rdataspace.github.io/station_iss/tech/columbus.html" },
+        { "quoi": "volume dedie aux racks de charge utile", "valeur": "25 m3", "source": "https://rdataspace.github.io/station_iss/tech/columbus.html" },
+        { "quoi": "masse sans charge utile", "valeur": "10 275 kg", "source": "https://rdataspace.github.io/station_iss/tech/columbus.html" },
+        { "quoi": "racks ISPR", "valeur": "10 (8 sur parois laterales, 2 au plafond)", "source": "https://rdataspace.github.io/station_iss/tech/columbus.html" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Columbus Laboratory Module (racks internes et charges externes)", "url": "https://rdataspace.github.io/station_iss/images/columbus-cutaway-text-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/columbus.html", "licence": "credit ESA (licence non precisee)", "verifie": true, "note": "Ecorche avec racks internes et charges externes." },
+        { "type": "coupe", "titre": "Columbus Laboratory cutaway view (ESA)", "url": "https://esa.int/ESA_Multimedia/Images/1998/01/Columbus_Laboratory_cutaway_view", "page_source": "https://esa.int/ESA_Multimedia/Images/1998/01/Columbus_Laboratory_cutaway_view", "licence": "?", "verifie": false, "note": "Ecorche ESA, non ouvert." },
+        { "type": "image", "titre": "COF internal configuration (ESA)", "url": "https://esa.int/ESA_Multimedia/Images/1998/01/COF_internal_configuration", "page_source": "https://esa.int/ESA_Multimedia/Images/1998/01/COF_internal_configuration", "licence": "?", "verifie": false, "note": "Configuration interieure, non ouverte." }
+      ],
+      "pour_kibsu": "10 racks ISPR repartis sur les parois : grille de dimensionnement pour un labo cylindrique de 4,5 m de diametre.",
+      "a_verifier": [
+        "Nombre de racks : 10 (rdataspace, ESA) contre 16 (DLR, https://www.dlr.de/en/ar/topics-missions/space-research/international-space-station/columbus) : a recouper.",
+        "Etabli de travail (European Transport Carrier) : pas de dimensions trouvees."
+      ]
+    },
+    {
+      "id": "kibo",
+      "nom": "Kibo (module pressurise JPM et ELM)",
+      "annee": "2008",
+      "auteurs": "JAXA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Plus grand ensemble de laboratoire de l'ISS, japonais : module pressurise, module logistique pressurise (ELM-PS) et plate-forme exterieure.",
+      "dimensions": [
+        { "quoi": "PM : longueur", "valeur": "11,2 m", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "PM : diametre exterieur", "valeur": "4,4 m", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "PM : masse", "valeur": "15,9 t", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "PM : racks", "valeur": "23 (dont 10 ISPR) ; 6 sur parois laterales et fond, 5 sur paroi zenith", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "ELM-PS : longueur / diametre exterieur", "valeur": "4,2 m / 4,4 m", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "ELM-PS : racks", "valeur": "8", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "EF (plate-forme exterieure) : dimensions", "valeur": "6 m x 5 m x 4 m, 4 000 kg, 10 charges utiles", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "sas scientifique : limite d'objet", "valeur": "inferieur a 460 x 830 x 800 mm, 300 kg max", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Pressurized Module interior with racks fitted (drawing)", "url": "https://rdataspace.github.io/station_iss/images/kibo-pm-racks-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/kibo.html", "licence": "?", "verifie": true, "note": "Interieur du PM avec racks, trappe vers Harmony a gauche, sas scientifique a droite." },
+        { "type": "plan", "titre": "Experiment Logistics Module - Pressurised Section (ELM-PS), surligne", "url": "https://rdataspace.github.io/station_iss/images/kibo-elm-ps-drawing-large.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/kibo.html", "licence": "?", "verifie": true, "note": "Dessin du module logistique pressurise." },
+        { "type": "coupe", "titre": "Scientific Airlock (drawing)", "url": "https://rdataspace.github.io/station_iss/images/kibo-pm-airlock-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/kibo.html", "licence": "?", "verifie": true, "note": "Dessin du sas scientifique du PM." },
+        { "type": "image", "titre": "Kibo - Main Components (JAXA)", "url": "https://rdataspace.github.io/station_iss/images/kibo-components-drawing.png", "page_source": "https://rdataspace.github.io/station_iss/tech/kibo.html", "licence": "credit JAXA (licence non precisee)", "verifie": true, "note": "Vue eclatee des composants." },
+        { "type": "rapport", "titre": "JAXA Pressurized Module Handbook (PDF)", "url": "https://iss.jaxa.jp/kibo/library/fact/data/pmhandbook_en.pdf", "page_source": "https://iss.jaxa.jp/kibo/library/fact/data/pmhandbook_en.pdf", "licence": "?", "verifie": false, "note": "Contient un tableau de racks et une figure de structure, non lus." }
+      ],
+      "pour_kibsu": "Module logistique ELM-PS a cote du module de vie : separer stockage et habitation dans le plan. Sas scientifique avec limite d'objet : modele pour un sas de chargement.",
+      "a_verifier": [
+        "Volume pressurise du PM : non trouve.",
+        "Nombre de racks : 23 (rdataspace) contre 10 racks d'experience (handbook JAXA, non lu) : a recouper."
+      ]
+    },
+    {
+      "id": "kibo-ef",
+      "nom": "Kibo EF (Exposed Facility, plate-forme exterieure)",
+      "annee": "2008",
+      "auteurs": "JAXA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Plate-forme exterieure du module Kibo, exposee au vide, avec 10 charges utiles et un bras de manipulation.",
+      "dimensions": [
+        { "quoi": "dimensions", "valeur": "6 m x 5 m x 4 m", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "masse", "valeur": "4 000 kg", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" },
+        { "quoi": "charge utile type", "valeur": "1,85 m x 1,0 m x 0,8 m, 500 kg", "source": "https://rdataspace.github.io/station_iss/tech/kibo.html" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Exposed Facility (EF) (surligne)", "url": "https://rdataspace.github.io/station_iss/images/kibo-ef-drawing-large.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/kibo.html", "licence": "?", "verifie": true, "note": "Dessin de la plate-forme exterieure." },
+        { "type": "image", "titre": "Exposed Facility - Main Components", "url": "https://rdataspace.github.io/station_iss/images/kibo-ef-components-drawing.png", "page_source": "https://rdataspace.github.io/station_iss/tech/kibo.html", "licence": "?", "verifie": true, "note": "Composants principaux de l'EF." }
+      ],
+      "pour_kibsu": "Plate-forme exterieure a charges utiles : idee d'annexe technique accrochee a l'habitat, sans volume habitable.",
+      "a_verifier": [
+        "Dimensions issues d'une seule page rdataspace."
+      ]
+    },
+    {
+      "id": "zvezda",
+      "nom": "Zvezda (module de service)",
+      "annee": "2000",
+      "auteurs": "Roscosmos / RSC Energia",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module russe de service et de vie de l'ISS. Il loge l'equipage et les systemes de controle de la station.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "43 ft (environ 13,1 m)", "source": "https://rdataspace.github.io/station_iss/tech/zvezda.html" },
+        { "quoi": "envergure des panneaux solaires", "valeur": "98 ft (environ 29,9 m)", "source": "https://rdataspace.github.io/station_iss/tech/zvezda.html" },
+        { "quoi": "masse", "valeur": "42 000 lb (page rdataspace)", "source": "https://rdataspace.github.io/station_iss/tech/zvezda.html" },
+        { "quoi": "diametre max", "valeur": "4,35 m", "source": "https://en.wikipedia.org/wiki/Zvezda_(ISS_module)" },
+        { "quoi": "compartiment de transfert (sphere a l'avant)", "valeur": "2,78 m de long, 6,85 m3", "source": "https://en.wikipedia.org/wiki/Zvezda_(ISS_module)" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "Zvezda cut-away drawing (compartiment de travail et chambre de transfert)", "url": "https://rdataspace.github.io/station_iss/images/zvezda-cutaway-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/zvezda.html", "licence": "?", "verifie": true, "note": "Ecorche : compartiment de travail principal et chambre de transfert." },
+        { "type": "image", "titre": "Zvezda in orbit (drawing)", "url": "https://rdataspace.github.io/station_iss/images/zvezda-orbit-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/zvezda.html", "licence": "?", "verifie": true, "note": "Dessin en orbite." },
+        { "type": "image", "titre": "Zvezda (left), Zarya (center), Unity (right) in orbit", "url": "https://rdataspace.github.io/station_iss/images/zvezda-zarya-unity-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/zvezda.html", "licence": "?", "verifie": true, "note": "Position relative des trois modules russes et americain." }
+      ],
+      "pour_kibsu": "Zone de vie cylindrique et petit compartiment de transfert spherique a l'avant : une hierarchie vie / transfert a reprendre.",
+      "a_verifier": [
+        "Crew quarters : 2 couchages personnels, toilette et hygiene, cuisine avec refrigerateur-congelateur et table (resume de recherche, source ESA non ouverte). Dimensions des cabines non trouvees.",
+        "Volume : 75 m3 pressurise (Wikipedia) contre 89 m3 (site TsPK) ; habitable 46,7 m3 contre 35,1 m3. A recouper.",
+        "Masse : 42 000 lb (rdataspace) contre 20 295 kg (site TsPK, non ouvert). A recouper.",
+        "Hublets : 13 ou 14 selon les sources."
+      ]
+    },
+    {
+      "id": "zarya",
+      "nom": "Zarya (module FGB, controle)",
+      "annee": "1998",
+      "auteurs": "Roscosmos / Khrunichev / Boeing",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Premier module de l'ISS, russe, fournissant energie et propulsion au debut de l'assemblage.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "12,99 m", "source": "https://rdataspace.github.io/station_iss/tech/zarya.html" },
+        { "quoi": "diametre max", "valeur": "4,1 m", "source": "https://rdataspace.github.io/station_iss/tech/zarya.html" },
+        { "quoi": "masse", "valeur": "24 968 kg", "source": "https://rdataspace.github.io/station_iss/tech/zarya.html" },
+        { "quoi": "volume pressurise", "valeur": "71,5 m3", "source": "https://rdataspace.github.io/station_iss/tech/zarya.html" },
+        { "quoi": "panneaux solaires", "valeur": "2 ailes de 10,7 m x 3,4 m, 3 kW moyens", "source": "https://rdataspace.github.io/station_iss/tech/zarya.html" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Zarya side and end views (ailes solaires non deployees)", "url": "https://rdataspace.github.io/station_iss/images/zarya-side-end-drawing.png", "page_source": "https://rdataspace.github.io/station_iss/tech/zarya.html", "licence": "?", "verifie": true, "note": "Vues de cote et de bout, ailes non deployees." },
+        { "type": "image", "titre": "Zarya's main external features (credit NASA ISS Reference Guide 2006)", "url": "https://rdataspace.github.io/station_iss/images/zarya-features-drawing.png", "page_source": "https://rdataspace.github.io/station_iss/tech/zarya.html", "licence": "credit NASA (domaine public NASA probable, a confirmer)", "verifie": true, "note": "Elements externes principaux." },
+        { "type": "image", "titre": "Mission specialists install equipment in Zarya", "url": "https://rdataspace.github.io/station_iss/images/zarya-inside-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/zarya.html", "licence": "credit NASA", "verifie": true, "note": "Photo interieure pendant une installation." }
+      ],
+      "pour_kibsu": "Module de la premiere assemblee : energie et propulsion centralisees dans un seul volume. Piste pour un noyau technique d'habitat.",
+      "a_verifier": [
+        "Masse 24 968 kg (rdataspace) : une seule source ouverte. Wikipedia n'a pas ete lue (page d'homonymie)."
+      ]
+    },
+    {
+      "id": "quest",
+      "nom": "Quest (sas joint)",
+      "annee": "2001",
+      "auteurs": "NASA / Boeing",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Sas double de l'ISS : un sas d'equipement et un sas d'equipage pour les sorties.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "5,5 m (18 ft)", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" },
+        { "quoi": "diametre", "valeur": "4 m (13 ft)", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" },
+        { "quoi": "masse", "valeur": "6 064 kg", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" },
+        { "quoi": "volume", "valeur": "34 m3 (1 200 ft3)", "source": "https://rdataspace.github.io/station_iss/tech/quest.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Quest Main Dimensions (mm) with High Pressure Gas Tanks", "url": "https://rdataspace.github.io/station_iss/images/quest-dimensions-drawing.png", "page_source": "https://rdataspace.github.io/station_iss/tech/quest.html", "licence": "?", "verifie": true, "note": "Cotes principales en mm, reservoirs de gaz haute pression inclus." },
+        { "type": "image", "titre": "Main Components Drawing (left) and In Factory Photo (right)", "url": "https://rdataspace.github.io/station_iss/images/quest-components.png", "page_source": "https://rdataspace.github.io/station_iss/tech/quest.html", "licence": "?", "verifie": true, "note": "Composants du sas." },
+        { "type": "image", "titre": "Astronaut in Quest Crew Lock", "url": "https://rdataspace.github.io/station_iss/images/quest-astronaut-drawing.png", "page_source": "https://rdataspace.github.io/station_iss/tech/quest.html", "licence": "?", "verifie": true, "note": "Dessin d'un astronaute dans le sas d'equipage, donne l'echelle." }
+      ],
+      "pour_kibsu": "Sas double : un sas equipement et un sas equipage separes. Piste pour un sas lunaire a deux zones de pression.",
+      "a_verifier": [
+        "Dimensions tirees d'une page rdataspace ; la source d'origine est a recouper."
+      ]
+    },
+    {
+      "id": "leonardo-pmm",
+      "nom": "Leonardo (PMM, module logistique permanent)",
+      "annee": "2011",
+      "auteurs": "ASI / NASA / Thales Alenia Space",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Ancien module de transport MPLM transforme en module de stockage permanent de l'ISS. Il porte 16 racks.",
+      "dimensions": [
+        { "quoi": "longueur (MPLM commun, rdataspace)", "valeur": "6,4 m", "source": "https://rdataspace.github.io/station_iss/tech/pmm.html" },
+        { "quoi": "diametre (MPLM commun)", "valeur": "4,6 m", "source": "https://rdataspace.github.io/station_iss/tech/pmm.html" },
+        { "quoi": "volume habitable (MPLM commun)", "valeur": "31 m3", "source": "https://rdataspace.github.io/station_iss/tech/pmm.html" },
+        { "quoi": "masse PMM", "valeur": "9 896 kg", "source": "https://rdataspace.github.io/station_iss/tech/pmm.html" },
+        { "quoi": "racks", "valeur": "16 (dont 5 alimentes)", "source": "https://rdataspace.github.io/station_iss/tech/pmm.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "MPLM Main Dimensions (millimeters)", "url": "https://rdataspace.github.io/station_iss/images/mplm-dimensions.png", "page_source": "https://rdataspace.github.io/station_iss/tech/pmm.html", "licence": "?", "verifie": true, "note": "Cotes principales du MPLM en mm." },
+        { "type": "image", "titre": "PMM Location on ISS", "url": "https://rdataspace.github.io/station_iss/images/pmm-station-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/pmm.html", "licence": "?", "verifie": true, "note": "Position du PMM sur la station." },
+        { "type": "image", "titre": "PMM Inside", "url": "https://rdataspace.github.io/station_iss/images/pmm-interior-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/pmm.html", "licence": "?", "verifie": true, "note": "Photo interieure." }
+      ],
+      "pour_kibsu": "16 racks et cone d'extremite avec stockage de sacs : module de stockage separe du labo de vie.",
+      "a_verifier": [
+        "Longueur : 6,4 m (rdataspace, MPLM commun) contre 6,6 m (Wikipedia, non ouvert).",
+        "Masse : 9 896 kg (rdataspace) contre 9 784 lb (NASA, non ouvert).",
+        "Volume : 1 095 ft3 (NASA, habitable) contre 2 708 ft3 (NASA, pressurise) : base de mesure a verifier."
+      ]
+    },
+    {
+      "id": "nauka",
+      "nom": "Nauka (MLM, laboratoire russe)",
+      "annee": "2021",
+      "auteurs": "Roscosmos",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Laboratoire russe de l'ISS, avec un sas Shk pour sortir des charges utiles et le noeud Prichal.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "13,12 m", "source": "https://rdataspace.github.io/station_iss/tech/nauka.html" },
+        { "quoi": "diametre max", "valeur": "4,25 m", "source": "https://rdataspace.github.io/station_iss/tech/nauka.html" },
+        { "quoi": "masse en orbite", "valeur": "20 357 kg", "source": "https://rdataspace.github.io/station_iss/tech/nauka.html" },
+        { "quoi": "volume pressurise", "valeur": "80,9 m3", "source": "https://rdataspace.github.io/station_iss/tech/nauka.html" },
+        { "quoi": "volume habitable", "valeur": "70 m3", "source": "https://rdataspace.github.io/station_iss/tech/nauka.html" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Nauka location drawing (diagramme de situation)", "url": "https://rdataspace.github.io/station_iss/images/nauka-location-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/nauka.html", "licence": "?", "verifie": true, "note": "Diagramme de la position de Nauka sur la station." }
+      ],
+      "pour_kibsu": "Labo cylindrique avec sas de sortie Shk : sortie d'equipement sans ouvrir l'habitat.",
+      "a_verifier": [
+        "Diametre : 4,25 m (rdataspace) contre 4,10 m (DLR, non ouvert).",
+        "Sas Shk : 1 200 x 500 x 500 mm, 2,1 m3 (miroir Wikipedia, non ouvert), a verifier."
+      ]
+    },
+    {
+      "id": "bishop",
+      "nom": "Bishop (sas d'exterieur)",
+      "annee": "2020",
+      "auteurs": "Nanoracks",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Sas d'exterieur de l'ISS, en forme de cloche, pour charger et decharger des objets sans ouvrir les modules.",
+      "dimensions": [
+        { "quoi": "hauteur", "valeur": "1,8 m", "source": "https://rdataspace.github.io/station_iss/tech/bishop.html" },
+        { "quoi": "diametre", "valeur": "2,014 m", "source": "https://rdataspace.github.io/station_iss/tech/bishop.html" },
+        { "quoi": "volume pressurise", "valeur": "3,99 m3", "source": "https://rdataspace.github.io/station_iss/tech/bishop.html" },
+        { "quoi": "masse", "valeur": "1 059 kg", "source": "https://rdataspace.github.io/station_iss/tech/bishop.html" },
+        { "quoi": "charge utile max, dimensions", "valeur": "112 x 112 x 127 cm, 322 kg", "source": "https://nanoracks.com/bishop-airlock/" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Airlock Configuration (Nanoracks)", "url": "https://rdataspace.github.io/station_iss/images/bishop-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/bishop.html", "licence": "credit Nanoracks (licence non precisee)", "verifie": true, "note": "Schema de la configuration du sas." },
+        { "type": "image", "titre": "Airlock (credit NASA, Nanoracks)", "url": "https://rdataspace.github.io/station_iss/images/bishop-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/bishop.html", "licence": "credit NASA / Nanoracks", "verifie": true, "note": "Photo du sas." }
+      ],
+      "pour_kibsu": "Sas de chargement sans ouvrir l'habitat : un passage pour objets volumineux, idee utile pour un hangar d'entree.",
+      "a_verifier": [
+        "Charge utile max 112 x 112 x 127 cm et 322 kg : source Nanoracks, non ouverte."
+      ]
+    },
+    {
+      "id": "beam",
+      "nom": "BEAM (module gonflable Bigelow)",
+      "annee": "2016",
+      "auteurs": "Bigelow Aerospace / NASA",
+      "lieu": "orbite",
+      "statut": "prototype",
+      "forme": "cylindre",
+      "resume": "Module gonflable experimental fixe a Tranquility. Il sert de test d'habitat expansible.",
+      "dimensions": [
+        { "quoi": "longueur pressurisee", "valeur": "4,01 m", "source": "https://rdataspace.github.io/station_iss/tech/beam.html" },
+        { "quoi": "diametre pressurise", "valeur": "3,23 m", "source": "https://rdataspace.github.io/station_iss/tech/beam.html" },
+        { "quoi": "longueur / diametre replie", "valeur": "2,16 m / 2,36 m", "source": "https://rdataspace.github.io/station_iss/tech/beam.html" },
+        { "quoi": "volume habitable", "valeur": "16,0 m3", "source": "https://rdataspace.github.io/station_iss/tech/beam.html" },
+        { "quoi": "masse", "valeur": "1 413 kg", "source": "https://rdataspace.github.io/station_iss/tech/beam.html" }
+      ],
+      "documents": [
+        { "type": "coupe", "titre": "BEAM Cutaway Drawing", "url": "https://rdataspace.github.io/station_iss/images/beam-cutaway-drawing.gif", "page_source": "https://rdataspace.github.io/station_iss/tech/beam.html", "licence": "?", "verifie": true, "note": "Ecorche du module gonflable." },
+        { "type": "image", "titre": "BEAM Concept drawing, on ISS", "url": "https://rdataspace.github.io/station_iss/images/beam-station-drawing.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/beam.html", "licence": "?", "verifie": true, "note": "Dessin de concept, BEAM sur l'ISS." },
+        { "type": "image", "titre": "BEAM being installed on Node 3 (Tranquility)", "url": "https://rdataspace.github.io/station_iss/images/beam-installation-photo.jpg", "page_source": "https://rdataspace.github.io/station_iss/tech/beam.html", "licence": "?", "verifie": true, "note": "Installation sur le noeud Tranquility." }
+      ],
+      "pour_kibsu": "Volume gonflable replie au lancement : piste pour un habitat compact, transportable, qui se deploie sur place.",
+      "a_verifier": [
+        "Attache au port arriere de Tranquility, le 16 avril 2016 (Wikipedia, https://en.wikipedia.org/wiki/Bigelow_Expandable_Activity_Module, verifie)."
+      ]
+    },
+    {
+      "id": "poisk",
+      "nom": "Poisk (sas russe)",
+      "annee": "2009",
+      "auteurs": "Roscosmos / RSC Energia",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Petit module russe avec sas, fixe a Zvezda puis deplace sur Zvezda.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "4,049 m", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" },
+        { "quoi": "diametre max", "valeur": "2,55 m", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" },
+        { "quoi": "volume pressurise", "valeur": "14,8 m3 (habitable 10,7 m3)", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" },
+        { "quoi": "masse", "valeur": "3 670 kg", "source": "https://en.wikipedia.org/wiki/Poisk_(ISS_module)" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Sas compact russe : petit volume de transfert entre l'habitat et l'exterieur.",
+      "a_verifier": [
+        "Le schema annote 'Labeled diagram of the Poisk ISS module' existe sur la page Wikipedia, URL d'image non recuperee.",
+        "Date de lancement : heure contradictoire dans la page (02:22 UTC contre 14:22 UTC)."
+      ]
+    },
+    {
+      "id": "rassvet",
+      "nom": "Rassvet (MRM-1)",
+      "annee": "2010",
+      "auteurs": "Roscosmos / RSC Energia",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Module russe de stockage, fixe sous Zvezda puis deplace sur Nauka. Il porte un sas.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "6 m", "source": "https://en.wikipedia.org/wiki/Rassvet_(ISS_module)" },
+        { "quoi": "diametre", "valeur": "2,35 m", "source": "https://en.wikipedia.org/wiki/Rassvet_(ISS_module)" },
+        { "quoi": "volume total / pressurise", "valeur": "17,4 m3 / 5,85 m3", "source": "https://en.wikipedia.org/wiki/Rassvet_(ISS_module)" },
+        { "quoi": "masse", "valeur": "5 075 kg", "source": "https://en.wikipedia.org/wiki/Rassvet_(ISS_module)" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Module de stockage cylindrique et etroit : dimensionnement d'un espace de rangement en serie.",
+      "a_verifier": [
+        "Le schema 'Diagram showing the Nauka components attached to Rassvet' existe sur Wikipedia, URL non recuperee."
+      ]
+    },
+    {
+      "id": "pirs",
+      "nom": "Pirs (sas russe, retire en 2021)",
+      "annee": "2001",
+      "auteurs": "Roscosmos / RSC Energia",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Sas russe de l'ISS, premier sas du segment russe, retire en 2021.",
+      "dimensions": [
+        { "quoi": "longueur", "valeur": "4,91 m", "source": "https://en.wikipedia.org/wiki/Pirs_(ISS_module)" },
+        { "quoi": "diametre", "valeur": "2,55 m", "source": "https://en.wikipedia.org/wiki/Pirs_(ISS_module)" },
+        { "quoi": "volume pressurise", "valeur": "13 m3", "source": "https://en.wikipedia.org/wiki/Pirs_(ISS_module)" },
+        { "quoi": "masse", "valeur": "3 580 kg", "source": "https://en.wikipedia.org/wiki/Pirs_(ISS_module)" }
+      ],
+      "documents": [],
+      "pour_kibsu": "Sas russe compact : modele de sas a deux portes pour un petit volume de transfert.",
+      "a_verifier": [
+        "Pas de coupe trouvee sur la page Wikipedia ; la page rdataspace Pirs renvoie 404."
+      ]
+    },
+    {
+      "id": "crew-quarters",
+      "nom": "Quartiers d'equipage (CQ, ISS Crew Quarters)",
+      "annee": "2009",
+      "auteurs": "NASA / Boeing",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Petits quartiers prives de la taille d'un rack, installes dans les modules americains et russes pour dormir.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Une cellule-couchage de la taille d'un rack, sans fenetre : modele pour dimensionner des cabines privees dans un habitat.",
+      "a_verifier": [
+        "Dimensions internes et volume des CQ : non trouves.",
+        "Nombre de CQ : 4 dans Harmony, 1 dans Columbus, 2 dans Zvezda (page NASA, non ouverte) contre 7 CQ permanents (article NASA crew handovers, non ouvert). A recouper.",
+        "Aucun dessin de CQ trouve. Sources a ouvrir : NTRS https://ntrs.nasa.gov/citations/20080013462 ; https://www.nasa.gov/international-space-station/top-things-to-know-about-space-station-crew-handovers/ ."
+      ]
+    },
+    {
+      "id": "iss-entiere",
+      "nom": "Station ISS complete (modele 3D NASA, haute resolution)",
+      "annee": "2011",
+      "auteurs": "NASA (3D Resources)",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Modele 3D de la station entiere en haute resolution, par NASA, a l'echelle des modules.",
+      "dimensions": [],
+      "documents": [
+        { "type": "3d", "titre": "International Space Station (ISS) (C) (High Res), archive ZIP Lightwave (35,53 Mo)", "url": "https://science.nasa.gov/3d-resources/international-space-station-iss-c-high-res/", "page_source": "https://science.nasa.gov/3d-resources/international-space-station-iss-c-high-res/", "licence": "NASA, libre de telechargement (voir NASA Images and Media Usage Guidelines)", "verifie": true, "note": "Format Lightwave, configuration des pieces preservee. Lien de telechargement sur assets.science.nasa.gov, non suivi. Publie le 23 avril 2025, modele date de fevrier 2011." }
+      ],
+      "pour_kibsu": "Modele de reference pour la forme et les proportions de la station, a ouvrir dans Blender pour mesurer les modules.",
+      "a_verifier": [
+        "Le modele date de fevrier 2011 : configuration possiblement ancienne.",
+        "Couverture par module non confirmee : ouvrir le fichier.",
+        "Format Lightwave : conversion Blender a faire ; un autre modele NASA (6628 polygones, 7239 sommets, data.gov) existe, non ouvert."
+      ]
+    },
+    {
+      "id": "ispr",
+      "nom": "ISPR (International Standard Payload Rack)",
+      "annee": "1998",
+      "auteurs": "NASA / ESA / JAXA / CSA",
+      "lieu": "orbite",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Standard international de rack de charge utile de l'ISS, utilise dans Columbus, Kibo et les modules americains.",
+      "dimensions": [
+        { "quoi": "dimensions exterieures", "valeur": "79 x 41,5 x 33 in (environ 2,0 m x 1,05 m x 0,84 m)", "source": "https://newspaceeconomy.ca/2025/11/15/what-is-an-international-standard-payload-rack-and-why-is-it-important/" },
+        { "quoi": "masse du rack", "valeur": "104 kg", "source": "https://en.wikipedia.org/wiki/International_Standard_Payload_Rack" },
+        { "quoi": "charge utile ajoutable", "valeur": "700 kg", "source": "https://en.wikipedia.org/wiki/International_Standard_Payload_Rack" },
+        { "quoi": "emplacements de charge utile", "valeur": "37", "source": "https://en.wikipedia.org/wiki/International_Standard_Payload_Rack" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "International Standard Payload Rack - Interface and Systems Requirements (NTRS)", "url": "https://ntrs.nasa.gov/api/citations/20140010107/downloads/20140010107.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20140010107/downloads/20140010107.pdf", "licence": "domaine public NASA (a confirmer)", "verifie": false, "note": "Document d'interface, non ouvert (NTRS renvoie 403 en general)." },
+        { "type": "rapport", "titre": "EXPRESS Rack technology (NTRS, Boeing)", "url": "https://ntrs.nasa.gov/api/citations/19990008536/downloads/19990008536.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/19990008536/downloads/19990008536.pdf", "licence": "domaine public NASA (a confirmer)", "verifie": false, "note": "Contient des figures ISPR, non ouvert." }
+      ],
+      "pour_kibsu": "Module de rack de 2 m x 1,05 m : grille de depart pour les casiers et les racks d'un habitat.",
+      "a_verifier": [
+        "Volume interieur 1,571 m3 (resume de recherche) : non verifie.",
+        "Masse 104 kg (Wikipedia, date 2015, a mettre a jour) et livraison des ISPR : donnees possiblement obsoletes.",
+        "Pas de dessin technique officiel NASA trouve ; la legende 'Technical diagram of ISPR' d'un miroir Wikipedia n'a pas d'origine verifiee."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "NASA 3D Resources", "url": "https://science.nasa.gov/3d-resources/", "note": "Modeles libres de telechargement ; mentions NASA Images and Media Usage Guidelines. Miroir GitHub : https://github.com/nasa/NASA-3D-Resources" },
+    { "titre": "Station ISS - fiches techniques rdataspace", "url": "https://rdataspace.github.io/station_iss/tech/destiny.html", "note": "Racks, coupes et photos par module (Destiny, noeuds, Columbus, Kibo, Zarya, Zvezda, Quest, PMM, Nauka, Bishop, BEAM, Cupola). Bonne source d'images, licence non indiquee." },
+    { "titre": "Tranquility (ISS module), Wikipedia", "url": "https://en.wikipedia.org/wiki/Tranquility_(ISS_module)", "note": "Masse, longueur et diametre de Node 3, sans source citee pour les dimensions." },
+    { "titre": "European Columbus laboratory (ESA)", "url": "https://esa.int/Science_Exploration/Human_and_Robotic_Exploration/Columbus/European_Columbus_laboratory", "note": "Specs ESA de Columbus (non ouvert)." }
+  ],
+  "pistes_non_explorees": [
+    "Modele 3D ISS a l'echelle de la station : voir l'entree 3D de l'ISS ci-dessous ; aucun modele separe par module trouve en gratuit.",
+    "Coupes des modules Harmony, Tranquility, Poisk, Rassvet, Pirs, Nauka, Kibo EF : pas de dessin trouve hors rdataspace.",
+    "Dimensions interieures de Destiny (volume pressurise, longueur exterieure) : non trouvees.",
+    "Quartiers d'equipage : dessin et dimensions internes non trouves.",
+    "ISS Interactive Reference Guide NASA et ISS User Guide (ISPR) : a ouvrir pour recouper.",
+    "Etabli de travail (European Transport Carrier) de Columbus : dimensions a trouver.",
+    "Modeles 3D individuels (TurboSquid, payant) : non retenus."
+  ]
+}

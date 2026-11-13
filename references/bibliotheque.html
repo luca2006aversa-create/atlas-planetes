@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibliothèque de projets — Kibsu</title>
+<style>
+:root { --papier:#f6f6f4; --carte:#fff; --encre:#141414; --encre-2:#5d5f62; --filet:#dcdcd8; --vif:#d9551f; --vif-doux:#fbe8df; --ok:#2f7d3e; --doute:#9a6a0d;
+  --sans: Inter, system-ui, "Segoe UI", sans-serif; --mono: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+@media (prefers-color-scheme: dark) { :root { --papier:#121313; --carte:#1b1c1d; --encre:#ececea; --encre-2:#a3a5a8; --filet:#303234; --vif:#f07a45; --vif-doux:#3a2219; --ok:#6cc07b; --doute:#e0b45a; color-scheme: dark } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--papier); color:var(--encre); font:14px/1.5 var(--sans); }
+.page { max-width:1200px; margin:0 auto; padding:20px 16px 60px; }
+.navsite { display:flex; flex-wrap:wrap; gap:4px 14px; font-size:13px; margin-bottom:14px; }
+.navsite a { color:var(--encre-2); text-decoration:none; } .navsite a:hover, .navsite a.ici { color:var(--vif); }
+h1 { font:600 24px/1.2 var(--sans); margin:0 0 4px; }
+.chapeau { color:var(--encre-2); margin:0 0 14px; max-width:70ch; }
+a { color:var(--vif); text-underline-offset:2px; }
+.chiffres { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 14px; }
+.chiffres div { background:var(--carte); border:1px solid var(--filet); border-radius:8px; padding:6px 12px; }
+.chiffres b { font:700 18px var(--mono); display:block; } .chiffres span { font-size:12px; color:var(--encre-2); }
+.barre { position:sticky; top:0; background:var(--papier); padding:8px 0; z-index:2; border-bottom:1px solid var(--filet); margin-bottom:12px; }
+.filtres { display:flex; flex-wrap:wrap; gap:5px; align-items:center; margin-bottom:6px; }
+.filtres .etiq { font:700 10px var(--mono); letter-spacing:.08em; text-transform:uppercase; color:var(--encre-2); width:62px; }
+.filtres button { font:500 12px var(--sans); background:var(--carte); color:var(--encre); border:1px solid var(--filet); border-radius:999px; padding:3px 10px; cursor:pointer; }
+.filtres button[aria-pressed="true"] { background:var(--encre); color:var(--papier); border-color:var(--encre); }
+.filtres button i { font:normal 11px var(--mono); opacity:.6; margin-left:4px; }
+input[type=search] { font:14px var(--sans); padding:5px 10px; border:1px solid var(--filet); border-radius:8px; background:var(--carte); color:var(--encre); width:min(320px,100%); }
+.compte { font:12px var(--mono); color:var(--encre-2); margin-left:auto; }
+.liste { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:10px; }
+.pr { background:var(--carte); border:1px solid var(--filet); border-radius:10px; padding:11px 13px; display:flex; flex-direction:column; gap:6px; min-width:0; }
+.pr h3 { font:600 15px/1.3 var(--sans); margin:0; } .pr .an { font:500 12px var(--mono); color:var(--encre-2); }
+.pr .haut { display:flex; justify-content:space-between; gap:8px; align-items:baseline; }
+.pr { overflow-wrap:anywhere; } .pr p { margin:0; } .pr .aut { font-size:12px; color:var(--encre-2); }
+.puces { display:flex; flex-wrap:wrap; gap:4px; }
+.puce { font:600 10px var(--mono); text-transform:uppercase; letter-spacing:.04em; padding:1px 6px; border-radius:4px; border:1px solid var(--filet); color:var(--encre-2); }
+.puce.t { background:var(--vif-doux); color:var(--vif); border-color:transparent; }
+.dims { font:12px var(--mono); color:var(--encre-2); display:grid; gap:1px; }
+.dims b { color:var(--encre); font-weight:600; }
+.docs { list-style:none; margin:0; padding:0; display:grid; gap:3px; font-size:13px; }
+.docs li { display:grid; grid-template-columns:62px 1fr; gap:6px; align-items:baseline; }
+.docs .ty { font:700 10px var(--mono); text-transform:uppercase; color:var(--encre-2); }
+.docs .ty.fort { color:var(--vif); }
+.docs small { color:var(--encre-2); display:block; }
+.docs .v { color:var(--ok); } .docs .nv { color:var(--doute); }
+.kib { border-left:3px solid var(--vif); padding-left:8px; font-size:13px; }
+details summary { cursor:pointer; font-size:12px; color:var(--encre-2); }
+.vide { color:var(--encre-2); padding:30px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="navsite"><a href="../index.html">Kibsu</a><a href="../projets/atelier.html">Atelier</a><a href="../projets/controle.html">Contrôle</a><a href="index.html">Références</a><a class="ici" href="bibliotheque.html">Bibliothèque</a></nav>
+<h1>Bibliothèque de projets</h1>
+<p class="chapeau">Projets d'habitat spatial réels, étudiés ou imaginés, avec leurs plans, coupes, modèles 3D et images en ligne. Liens seulement : rien n'est copié ici. ✓ = lien ouvert et vérifié par l'agent ; ? = à vérifier.</p>
+<div class="chiffres" id="chiffres"></div>
+<div class="barre">
+  <div class="filtres"><input type="search" id="q" placeholder="Chercher (nom, auteur, mot)…"><span class="compte" id="compte"></span></div>
+  <div class="filtres" id="f-theme"><span class="etiq">Thème</span></div>
+  <div class="filtres" id="f-doc"><span class="etiq">Document</span></div>
+  <div class="filtres" id="f-lieu"><span class="etiq">Lieu</span></div>
+  <div class="filtres" id="f-forme"><span class="etiq">Forme</span></div>
+</div>
+<div class="liste" id="liste"></div>
+</div>
+<script type="module" src="bibliotheque.js"></script>
+</body>
+</html>

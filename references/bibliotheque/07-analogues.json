@@ -1,0 +1,487 @@
+{
+  "theme": "Habitats analogues sur Terre (simulations de mission)",
+  "date": "2026-11-13",
+  "avancement": "Passe 3 (PASSE2.md) : SIRIUS et Concordia ajoutés ; plans HI-SEAS et Mars-500 ajoutés ; verifie true seulement pour les documents dont la page a été ouverte. Non trouvés : plan MDRS par niveau, plan Mars Dune Alpha coté, modules EU-100/150/250 confirmés. 19 projets au lieu de 20 demandés. Rien téléchargé.",
+  "projets": [
+    {
+      "id": "mdrs",
+      "nom": "Mars Desert Research Station (MDRS)",
+      "annee": "2001",
+      "auteurs": "Mars Society (Utah, Hanksville)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Habitat principal à deux niveaux, en cylindre, pour 6 à 7 personnes. Le niveau bas abrite sas, douches, préparation EVA et laboratoire ; l'étage haut abrite les chambres et la vie commune.",
+      "dimensions": [
+        { "quoi": "diamètre du Hab", "valeur": "8 m (page Wikipedia, citant Häuplik-Meusburger et al., 2021) ; la même page dit ailleurs environ 10 m, sans source", "source": "https://en.wikipedia.org/wiki/Mars_Desert_Research_Station" },
+        { "quoi": "capacité", "valeur": "7 personnes", "source": "https://wiki.astro-chasm.org/index.php?title=Mars_Desert_Research_Station" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Mars Desert Research Station (Wikipedia, page ouverte)", "url": "https://en.wikipedia.org/wiki/Mars_Desert_Research_Station", "page_source": "https://en.wikipedia.org/wiki/Mars_Desert_Research_Station", "licence": "CC BY-SA (à vérifier)", "verifie": true, "note": "Page ouverte : deux niveaux plus grenier ; bas = sanitaires, labo, deux sas, préparation EVA ; haut = espace commun, cuisine, chambres. Aucun plan : seulement des photos." },
+        { "type": "image", "titre": "Article illustré avec plan de l'habitat (Fox13)", "url": "https://www.fox13now.com/news/uniquely-utah/a-look-inside-and-outside-the-mars-desert-research-station-in-southern-utah", "page_source": "https://www.fox13now.com/news/uniquely-utah/a-look-inside-and-outside-the-mars-desert-research-station-in-southern-utah", "licence": "?", "verifie": false, "note": "Selon le résultat de recherche, l'article contient une image de plan de l'habitat. Non ouvert." },
+        { "type": "rapport", "titre": "Rapports de missions MDRS (Mars Society)", "url": "https://reports.marssociety.org/", "page_source": "https://reports.marssociety.org/", "licence": "?", "verifie": false, "note": "Rapports d'équipages, souvent avec photos intérieures. Non ouvert." }
+      ],
+      "pour_kibsu": "Un cylindre à deux niveaux avec sas et zone sale en bas, vie et chambres en haut : bon modèle de séparation sale/propre et de circulation verticale.",
+      "a_verifier": [
+        "Diamètre : 8 m ou 10 m selon les sources.",
+        "Nombre de chambres : 6 (sections Background et Habitat de la page Wikipedia) ou 7 (section The station) : à trancher sur le rapport MDRS.",
+        "Plan coté : pas trouvé. La page Wikipedia ne cite que des photos. Le plan doit être cherché sur reports.marssociety.org."
+      ]
+    },
+    {
+      "id": "fmars",
+      "nom": "Flashline Mars Arctic Research Station (FMARS)",
+      "annee": "2001",
+      "auteurs": "Mars Society",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "cylindre",
+      "resume": "Station cylindrique à deux niveaux pour 6 à 7 personnes, avec laboratoire et sas en bas, chambres et cuisine en haut, et un grenier pour le stockage.",
+      "dimensions": [
+        { "quoi": "diamètre intérieur", "valeur": "8 m (article de 2001) ou 8,81 m (rapport 2009)", "source": "https://spaceref.com/uncategorized/framework-for-analog-studies-of-mars-surface-operations-using-the-flashline-mars-arctic-research-station/" },
+        { "quoi": "capacité", "valeur": "6 à 7 personnes", "source": "https://encyclopedia.pub/entry/28696" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "A framework for analog studies of Mars surface operations (Clancey, 2000)", "url": "https://marspapers.org/paper/Clancey_2000.pdf", "page_source": "https://marspapers.org/paper/Clancey_2000.pdf", "licence": "?", "verifie": false, "note": "Article décrivant la station et son usage comme banc d'essai de dispositions intérieures. Non ouvert." },
+        { "type": "rapport", "titre": "FMARS 2009 Expedition Crew Perspectives", "url": "https://www.researchgate.net/publication/268580558_Flashline_Mars_Arctic_Research_Station_FMARS_2009_Expedition_Crew_Perspectives", "page_source": "https://www.researchgate.net/publication/268580558_Flashline_Mars_Arctic_Research_Station_FMARS_2009_Expedition_Crew_Perspectives", "licence": "?", "verifie": false, "note": "Rapport d'équipage décrivant l'usage des pièces. Non ouvert." }
+      ],
+      "pour_kibsu": "L'intérieur change d'une campagne à l'autre : utile pour montrer qu'une disposition de niveaux peut être réversible.",
+      "a_verifier": [
+        "Affectation des étages : les sources diffèrent (labo au rez-de-chaussée selon 2009, chambres en haut selon 2001).",
+        "Diamètre : 8 m contre 8,81 m."
+      ]
+    },
+    {
+      "id": "chapea-mars-dune-alpha",
+      "nom": "Mars Dune Alpha (CHAPEA)",
+      "annee": "2023-2026",
+      "auteurs": "NASA CHAPEA ; ICON (impression 3D Vulcan) ; BIG (Bjarke Ingels Group)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Habitat imprimé en 3D d'environ 158 m² pour 4 personnes, avec chambres privées, cuisine, deux salles de bain, et espaces médical, sport, science et culture de plantes.",
+      "dimensions": [
+        { "quoi": "surface habitable", "valeur": "1 700 pieds carrés, soit environ 158 m²", "source": "https://www.taylortailored.co.uk/science/378-days-on-mars-inside-nasas-year-long-experiment-on-earth" },
+        { "quoi": "enceinte adjacente pour sorties simulées", "valeur": "1 200 pieds carrés", "source": "https://cnsmaryland.org/2023/04/11/nasa-ready-to-try-out-1700-square-foot-mars-habitat-in-year-long-earth-bound-mission/" }
+      ],
+      "documents": [
+        { "type": "video", "titre": "Visite de l'habitat (Space.com)", "url": "https://www.space.com/nasa-mock-mars-dune-alpha-chapea-habitat-video-tour", "page_source": "https://www.space.com/nasa-mock-mars-dune-alpha-chapea-habitat-video-tour", "licence": "?", "verifie": false, "note": "Ouverture tentée : contenu tronqué, seul le titre lu (4 astronautes). Non vérifié." },
+        { "type": "rapport", "titre": "Mars Dune Alpha: a 3D-printed habitat by ICON/BIG for CHAPEA (ResearchGate)", "url": "https://www.researchgate.net/publication/360251384_Mars_Dune_Alpha_A_3D-Printed_Habitat_by_ICON_BIG_for_NASA's_Crew_Health_and_Performance_Exploration_Analog_CHAPEA", "page_source": "https://www.researchgate.net/publication/360251384_Mars_Dune_Alpha_A_3D-Printed_Habitat_by_ICON_BIG_for_NASA's_Crew_Health_and_Performance_Exploration_Analog_CHAPEA", "licence": "?", "verifie": false, "note": "Article de présentation, plans probables. Non ouvert." },
+        { "type": "image", "titre": "Page CHAPEA NASA (habitat)", "url": "https://en.wikipedia.org/wiki/Crew_Health_and_Performance_Exploration_Analog", "page_source": "https://en.wikipedia.org/wiki/Crew_Health_and_Performance_Exploration_Analog", "licence": "?", "verifie": false, "note": "Page de synthèse ; pointe vers les sources NASA. Non ouverte." }
+      ],
+      "pour_kibsu": "Référence récente pour une surface par personne (environ 40 m² par personne) et pour une organisation par zones fonctionnelles : chambres privées, sanitaires, pièce commune.",
+      "a_verifier": [
+        "Plan d'étage officiel NASA : non trouvé.",
+        "Un résumé ResearchGate indique environ 15 m², ce qui est manifestement faux : ne pas utiliser.",
+        "Vérifier la répartition exacte des pièces sur le plan officiel."
+      ]
+    },
+    {
+      "id": "lunar-palace-1",
+      "nom": "Lunar Palace 1 (Yuegong-1)",
+      "annee": "2017-2018",
+      "auteurs": "Projet chinois (Pékin)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Ensemble de cabines en bloc pour une mission d'un an. Le volume principal de vie fait environ 42 m² ; deux cabines de serre viennent compléter l'ensemble.",
+      "dimensions": [
+        { "quoi": "surface totale", "valeur": "160 m² (150 m² selon la presse d'État chinoise)", "source": "https://wiki.astro-chasm.org/index.php?title=Yuegong-1" },
+        { "quoi": "surface habitable de la cabine de vie", "valeur": "42 m²", "source": "https://wiki.astro-chasm.org/index.php?title=Yuegong-1" },
+        { "quoi": "volume interne", "valeur": "500 m³", "source": "https://wiki.astro-chasm.org/index.php?title=Yuegong-1" },
+        { "quoi": "serres", "valeur": "2 modules, 50 à 60 m² chacun, hauteur 3,5 m", "source": "https://wiki.astro-chasm.org/index.php?title=Yuegong-1" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Photos de Lunar Palace 1 (Space.com)", "url": "https://www.space.com/40610-china-mock-moon-mission-lunar-palace-1-photos.html", "page_source": "https://www.space.com/40610-china-mock-moon-mission-lunar-palace-1-photos.html", "licence": "?", "verifie": false, "note": "Photos de l'extérieur et de l'intérieur. Non ouvert." }
+      ],
+      "pour_kibsu": "Un habitat compact et dense : cabines de sommeil, pièce commune, sanitaires et laboratoires séparés en modules. Pertinent pour une vie en bloc sans couloir.",
+      "a_verifier": [
+        "Surface totale : 150 ou 160 m².",
+        "Répartition : une source liste 4 cabines, une autre 3 chambres, cuisine et salle à manger : à vérifier.",
+        "Plan coté : non trouvé."
+      ]
+    },
+    {
+      "id": "sam-biosphere-2",
+      "nom": "SAM (Space Analog for the Moon and Mars), Biosphere 2",
+      "annee": "2021 (résumé de congrès)",
+      "auteurs": "Université de l'Arizona (Biosphere 2)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Habitat d'environ 111 m² (1 200 pieds carrés), construit autour du prototype de serre Test Module de 1987, avec atelier, cuisine, espace commun et chambres. Une cour extérieure sert aux tests de sorties.",
+      "dimensions": [
+        { "quoi": "surface habitable", "valeur": "1 200 pieds carrés, soit environ 111 m²", "source": "https://irg.space/irg-2021-abstracts/12942-2/" },
+        { "quoi": "cour extérieure", "valeur": "environ 0,2 ha (un demi-acre)", "source": "https://trenttresch.com/space-analog-for-the-moon-and-mars-sam-at-biosphere-2/" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "SAM Mars Analog (page Biosphere 2)", "url": "https://biosphere2.org/research/research-initiatives/sam-mars-analog", "page_source": "https://biosphere2.org/research/research-initiatives/sam-mars-analog", "licence": "?", "verifie": false, "note": "Présentation du programme. Non ouverte." },
+        { "type": "rapport", "titre": "Design of a photobioreactor for the SAM analogue facility (ResearchGate)", "url": "https://www.researchgate.net/publication/397990284_Design_of_a_Photobioreactor_for_the_SAM_Analogue_Facility", "page_source": "https://www.researchgate.net/publication/397990284_Design_of_a_Photobioreactor_for_the_SAM_Analogue_Facility", "licence": "?", "verifie": false, "note": "Plan probable du photobioréacteur. Non ouvert." }
+      ],
+      "pour_kibsu": "Serre intégrée à l'habitat et sas vers une cour d'essai : utile pour placer la production végétale en lien direct avec le volume de vie.",
+      "a_verifier": [
+        "Une source donne des chambres de 8 x 8 x 40 pieds (dortoir en ligne) : non confirmé.",
+        "Plan d'étage : non trouvé."
+      ]
+    },
+    {
+      "id": "lunark",
+      "nom": "LUNARK",
+      "annee": "2020-2021",
+      "auteurs": "SAGA Space Architects (Danemark)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Module lunaire en origami, qui se déploie. Trois niveaux : rangement sous plancher, moitié basse (sanitaires, chauffage, stockage, réacteur à algues) et moitié haute (cabines de sommeil en dôme).",
+      "dimensions": [
+        { "quoi": "volume intérieur déployé", "valeur": "17,2 m³ (fiche SAGA)", "source": "https://www.saga.dk/projects/lunark/habitat" },
+        { "quoi": "surface au sol", "valeur": "4,5 m² selon une source isolée, très inférieure aux autres : à vérifier", "source": "https://www.stirworld.com/see-features-what-does-living-on-the-moon-look-like-sagas-lunar-habitat-explores" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Plans : rangement sous plancher, moitié basse, moitié haute (SAGA)", "url": "https://www.saga.dk/projects/lunark/habitat", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "?", "verifie": true, "note": "Page ouverte : trois plans listés (storage sous plancher, liste Bottom Dome ; moitié basse, liste Middle cylinder ; moitié haute, liste Top Dome). Images non vues. Pas de coupe citée." },
+        { "type": "coupe", "titre": "Coupe longitudinale et plan de disposition (courtoisie SAGA, via STIRworld)", "url": "https://www.stirworld.com/see-features-what-does-living-on-the-moon-look-like-sagas-lunar-habitat-explores", "page_source": "https://www.stirworld.com/see-features-what-does-living-on-the-moon-look-like-sagas-lunar-habitat-explores", "licence": "© SAGA (courtoisie)", "verifie": false, "note": "Légende vue dans un résultat de recherche. La page SAGA ne cite aucune coupe. Non ouverte." },
+        { "type": "axonometrie", "titre": "Axonometric drawing of the habitat (SAGA)", "url": "https://www.saga.dk/projects/lunark/habitat", "page_source": "https://www.saga.dk/projects/lunark/habitat", "licence": "?", "verifie": true, "note": "Légende listée sur la page SAGA ouverte ; image non vue." },
+        { "type": "maquette", "titre": "Article Designboom sur le prototype", "url": "https://www.designboom.com/architecture/saga-space-architects-lunark-moon-habitat-prototype-04-20-2020/", "page_source": "https://www.designboom.com/architecture/saga-space-architects-lunark-moon-habitat-prototype-04-20-2020/", "licence": "?", "verifie": false, "note": "Photos du prototype. Non ouvert." }
+      ],
+      "pour_kibsu": "Module qui se replie et se déploie : étages superposés et séparation sas / cabines / vie. Bon exemple de vide sous plancher pour le stockage.",
+      "a_verifier": [
+        "Surface au sol : 4,5 m² selon une seule source, contre des chiffres de volume qui ne se recoupent pas.",
+        "Expansion : 750 % (SAGA) ou 560 % (STIRworld).",
+        "Durée de la mission groenlandaise : 60 ou 61 jours."
+      ]
+    },
+    {
+      "id": "lunares",
+      "nom": "LunAres",
+      "annee": "2018-2026",
+      "auteurs": "LunAres Research Station (Pologne, Piła)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station de 8 modules fonctionnels reliés par un atrium social de 108 m². Modules : dortoir (6 chambres privées), laboratoire de biologie, laboratoire analytique, stockage, sanitaires, cuisine, bureau, salle de sport.",
+      "dimensions": [
+        { "quoi": "atrium social", "valeur": "108 m²", "source": "https://www.hou.usra.edu/meetings/lpsc2018/pdf/1909.pdf" },
+        { "quoi": "zone EVA isolée", "valeur": "250 m²", "source": "https://lunares.space/" },
+        { "quoi": "surface totale habitat", "valeur": "150 m² (directeur) ou 176 m² (ResearchGate) : à vérifier", "source": "https://scienceinpoland.pl/en/node/25720" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Design and operations of environmental analogs in LunAres (LPSC 2018)", "url": "https://www.hou.usra.edu/meetings/lpsc2018/pdf/1909.pdf", "page_source": "https://www.hou.usra.edu/meetings/lpsc2018/pdf/1909.pdf", "licence": "?", "verifie": false, "note": "Présentation des modules. Non ouverte." },
+        { "type": "rapport", "titre": "Design of hygiene module using closed grey water cycle (LunAres)", "url": "https://www.researchgate.net/publication/344668831_Design_of_hygiene_module_using_closed_grey_water_cycle_for_LunAres_Research_Station_-main_assumptions_and_applications", "page_source": "https://www.researchgate.net/publication/344668831_Design_of_hygiene_module_using_closed_grey_water_cycle_for_LunAres_Research_Station_-main_assumptions_and_applications", "licence": "?", "verifie": false, "note": "Module sanitaire : plan probable. Non ouvert." }
+      ],
+      "pour_kibsu": "Un atrium central qui distribue les modules : bon schéma de circulation en étoile autour d'un espace commun.",
+      "a_verifier": [
+        "Surface totale : 150 à 176 m².",
+        "Plan coté par module : non trouvé.",
+        "Page lunares.space/about-habitat (plans probables) : non ouverte."
+      ]
+    },
+    {
+      "id": "shee",
+      "nom": "SHEE (Self-deployable Habitat for Extreme Environments)",
+      "annee": "2013",
+      "auteurs": "Consortium SHEE, LIQUIFER Systems Group (projet UE)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Habitat autodéployable pour 2 personnes, qui se replie dans une coque de 6 m de diamètre. Cinq zones : entrée, travail, espaces privés, cuisine, sanitaires ; deux cabines avec rideaux.",
+      "dimensions": [
+        { "quoi": "surface", "valeur": "28 m² pour 2 personnes", "source": "https://www.researchgate.net/publication/309212241_Results_of_the_Self_Deployable_Habitat_for_Extreme_Environments_SHEE_project" },
+        { "quoi": "dimensions déployé", "valeur": "5,9 x 6,5 x 2,8 m", "source": "https://www.researchgate.net/publication/281319169_THE_SHEE_PROJECT_SELF-DEPLOYABLE_HABITAT_FOR_EXTREME_ENVIRNOMENT_TEST-BED_FOR_ANALOG_SIMULATIONS" },
+        { "quoi": "dimensions de transport", "valeur": "H 2,4 x L 6,0 x W 2,8 m, environ 6 000 kg", "source": "https://www.werkraum.com/en/projects/shee-self-deployable-habitat-for-extreme-environments/" },
+        { "quoi": "volume déployé", "valeur": "45 à 50 m³ selon les sources", "source": "https://www.researchgate.net/publication/309212241_Results_of_the_Self_Deployable_Habitat_for_Extreme_Environments_SHEE_project" },
+        { "quoi": "diamètre de coque pour transport", "valeur": "6 m", "source": "https://www.spaceinnovations.net/shee/pdf/news/IAC_2013-SHEE_presentation.pdf" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Figure « SHEE plan » (SHEE Consortium / LIQUIFER, 2014)", "url": "https://www.researchgate.net/publication/281319169_THE_SHEE_PROJECT_SELF-DEPLOYABLE_HABITAT_FOR_EXTREME_ENVIRNOMENT_TEST-BED_FOR_ANALOG_SIMULATIONS", "page_source": "https://www.researchgate.net/publication/281319169_THE_SHEE_PROJECT_SELF-DEPLOYABLE_HABITAT_FOR_EXTREME_ENVIRNOMENT_TEST-BED_FOR_ANALOG_SIMULATIONS", "licence": "?", "verifie": false, "note": "Légende vue dans un résultat de recherche. Non ouverte." },
+        { "type": "image", "titre": "Photos SHEE (werkraum, galerie 1 à 5)", "url": "https://www.werkraum.com/en/projects/shee-self-deployable-habitat-for-extreme-environments/", "page_source": "https://www.werkraum.com/en/projects/shee-self-deployable-habitat-for-extreme-environments/", "licence": "© Bruno Stubenrauch (crédit de la page)", "verifie": true, "note": "Page ouverte : cinq photos sans légende. Pas de plan sur cette page." },
+        { "type": "rapport", "titre": "Présentation IAC 2013 SHEE", "url": "https://www.spaceinnovations.net/shee/pdf/news/IAC_2013-SHEE_presentation.pdf", "page_source": "https://www.spaceinnovations.net/shee/pdf/news/IAC_2013-SHEE_presentation.pdf", "licence": "?", "verifie": false, "note": "Présentation de conception et de déploiement. Non ouverte." }
+      ],
+      "pour_kibsu": "Un plan en deux zones séparées (entrée et sanitaires d'un côté, privé de l'autre), et le stockage sous plancher. Utile pour un habitat livré replié.",
+      "a_verifier": [
+        "Volume : 45 ou 50 m³.",
+        "Surface 28 m² et dimensions déployées : non confirmées par la page werkraum (qui ne donne ni surface ni volume, mais 2 personnes et dimensions de transport).",
+        "Forme exacte de la coque : non confirmée."
+      ]
+    },
+    {
+      "id": "flexhab-luna",
+      "nom": "FLEXHab (ESA LUNA, Cologne)",
+      "annee": "2024",
+      "auteurs": "SAGA Space Architects ; DLR / ESA (LUNA)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Habitat de 28 m² pour 4 astronautes, posé sur un conteneur 40 pieds, installé à côté de la halle LUNA (700 m² de régolithe simulé). Sert à l'entraînement de missions lunaires de moyenne à longue durée.",
+      "dimensions": [
+        { "quoi": "surface habitable", "valeur": "28 m²", "source": "https://www.saga.dk/projects/flexhab" },
+        { "quoi": "dimensions extérieures", "valeur": "13 x 4 m", "source": "https://www.saga.dk/projects/flexhab" },
+        { "quoi": "halle régolithe LUNA", "valeur": "700 m²", "source": "https://www.dglr.de/publikationen/2024/610388.pdf" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "FLEXHab : plan (SAGA)", "url": "https://www.saga.dk/next_assets/flexhab/compressed/floorplan_medium.webp", "page_source": "https://www.saga.dk/projects/flexhab", "licence": "© SAGA (à vérifier)", "verifie": true, "note": "Image listée sur la page SAGA ouverte (floorplan_medium.webp). Image elle-même non vue." },
+        { "type": "coupe", "titre": "FLEXHab : coupe A-A (SAGA)", "url": "https://www.saga.dk/next_assets/flexhab/compressed/cross-section-a_medium.webp", "page_source": "https://www.saga.dk/projects/flexhab", "licence": "© SAGA (à vérifier)", "verifie": true, "note": "Image listée sur la page SAGA ouverte. Image non vue." },
+        { "type": "coupe", "titre": "FLEXHab : coupe B-B (SAGA)", "url": "https://www.saga.dk/next_assets/flexhab/compressed/cross-section-b_medium.webp", "page_source": "https://www.saga.dk/projects/flexhab", "licence": "© SAGA (à vérifier)", "verifie": true, "note": "Image listée sur la page SAGA ouverte. Image non vue." },
+        { "type": "coupe", "titre": "FLEXHab : coupe C-C (SAGA)", "url": "https://www.saga.dk/next_assets/flexhab/compressed/cross-section-c_medium.webp", "page_source": "https://www.saga.dk/projects/flexhab", "licence": "© SAGA (à vérifier)", "verifie": true, "note": "Image listée sur la page SAGA ouverte. Image non vue." },
+        { "type": "image", "titre": "ESA-DLR LUNA (image ESA)", "url": "https://www.esa.int/ESA_Multimedia/Images/2021/12/ESA-DLR_LUNA", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2021/12/ESA-DLR_LUNA", "licence": "© ESA (vérifier)", "verifie": false, "note": "Image de la facilité LUNA. Non ouverte." }
+      ],
+      "pour_kibsu": "Habitat compact sur conteneur, qui se pose sur un sol existant : bon exemple d'un module livrable prêt à l'emploi pour une station.",
+      "a_verifier": [
+        "Sources secondaires (SAGA) : confirmer dimensions sur document ESA/DLR.",
+        "Un article EAC de 2017 décrit un projet antérieur (dôme gonflable de 34 m de diamètre, banc de 900 m²) : probablement dépassé."
+      ]
+    },
+    {
+      "id": "d-mars",
+      "nom": "D-MARS (Negev, Ramon Crater)",
+      "annee": "2018-2020",
+      "auteurs": "Station israélienne D-MARS ; AMADEE-20 (ÖWF)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "autre",
+      "resume": "Habitat portable de 15 m² qui se déploie jusqu'à 50 m². Pour AMADEE-20, le module équipage de 50 m² sert de chambre, salon et cuisine pour 6 occupants.",
+      "dimensions": [
+        { "quoi": "surface repliée", "valeur": "15 m²", "source": "https://www.researchgate.net/publication/331160979_Mars_analogs_at_Ramon_crater_region_D-MARS" },
+        { "quoi": "surface déployée", "valeur": "50 m²", "source": "https://www.researchgate.net/publication/331160979_Mars_analogs_at_Ramon_crater_region_D-MARS" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Plan et représentation conceptuelle du D-MARS (Benaroya, 2018, cité dans une thèse)", "url": "https://www.researchgate.net/publication/331160979_Mars_analogs_at_Ramon_crater_region_D-MARS", "page_source": "https://www.researchgate.net/publication/331160979_Mars_analogs_at_Ramon_crater_region_D-MARS", "licence": "?", "verifie": false, "note": "Légende d'un plan citée par une thèse ; l'article original n'a pas été ouvert." }
+      ],
+      "pour_kibsu": "Habitat qui triple sa surface au déploiement : utile pour un module gonflable ou télescopique.",
+      "a_verifier": [
+        "Plan : trouver la figure Benaroya 2018.",
+        "Confusion possible avec Oman : AMADEE-18 est à Dhofar, Oman, et non D-MARS."
+      ]
+    },
+    {
+      "id": "amadee-oman",
+      "nom": "Oman Mars Base (AMADEE-18)",
+      "annee": "2018",
+      "auteurs": "Österreichische Weltraum Forum (ÖWF)",
+      "lieu": "terre",
+      "statut": "prototype",
+      "forme": "dome",
+      "resume": "Habitat gonflable d'environ 2,4 t, entouré de conteneurs maritimes transformés en laboratoires et chambres, dans le désert de Dhofar.",
+      "dimensions": [],
+      "documents": [
+        { "type": "image", "titre": "Article Phys.org sur la simulation d'Oman", "url": "https://phys.org/news/2018-02-mars-earth-simulation-remote-oman.html", "page_source": "https://phys.org/news/2018-02-mars-earth-simulation-remote-oman.html", "licence": "?", "verifie": false, "note": "Article illustré. Non ouvert." }
+      ],
+      "pour_kibsu": "Mélange d'un volume gonflable et de conteneurs : utile pour comparer un noyau de vie et des annexes en conteneur.",
+      "a_verifier": [
+        "Aucun chiffre de surface trouvé : à chercher dans les rapports ÖWF.",
+        "Plan : non trouvé."
+      ]
+    },
+    {
+      "id": "habitat-marte",
+      "nom": "Habitat Marte",
+      "annee": "?",
+      "auteurs": "Station d'analogue, Brésil (Natal)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Station en brique avec une serre pour l'hydroponie et l'aquaponie, et un auditorium pour l'éducation. Située dans la région semi-aride, à 120 km à l'ouest de Natal.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Peu de matière pour Kibsu : l'intérêt est la serre intégrée et l'auditorium.",
+      "a_verifier": [
+        "Aucun plan ni surface trouvés. Site à consulter : habitatmarte.com."
+      ]
+    },
+    {
+      "id": "hi-seas",
+      "nom": "HI-SEAS (Mauna Loa, Hawaï)",
+      "annee": "2016 (série de missions, à compléter)",
+      "auteurs": "University of Hawaii ; NASA (programme HI-SEAS)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Habitat à deux niveaux pour 6 personnes, avec un rez-de-chaussée commun (labo, douche) et un étage avec les chambres ; une mezzanine en complète le volume. Un conteneur adjacent sert d'atelier.",
+      "dimensions": [
+        { "quoi": "diamètre", "valeur": "10 m (36 pieds)", "source": "https://science.nasa.gov/earth/earth-observatory/living-the-mars-life-on-mauna-loa-92630/" },
+        { "quoi": "surface utile du rez-de-chaussée", "valeur": "878 pieds carrés, soit environ 81 m²", "source": "https://science.nasa.gov/earth/earth-observatory/living-the-mars-life-on-mauna-loa-92630/" },
+        { "quoi": "surface totale du dôme", "valeur": "1 302 pieds carrés, environ 121 m²", "source": "https://www.architectmagazine.com/?p=340530" },
+        { "quoi": "capacité", "valeur": "6 personnes", "source": "https://www.nasa.gov/centers-and-facilities/kennedy/hi-seas-team-completes-8-month-isolation-mission/" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "HI-SEAS dome habitat, premier étage (Architect Magazine, V. Paul Ponthieux / Blue Planet Foundation)", "url": "https://www.architectmagazine.com/wp-content/uploads/sites/5/2025/06/hi-seas-iv-2-1st-floor-plan-layout-montage.jpg", "page_source": "https://www.architectmagazine.com/?p=340530", "licence": "© V. Paul Ponthieux / Blue Planet Foundation (à vérifier)", "verifie": true, "note": "Légende et URL vues sur la page ouverte. Image non vue : plan du rez-de-chaussée, sans cotes." },
+        { "type": "plan", "titre": "HI-SEAS dome habitat, deuxième étage (Architect Magazine, V. Paul Ponthieux / Blue Planet Foundation)", "url": "https://www.architectmagazine.com/wp-content/uploads/sites/5/2025/06/hi-seas-iv-4-2nd-floor-plan-layout-montage.jpg", "page_source": "https://www.architectmagazine.com/?p=340530", "licence": "© V. Paul Ponthieux / Blue Planet Foundation (à vérifier)", "verifie": true, "note": "Légende et URL vues sur la page ouverte. Image non vue : plan du deuxième étage, sans cotes." },
+        { "type": "rapport", "titre": "Q+A : HI-SEAS Mission IV, architecte de l'équipage (Architect Magazine)", "url": "https://www.architectmagazine.com/?p=340530", "page_source": "https://www.architectmagazine.com/?p=340530", "licence": "?", "verifie": true, "note": "Page ouverte : dôme à deux étages de 1 302 pieds carrés (environ 121 m²), sans surfaces par étage." },
+        { "type": "rapport", "titre": "Article NASA Earth Observatory sur la vie à HI-SEAS", "url": "https://science.nasa.gov/earth/earth-observatory/living-the-mars-life-on-mauna-loa-92630/", "page_source": "https://science.nasa.gov/earth/earth-observatory/living-the-mars-life-on-mauna-loa-92630/", "licence": "?", "verifie": true, "note": "Page ouverte : diamètre 10 m (36 pieds), rez-de-chaussée 878 pieds carrés (81 m²). Pas de plan dans le texte." },
+        { "type": "video", "titre": "Visite de Mock Mars (Space.com)", "url": "https://www.space.com/33927-what-its-like-on-mock-mars.html", "page_source": "https://www.space.com/33927-what-its-like-on-mock-mars.html", "licence": "?", "verifie": false, "note": "Reportage sur l'intérieur. Non ouvert." }
+      ],
+      "pour_kibsu": "Un rez-de-chaussée de vie commune et un étage privé avec mezzanine : une disposition proche de MDRS, utile pour comparer les surfaces par niveau.",
+      "a_verifier": [
+        "Surface totale : 1 302 pieds carrés (environ 121 m², Architect Magazine), contre 1 200 à 1 800 pieds carrés dans d'autres sources (atelier en conteneur inclus ou non).",
+        "Surface de l'étage (424 pieds carrés) : vue dans un résultat de recherche, absente de la page NASA ouverte.",
+        "Plans : deux images d'étage trouvées (sans cotes). Dimensions par étage à chercher."
+      ]
+    },
+    {
+      "id": "hera",
+      "nom": "HERA (Human Exploration Research Analog)",
+      "annee": "2019 (fiche de capacités, à compléter)",
+      "auteurs": "NASA JSC (Human Research Program), bâtiment 220",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Habitat de simulation spatiale à noyau central, avec une mezzanine pour le sommeil. Quatre accès, sas, unité d'hygiène et zone de travail (cuisine, exercice, pilotage).",
+      "dimensions": [
+        { "quoi": "volume total", "valeur": "148,6 m³ (fiche 2019) ; 148,1 m³ (version antérieure)", "source": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf" },
+        { "quoi": "volume du noyau", "valeur": "56,0 m³", "source": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf" },
+        { "quoi": "volume de la mezzanine (loft)", "valeur": "69,9 m³", "source": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf" },
+        { "quoi": "sas", "valeur": "8,6 m³", "source": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf" },
+        { "quoi": "unité d'hygiène", "valeur": "14,1 m³", "source": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "HERA Facility Layout (annexe A de la fiche de capacités NASA 2019)", "url": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf", "page_source": "https://www.nasa.gov/wp-content/uploads/2016/05/2019_hera_facility_capabilities_information.pdf", "licence": "domaine public (NASA)", "verifie": false, "note": "Annexe A annoncée. PDF ouvert via WebFetch : contenu binaire illisible, rien vérifié. Plan et volumes à lire autrement." },
+        { "type": "image", "titre": "Membre d'équipage en espace restreint (NASA)", "url": "https://www.nasa.gov/image-article/hera-crew-member-close-quarters/", "page_source": "https://www.nasa.gov/image-article/hera-crew-member-close-quarters/", "licence": "domaine public (NASA)", "verifie": false, "note": "Photo intérieure probable. Non ouverte." },
+        { "type": "rapport", "titre": "Internal Layout of a Lunar Surface Habitat (AIAA ASCEND 2022)", "url": "https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf", "page_source": "https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf", "licence": "domaine public (NTRS)", "verifie": false, "note": "Étude de disposition intérieure, qui peut citer HERA. Non ouverte." }
+      ],
+      "pour_kibsu": "Un noyau de vie avec mezzanine et un sas séparé, avec des volumes chiffrés par zone : bon modèle pour répartir un volume habitable par fonction.",
+      "a_verifier": [
+        "Nombre de niveaux : deux (fiche 2019) ou trois (fiche JSC 2023).",
+        "Répartition par étage : une présentation NASA met la cuisine et les chambres au second niveau, un blog de l'équipage décrit un atelier au premier : à vérifier sur l'annexe A.",
+        "Volumes par zone : chiffres d'une version antérieure, à recouper avec la fiche 2019."
+      ]
+    },
+    {
+      "id": "mars-500",
+      "nom": "Mars-500",
+      "annee": "2010-2011 (3 juin 2010 au 4 novembre 2011)",
+      "auteurs": "IBMP (Moscou) ; ESA et partenaires",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Quatre modules d'habitation scellés et reliés, plus un module simulant la surface martienne, pour six personnes pendant 520 jours. Le module principal (3,6 x 20 m) regroupe six cabines individuelles, une cuisine-salle à manger, un salon, la salle de contrôle et des sanitaires.",
+      "dimensions": [
+        { "quoi": "volume des modules d'habitat", "valeur": "550 m³", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/Mars500_quick_facts" },
+        { "quoi": "module principal", "valeur": "3,6 x 20 m", "source": "https://wiki.astro-chasm.org/index.php?title=MARS500" },
+        { "quoi": "surface d'une cabine individuelle", "valeur": "environ 3 m²", "source": "https://wiki.astro-chasm.org/index.php?title=MARS500" },
+        { "quoi": "module médical", "valeur": "3,2 x 11,9 m", "source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/The_isolation_facility" },
+        { "quoi": "module de stockage", "valeur": "3,9 x 24 m", "source": "https://wiki.astro-chasm.org/index.php?title=MARS500" },
+        { "quoi": "simulateur du module d'atterrissage", "valeur": "6,3 x 6,17 m ; volume 192 m³", "source": "https://wiki.astro-chasm.org/index.php?title=MARS500" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Plan vue de dessus du complexe expérimental (Mars500-facility.svg, Wikipedia)", "url": "https://en.wikipedia.org/wiki/MARS-500", "page_source": "https://en.wikipedia.org/wiki/MARS-500", "licence": "?", "verifie": true, "note": "Légende « Overhead plan of the experimental complex » vue sur la page ouverte. Fichier SVG non ouvert." },
+        { "type": "3d", "titre": "Plan en trois dimensions du complexe Mars-500 (Mars500.jpg, Wikipedia)", "url": "https://en.wikipedia.org/wiki/MARS-500", "page_source": "https://en.wikipedia.org/wiki/MARS-500", "licence": "?", "verifie": true, "note": "Légende « A three-dimensional plan of the Russia-based MARS-500 complex » vue sur la page ouverte. Image non vue." },
+        { "type": "rapport", "titre": "Mars500 quick facts (ESA, page ouverte)", "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/Mars500_quick_facts", "page_source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/Mars500_quick_facts", "licence": "© ESA (vérifier)", "verifie": true, "note": "Page ouverte : volume 550 m³, six membres, 520 jours, quatre modules et un module externe. Ni plan ni modules EU-100/150/250." },
+        { "type": "rapport", "titre": "Mars-500 : le laboratoire d'isolement (ESA)", "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/The_isolation_facility", "page_source": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Mars500/The_isolation_facility", "licence": "© ESA (vérifier)", "verifie": false, "note": "Description de l'installation. Non ouverte ; plan non vu." },
+        { "type": "image", "titre": "Le habitat de Mars à Moscou (ESA Allemagne)", "url": "https://www.esa.int/Space_in_Member_States/Germany/Das_Moskauer_Mars-Habitat", "page_source": "https://www.esa.int/Space_in_Member_States/Germany/Das_Moskauer_Mars-Habitat", "licence": "© ESA (vérifier)", "verifie": false, "note": "Donne une surface au sol de 180 m². Non ouvert." }
+      ],
+      "pour_kibsu": "Couloir central avec cabines en file : un exemple de plan linéaire très dense, à comparer à un plan rond.",
+      "a_verifier": [
+        "Surface au sol : 180 m² (ESA) ou 242 m² (CHASM).",
+        "Volume du module de rentrée : 192 m³ selon CHASM, à confirmer.",
+        "Plan par niveau : non trouvé.",
+        "Désignations EU-100 / EU-150 / EU-250 : vues dans un résultat de recherche (médical 3,2 x 11,9 m ; habitable 3,6 x 20 m ; utilitaire 3,9 x 24 m, source Springer) mais la page Springer redirige vers une connexion : non vérifié. Pour l'instant, le module 3,9 x 24 m est appelé « stockage » d'après Wikipedia et CHASM : à trancher."
+      ]
+    },
+    {
+      "id": "bios-3",
+      "nom": "BIOS-3",
+      "annee": "non précisé (à compléter)",
+      "auteurs": "Institut de biophysique de Krasnoïarsk (URSS)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "boite",
+      "resume": "Installation fermée en quatre chambres de même taille : une pour l'équipage (trois cabines individuelles, cuisine, sanitaires, salle de contrôle) et trois serres, dont une à algues, puis convertie en serre à blé et légumes.",
+      "dimensions": [
+        { "quoi": "volume", "valeur": "315 m³", "source": "https://en.wikipedia.org/wiki/BIOS-3" },
+        { "quoi": "surface par chambre", "valeur": "31,5 m² chacune", "source": "https://www.spacesettlement.com/russian-celss.html" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "BIOS-3 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/BIOS-3", "page_source": "https://en.wikipedia.org/wiki/BIOS-3", "licence": "CC BY-SA", "verifie": false, "note": "Résumé de l'installation. Non ouvert." }
+      ],
+      "pour_kibsu": "Un habitat fermé qui sépare l'équipage et les serres en chambres de même taille : utile pour dimensionner une zone de culture à côté de la vie.",
+      "a_verifier": [
+        "Surface au sol : 14 x 9 m (Wikipedia) et environ 120 m² (blog) : ne pas utiliser avant recoupement.",
+        "Le chiffre de 315 m³ vient d'un résumé de source secondaire, à confirmer."
+      ]
+    },
+    {
+      "id": "biosphere-2",
+      "nom": "Biosphere 2 (habitat humain)",
+      "annee": "1991-1993",
+      "auteurs": "Université de l'Arizona (Biosphere 2)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Structure de cinq niveaux pour 8 personnes pendant deux ans. Chaque habitant avait un appartement à deux niveaux (chambre en mezzanine, séjour en bas) ; cuisine, salle à manger, laboratoires et centre de commande au centre.",
+      "dimensions": [
+        { "quoi": "surface de l'habitat humain", "valeur": "25 000 pieds carrés, cinq niveaux", "source": "https://en.wikipedia.org/wiki/Biosphere_2" },
+        { "quoi": "appartement par personne", "valeur": "400 pieds carrés (environ 37 m²) selon une source ; 16 x 16 pieds (environ 24 m²) selon une autre", "source": "https://en.wikipedia.org/wiki/Biosphere_2" }
+      ],
+      "documents": [
+        { "type": "rapport", "titre": "Overview and design: Biospherics and Biosphere 2, mission one (1991-1993)", "url": "https://www.researchgate.net/publication/222488641_Overview_and_Design_Biospherics_and_Biosphere_2_mission_one_1991-1993", "page_source": "https://www.researchgate.net/publication/222488641_Overview_and_Design_Biospherics_and_Biosphere_2_mission_one_1991-1993", "licence": "?", "verifie": false, "note": "Présentation de conception de la mission 1. Non ouverte." }
+      ],
+      "pour_kibsu": "Des appartements à deux niveaux autour d'un centre commun : exemple de cohabitation longue durée dans un volume fermé.",
+      "a_verifier": [
+        "La source du chiffre de 25 000 pieds carrés et des appartements n'est pas confirmée : la page Wikipedia citée est une piste, pas une preuve.",
+        "Surface par appartement : 37 m² ou 24 m².",
+        "Plans cotés : voir les documents de conception d'Alling et al. (2002), non trouvés."
+      ]
+    },
+    {
+      "id": "sirius-nek",
+      "nom": "SIRIUS (installation NEK, IBMP Moscou)",
+      "annee": "2019 (SIRIUS-19, du 19 mars au 17 juillet 2019)",
+      "auteurs": "IBMP (Russie) ; NASA Human Research Program (partenariat bilatéral)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Simulation de vol vers une station lunaire orbitale, avec six équipiers (deux choisis par la NASA, quatre par l'IBMP), dans l'installation terrestre NEK à Moscou. Les missions durent plus d'un an, selon la NASA.",
+      "dimensions": [
+        { "quoi": "volume de l'habitat NEK", "valeur": "550 m³", "source": "https://www.dlr.de/en/latest/news/2019/01/20190319_sirius-19-isolation-experiment/" },
+        { "quoi": "durée de la mission SIRIUS-19", "valeur": "122 jours", "source": "https://www.dlr.de/en/latest/news/2019/01/20190319_sirius-19-isolation-experiment/" }
+      ],
+      "documents": [
+        { "type": "image", "titre": "Page FAQ NASA NEK et SIRIUS (photo de l'entrée du NEK)", "url": "https://www.nasa.gov/mission-nek-and-sirius-faqs", "page_source": "https://www.nasa.gov/mission-nek-and-sirius-faqs", "licence": "?", "verifie": true, "note": "Page ouverte : seule photo d'équipage et de l'entrée du NEK. Pas de plan. Visite virtuelle annoncée, sans date." },
+        { "type": "rapport", "titre": "SIRIUS-19 (DLR, actualité du 19 mars 2019)", "url": "https://www.dlr.de/en/latest/news/2019/01/20190319_sirius-19-isolation-experiment/", "page_source": "https://www.dlr.de/en/latest/news/2019/01/20190319_sirius-19-isolation-experiment/", "licence": "CC BY 3.0 pour les images DLR", "verifie": true, "note": "Page ouverte : volume 550 m³, équipage, dates. Aucun plan de l'habitat ; image « dlr_sirius_habitat_modell » non identifiée." }
+      ],
+      "pour_kibsu": "Habitat terrestre multi-compartiments de grand volume, pour des missions longues : à comparer avec Mars-500 pour la séparation des compartiments.",
+      "a_verifier": [
+        "Le volume de 550 m³ est exactement celui donné pour Mars-500 : possible confusion, à recouper.",
+        "Plan et surface du NEK : non trouvés.",
+        "Durée de SIRIUS-23 : 240 jours ou 360 jours selon les sources."
+      ]
+    },
+    {
+      "id": "concordia",
+      "nom": "Station Concordia (Dôme C, Antarctique)",
+      "annee": "non précisé (à compléter)",
+      "auteurs": "IPEV (France) / PNRA (Italie), avec l'ESA",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Deux tours reliées par un couloir couvert, pour jusqu'à 16 personnes. La tour « bruyante » regroupe restaurant, salles sociales, sport et ateliers ; la tour « calme » regroupe laboratoires, dortoirs et infirmerie.",
+      "dimensions": [
+        { "quoi": "surface", "valeur": "environ 1 500 m² pour jusqu'à 16 personnes, soit près de 100 m² par personne", "source": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan" }
+      ],
+      "documents": [
+        { "type": "plan", "titre": "Concordia floor plan (ESA, crédit IPEV-S. Malo)", "url": "https://media.esa.int/legacy/web/images/esa_multimedia/images/2013/03/concordia_floor_plan/12589192-7-eng-GB/Concordia_floor_plan.png", "page_source": "https://www.esa.int/ESA_Multimedia/Images/2013/03/Concordia_floor_plan", "licence": "© IPEV / ESA (vérifier)", "verifie": true, "note": "Fichier listé sur la page ESA ouverte. Image non vue. Niveau non précisé : plan d'ensemble." },
+        { "type": "rapport", "titre": "Concordia's floor plan (blog ESA)", "url": "https://blogs.esa.int/concordia/?p=2263", "page_source": "https://blogs.esa.int/concordia/?p=2263", "licence": "?", "verifie": false, "note": "Repéré dans un résultat de recherche. Non ouvert." }
+      ],
+      "pour_kibsu": "Deux tours distinctes, une tour calme et une tour bruyante, reliées par un couloir couvert : séparation des fonctions par ambiance.",
+      "a_verifier": [
+        "Étages : l'IPEV et le blog ESA donnent des regroupements différents.",
+        "Plan par niveau : non trouvé.",
+        "Concordia n'est pas dans la liste de la tâche : analogue polaire ajouté pour atteindre le nombre de projets."
+      ]
+    }
+  ],
+  "sources_generales": [
+    { "titre": "CHASM Analog Wiki (liste des habitats analogues)", "url": "https://wiki.astro-chasm.org/index.php?title=Mars_Desert_Research_Station", "note": "Wiki de référence qui donne des fiches par station, souvent avec surfaces et étages." },
+    { "titre": "Mars analog habitat (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Mars_analog_habitat", "note": "Liste générale, point de départ à recouper avec les sources primaires." },
+    { "titre": "Human analog mission (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Human_analog_mission", "note": "Liste des missions analogues par site." }
+  ],
+  "pistes_non_explorees": [
+    "SAM, BIOS-3, D-MARS, Lunar Palace 1, LunAres, Habitat Marte, Biosphère 2 : plans non trouvés (pages à ouvrir : samb2.space, lunares.space/about-habitat-archive, Acta Astronautica DOI 10.1016/j.actaastro.2021.10.046 pour LunAres).",
+    "MDRS : fichiers MDRS_Floor_Plan_Lower_Deck.png et MDRS_Upper_Deck.png signalés sur hi-seas.org (page renvoyant une erreur 401).",
+    "Mars Dune Alpha : plan coté non trouvé ; pages ICON (503) et Architect Magazine (sans plan) inutilisables.",
+    "Mars-500 : désignations EU-100 / EU-150 / EU-250 à confirmer sur la page Springer (connexion requise) ou la figure 2 de PMC (reCAPTCHA).",
+    "Concordia : plan ESA (page ouverte, fichier non vu) ; SIRIUS : plan du NEK introuvable.",
+    "Lunar Palace 1 et LunAres : plans cotés non trouvés, à chercher sur les sites des équipes.",
+    "Plans cotés : NASA NTRS (ntrs.nasa.gov) pour HERA, CHAPEA et MDRS ; ICES / IAC pour SHEE et LUNARK ; ResearchGate pour LunAres.",
+    "Modèles 3D : Sketchfab et NASA 3D Resources pour CHAPEA, HERA et MDRS : non vérifiés."
+  ]
+}

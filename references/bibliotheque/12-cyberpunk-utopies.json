@@ -1,0 +1,876 @@
+{
+  "theme": "Habitats spatiaux et architecture dense dans le cyberpunk, l'anime, la bande dessinée, le jeu vidéo et l'architecture utopique",
+  "date": "2026-11-13",
+  "projets": [
+    {
+      "id": "stanford-torus",
+      "nom": "Stanford Torus",
+      "annee": "1975-1977",
+      "auteurs": "NASA Ames (étude d'été de Stanford, 1975) ; illustrations Rick Guidice et Don Davis",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "tore",
+      "resume": "Habitat en anneau qui tourne sur lui-même pour créer la pesanteur à l'intérieur. L'étude de 1975 le prévoit pour 10 000 habitants.",
+      "dimensions": [
+        {
+          "quoi": "rayon majeur (centre de l'anneau à l'axe du tube)",
+          "valeur": "830 m",
+          "source": "https://settlement.nss.org/75SummerStudy/5appendA.html"
+        },
+        {
+          "quoi": "rayon du tube (torus proper)",
+          "valeur": "65 m",
+          "source": "https://settlement.nss.org/75SummerStudy/5appendA.html"
+        },
+        {
+          "quoi": "diamètre du tube d'habitation",
+          "valeur": "130 m",
+          "source": "https://en.wikipedia.org/wiki/Stanford_torus"
+        },
+        {
+          "quoi": "rotation",
+          "valeur": "1 tour par minute, environ 0,9 à 1,0 g",
+          "source": "https://en.wikipedia.org/wiki/Stanford_torus"
+        },
+        {
+          "quoi": "population (étude 1975)",
+          "valeur": "10 000 résidents permanents",
+          "source": "https://en.wikipedia.org/wiki/Stanford_torus"
+        }
+      ],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "Torus Cutaway (vue en coupe, intérieur exposé), AC75-1086-1",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Peinture de Rick Guidice. Fichier Torus_Cutaway_AC75-1086-1_5725.jpg, pleine résolution sur la page. La page demande la mention NASA Ames Research Center."
+        },
+        {
+          "type": "image",
+          "titre": "Torus Interior view, AC75-2621",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vue intérieure, Don Davis. Fichier Torus_Interior_AC75-2621_5718.jpg."
+        },
+        {
+          "type": "image",
+          "titre": "Torus Exterior view, AC76-0525",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vue extérieure, Don Davis. Fichier Torus_Exterior_AC76-0525_5696.jpg."
+        },
+        {
+          "type": "image",
+          "titre": "Torus Construction along the rim, AC75-1886 ; Model of torus colony, AC76-0492.1",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Construction (Don Davis) et maquette (auteur non crédité). Fichiers listés sur la page."
+        },
+        {
+          "type": "coupe",
+          "titre": "Stanford Torus structural cross section (figure 5.23, NASA SP-413)",
+          "url": "https://en.wikipedia.org/wiki/Stanford_torus",
+          "page_source": "https://en.wikipedia.org/wiki/Stanford_torus",
+          "licence": "?",
+          "verifie": true,
+          "note": "Coupe structurelle (fichier Figure5.23_Stanford_torus_structural_cross_section.gif) listée sur la page Wikipedia, source NASA SP-413 (Johnson & Holbrow, 1977). Auteur non crédité sur la page."
+        },
+        {
+          "type": "coupe",
+          "titre": "Stanford Torus cutaway view (Wikipedia gallery)",
+          "url": "https://en.wikipedia.org/wiki/Stanford_torus",
+          "page_source": "https://en.wikipedia.org/wiki/Stanford_torus",
+          "licence": "?",
+          "verifie": true,
+          "note": "Fichier Stanford_Torus_cutaway.jpg listé dans la galerie, sans artiste indiqué sur la page. Vérifier l'origine NASA avant usage."
+        },
+        {
+          "type": "plan",
+          "titre": "Stanford torus configuration (diagramme)",
+          "url": "https://en.wikipedia.org/wiki/Stanford_torus",
+          "page_source": "https://en.wikipedia.org/wiki/Stanford_torus",
+          "licence": "?",
+          "verifie": true,
+          "note": "Fichier Stanford_torus_configuration.gif listé dans la galerie. Diagramme de configuration, auteur non crédité."
+        }
+      ],
+      "pour_kibsu": "La coupe Guidice montre des habitations serrées le long de l'anneau, avec la lumière amenée par des miroirs. Utile pour la logique niveaux / pesanteur croissante vers l'extérieur.",
+      "a_verifier": [
+        "Les dimensions NSS (830 m et 65 m) viennent de l'annexe A du rapport ; la ligne de la vitesse angulaire est illisible sur cette page. La rotation (1 tr/min) vient de Wikipedia.",
+        "Les chiffres « 6 rayons » et « 15 m » de la version précédente ne sont plus utilisés : non vérifiés.",
+        "Le rapport NASA SP-413 (NTRS, ID 19770014162) n'a pas pu être ouvert (403) : à chercher sur nss.org ou archive.org."
+      ]
+    },
+    {
+      "id": "oneill-cylindre-double",
+      "nom": "Cylindre d'O'Neill (double cylindre)",
+      "annee": "1975-1977",
+      "auteurs": "NASA Ames (Gerard K. O'Neill, étude 1975) ; Rick Guidice, Don Davis",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "cylindre",
+      "resume": "Deux cylindres géants en rotation, avec des fenêtres et des paysages sur leur intérieur. Ils peuvent accueillir plus d'un million de personnes.",
+      "dimensions": [
+        {
+          "quoi": "population visée",
+          "valeur": "plus d'un million d'habitants",
+          "source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html"
+        }
+      ],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Cylinder Interior view looking out through large windows, AC75-1086",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Peinture de Rick Guidice. Fichier Cylinder_Interior_AC75-1086_5732.jpg."
+        },
+        {
+          "type": "image",
+          "titre": "Cylinder Exterior view of a double cylinder colony, AC75-1085",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Peinture de Rick Guidice. Fichier Cylinder_Exterior_AC75-1085_5728.jpg."
+        },
+        {
+          "type": "image",
+          "titre": "Cylinder Endcap view with suspension bridge, AC75-1883",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Vue du fond du cylindre, Don Davis. Pont suspendu."
+        }
+      ],
+      "pour_kibsu": "Vue intérieure avec paysage remonté au-dessus de la tête : utile pour les hauteurs de vide, les fenêtres et l'éclairage naturel. Pas de coupe trouvée pour ce modèle.",
+      "a_verifier": [
+        "Ce modèle est appelé « cylindres » sur la page NSS. Science Friday date le tableau intérieur de 1975 ; la date exacte reste à confirmer."
+      ]
+    },
+    {
+      "id": "bernal-sphere",
+      "nom": "Sphère de Bernal",
+      "annee": "1976",
+      "auteurs": "NASA Ames ; Rick Guidice, Don Davis",
+      "lieu": "orbite",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Habitat sphérique en rotation, avec une coupe qui montre la vie intérieure et les modules agricoles. La population visée est de 10 000 habitants.",
+      "dimensions": [
+        {
+          "quoi": "population visée",
+          "valeur": "10 000 habitants",
+          "source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html"
+        }
+      ],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "Bernal Cutaway view of Bernal Sphere, AC76-1089",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Peinture de Rick Guidice. Fichier Bernal_Cutaway_AC76-1089_5732.jpg."
+        },
+        {
+          "type": "coupe",
+          "titre": "Agricultural modules in cutaway view (multiple toroids), AC78-0330-4",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Coupe agricole, Rick Guidice. Fichier Bernal_Agriculture_AC78-0330-4_5726.jpg."
+        },
+        {
+          "type": "image",
+          "titre": "Bernal Interior, including human-powered flight, AC76-0628",
+          "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "page_source": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+          "licence": "?",
+          "verifie": true,
+          "note": "Intérieur, Rick Guidice."
+        }
+      ],
+      "pour_kibsu": "Coupe agricole par modules : bon exemple de superposition de niveaux productifs et d'habitat dans une même enveloppe.",
+      "a_verifier": []
+    },
+    {
+      "id": "nakagin-capsule-tower",
+      "nom": "Nakagin Capsule Tower",
+      "annee": "1970-1972",
+      "auteurs": "Kisho Kurokawa (Kurokawa Architect & Associates)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "capsule",
+      "resume": "Tour métabolique à Tokyo faite de capsules préfabriquées vissées sur deux noyaux en béton. Le bâtiment a été démoli en 2022.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Floor Plan of the Nakagin Capsule Tower",
+          "url": "https://i0.wp.com/archeyes.com/wp-content/uploads/2016/03/nakagin-capsule-tower-tokyo-kisho-kurokawa-archeyes-25.jpg?resize=850%2C438&ssl=1",
+          "page_source": "https://archeyes.com/nakagin-capsule-tower-kisho-kurokawa/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan crédité Kisho Kurokawa, sur la page Archeyes."
+        },
+        {
+          "type": "coupe",
+          "titre": "Section and Elevation",
+          "url": "https://i0.wp.com/archeyes.com/wp-content/uploads/2016/03/nakagin-capsule-tower-tokyo-kisho-kurokawa-archeyes-18.jpg?resize=850%2C598&ssl=1",
+          "page_source": "https://archeyes.com/nakagin-capsule-tower-kisho-kurokawa/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Coupe et élévation créditées Kisho Kurokawa."
+        },
+        {
+          "type": "image",
+          "titre": "Elevation",
+          "url": "https://i0.wp.com/archeyes.com/wp-content/uploads/2016/03/nakagin-capsule-tower-tokyo-kisho-kurokawa-archeyes-17.jpg?resize=850%2C561&ssl=1",
+          "page_source": "https://archeyes.com/nakagin-capsule-tower-kisho-kurokawa/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Élévation créditée Kisho Kurokawa."
+        },
+        {
+          "type": "rapport",
+          "titre": "The Many Lives of the Nakagin Capsule Tower, checklist (MoMA)",
+          "url": "https://press.moma.org/wp-content/uploads/2025/05/The-Many-Lives-of-the-Nakagin-Capsule-Tower.-Checklist.pdf",
+          "page_source": "https://press.moma.org/wp-content/uploads/2025/05/The-Many-Lives-of-the-Nakagin-Capsule-Tower.-Checklist.pdf",
+          "licence": "?",
+          "verifie": false,
+          "note": "Liste des dessins originaux (sections sur papier calque, 42 x 63 cm, 1970) signalée par un résultat de recherche. PDF non lisible via l'outil : contenu non vérifié."
+        }
+      ],
+      "pour_kibsu": "Les capsules sont des unités démontables, accrochées à un noyau de circulation vertical. Modèle utile pour la logique cellule + noyau de services.",
+      "a_verifier": [
+        "Dimensions d'une capsule : non trouvées dans une source ouverte. Ne pas utiliser avant vérification.",
+        "Designboom (plan et coupe de la boulonnerie) : redirection non suivie, non vérifié.",
+        "Wikipedia indique un plan et une coupe : non ouvert."
+      ]
+    },
+    {
+      "id": "kowloon-walled-city",
+      "nom": "Kowloon Walled City",
+      "annee": "1987-1993 (démolie)",
+      "auteurs": "Hitomi Terasawa (dessin, Kowloon City: An Illustrated Guide) ; équipe de Hiroaki Kani (relevé)",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Quartier informel très dense à Hong Kong, bâti sans plan d'ensemble. Une coupe détaillée du quartier a été dessinée à partir d'un relevé de 1993.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "Coupe détaillée de Kowloon Walled City (Hitomi Terasawa)",
+          "url": "https://www.thisiscolossal.com/2024/07/kowlooon-walled-city-illustration/",
+          "page_source": "https://www.thisiscolossal.com/2024/07/kowlooon-walled-city-illustration/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Illustration, crédit « All images courtesy of Greg Jensen » (scan annoté). Pas de licence indiquée."
+        },
+        {
+          "type": "coupe",
+          "titre": "Detailed Cross-section of the Kowloon Walled City (équipe japonaise)",
+          "url": "https://spoon-tamago.com/detailed-cross-section-of-the-kowloon-walled-city-created-by-japanese-researchers/",
+          "page_source": "https://spoon-tamago.com/detailed-cross-section-of-the-kowloon-walled-city-created-by-japanese-researchers/",
+          "licence": "?",
+          "verifie": true,
+          "note": "Coupe panoramique du relevé de Kani, avec mahjong, usine de plastique et passage souterrain. Page de visionnage des images."
+        }
+      ],
+      "pour_kibsu": "Coupe qui montre l'empilement, les passages et les usages mélangés : utile pour la densité verticale et la circulation de secours.",
+      "a_verifier": [
+        "Dates du relevé : Spoon & Tamago dit 1993 ; un résultat de recherche dit 14 au 20 octobre 1992. À trancher.",
+        "Lien haute résolution : hébergé sur un site tiers (deconcrete.org), non vérifié.",
+        "Aucun plan au sol trouvé."
+      ]
+    },
+    {
+      "id": "archigram-plug-in-city",
+      "nom": "Plug-In City",
+      "annee": "1964",
+      "auteurs": "Peter Cook (Archigram)",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Mégastructure en grille où des cellules d'habitat se branchent sur un cadre porteur. Les cellules peuvent être remplacées.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "3d",
+          "titre": "Peter Cook. Plug-In City, project (Axonometric)",
+          "url": "https://www.moma.org/collection/works/795",
+          "page_source": "https://www.moma.org/collection/works/795",
+          "licence": "?",
+          "verifie": false,
+          "note": "Axonométrie, MoMA. Page non ouverte (erreur 403)."
+        },
+        {
+          "type": "rapport",
+          "titre": "Archigram Archive (M+, Hong Kong)",
+          "url": "https://mplus.org.hk/en/collection/archives/archigram-archive-ca36",
+          "page_source": "https://mplus.org.hk/en/collection/archives/archigram-archive-ca36",
+          "licence": "?",
+          "verifie": false,
+          "note": "Archive de 3 000 à 4 000 dessins, tirages et esquisses. Résultat de recherche seulement."
+        }
+      ],
+      "pour_kibsu": "Cellules remplaçables sur une ossature : pertinent pour la maintenance et l'extension d'un habitat lunaire.",
+      "a_verifier": [
+        "Date d'acquisition de l'archive : 2018 ou 2019 selon les sources."
+      ]
+    },
+    {
+      "id": "archigram-walking-city",
+      "nom": "Walking City",
+      "annee": "1964-1966",
+      "auteurs": "Ron Herron (Archigram)",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Ville-machine qui marche sur des pattes et se déplace sur l'océan. Elle sert de provocation sur l'idée de ville mobile.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Walking City (Archigram / Ron Herron), 1964, impression et graphite 59 x 86 cm, AM 1992-1-280",
+          "url": "https://www.centrepompidou.fr/en/ressources/oeuvre/c5z5bG",
+          "page_source": "https://www.centrepompidou.fr/en/ressources/oeuvre/c5z5bG",
+          "licence": "© Archigram (Centre Pompidou)",
+          "verifie": true,
+          "note": "Dessin de projet, pas une coupe. Achat 1992. Droits : © Archigram, reproduction Centre Pompidou."
+        },
+        {
+          "type": "image",
+          "titre": "Ron Herron. Walking City on the Ocean, project (Exterior perspective), 1966",
+          "url": "https://www.moma.org/collection/works/814",
+          "page_source": "https://www.moma.org/collection/works/814",
+          "licence": "?",
+          "verifie": false,
+          "note": "Perspective extérieure, MoMA. Page non ouverte (erreur 403)."
+        }
+      ],
+      "pour_kibsu": "Une base mobile qui s'arrête pour installer des modules : utile comme cas limite de mobilité pour un habitat lunaire.",
+      "a_verifier": [
+        "Aucune coupe originale de Walking City trouvée. Une coupe de Peter Cook (Plug-in City, Maximum Pressure Area, 1964) est signalée, non ouverte.",
+        "Ron Cobb : aucun lien trouvé avec l'archive Archigram. Non confirmé."
+      ]
+    },
+    {
+      "id": "arcosanti-asteromo",
+      "nom": "Arcosanti / Asteromo (Paolo Soleri)",
+      "annee": "1970 (Arcosanti) ; années 1970-1980 (Asteromo)",
+      "auteurs": "Paolo Soleri",
+      "lieu": "terre",
+      "statut": "réalisé",
+      "forme": "autre",
+      "resume": "Arcosanti est une ville-arcologie en construction en Arizona. Asteromo est une proposition de habitat spatial de Soleri, plus rare en documentation.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Arcosanti Arcology city structure plan (exposition Corcoran, 1970)",
+          "url": "https://prism.lib.asu.edu/items/91266/metadata",
+          "page_source": "https://prism.lib.asu.edu/items/91266/metadata",
+          "licence": "?",
+          "verifie": false,
+          "note": "Notice d'archive ASU PRISM, résultat de recherche seulement."
+        },
+        {
+          "type": "rapport",
+          "titre": "ACSA, article sur la miniaturisation chez Soleri (figure Asteromo)",
+          "url": "https://www.acsa-arch.org/proceedings/Annual Meeting Proceedings/ACSA.AM.101/ACSA.AM.101.75.pdf",
+          "page_source": "https://www.acsa-arch.org/proceedings/Annual Meeting Proceedings/ACSA.AM.101/ACSA.AM.101.75.pdf",
+          "licence": "?",
+          "verifie": false,
+          "note": "Figure Asteromo signalée dans un résultat de recherche. PDF non lisible via l'outil."
+        }
+      ],
+      "pour_kibsu": "Arcosanti : habitat dense, en terrasses et en voûtes, pour un climat sec. Utile pour l'agrégation de volumes et l'économie d'espace.",
+      "a_verifier": [
+        "Dates et dimensions d'Asteromo : non trouvées dans des sources ouvertes.",
+        "Pas de coupe d'Asteromo ou d'Arcosanti vérifiée ; un ARCOSANTI 5000 Section (crédit Jeff Manta) est signalé par Gizmodo, non ouvert."
+      ]
+    },
+    {
+      "id": "blade-runner-los-angeles-2019",
+      "nom": "Los Angeles 2019 (Blade Runner)",
+      "annee": "1982",
+      "auteurs": "Syd Mead (concept art), Ridley Scott (réalisation)",
+      "lieu": "terre",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Ville dense et verticale, de style « retro deco », inspirée de Chicago et New York. Syd Mead en a dessiné les rues et les véhicules.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Syd Mead concept art, Blade Runner street scene (VFX Voice)",
+          "url": "https://vfxvoice.com/?p=362064",
+          "page_source": "https://vfxvoice.com/?p=362064",
+          "licence": "?",
+          "verifie": false,
+          "note": "Concept art crédité Warner Bros., résultat de recherche seulement."
+        }
+      ],
+      "pour_kibsu": "Empilement de niveaux, enseignes et circulation en hauteur : référence pour la densité d'une ville-habitat.",
+      "a_verifier": [
+        "Pas de plan de ville officiel trouvé. Les « blueprints » trouvés concernent les véhicules."
+      ]
+    },
+    {
+      "id": "akira-neo-tokyo",
+      "nom": "Neo-Tokyo (Akira)",
+      "annee": "1988",
+      "auteurs": "Katsuhiro Otomo ; plan de Kenzo Tange (1960)",
+      "lieu": "terre",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Métropole reconstruite sur une île artificielle de la baie de Tokyo. Elle reprend le plan radical de Kenzo Tange de 1960.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Exposition « Akira – The Architecture of Neo Tokyo » (2022), 59 décors et dessins de production",
+          "url": "https://www.world-architects.com/en/events/akira-the-architecture-of-neo-tokyo",
+          "page_source": "https://www.world-architects.com/en/events/akira-the-architecture-of-neo-tokyo",
+          "licence": "?",
+          "verifie": false,
+          "note": "Dessins de production et imageboards, résultat de recherche seulement."
+        }
+      ],
+      "pour_kibsu": "Plan d'une ville sur une île artificielle, avec axes et grandes infrastructures : référence pour un établissement en terrain rapporté.",
+      "a_verifier": [
+        "Le plan de Tange (1960) est documenté dans le projet « Plan pour Tokyo » ci-dessous : ce lien n'est pas une source du film."
+      ]
+    },
+    {
+      "id": "sevastopol-alien-isolation",
+      "nom": "Sevastopol Station (Alien: Isolation)",
+      "annee": "2014",
+      "auteurs": "Creative Assembly",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Station spatiale de la Weyland-Yutani, avec des tours reliées par des tubes de transit. Elle est en partie abandonnée.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Catalogue des cartes du jeu (Alien fandom)",
+          "url": "https://avp.fandom.com/wiki/Alien:_Isolation_deleted_scenes",
+          "page_source": "https://avp.fandom.com/wiki/Alien:_Isolation_deleted_scenes",
+          "licence": "?",
+          "verifie": false,
+          "note": "Liste des zones par tour (Solomons, SciMed). Pas de plan dessiné trouvé. Page non ouverte."
+        }
+      ],
+      "pour_kibsu": "Tours reliées par des tubes et des ponts : modèle de circulation redondante et de sas entre zones.",
+      "a_verifier": [
+        "Pas de plan de pont ou de coupe trouvé. Les zones et les tours sont listées seulement."
+      ]
+    },
+    {
+      "id": "talos-i-prey",
+      "nom": "Talos I (Prey, 2017)",
+      "annee": "2017",
+      "auteurs": "Arkane Studios Austin",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Station de recherche en orbite lunaire, avec un parc au sommet (l'Arboretum). Le plan est pensé comme un donjon à plusieurs approches.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Talos I Master Blueprint (art conceptuel Arkane)",
+          "url": "https://www.cookandbecker.com/en/artwork/2400/talos-i-master-blueprint-prey-arkane-studios.html",
+          "page_source": "https://www.cookandbecker.com/en/artwork/2400/talos-i-master-blueprint-prey-arkane-studios.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Plan général de la station, art conceptuel. Résultat de recherche seulement."
+        },
+        {
+          "type": "plan",
+          "titre": "Talos I blueprints (reproductions à construire)",
+          "url": "https://pcgamer.com/build-your-own-prey-space-station-with-these-neat-talos-1-blueprints",
+          "page_source": "https://pcgamer.com/build-your-own-prey-space-station-with-these-neat-talos-1-blueprints",
+          "licence": "?",
+          "verifie": false,
+          "note": "Article sur des plans à construire soi-même. Non ouvert."
+        }
+      ],
+      "pour_kibsu": "Un plan général qui montre la hiérarchie des niveaux et des zones de travail, avec une même station pensée pour plusieurs parcours.",
+      "a_verifier": [
+        "Le niveau 3 est généré aléatoirement : le plan de jeu peut varier."
+      ]
+    },
+    {
+      "id": "ceres-tycho-expanse",
+      "nom": "Ceres et Tycho (The Expanse)",
+      "annee": "2015-2022",
+      "auteurs": "North Front Studio (concept art, Tim Warnock)",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Ceres est une station-port en rotation qui donne une gravité centrifuge. Tycho est une grande plate-forme mobile de construction.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Concept art Tycho et docks de Ceres (Tim Warnock)",
+          "url": "https://theexpanselives.com/resources/tags/concept-art",
+          "page_source": "https://theexpanselives.com/resources/tags/concept-art",
+          "licence": "?",
+          "verifie": false,
+          "note": "Liste d'images de concept art. Résultat de recherche seulement."
+        }
+      ],
+      "pour_kibsu": "Port et docks en rotation : modèle de transfert entre modules et d'espace de service.",
+      "a_verifier": [
+        "Pas de coupe trouvée. Ne pas confondre avec le Tycho de Will Root (concours Aurelia), sans rapport."
+      ]
+    },
+    {
+      "id": "citadel-mass-effect",
+      "nom": "Citadel (Mass Effect)",
+      "annee": "2007",
+      "auteurs": "BioWare",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "cylindre",
+      "resume": "Station-cité inspirée du cylindre O'Neill, avec des quartiers (Presidium, Wards, C-Sec) répartis sur plusieurs panneaux habitables.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Cartes légendées du Presidium, de la Tour et de la C-Sec (Gamepressure)",
+          "url": "https://www.gamepressure.com/masseffect/citadel-p-1/zc1056",
+          "page_source": "https://www.gamepressure.com/masseffect/citadel-p-1/zc1056",
+          "licence": "?",
+          "verifie": false,
+          "note": "Plans de jeu numérotés, résultat de recherche seulement."
+        }
+      ],
+      "pour_kibsu": "Cylindre à cinq panneaux habitables : comparaison utile avec le cylindre O'Neill à trois panneaux terrestres et trois panneaux ciel.",
+      "a_verifier": [
+        "Diamètre contradictoire : un wiki donne 12,8 km ; PC Gamer cite 44 km (longueur). À trancher avant usage."
+      ]
+    },
+    {
+      "id": "von-braun-gundam",
+      "nom": "Von Braun (Mobile Suit Gundam)",
+      "annee": "0079 (Univers Century)",
+      "auteurs": "Sunrise / Yoshiyuki Tomino",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Première grande ville lunaire de la Fédération, dans la mer de la Tranquillité. Les colonies spatiales de la série reprennent le modèle O'Neill.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Introduction à l'Univers Century, partie 3",
+          "url": "https://www.gundam-the-origin.net/en/world/orientation03.html",
+          "page_source": "https://www.gundam-the-origin.net/en/world/orientation03.html",
+          "licence": "?",
+          "verifie": false,
+          "note": "Page de présentation du lore, non ouverte."
+        }
+      ],
+      "pour_kibsu": "Ville lunaire construite près d'un site historique : utile pour la relation entre implantation et paysage lunaire.",
+      "a_verifier": [
+        "Aucune coupe ou plan officiel de Von Braun trouvé."
+      ]
+    },
+    {
+      "id": "planetes-iss-pv-7",
+      "nom": "ISPV-7 Seven (Planetes)",
+      "annee": "2003-2004",
+      "auteurs": "Sunrise ; manga de Makoto Yukimura",
+      "lieu": "orbite",
+      "statut": "fiction",
+      "forme": "tore",
+      "resume": "Station en orbite terrestre, de type tore, où travaillent les équipes de récupération de débris. La série est réputée pour son réalisme physique.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "rapport",
+          "titre": "Fiche Planetes (SF Encyclopedia)",
+          "url": "https://www.sf-encyclopedia.com/entry/planetes",
+          "page_source": "https://www.sf-encyclopedia.com/entry/planetes",
+          "licence": "?",
+          "verifie": false,
+          "note": "Résultat de recherche seulement."
+        }
+      ],
+      "pour_kibsu": "Anneau à pesanteur de rotation avec aires de travail et de récupération : bonne référence pour un habitat tore réaliste.",
+      "a_verifier": [
+        "Aucun plan ou modèle officiel trouvé. Art book et fiches techniques Sunrise à chercher."
+      ]
+    },
+    {
+      "id": "deliver-us-the-moon",
+      "nom": "Deliver Us the Moon",
+      "annee": "2021",
+      "auteurs": "KeokeN Interactive",
+      "lieu": "lune",
+      "statut": "fiction",
+      "forme": "autre",
+      "resume": "Jeu d'exploration d'une base lunaire abandonnée, reliée par un ascenseur orbital à une station en orbite. Les couloirs sans oxygène doivent être explorés.",
+      "dimensions": [],
+      "documents": [],
+      "pour_kibsu": "Base lunaire abandonnée avec couloirs et sas : référence de circulation et de confinement.",
+      "a_verifier": [
+        "Aucun plan de la base trouvé dans les résultats. À chercher dans les wikis de la communauté ou les captures de la carte in-game."
+      ]
+    },
+    {
+      "id": "tokyo-bay-tange-1960",
+      "nom": "Plan pour Tokyo (Tange, baie de Tokyo)",
+      "annee": "1960 (publié 1961)",
+      "auteurs": "Kenzo Tange",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Plan d'une grande ossature linéaire qui s'avance dans la baie de Tokyo, avec des boucles d'habitat et un axe civique. Il est pensé pour absorber la croissance de la ville.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "coupe",
+          "titre": "Plan for Tokyo Section",
+          "url": "https://archeyes.com/?p=2219",
+          "page_source": "https://archeyes.com/?p=2219",
+          "licence": "?",
+          "verifie": true,
+          "note": "Image © Kenzo Tange, Archeyes. Fichier kenzo-tange-plan-tokyo-1960-00-1.jpg."
+        },
+        {
+          "type": "plan",
+          "titre": "Plan for Tokyo Urban Plan",
+          "url": "https://archeyes.com/?p=2219",
+          "page_source": "https://archeyes.com/?p=2219",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan urbain © Kenzo Tange. Fichier kenzo-tange-plan-tokyo-1960-04.jpg."
+        },
+        {
+          "type": "plan",
+          "titre": "Model and plan of the civic axis",
+          "url": "https://archeyes.com/?p=2219",
+          "page_source": "https://archeyes.com/?p=2219",
+          "licence": "?",
+          "verifie": true,
+          "note": "Maquette et plan de l'axe civique © Kenzo Tange. Fichier kenzo-tange-plan-tokyo-1960-08.jpg."
+        },
+        {
+          "type": "plan",
+          "titre": "Plan of the residential structures",
+          "url": "https://archeyes.com/?p=2219",
+          "page_source": "https://archeyes.com/?p=2219",
+          "licence": "?",
+          "verifie": true,
+          "note": "Plan des structures résidentielles © Kenzo Tange. Fichier kenzo-tange-plan-tokyo-1960-01-1.jpg."
+        }
+      ],
+      "pour_kibsu": "Ossature linéaire avec modules d'habitat accrochés : bon modèle de croissance par extension sur un terrain gagné sur l'eau. Il alimente aussi la ville d'Akira.",
+      "a_verifier": [
+        "Longueur de l'ossature (environ 18 km) et population visée (5 millions) : trouvées dans un résultat de recherche Harvard GSD (udcsa.gsd.harvard.edu/projects/64), non ouvert.",
+        "Dates de publication : 1960 selon une source, début 1961 selon une autre.",
+        "Wikipedia : fichier Tokyo Bay Plan image signalée comme usage équitable, à ne pas réutiliser sans vérifier."
+      ]
+    },
+    {
+      "id": "marine-city-kikutake",
+      "nom": "Marine City",
+      "annee": "1958-1963",
+      "auteurs": "Kiyonori Kikutake (métabolisme)",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Ville sur pylônes en mer, à quelque 6 m au-dessus de l'eau, avec des tours et des modules d'habitation. Projet non réalisé, lié au mouvement métaboliste japonais.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Marine City Floor Plan",
+          "url": "https://i0.wp.com/archeyes.com/wp-content/uploads/2020/04/Kiyonori-Kikutake-Marine-City-unbuilt-japan-ArchEyes-plan.jpg",
+          "page_source": "https://archeyes.com/?p=11999",
+          "licence": "© Kiyonori Kikutake (crédit Archeyes)",
+          "verifie": true,
+          "note": "Plan de la ville en mer, crédité Kikutake sur la page Archeyes."
+        },
+        {
+          "type": "coupe",
+          "titre": "Marine City Section",
+          "url": "https://i0.wp.com/archeyes.com/wp-content/uploads/2020/04/Kiyonori-Kikutake-Marine-City-unbuilt-japan-ArchEyes-section3.jpg",
+          "page_source": "https://archeyes.com/?p=11999",
+          "licence": "© Kiyonori Kikutake (crédit Archeyes)",
+          "verifie": true,
+          "note": "Coupe de la ville en mer, crédit Kikutake."
+        },
+        {
+          "type": "coupe",
+          "titre": "Marine City Sections and Elevations",
+          "url": "https://i0.wp.com/archeyes.com/wp-content/uploads/2020/04/Kiyonori-Kikutake-Marine-City-unbuilt-japan-ArchEyes-sections.jpg",
+          "page_source": "https://archeyes.com/?p=11999",
+          "licence": "© Kiyonori Kikutake (crédit Archeyes)",
+          "verifie": true,
+          "note": "Coupes et élévations."
+        },
+        {
+          "type": "image",
+          "titre": "Perspective (graphite et collage sur calque), 11 février 1959, AM 2000-2-28",
+          "url": "https://www.centrepompidou.fr/en/ressources/oeuvre/cxxnGen",
+          "page_source": "https://www.centrepompidou.fr/en/ressources/oeuvre/cxxnGen",
+          "licence": "© Kiyonori Kikutake (Centre Pompidou)",
+          "verifie": true,
+          "note": "Perspective de 50,5 x 56,5 cm, trois photos découpées des modules. Droits : © Kiyonori Kikutake."
+        }
+      ],
+      "pour_kibsu": "Des modules sur pilotis au-dessus de l'eau, avec un plan et des coupes lisibles : utile pour un habitat qui ne touche pas le sol.",
+      "a_verifier": [
+        "Lieu : baie de Tokyo (Jacques Rougerie, 1958). Aucune source ne la place à Osaka.",
+        "Hauteur au-dessus de l'eau (21 pieds, soit environ 6,4 m) : source Designboom, non ouverte."
+      ]
+    },
+    {
+      "id": "helix-city-kurokawa",
+      "nom": "Helix City",
+      "annee": "1961",
+      "auteurs": "Kisho Kurokawa",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Ville en hélice faite de tours de services reliées par des ponts qui franchissent la terre et la mer. Projet non réalisé de 1961.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "plan",
+          "titre": "Plan-masse, Helix City, Tokyo, Japon, 1961, AM 1997-2-27",
+          "url": "https://www.centrepompidou.fr/fr/ressources/oeuvre/c6g6L8",
+          "page_source": "https://www.centrepompidou.fr/fr/ressources/oeuvre/c6g6L8",
+          "licence": "© Kisho Kurokawa architect & associates (Centre Pompidou)",
+          "verifie": true,
+          "note": "Plan-masse aux crayons de couleur et feutre, 41 x 59 cm, don de l'artiste en 1997."
+        },
+        {
+          "type": "plan",
+          "titre": "Kisho Kurokawa. Helix City Project, Tokyo, Japan (Plan), 1961",
+          "url": "https://www.moma.org/collection/works/621",
+          "page_source": "https://www.moma.org/collection/works/621",
+          "licence": "?",
+          "verifie": false,
+          "note": "Collage de photos et encre sur calque, 54,6 x 44,5 cm (résultat de recherche). Page MoMA en 403 : non ouverte."
+        }
+      ],
+      "pour_kibsu": "Tours de service reliées par des passerelles : modèle de réseau de circulation vertical et horizontal pour un habitat dense.",
+      "a_verifier": [
+        "Coupes Helix City au Centre Pompidou (AM 1997-2-17 et AM 1997-2-19, 1961) signalées dans un résultat de recherche : non ouvertes, à ajouter après vérification."
+      ]
+    },
+    {
+      "id": "cloud-nine-fuller",
+      "nom": "Cloud Nine (Floating Cloud Structures)",
+      "annee": "vers 1960",
+      "auteurs": "Buckminster Fuller et Shoji Sadao",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "sphere",
+      "resume": "Grandes sphères géodésiques recouvertes de plastique, censées flotter dans l'air grâce à la chaleur de l'air intérieur. Projet non réalisé.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Project for Floating Cloud Structures (Cloud Nine), c. 1960",
+          "url": "https://en.wikipedia.org/wiki/Cloud_Nine_(sphere)",
+          "page_source": "https://en.wikipedia.org/wiki/Cloud_Nine_(sphere)",
+          "licence": "?",
+          "verifie": true,
+          "note": "Fichier Project_for_Floating_Cloud_Structures_(Cloud_Nine).jpg, photomontage ou dessin non précisé sur la page. Pas une coupe."
+        }
+      ],
+      "pour_kibsu": "Habitat léger et gonflable : utile comme cas limite de structures sans pesanteur dure.",
+      "a_verifier": [
+        "Pas de coupe trouvée pour Cloud Nine. Une coupe du « City of the Future » (Fuller, 1968) est signalée : c'est un autre projet, non ouvert.",
+        "Sources citées : Baldwin, BuckyWorks, p. 190 ; Sieden, p. 409 : non ouvertes."
+      ]
+    },
+    {
+      "id": "triton-city-fuller",
+      "nom": "Triton City",
+      "annee": "fin des années 1960",
+      "auteurs": "Buckminster Fuller",
+      "lieu": "terre",
+      "statut": "étude",
+      "forme": "autre",
+      "resume": "Ville flottante faite de modules en tétraèdre tronqué, pour quelques milliers d'habitants. Projet non réalisé.",
+      "dimensions": [],
+      "documents": [
+        {
+          "type": "image",
+          "titre": "Richard Buckminster Fuller's Triton City project (rendus et photos de maquette)",
+          "url": "https://www.behance.net/gallery/2971307/Richard-Buckminster-Fullers-Triton-City-project",
+          "page_source": "https://www.behance.net/gallery/2971307/Richard-Buckminster-Fullers-Triton-City-project",
+          "licence": "?",
+          "verifie": false,
+          "note": "Rendus 3D et photos de maquette (résultat de recherche). Page non ouverte."
+        }
+      ],
+      "pour_kibsu": "Modules flottants reliés en ensemble : à comparer avec Marine City pour la stabilité en mer.",
+      "a_verifier": [
+        "Les chiffres sont contradictoires : 5 000 habitants (Scroll), 5 000 appartements et 2 500 m de hauteur (un blog) : hauteur à écarter, nombre à vérifier.",
+        "Lieu : baie de Tokyo selon une source, eaux nord-américaines selon une autre."
+      ]
+    }
+  ],
+  "sources_generales": [
+    {
+      "titre": "Space Colony Art from the 1970s (NSS, galerie NASA Ames)",
+      "url": "https://settlement.nss.org/70sArtHiRes/70sArt/art.html",
+      "note": "Page source des images NASA Ames, avec numéros AC75 et AC76. Mention NASA Ames Research Center demandée."
+    },
+    {
+      "titre": "This '70s Artist Painted Our Future in Space (Science Friday)",
+      "url": "https://www.sciencefriday.com/articles/this-70s-artist-painted-our-future-in-space/",
+      "note": "Rick Guidice, 1975, cylindre double, brief de la campagne française d'O'Neill. Pas de licence indiquée."
+    },
+    {
+      "titre": "Nakagin Capsule Tower (Archeyes)",
+      "url": "https://archeyes.com/nakagin-capsule-tower-kisho-kurokawa/",
+      "note": "Plans, coupe et élévation crédités Kisho Kurokawa."
+    },
+    {
+      "titre": "Kowloon Walled City cross-section (Colossal)",
+      "url": "https://www.thisiscolossal.com/2024/07/kowlooon-walled-city-illustration/",
+      "note": "Coupe de Hitomi Terasawa, images courtesy Greg Jensen."
+    }
+  ],
+  "pistes_non_explorees": [
+    "Surviving Mars : aucun plan ou coupe d'intérieur trouvé (wiki fan en texte seul, surviving-mars-relaunched-wiki.pages.dev/domes). Non résolu.",
+    "Dead Space (USG Ishimura) : aucun plan officiel trouvé ; reconstitution fan Space Engineers et wiki (deadspace.fandom.com) à ouvrir. Non résolu.",
+    "Starfield, Space Engineers, Kerbal : non recherchés.",
+    "Ron Cobb, Chris Foss, Moebius : non recherchés (Ron Cobb non lié à l'archive Archigram).",
+    "Ghost in the Shell, Cowboy Bebop : non recherchés.",
+    "Kikutake : coupes Designboom (pylônes océaniques) et archive Centre Pompidou (1958-1963) à ouvrir.",
+    "Kowloon : publication de Kani (2008 selon une source), non vérifiée.",
+    "NTRS (ntrs.nasa.gov) renvoie 403 : rapport NASA SP-413 à chercher sur nss.org, archive.org ou lpi.usra.edu.",
+    "Asteromo (Soleri) : Paolo Soleri Archives, plans originaux ; ACSA PDF non lisible.",
+    "Metabolisme : Kurokawa (Nakagin, Helix) et Kikutake sont couverts ; Tange couvert ; Expo 70 non recherché."
+  ]
+}
