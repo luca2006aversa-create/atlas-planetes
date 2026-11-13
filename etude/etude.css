@@ -142,3 +142,5 @@ table.temps thead th { font-weight:600; color:var(--doux); }
 table.temps tbody th { text-align:left; font-weight:600; }
 table.temps small { font-weight:400; color:var(--doux); }
 table.temps td:nth-child(3) { background:#fbeee8; }
+
+body.video .kb { display:none; }

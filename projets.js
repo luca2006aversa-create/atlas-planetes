@@ -214,7 +214,7 @@ export function initProjets(root) {
       box.innerHTML='<p class="pj-ctl-nom">'+o.F.nom+'</p>'+o.res.map(function(r){
         var v=r.valeur!=null&&r.seuil!=null?' <span class="pj-mono">'+r.valeur+' / '+r.seuil+(r.unite?' '+r.unite:'')+'</span>':'';
         return '<div class="pj-ctl-l pj-'+(r.etat==='?'?'inc':r.etat)+'"><b>'+SYM[r.etat]+'</b><span>'+r.nom+v+'<small>'+(r.statut||'')+' '+(r.detail||'')+'</small></span></div>'}).join('')+
-        '<p class="pj-ph">● lu dans la source · ◇ calculé · ▨ hypothèse. Détail : <a href="projets/controle.html?fiche='+S.fiche+'" target="_blank">page Contrôle</a> (fiche d\'origine)</p>';
+        '<p class="pj-ph">● lu dans la source · ◇ calculé · ▨ hypothèse. Détail : <a href="projets/controle.html?fiche='+S.fiche+'">page Contrôle</a> (fiche d\'origine)</p>';
       J.innerHTML=[['✓',n.ok,'inherit'],['✗',n.non,'#e4572e'],['?',n['?'],'inherit;opacity:.6']].map(function(k){return '<div class="pj-jauge pj-compte"><b style="color:'+k[2]+'">'+k[1]+'</b><span>'+k[0]+'</span></div>'}).join('');
     }).catch(function(e){box.innerHTML='<p class="pj-ph">Contrôle indisponible : '+e.message+'</p>'});
   }
@@ -228,7 +228,7 @@ export function initProjets(root) {
         return '<div class="pj-abri-l"><span>'+(z.abri?'✓ ':'✗ ')+z.nom+'<small>'+z.element+' · '+z.mSv_j.toFixed(2)+' mSv/j ◇</small></span>'+
           '<span><span class="pj-barre" title="épaisseur minimale traversée"><i class="'+(z.min<30?'pj-faible':'')+'" style="width:'+pc(z.min||0)+'"></i><b style="left:'+pc(o.seuil)+'"></b><b style="left:'+pc(300)+'"></b></span>'+
           '<small>min '+z.min+' g/cm² · '+z.faible+' % du ciel sous 30 g/cm²</small></span></div>'}).join('')+
-        '<p class="pj-ph">Barre : épaisseur minimale de régolithe vue depuis l\'espace (0 à '+MAX+' g/cm²), traits à '+o.seuil+' (abri éruption ●) et 300 g/cm². Dose : rayons cosmiques, '+o.dose.s+' MATTHIA2024, par secteurs ◇. 1 500 directions par point. <a href="projets/rayons.html" target="_blank">page Radiations</a></p>';
+        '<p class="pj-ph">Barre : épaisseur minimale de régolithe vue depuis l\'espace (0 à '+MAX+' g/cm²), traits à '+o.seuil+' (abri éruption ●) et 300 g/cm². Dose : rayons cosmiques, '+o.dose.s+' MATTHIA2024, par secteurs ◇. 1 500 directions par point. <a href="projets/rayons.html">page Radiations</a></p>';
       var ok=o.zones.filter(function(z){return z.abri}).length,pire=Math.max.apply(null,o.zones.map(function(z){return z.faible||0})),dmax=Math.max.apply(null,o.zones.map(function(z){return z.mSv_j||0}));
       J.innerHTML=[[ok+'/'+o.zones.length,'sous abri'],[pire+' %','pire ciel ouvert'],[dmax.toFixed(2),'mSv/j max']].map(function(k){return '<div class="pj-jauge pj-compte"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
     }).catch(function(e){box.innerHTML='<p class="pj-ph">Abri indisponible : '+e.message+'</p>'});

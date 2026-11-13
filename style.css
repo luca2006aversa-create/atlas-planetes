@@ -79,7 +79,7 @@ input[type=range] { width:100%; accent-color:var(--vif); }
 .missions-bas .liste { max-height:360px; }
 #premieres .item b { min-width:42px; display:inline-block; }
 @media (max-width: 800px) {
-  header { height:auto; min-height:46px; flex-wrap:wrap; padding:4px 12px; } header .note { display:none; } main { top:88px; }
+  main { top:46px; }
   .missions-bas { grid-template-columns:1fr; }
   .panneau { width:calc(100% - 24px); max-height:45%; }
   .fiche-mission { width:calc(100% - 24px); top:auto; bottom:12px; max-height:45%; }

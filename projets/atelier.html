@@ -10,7 +10,7 @@
   .haut { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; padding: 12px 16px 0; }
   .haut h1 { font-size: 20px; margin: 0; }
   .haut nav { font-size: 13px; } .haut nav a { color: var(--texte-2); margin-right: 10px; }
-  .grille { display: grid; grid-template-columns: 170px minmax(0, 1fr) 300px; gap: 12px; padding: 12px 16px 24px; height: calc(100vh - 70px); box-sizing: border-box; }
+  .grille { display: grid; grid-template-columns: 170px minmax(0, 1fr) 300px; gap: 12px; padding: 12px 16px 24px; height: calc(100vh - 116px); box-sizing: border-box; }
   .liste { display: flex; flex-direction: column; gap: 5px; overflow-y: auto; }
   .liste .dom { font: 600 11.5px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--texte-2); margin: 8px 0 2px; }
   .liste button { text-align: left; font: 13px var(--sans); background: var(--surface); color: var(--texte); border: 1px solid var(--filet); border-radius: 8px; padding: 6px 9px; cursor: pointer; }
@@ -59,13 +59,13 @@
   .actions button, .actions a { font: 600 12.5px var(--sans); background: var(--surface-2); color: var(--texte); border: 1px solid var(--filet); border-radius: 6px; padding: 6px 10px; cursor: pointer; text-decoration: none; display: inline-block; margin: 2px 4px 2px 0; }
   @media (max-width: 860px) { .grille { grid-template-columns: 1fr; height: auto; } .scene { height: 360px; } .liste { flex-direction: row; flex-wrap: wrap; } .liste .dom { width: 100%; } }
 </style>
+<script src="../nav.js" defer></script>
 </head>
 <body>
 <div class="haut">
   <h1>Atelier</h1>
   <select id="fiches" aria-label="Fiche projet"></select>
   <span class="note" id="nomfiche"></span>
-  <nav><a href="../">← Atlas</a><a href="site3d.html">Habitat 3D</a><a href="controle.html" id="lien-controle">Contrôles</a><a href="rayons.html">Radiations</a><a href="../references/">Références</a></nav>
 </div>
 <div class="grille">
   <div class="liste" id="liste"></div>
@@ -101,7 +101,7 @@ const FICHES = [['pole-sud-esquisse.json', 'Esquisse'], ['pole-sud-fenetre-prote
 { const s = document.getElementById('fiches');
   s.innerHTML = FICHES.map(([f, n]) => `<option value="${f}" ${f === ficheNom ? 'selected' : ''}>${n}</option>`).join('') + (FICHES.some(x => x[0] === ficheNom) ? '' : `<option selected>${ficheNom}</option>`);
   s.onchange = () => { location.search = '?fiche=' + encodeURIComponent(s.value); }; }
-document.getElementById('lien-controle').href = `controle.html?fiche=${encodeURIComponent(ficheNom)}`;
+{ const lc = document.getElementById("lien-controle"); if (lc) lc.href = `controle.html?fiche=${encodeURIComponent(ficheNom)}`; }
 const E = Object.fromEntries(F.elements.map(e => [e.id, e]));
 let sel = E[Q.get('el')] ? Q.get('el') : (F.assemblage?.ancre || F.elements[0].id);
 let mode = 'seul';
