@@ -10,7 +10,7 @@
   // [nom, adresse depuis atlas/, vue de l'accueil]. La première page d'un groupe est celle qui s'ouvre.
   var GROUPES = [
     { nom: 'Explorer', pages: [['Système', '?vue=systeme', 'systeme'], ['Planètes', '?vue=globe', 'globe'], ['Missions', '?vue=missions', 'missions']] },
-    { nom: 'La Lune', pages: [['Étude du pôle sud', 'etude/']] },
+    { nom: 'Études', pages: [['Étude du pôle sud de la Lune', 'etude/']] },
     { nom: 'Projet', pages: [['3D', 'projets/site3d.html'], ['Fichier', '?vue=projets', 'projets'], ['Atelier', 'projets/atelier.html'], ['Contrôles', 'projets/controle.html'], ['Radiations', 'projets/rayons.html']] },
     { nom: 'Références', pages: [['Références', 'references/']] }
   ];

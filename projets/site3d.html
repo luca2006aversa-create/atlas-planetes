@@ -20,6 +20,14 @@
          text-shadow: 0 0 4px #000, 0 0 2px #000; }
   .etq small { font-weight: 400; color: #bbb; }
   .titre nav { margin-top: 6px; font-size: 12px; } .titre nav a { color: #f2b29c; margin-right: 10px; }
+  .titre { max-height: calc(100vh - 170px); overflow-y: auto; }
+  .desc { margin-top: 8px; font-size: 12px; line-height: 1.45; color: #ddd; }
+  .desc summary { cursor: pointer; color: #f2b29c; font-weight: 600; }
+  .desc dl { display: grid; grid-template-columns: 74px 1fr; gap: 4px 8px; margin: 6px 0 0; }
+  .desc dt { color: #e4572e; font-weight: 600; } .desc dd { margin: 0; }
+  .desc .chiffres { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
+  .desc .chiffres span { display: inline; background: #262626; border-radius: 4px; padding: 2px 6px; color: #f2ede4; font: 11px var(--mono); }
+  .desc a { color: #f2b29c; }
   body.embed .titre { display: none; }
   body.embed .barre { left: 8px; right: 8px; bottom: 8px; }
   .boussole { position: fixed; right: 12px; top: 90px; width: 120px; height: 120px; }
@@ -29,7 +37,20 @@
 <body>
 <div id="vue"></div>
 <div class="titre"><b>Habitat de crête · pôle sud lunaire</b>
-  <span id="info">Relief LOLA 20 m (4 km) et 120 m (160 km), courbure de la Lune comprise. 5 044 étoiles (magnitude ≤ 6). Glisser pour tourner, molette pour zoomer.</span></div>
+  <span id="info">Relief LOLA 20 m (4 km) et 120 m (160 km), courbure de la Lune comprise. 5 044 étoiles (magnitude ≤ 6). Glisser pour tourner, molette pour zoomer.</span>
+  <details class="desc" open><summary>Le projet</summary>
+    <dl>
+      <dt>Quoi</dt><dd>Un habitat pour 4 personnes pendant 30 jours : 3 modules de 12 × 8 m (dormir · vivre · travailler), 2 sas, une serre à salades, enterrés sous 3 m de régolithe.</dd>
+      <dt>Où</dt><dd>Sur une crête à l'ouest du cratère Shackleton, à 1 957 m d'altitude, sur un replat (pente 1,7°).</dd>
+      <dt>Pourquoi</dt><dd>C'est le point que l'étude a retenu : du soleil presque tout le temps pour l'énergie, la Terre en vue pour la radio, la glace des ombres permanentes pas loin.</dd>
+      <dt>Comment</dt><dd>La butte arrête les radiations et les écarts de température. Une fente, la fenêtre-Terre, suit la trajectoire de la Terre dans le ciel : c'est le point faible de la protection.</dd>
+    </dl>
+  </details>
+  <details class="desc"><summary>Ce que dit l'étude (le projet en est la suite)</summary>
+    <p style="margin:6px 0">L'étude <a href="../etude/">Choisir un site au pôle sud de la Lune</a> croise le relief, la lumière, les ombres et la glace, les pentes et la vue sur la Terre, puis place le programme par des règles écrites.</p>
+    <div class="chiffres"><span>☀ 89 % du temps</span><span>☀ 97 % à 20 m</span><span>Terre en vue 63 %</span><span>pente 1,7°</span><span>glace à 6,5 km</span><span>atterrissage à 2,6 km</span></div>
+    <p style="margin:6px 0">Ce projet dessine l'habitat posé sur ce point : c'est une esquisse, pas un dimensionnement.</p>
+  </details></div>
 <svg class="boussole" id="boussole" viewBox="-60 -60 120 120"></svg>
 <div id="etiquettes"></div>
 <div class="barre">
