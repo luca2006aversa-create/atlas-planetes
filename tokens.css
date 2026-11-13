@@ -9,7 +9,7 @@
   --cta:#e4572e; --cta-texte:#141414;
   --sans:Inter, "Segoe UI", system-ui, sans-serif;
   --mono:"Atkinson Hyperlegible Mono", "Cascadia Mono", Consolas, ui-monospace, monospace;
-  --t-corps:14px; --t-etiq:12.5px; --e1:8px; --e2:16px; --e3:24px;
+  --t-corps:12.5px; --t-etiq:11px; --e1:8px; --e2:16px; --e3:24px;
 }
 /* clair = la planche */
 :root, [data-theme="clair"] {

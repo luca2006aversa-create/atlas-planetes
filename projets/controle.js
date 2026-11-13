@@ -48,7 +48,7 @@ const TESTS = {
   sorties(F, r) {
     const mauvais = [];
     for (const e of F.elements.filter(e => e.pressurise)) {
-      const n = (F.liaisons || []).filter(l => l.de === e.id || l.vers === e.id).length + (val(e.sorties) || 0);
+      const n = (F.liaisons || []).filter(l => [l.de, l.vers].some(x => String(x).split('.')[0] === e.id)).length + (val(e.sorties) || 0);   // liaison « M1 » ou « M1.B » (port)
       if (n < r.params.min) mauvais.push(`${e.id} (${n})`);
     }
     return { etat: mauvais.length ? 'non' : 'ok', valeur: mauvais.length, seuil: 0, unite: 'module(s) en défaut',
@@ -115,6 +115,31 @@ const TESTS = {
       detail: `régime « ${regime} » ; puissance de la serre ≈ ${kW.toFixed(0)} kW`,
       statut: pire(stat(S), ...serres.map(e => stat(e.surface_culture_m2))) };
   },
+  // Budget de dose : Σ (heures par jour dans chaque espace × dose de l'espace) ≤ quota par jour
+  budget_dose(F, r, R, X) {
+    const Z = X && X.rayons && X.rayons.zones;
+    if (!Z) return { etat: '?', detail: 'dose des espaces non calculée : node rayons.js ' + (X && X.fiche || 'fiche.json'), statut: '▨' };
+    const j = val(F.programme.duree_jours), part = R.hypotheses.part_carriere_mission, lim = r.params.limite_carriere_mSv;
+    const quota = F.programme.quota_dose_mSv_jour != null ? val(F.programme.quota_dose_mSv_jour) : val(lim) * val(part) / j;
+    const sQ = F.programme.quota_dose_mSv_jour != null ? stat(F.programme.quota_dose_mSv_jour) : pire(stat(lim), stat(part), stat(F.programme.duree_jours));
+    const fns = F.programme.fonctions || [], st = [sQ, R.hypotheses.dose_gcr.s, '◇'];
+    let dose = 0, H = 0;
+    const zones = fns.map(fn => {
+      const z = Z.find(x => x.id === fn.id) || {}, h = val(fn.h_jour);
+      if (h == null || z.mSv_h == null) return { id: fn.id, nom: fn.nom, h: null };
+      st.push(stat(fn.h_jour));
+      dose += h * z.mSv_h; H += h;
+      return { id: fn.id, nom: fn.nom, element: fn.element, h, mSv_h: z.mSv_h, dose: h * z.mSv_h, abri: z.abri_eruption, min: z.min_g_cm2 };
+    });
+    for (const z of zones) if (z.h != null) z.h_max = Math.min(24, Math.max(0, (quota - (dose - z.dose)) / z.mSv_h));
+    const manque = zones.filter(z => z.h == null).map(z => z.id), abris = zones.filter(z => z.abri).map(z => z.nom);
+    const exposes = fns.filter(fn => fn.abri_requis && !(zones.find(z => z.id === fn.id) || {}).abri).map(fn => fn.nom);
+    const det = [`${H} h / 24 attribuées`, manque.length ? `sans heures : ${manque.join(', ')}` : '',
+      exposes.length ? `doit être un abri et ne l'est pas : ${exposes.join(', ')}` : '',
+      abris.length ? `abri éruption (≥ ${val(R.hypotheses.abri_eruption_g_cm2)} g/cm² partout) : ${abris.join(', ')}` : 'aucun abri contre les éruptions !'].filter(Boolean).join(' ; ');
+    return { etat: !abris.length || exposes.length || H > 24 ? 'non' : manque.length || H < 24 ? '?' : dose <= quota ? 'ok' : 'non',
+      valeur: +dose.toFixed(2), seuil: +quota.toFixed(2), unite: 'mSv/jour', detail: det, zones, statut: pire(...st) };
+  },
   // Consommables à apporter (information, pas un seuil)
   consommables(F, r) {
     const n = val(F.programme.equipage), j = val(F.programme.duree_jours), out = [];
@@ -127,11 +152,12 @@ const TESTS = {
   },
 };
 
-export function controler(F, R) {
+// X (facultatif) : { rayons: contenu de rayons-<fiche>.json, fiche: nom du fichier }
+export function controler(F, R, X) {
   return R.regles.map(r => {
     const t = TESTS[r.test];
     let res;
-    try { res = t ? t(F, r, R) : { etat: '?', detail: 'test inconnu : ' + r.test }; }
+    try { res = t ? t(F, r, R, X) : { etat: '?', detail: 'test inconnu : ' + r.test }; }
     catch (err) { res = { etat: '?', detail: 'fiche incomplète : ' + err.message }; }
     return { id: r.id, nom: r.nom, domaine: r.domaine, source: r.source, ...res };
   });
@@ -145,8 +171,12 @@ if (typeof process !== 'undefined' && process.argv && import.meta.url === new UR
   const F = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
   const R = JSON.parse(fs.readFileSync(process.argv[3] || path.join(ici, 'regles.json'), 'utf8'));
   const sym = { ok: '✓', non: '✗', info: 'i', '?': '?' };
+  const fr = path.join(path.dirname(process.argv[2]), 'rayons-' + path.basename(process.argv[2]));
+  const X = { fiche: path.basename(process.argv[2]), rayons: fs.existsSync(fr) ? JSON.parse(fs.readFileSync(fr, 'utf8')) : null };
   console.log(`${F.nom}\n`);
-  for (const x of controler(F, R)) {
+  for (const x of controler(F, R, X)) {
     console.log(`${sym[x.etat]} ${x.statut || ''} ${x.nom}` + (x.valeur != null && x.seuil != null ? ` : ${x.valeur} / ${x.seuil} ${x.unite}` : '') + `\n    ${x.detail}`);
+    for (const z of x.zones || []) if (z.h != null)
+      console.log(`      ${z.nom.padEnd(36)} ${String(z.h).padStart(4)} h × ${z.mSv_h.toFixed(4)} mSv/h = ${z.dose.toFixed(3)}  (max ${z.h_max.toFixed(1)} h)${z.abri ? '  abri' : ''}`);
   }
 }

@@ -48,6 +48,28 @@ Un chiffre écrit seul compte comme ▨.
 Serre : `surface_culture_m2`. Butte : `forme: { type: "butte", couverture_m, talus_deg }`.
 Fente (ouverture taillée dans la butte) : `forme: { type: "fente", oeil_m: [x,y,z], largeur_oeil_m, hauteur_oeil_m, az_deg: [min,max], el_deg: [min,max], direction: "+y" }`.
 
+### Temps passé dans chaque espace (budget de dose)
+`programme.fonctions[]` : `{ id, nom, element, h_jour, abri_requis?, point_m? }`. `h_jour` = heures par jour dans l'espace (total 24).
+`abri_requis: true` = l'espace doit protéger des éruptions solaires (≥ 10 g/cm² dans toutes les directions), par exemple pour dormir.
+`point_m` = point où l'on calcule la dose (sinon le centre de l'élément, à 1,5 m du sol). `programme.quota_dose_mSv_jour` (facultatif)
+remplace le quota calculé (limite de carrière × part acceptée ÷ durée). `node rayons.js fiche.json` calcule les µSv/h de chaque espace ;
+`controle.html` montre la journée (règle RAD-3). Pavillon léger en surface : `forme: { type: "dome", diametre_m }` (parois ignorées).
+
+### Ports et assemblage
+Chaque élément se dessine **dans son propre repère** : centre posé au sol, axe des cylindres horizontaux selon x.
+`ports` : les points d'amarrage (écoutille, porte), comme sur une station spatiale :
+```json
+"ports": [ { "id": "A", "face": "-x", "hauteur_m": 1, "diametre_m": { "v": 1, "s": "▨" }, "type": "ecoutille", "nom": "bout ouest" } ]
+```
+`face` : `+x -x +y -y` (sur l'enveloppe, à `hauteur_m` du sol), `+z` (dessus) ou `-z` (dessous). Pour un port ailleurs : `p: [x,y,z]` et `n: [nx,ny,nz]` (direction vers l'extérieur).
+`type` : `ecoutille` (entre volumes pressurisés) ou `porte` (vers l'extérieur ou un couloir).
+
+Une liaison entre ports s'écrit `{ "de": "M1.B", "vers": "M2.A", "type": "jonction", "ecart_m": 1 }` (`ecart_m` = longueur du tunnel ou du couloir, 0 par défaut).
+`assemblage.ancre` : l'élément qui garde sa `position_m` ; `assemblage.js` place les autres de proche en proche pour que les ports reliés se fassent face.
+`node assemblage.js fiche.json` compare les positions écrites et celles des ports, et signale les ports libres, les écoutilles de tailles ou de types différents.
+Une liaison sans port (`"de": "M1"`) reste permise : elle compte pour le parcours mais ne place rien.
+`atelier.html?fiche=…&el=M2` montre un élément seul, ses ports et ses contrôles ; on peut changer ses dimensions et voir l'assemblage suivre.
+
 ### `arrivee.mode`
 | mode | Sens | Conséquence |
 |---|---|---|
@@ -61,6 +83,7 @@ Fente (ouverture taillée dans la butte) : `forme: { type: "fente", oeil_m: [x,y
 x = le long de la crête, y = vers la Terre, z = haut. Les modules cylindriques horizontaux ont leur axe selon x.
 
 ## Outils qui lisent la fiche
+- `assemblage.js` / `atelier.html` : ports, assemblage, un élément à la fois.
 - `controle.js` / `controle.html` : règles ✓ / ✗ (`regles.json`).
 - `rayons.js` / `rayons.html` : épaisseur de régolithe par direction, points faibles (pas une dose).
 - `grasshopper/epaisseurs_rayons.py` : même calcul dans Rhino 8, sur la géométrie dessinée.

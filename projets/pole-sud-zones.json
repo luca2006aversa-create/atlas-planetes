@@ -1,0 +1,815 @@
+{
+ "format": "kibsu-projet/0.1",
+ "nom": "Habitat de crête, pôle sud lunaire — zones selon le temps (abri enterré, serre et belvédère légers)",
+ "auteur": "Luca Aversa",
+ "date": "2026-11-13",
+ "note": "Variante « zones » : on dort et on travaille sous la butte (abri) ; la serre et le belvédère sont des pavillons légers en surface, sans régolithe, où l'on passe peu de temps. Les heures par espace forment le budget de dose (règle RAD-3).",
+ "site": {
+  "corps": "lune",
+  "etude": "etude/",
+  "xy_km": [
+   -11.3,
+   -12.18
+  ],
+  "alt_m": 1957,
+  "gravite_ms2": {
+   "v": 1.62,
+   "s": "◇",
+   "src": "valeur courante de la gravité lunaire"
+  },
+  "azimut_y_deg": {
+   "v": 14.1,
+   "s": "◇",
+   "src": "étude : axe de la crête à 104,1° ; +y du projet = 104,1 − 90 = 14,1° depuis le haut de la carte (longitude 0, la Terre en moyenne)"
+  }
+ },
+ "programme": {
+  "equipage": {
+   "v": 4,
+   "s": "▨"
+  },
+  "duree_jours": {
+   "v": 30,
+   "s": "▨"
+  },
+  "regime_serre": "salade",
+  "fonctions": [
+   {
+    "id": "dormir",
+    "nom": "Dormir",
+    "element": "M1",
+    "h_jour": {
+     "v": 9,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    },
+    "abri_requis": true
+   },
+   {
+    "id": "vivre",
+    "nom": "Manger, se réunir, regarder la Terre",
+    "element": "M2",
+    "h_jour": {
+     "v": 6,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
+   },
+   {
+    "id": "travailler",
+    "nom": "Laboratoire, exercice",
+    "element": "M3",
+    "h_jour": {
+     "v": 6.5,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
+   },
+   {
+    "id": "cultiver",
+    "nom": "Cultiver (serre de surface)",
+    "element": "SV2",
+    "h_jour": {
+     "v": 1.5,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
+   },
+   {
+    "id": "sortir",
+    "nom": "Entrer, sortir, poussière",
+    "element": "S1",
+    "h_jour": {
+     "v": 0.5,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
+   },
+   {
+    "id": "contempler",
+    "nom": "Contempler (belvédère)",
+    "element": "BV1",
+    "h_jour": {
+     "v": 0.5,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
+   },
+   {
+    "id": "secours",
+    "nom": "Sortie de secours",
+    "element": "S2",
+    "h_jour": {
+     "v": 0,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
+   }
+  ]
+ },
+ "atmosphere": {
+  "pression_kPa": {
+   "v": 56.5,
+   "s": "▨",
+   "src": "8,2 psia (exemple « atmosphère d'exploration » du NASA-STD-3001 V2, pas une exigence)"
+  },
+  "temperature_C": {
+   "v": 21,
+   "s": "▨"
+  }
+ },
+ "elements": [
+  {
+   "id": "M1",
+   "nom": "Module ouest (nuit)",
+   "type": "module",
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 12,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    -13,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     8,
+     12
+    ],
+    "vehicule": "starship_hls",
+    "lot": "envoi 1"
+   },
+   "montage": {
+    "etape": 2,
+    "moyen": "grue + robot"
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout ouest"
+    },
+    {
+     "id": "B",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout est"
+    }
+   ]
+  },
+  {
+   "id": "M2",
+   "nom": "Module central (vie, fenêtre-Terre)",
+   "type": "module",
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 12,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    0,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     8,
+     12
+    ],
+    "vehicule": "starship_hls",
+    "lot": "envoi 2"
+   },
+   "montage": {
+    "etape": 1,
+    "moyen": "grue + robot"
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout ouest"
+    },
+    {
+     "id": "B",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout est"
+    }
+   ]
+  },
+  {
+   "id": "M3",
+   "nom": "Module est (travail)",
+   "type": "module",
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 12,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    13,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     8,
+     12
+    ],
+    "vehicule": "starship_hls",
+    "lot": "envoi 3"
+   },
+   "montage": {
+    "etape": 3,
+    "moyen": "grue + robot"
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout ouest"
+    },
+    {
+     "id": "B",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout est"
+    }
+   ]
+  },
+  {
+   "id": "S1",
+   "nom": "Sas est (vers la route)",
+   "type": "sas",
+   "pressurise": false,
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 3,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 4,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    21,
+    0,
+    0
+   ],
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     3,
+     4
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 4"
+   },
+   "montage": {
+    "etape": 4,
+    "moyen": "robot"
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "vers le module"
+    },
+    {
+     "id": "B",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "porte",
+     "nom": "porte vers l'extérieur"
+    }
+   ],
+   "rotation_deg": 180
+  },
+  {
+   "id": "S2",
+   "nom": "Sas ouest (secours)",
+   "type": "sas",
+   "pressurise": false,
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 3,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 4,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    -21,
+    0,
+    0
+   ],
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     3,
+     4
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 5"
+   },
+   "montage": {
+    "etape": 4,
+    "moyen": "robot"
+   },
+   "note": "Correction du 13/11 : le module ouest était un cul-de-sac. Second chemin de sortie, à l'opposé du sas principal.",
+   "ports": [
+    {
+     "id": "A",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "vers le module"
+    },
+    {
+     "id": "B",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "porte",
+     "nom": "porte vers l'extérieur"
+    }
+   ]
+  },
+  {
+   "id": "SV1",
+   "nom": "Serre du module central",
+   "type": "serre",
+   "dans": "M2",
+   "pressurise": false,
+   "surface_culture_m2": {
+    "v": 8,
+    "s": "▨",
+    "src": "≥ 4 × 1,35 m² (BVAD, régime salade) ; étagères éclairées, 2 niveaux sur 4 m²"
+   },
+   "materiau": "étagères + LED",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     1.5,
+     2.2
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 4"
+   },
+   "montage": {
+    "etape": 6,
+    "moyen": "équipage"
+   },
+   "note": "La serre reste face au puits : la lumière de la Terre descend par le périscope."
+  },
+  {
+   "id": "F1",
+   "nom": "Fente vers la Terre (depuis la chambre à miroirs)",
+   "type": "ouverture",
+   "dans": "B1",
+   "forme": {
+    "type": "fente",
+    "oeil_m": [
+     3,
+     2.2,
+     9.6
+    ],
+    "largeur_oeil_m": 0.8,
+    "hauteur_oeil_m": 0.6,
+    "az_deg": [
+     -22.95,
+     -5.25
+    ],
+    "el_deg": [
+     -3.4,
+     7.25
+    ],
+    "direction": "+y"
+   },
+   "note": "Même ouverture angulaire que la fente directe, mais elle commence 1,6 m au-dessus du plafond du module."
+  },
+  {
+   "id": "P1",
+   "nom": "Puits du périscope",
+   "type": "ouverture",
+   "dans": "M2",
+   "forme": {
+    "type": "boite",
+    "centre_m": [
+     3,
+     2.2,
+     8.5
+    ],
+    "dim_m": [
+     1,
+     1,
+     2.4
+    ]
+   },
+   "note": "Du plafond du module à la chambre à miroirs. Miroir à 45° en bas (vers l'œil) et en haut (vers la fente)."
+  },
+  {
+   "id": "C1",
+   "nom": "Chambre à miroirs",
+   "type": "ouverture",
+   "dans": "B1",
+   "forme": {
+    "type": "boite",
+    "centre_m": [
+     3,
+     2.2,
+     9.6
+    ],
+    "dim_m": [
+     1.2,
+     1.2,
+     0.9
+    ]
+   }
+  },
+  {
+   "id": "B1",
+   "nom": "Butte de régolithe",
+   "type": "protection",
+   "materiau": "régolithe local",
+   "forme": {
+    "type": "butte",
+    "couverture_m": 3,
+    "talus_deg": {
+     "v": 35,
+     "s": "▨"
+    }
+   },
+   "arrivee": {
+    "mode": "in_situ"
+   },
+   "montage": {
+    "etape": 5,
+    "moyen": "engins de terrassement"
+   }
+  },
+  {
+   "id": "CH1",
+   "nom": "Chapeau de régolithe sur le périscope",
+   "type": "protection",
+   "materiau": "régolithe local",
+   "forme": {
+    "type": "chapeau",
+    "centre_m": [
+     3,
+     2.2
+    ],
+    "rayon_m": {
+     "v": 3,
+     "s": "▨"
+    },
+    "hauteur_m": {
+     "v": 1.5,
+     "s": "▨"
+    }
+   },
+   "arrivee": {
+    "mode": "in_situ"
+   },
+   "montage": {
+    "etape": 5,
+    "moyen": "engins de terrassement"
+   },
+   "note": "Cône de 3 m de rayon et 1,5 m de haut posé sur la butte, au-dessus de la chambre à miroirs : environ 14 m³, soit environ 21 t de régolithe à 1,5 t/m³ (calcul). Plus petite taille testée qui donne plus de 300 g/cm² dans toutes les directions (essais : r 2-4 m, h 0,5-1,5 m). La fente le traverse."
+  },
+  {
+   "id": "BV1",
+   "nom": "Belvédère (contempler le ciel, la Terre, le paysage)",
+   "type": "module",
+   "forme": {
+    "type": "dome",
+    "diametre_m": {
+     "v": 6,
+     "s": "▨"
+    }
+   },
+   "position_m": [
+    46,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "sorties": 1,
+   "materiau": "membrane gonflable multicouche (à choisir)",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "gonflable",
+    "dimensions_vol_m": [
+     {
+      "v": 2.5,
+      "s": "▨"
+     },
+     {
+      "v": 3,
+      "s": "▨"
+     }
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 5"
+   },
+   "montage": {
+    "etape": 7,
+    "moyen": "équipage + gonflage"
+   },
+   "note": "Pavillon vitré sans régolithe : vue directe, temps limité.",
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "porte",
+     "nom": "entrée du couloir"
+    }
+   ]
+  },
+  {
+   "id": "SV2",
+   "nom": "Serre de surface (légère)",
+   "type": "serre",
+   "forme": {
+    "type": "dome",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    }
+   },
+   "position_m": [
+    -46,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "sorties": 1,
+   "materiau": "membrane gonflable multicouche (à choisir)",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "gonflable",
+    "dimensions_vol_m": [
+     {
+      "v": 2.5,
+      "s": "▨"
+     },
+     {
+      "v": 3,
+      "s": "▨"
+     }
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 6"
+   },
+   "montage": {
+    "etape": 7,
+    "moyen": "équipage + gonflage"
+   },
+   "surface_culture_m2": {
+    "v": 20,
+    "s": "▨",
+    "src": "2 niveaux sur ~10 m² (proposé)"
+   },
+   "note": "Lumière naturelle possible ; on y passe peu de temps.",
+   "ports": [
+    {
+     "id": "A",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "porte",
+     "nom": "entrée du couloir"
+    }
+   ]
+  }
+ ],
+ "liaisons": [
+  {
+   "de": "S2.A",
+   "vers": "M1.A",
+   "type": "jonction"
+  },
+  {
+   "de": "M1.B",
+   "vers": "M2.A",
+   "type": "jonction",
+   "ecart_m": {
+    "v": 1,
+    "s": "▨",
+    "src": "tunnel de 1 m entre modules : hypothèse de dessin"
+   }
+  },
+  {
+   "de": "M2.B",
+   "vers": "M3.A",
+   "type": "jonction",
+   "ecart_m": {
+    "v": 1,
+    "s": "▨",
+    "src": "tunnel de 1 m entre modules : hypothèse de dessin"
+   }
+  },
+  {
+   "de": "M3.B",
+   "vers": "S1.A",
+   "type": "jonction"
+  },
+  {
+   "de": "S1.B",
+   "vers": "BV1.A",
+   "type": "couloir couvert",
+   "ecart_m": {
+    "v": 20,
+    "s": "▨",
+    "src": "longueur du couloir couvert : hypothèse de dessin"
+   }
+  },
+  {
+   "de": "S2.B",
+   "vers": "SV2.A",
+   "type": "couloir couvert",
+   "ecart_m": {
+    "v": 19,
+    "s": "▨",
+    "src": "longueur du couloir couvert : hypothèse de dessin"
+   }
+  }
+ ],
+ "protection": {
+  "materiau": "régolithe",
+  "epaisseur_m": {
+   "v": 3,
+   "s": "▨",
+   "src": "esquisse de l'étude, à dimensionner"
+  }
+ },
+ "assemblage": {
+  "ancre": "M2",
+  "note": "M2 garde sa position écrite ; les autres éléments reliés par des ports sont placés par l'assemblage (assemblage.js)."
+ }
+}

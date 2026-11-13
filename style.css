@@ -6,13 +6,13 @@ a { color:inherit; }
 
 header { height:46px; display:flex; align-items:center; gap:12px; padding:0 14px; background:var(--fond); color:var(--texte); border-bottom:1px solid var(--filet); }
 header .logo { width:32px; height:32px; border-radius:8px; display:block; }
-header b { font-size:15px; font-weight:600; }
+header b { font-size:13px; font-weight:600; }
 header nav { display:flex; gap:2px; margin-left:8px; }
 header nav button, header nav a { font:inherit; border:0; background:none; padding:6px 11px; border-radius:6px; cursor:pointer; color:var(--texte); text-decoration:none; }
 header nav button:hover, header nav a:hover { background:var(--surface-2); }
 header nav .actif { background:var(--plein-fond); color:var(--plein-texte); }
 header .note { margin-left:auto; color:var(--texte-2); font-size:var(--t-etiq); }
-#theme { border:1px solid var(--filet); background:var(--surface); color:var(--texte); width:32px; height:32px; border-radius:8px; cursor:pointer; font-size:15px; line-height:1; padding:0; }
+#theme { border:1px solid var(--filet); background:var(--surface); color:var(--texte); width:32px; height:32px; border-radius:8px; cursor:pointer; font-size:13px; line-height:1; padding:0; }
 main { position:absolute; top:46px; left:0; right:0; bottom:0; }
 .vue { position:absolute; inset:0; display:none; }
 .vue.actif { display:block; }
@@ -29,7 +29,7 @@ select { background:var(--surface); border:1px solid var(--filet); border-radius
 .panneau button.actif, .filtres button.actif { background:var(--plein-fond); color:var(--plein-texte); border-color:var(--plein-fond); }
 .boutons { display:flex; flex-wrap:wrap; gap:4px; }
 .ligne { display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
-.date { font:700 20px/1.2 var(--sans); }
+.date { font:700 16px/1.2 var(--sans); }
 input[type=range] { width:100%; accent-color:var(--vif); }
 .liste { max-height:220px; overflow:auto; }
 .liste .item.estompe { opacity:.35; }
@@ -42,15 +42,15 @@ input[type=range] { width:100%; accent-color:var(--vif); }
 .fiche small { color:var(--texte-2); display:block; margin-top:6px; }
 #etiquettes { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
 #etiquettes span { position:absolute; transform:translate(8px,-50%); color:#e9e6dd; font-size:var(--t-etiq); white-space:nowrap; pointer-events:auto; cursor:pointer; text-shadow:0 0 4px #000; }
-#etiquettes span.sonde { color:#fff; font-size:12px; opacity:.85; cursor:default; }
+#etiquettes span.sonde { color:#fff; font-size:11px; opacity:.85; cursor:default; }
 #etiquettes span.ouvrable:hover { text-decoration:underline; }
 
 .fiche-mission { position:absolute; right:12px; top:12px; width:340px; max-height:calc(100% - 24px); overflow:auto; background:var(--fond); color:var(--texte);
   border-radius:10px; padding:14px 16px; box-shadow:var(--ombre); z-index:11; }
-.fiche-mission h3 { margin:0 0 4px; font-size:17px; }
+.fiche-mission h3 { margin:0 0 4px; font-size:14px; }
 .fiche-mission .meta { color:var(--texte-2); font-size:var(--t-etiq); margin-bottom:8px; }
 .fiche-mission ul { padding-left:18px; margin:6px 0; }
-.fiche-mission .fermer { position:absolute; right:10px; top:8px; border:0; background:none; font-size:20px; cursor:pointer; }
+.fiche-mission .fermer { position:absolute; right:10px; top:8px; border:0; background:none; font-size:16px; cursor:pointer; }
 .fiche-mission .actions { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
 .fiche-mission .actions button, .fiche-mission .actions a { border:1px solid var(--filet); background:var(--surface); color:var(--texte); border-radius:6px; padding:4px 9px; cursor:pointer; text-decoration:none; font-size:var(--t-etiq); }
 .fiche-mission .actions button.principal, .panneau button#lecture { background:var(--cta); color:var(--cta-texte); border-color:var(--cta); font-weight:600; }

@@ -2,7 +2,7 @@
 // ATTENTION : modèles JOUETS (voir refonte/PROJETS.md) : les formes des courbes sont justes (géométrie du soleil),
 // les valeurs de radiation et de chaleur sont inventées et ne doivent pas être lues comme des données.
 // Généré depuis refonte/maquettes/_src/projet.body.html puis maintenu ici.
-const HTML = "<div class=\"pj-app\">\n <aside class=\"pj-params\" aria-label=\"Paramètres\">\n  <h2>Projet</h2>\n  <div class=\"pj-lieux\" id=\"lieux\" role=\"group\" aria-label=\"Lieu\">\n    <button data-s=\"lune\" class=\"on\"><i style=\"background:#c8c6be\"></i>Lune</button>\n    <button data-s=\"mars\"><i style=\"background:#8a8a8a\"></i>Mars</button>\n    <button data-s=\"terre\"><i style=\"background:#e9e6dd\"></i>Terre</button>\n  </div>\n  <div class=\"pj-p\"><label for=\"R\">Rayon</label><output id=\"oR\"></output><input type=\"range\" id=\"R\" min=\"3\" max=\"8\" step=\".5\" value=\"4\"></div>\n  <div class=\"pj-p\"><label for=\"H\">Hauteur</label><output id=\"oH\"></output><input type=\"range\" id=\"H\" min=\"2.5\" max=\"6\" step=\".5\" value=\"3\"></div>\n  <div class=\"pj-p\"><label for=\"E\">Régolithe</label><output id=\"oE\"></output><input type=\"range\" id=\"E\" min=\"0\" max=\"3\" step=\".25\" value=\"1\"></div>\n  <div class=\"pj-p\"><label for=\"O\">Orientation</label><output id=\"oO\"></output><input type=\"range\" id=\"O\" min=\"0\" max=\"350\" step=\"10\" value=\"0\"></div>\n  <div class=\"pj-p\"><label for=\"N\">Modules</label><output id=\"oN\"></output><input type=\"range\" id=\"N\" min=\"1\" max=\"4\" step=\"1\" value=\"2\"></div>\n  <button class=\"pj-bouton\" id=\"raz\" type=\"button\">↺ Valeurs de départ</button>\n  <span class=\"pj-ph\">Maquette : modèle jouet. Les formes des courbes sont justes, les valeurs ne sont pas sourcées.</span>\n </aside>\n <div class=\"pj-zone\">\n  <section class=\"pj-vue\" aria-label=\"Vue du projet\">\n    <div class=\"pj-onglets\" id=\"vues\" role=\"group\" aria-label=\"Vue\"><button data-v=\"plan\" class=\"on\">Plan</button><button data-v=\"coupe\">Coupe</button><button data-v=\"3d\">3D</button></div>\n    <svg id=\"vp\" viewBox=\"0 0 800 520\" preserveAspectRatio=\"xMidYMid meet\"></svg>\n  </section>\n  <section class=\"pj-sim\" aria-label=\"Simulations\">\n    <div class=\"pj-haut\">\n      <div class=\"pj-onglets\" id=\"sims\" role=\"group\" aria-label=\"Simulation\"><button data-m=\"lum\" class=\"on\">☀ Lumière</button><button data-m=\"rad\" >☢ Abri</button><button data-m=\"chal\">◐ Chaleur</button></div>\n      <div class=\"pj-cycle\"><button class=\"pj-bouton pj-plein\" id=\"lance\" type=\"button\">▶ Lancer</button><input type=\"range\" id=\"C\" min=\"0\" max=\"1000\" value=\"250\" aria-label=\"Moment du cycle\"><span class=\"pj-mono\" id=\"oC\"></span></div>\n    </div>\n    <svg id=\"ch\" viewBox=\"0 0 800 240\" role=\"img\" aria-label=\"Courbe de simulation\"></svg>\n    <div class=\"pj-jauges\" id=\"jauges\"></div>\n    <span class=\"pj-leg\" id=\"leg\"></span>\n  </section>\n </div>\n</div>";
+const HTML = "<div class=\"pj-app\">\n <aside class=\"pj-params\" aria-label=\"Paramètres\">\n  <h2>Projet</h2>\n  <div class=\"pj-fiche\"><span class=\"pj-ph\">Fiche réelle (pôle sud) : Site 3D, Contrôle, Abri</span>\n  <div class=\"pj-lieux\" id=\"fiches\" role=\"group\" aria-label=\"Fiche\"><button data-f=\"pole-sud-esquisse.json\" class=\"on\">Fenêtre directe</button><button data-f=\"pole-sud-fenetre-protegee.json\">Périscope</button></div>\n  <div id=\"fcurs\" class=\"pj-fcurs\"></div>\n  <div class=\"pj-2b\"><button class=\"pj-bouton\" id=\"fsauve\" type=\"button\" title=\"Télécharger la fiche modifiée (JSON)\">⤓ Enregistrer</button><button class=\"pj-bouton\" id=\"forig\" type=\"button\">↺ Fiche d'origine</button></div></div>\n  <details class=\"pj-jouet\"><summary class=\"pj-ph\">Esquisse jouet : Plan, Coupe, 3D jouet, Lumière, Chaleur</summary>\n  <div class=\"pj-lieux\" id=\"lieux\" role=\"group\" aria-label=\"Lieu\">\n    <button data-s=\"lune\" class=\"on\"><i style=\"background:#c8c6be\"></i>Lune</button>\n    <button data-s=\"mars\"><i style=\"background:#8a8a8a\"></i>Mars</button>\n    <button data-s=\"terre\"><i style=\"background:#e9e6dd\"></i>Terre</button>\n  </div>\n  <div class=\"pj-p\"><label for=\"R\">Rayon</label><output id=\"oR\"></output><input type=\"range\" id=\"R\" min=\"3\" max=\"8\" step=\".5\" value=\"4\"></div>\n  <div class=\"pj-p\"><label for=\"H\">Hauteur</label><output id=\"oH\"></output><input type=\"range\" id=\"H\" min=\"2.5\" max=\"6\" step=\".5\" value=\"3\"></div>\n  <div class=\"pj-p\"><label for=\"E\">Régolithe</label><output id=\"oE\"></output><input type=\"range\" id=\"E\" min=\"0\" max=\"3\" step=\".25\" value=\"1\"></div>\n  <div class=\"pj-p\"><label for=\"O\">Orientation</label><output id=\"oO\"></output><input type=\"range\" id=\"O\" min=\"0\" max=\"350\" step=\"10\" value=\"0\"></div>\n  <div class=\"pj-p\"><label for=\"N\">Modules</label><output id=\"oN\"></output><input type=\"range\" id=\"N\" min=\"1\" max=\"4\" step=\"1\" value=\"2\"></div>\n  <button class=\"pj-bouton\" id=\"raz\" type=\"button\">↺ Valeurs de départ</button>\n  <span class=\"pj-ph\">Maquette : modèle jouet. Les formes des courbes sont justes, les valeurs ne sont pas sourcées.</span>\n  </details>\n </aside>\n <div class=\"pj-zone\">\n  <section class=\"pj-vue\" aria-label=\"Vue du projet\">\n    <div class=\"pj-onglets\" id=\"vues\" role=\"group\" aria-label=\"Vue\"><button data-v=\"plan\" class=\"on\">Plan</button><button data-v=\"coupe\">Coupe</button><button data-v=\"3d\">3D jouet</button><button data-v=\"site\">Site 3D</button></div>\n    <svg id=\"vp\" viewBox=\"0 0 800 520\" preserveAspectRatio=\"xMidYMid meet\"></svg>\n    <button class=\"pj-agrandir\" id=\"grand\" type=\"button\" title=\"Grand écran (Échap pour revenir)\">⤢ Grand écran</button>\n    <iframe id=\"site3d\" title=\"Site en 3D (relief LOLA, ciel, habitat de la fiche)\" hidden></iframe>\n  </section>\n  <section class=\"pj-sim\" aria-label=\"Simulations\">\n    <div class=\"pj-haut\">\n      <div class=\"pj-onglets\" id=\"sims\" role=\"group\" aria-label=\"Simulation\"><button data-m=\"ctl\">✓ Contrôle</button><button data-m=\"lum\" class=\"on\">☀ Lumière</button><button data-m=\"rad\">☢ Abri</button><button data-m=\"chal\">◐ Chaleur</button></div>\n      <div class=\"pj-cycle\"><button class=\"pj-bouton pj-plein\" id=\"lance\" type=\"button\">▶ Lancer</button><input type=\"range\" id=\"C\" min=\"0\" max=\"1000\" value=\"250\" aria-label=\"Moment du cycle\"><span class=\"pj-mono\" id=\"oC\"></span></div>\n    </div>\n    <svg id=\"ch\" viewBox=\"0 0 800 240\" role=\"img\" aria-label=\"Courbe de simulation\"></svg>\n    <div id=\"ctl\" class=\"pj-ctl\" hidden></div>\n    <div class=\"pj-jauges\" id=\"jauges\"></div>\n    <span class=\"pj-leg\" id=\"leg\"></span>\n  </section>\n </div>\n</div>";
 
 export function initProjets(root) {
   root.innerHTML = HTML;
@@ -14,7 +14,7 @@ export function initProjets(root) {
     mars:{cycle:'sol',elev:function(p){return 55*Math.sin(Math.PI*p)},az:function(p){return 90+180*p},lib:function(p){return Math.round(p*24.6)+' h'}},
     terre:{cycle:'jour',elev:function(p){return 75*Math.sin(Math.PI*p)},az:function(p){return 90+180*p},lib:function(p){return Math.round(p*24)+' h'}}
   };
-  var S={site:'lune',R:4,H:3,E:1,O:0,N:2,C:.25,vue:'plan',sim:'lum'},DEF=JSON.parse(JSON.stringify(S));
+  var S={site:'lune',R:4,H:3,E:1,O:0,N:2,C:.25,vue:'plan',sim:'lum',fiche:'pole-sud-esquisse.json'},DEF=JSON.parse(JSON.stringify(S));
   var LAMBDA=.8, DELTA=.9;                          // longueurs d'atténuation JOUET (à sourcer)
   function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
   function rad(d){return d*Math.PI/180}
@@ -154,22 +154,117 @@ export function initProjets(root) {
   }
 
   /* ---------- rendu ---------- */
+  /* ---------- FICHE RÉELLE : curseurs → fiche → 3D, contrôle, abri (dossier projets/) ---------- */
+  var vv=function(q){return q&&typeof q==='object'&&'v' in q?q.v:q};
+  var setv=function(o,k,x){if(o[k]&&typeof o[k]==='object'&&'v' in o[k])o[k].v=x;else o[k]=x};
+  var jsn=function(r){if(!r.ok)throw new Error(r.url+' : '+r.status);return r.json()};
+  var BASE={},LIBS=null,ver=0,pretF=null,calc=null,calcVer=-1,minuteur=null;
+  // curseurs de la fiche : id, nom, unité, min, max, pas
+  var CUR=[['fD','Ø modules','m',4,10,.5],['fL','Longueur modules','m',6,20,1],['fC','Couverture butte','m',0,6,.25],['fT','Talus','°',20,60,5],['fN','Équipage','pers.',1,12,1],['fJ','Durée','j',10,1000,10]];
+  function libs(){return LIBS||(LIBS=Promise.all([import('./projets/rayons.js'),import('./projets/controle.js'),import('./projets/assemblage.js'),
+    fetch('projets/regles.json').then(jsn),fetch('etude/donnees/habitat.json').then(jsn)]).then(function(x){return {Rz:x[0],Ct:x[1],As:x[2],R:x[3],hz:x[4].horizon.h}}))}
+  function base(nom){return BASE[nom]||(BASE[nom]=fetch('projets/'+nom).then(jsn))}
+  function lireBase(F){var m=F.elements.find(function(e){return e.pressurise&&e.forme&&e.forme.type==='cylindre'})||{forme:{}},B=F.elements.find(function(e){return e.forme&&e.forme.type==='butte'})||{forme:{}};
+    return {fD:vv(m.forme.diametre_m),fL:vv(m.forme.longueur_m),fC:vv(B.forme.couverture_m),fT:vv(B.forme.talus_deg),fN:vv(F.programme.equipage),fJ:vv(F.programme.duree_jours)}}
+  function valeurs(){var o={};CUR.forEach(function(c){o[c[0]]=+$(c[0]).value});return o}
+  function afficherCurs(){CUR.forEach(function(c){$('o'+c[0]).innerHTML=$(c[0]).value+'<small>'+c[2]+'</small>'})}
+  // fiche de base + valeurs des curseurs → nouvelle fiche (les modules se replacent par leurs ports : assemblage.js)
+  function ficheModifiee(B,v,As){
+    var F=structuredClone(B),b=lireBase(B),dD=v.fD-b.fD;
+    F.elements.forEach(function(e){
+      var f=e.forme||{};
+      if(e.pressurise&&f.type==='cylindre'){setv(f,'diametre_m',v.fD);setv(f,'longueur_m',v.fL);if(e.arrivee&&e.arrivee.dimensions_vol_m)e.arrivee.dimensions_vol_m=[v.fD,v.fL]}
+      if(f.type==='butte'){setv(f,'couverture_m',v.fC);setv(f,'talus_deg',v.fT)}
+      // ouvertures : la fente directe suit la paroi du module ; le périscope (puits, chambre, fente haute) suit son plafond
+      var p=f.centre_m||f.oeil_m;
+      if(dD&&p&&p.length===3){if(f.type==='fente'&&e.dans==='M2')p[1]+=dD/2;else p[2]+=dD}
+    });
+    if(F.protection)setv(F.protection,'epaisseur_m',v.fC);                 // une seule épaisseur : celle de la butte
+    setv(F.programme,'equipage',v.fN);setv(F.programme,'duree_jours',v.fJ);
+    var G=F;try{G=As.ficheAssemblee(F)}catch(e){}
+    if(JSON.stringify(v)!==JSON.stringify(b))G.nom=B.nom+' · modifiée';
+    return G}
+  function majFiche(vite){
+    afficherCurs();var nom=S.fiche;
+    pretF=Promise.all([libs(),base(nom)]).then(function(x){if(S.fiche!==nom)return;S.F=ficheModifiee(x[1],valeurs(),x[0].As);ver++;envoyer3d()});
+    pretF.then(function(){clearTimeout(minuteur);minuteur=setTimeout(function(){if(S.sim==='ctl'||S.sim==='rad')rendre()},vite?0:250)})
+      .catch(function(e){$('ctl').innerHTML='<p class="pj-ph">Fiche illisible : '+e.message+'</p>'});
+  }
+  function nouvelleFiche(){var nom=S.fiche;base(nom).then(function(B){if(S.fiche!==nom)return;var b=lireBase(B);CUR.forEach(function(c){$(c[0]).value=b[c[0]]});majFiche(true)})}
+  // un seul calcul par version de la fiche : zones (rayons.js) puis règles (controle.js, avec la dose des zones)
+  function calculer(){
+    if(calc&&calcVer===ver)return calc;
+    calcVer=ver;
+    calc=Promise.all([libs(),pretF]).then(function(x){var L=x[0];return new Promise(function(ok,ko){setTimeout(function(){try{
+      var F=S.F,R=L.R,G=L.Rz.geometrie(F,vv(R.hypotheses.masse_volumique_regolithe)),D=L.Rz.directions(1500);
+      var pts=R.hypotheses.dose_gcr.pts,seuil=vv(R.hypotheses.abri_eruption_g_cm2);
+      var zones=(F.programme.fonctions||[]).map(function(fn){var P=L.Rz.pointEspace(F,fn);if(!P)return {id:fn.id,nom:fn.nom,element:fn.element,erreur:true};
+        var b=L.Rz.bilan(G,P,D,L.hz),d=L.Rz.dosePoint(b.vals,pts),ab=b.min!=null&&b.min>=seuil;
+        return {id:fn.id,nom:fn.nom,element:fn.element,P:P,min:b.min,min_g_cm2:b.min,faible:b.part.faible,mSv_j:d.mSv_j,mSv_h:d.mSv_j/24,abri:ab,abri_eruption:ab}});
+      ok({F:F,zones:zones,res:L.Ct.controler(F,R,{fiche:S.fiche,rayons:{zones:zones}}),seuil:seuil,dose:R.hypotheses.dose_gcr})}catch(e){ko(e)}},20)})});
+    return calc}
+  function envoyer3d(){var f=$('site3d');if(f.dataset.pret&&S.F)f.contentWindow.postMessage({type:'kibsu-fiche',F:S.F},location.origin)}
+  function site3d(){var f=$('site3d');if(!f.getAttribute('src'))f.setAttribute('src','projets/site3d.html?embed=1&fiche='+S.fiche)}   // chargé une fois, au premier affichage
+  function controle(){
+    var box=$('ctl'),J=$('jauges');if(!box.firstChild)box.innerHTML='<p class="pj-ph">Calcul…</p>';
+    calculer().then(function(o){
+      if(S.sim!=='ctl')return;
+      var n={ok:0,non:0,'?':0},SYM={ok:'✓',non:'✗','?':'?',info:'i'};
+      o.res.forEach(function(r){if(r.etat in n)n[r.etat]++});
+      box.innerHTML='<p class="pj-ctl-nom">'+o.F.nom+'</p>'+o.res.map(function(r){
+        var v=r.valeur!=null&&r.seuil!=null?' <span class="pj-mono">'+r.valeur+' / '+r.seuil+(r.unite?' '+r.unite:'')+'</span>':'';
+        return '<div class="pj-ctl-l pj-'+(r.etat==='?'?'inc':r.etat)+'"><b>'+SYM[r.etat]+'</b><span>'+r.nom+v+'<small>'+(r.statut||'')+' '+(r.detail||'')+'</small></span></div>'}).join('')+
+        '<p class="pj-ph">● lu dans la source · ◇ calculé · ▨ hypothèse. Détail : <a href="projets/controle.html?fiche='+S.fiche+'" target="_blank">page Contrôle</a> (fiche d\'origine)</p>';
+      J.innerHTML=[['✓',n.ok,'inherit'],['✗',n.non,'#e4572e'],['?',n['?'],'inherit;opacity:.6']].map(function(k){return '<div class="pj-jauge pj-compte"><b style="color:'+k[2]+'">'+k[1]+'</b><span>'+k[0]+'</span></div>'}).join('');
+    }).catch(function(e){box.innerHTML='<p class="pj-ph">Contrôle indisponible : '+e.message+'</p>'});
+  }
+  function abri(){
+    var box=$('ctl'),J=$('jauges');if(!box.firstChild)box.innerHTML='<p class="pj-ph">Calcul des rayons…</p>';
+    calculer().then(function(o){
+      if(S.sim!=='rad')return;
+      var MAX=600,pc=function(v){return Math.min(100,100*v/MAX).toFixed(1)+'%'};
+      box.innerHTML='<p class="pj-ctl-nom">'+o.F.nom+'</p>'+o.zones.map(function(z){
+        if(z.erreur)return '<div class="pj-abri-l"><span>'+z.nom+'</span><span class="pj-ph">pas de position</span></div>';
+        return '<div class="pj-abri-l"><span>'+(z.abri?'✓ ':'✗ ')+z.nom+'<small>'+z.element+' · '+z.mSv_j.toFixed(2)+' mSv/j ◇</small></span>'+
+          '<span><span class="pj-barre" title="épaisseur minimale traversée"><i class="'+(z.min<30?'pj-faible':'')+'" style="width:'+pc(z.min||0)+'"></i><b style="left:'+pc(o.seuil)+'"></b><b style="left:'+pc(300)+'"></b></span>'+
+          '<small>min '+z.min+' g/cm² · '+z.faible+' % du ciel sous 30 g/cm²</small></span></div>'}).join('')+
+        '<p class="pj-ph">Barre : épaisseur minimale de régolithe vue depuis l\'espace (0 à '+MAX+' g/cm²), traits à '+o.seuil+' (abri éruption ●) et 300 g/cm². Dose : rayons cosmiques, '+o.dose.s+' MATTHIA2024, par secteurs ◇. 1 500 directions par point. <a href="projets/rayons.html" target="_blank">page Radiations</a></p>';
+      var ok=o.zones.filter(function(z){return z.abri}).length,pire=Math.max.apply(null,o.zones.map(function(z){return z.faible||0})),dmax=Math.max.apply(null,o.zones.map(function(z){return z.mSv_j||0}));
+      J.innerHTML=[[ok+'/'+o.zones.length,'sous abri'],[pire+' %','pire ciel ouvert'],[dmax.toFixed(2),'mSv/j max']].map(function(k){return '<div class="pj-jauge pj-compte"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
+    }).catch(function(e){box.innerHTML='<p class="pj-ph">Abri indisponible : '+e.message+'</p>'});
+  }
+
   function rendre(){
     var svg=$('vp');svg.innerHTML='';
-    ({plan:plan,coupe:coupe,'3d':vue3d})[S.vue](svg);
+    var reel=S.vue==='site';svg.style.display=reel?'none':'';$('site3d').hidden=!reel;
+    if(reel)site3d();else ({plan:plan,coupe:coupe,'3d':vue3d})[S.vue](svg);
     $('oR').innerHTML=S.R+'<small>m</small>';$('oH').innerHTML=S.H+'<small>m</small>';$('oE').innerHTML=S.E+'<small>m</small>';$('oO').innerHTML=S.O+'<small>°</small>';$('oN').textContent=S.N;
     $('oC').textContent=SITES[S.site].lib(S.C);
-    graphe();
+    var c=S.sim==='ctl'||S.sim==='rad';$('ch').style.display=c?'none':'';$('ctl').hidden=!c;root.querySelector('.pj-cycle').style.visibility=c?'hidden':'';
+    if(S.sim==='ctl'){$('leg').textContent='Règles NASA / ESA / BVAD appliquées à la fiche choisie (pas aux curseurs).';controle()}
+    else if(S.sim==='rad'){$('leg').textContent='Radiations : rayons.js sur la fiche choisie (pas aux curseurs). Épaisseurs, pas des doses mesurées.';abri()}
+    else graphe();
   }
   ['R','H','E','O','N'].forEach(function(k){$(k).addEventListener('input',function(){S[k]=+this.value;rendre()})});
   $('C').addEventListener('input',function(){S.C=this.value/1000;rendre()});
   [].forEach.call(root.querySelectorAll('#vues button'),function(b){b.onclick=function(){S.vue=b.dataset.v;[].forEach.call(root.querySelectorAll('#vues button'),function(x){x.classList.toggle('on',x===b)});rendre()}});
   [].forEach.call(root.querySelectorAll('#sims button'),function(b){b.onclick=function(){S.sim=b.dataset.m;[].forEach.call(root.querySelectorAll('#sims button'),function(x){x.classList.toggle('on',x===b)});rendre()}});
+  [].forEach.call(root.querySelectorAll('#fiches button'),function(b){b.onclick=function(){S.fiche=b.dataset.f;[].forEach.call(root.querySelectorAll('#fiches button'),function(x){x.classList.toggle('on',x===b)});nouvelleFiche()}});
   [].forEach.call(root.querySelectorAll('#lieux button'),function(b){b.onclick=function(){S.site=b.dataset.s;[].forEach.call(root.querySelectorAll('#lieux button'),function(x){x.classList.toggle('on',x===b)});rendre()}});
   $('raz').onclick=function(){Object.assign(S,DEF);['R','H','E','O','N'].forEach(function(k){$(k).value=S[k]});$('C').value=S.C*1000;
     [].forEach.call(root.querySelectorAll('#lieux button'),function(x){x.classList.toggle('on',x.dataset.s===S.site)});rendre()};
   var run=false,last=0;
   function boucle(ts){if(!run)return;if(root.offsetParent!==null){var d=Math.min(ts-last,60);S.C=(S.C+d/14000)%1;$('C').value=S.C*1000;rendre()}last=ts;requestAnimationFrame(boucle)}
+  // curseurs de la fiche (générés), enregistrer, revenir, 3D prête
+  $('fcurs').innerHTML=CUR.map(function(c){return '<div class="pj-p"><label for="'+c[0]+'">'+c[1]+'</label><output id="o'+c[0]+'"></output><input type="range" id="'+c[0]+'" min="'+c[3]+'" max="'+c[4]+'" step="'+c[5]+'"></div>'}).join('');
+  CUR.forEach(function(c){$(c[0]).addEventListener('input',function(){majFiche(false)})});
+  $('fsauve').onclick=function(){if(!S.F)return;var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S.F,null,1)],{type:'application/json'}));a.download=S.fiche.replace('.json','')+'-modifiee.json';a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},2000)};
+  $('forig').onclick=nouvelleFiche;
+  addEventListener('message',function(e){if(e.origin===location.origin&&e.data==='kibsu-pret'){$('site3d').dataset.pret='1';envoyer3d()}});
+  nouvelleFiche();
+  $('grand').onclick=function(){var a=root.querySelector('.pj-app'),g=a.classList.toggle('pj-grand');this.textContent=g?'⤡ Réduire':'⤢ Grand écran'};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.querySelector('.pj-app.pj-grand'))$('grand').click()});
+  addEventListener('message',function(e){if(e.origin===location.origin&&e.data==='kibsu-echap'&&root.querySelector('.pj-app.pj-grand'))$('grand').click()});
   $('lance').onclick=function(){run=!run;this.textContent=run?'❚❚ Pause':'▶ Lancer';if(run){last=performance.now();requestAnimationFrame(boucle)}};
   var q=location.search.match(/[?&](\w+)=([\w.]+)/g)||[];q.forEach(function(x){var m=/[?&](\w+)=([\w.]+)/.exec(x);if(m[1]==='v'){S.vue=m[2]}if(m[1]==='m'){S.sim=m[2]}if(m[1]==='c'){S.C=+m[2];$('C').value=S.C*1000}if(m[1]==='s'){S.site=m[2]}if(m[1]==='e'){S.E=+m[2];$('E').value=S.E}});
   [].forEach.call(root.querySelectorAll('#vues button'),function(x){x.classList.toggle('on',x.dataset.v===S.vue)});

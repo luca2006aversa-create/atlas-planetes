@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kibsu · atelier</title>
+<link href="../tokens.css" rel="stylesheet">
+<style>
+  body { margin: 0; background: var(--fond); color: var(--texte); font: var(--t-corps)/1.45 var(--sans); }
+  .haut { display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap; padding: 12px 16px 0; }
+  .haut h1 { font-size: 20px; margin: 0; }
+  .haut nav { font-size: 13px; } .haut nav a { color: var(--texte-2); margin-right: 10px; }
+  .grille { display: grid; grid-template-columns: 170px minmax(0, 1fr) 300px; gap: 12px; padding: 12px 16px 24px; height: calc(100vh - 70px); box-sizing: border-box; }
+  .liste { display: flex; flex-direction: column; gap: 5px; overflow-y: auto; }
+  .liste .dom { font: 600 11.5px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--texte-2); margin: 8px 0 2px; }
+  .liste button { text-align: left; font: 13px var(--sans); background: var(--surface); color: var(--texte); border: 1px solid var(--filet); border-radius: 8px; padding: 6px 9px; cursor: pointer; }
+  .liste button.on { border: 2px solid var(--vif, #e4572e); padding: 5px 8px; }
+  .liste button small { color: var(--texte-2); display: block; }
+  .scene { position: relative; background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; overflow: hidden; min-height: 320px; }
+  #vue { position: absolute; inset: 0; }
+  .modes { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; }
+  .modes button { font: 600 12.5px var(--sans); background: var(--surface-2); color: var(--texte); border: 1px solid var(--filet); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+  .modes button.on { background: var(--texte); color: var(--fond); }
+  .aide { position: absolute; left: 10px; bottom: 8px; font-size: 12px; color: var(--texte-2); }
+  .etq { position: absolute; transform: translate(-50%, -120%); font: 600 12px var(--sans); white-space: nowrap; pointer-events: none;
+         background: var(--surface); border: 1px solid var(--filet); border-radius: 5px; padding: 1px 5px; }
+  .etq.libre { border-color: #e4572e; color: #b23c17; }
+  .panneau { overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+  .carte { background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; padding: 10px 12px; }
+  .carte h2 { font: 600 11.5px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--texte-2); margin: 0 0 6px; }
+  .ligne { display: flex; justify-content: space-between; gap: 8px; align-items: center; font-size: 13px; margin: 3px 0; }
+  .ligne input { width: 70px; font: 13px var(--mono); padding: 3px 5px; border: 1px solid var(--filet); border-radius: 5px; background: var(--fond); color: var(--texte); }
+  .gros { font: 600 18px var(--mono); }
+  .ok { color: #2f8a3c; } .non { color: #c23b12; } .inc { color: #b07a10; }
+  .st { font: 12px var(--mono); color: var(--texte-2); }
+  .port { display: grid; grid-template-columns: 22px 1fr auto; gap: 2px 8px; align-items: center; font-size: 13px; padding: 5px 0; border-top: 1px solid var(--filet); }
+  .port b { font: 600 13px var(--mono); }
+  .port .pt { width: 12px; height: 12px; border-radius: 50%; background: #9a9a9a; }
+  .port .pt.libre { background: #e4572e; }
+  .port button { font: 12px var(--sans); background: none; border: 1px solid var(--filet); border-radius: 5px; color: var(--texte); cursor: pointer; padding: 2px 6px; }
+  .note { font-size: 12px; color: var(--texte-2); }
+  .actions button, .actions a { font: 600 12.5px var(--sans); background: var(--surface-2); color: var(--texte); border: 1px solid var(--filet); border-radius: 6px; padding: 6px 10px; cursor: pointer; text-decoration: none; display: inline-block; margin: 2px 4px 2px 0; }
+  @media (max-width: 860px) { .grille { grid-template-columns: 1fr; height: auto; } .scene { height: 360px; } .liste { flex-direction: row; flex-wrap: wrap; } .liste .dom { width: 100%; } }
+</style>
+</head>
+<body>
+<div class="haut">
+  <h1>Atelier</h1>
+  <span class="note" id="nomfiche"></span>
+  <nav><a href="../">← Atlas</a><a href="site3d.html">Habitat 3D</a><a href="controle.html" id="lien-controle">Contrôles</a><a href="rayons.html">Radiations</a></nav>
+</div>
+<div class="grille">
+  <div class="liste" id="liste"></div>
+  <div class="scene">
+    <div id="vue"></div>
+    <div id="etiquettes"></div>
+    <div class="modes"><button id="m-seul" class="on">Seul</button><button id="m-tout">Assemblage</button></div>
+    <div class="aide" id="aide">Glisser pour tourner · molette pour zoomer · cliquer un élément pour l'ouvrir</div>
+  </div>
+  <div class="panneau" id="panneau"></div>
+</div>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { val, stat, volumeForme } from './controle.js';
+import { assembler, enveloppe, versMonde } from './assemblage.js';
+
+const Q = new URLSearchParams(location.search);
+const ficheNom = Q.get('fiche') || 'pole-sud-esquisse.json';
+const [F, R] = await Promise.all([ficheNom, 'regles.json'].map(u => fetch(u).then(r => r.json())));
+document.getElementById('nomfiche').textContent = `${F.nom} · ${ficheNom}`;
+document.getElementById('lien-controle').href = `controle.html?fiche=${encodeURIComponent(ficheNom)}`;
+const E = Object.fromEntries(F.elements.map(e => [e.id, e]));
+let sel = E[Q.get('el')] ? Q.get('el') : (F.assemblage?.ancre || F.elements[0].id);
+let mode = 'seul';
+let A = assembler(F);
+
+// ---------- scène ----------
+const boite = document.getElementById('vue');
+const rendu = new THREE.WebGLRenderer({ antialias: true });
+rendu.setPixelRatio(Math.min(2, devicePixelRatio));
+boite.appendChild(rendu.domElement);
+const scene = new THREE.Scene();
+const cam = new THREE.PerspectiveCamera(45, 1, 0.1, 2000);
+const ctl = new OrbitControls(cam, rendu.domElement);
+ctl.enableDamping = true;
+scene.add(new THREE.HemisphereLight(0xffffff, 0x777777, 1.6));
+const soleil = new THREE.DirectionalLight(0xffffff, 1.4); soleil.position.set(30, 50, 20); scene.add(soleil);
+const css = getComputedStyle(document.documentElement);
+const fondCouleur = () => new THREE.Color(css.getPropertyValue('--surface').trim() || '#ffffff');
+let racine = new THREE.Group(); scene.add(racine);
+const etqs = document.getElementById('etiquettes');
+let etiquettes = [];
+
+const T = (x, y, z) => new THREE.Vector3(x, z, -y);                 // repère du projet → three
+const MAT = {
+  sel: new THREE.MeshStandardMaterial({ color: 0xd8d3c8, roughness: .8, side: THREE.DoubleSide }),
+  autre: new THREE.MeshStandardMaterial({ color: 0x9a9a9a, roughness: .9, transparent: true, opacity: .35, side: THREE.DoubleSide }),
+  dedans: new THREE.MeshStandardMaterial({ color: 0x5fae6e, roughness: .8, side: THREE.DoubleSide }),
+  ouv: new THREE.MeshStandardMaterial({ color: 0x5f8fd0, roughness: .8, transparent: true, opacity: .6, side: THREE.DoubleSide }),
+  libre: new THREE.MeshStandardMaterial({ color: 0xe4572e }),
+  relie: new THREE.MeshStandardMaterial({ color: 0x6b6b6b }),
+  tunnel: new THREE.MeshStandardMaterial({ color: 0xb8b2a6, roughness: .9 }),
+};
+
+// Maillage d'une forme dans son repère (origine = centre au sol)
+function maillage(f, mat) {
+  if (!f) return null;
+  const d = val(f.diametre_m), L = val(f.longueur_m), h = val(f.hauteur_m);
+  let g, y = 0, rz = 0;
+  switch (f.type) {
+    case 'cylindre':
+      if (f.axe === 'vertical') { g = new THREE.CylinderGeometry(d / 2, d / 2, L, 48); y = L / 2; }
+      else { g = new THREE.CylinderGeometry(d / 2, d / 2, L, 48); y = d / 2; rz = Math.PI / 2; }
+      break;
+    case 'dome': g = new THREE.SphereGeometry(d / 2, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2); break;
+    case 'sphere': g = new THREE.SphereGeometry(d / 2, 40, 20); y = d / 2; break;
+    case 'boite': { const env = enveloppe(f); g = new THREE.BoxGeometry(env.x * 2, env.h, env.y * 2); y = env.h / 2; break; }
+    case 'chapeau': g = new THREE.ConeGeometry(val(f.rayon_m), h, 40); y = h / 2; break;
+    default: return null;
+  }
+  const m = new THREE.Mesh(g, mat); m.position.y = y; m.rotation.z = rz;
+  return m;
+}
+
+function etiquette(texte, pos3, cls = '') {
+  const div = document.createElement('div'); div.className = 'etq ' + cls; div.textContent = texte;
+  etqs.appendChild(div); etiquettes.push({ div, pos: pos3 });
+}
+
+function flechePort(q, libre, pose) {
+  const g = new THREE.Group();
+  const p = pose ? versMonde(pose, q.p) : q.p;
+  const nn = pose ? q.nW : q.n;
+  const r = Math.max(0.25, (q.diametre || 1) / 2);
+  const disque = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.08, 32), libre ? MAT.libre : MAT.relie);
+  const dir = T(...nn).normalize();
+  disque.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir);
+  disque.position.copy(T(...p));
+  g.add(disque);
+  const fl = new THREE.ArrowHelper(dir, T(...p), 1.6, libre ? 0xe4572e : 0x6b6b6b, 0.45, 0.3);
+  g.add(fl);
+  return g;
+}
+
+// Élément « dans » un autre : sa forme est écrite dans le repère du site (centre_m) ; on la ramène dans celui du parent
+function versLocal(pose, w) {
+  const c = Math.cos(-pose.rot * Math.PI / 180), s = Math.sin(-pose.rot * Math.PI / 180);
+  const dx = w[0] - pose.pos[0], dy = w[1] - pose.pos[1];
+  return [c * dx - s * dy, s * dx + c * dy, (w[2] ?? 0) - pose.pos[2]];
+}
+
+const cliquables = [];
+function construire() {
+  scene.remove(racine); racine = new THREE.Group(); scene.add(racine);
+  etqs.innerHTML = ''; etiquettes = []; cliquables.length = 0;
+  scene.background = fondCouleur();
+  const grille = new THREE.GridHelper(mode === 'seul' ? 30 : 120, mode === 'seul' ? 30 : 60, 0x9a9a9a, 0xd0d0d0);
+  grille.material.transparent = true; grille.material.opacity = .5; racine.add(grille);
+  const e = E[sel];
+  if (mode === 'seul') {
+    const m = maillage(e.forme, MAT.sel);
+    if (m) { racine.add(m); m.userData.id = e.id; cliquables.push(m); }
+    for (const q of A.ports[e.id] || []) {
+      racine.add(flechePort(q, !q.relie_a, null));
+      etiquette(`${q.id}${q.relie_a ? ' → ' + q.relie_a : ' libre'}`, T(q.p[0] + q.n[0] * 1.9, q.p[1] + q.n[1] * 1.9, q.p[2] + q.n[2] * 1.9 + 0.4), q.relie_a ? '' : 'libre');
+    }
+    const pose = A.poses[e.id];
+    for (const d of F.elements.filter(x => x.dans === e.id)) {
+      const centre = d.forme?.centre_m;
+      const mm = maillage(d.forme, d.type === 'ouverture' ? MAT.ouv : MAT.dedans);
+      if (mm && centre && pose) {
+        const l = versLocal(pose, centre);
+        const env = enveloppe(d.forme);
+        const grp = new THREE.Group(); grp.add(mm); grp.position.copy(T(l[0], l[1], l[2] - env.h / 2)); racine.add(grp);
+        etiquette(d.id, T(l[0], l[1], l[2] + env.h / 2 + .3));
+      }
+    }
+    const env = enveloppe(e.forme) || { x: 3, y: 3, h: 3 };
+    const t = Math.max(env.x, env.y, env.h);
+    cam.position.set(t * 2.2, t * 1.6, t * 2.8); ctl.target.set(0, env.h / 2, 0);
+  } else {
+    let xs = [];
+    for (const x of F.elements) {
+      const pose = A.poses[x.id];
+      if (!pose) continue;
+      const m = maillage(x.forme, x.id === sel ? MAT.sel : MAT.autre);
+      if (!m) continue;
+      const g = new THREE.Group(); g.add(m);
+      g.position.copy(T(...pose.pos)); g.rotation.y = pose.rot * Math.PI / 180;
+      m.userData.id = x.id; cliquables.push(m); racine.add(g);
+      const env = enveloppe(x.forme);
+      etiquette(x.id, T(pose.pos[0], pose.pos[1], pose.pos[2] + env.h + .6));
+      xs.push(pose.pos[0]);
+      for (const q of A.ports[x.id] || []) if (!q.relie_a) racine.add(flechePort(q, true, pose));
+    }
+    // Tunnels et couloirs : un tube entre les deux ports reliés
+    for (const l of A.liens.filter(l => l.port_de && l.ecart > 0)) {
+      const a = A.ports[l.de].find(q => q.id === l.port_de), b = A.ports[l.vers].find(q => q.id === l.port_vers);
+      if (!a.pW || !b.pW) continue;
+      const pa = T(...a.pW), pb = T(...b.pW), r = Math.max(.3, (a.diametre || 1) / 2 + .2);
+      const tube = new THREE.Mesh(new THREE.CylinderGeometry(r, r, pa.distanceTo(pb), 24), MAT.tunnel);
+      tube.position.copy(pa.clone().add(pb).multiplyScalar(.5));
+      tube.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), pb.clone().sub(pa).normalize());
+      racine.add(tube);
+    }
+    const cx = xs.length ? (Math.min(...xs) + Math.max(...xs)) / 2 : 0, w = xs.length ? Math.max(...xs) - Math.min(...xs) + 16 : 30;
+    const hfov = 2 * Math.atan(Math.tan(cam.fov * Math.PI / 360) * cam.aspect);
+    const recul = Math.max(w / 2 / Math.tan(Math.min(hfov, cam.fov * Math.PI / 180) / 2) * 1.05, 20);
+    const dir = new THREE.Vector3(.2, .5, .95).normalize();
+    ctl.target.set(cx, 2, 0); cam.position.copy(ctl.target).addScaledVector(dir, recul);
+  }
+  ctl.update();
+}
+
+function taille() {
+  const r = boite.getBoundingClientRect();
+  rendu.setSize(r.width, r.height, false);
+  rendu.domElement.style.width = '100%'; rendu.domElement.style.height = '100%';
+  cam.aspect = r.width / Math.max(1, r.height); cam.updateProjectionMatrix();
+}
+new ResizeObserver(taille).observe(boite);
+
+const ray = new THREE.Raycaster(), souris = new THREE.Vector2();
+let bas = null;
+rendu.domElement.addEventListener('pointerdown', ev => { bas = [ev.clientX, ev.clientY]; });
+rendu.domElement.addEventListener('pointerup', ev => {
+  if (!bas || Math.hypot(ev.clientX - bas[0], ev.clientY - bas[1]) > 4) return;
+  const r = rendu.domElement.getBoundingClientRect();
+  souris.set((ev.clientX - r.left) / r.width * 2 - 1, -(ev.clientY - r.top) / r.height * 2 + 1);
+  ray.setFromCamera(souris, cam);
+  const h = ray.intersectObjects(cliquables)[0];
+  if (h && h.object.userData.id !== sel) choisir(h.object.userData.id);
+});
+
+function boucle() {
+  requestAnimationFrame(boucle);
+  ctl.update(); rendu.render(scene, cam);
+  const r = rendu.domElement.getBoundingClientRect();
+  for (const { div, pos } of etiquettes) {
+    const p = pos.clone().project(cam);
+    const vis = p.z < 1 && Math.abs(p.x) < 1.1 && Math.abs(p.y) < 1.1;
+    div.style.display = vis ? '' : 'none';
+    div.style.left = `${(p.x + 1) / 2 * r.width}px`; div.style.top = `${(1 - p.y) / 2 * r.height}px`;
+  }
+}
+
+// ---------- liste ----------
+const GROUPES = [['module', 'Modules'], ['sas', 'Sas'], ['serre', 'Serres'], ['ouverture', 'Ouvertures'], ['protection', 'Protection']];
+function liste() {
+  const L = document.getElementById('liste'); L.innerHTML = '';
+  const vus = new Set();
+  const ajoute = (titre, els) => {
+    if (!els.length) return;
+    const t = document.createElement('div'); t.className = 'dom'; t.textContent = titre; L.appendChild(t);
+    for (const e of els) {
+      vus.add(e.id);
+      const qs = A.ports[e.id] || [], libres = qs.filter(q => !q.relie_a).length;
+      const b = document.createElement('button'); if (e.id === sel) b.className = 'on';
+      b.innerHTML = `${e.id} · ${e.nom || e.type}<small>${qs.length ? `${qs.length} port${qs.length > 1 ? 's' : ''}${libres ? ` · ${libres} libre${libres > 1 ? 's' : ''}` : ''}` : (e.dans ? 'dans ' + e.dans : '')}</small>`;
+      b.onclick = () => choisir(e.id);
+      L.appendChild(b);
+    }
+  };
+  for (const [t, nom] of GROUPES) ajoute(nom, F.elements.filter(e => e.type === t));
+  ajoute('Autres', F.elements.filter(e => !vus.has(e.id)));
+}
+
+// ---------- panneau ----------
+const fmt = (x, n = 1) => x == null || Number.isNaN(x) ? '?' : ((+x.toFixed(n)) || 0).toLocaleString('fr-FR');
+const CHAMPS = [['diametre_m', 'Diamètre (m)'], ['longueur_m', 'Longueur (m)'], ['largeur_m', 'Largeur (m)'], ['hauteur_m', 'Hauteur (m)'], ['rayon_m', 'Rayon (m)'], ['couverture_m', 'Couverture (m)'], ['talus_deg', 'Talus (°)']];
+
+function panneau() {
+  const e = E[sel], P = document.getElementById('panneau'); P.innerHTML = '';
+  const carte = (titre, html) => { const c = document.createElement('div'); c.className = 'carte'; c.innerHTML = `<h2>${titre}</h2>${html}`; P.appendChild(c); return c; };
+
+  carte(`${e.id} · ${e.nom || ''}`, `<div class="note">${e.type}${e.forme ? ' · ' + e.forme.type : ''}${e.dans ? ' · dans ' + e.dans : ''}${e.pressurise ? ' · pressurisé' : ''}</div>`);
+
+  // Dimensions modifiables
+  if (e.forme) {
+    const ch = CHAMPS.filter(([k]) => e.forme[k] != null);
+    if (ch.length) {
+      const c = carte('Dimensions', ch.map(([k, n]) => `<div class="ligne"><span>${n}</span><span><input type="number" step="0.1" min="0" data-k="${k}" value="${val(e.forme[k])}"> <span class="st">${stat(e.forme[k])}</span></span></div>`).join('')
+        + `<div class="note">Une valeur modifiée ici devient ▨ (hypothèse). Rien n'est enregistré tant que tu ne télécharges pas la fiche.</div>`);
+      c.querySelectorAll('input').forEach(inp => inp.addEventListener('change', () => {
+        const v = parseFloat(inp.value); if (!(v > 0)) return;
+        const k = inp.dataset.k, ancien = e.forme[k];
+        e.forme[k] = { v, s: '▨', src: 'modifié dans l\'atelier' + (ancien && typeof ancien === 'object' && ancien.src ? ` (avant : ${val(ancien)}, ${ancien.src})` : '') };
+        if (e.arrivee?.mode === 'rigide' && e.forme.type === 'cylindre') e.arrivee.dimensions_vol_m = [val(e.forme.diametre_m), val(e.forme.longueur_m)];
+        tout();
+      }));
+    }
+  }
+
+  // Volume, masse, lanceur
+  const vol = volumeForme(e.forme);
+  const masse = val(e.masse_kg);
+  const veh = e.arrivee?.vehicule ? R.vehicules?.[e.arrivee.vehicule] : null;
+  let gab = '';
+  if (e.arrivee?.mode === 'in_situ') gab = `<div class="ligne"><span>Arrivée</span><span>fabriqué sur place</span></div>`;
+  else if (e.arrivee) {
+    const dv = e.arrivee.dimensions_vol_m?.[0];
+    const du = val(veh?.diametre_utile_m), mp = val(veh?.masse_posee_kg);
+    const etat = (a, b) => a == null || b == null ? `<span class="inc">?</span>` : a <= b ? `<span class="ok">✓</span>` : `<span class="non">✗</span>`;
+    gab = `<div class="ligne"><span>Arrivée</span><span>${e.arrivee.mode}${e.arrivee.lot ? ' · ' + e.arrivee.lot : ''}</span></div>
+      <div class="ligne"><span>Véhicule</span><span>${veh?.nom || e.arrivee.vehicule || '?'}</span></div>
+      <div class="ligne"><span>Ø plié ${fmt(dv)} m / coiffe ${fmt(du)} m <span class="st">${stat(veh?.diametre_utile_m) || ''}</span></span>${etat(dv, du)}</div>
+      <div class="ligne"><span>Masse ${fmt(masse, 0)} kg / posée ${fmt(mp, 0)} kg <span class="st">${stat(veh?.masse_posee_kg) || ''}</span></span>${etat(masse, mp)}</div>`;
+  }
+  carte('Ce qu\'il pèse, ce qu\'il prend', `
+    <div class="ligne"><span>Volume de l'enveloppe</span><span class="gros">${vol == null ? '—' : fmt(vol, 0) + ' m³'}</span></div>
+    <div class="ligne"><span>Masse</span><span class="gros ${masse == null ? 'inc' : ''}">${masse == null ? '? à estimer' : fmt(masse, 0) + ' kg'}</span></div>
+    ${gab}`);
+
+  // Ports
+  const qs = A.ports[e.id] || [];
+  const pose = A.poses[e.id];
+  if (qs.length) {
+    const c = carte('Ports d\'amarrage', qs.map(q => {
+      const l = A.liens.find(l => (l.de === e.id && l.port_de === q.id) || (l.vers === e.id && l.port_vers === q.id));
+      const voisin = q.relie_a?.split('.')[0];
+      return `<div class="port"><span class="pt ${q.relie_a ? '' : 'libre'}"></span>
+        <span><b>${q.id}</b> ${q.nom || ''}<br><span class="note">${q.type} · Ø ${fmt(q.diametre)} m ${q.statut} · face ${(E[sel].ports.find(p => p.id === q.id) || {}).face || 'libre'}</span></span>
+        ${voisin ? `<button data-v="${voisin}">→ ${q.relie_a}</button>` : '<span class="note">libre</span>'}
+        ${l && l.ecart ? `<span></span><span class="note">tunnel / couloir ${fmt(l.ecart)} m</span><span></span>` : ''}</div>`;
+    }).join(''));
+    c.querySelectorAll('button[data-v]').forEach(b => b.onclick = () => choisir(b.dataset.v));
+  } else if (!e.dans) carte('Ports d\'amarrage', `<div class="note">Aucun port : cet élément n'est pas placé par l'assemblage${e.forme?.type === 'butte' ? ' (la butte se calcule autour des modules)' : ''}.</div>`);
+
+  // Contenu
+  const dedans = F.elements.filter(x => x.dans === e.id);
+  if (dedans.length) {
+    const c = carte('Contient', dedans.map(x => `<div class="ligne"><span>${x.id} · ${x.nom || x.type}</span><button class="lien" data-v="${x.id}">ouvrir</button></div>`).join(''));
+    c.querySelectorAll('button[data-v]').forEach(b => b.onclick = () => choisir(b.dataset.v));
+  }
+
+  // Position
+  if (pose) {
+    const bon = !pose.assemble || pose.ancre || ((pose.ecart_m ?? 0) <= 0.01 && (pose.ecart_rot ?? 0) <= 0.5);
+    carte('Place dans l\'ensemble', `
+      <div class="ligne"><span>${pose.ancre ? 'Ancre : garde sa position' : pose.assemble ? 'Placé par les ports' : 'Placé à la main'}</span><span class="${bon ? 'ok' : 'non'}">${bon ? '✓' : '✗'}</span></div>
+      <div class="ligne"><span>Position</span><span class="st">[${pose.pos.map(x => fmt(x)).join(', ')}] m · ${fmt(pose.rot, 0)}°</span></div>
+      ${!bon ? `<div class="note">Écrit en [${pose.ecrit.pos.join(', ')}] : les ports le déplacent de ${fmt(pose.ecart_m, 2)} m.</div>` : ''}`);
+  }
+
+  // Ensemble
+  const msgs = [...A.erreurs.map(x => `<div class="ligne non">✗ ${x}</div>`), ...A.avertissements.map(x => `<div class="ligne inc">! ${x}</div>`)];
+  const c = carte('Ensemble', (msgs.join('') || `<div class="ligne ok">✓ tous les ports reliés se font face</div>`)
+    + `<div class="actions" style="margin-top:6px"><button id="dl">Télécharger la fiche</button><a href="controle.html?fiche=${encodeURIComponent(ficheNom)}">Contrôler l'ensemble</a></div>`
+    + `<div class="note">La fiche téléchargée contient les dimensions modifiées et les positions données par les ports. Pour la garder, remplace ${ficheNom}.</div>`);
+  c.querySelector('#dl').onclick = telecharger;
+}
+
+function telecharger() {
+  const G = structuredClone(F);
+  for (const e of G.elements) {
+    const p = A.poses[e.id];
+    if (p?.assemble) { e.position_m = p.pos.map(x => +x.toFixed(3)); if (p.rot) e.rotation_deg = +p.rot.toFixed(3); else delete e.rotation_deg; }
+  }
+  const url = URL.createObjectURL(new Blob([JSON.stringify(G, null, 1) + '\n'], { type: 'application/json' }));
+  const a = document.createElement('a'); a.href = url; a.download = ficheNom; a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function tout() { A = assembler(F); liste(); panneau(); construire(); }
+function choisir(id) {
+  sel = id;
+  const u = new URL(location.href); u.searchParams.set('el', id); history.replaceState(null, '', u);
+  tout();
+}
+for (const [b, m] of [['m-seul', 'seul'], ['m-tout', 'tout']]) document.getElementById(b).onclick = () => {
+  mode = m; document.getElementById('m-seul').classList.toggle('on', m === 'seul'); document.getElementById('m-tout').classList.toggle('on', m === 'tout'); construire();
+};
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { scene.background = fondCouleur(); });
+
+taille(); tout(); boucle();
+window.KIBSU_ATELIER = { F, get A() { return A; }, choisir };
+</script>
+</body>
+</html>

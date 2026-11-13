@@ -1,47 +1,47 @@
 
 #vue-projets{background:var(--fond);color:var(--texte);overflow:auto}
-#vue-projets .pj-bouton{display:inline-flex;align-items:center;gap:10px;min-height:34px;padding:0 14px;border-radius:999px;border:2px solid var(--filet);background:none;color:var(--texte);font:600 13px var(--sans);cursor:pointer;text-decoration:none}
+#vue-projets .pj-bouton{display:inline-flex;align-items:center;gap:10px;min-height:28px;padding:0 10px;border-radius:6px;border:2px solid var(--filet);background:none;color:var(--texte);font:600 11.5px var(--sans);cursor:pointer;text-decoration:none}
 #vue-projets .pj-bouton.pj-plein{background:var(--cta);color:var(--cta-texte);border-color:var(--cta)}
 #vue-projets .pj-mono{font-family:var(--mono);font-weight:700}
-#vue-projets .pj-ph{font-size:13px;font-family:var(--mono);font-weight:500;color:var(--texte-2)}
+#vue-projets .pj-ph{font-size:11.5px;font-family:var(--mono);font-weight:500;color:var(--texte-2)}
 #vue-projets .pj-app{min-height:100%}
-#vue-projets h2{font-size:16px;color:var(--texte);margin:0}
+#vue-projets h2{font-size:13px;color:var(--texte);margin:0}
 
-.pj-app{display:grid;grid-template-columns:320px minmax(0,1fr);min-height:100%}
-.pj-params{background:var(--surface);border-right:1px solid var(--surface-2);padding:20px 20px 28px;display:flex;flex-direction:column;gap:18px}
-.pj-params h2{font-size:16px}
+.pj-app{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100%}
+.pj-params{background:var(--surface);border-right:1px solid var(--surface-2);padding:12px 12px 16px;display:flex;flex-direction:column;gap:10px}
+.pj-params h2{font-size:13px}
 .pj-lieux{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.pj-lieux button{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:54px;border-radius:8px;border:1px solid var(--filet);background:var(--surface);color:var(--texte);font:600 13px var(--sans);cursor:pointer}
+.pj-lieux button{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:38px;border-radius:6px;border:1px solid var(--filet);background:var(--surface);color:var(--texte);font:600 11.5px var(--sans);cursor:pointer}
 .pj-lieux button i{width:24px;height:24px;border-radius:50%;box-shadow:inset -6px -4px 0 rgba(10,10,10,.35)}
 .pj-lieux button.on{border-color:var(--plein-fond);box-shadow:0 0 0 1px var(--plein-fond)}
 .pj-p{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:2px 8px}
-.pj-p label{font-weight:600;font-size:14px}
-.pj-p output{font:700 16px var(--mono)}
-.pj-p output small{font:500 14px var(--mono);color:var(--texte-2);margin-left:3px}
+.pj-p label{font-weight:600;font-size:12px}
+.pj-p output{font:700 13px var(--mono)}
+.pj-p output small{font:500 12px var(--mono);color:var(--texte-2);margin-left:3px}
 .pj-p input{grid-column:1/-1;width:100%;height:24px;accent-color:var(--plein-fond)}
 .pj-params .pj-bouton{justify-content:center}
 .pj-zone{display:grid;grid-template-rows:minmax(360px,1fr) auto;min-width:0}
 .pj-vue{position:relative;background:var(--nuit);border-bottom:1px solid var(--surface-2);min-height:380px}
-.pj-onglets{position:absolute;left:16px;top:16px;z-index:5;display:flex;gap:4px;background:rgba(22,22,22,.9);padding:4px;border-radius:999px;border:1px solid var(--surface-2)}
-.pj-onglets button{min-height:32px;padding:0 12px;border-radius:7px;border:0;background:none;color:var(--texte);font:600 13px var(--sans);cursor:pointer}
+.pj-onglets{position:absolute;left:10px;top:10px;z-index:5;display:flex;gap:4px;background:rgba(22,22,22,.9);padding:4px;border-radius:999px;border:1px solid var(--surface-2)}
+.pj-onglets button{min-height:26px;padding:0 9px;border-radius:5px;border:0;background:none;color:var(--texte);font:600 11.5px var(--sans);cursor:pointer}
 .pj-onglets button.on{background:var(--plein-fond);color:var(--plein-texte)}
 #vp{position:absolute;inset:0;width:100%;height:100%}
-.pj-tt{font:500 14px var(--mono);fill:#c9ccd3}
-.pj-tm{font:700 16px var(--mono);fill:#f2ede4;paint-order:stroke;stroke:#0a0a0a;stroke-width:4px}
-.pj-sim{padding:16px 20px 24px;background:var(--fond);display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:start}
+.pj-tt{font:500 12px var(--mono);fill:#c9ccd3}
+.pj-tm{font:700 13px var(--mono);fill:#f2ede4;paint-order:stroke;stroke:#0a0a0a;stroke-width:4px}
+.pj-sim{padding:8px 12px 12px;background:var(--fond);display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:10px;align-items:start}
 .pj-sim .pj-haut{grid-column:1/-1;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .pj-sim .pj-onglets{position:static;background:var(--surface-2)}
 .pj-sim .pj-onglets button.on{background:var(--plein-fond)}
 .pj-cycle{display:flex;align-items:center;gap:12px;margin-left:auto;flex-wrap:wrap}
 .pj-cycle .pj-bouton{min-height:34px}
 .pj-cycle input{width:min(220px,38vw);accent-color:var(--plein-fond);height:36px}
-.pj-cycle .pj-mono{font-size:14px;min-width:92px}
-#ch{width:100%;height:auto;background:var(--surface);border-radius:20px;border:1px solid var(--surface-2)}
+.pj-cycle .pj-mono{font-size:12px;min-width:92px}
+#ch{width:100%;height:auto;background:var(--surface);border-radius:6px;border:1px solid var(--surface-2)}
 .pj-jauges{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.pj-jauge{display:grid;justify-items:center;gap:2px;font-weight:600;font-size:12.5px}
+.pj-jauge{display:grid;justify-items:center;gap:2px;font-weight:600;font-size:11px}
 .pj-jauge svg{width:100%;max-width:96px}
-.pj-jauge text{font:700 20px var(--mono)}
-.pj-leg{grid-column:1/-1;font:500 13px var(--mono);color:var(--texte-2)}
+.pj-jauge text{font:700 16px var(--mono)}
+.pj-leg{grid-column:1/-1;font:500 11.5px var(--mono);color:var(--texte-2)}
 @media(max-width:900px){.pj-app{grid-template-columns:1fr}.pj-params{order:2}.pj-zone{order:1}.pj-params{border-right:0;border-bottom:1px solid var(--surface-2)}.pj-sim{grid-template-columns:1fr}.pj-cycle{margin-left:0}.pj-onglets button{padding:0 12px}}
 
 /* le plateau de dessin reste sombre dans les deux thèmes ; les panneaux suivent le thème */
@@ -49,3 +49,34 @@
 #vue-projets .pj-vue .pj-onglets button{color:var(--craie)} #vue-projets .pj-vue .pj-onglets button.on{background:var(--craie);color:var(--encre)}
 #ch{background:var(--nuit-2)} .pj-sim .pj-onglets{background:var(--surface-2)} .pj-sim .pj-onglets button.on{background:var(--plein-fond);color:var(--plein-texte)}
 .pj-jauge svg circle:first-child{stroke:var(--surface-2)} .pj-jauge text{fill:var(--texte)}
+
+/* fiche réelle : site 3D intégré et contrôle des règles */
+.pj-fiche{display:grid;gap:6px;margin:4px 0 14px}
+#site3d{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.pj-ctl{display:grid;gap:4px;max-height:340px;overflow:auto;padding-right:6px}
+.pj-ctl-nom{margin:0 0 4px;font-weight:600}
+.pj-ctl-l{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;padding:4px 8px;border-radius:4px;background:var(--surface-2)}
+.pj-ctl-l b{font-size:13px;text-align:center}
+.pj-ctl-l small{display:block;opacity:.7;font-size:11px}
+.pj-ctl-l.pj-non b{color:#e4572e}.pj-ctl-l.pj-inc b{opacity:.6}
+.pj-compte{display:grid;place-items:center;gap:2px}.pj-compte b{font-size:26px;line-height:1}
+
+/* grand écran : la vue prend tout l'onglet (les réglages et les simulations se cachent) */
+.pj-agrandir{position:absolute;top:10px;right:142px;z-index:6;min-height:26px;padding:0 9px;border-radius:5px;border:1px solid var(--surface-2);background:rgba(22,22,22,.9);color:#f2ede4;font:600 11.5px var(--sans);cursor:pointer}
+.pj-app.pj-grand{grid-template-columns:minmax(0,1fr);height:100%}
+.pj-app.pj-grand .pj-params,.pj-app.pj-grand .pj-sim{display:none}
+.pj-app.pj-grand .pj-zone{grid-template-rows:minmax(0,1fr);height:100%}
+/* Abri : une ligne par espace du programme */
+.pj-abri-l{display:grid;grid-template-columns:minmax(120px,1.1fr) 2fr;gap:8px;align-items:center;padding:3px 8px;border-radius:4px;background:var(--surface-2);font-size:11.5px}
+.pj-abri-l small{display:block;opacity:.7}
+.pj-barre{position:relative;height:12px;background:var(--surface);border:1px solid var(--filet);border-radius:2px}
+.pj-barre i{position:absolute;left:0;top:0;bottom:0;background:var(--texte);opacity:.75}
+.pj-barre i.pj-faible{background:#e4572e;opacity:1}
+.pj-barre b{position:absolute;top:-2px;bottom:-2px;width:1px;background:#e4572e}
+
+/* curseurs de la fiche, esquisse jouet repliable */
+.pj-fcurs{display:grid;gap:6px}
+.pj-2b{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pj-2b .pj-bouton{justify-content:center;padding:0 6px}
+.pj-jouet summary{cursor:pointer}
+.pj-jouet[open]>:not(summary){margin-top:8px}

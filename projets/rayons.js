@@ -103,6 +103,32 @@ export function bilan(G, P, dirs, horizon) {
   return { part, min: finis.length ? +Math.min(...finis).toFixed(0) : null, vals };
 }
 
+// --- Dose : de l'épaisseur traversée à des mSv ---
+// courbe = regles.hypotheses.dose_gcr.pts : [[g/cm², mSv/jour], ...] pour une demi-sphère d'épaisseur uniforme (MATTHIA2024).
+// Approximation par secteurs (◇) : chaque direction du ciel reçoit la dose de la courbe pour SON épaisseur ;
+// la dose du point = moyenne sur les directions qui ne sont pas le sol (le sol est déjà compris dans la courbe).
+export function doseCourbe(pts, t) {
+  if (t <= pts[0][0]) return pts[0][1];
+  for (let i = 1; i < pts.length; i++)
+    if (t <= pts[i][0]) { const [a, da] = pts[i - 1], [b, db] = pts[i]; return da + (db - da) * (t - a) / (b - a); }
+  return pts[pts.length - 1][1];                          // au-delà du dernier point : palier (prudent)
+}
+export function dosePoint(vals, pts) {
+  const ciel = vals.filter(v => v !== Infinity);
+  if (!ciel.length) return { mSv_j: 0, min: null };
+  const m = ciel.reduce((a, v) => a + doseCourbe(pts, v), 0) / ciel.length;
+  return { mSv_j: m, min: Math.min(...ciel) };
+}
+// Point où l'on évalue un espace : point_m de la fonction, sinon le centre de son élément à 1,5 m du sol
+export function pointEspace(F, fn) {
+  if (fn.point_m) return fn.point_m;
+  let e = F.elements.find(x => x.id === fn.element);
+  while (e && !e.position_m && e.dans) e = F.elements.find(x => x.id === e.dans);
+  if (!e || !e.position_m) return null;
+  const [x, y] = e.position_m, R = e.forme?.type === 'cylindre' ? val(e.forme.diametre_m) / 2 : 0;
+  return [x, y, Math.min(1.5, R ? 2 * R - 0.5 : 1.5)];
+}
+
 // --- Ligne de commande ---
 if (typeof process !== 'undefined' && process.argv?.[1] && import.meta.url === new URL('file:///' + process.argv[1].replace(/\\/g, '/')).href) {
   const fs = await import('node:fs'), path = await import('node:path');
@@ -140,7 +166,18 @@ if (typeof process !== 'undefined' && process.argv?.[1] && import.meta.url === n
         plan.push([+x.toFixed(1), +y.toFixed(1), b.part.faible, b.part.moyen, b.min]);
       }
 
-  const out = { fiche: path.basename(fic), date: new Date().toISOString().slice(0, 10),
+  // 3) dose de chaque espace du programme (fonctions) : mSv/jour si l'on y restait 24 h, et mSv/heure
+  const pts = R.hypotheses.dose_gcr.pts, abri = val(R.hypotheses.abri_eruption_g_cm2);
+  const zones = (F.programme.fonctions || []).map(fn => {
+    const P = pointEspace(F, fn);
+    if (!P) return { id: fn.id, nom: fn.nom, element: fn.element, erreur: 'pas de position' };
+    const b = bilan(G, P, D, horizon), d = dosePoint(b.vals, pts);
+    return { id: fn.id, nom: fn.nom, element: fn.element, P, mSv_j: +d.mSv_j.toFixed(3), mSv_h: +(d.mSv_j / 24).toFixed(4),
+      min_g_cm2: d.min == null ? null : Math.round(d.min), abri_eruption: d.min != null && d.min >= abri };
+  });
+  for (const z of zones) console.log(`${(z.nom || z.id).padEnd(34)} ${z.mSv_h} mSv/h  (${z.mSv_j} mSv/j)  min ${z.min_g_cm2} g/cm²  abri ${z.abri_eruption ? 'oui' : 'non'}`);
+
+  const out = { fiche: path.basename(fic), date: new Date().toISOString().slice(0, 10), zones,
     methode: 'distribution d\'épaisseurs par lancer de rayons (pas de 10 cm), masse volumique ' + G.rho + ' g/cm³ ; parois ignorées ; pas une dose',
     butte: G.butte, couverture_m: G.couv, talus_deg: G.talus, classes: CLASSES.map(({ max, ...c }) => c),
     directions: D.map(d => d.map(x => +x.toFixed(4))), ciel, plan, colonnes_plan: ['x', 'y', '% faible', '% moyen', 'min g/cm²'] };

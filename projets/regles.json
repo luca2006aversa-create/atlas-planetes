@@ -10,12 +10,19 @@
   "BVAD": { "titre": "Life Support Baseline Values and Assumptions Document, NASA/TP-2015-218570/REV1", "date": "2018-01", "url": "https://ntrs.nasa.gov/citations/20180001338", "lu_sur": "https://simoc.space/wp-content/uploads/2018/09/BVAD-20180501.pdf" },
   "PHAM2008": { "titre": "Pham & El-Genk, AIP Conf. Proc. 969 (2008), protection en régolithe contre les éruptions solaires", "url": "https://www.osti.gov/biblio/21049474" },
   "ESA-MARGES": { "titre": "ESA, Margin philosophy for science assessment studies 1.3 (cite ECSS-E-ST-10-02C)", "url": "https://sci.esa.int/documents/34375/36249/1567260131067-Margin_philosophy_for_science_assessment_studies_1.3.pdf" },
-  "EDEN": { "titre": "DLR, EDEN ISS presents results (2019)", "url": "https://www.dlr.de/content/en/articles/news/2019/03/20190823_project-eden-iss-presents-results.html" }
+  "EDEN": { "titre": "DLR, EDEN ISS presents results (2019)", "url": "https://www.dlr.de/content/en/articles/news/2019/03/20190823_project-eden-iss-presents-results.html" },
+  "MATTHIA2024": { "titre": "Matthiä & Berger, Radiation exposure and shielding effects on the lunar surface, Space Weather (2024), doi:10.1029/2024SW004095", "url": "https://elib.dlr.de/210448/" },
+  "ZHANG2020": { "titre": "Zhang et al., First measurements of the radiation dose on the lunar surface (Chang'E 4 LND), Science Advances (2020)", "lu_sur": "https://www.sci.news/space/radiation-dose-rates-lunar-surface-08893.html" }
  },
  "hypotheses": {
   "fraction_nette": { "v": 0.45, "s": "▨", "src": "Volume net habitable / volume pressurisé quand la fiche ne donne pas le volume habitable. Ordre de grandeur de l'ISS, non relu." },
   "marge_masse": { "v": 0.20, "s": "◇", "src": "ESA-MARGES : marge système 20 % sur la masse sèche (lu dans un extrait) ; marges par équipement 5 / 10 / 20 % selon maturité" },
-  "masse_volumique_regolithe": { "v": 1.5, "s": "◇", "src": "1,30-1,35 g/cm³ en surface, 1,8 à 30-60 cm, 1,92 en profondeur (Lunar Sourcebook via NTRS 20220014634, extrait) ; 1,5 = valeur de calcul pour un régolithe remanié" }
+  "masse_volumique_regolithe": { "v": 1.5, "s": "◇", "src": "1,30-1,35 g/cm³ en surface, 1,8 à 30-60 cm, 1,92 en profondeur (Lunar Sourcebook via NTRS 20220014634, extrait) ; 1,5 = valeur de calcul pour un régolithe remanié" },
+  "dose_gcr": { "s": "●", "unite": "mSv/jour selon g/cm² de régolithe",
+    "pts": [[0.5, 0.84], [20, 0.60], [90, 0.65], [180, 0.55]],
+    "src": "MATTHIA2024 §3.2 (lu) : rayons cosmiques au minimum solaire (le pire cas), personne sous une demi-sphère de régolithe posée sur le sol lunaire, Geant4. 0,84 mSv/j sans abri (combinaison 0,5 g/cm²), minimum local 0,60 vers 20 g/cm², remontée à 0,65 à 90 g/cm² (neutrons secondaires), 0,55 à 180 g/cm². Entre les points : interpolation linéaire (▨). Au-delà de 180 g/cm² : 0,55 gardé (▨ prudent, l'article dit que la dose devrait baisser encore). Ordre de grandeur : Chang'E 4 a mesuré 1,369 mSv/j dans l'atterrisseur (ZHANG2020)." },
+  "abri_eruption_g_cm2": { "v": 10, "s": "●", "src": "MATTHIA2024 (lu) : plus de 4 g/cm² de régolithe ramènent les éruptions solaires historiques sous les limites de 30 jours, plus de 10 g/cm² donnent une marge de 2" },
+  "part_carriere_mission": { "v": 1, "s": "▨", "src": "Part de la limite de carrière que l'on accepte de dépenser sur cette mission (1 = toute)" }
  },
  "vehicules": {
   "argonaut": { "nom": "ESA Argonaut", "masse_posee_kg": { "v": 1500, "s": "●", "src": "esa.int/argonaut : masse posée (CPE + charge utile), annoncée, premier vol vers 2030" }, "diametre_utile_m": { "v": 4.6, "s": "◇", "src": "Lancé par Ariane 6 : diamètre intérieur de la coiffe (Wikipedia citant le manuel Ariane 6, non lu). Gabarit propre de l'atterrisseur non trouvé." }, "hauteur_utile_m": null, "annonce": true },
@@ -45,6 +52,9 @@
     "params": { "min_m": { "v": 2, "s": "▨", "src": "≥ 2 m de régolithe pour 150 mSv / 180 j (IAC-24 D3 IP 1) ; 3-7 m (NASA ASCEND 2021) : lus seulement dans des extraits" },
                 "vise": "Limite : < 600 mSv sur la carrière, tous âges et sexes (NASA-STD-3001 V1 Rev C, V1 4030 §4.8.2)." },
     "source": "NASA-STD-3001 V1 Rev C V1 4030 ; épaisseur à confirmer par un calcul (OLTARIS)" },
+  { "id": "RAD-3", "domaine": "protéger", "nom": "Budget de dose par jour (temps passé × dose de chaque espace)", "test": "budget_dose",
+    "params": { "limite_carriere_mSv": { "v": 600, "s": "●", "src": "NASA-STD-3001 V1 Rev C, V1 4030 §4.8.2" } },
+    "source": "Quota = limite de carrière × part acceptée ÷ durée. Dose de chaque espace : rayons.js + courbe MATTHIA2024. Rayons cosmiques seulement : les éruptions se gèrent par l'abri." },
   { "id": "TRA-1", "domaine": "transporter", "nom": "Chaque élément tient dans la soute", "test": "gabarit_vol", "params": {},
     "source": "Gabarits des véhicules ci-dessus (annoncés)" },
   { "id": "TRA-2", "domaine": "transporter", "nom": "Masse de chaque envoi, marge comprise", "test": "masse_lancement", "params": {},

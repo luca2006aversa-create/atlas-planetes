@@ -28,6 +28,16 @@
   .st { font: 13px var(--mono); color: var(--texte-2); margin-left: 6px; }
   .src { grid-column: 2 / 4; font-size: 12px; color: var(--texte-2); }
   .leg { margin-top: 24px; color: var(--texte-2); font-size: 13px; }
+  .journee { grid-column: 1 / 4; margin-top: 8px; border-top: 1px solid var(--filet); padding-top: 10px; }
+  .jl { display: grid; grid-template-columns: minmax(120px, 230px) 1fr 150px; gap: 10px; align-items: center; font-size: 13px; margin: 5px 0; }
+  .jl .barre { position: relative; height: 16px; background: var(--surface-2); border-radius: 4px; }
+  .jl .barre i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; }
+  .jl .barre b { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--texte); }
+  .jl .chiffres { font: 12.5px var(--mono); color: var(--texte-2); text-align: right; }
+  .duree { display: flex; gap: 10px; align-items: center; font-size: 13px; margin: 0 0 10px; flex-wrap: wrap; }
+  .duree input { flex: 1 1 200px; }
+  .fiches { font-size: 13px; margin: 0 0 14px; } .fiches a.on { font-weight: 700; color: var(--texte); }
+  @media (max-width: 560px) { .jl { grid-template-columns: 1fr; } .jl .chiffres { text-align: left; } }
   @media (max-width: 560px) { .carte { grid-template-columns: 40px 1fr; } .val { grid-column: 2; text-align: left; } }
 </style>
 </head>
@@ -36,6 +46,7 @@
   <nav class="liens" style="font-size:13px;margin-bottom:8px"><a href="../">← Atlas</a> · <a href="site3d.html">Habitat 3D</a> · <a href="controle.html">Contrôles</a> · <a href="rayons.html">Radiations</a></nav>
   <h1 id="titre">Contrôle du projet</h1>
   <p class="sous" id="note"></p>
+  <p class="fiches" id="fiches"></p>
   <div class="bilan" id="bilan"></div>
   <div id="liste"></div>
   <p class="leg">● lu dans le document source · ◇ calculé ou source secondaire · ▨ hypothèse à sourcer.
@@ -45,14 +56,37 @@
 import { controler } from './controle.js';
 const fiche = new URLSearchParams(location.search).get('fiche') || 'pole-sud-esquisse.json';
 const [F, R] = await Promise.all([fiche, 'regles.json'].map(u => fetch(u).then(r => r.json())));
+const RAY = await fetch('rayons-' + fiche).then(r => r.ok ? r.json() : null).catch(() => null);
+const X = { fiche, rayons: RAY };
 document.getElementById('titre').textContent = F.nom;
 document.getElementById('note').textContent = F.note || '';
-const res = controler(F, R);
+const FICHES = [['pole-sud-esquisse.json', 'Esquisse'], ['pole-sud-fenetre-protegee.json', 'Périscope'], ['pole-sud-zones.json', 'Zones selon le temps']];
+document.getElementById('fiches').innerHTML = 'Variante : ' + FICHES.map(([f, n]) => `<a href="?fiche=${f}" class="${f === fiche ? 'on' : ''}">${n}</a>`).join(' · ');
 const cls = { ok: 'ok', non: 'non', info: 'info', '?': 'inconnu' }, sym = { ok: '✓', non: '✗', info: 'i', '?': '?' };
+const val = x => (x && typeof x === 'object' && 'v' in x) ? x.v : x;
+const j0 = val(F.programme.duree_jours);
+let jours = j0;
+// couleur d'un espace selon sa dose horaire : vert (abri) → orange → rouge (à découvert)
+const teinte = (h, a, b) => `hsl(${Math.round(130 - 120 * Math.max(0, Math.min(1, (h - a) / Math.max(1e-9, b - a))))} 55% 45%)`;
+function journee(x) {
+  const Z = x.zones.filter(z => z.h != null), a = Math.min(...Z.map(z => z.mSv_h)), b = Math.max(...Z.map(z => z.mSv_h));
+  return `<div class="journee"><div class="duree"><span>Durée de la mission</span>
+      <input type="range" id="jours" min="10" max="1800" step="10" value="${jours}" aria-label="Durée de la mission en jours">
+      <b>${jours} jours</b><span>→ quota ${x.seuil} mSv/jour</span></div>` +
+    Z.map(z => `<div class="jl"><span>${z.abri ? '🛡 ' : ''}${z.nom}</span>
+      <span class="barre" title="barre = heures par jour (sur 24 h) ; trait = heures maximum avec le quota">
+        <i style="width:${100 * z.h / 24}%;background:${teinte(z.mSv_h, a, b)}"></i><b style="left:${100 * Math.min(24, z.h_max) / 24}%"></b></span>
+      <span class="chiffres">${z.h} h × ${(1000 * z.mSv_h).toFixed(1)} µSv/h<br>max ${z.h_max >= 24 ? '24' : z.h_max.toFixed(1)} h</span></div>`).join('') +
+    `<p class="det">🛡 = abri contre les éruptions solaires. Barre = heures par jour, couleur = dose de l'espace, trait = heures maximum pour rester dans le quota.</p></div>`;
+}
+function rendre() {
+const Fj = structuredClone(F); Fj.programme.duree_jours = { ...(typeof F.programme.duree_jours === 'object' ? F.programme.duree_jours : {}), v: jours };
+const res = controler(Fj, R, X);
 const n = k => res.filter(x => x.etat === k).length;
 document.getElementById('bilan').innerHTML =
   `<span class="pastille">✓ ${n('ok')}</span><span class="pastille">✗ ${n('non')}</span><span class="pastille">? ${n('?')}</span>`;
 const L = document.getElementById('liste');
+L.innerHTML = '';
 let dom = '';
 for (const x of res) {
   if (x.domaine !== dom) { dom = x.domaine; L.insertAdjacentHTML('beforeend', `<div class="dom">${dom}</div>`); }
@@ -64,8 +98,13 @@ for (const x of res) {
     <div class="val">${x.valeur != null && x.seuil != null && x.seuil !== 0 ? `${x.valeur} / ${x.seuil} ${x.unite || ''}` : ''}</div>
     ${num ? `<div class="jauge" title="la moitié = le seuil"><i style="width:${pct}%"></i></div>` : ''}
     <div class="det">${x.detail || ''}</div>
-    <div class="src">${x.source || ''}</div></div>`);
+    <div class="src">${x.source || ''}</div>
+    ${x.zones ? journee(x) : ''}</div>`);
 }
+const J = document.getElementById('jours');
+if (J) J.oninput = () => { jours = +J.value; rendre(); document.getElementById('jours').focus(); };
+}
+rendre();
 </script>
 </body>
 </html>

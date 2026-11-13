@@ -37,32 +37,63 @@
    {
     "id": "dormir",
     "nom": "Dormir",
-    "element": "M1"
+    "element": "M1",
+    "h_jour": {
+     "v": 9,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    },
+    "abri_requis": true
    },
    {
     "id": "vivre",
     "nom": "Manger, se réunir, regarder la Terre",
-    "element": "M2"
+    "element": "M2",
+    "h_jour": {
+     "v": 6,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
    },
    {
     "id": "travailler",
     "nom": "Laboratoire, exercice",
-    "element": "M3"
+    "element": "M3",
+    "h_jour": {
+     "v": 7,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
    },
    {
     "id": "cultiver",
     "nom": "Cultiver (salades)",
-    "element": "SV1"
+    "element": "SV1",
+    "h_jour": {
+     "v": 1.5,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
    },
    {
     "id": "sortir",
     "nom": "Entrer, sortir, poussière",
-    "element": "S1"
+    "element": "S1",
+    "h_jour": {
+     "v": 0.5,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
    },
    {
     "id": "secours",
     "nom": "Sortie de secours",
-    "element": "S2"
+    "element": "S2",
+    "h_jour": {
+     "v": 0,
+     "s": "▨",
+     "src": "emploi du temps proposé"
+    }
    }
   ]
  },
@@ -114,7 +145,41 @@
    "montage": {
     "etape": 2,
     "moyen": "grue + robot"
-   }
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout ouest"
+    },
+    {
+     "id": "B",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout est"
+    }
+   ]
   },
   {
    "id": "M2",
@@ -152,7 +217,41 @@
    "montage": {
     "etape": 1,
     "moyen": "grue + robot"
-   }
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout ouest"
+    },
+    {
+     "id": "B",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout est"
+    }
+   ]
   },
   {
    "id": "M3",
@@ -190,7 +289,41 @@
    "montage": {
     "etape": 3,
     "moyen": "grue + robot"
-   }
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout ouest"
+    },
+    {
+     "id": "B",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "bout est"
+    }
+   ]
   },
   {
    "id": "S1",
@@ -228,7 +361,42 @@
    "montage": {
     "etape": 4,
     "moyen": "robot"
-   }
+   },
+   "ports": [
+    {
+     "id": "A",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "vers le module"
+    },
+    {
+     "id": "B",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "porte",
+     "nom": "porte vers l'extérieur"
+    }
+   ],
+   "rotation_deg": 180
   },
   {
    "id": "S2",
@@ -267,7 +435,41 @@
     "etape": 4,
     "moyen": "robot"
    },
-   "note": "Correction du 13/11 : le module ouest était un cul-de-sac. Second chemin de sortie, à l'opposé du sas principal."
+   "note": "Correction du 13/11 : le module ouest était un cul-de-sac. Second chemin de sortie, à l'opposé du sas principal.",
+   "ports": [
+    {
+     "id": "A",
+     "face": "+x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "ecoutille",
+     "nom": "vers le module"
+    },
+    {
+     "id": "B",
+     "face": "-x",
+     "hauteur_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "centre de l'écoutille à 1 m du sol : hypothèse de dessin"
+     },
+     "diametre_m": {
+      "v": 1,
+      "s": "▨",
+      "src": "écoutille Ø 1 m : hypothèse de dessin, à comparer aux écoutilles ISS/Gateway"
+     },
+     "type": "porte",
+     "nom": "porte vers l'extérieur"
+    }
+   ]
   },
   {
    "id": "SV1",
@@ -347,23 +549,33 @@
  ],
  "liaisons": [
   {
-   "de": "S2",
-   "vers": "M1",
+   "de": "S2.A",
+   "vers": "M1.A",
    "type": "jonction"
   },
   {
-   "de": "M1",
-   "vers": "M2",
-   "type": "jonction"
+   "de": "M1.B",
+   "vers": "M2.A",
+   "type": "jonction",
+   "ecart_m": {
+    "v": 1,
+    "s": "▨",
+    "src": "tunnel de 1 m entre modules : hypothèse de dessin"
+   }
   },
   {
-   "de": "M2",
-   "vers": "M3",
-   "type": "jonction"
+   "de": "M2.B",
+   "vers": "M3.A",
+   "type": "jonction",
+   "ecart_m": {
+    "v": 1,
+    "s": "▨",
+    "src": "tunnel de 1 m entre modules : hypothèse de dessin"
+   }
   },
   {
-   "de": "M3",
-   "vers": "S1",
+   "de": "M3.B",
+   "vers": "S1.A",
    "type": "jonction"
   }
  ],
@@ -374,5 +586,9 @@
    "s": "▨",
    "src": "esquisse de l'étude, à dimensionner"
   }
+ },
+ "assemblage": {
+  "ancre": "M2",
+  "note": "M2 garde sa position écrite ; les autres éléments reliés par des ports sont placés par l'assemblage (assemblage.js)."
  }
 }

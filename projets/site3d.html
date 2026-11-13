@@ -20,6 +20,8 @@
          text-shadow: 0 0 4px #000, 0 0 2px #000; }
   .etq small { font-weight: 400; color: #bbb; }
   .titre nav { margin-top: 6px; font-size: 12px; } .titre nav a { color: #f2b29c; margin-right: 10px; }
+  body.embed .titre { display: none; }
+  body.embed .barre { left: 8px; right: 8px; bottom: 8px; }
   .boussole { position: fixed; right: 12px; top: 12px; width: 120px; height: 120px; }
 </style>
 </head>
@@ -49,7 +51,10 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { astres, depaqueter, jourJ2000, iauLune, repereLocal, azHaut, etoile } from './ciel.js';
 
 const RAD = Math.PI / 180;
-const fiche = new URLSearchParams(location.search).get('fiche') || 'pole-sud-esquisse.json';
+const PARAMS = new URLSearchParams(location.search), EMBED = PARAMS.get('embed') === '1';
+const fiche = PARAMS.get('fiche') || 'pole-sud-esquisse.json';
+if (EMBED) document.body.classList.add('embed');
+if (EMBED) addEventListener('keydown', e => { if (e.key === 'Escape') parent.postMessage('kibsu-echap', location.origin); });   // Échap : quitter le grand écran de l'onglet Projets
 const [META, F, PLAN, HAB, PLA] = await Promise.all(['site/relief.json', fiche, '../etude/donnees/plan.json',
   '../etude/donnees/habitat.json', '../donnees/planetes.json'].map(u => fetch(u).then(r => r.json())));
 const [BP, BL] = await Promise.all([META.proche.fichier, META.loin.fichier].map(f => fetch('site/' + f).then(r => r.arrayBuffer())));
@@ -102,52 +107,60 @@ projet.matrix.set(ux[0], 0, uy[0], 0,  0, 1, 0, 0,  -ux[1], 0, -uy[1], 0,  0, 0,
 scene.add(projet);
 const L3 = (u, v, h) => new THREE.Vector3(u, h, v);
 
-const habs = F.elements.filter(e => e.pressurise && e.forme?.type === 'cylindre');
-const B = F.elements.find(e => e.forme?.type === 'butte');
-const Rm = Math.max(...habs.map(e => val(e.forme.diametre_m) / 2)), couv = val(B.forme.couverture_m), tal = val(B.forme.talus_deg);
-const xa = Math.min(...habs.map(e => e.position_m[0] - val(e.forme.longueur_m) / 2)), xb = Math.max(...habs.map(e => e.position_m[0] + val(e.forme.longueur_m) / 2));
-const c = Rm + couv, H = 2 * Rm + couv, pied = c + H / Math.tan(tal * RAD);
-function stade(dist, z, N = 40) {
-  const pts = [];
-  for (let k = 0; k <= N; k++) { const a = -Math.PI / 2 + Math.PI * k / N; pts.push(L3(xb + dist * Math.cos(a), dist * Math.sin(a), z)); }
-  for (let k = 0; k <= N; k++) { const a = Math.PI / 2 + Math.PI * k / N; pts.push(L3(xa + dist * Math.cos(a), dist * Math.sin(a), z)); }
-  return pts;
-}
-const bas = stade(pied, -1), haut = stade(c, H), nn = bas.length, pb = [];
-for (let i = 0; i < nn; i++) { const j = (i + 1) % nn; pb.push(bas[i], bas[j], haut[j], bas[i], haut[j], haut[i]); }
-for (let i = 1; i < nn - 1; i++) pb.push(haut[0], haut[i], haut[i + 1]);
-const gb = new THREE.BufferGeometry().setFromPoints(pb); gb.computeVertexNormals();
 const matButte = new THREE.MeshStandardMaterial({ color: '#b9b3a6', roughness: 1, side: THREE.DoubleSide, transparent: true, opacity: 1 });
-const butte = new THREE.Mesh(gb, matButte); butte.castShadow = butte.receiveShadow = true;
-projet.add(butte);
-
 const matMod = new THREE.MeshStandardMaterial({ color: '#f2ede4', roughness: .6, side: THREE.DoubleSide }), matSas = new THREE.MeshStandardMaterial({ color: '#e4572e', roughness: .6, side: THREE.DoubleSide });
-for (const e of F.elements.filter(e => e.forme?.type === 'cylindre')) {
-  const R = val(e.forme.diametre_m) / 2, Lg = val(e.forme.longueur_m);
-  const m = new THREE.Mesh(new THREE.CylinderGeometry(R, R, Lg, 48), e.pressurise ? matMod : matSas);
-  m.rotation.z = Math.PI / 2; m.position.copy(L3(e.position_m[0], e.position_m[1], R)); m.castShadow = true;
-  projet.add(m);
-}
 const matAir = new THREE.MeshBasicMaterial({ color: '#e4572e', transparent: true, opacity: .45, side: THREE.DoubleSide, depthWrite: false });
-for (const e of F.elements.filter(e => e.type === 'ouverture' && e.forme?.type === 'boite')) {   // puits, chambres
-  const b = new THREE.Mesh(new THREE.BoxGeometry(e.forme.dim_m[0], e.forme.dim_m[2], e.forme.dim_m[1]), matAir);
-  b.position.copy(L3(...e.forme.centre_m)); projet.add(b);
+// habitat d'après la fiche ; refait à chaque fiche reçue de l'onglet Projets (curseurs)
+let c = 0, H = 0;
+function batir(F) {
+  for (const o of [...projet.children]) { projet.remove(o); o.geometry?.dispose(); }
+  const habs = F.elements.filter(e => e.pressurise && e.forme?.type === 'cylindre');
+  const B = F.elements.find(e => e.forme?.type === 'butte');
+  const Rm = Math.max(...habs.map(e => val(e.forme.diametre_m) / 2)), couv = val(B.forme.couverture_m), tal = val(B.forme.talus_deg);
+  const xa = Math.min(...habs.map(e => e.position_m[0] - val(e.forme.longueur_m) / 2)), xb = Math.max(...habs.map(e => e.position_m[0] + val(e.forme.longueur_m) / 2));
+  c = Rm + couv; H = 2 * Rm + couv; const pied = c + H / Math.tan(tal * RAD);
+  function stade(dist, z, N = 40) {
+    const pts = [];
+    for (let k = 0; k <= N; k++) { const a = -Math.PI / 2 + Math.PI * k / N; pts.push(L3(xb + dist * Math.cos(a), dist * Math.sin(a), z)); }
+    for (let k = 0; k <= N; k++) { const a = Math.PI / 2 + Math.PI * k / N; pts.push(L3(xa + dist * Math.cos(a), dist * Math.sin(a), z)); }
+    return pts;
+  }
+  const bas = stade(pied, -1), haut = stade(c, H), nn = bas.length, pb = [];
+  for (let i = 0; i < nn; i++) { const j = (i + 1) % nn; pb.push(bas[i], bas[j], haut[j], bas[i], haut[j], haut[i]); }
+  for (let i = 1; i < nn - 1; i++) pb.push(haut[0], haut[i], haut[i + 1]);
+  const gb = new THREE.BufferGeometry().setFromPoints(pb); gb.computeVertexNormals();
+  const butte = new THREE.Mesh(gb, matButte); butte.castShadow = butte.receiveShadow = true;
+  projet.add(butte);
+
+  for (const e of F.elements.filter(e => e.forme?.type === 'cylindre')) {
+    const R = val(e.forme.diametre_m) / 2, Lg = val(e.forme.longueur_m);
+    const m = new THREE.Mesh(new THREE.CylinderGeometry(R, R, Lg, 48), e.pressurise ? matMod : matSas);
+    m.rotation.z = Math.PI / 2; m.position.copy(L3(e.position_m[0], e.position_m[1], R)); m.castShadow = true;
+    projet.add(m);
+  }
+  for (const e of F.elements.filter(e => e.type === 'ouverture' && e.forme?.type === 'boite')) {   // puits, chambres
+    const b = new THREE.Mesh(new THREE.BoxGeometry(e.forme.dim_m[0], e.forme.dim_m[2], e.forme.dim_m[1]), matAir);
+    b.position.copy(L3(...e.forme.centre_m)); projet.add(b);
+  }
+  for (const Fe of F.elements.filter(e => e.type === 'ouverture' && e.forme?.type === 'fente').map(e => e.forme)) {   // fentes
+    const o = Fe.oeil_m, w = Fe.largeur_oeil_m / 2, hh = Fe.hauteur_oeil_m / 2, D = 30;
+    const ta = Fe.az_deg.map(a => Math.tan(a * RAD)), te = Fe.el_deg.map(a => Math.tan(a * RAD));
+    const q = (dy, su, se) => L3(o[0] + (su ? w + dy * ta[1] : -w + dy * ta[0]), o[1] + dy, o[2] + (se ? hh + dy * te[1] : -hh + dy * te[0]));
+    const v = [q(0,0,0), q(0,1,0), q(0,1,1), q(0,0,1), q(D,0,0), q(D,1,0), q(D,1,1), q(D,0,1)];
+    const f = [[0,1,2,3],[4,5,6,7],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7]].flatMap(([a,b,c2,d]) => [v[a],v[b],v[c2],v[a],v[c2],v[d]]);
+    projet.add(new THREE.Mesh(new THREE.BufferGeometry().setFromPoints(f), matAir));
+  }
+  // chapeaux de régolithe (renforts posés sur la butte)
+  for (const e of F.elements.filter(e => e.forme?.type === 'chapeau')) {
+    const r = val(e.forme.rayon_m), h = val(e.forme.hauteur_m);
+    const k = new THREE.Mesh(new THREE.ConeGeometry(r, h, 40, 1, true), matButte);
+    k.position.copy(L3(e.forme.centre_m[0], e.forme.centre_m[1], H + h / 2)); k.castShadow = k.receiveShadow = true;
+    projet.add(k);
+  }
 }
-for (const Fe of F.elements.filter(e => e.type === 'ouverture' && e.forme?.type === 'fente').map(e => e.forme)) {   // fentes
-  const o = Fe.oeil_m, w = Fe.largeur_oeil_m / 2, hh = Fe.hauteur_oeil_m / 2, D = 30;
-  const ta = Fe.az_deg.map(a => Math.tan(a * RAD)), te = Fe.el_deg.map(a => Math.tan(a * RAD));
-  const q = (dy, su, se) => L3(o[0] + (su ? w + dy * ta[1] : -w + dy * ta[0]), o[1] + dy, o[2] + (se ? hh + dy * te[1] : -hh + dy * te[0]));
-  const v = [q(0,0,0), q(0,1,0), q(0,1,1), q(0,0,1), q(D,0,0), q(D,1,0), q(D,1,1), q(D,0,1)];
-  const f = [[0,1,2,3],[4,5,6,7],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7]].flatMap(([a,b,c2,d]) => [v[a],v[b],v[c2],v[a],v[c2],v[d]]);
-  projet.add(new THREE.Mesh(new THREE.BufferGeometry().setFromPoints(f), matAir));
-}
-// chapeaux de régolithe (renforts posés sur la butte)
-for (const e of F.elements.filter(e => e.forme?.type === 'chapeau')) {
-  const r = val(e.forme.rayon_m), h = val(e.forme.hauteur_m);
-  const k = new THREE.Mesh(new THREE.ConeGeometry(r, h, 40, 1, true), matButte);
-  k.position.copy(L3(e.forme.centre_m[0], e.forme.centre_m[1], H + h / 2)); k.castShadow = k.receiveShadow = true;
-  projet.add(k);
-}
+batir(F);
+if (EMBED) addEventListener('message', e => { if (e.origin === location.origin && e.data?.type === 'kibsu-fiche') batir(e.data.F); });
+
 // mâts solaires et aire d'atterrissage du plan de l'étude
 const matMat = new THREE.MeshStandardMaterial({ color: '#f2c14e', roughness: .5 });
 for (const m of PLAN.mats) {
@@ -279,7 +292,8 @@ function choisir(id) {
 const protegee = fiche.includes('protegee');
 const bv = document.getElementById('variante');
 bv.textContent = protegee ? 'Fenêtre : périscope ⇄' : 'Fenêtre : directe ⇄';
-bv.onclick = () => { location.search = '?fiche=' + (protegee ? 'pole-sud-esquisse.json' : 'pole-sud-fenetre-protegee.json'); };
+bv.onclick = () => { PARAMS.set('fiche', protegee ? 'pole-sud-esquisse.json' : 'pole-sud-fenetre-protegee.json'); location.search = '?' + PARAMS; };
+if (EMBED) bv.style.display = 'none';            // intégré : la fiche se choisit dans le panneau de l'onglet Projets
 const curs = document.getElementById('temps');
 curs.oninput = () => { dCour = d0 + curs.value / 24; placerCiel(dCour); };
 let lecture = false;
@@ -294,7 +308,8 @@ rendu.setAnimationLoop(t => {
   tPrec = t;
   ctl.update(); rendu.render(scene, camera); etiquettes(); boussole();
 });
-window.KIBSU3D = { scene, camera, ctl, AST: () => AST };
+window.KIBSU3D = { scene, camera, ctl, AST: () => AST, batir };
+if (EMBED) parent.postMessage('kibsu-pret', location.origin);   // prêt à recevoir la fiche
 </script>
 </body>
 </html>
