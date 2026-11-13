@@ -90,6 +90,25 @@ du plancher, ou jusqu'au haut de la forme). Sans `niveaux` : un seul plancher, p
 centré sur l'axe). Hypothèses de dessin (▨, à sourcer) : hauteur debout 2 m, plancher 0,2 m (`HYP` dans `formes.js`).
 L'atelier signale une écoutille latérale qui ne s'ouvre au-dessus d'aucun plancher.
 
+### Connexions : portes, zones, transitions
+Catalogue et règles dans `connexions.json` (portes réelles et leurs sources, zones, transitions, matrice), moteur dans `connexions.js`
+(`node connexions.js fiche.json`), vue « Parcours » et cartes « Portes et ports » / « Connexions » dans l'atelier.
+- **Porte d'un port** : `"porte": "porte_etanche"` (voir `connexions.json` : écoutille ronde Ø 0,8 m ◇ IDSS, écoutille carrée 1,27 m ◇ CBM,
+  porte étanche, porte de sas, porte intérieure, porte extérieure, trappe, suitport). `"niveau": "N1"` pose la porte sur ce plancher
+  (avec son seuil) au lieu d'une hauteur écrite.
+- **Zone d'un élément** : `"zone": "vie" | "nuit" | "travail" | "technique" | "serre" | "poussiere"` (par défaut selon le type).
+- **Pièce de transition** : un élément de type `sas` ou `vestiaire`, avec `"transition": "sas" | "vestiaire" | "vestiaire_bio"`.
+  Entre deux zones qui ne peuvent pas se toucher (matrice), il faut la bonne pièce : sas entre dehors et dedans, vestiaire entre la
+  poussière et la vie, vestiaire propre avant la serre. `"secours": true` : sas de secours (pas de vestiaire exigé, parcours évité).
+- **Liaison** : `type` (`jonction`, `tunnel`, `couloir` pressurisés ; `couloir couvert`, `chemin` non pressurisés), `ecart_m`,
+  `circulation` (« un escalier », « une rampe ») pour rattraper un dénivelé dans le tunnel.
+- **Socle** : `"socle": true` pose l'élément sur un socle de régolithe pour que ses portes soient à la hauteur du voisin ; sinon
+  l'élément reste au sol et l'écart de hauteur entre portes devient une marche (✗) ou une pente à rattraper.
+- **Accès entre niveaux** : `niveaux[i].acces: { "type": "échelle" | "escalier", "porte": "trappe" }` pour chaque niveau au-dessus du premier.
+Règles vérifiées : TR-0 à TR-5 (zones et transitions), CX-1 (porte étanche entre volumes pressurisés), CX-2 / CX-3 (taille du passage
+en combinaison ou non), CX-4 (marches, pentes), CX-5 (porte sur un plancher), CX-6 (port libre), CX-7 (accès aux niveaux).
+Exemple complet : `pole-sud-connexions.json` (86 ✓, 0 ✗).
+
 ### `arrivee.mode`
 | mode | Sens | Conséquence |
 |---|---|---|

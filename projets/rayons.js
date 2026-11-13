@@ -21,7 +21,7 @@ export function geometrie(F, rho) {
   const B = F.elements.find(e => e.forme && e.forme.type === 'butte');
   const couv = val(B?.forme.couverture_m ?? F.protection.epaisseur_m), talus = val(B?.forme.talus_deg ?? 35);
   const Rm = Math.max(...hab.map(m => m.R));
-  const butte = { xa: Math.min(...hab.map(m => m.x0)), xb: Math.max(...hab.map(m => m.x1)), c: Rm + couv, H: 2 * Rm + couv, tt: Math.tan(talus * RAD) };
+  const butte = !B || !hab.length ? null : { xa: Math.min(...hab.map(m => m.x0)), xb: Math.max(...hab.map(m => m.x1)), c: Rm + couv, H: 2 * Rm + couv, tt: Math.tan(talus * RAD) };
   const ouv = F.elements.filter(e => e.type === 'ouverture');
   const fentes = ouv.filter(e => e.forme?.type === 'fente').map(e => ({ o: e.forme.oeil_m, w: e.forme.largeur_oeil_m / 2, h: e.forme.hauteur_oeil_m / 2,
     az: e.forme.az_deg.map(a => Math.tan(a * RAD)), el: e.forme.el_deg.map(a => Math.tan(a * RAD)) }));
@@ -34,7 +34,9 @@ export function geometrie(F, rho) {
 const val = x => (x && typeof x === 'object' && 'v' in x) ? x.v : x;
 
 function zTop(G, x, y) {
-  const b = G.butte, dx = x < b.xa ? b.xa - x : x > b.xb ? x - b.xb : 0, d = Math.hypot(dx, y);
+  const b = G.butte;
+  if (!b) return 0;                                       // pas de butte : rien au-dessus du sol
+  const dx = x < b.xa ? b.xa - x : x > b.xb ? x - b.xb : 0, d = Math.hypot(dx, y);
   let z = d <= b.c ? b.H : Math.max(0, b.H - (d - b.c) * b.tt);
   for (const k of G.chapeaux || []) {
     const r = Math.hypot(x - k.c[0], y - k.c[1]);

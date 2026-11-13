@@ -1,0 +1,433 @@
+{
+ "format": "kibsu-connexions/0.1",
+ "_lisezmoi": "Catalogue des connexions de Kibsu : portes, zones, transitions entre zones, règles. Lu par connexions.js et atelier.html. Statuts : ● lu dans la source, ◇ calculé ou source secondaire, ▨ hypothèse de dessin à remplacer.",
+ "documents": {
+  "std3001_v2": "NASA-STD-3001 Volume 2, Rev D, exigences reprises dans le Technical Brief OCHMO-TB-028 Rev B « Vehicle Hatches » (29/11/2023), https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-tb-028-vehicle-hatches.pdf",
+  "idss": "International Docking System Standard, via Wikipédia « International Docking System Standard » ; texte de référence IDSS IDD Rev F (NASA, 2022) non lu",
+  "cbm": "Common Berthing Mechanism, via Wikipédia « Common Berthing Mechanism » et J. Oberg (2006)",
+  "lm": "Apollo Lunar Module, NASA ALSJ « CSM08 LM & SLA Overview » (extrait de recherche, non lu en entier)",
+  "quest": "Quest Joint Airlock, Wikipédia (page lue) : 34 m³, 5,5 m × 4 m, sorties à deux",
+  "eden": "EDEN ISS, DLR (Neumayer III, Antarctique) : « cold porch », sas tampon avec penderie avant la serre (extraits de recherche)",
+  "apollo_poussiere": "Gaier et Creel, NASA Glenn : fuites des joints exposés à la poussière lunaire ; récits des équipages Apollo (extraits de recherche)",
+  "suitport": "NASA Langley 2023, « Evaluating Extravehicular Activity Access Options for a Lunar Surface Habitat » (extrait de recherche) : sas, suitlock, suitport, recommandation d'un hybride suitport + sas",
+  "zvezda": "ISS 2020 : fermeture des écoutilles de Zvezda pour isoler et localiser une fuite (TASS, extrait de recherche)",
+  "cfr_seuil": "46 CFR 179.330 (US) : hauteur de seuil des portes étanches de navire, 150 mm exposé, 75 mm abrité (extrait de recherche)"
+ },
+ "portes": {
+  "ecoutille_ronde": {
+   "nom": "Écoutille ronde",
+   "forme": "rond",
+   "etanche": true,
+   "diametre_m": {
+    "v": 0.8,
+    "s": "◇",
+    "src": "passage IDSS : 800 mm (Wikipédia). Une étude NASA juge 32 in (≈ 0,81 m) trop juste pour une partie des astronautes."
+   },
+   "seuil_m": {
+    "v": 0.3,
+    "s": "▨",
+    "src": "seuil d'écoutille sur une cloison : hypothèse de dessin"
+   },
+   "usage": "entre deux modules pressurisés, en tenue de bord"
+  },
+  "ecoutille_carree": {
+   "nom": "Écoutille carrée (type CBM)",
+   "forme": "carre",
+   "etanche": true,
+   "largeur_m": {
+    "v": 1.27,
+    "s": "◇",
+    "src": "CBM de l'ISS : environ 50 in (1,27 m) de côté, coins arrondis (Wikipédia ; 51 in selon J. Oberg)"
+   },
+   "hauteur_m": {
+    "v": 1.27,
+    "s": "◇",
+    "src": "idem"
+   },
+   "seuil_m": {
+    "v": 0.3,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "usage": "passage des racks et du fret entre modules"
+  },
+  "porte_etanche": {
+   "nom": "Porte étanche",
+   "forme": "rect_arrondi",
+   "etanche": true,
+   "largeur_m": {
+    "v": 0.9,
+    "s": "▨",
+    "src": "porte étanche pour marcher debout en 1/6 g : hypothèse de dessin"
+   },
+   "hauteur_m": {
+    "v": 1.9,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "seuil_m": {
+    "v": 0.15,
+    "s": "◇",
+    "src": "seuil de porte étanche exposée sur un navire : 150 mm (46 CFR 179.330)"
+   },
+   "usage": "entre zones d'un même habitat, quand on marche debout"
+  },
+  "porte_sas": {
+   "nom": "Porte de sas",
+   "forme": "rect_arrondi",
+   "etanche": true,
+   "largeur_m": {
+    "v": 1,
+    "s": "▨",
+    "src": "porte intérieure d'un sas : on la passe encore en combinaison (V2 8027 ●, sans chiffre) ; hypothèse de dessin"
+   },
+   "hauteur_m": {
+    "v": 2,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "seuil_m": {
+    "v": 0.15,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "usage": "entre le sas et le vestiaire : passage en combinaison"
+  },
+  "porte_interieure": {
+   "nom": "Porte intérieure",
+   "forme": "rect",
+   "etanche": false,
+   "largeur_m": {
+    "v": 0.8,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "hauteur_m": {
+    "v": 2,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "seuil_m": {
+    "v": 0,
+    "s": "▨",
+    "src": "pas de seuil"
+   },
+   "usage": "cloison dans un même volume (ne compte pas pour isoler)"
+  },
+  "porte_exterieure": {
+   "nom": "Porte extérieure de sas",
+   "forme": "rect_arrondi",
+   "etanche": true,
+   "exterieure": true,
+   "largeur_m": {
+    "v": 1,
+    "s": "▨",
+    "src": "passage d'une personne en combinaison avec son sac : hypothèse ; V2 8027 l'exige sans le chiffrer"
+   },
+   "hauteur_m": {
+    "v": 2,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "seuil_m": {
+    "v": 0.15,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "usage": "entre le sas et l'extérieur"
+  },
+  "trappe": {
+   "nom": "Trappe entre niveaux",
+   "forme": "rond",
+   "etanche": false,
+   "verticale": true,
+   "diametre_m": {
+    "v": 0.8,
+    "s": "◇",
+    "src": "même passage que l'IDSS (800 mm)"
+   },
+   "usage": "passage vertical d'un niveau à l'autre, avec une échelle"
+  },
+  "suitport": {
+   "nom": "Suitport (combinaison accrochée dehors)",
+   "forme": "rect_arrondi",
+   "etanche": true,
+   "exterieure": true,
+   "suitport": true,
+   "largeur_m": {
+    "v": 0.6,
+    "s": "▨",
+    "src": "ouverture dorsale de la combinaison : hypothèse de dessin, dimensions du Z-1 non trouvées"
+   },
+   "hauteur_m": {
+    "v": 0.9,
+    "s": "▨",
+    "src": "hypothèse de dessin"
+   },
+   "seuil_m": {
+    "v": 0.9,
+    "s": "▨",
+    "src": "hauteur du dos de la combinaison : hypothèse"
+   },
+   "usage": "on entre dans la combinaison par le dos : elle reste dehors avec sa poussière (étude NASA Langley 2023)"
+  }
+ },
+ "porte_par_defaut": {
+  "ecoutille": "ecoutille_ronde",
+  "porte": "porte_exterieure"
+ },
+ "zones": {
+  "exterieur": {
+   "nom": "Extérieur",
+   "couleur": "#8a8f96"
+  },
+  "poussiere": {
+   "nom": "Poussière",
+   "couleur": "#b07a3a",
+   "note": "où l'on enlève et range les combinaisons sales"
+  },
+  "vie": {
+   "nom": "Vie",
+   "couleur": "#d9822b"
+  },
+  "nuit": {
+   "nom": "Nuit, abri",
+   "couleur": "#6b5bb5"
+  },
+  "travail": {
+   "nom": "Travail",
+   "couleur": "#2f7d9a"
+  },
+  "technique": {
+   "nom": "Technique",
+   "couleur": "#5f6670"
+  },
+  "serre": {
+   "nom": "Serre",
+   "couleur": "#3f8f4a"
+  }
+ },
+ "zones_par_type": {
+  "module": "vie",
+  "noeud": "vie",
+  "serre": "serre",
+  "stockage": "technique",
+  "atelier": "travail",
+  "laboratoire": "travail"
+ },
+ "transitions": {
+  "sas": {
+   "nom": "Sas",
+   "cotes": [
+    [
+     "exterieur"
+    ],
+    [
+     "poussiere",
+     "vie",
+     "nuit",
+     "travail",
+     "technique",
+     "transition"
+    ]
+   ],
+   "regle": "TR-1",
+   "pourquoi": "changer de pression entre le vide et l'intérieur",
+   "exigences": "égalisation de pression manuelle des deux côtés (V2 8028 ●), indication de la pression de l'autre côté (V2 8032 ●), hublot (V2 8029 ●)",
+   "conseil": {
+    "vie": "la poussière entre directement dans la vie (Apollo) : ajouter un vestiaire ou un suitport",
+    "nuit": "la poussière entre directement dans la zone de nuit : ajouter un vestiaire",
+    "travail": "la poussière entre dans le travail : vestiaire conseillé",
+    "technique": "poussière dans la technique : joints et mécanismes à protéger (Gaier et Creel)"
+   },
+   "reference": "Quest (ISS) : 34 m³, pensé pour deux personnes qui sortent ensemble"
+  },
+  "vestiaire": {
+   "nom": "Vestiaire poussière",
+   "cotes": [
+    [
+     "poussiere",
+     "transition"
+    ],
+    [
+     "vie",
+     "nuit",
+     "travail",
+     "technique",
+     "serre",
+     "transition"
+    ]
+   ],
+   "regle": "TR-4",
+   "pourquoi": "enlever la combinaison, brosser, aspirer, ranger : la poussière reste de ce côté",
+   "reference": "poussière d'Apollo dans la cabine (irritation des yeux et des poumons, joints qui fuient) ; WERC 2025 (NASA) : nettoyer dans le sas, deux lignes de défense"
+  },
+  "vestiaire_bio": {
+   "nom": "Vestiaire propre (serre)",
+   "cotes": [
+    [
+     "vie",
+     "nuit",
+     "travail",
+     "technique",
+     "transition"
+    ],
+    [
+     "serre"
+    ]
+   ],
+   "regle": "TR-5",
+   "pourquoi": "changer de tenue, se laver les mains, tenir l'humidité et les germes loin des cultures",
+   "reference": "EDEN ISS (Neumayer III) : « cold porch », sas tampon avec penderie avant la serre"
+  }
+ },
+ "matrice": {
+  "exterieur|poussiere": "sas",
+  "exterieur|vie": "sas",
+  "exterieur|nuit": "sas",
+  "exterieur|travail": "sas",
+  "exterieur|technique": "sas",
+  "exterieur|serre": "sas",
+  "poussiere|vie": "vestiaire",
+  "nuit|poussiere": "vestiaire",
+  "poussiere|travail": "vestiaire",
+  "poussiere|serre": "vestiaire",
+  "poussiere|technique": "libre",
+  "serre|vie": "vestiaire_bio",
+  "nuit|serre": "vestiaire_bio",
+  "serre|travail": "vestiaire_bio",
+  "serre|technique": "vestiaire_bio",
+  "nuit|vie": "libre",
+  "travail|vie": "libre",
+  "technique|vie": "libre",
+  "nuit|travail": "libre",
+  "nuit|technique": "libre",
+  "technique|travail": "libre"
+ },
+ "liaisons": {
+  "jonction": {
+   "nom": "Jonction directe",
+   "pressurise": true
+  },
+  "tunnel": {
+   "nom": "Tunnel pressurisé",
+   "pressurise": true
+  },
+  "couloir": {
+   "nom": "Couloir pressurisé",
+   "pressurise": true
+  },
+  "couloir couvert": {
+   "nom": "Couloir couvert (non pressurisé)",
+   "pressurise": false
+  },
+  "chemin": {
+   "nom": "Chemin à l'extérieur",
+   "pressurise": false
+  }
+ },
+ "regles": {
+  "passage_personne": {
+   "largeur_m": {
+    "v": 0.8,
+    "s": "◇"
+   },
+   "hauteur_m": {
+    "v": 0.8,
+    "s": "◇"
+   },
+   "s": "◇",
+   "src": "passage IDSS 800 mm, utilisé pour l'équipage en tenue de bord"
+  },
+  "passage_combinaison": {
+   "largeur_m": {
+    "v": 1,
+    "s": "▨"
+   },
+   "hauteur_m": {
+    "v": 1,
+    "s": "▨"
+   },
+   "s": "▨",
+   "src": "V2 8027 ● exige le passage sans gêne d'une personne en combinaison et du fret, sans chiffre ; 1 m × 1 m est une hypothèse (le LM, 0,81 m, était serré)"
+  },
+  "marche_tolerance_m": {
+   "v": 0.05,
+   "s": "▨",
+   "src": "écart de hauteur toléré entre deux portes reliées : hypothèse"
+  },
+  "pente_rampe_max_pc": {
+   "v": 8.3,
+   "s": "◇",
+   "src": "rampe 1:12 des normes d'accessibilité terrestres ; à revoir pour 1/6 g (pas de source lunaire trouvée)"
+  },
+  "liste": [
+   {
+    "id": "TR-0",
+    "nom": "Deux zones voisines peuvent se toucher",
+    "src": "matrice ci-dessus (▨, à discuter)"
+   },
+   {
+    "id": "TR-1",
+    "nom": "Un sas entre l'extérieur et tout volume pressurisé",
+    "src": "V2 8028, V2 8032 (●) ; Quest"
+   },
+   {
+    "id": "TR-2",
+    "nom": "Un sas a une seule porte vers l'extérieur",
+    "src": "hypothèse de dessin (▨)"
+   },
+   {
+    "id": "TR-3",
+    "nom": "Chaque volume pressurisé est joignable depuis un sas",
+    "src": "V2 8014 chemins d'évacuation (●)"
+   },
+   {
+    "id": "TR-4",
+    "nom": "Un vestiaire entre la poussière et la vie",
+    "src": "Apollo, WERC 2025 (◇)"
+   },
+   {
+    "id": "TR-5",
+    "nom": "Un vestiaire propre avant la serre",
+    "src": "EDEN ISS (◇)"
+   },
+   {
+    "id": "CX-1",
+    "nom": "Une porte étanche entre deux volumes pressurisés",
+    "src": "V2 6020 compartiments isolables (●) ; Zvezda 2020 (◇)"
+   },
+   {
+    "id": "CX-2",
+    "nom": "Passage d'une personne en combinaison",
+    "src": "V2 8027 (●, sans chiffre) ; 1 × 1 m ▨"
+   },
+   {
+    "id": "CX-3",
+    "nom": "Passage d'une personne",
+    "src": "IDSS 800 mm (◇)"
+   },
+   {
+    "id": "CX-4",
+    "nom": "Pas de marche à une porte ; rampe ou escalier dans un tunnel",
+    "src": "rampe 1:12 (◇, terrestre)"
+   },
+   {
+    "id": "CX-5",
+    "nom": "Une porte latérale s'ouvre au-dessus d'un plancher",
+    "src": "géométrie (◇)"
+   },
+   {
+    "id": "CX-6",
+    "nom": "Port libre : à réserver ou à fermer",
+    "src": "—"
+   },
+   {
+    "id": "CX-7",
+    "nom": "Chaque niveau au-dessus du premier a un accès (échelle, escalier, trappe)",
+    "src": "V2 8014 (●)"
+   }
+  ],
+  "exigences_porte_etanche": "Ouvrable d'un seul côté comme de l'autre par une personne, sans outil (V2 8022 ●) ; deux gestes distincts pour déverrouiller (V2 8023 ●) ; 60 s au plus (V2 8024 ●) ; égalisation de pression manuelle de chaque côté (V2 8028 ●) ; hublot (V2 8029 ●) ; ouverte, elle ne gêne pas le passage (V2 8030 ●) ; état fermé et verrouillé visible des deux côtés (V2 8031 ●) ; différence de pression visible des deux côtés (V2 8032 ●)."
+ }
+}

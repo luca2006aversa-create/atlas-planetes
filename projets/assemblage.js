@@ -7,7 +7,7 @@
 // Node       : node assemblage.js fiche.json   (positions écrites contre positions assemblées)
 
 import { val } from './controle.js';
-import { enveloppe } from './formes.js';
+import { enveloppe, niveaux } from './formes.js';
 
 const RAD = Math.PI / 180;
 const TOL = 0.01;                                         // m : au-delà, la position écrite ne suit pas les ports
@@ -18,16 +18,24 @@ export { enveloppe };
 const FACES = { '+x': [1, 0, 0], '-x': [-1, 0, 0], '+y': [0, 1, 0], '-y': [0, -1, 0], '+z': [0, 0, 1], '-z': [0, 0, -1] };
 
 // Ports d'un élément dans son repère : { id, p: [x,y,z], n: [nx,ny,nz], diametre, type, statut }
-export function ports(e) {
+// C (facultatif) : catalogue de connexions.json, pour poser une porte sur un niveau (q.niveau) avec sa vraie hauteur
+export function ports(e, C = null) {
   const env = enveloppe(e.forme);
+  const NV = (e.ports || []).some(q => q.niveau) ? niveaux(e) : [];
   return (e.ports || []).map(q => {
     let p = q.p, n = q.n;
     if (!p && q.face && env) {
       n = FACES[q.face];
-      const z = q.face === '+z' ? env.h : q.face === '-z' ? 0 : (q.hauteur_m != null ? val(q.hauteur_m) : env.h / 2);
+      let z = q.face === '+z' ? env.h : q.face === '-z' ? 0 : (q.hauteur_m != null ? val(q.hauteur_m) : env.h / 2);
+      const N = q.niveau && NV.find(x => x.id === q.niveau);
+      if (N && !q.face.includes('z')) {
+        const P = C?.portes?.[q.porte] || {};
+        const h = val(q.hauteur_porte_m) ?? val(q.diametre_m) ?? val(P.hauteur_m) ?? val(P.diametre_m) ?? 1;
+        z = N.z + (val(q.seuil_m) ?? val(P.seuil_m) ?? 0) + h / 2;
+      }
       p = [n[0] * env.x, n[1] * env.y, z];
     }
-    return { id: q.id, p, n, diametre: val(q.diametre_m), type: q.type || 'ecoutille',
+    return { id: q.id, p, n, diametre: val(q.diametre_m), type: q.type || 'ecoutille', porte: q.porte, niveau: q.niveau,
              statut: q.diametre_m && typeof q.diametre_m === 'object' ? q.diametre_m.s : '▨', nom: q.nom };
   });
 }
@@ -44,9 +52,9 @@ export const versMonde = (pose, p) => add(pose.pos, rot(p, pose.rot));
 const coupe = s => { const i = String(s).indexOf('.'); return i < 0 ? [s, null] : [s.slice(0, i), s.slice(i + 1)]; };
 
 // Résultat : { poses: { id: { pos, rot, ecrit: {pos, rot}, ecart_m, assemble } }, liens: [...], ports: { id: [...] }, erreurs, avertissements }
-export function assembler(F) {
+export function assembler(F, C = null) {
   const E = Object.fromEntries(F.elements.map(e => [e.id, e]));
-  const P = Object.fromEntries(F.elements.map(e => [e.id, ports(e)]));
+  const P = Object.fromEntries(F.elements.map(e => [e.id, ports(e, C)]));
   const erreurs = [], avertissements = [];
   const liens = [];
   for (const l of F.liaisons || []) {
@@ -82,10 +90,15 @@ export function assembler(F) {
         const pp = poses[pid];
         const nW = rot(qp.n, pp.rot), pW = versMonde(pp, qp.p);
         let r;
-        if (Math.abs(nW[2]) < 0.9 && Math.abs(qc.n[2]) < 0.9) r = norm360(angle(nW) + 180 - angle(qc.n));
+        const horizontal = Math.abs(nW[2]) < 0.9 && Math.abs(qc.n[2]) < 0.9;
+        if (horizontal) r = norm360(angle(nW) + 180 - angle(qc.n));
         else r = poses[cid]?.ecrit?.rot ?? 0;
         const pos = sub(add(pW, mul(nW, l.ecart)), rot(qc.p, r));
         const ecrit = poses[cid]?.ecrit || null;
+        // Liaison horizontale : l'élément reste posé au sol (sa hauteur écrite, sinon 0) ;
+        // l'écart de hauteur entre les deux portes devient un dénivelé à rattraper (connexions.js)
+        // (sauf « socle » : l'élément est posé sur un socle de régolithe à la hauteur de la porte du voisin)
+        if (horizontal && !E[cid].socle) pos[2] = ecrit ? ecrit.pos[2] : 0;
         if (poses[cid]?.assemble) {
           if (dist(poses[cid].pos, pos) > TOL) erreurs.push(`boucle ${pid}.${pport} → ${cid}.${cport} : les ports ne se rejoignent pas (${dist(poses[cid].pos, pos).toFixed(2)} m)`);
           continue;
@@ -144,7 +157,7 @@ if (typeof process !== 'undefined' && process.argv?.[1]?.endsWith('assemblage.js
     const etat = !p.assemble ? 'hors ports' : p.ancre ? 'ancre' : (p.ecart_m ?? 0) <= TOL && (p.ecart_rot ?? 0) <= 0.5 ? '✓ suit les ports' : `✗ décalé de ${p.ecart_m.toFixed(2)} m`;
     console.log(`${id.padEnd(4)} [${p.pos.map(x => x.toFixed(2)).join(', ')}] rot ${p.rot.toFixed(0)}°  ${etat}`);
   }
-  for (const [id, qs] of Object.entries(A.ports)) for (const q of qs) console.log(`  port ${id}.${q.id} ${q.type} Ø ${q.diametre ?? '?'} → ${q.relie_a || 'libre'}`);
+  for (const [id, qs] of Object.entries(A.ports)) for (const q of qs) console.log(`  port ${id}.${q.id} ${q.porte || q.type}${q.diametre != null ? ' Ø ' + q.diametre : ''} → ${q.relie_a || 'libre'}`);
   for (const x of A.nonRelies) console.log(`  liaison sans ports : ${x}`);
   for (const x of A.erreurs) console.log('ERREUR', x);
   for (const x of A.avertissements) console.log('!', x);

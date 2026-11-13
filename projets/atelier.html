@@ -18,6 +18,16 @@
   .liste button small { color: var(--texte-2); display: block; }
   .scene { position: relative; background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; overflow: hidden; min-height: 320px; }
   #vue { position: absolute; inset: 0; }
+  #parcours { position: absolute; inset: 44px 8px 30px; overflow: auto; }
+  #parcours svg { display: block; margin: 0 auto; }
+  .panneau { overflow-x: hidden; } .panneau select { max-width: 100%; }
+  #parcours .nd { cursor: pointer; }
+  #parcours .nd:hover rect, #parcours .nd:hover polygon { stroke-width: 2.5; }
+  #parcours text { font: 12px var(--sans); fill: var(--texte); }
+  #parcours text.t { font-weight: 600; }
+  #parcours text.p { fill: var(--texte-2); font-size: 11px; }
+  .msg { font-size: 12.5px; margin: 2px 0; } .msg b { font-family: var(--mono); }
+  .chemin { font: 12px var(--mono); color: var(--texte-2); }
   .modes { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; }
   .modes button { font: 600 12.5px var(--sans); background: var(--surface-2); color: var(--texte); border: 1px solid var(--filet); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
   .modes button.on { background: var(--texte); color: var(--fond); }
@@ -53,6 +63,7 @@
 <body>
 <div class="haut">
   <h1>Atelier</h1>
+  <select id="fiches" aria-label="Fiche projet"></select>
   <span class="note" id="nomfiche"></span>
   <nav><a href="../">← Atlas</a><a href="site3d.html">Habitat 3D</a><a href="controle.html" id="lien-controle">Contrôles</a><a href="rayons.html">Radiations</a><a href="../references/">Références</a></nav>
 </div>
@@ -61,7 +72,8 @@
   <div class="scene">
     <div id="vue"></div>
     <div id="etiquettes"></div>
-    <div class="modes"><button id="m-seul" class="on">Seul</button><button id="m-tout">Assemblage</button></div>
+    <div id="parcours" hidden></div>
+    <div class="modes"><button id="m-seul" class="on">Seul</button><button id="m-tout">Assemblage</button><button id="m-parcours">Parcours</button></div>
     <div class="aide" id="aide">Glisser pour tourner · molette pour zoomer · cliquer un élément pour l'ouvrir</div>
   </div>
   <div class="panneau" id="panneau"></div>
@@ -76,16 +88,41 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { val, stat, volumeForme } from './controle.js';
 import { assembler, versMonde } from './assemblage.js';
 import { CATALOGUE, HYP, enveloppe, niveaux, changerType, plancherParDefaut } from './formes.js';
+import { geometrie, bilan, directions, dosePoint, pointEspace } from './rayons.js';
+import { controler } from './controle.js';
+import { ficheAssemblee } from './assemblage.js';
+import { analyser, porteDe, zoneDe, transitionDe } from './connexions.js';
 
 const Q = new URLSearchParams(location.search);
 const ficheNom = Q.get('fiche') || 'pole-sud-esquisse.json';
-const [F, R] = await Promise.all([ficheNom, 'regles.json'].map(u => fetch(u).then(r => r.json())));
-document.getElementById('nomfiche').textContent = `${F.nom} · ${ficheNom}`;
+const [F, R, CX] = await Promise.all([ficheNom, 'regles.json', 'connexions.json'].map(u => fetch(u).then(r => r.json())));
+document.getElementById('nomfiche').textContent = F.nom;
+const FICHES = [['pole-sud-esquisse.json', 'Esquisse'], ['pole-sud-fenetre-protegee.json', 'Fenêtre protégée'], ['pole-sud-zones.json', 'Zones'], ['pole-sud-connexions.json', 'Connexions (exemple)']];
+{ const s = document.getElementById('fiches');
+  s.innerHTML = FICHES.map(([f, n]) => `<option value="${f}" ${f === ficheNom ? 'selected' : ''}>${n}</option>`).join('') + (FICHES.some(x => x[0] === ficheNom) ? '' : `<option selected>${ficheNom}</option>`);
+  s.onchange = () => { location.search = '?fiche=' + encodeURIComponent(s.value); }; }
 document.getElementById('lien-controle').href = `controle.html?fiche=${encodeURIComponent(ficheNom)}`;
 const E = Object.fromEntries(F.elements.map(e => [e.id, e]));
 let sel = E[Q.get('el')] ? Q.get('el') : (F.assemblage?.ancre || F.elements[0].id);
 let mode = 'seul';
-let A = assembler(F);
+let A = assembler(F, CX);
+let X = analyser(F, CX, A);
+// horizon du relief (étude) pour le calcul des doses ; sans lui, tout le ciel au-dessus de 0° est ouvert
+const HORIZON = await fetch('../etude/donnees/habitat.json').then(r => r.json()).then(j => j.horizon?.h || null).catch(() => null);
+const DIRS = directions(600);
+
+// Dose de chaque espace du programme (µSv/h) + budget RAD-3, recalculés à chaque changement de la fiche
+function doses() {
+  const Fa = ficheAssemblee(F), pts = R.hypotheses.dose_gcr.pts, abri = val(R.hypotheses.abri_eruption_g_cm2);
+  const G = geometrie(Fa, val(R.hypotheses.masse_volumique_regolithe));
+  const mesure = P => { const b = bilan(G, P, DIRS, HORIZON), d = dosePoint(b.vals, pts); return { mSv_h: d.mSv_j / 24, min: d.min, abri: d.min != null && d.min >= abri }; };
+  const zones = (F.programme.fonctions || []).map(fn => {
+    const P = pointEspace(Fa, fn); if (!P) return { id: fn.id };
+    const m = mesure(P); return { id: fn.id, mSv_h: m.mSv_h, mSv_j: m.mSv_h * 24, min_g_cm2: m.min, abri_eruption: m.abri };
+  });
+  const budget = controler(Fa, R, { rayons: { zones } }).find(x => x.id === 'RAD-3');
+  return { Fa, zones, budget, mesure };
+}
 
 // ---------- scène ----------
 const boite = document.getElementById('vue');
@@ -111,6 +148,8 @@ const MAT = {
   dedans: new THREE.MeshStandardMaterial({ color: 0x5fae6e, roughness: .8, side: THREE.DoubleSide }),
   ouv: new THREE.MeshStandardMaterial({ color: 0x5f8fd0, roughness: .8, transparent: true, opacity: .6, side: THREE.DoubleSide }),
   libre: new THREE.MeshStandardMaterial({ color: 0xe4572e }),
+  porteOk: new THREE.MeshStandardMaterial({ color: 0x4f8a5b }),
+  porteNon: new THREE.MeshStandardMaterial({ color: 0xd6421b, emissive: 0x5a1000 }),
   relie: new THREE.MeshStandardMaterial({ color: 0x6b6b6b }),
   tunnel: new THREE.MeshStandardMaterial({ color: 0xb8b2a6, roughness: .9 }),
   verre: new THREE.MeshStandardMaterial({ color: 0xd8d3c8, roughness: .8, transparent: true, opacity: .28, side: THREE.DoubleSide, depthWrite: false }),
@@ -154,19 +193,80 @@ function etiquette(texte, pos3, cls = '') {
   etqs.appendChild(div); etiquettes.push({ div, pos: pos3 });
 }
 
-function flechePort(q, libre, pose) {
+// Une porte dessinée à sa vraie taille (ronde, carrée, rectangulaire), sur la face de l'élément ; couleur = état des contrôles
+function flechePort(q, libre, pose, id) {
   const g = new THREE.Group();
   const p = pose ? versMonde(pose, q.p) : q.p;
   const nn = pose ? q.nW : q.n;
-  const r = Math.max(0.25, (q.diametre || 1) / 2);
-  const disque = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.08, 32), libre ? MAT.libre : MAT.relie);
+  const qf = id && E[id]?.ports?.find(x => x.id === q.id);
+  const P = qf ? porteDe(qf, CX) : { forme: 'rond', largeur: q.diametre || 1, hauteur: q.diametre || 1 };
+  const etat = X.portes.find(x => x.element === id && x.port === q.id)?.msgs || [];
+  const mat = etat.some(m => m.etat === 'non') ? MAT.porteNon : libre ? MAT.libre : MAT.porteOk;
   const dir = T(...nn).normalize();
-  disque.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir);
-  disque.position.copy(T(...p));
-  g.add(disque);
-  const fl = new THREE.ArrowHelper(dir, T(...p), 1.6, libre ? 0xe4572e : 0x6b6b6b, 0.45, 0.3);
-  g.add(fl);
+  let porte;
+  if (P.forme === 'rond' || Math.abs(nn[2]) > 0.9) {
+    const r = Math.max(0.2, P.largeur / 2);
+    porte = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.1, 40), mat);
+    porte.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir);
+  } else {
+    const sh = new THREE.Shape(), w = P.largeur / 2, h = P.hauteur / 2, k = P.forme === 'rect' ? 0.02 : Math.min(w, h) * 0.35;
+    sh.moveTo(-w + k, -h); sh.lineTo(w - k, -h); sh.quadraticCurveTo(w, -h, w, -h + k); sh.lineTo(w, h - k); sh.quadraticCurveTo(w, h, w - k, h);
+    sh.lineTo(-w + k, h); sh.quadraticCurveTo(-w, h, -w, h - k); sh.lineTo(-w, -h + k); sh.quadraticCurveTo(-w, -h, -w + k, -h);
+    porte = new THREE.Mesh(new THREE.ExtrudeGeometry(sh, { depth: 0.1, bevelEnabled: false }), mat);
+    porte.rotation.y = Math.atan2(dir.x, dir.z);
+  }
+  porte.position.copy(T(...p));
+  g.add(porte);
+  g.add(new THREE.ArrowHelper(dir, T(...p), 1.4, libre ? 0xe4572e : 0x6b6b6b, 0.4, 0.28));
   return g;
+}
+
+// Vue Parcours : de l'extérieur vers chaque espace, colonnes = nombre de portes franchies
+function dessinerParcours() {
+  const box = document.getElementById('parcours');
+  const prof = { dehors: 0 };
+  for (const [id, ch] of Object.entries(X.parcours)) prof[id] = ch.length - 1;
+  const ids = F.elements.filter(e => e.pressurise || transitionDe(e, CX)).map(e => e.id);
+  const inj = ids.filter(id => !(id in prof));
+  const maxP = Math.max(1, ...Object.values(prof));
+  const cols = {};
+  for (const id of ['dehors', ...ids.filter(i => i in prof)]) (cols[prof[id]] ||= []).push(id);
+  if (inj.length) cols[maxP + 1] = inj;
+  // vertical : une rangée par nombre de portes franchies, dehors en haut
+  const nRang = Object.keys(cols).length, larg = Math.max(...Object.values(cols).map(c => c.length));
+  const W = Math.max(420, 100 + larg * 140), Hh = nRang * 80 + 20;
+  const pos = {};
+  Object.entries(cols).forEach(([c, liste], ri) => { const x0 = 90 + (W - 90 - liste.length * 140) / 2; liste.forEach((id, i) => { pos[id] = [x0 + i * 140 + 10, 14 + ri * 80]; }); });
+  // arêtes : liaisons (et portes extérieures libres)
+  const pire = msgs => msgs.some(m => m.etat === 'non') ? 'non' : msgs.some(m => m.etat === 'doute') ? 'doute' : 'ok';
+  const couleurEtat = { ok: '#8a8f96', doute: '#c99a2e', non: '#d6421b' };
+  const elt = s => String(s).split('.')[0];
+  const ar = [];
+  for (const l of X.liens) {
+    const a = elt(l.de), b = elt(l.vers), et = pire(l.msgs);
+    if (l.pressurisee) ar.push([a, b, et, l.type]); else { ar.push([a, 'dehors', et, l.type]); ar.push([b, 'dehors', et, l.type]); }
+  }
+  for (const p of X.portes) if (!p.relie && p.versDehors) ar.push([p.element, 'dehors', pire(p.msgs), 'porte']);
+  const L = ar.filter(([a, b]) => pos[a] && pos[b]).map(([a, b, et]) => {
+    const [x1, y1] = pos[a], [x2, y2] = pos[b];
+    return `<line x1="${x1 + 60}" y1="${y1 + 22}" x2="${x2 + 60}" y2="${y2 + 22}" stroke="${couleurEtat[et]}" stroke-width="${et === 'ok' ? 2 : 3}" ${et === 'non' ? 'stroke-dasharray="6 4"' : ''}/>`;
+  }).join('');
+  const N = Object.entries(pos).map(([id, [x, y]]) => {
+    const e = E[id], tr = id === 'dehors' ? null : transitionDe(e, CX);
+    const z = id === 'dehors' ? 'exterieur' : zoneDe(e, CX);
+    const coul = tr ? '#ffffff' : CX.zones[z]?.couleur || '#999';
+    const nErr = id === 'dehors' ? 0 : [...(X.elements[id]?.msgs || []), ...X.portes.filter(p => p.element === id).flatMap(p => p.msgs)].filter(m => m.etat === 'non').length;
+    const titre = id === 'dehors' ? 'Dehors' : id;
+    const sous = id === 'dehors' ? 'vide, poussière' : tr ? (CX.transitions[tr]?.nom || tr) : (CX.zones[z]?.nom || z || e.type);
+    const forme = tr
+      ? `<polygon points="${x + 10},${y} ${x + 110},${y} ${x + 120},${y + 22} ${x + 110},${y + 44} ${x + 10},${y + 44} ${x},${y + 22}" fill="var(--surface)" stroke="#1f1f1f" stroke-dasharray="4 3" stroke-width="1.5"/>`
+      : `<rect x="${x}" y="${y}" width="120" height="44" rx="8" fill="var(--surface)"/><rect x="${x}" y="${y}" width="120" height="44" rx="8" fill="${coul}" fill-opacity="${id === sel ? .55 : .25}" stroke="${coul}" stroke-width="${id === sel ? 3 : 1.5}"/>`;
+    return `<g class="nd" data-id="${id}">${forme}<text class="t" x="${x + 60}" y="${y + 19}" text-anchor="middle">${titre}${nErr ? ` ✗${nErr}` : ''}</text><text class="p" x="${x + 60}" y="${y + 34}" text-anchor="middle">${sous}</text></g>`;
+  }).join('');
+  const ent = Object.keys(cols).map((c, ri) => `<text class="p" x="6" y="${14 + ri * 80 + 26}">${+c === maxP + 1 && inj.length ? 'injoignable' : c == 0 ? '' : c + (c == 1 ? ' porte' : ' portes')}</text>`).join('');
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${Hh}" width="100%" style="max-width:${W * 1.3}px" role="img" aria-label="Parcours depuis l'extérieur">${ent}${L}${N}</svg>
+    <div class="note" style="padding:4px 2px">Rangées : nombre de portes franchies depuis dehors (par le sas principal). Hexagone pointillé = pièce de transition. Trait gris = liaison correcte, orange = à voir, rouge pointillé = règle non respectée.</div>`;
+  box.querySelectorAll('.nd').forEach(n => n.onclick = () => { if (n.dataset.id !== 'dehors') choisir(n.dataset.id); });
 }
 
 // Élément « dans » un autre : sa forme est écrite dans le repère du site (centre_m) ; on la ramène dans celui du parent
@@ -178,6 +278,10 @@ function versLocal(pose, w) {
 
 const cliquables = [];
 function construire() {
+  const P = document.getElementById('parcours'), V = document.getElementById('vue');
+  P.hidden = mode !== 'parcours'; V.style.visibility = mode === 'parcours' ? 'hidden' : '';
+  document.getElementById('aide').hidden = mode === 'parcours';
+  if (mode === 'parcours') { etqs.innerHTML = ''; etiquettes = []; dessinerParcours(); return; }
   scene.remove(racine); racine = new THREE.Group(); scene.add(racine);
   etqs.innerHTML = ''; etiquettes = []; cliquables.length = 0;
   scene.background = fondCouleur();
@@ -200,7 +304,7 @@ function construire() {
       etiquette(`${n.id}${n.fonction ? ' · ' + n.fonction : ''} · ${fmt(n.aire, 0)} m²`, T(c.forme === 'anneau' ? c.b : 0, -(c.forme === 'rect' ? c.b : c.forme === 'anneau' ? c.b : c.a), n.z + 0.3), 'niveau');
     }
     for (const q of A.ports[e.id] || []) {
-      racine.add(flechePort(q, !q.relie_a, null));
+      racine.add(flechePort(q, !q.relie_a, null, e.id));
       etiquette(`${q.id}${q.relie_a ? ' → ' + q.relie_a : ' libre'}`, T(q.p[0] + q.n[0] * 1.9, q.p[1] + q.n[1] * 1.9, q.p[2] + q.n[2] * 1.9 + 0.4), q.relie_a ? '' : 'libre');
     }
     const pose = A.poses[e.id];
@@ -230,7 +334,7 @@ function construire() {
       const env = enveloppe(x.forme);
       etiquette(x.id, T(pose.pos[0], pose.pos[1], pose.pos[2] + env.h + .6));
       xs.push(pose.pos[0]);
-      for (const q of A.ports[x.id] || []) if (!q.relie_a) racine.add(flechePort(q, true, pose));
+      for (const q of A.ports[x.id] || []) racine.add(flechePort(q, !q.relie_a, pose, x.id));
     }
     // Tunnels et couloirs : un tube entre les deux ports reliés
     for (const l of A.liens.filter(l => l.port_de && l.ecart > 0)) {
@@ -320,7 +424,21 @@ function panneau() {
   const e = E[sel], P = document.getElementById('panneau'); P.innerHTML = '';
   const carte = (titre, html) => { const c = document.createElement('div'); c.className = 'carte'; c.innerHTML = `<h2>${titre}</h2>${html}`; P.appendChild(c); return c; };
 
-  carte(`${e.id} · ${e.nom || ''}`, `<div class="note">${e.type}${e.forme ? ' · ' + e.forme.type : ''}${e.dans ? ' · dans ' + e.dans : ''}${e.pressurise ? ' · pressurisé' : ''}</div>`);
+  {
+    const tr = transitionDe(e, CX), z = zoneDe(e, CX);
+    const opt = [...Object.entries(CX.zones).filter(([k]) => k !== 'exterieur').map(([k, v]) => [`z:${k}`, `Zone · ${v.nom}`]),
+                 ...Object.entries(CX.transitions).map(([k, v]) => [`t:${k}`, `Transition · ${v.nom}`])];
+    const cur = tr ? `t:${tr}` : z ? `z:${z}` : '';
+    const cc = carte(`${e.id} · ${e.nom || ''}`, `<div class="note">${e.type}${e.forme ? ' · ' + e.forme.type : ''}${e.dans ? ' · dans ' + e.dans : ''}${e.pressurise ? ' · pressurisé' : ''}${e.socle ? ' · sur socle' : ''}</div>
+      ${e.pressurise || tr ? `<div class="ligne"><span>Rôle</span><select id="role">${cur ? '' : '<option selected value="">—</option>'}${opt.map(([k, n]) => `<option value="${k}" ${k === cur ? 'selected' : ''}>${n}</option>`).join('')}</select></div>
+      ${tr ? `<div class="note">${CX.transitions[tr]?.pourquoi || ''}. ${CX.transitions[tr]?.reference || ''}</div>` : ''}` : ''}`);
+    const r = cc.querySelector('#role');
+    if (r) r.onchange = () => {
+      const [k, v] = r.value.split(':');
+      if (k === 't') { e.transition = v; delete e.zone; } else { e.zone = v; e.transition = null; }
+      tout();
+    };
+  }
 
   // Forme : choisie dans le catalogue (formes.js)
   if (e.forme && (CATALOGUE[e.forme.type] || e.forme.type === 'sphere')) {
@@ -391,6 +509,58 @@ function panneau() {
     };
   }
 
+  // Radiations et temps : µSv/h de l'espace, heures par jour, heures maximum dans le quota (règle RAD-3)
+  if (e.position_m || e.dans || (F.programme.fonctions || []).some(fn => fn.element === e.id)) {
+    const D = doses(), B = D.budget || {}, Zb = B.zones || [];
+    const fns = (F.programme.fonctions || []).filter(fn => fn.element === e.id || E[fn.element]?.dans === e.id);
+    const ici = pointEspace(D.Fa, { element: e.id }), m = ici ? D.mesure(ici) : null;
+    const us = x => x == null ? '?' : (1000 * x).toFixed(1);
+    const pct = Math.min(100, 100 * (B.valeur || 0) / (B.seuil || 1));
+    const lignes = fns.map(fn => {
+      const z = Zb.find(x => x.id === fn.id) || {}, zz = D.zones.find(x => x.id === fn.id) || {};
+      const hm = z.h_max == null ? null : Math.min(24, z.h_max), h = val(fn.h_jour) || 0;
+      return `<div class="niv" style="grid-template-columns:1fr 58px 22px">
+        <input class="fn" data-nom="${fn.id}" value="${fn.nom || ''}" placeholder="usage">
+        <input type="number" step="0.5" min="0" max="24" data-h="${fn.id}" value="${h}" title="heures par jour">
+        <button data-xf="${fn.id}" title="enlever cet usage">×</button>
+        <span class="chiffres" style="grid-column:1/4">
+          <span style="display:block;height:8px;border-radius:3px;background:var(--surface-2);position:relative;margin:2px 0 4px">
+            <i style="position:absolute;left:0;top:0;bottom:0;width:${100 * h / 24}%;border-radius:3px;background:${zz.abri_eruption ? '#2f8a3c' : '#c23b12'}"></i>
+            ${hm != null ? `<b style="position:absolute;top:-3px;bottom:-3px;width:2px;left:${100 * hm / 24}%;background:var(--texte)"></b>` : ''}</span>
+          ${h} h × ${us(zz.mSv_h)} µSv/h = ${(h * (zz.mSv_h || 0) * 1000).toFixed(0)} µSv/j · max ${hm == null ? '?' : hm >= 24 ? '24' : hm.toFixed(1)} h
+          ${zz.abri_eruption ? '<span class="ok">· 🛡 abri</span>' : '<span class="non">· pas un abri</span>'}
+          <label style="margin-left:6px"><input type="checkbox" data-ar="${fn.id}" ${fn.abri_requis ? 'checked' : ''} style="width:auto"> doit être un abri</label>
+          ${fn.abri_requis && !zz.abri_eruption ? '<span class="non"> ✗</span>' : ''}</span></div>`;
+    }).join('');
+    const c = carte('Radiations et temps', `
+      ${m ? `<div class="ligne"><span>Dose ici (rayons cosmiques)</span><span class="gros">${us(m.mSv_h)} µSv/h</span></div>
+      <div class="ligne"><span>Point le plus faible</span><span class="${m.abri ? 'ok' : 'non'}">${m.min == null ? '—' : Math.round(m.min) + ' g/cm²'} ${m.abri ? '🛡 abri éruption' : '· pas un abri éruption'}</span></div>` : ''}
+      ${lignes || '<div class="note">Aucun usage ici : ajoute-en un pour compter le temps passé.</div>'}
+      <div style="margin-top:6px"><button class="ajout" id="plus-usage">+ usage ici</button></div>
+      <div class="ligne" style="margin-top:8px"><span>Journée de tout l'habitat</span><span class="${B.etat === 'ok' ? 'ok' : B.etat === 'non' ? 'non' : 'inc'}">${B.valeur ?? '?'} / ${B.seuil ?? '?'} mSv/j</span></div>
+      <div style="height:6px;border-radius:3px;background:var(--surface-2)"><i style="display:block;height:100%;width:${pct}%;border-radius:3px;background:${pct < 100 ? '#2f8a3c' : '#c23b12'}"></i></div>
+      <div class="note">${(B.detail || '').split(' ; ')[0]} · mission ${val(F.programme.duree_jours)} j. Barre = heures par jour (vert = abri), trait = heures maximum dans le quota. Courbe Matthiä 2024 ● ; rotation des modules ignorée ◇.</div>`);
+    c.querySelectorAll('input[data-h]').forEach(i => i.onchange = () => {
+      const fn = F.programme.fonctions.find(x => x.id === i.dataset.h), v = parseFloat(i.value);
+      if (fn && v >= 0 && v <= 24) { fn.h_jour = { v, s: '▨', src: 'modifié dans l\'atelier' }; tout(); }
+    });
+    c.querySelectorAll('input[data-nom]').forEach(i => i.onchange = () => {
+      const fn = F.programme.fonctions.find(x => x.id === i.dataset.nom); if (fn) { fn.nom = i.value.trim() || fn.nom; tout(); }
+    });
+    c.querySelectorAll('input[data-ar]').forEach(i => i.onchange = () => {
+      const fn = F.programme.fonctions.find(x => x.id === i.dataset.ar); if (fn) { if (i.checked) fn.abri_requis = true; else delete fn.abri_requis; tout(); }
+    });
+    c.querySelectorAll('button[data-xf]').forEach(b => b.onclick = () => {
+      F.programme.fonctions = F.programme.fonctions.filter(x => x.id !== b.dataset.xf); tout();
+    });
+    c.querySelector('#plus-usage').onclick = () => {
+      F.programme.fonctions = F.programme.fonctions || [];
+      let k = 1; while (F.programme.fonctions.some(x => x.id === `${e.id.toLowerCase()}-${k}`)) k++;
+      F.programme.fonctions.push({ id: `${e.id.toLowerCase()}-${k}`, nom: 'Nouvel usage', element: e.id, h_jour: { v: 1, s: '▨', src: 'ajouté dans l\'atelier' } });
+      tout();
+    };
+  }
+
   // Volume, masse, lanceur
   const vol = volumeForme(e.forme);
   const masse = val(e.masse_kg);
@@ -414,21 +584,47 @@ function panneau() {
   // Ports
   const qs = A.ports[e.id] || [];
   const pose = A.poses[e.id];
+  const ICO = { ok: '<span class="ok">✓</span>', non: '<span class="non">✗</span>', doute: '<span class="inc">?</span>' };
   if (qs.length) {
-    const c = carte('Ports d\'amarrage', qs.map(q => {
+    const optPorte = cur => Object.entries(CX.portes).map(([k, p]) => `<option value="${k}" ${k === cur ? 'selected' : ''}>${p.nom}</option>`).join('') + (cur ? '' : '<option value="" selected>(ancien port : Ø seul)</option>');
+    const optNiv = cur => `<option value="" ${!cur ? 'selected' : ''}>hauteur écrite</option>` + NV.map(n => `<option value="${n.id}" ${n.id === cur ? 'selected' : ''}>${n.id}${n.fonction ? ' · ' + n.fonction : ''}</option>`).join('');
+    const c = carte('Portes et ports', qs.map(q => {
+      const qf = e.ports.find(p => p.id === q.id) || {};
+      const P = porteDe(qf, CX);
       const l = A.liens.find(l => (l.de === e.id && l.port_de === q.id) || (l.vers === e.id && l.port_vers === q.id));
       const voisin = q.relie_a?.split('.')[0];
-      // une écoutille latérale doit s'ouvrir au-dessus d'un plancher, sous son plafond
-      const lat = Math.abs(q.n[2]) < 0.9, rr = (q.diametre || 1) / 2;
-      const nv = lat ? NV.find(n => q.p[2] - rr >= n.z - 1e-6 && q.p[2] + rr <= n.plafond + 1e-6) : true;
+      const res = X.portes.find(x => x.element === e.id && x.port === q.id)?.msgs || [];
+      const lat = !String(qf.face || '').includes('z');
       return `<div class="port"><span class="pt ${q.relie_a ? '' : 'libre'}"></span>
-        <span><b>${q.id}</b> ${q.nom || ''}<br><span class="note">${q.type} · Ø ${fmt(q.diametre)} m ${q.statut} · face ${(E[sel].ports.find(p => p.id === q.id) || {}).face || 'libre'}</span></span>
-        ${voisin ? `<button data-v="${voisin}">→ ${q.relie_a}</button>` : '<span class="note">libre</span>'}
-        ${l && l.ecart ? `<span></span><span class="note">tunnel / couloir ${fmt(l.ecart)} m</span><span></span>` : ''}
-        ${nv ? (lat ? `<span></span><span class="note ok">s'ouvre au niveau ${nv.id}</span><span></span>` : '') : `<span></span><span class="note non">✗ à ${fmt(q.p[2])} m : sous un plancher ou dans l'épaisseur</span><span></span>`}</div>`;
-    }).join(''));
+        <span><b>${q.id}</b> ${q.nom || ''}<br><span class="note">face ${qf.face || '—'} · ${fmt(P.largeur)} × ${fmt(P.hauteur)} m · ${P.etanche ? 'étanche' : 'non étanche'}</span></span>
+        ${voisin ? `<button data-v="${voisin}">→ ${q.relie_a}</button>` : `<span class="note">${P.exterieure ? 'dehors' : 'libre'}</span>`}
+        <span></span><span style="display:flex;gap:4px;flex-wrap:wrap"><select data-porte="${q.id}" aria-label="Type de porte">${optPorte(qf.porte)}</select>${lat && NV.length ? `<select data-niv="${q.id}" aria-label="Niveau de la porte">${optNiv(qf.niveau)}</select>` : ''}</span><span></span>
+        ${l && l.ecart ? `<span></span><span class="note">tunnel / couloir ${fmt(l.ecart)} m${l.brut?.circulation ? ' · ' + l.brut.circulation : ''}</span><span></span>` : ''}
+        <span></span><span>${res.map(m => `<div class="msg">${ICO[m.etat]} ${m.texte} <b>${m.regle}</b></div>`).join('')}</span><span></span></div>`;
+    }).join('') + `<details style="margin-top:6px"><summary class="note">Ce que doit faire chaque porte étanche (NASA-STD-3001 Vol. 2)</summary><div class="note">${CX.regles.exigences_porte_etanche}</div></details>`);
     c.querySelectorAll('button[data-v]').forEach(b => b.onclick = () => choisir(b.dataset.v));
+    c.querySelectorAll('select[data-porte]').forEach(s => s.onchange = () => {
+      const qf = e.ports.find(p => p.id === s.dataset.porte); qf.porte = s.value || undefined;
+      if (s.value) { delete qf.diametre_m; delete qf.type; }
+      tout();
+    });
+    c.querySelectorAll('select[data-niv]').forEach(s => s.onchange = () => {
+      const qf = e.ports.find(p => p.id === s.dataset.niv); if (s.value) { qf.niveau = s.value; delete qf.hauteur_m; } else delete qf.niveau;
+      tout();
+    });
   } else if (!e.dans) carte('Ports d\'amarrage', `<div class="note">Aucun port : cet élément n'est pas placé par l'assemblage${e.forme?.type === 'butte' ? ' (la butte se calcule autour des modules)' : ''}.</div>`);
+
+  // Connexions : liaisons de cet élément, règles de l'élément, parcours depuis dehors
+  {
+    const mine = X.liens.filter(l => [l.de, l.vers].some(s => String(s).split('.')[0] === e.id));
+    const propres = X.elements[e.id]?.msgs || [];
+    const ch = X.parcours[e.id];
+    if (mine.length || propres.length || ch) carte('Connexions', `
+      ${ch ? `<div class="chemin">${ch.join(' → ')}</div>` : ''}
+      ${propres.map(m => `<div class="msg">${ICO[m.etat]} ${m.texte} <b>${m.regle}</b></div>`).join('')}
+      ${mine.map(l => `<div style="border-top:1px solid var(--filet);padding-top:4px;margin-top:4px"><div class="note"><b>${l.de} → ${l.vers}</b> · ${CX.liaisons[l.type]?.nom || l.type}</div>
+        ${l.msgs.map(m => `<div class="msg">${ICO[m.etat]} ${m.texte} <b>${m.regle}</b></div>`).join('')}</div>`).join('')}`);
+  }
 
   // Contenu
   const dedans = F.elements.filter(x => x.dans === e.id);
@@ -449,6 +645,7 @@ function panneau() {
   // Ensemble
   const msgs = [...A.erreurs.map(x => `<div class="ligne non">✗ ${x}</div>`), ...A.avertissements.map(x => `<div class="ligne inc">! ${x}</div>`)];
   const c = carte('Ensemble', (msgs.join('') || `<div class="ligne ok">✓ tous les ports reliés se font face</div>`)
+    + `<div class="ligne"><span>Connexions</span><span><span class="ok">${X.resume.ok} ✓</span> · <span class="non">${X.resume.non} ✗</span> · <span class="inc">${X.resume.doute} ?</span></span></div>`
     + `<div class="actions" style="margin-top:6px"><button id="dl">Télécharger la fiche</button><a href="controle.html?fiche=${encodeURIComponent(ficheNom)}">Contrôler l'ensemble</a></div>`
     + `<div class="note">La fiche téléchargée contient les dimensions modifiées et les positions données par les ports. Pour la garder, remplace ${ficheNom}.</div>`);
   c.querySelector('#dl').onclick = telecharger;
@@ -465,19 +662,20 @@ function telecharger() {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function tout() { A = assembler(F); liste(); panneau(); construire(); }
+function tout() { A = assembler(F, CX); X = analyser(F, CX, A); liste(); panneau(); construire(); }
 function choisir(id) {
   sel = id;
   const u = new URL(location.href); u.searchParams.set('el', id); history.replaceState(null, '', u);
   tout();
 }
-for (const [b, m] of [['m-seul', 'seul'], ['m-tout', 'tout']]) document.getElementById(b).onclick = () => {
-  mode = m; document.getElementById('m-seul').classList.toggle('on', m === 'seul'); document.getElementById('m-tout').classList.toggle('on', m === 'tout'); construire();
+const MODES = [['m-seul', 'seul'], ['m-tout', 'tout'], ['m-parcours', 'parcours']];
+for (const [b, m] of MODES) document.getElementById(b).onclick = () => {
+  mode = m; for (const [bb, mm] of MODES) document.getElementById(bb).classList.toggle('on', m === mm); construire();
 };
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { scene.background = fondCouleur(); });
 
 taille(); tout(); boucle();
-window.KIBSU_ATELIER = { F, get A() { return A; }, choisir };
+window.KIBSU_ATELIER = { F, get A() { return A; }, get X() { return X; }, choisir };
 </script>
 </body>
 </html>
