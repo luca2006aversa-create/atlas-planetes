@@ -1,6 +1,6 @@
 :root {
   --encre:#1d2433; --papier:#f6f4ef; --trait:#d9d4c7; --doux:#6b7280; --vif:#e4572e; --nuit:#0b0f17;
-  --ing:#3d6b8c; --arc:#b5654a; --col:360px; --haut:46px;
+  --ing:#3d6b8c; --arc:#b5654a; --col:360px; --haut:78px;
 }
 * { box-sizing:border-box; }
 html, body { margin:0; background:var(--papier); color:var(--encre); font:15px/1.55 Inter, system-ui, sans-serif; }

@@ -13,7 +13,7 @@ header nav button:hover, header nav a:hover { background:var(--surface-2); }
 header nav .actif { background:var(--plein-fond); color:var(--plein-texte); }
 header .note { margin-left:auto; color:var(--texte-2); font-size:var(--t-etiq); }
 #theme { border:1px solid var(--filet); background:var(--surface); color:var(--texte); width:32px; height:32px; border-radius:8px; cursor:pointer; font-size:13px; line-height:1; padding:0; }
-main { position:absolute; top:46px; left:0; right:0; bottom:0; }
+main { position:absolute; top:78px; left:0; right:0; bottom:0; }
 .vue { position:absolute; inset:0; display:none; }
 .vue.actif { display:block; }
 #scene, #globe { position:absolute; inset:0; background:var(--nuit); }
@@ -79,7 +79,7 @@ input[type=range] { width:100%; accent-color:var(--vif); }
 .missions-bas .liste { max-height:360px; }
 #premieres .item b { min-width:42px; display:inline-block; }
 @media (max-width: 800px) {
-  main { top:46px; }
+  main { top:78px; }
   .missions-bas { grid-template-columns:1fr; }
   .panneau { width:calc(100% - 24px); max-height:45%; }
   .fiche-mission { width:calc(100% - 24px); top:auto; bottom:12px; max-height:45%; }

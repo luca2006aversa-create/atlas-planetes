@@ -14,7 +14,7 @@
   .barre button.on { background: #f2ede4; color: #141414; }
   .barre input[type=range] { flex: 1 1 220px; accent-color: #e4572e; }
   .date { font: 13px var(--mono); min-width: 150px; }
-  .titre { position: fixed; left: 12px; top: 58px; background: rgba(10,10,10,.7); border-radius: 8px; padding: 8px 12px; max-width: 520px; }
+  .titre { position: fixed; left: 12px; top: 90px; background: rgba(10,10,10,.7); border-radius: 8px; padding: 8px 12px; max-width: 520px; }
   .titre b { font-size: 15px; } .titre span { color: #a8a8a8; display: block; font-size: 12px; }
   .etq { position: fixed; transform: translate(-50%, -130%); font: 600 12px var(--sans); white-space: nowrap; pointer-events: none;
          text-shadow: 0 0 4px #000, 0 0 2px #000; }
@@ -22,7 +22,7 @@
   .titre nav { margin-top: 6px; font-size: 12px; } .titre nav a { color: #f2b29c; margin-right: 10px; }
   body.embed .titre { display: none; }
   body.embed .barre { left: 8px; right: 8px; bottom: 8px; }
-  .boussole { position: fixed; right: 12px; top: 58px; width: 120px; height: 120px; }
+  .boussole { position: fixed; right: 12px; top: 90px; width: 120px; height: 120px; }
 </style>
 <script src="../nav.js" defer data-fixe data-ton="sombre"></script>
 </head>
@@ -52,7 +52,8 @@ import { astres, depaqueter, jourJ2000, iauLune, repereLocal, azHaut, etoile } f
 
 const RAD = Math.PI / 180;
 const PARAMS = new URLSearchParams(location.search), EMBED = PARAMS.get('embed') === '1';
-const fiche = PARAMS.get('fiche') || 'pole-sud-esquisse.json';
+let MEM = null; try { MEM = !EMBED && JSON.parse(sessionStorage.getItem('kibsu-fiche')); } catch (e) { /* pas de mémoire : la fiche du dossier */ }
+const fiche = PARAMS.get('fiche') || MEM?.nom || 'pole-sud-esquisse.json';   // l'onglet Fichier transmet sa fiche (curseurs compris)
 if (EMBED) document.body.classList.add('embed');
 if (EMBED) addEventListener('keydown', e => { if (e.key === 'Escape') parent.postMessage('kibsu-echap', location.origin); });   // Échap : quitter le grand écran de l'onglet Projets
 const [META, F, PLAN, HAB, PLA] = await Promise.all(['site/relief.json', fiche, '../etude/donnees/plan.json',
@@ -158,7 +159,7 @@ function batir(F) {
     projet.add(k);
   }
 }
-batir(F);
+batir(MEM && MEM.nom === fiche && MEM.F ? MEM.F : F);
 if (EMBED) addEventListener('message', e => { if (e.origin === location.origin && e.data?.type === 'kibsu-fiche') batir(e.data.F); });
 
 // mâts solaires et aire d'atterrissage du plan de l'étude
