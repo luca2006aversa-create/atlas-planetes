@@ -7,24 +7,13 @@
 // Node       : node assemblage.js fiche.json   (positions écrites contre positions assemblées)
 
 import { val } from './controle.js';
+import { enveloppe } from './formes.js';
 
 const RAD = Math.PI / 180;
 const TOL = 0.01;                                         // m : au-delà, la position écrite ne suit pas les ports
 
-// Enveloppe d'une forme dans son repère : demi-tailles selon x, y et hauteur
-export function enveloppe(f) {
-  if (!f) return null;
-  const d = val(f.diametre_m), L = val(f.longueur_m), h = val(f.hauteur_m);
-  switch (f.type) {
-    case 'cylindre': return f.axe === 'vertical' ? { x: d / 2, y: d / 2, h: L } : { x: L / 2, y: d / 2, h: d };
-    case 'dome': return { x: d / 2, y: d / 2, h: d / 2 };
-    case 'sphere': return { x: d / 2, y: d / 2, h: d };
-    case 'boite': return f.dim_m ? { x: f.dim_m[0] / 2, y: f.dim_m[1] / 2, h: f.dim_m[2] }
-                                 : { x: val(f.longueur_m) / 2, y: val(f.largeur_m) / 2, h };
-    case 'chapeau': return { x: val(f.rayon_m), y: val(f.rayon_m), h };
-    default: return null;
-  }
-}
+// Enveloppe d'une forme : voir formes.js (catalogue)
+export { enveloppe };
 
 const FACES = { '+x': [1, 0, 0], '-x': [-1, 0, 0], '+y': [0, 1, 0], '-y': [0, -1, 0], '+z': [0, 0, 1], '-z': [0, 0, -1] };
 

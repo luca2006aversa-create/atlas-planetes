@@ -4,6 +4,8 @@
 // Chaque résultat : { id, nom, domaine, etat: 'ok'|'non'|'info'|'?', valeur, seuil, detail, source, statut }
 // statut = le plus faible des statuts utilisés (● > ◇ > ▨) : un ✓ calculé sur des ▨ reste une hypothèse.
 
+import { volume as volumeCatalogue } from './formes.js';
+
 const RANG = { '●': 3, '◇': 2, '▨': 1 };
 export const val = x => (x && typeof x === 'object' && 'v' in x) ? x.v : x;
 export const stat = x => (x && typeof x === 'object' && 'v' in x) ? (x.s || '▨') : (x == null ? null : '▨');
@@ -18,7 +20,7 @@ export function volumeForme(f) {
     case 'sphere': return Math.PI * d ** 3 / 6;
     case 'dome': return Math.PI * d ** 3 / 12;                       // demi-sphère
     case 'boite': return val(f.largeur_m) * val(f.longueur_m) * h;
-    default: return null;
+    default: return volumeCatalogue(f);                              // capsule, voûte, tore, nœud… : formes.js
   }
 }
 

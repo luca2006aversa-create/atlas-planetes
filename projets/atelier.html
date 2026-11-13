@@ -25,6 +25,13 @@
   .etq { position: absolute; transform: translate(-50%, -120%); font: 600 12px var(--sans); white-space: nowrap; pointer-events: none;
          background: var(--surface); border: 1px solid var(--filet); border-radius: 5px; padding: 1px 5px; }
   .etq.libre { border-color: #e4572e; color: #b23c17; }
+  .etq.niveau { border-color: #d9822b; color: #8a4a0c; transform: translate(0, -50%); }
+  .niv { display: grid; grid-template-columns: 34px 58px 1fr 22px; gap: 4px 6px; align-items: center; font-size: 13px; padding: 5px 0; border-top: 1px solid var(--filet); }
+  .niv input { width: 100%; box-sizing: border-box; font: 13px var(--mono); padding: 2px 4px; border: 1px solid var(--filet); border-radius: 5px; background: var(--fond); color: var(--texte); }
+  .niv input.fn { font-family: var(--sans); }
+  .niv .chiffres { grid-column: 2 / 5; font: 12px var(--mono); color: var(--texte-2); }
+  .niv button, .ajout { font: 12px var(--sans); background: none; border: 1px solid var(--filet); border-radius: 5px; color: var(--texte); cursor: pointer; padding: 2px 6px; }
+  select { font: 13px var(--sans); padding: 3px 5px; border: 1px solid var(--filet); border-radius: 5px; background: var(--fond); color: var(--texte); }
   .panneau { overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
   .carte { background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; padding: 10px 12px; }
   .carte h2 { font: 600 11.5px var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--texte-2); margin: 0 0 6px; }
@@ -47,7 +54,7 @@
 <div class="haut">
   <h1>Atelier</h1>
   <span class="note" id="nomfiche"></span>
-  <nav><a href="../">← Atlas</a><a href="site3d.html">Habitat 3D</a><a href="controle.html" id="lien-controle">Contrôles</a><a href="rayons.html">Radiations</a></nav>
+  <nav><a href="../">← Atlas</a><a href="site3d.html">Habitat 3D</a><a href="controle.html" id="lien-controle">Contrôles</a><a href="rayons.html">Radiations</a><a href="../references/">Références</a></nav>
 </div>
 <div class="grille">
   <div class="liste" id="liste"></div>
@@ -67,7 +74,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { val, stat, volumeForme } from './controle.js';
-import { assembler, enveloppe, versMonde } from './assemblage.js';
+import { assembler, versMonde } from './assemblage.js';
+import { CATALOGUE, HYP, enveloppe, niveaux, changerType, plancherParDefaut } from './formes.js';
 
 const Q = new URLSearchParams(location.search);
 const ficheNom = Q.get('fiche') || 'pole-sud-esquisse.json';
@@ -105,6 +113,9 @@ const MAT = {
   libre: new THREE.MeshStandardMaterial({ color: 0xe4572e }),
   relie: new THREE.MeshStandardMaterial({ color: 0x6b6b6b }),
   tunnel: new THREE.MeshStandardMaterial({ color: 0xb8b2a6, roughness: .9 }),
+  verre: new THREE.MeshStandardMaterial({ color: 0xd8d3c8, roughness: .8, transparent: true, opacity: .28, side: THREE.DoubleSide, depthWrite: false }),
+  plancher: new THREE.MeshStandardMaterial({ color: 0xd9822b, roughness: .9, transparent: true, opacity: .85, side: THREE.DoubleSide }),
+  bas: new THREE.MeshStandardMaterial({ color: 0xc23b12, roughness: .9, transparent: true, opacity: .55, side: THREE.DoubleSide }),
 };
 
 // Maillage d'une forme dans son repère (origine = centre au sol)
@@ -117,6 +128,17 @@ function maillage(f, mat) {
       if (f.axe === 'vertical') { g = new THREE.CylinderGeometry(d / 2, d / 2, L, 48); y = L / 2; }
       else { g = new THREE.CylinderGeometry(d / 2, d / 2, L, 48); y = d / 2; rz = Math.PI / 2; }
       break;
+    case 'noeud': g = new THREE.CylinderGeometry(d / 2, d / 2, h, 48); y = h / 2; break;
+    case 'capsule': g = new THREE.CapsuleGeometry(d / 2, Math.max(0, h - d), 12, 48); y = h / 2; break;
+    case 'voute': {
+      const l = val(f.largeur_m), s = new THREE.Shape(), n = 24;
+      s.moveTo(-l / 2, 0);
+      for (let i = 0; i <= 2 * n; i++) { const u = -1 + i / n; s.lineTo(u * l / 2, h * (1 - u * u)); }
+      s.lineTo(l / 2, 0); s.lineTo(-l / 2, 0);
+      g = new THREE.ExtrudeGeometry(s, { depth: L, bevelEnabled: false }); g.translate(0, 0, -L / 2); g.rotateY(Math.PI / 2);
+      break;
+    }
+    case 'tore': g = new THREE.TorusGeometry(val(f.diametre_anneau_m) / 2, d / 2, 24, 96); g.rotateX(Math.PI / 2); y = d / 2; break;
     case 'dome': g = new THREE.SphereGeometry(d / 2, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2); break;
     case 'sphere': g = new THREE.SphereGeometry(d / 2, 40, 20); y = d / 2; break;
     case 'boite': { const env = enveloppe(f); g = new THREE.BoxGeometry(env.x * 2, env.h, env.y * 2); y = env.h / 2; break; }
@@ -163,8 +185,20 @@ function construire() {
   grille.material.transparent = true; grille.material.opacity = .5; racine.add(grille);
   const e = E[sel];
   if (mode === 'seul') {
-    const m = maillage(e.forme, MAT.sel);
+    const NV = niveaux(e);
+    const m = maillage(e.forme, NV.length ? MAT.verre : MAT.sel);
     if (m) { racine.add(m); m.userData.id = e.id; cliquables.push(m); }
+    // Planchers : la coupe de la forme à la hauteur de chaque niveau
+    for (const n of NV) {
+      const c = n.coupe; if (!c || c.aire <= 0) continue;
+      let g;
+      if (c.forme === 'rect') g = new THREE.BoxGeometry(2 * c.a, 0.1, 2 * c.b);
+      else if (c.forme === 'disque') g = new THREE.CylinderGeometry(c.a, c.a, 0.1, 64);
+      else { g = new THREE.RingGeometry(c.a, c.b, 96); g.rotateX(-Math.PI / 2); }
+      const s = new THREE.Mesh(g, n.hauteur_libre >= val(HYP.hauteur_debout_m) ? MAT.plancher : MAT.bas);
+      s.position.y = n.z; racine.add(s);
+      etiquette(`${n.id}${n.fonction ? ' · ' + n.fonction : ''} · ${fmt(n.aire, 0)} m²`, T(c.forme === 'anneau' ? c.b : 0, -(c.forme === 'rect' ? c.b : c.forme === 'anneau' ? c.b : c.a), n.z + 0.3), 'niveau');
+    }
     for (const q of A.ports[e.id] || []) {
       racine.add(flechePort(q, !q.relie_a, null));
       etiquette(`${q.id}${q.relie_a ? ' → ' + q.relie_a : ' libre'}`, T(q.p[0] + q.n[0] * 1.9, q.p[1] + q.n[1] * 1.9, q.p[2] + q.n[2] * 1.9 + 0.4), q.relie_a ? '' : 'libre');
@@ -271,14 +305,38 @@ function liste() {
 }
 
 // ---------- panneau ----------
-const fmt = (x, n = 1) => x == null || Number.isNaN(x) ? '?' : ((+x.toFixed(n)) || 0).toLocaleString('fr-FR');
-const CHAMPS = [['diametre_m', 'Diamètre (m)'], ['longueur_m', 'Longueur (m)'], ['largeur_m', 'Largeur (m)'], ['hauteur_m', 'Hauteur (m)'], ['rayon_m', 'Rayon (m)'], ['couverture_m', 'Couverture (m)'], ['talus_deg', 'Talus (°)']];
+const fmt = (x, n = 1) => { x = val(x); return x == null || Number.isNaN(+x) ? '?' : ((+(+x).toFixed(n)) || 0).toLocaleString('fr-FR'); };
+const CHAMPS = [['diametre_m', 'Diamètre (m)'], ['longueur_m', 'Longueur (m)'], ['largeur_m', 'Largeur (m)'], ['hauteur_m', 'Hauteur (m)'], ['rayon_m', 'Rayon (m)'], ['diametre_anneau_m', 'Ø de l\'anneau (m)'],['couverture_m', 'Couverture (m)'], ['talus_deg', 'Talus (°)']];
+
+// Un élément rigide voyage tel quel : Ø de son empreinte (ou du cylindre couché) et longueur dans la coiffe
+function transport(e) {
+  if (e.arrivee?.mode !== 'rigide' || !e.forme) return;
+  const f = e.forme, en = enveloppe(f);
+  e.arrivee.dimensions_vol_m = f.type === 'cylindre' && f.axe !== 'vertical'
+    ? [val(f.diametre_m), val(f.longueur_m)] : [+(2 * Math.max(en.x, en.y)).toFixed(2), +en.h.toFixed(2)];
+}
 
 function panneau() {
   const e = E[sel], P = document.getElementById('panneau'); P.innerHTML = '';
   const carte = (titre, html) => { const c = document.createElement('div'); c.className = 'carte'; c.innerHTML = `<h2>${titre}</h2>${html}`; P.appendChild(c); return c; };
 
   carte(`${e.id} · ${e.nom || ''}`, `<div class="note">${e.type}${e.forme ? ' · ' + e.forme.type : ''}${e.dans ? ' · dans ' + e.dans : ''}${e.pressurise ? ' · pressurisé' : ''}</div>`);
+
+  // Forme : choisie dans le catalogue (formes.js)
+  if (e.forme && (CATALOGUE[e.forme.type] || e.forme.type === 'sphere')) {
+    const C = CATALOGUE[e.forme.type];
+    const c = carte('Forme', `<div class="ligne"><span>Gabarit</span><select id="type">${Object.entries(CATALOGUE).map(([k, x]) => `<option value="${k}" ${k === e.forme.type ? 'selected' : ''}>${x.nom}</option>`).join('')}</select></div>
+      ${e.forme.type === 'cylindre' ? `<div class="ligne"><span>Axe</span><select id="axe"><option value="horizontal" ${e.forme.axe !== 'vertical' ? 'selected' : ''}>couché</option><option value="vertical" ${e.forme.axe === 'vertical' ? 'selected' : ''}>debout</option></select></div>` : ''}
+      <div class="note">${C?.note || ''}</div>`);
+    c.querySelector('#type').onchange = ev => {
+      const ports = e.ports;
+      e.forme = changerType(e.forme, ev.target.value);
+      delete e.niveaux;
+      transport(e); e.ports = ports; tout();
+    };
+    const axe = c.querySelector('#axe');
+    if (axe) axe.onchange = () => { e.forme.axe = axe.value; delete e.niveaux; tout(); };
+  }
 
   // Dimensions modifiables
   if (e.forme) {
@@ -290,10 +348,47 @@ function panneau() {
         const v = parseFloat(inp.value); if (!(v > 0)) return;
         const k = inp.dataset.k, ancien = e.forme[k];
         e.forme[k] = { v, s: '▨', src: 'modifié dans l\'atelier' + (ancien && typeof ancien === 'object' && ancien.src ? ` (avant : ${val(ancien)}, ${ancien.src})` : '') };
-        if (e.arrivee?.mode === 'rigide' && e.forme.type === 'cylindre') e.arrivee.dimensions_vol_m = [val(e.forme.diametre_m), val(e.forme.longueur_m)];
+        transport(e);
         tout();
       }));
     }
+  }
+
+  // Niveaux : planchers, surfaces, hauteur sous plafond
+  const NV = niveaux(e);
+  if (NV.length) {
+    const deb = val(HYP.hauteur_debout_m);
+    const tot = NV.reduce((a, n) => a + n.aire, 0), totD = NV.reduce((a, n) => a + n.aire_debout, 0);
+    const c = carte('Niveaux', `
+      <div class="ligne"><span>Plancher total</span><span class="gros">${fmt(tot, 0)} m²</span></div>
+      <div class="ligne"><span>Où l'on tient debout (≥ ${deb} m <span class="st">${HYP.hauteur_debout_m.s}</span>)</span><span class="gros">${fmt(totD, 0)} m²</span></div>
+      ${[...NV].reverse().map(n => `<div class="niv">
+        <b>${n.id}</b>
+        <input type="number" step="0.1" min="0" data-z="${n.id}" value="${+n.z.toFixed(2)}" title="hauteur du plancher (m)">
+        <input class="fn" data-f="${n.id}" value="${n.fonction || ''}" placeholder="fonction">
+        ${n.implicite ? '<span></span>' : `<button data-x="${n.id}" title="enlever ce niveau">×</button>`}
+        <span class="chiffres">${fmt(n.aire, 0)} m² · debout ${fmt(n.aire_debout, 0)} m² · <span class="${n.hauteur_libre >= deb ? '' : 'non'}">${fmt(n.hauteur_libre, 1)} m sous plafond</span></span>
+      </div>`).join('')}
+      <div style="margin-top:6px"><button class="ajout" id="plus">+ niveau</button></div>
+      <div class="note">z = hauteur du plancher depuis le bas de la forme. Plancher ${val(HYP.epaisseur_plancher_m)} m ${HYP.epaisseur_plancher_m.s}. En rouge : pas assez haut pour se tenir debout.</div>`);
+    const explicite = () => { if (!e.niveaux) e.niveaux = NV.map(n => ({ id: n.id, z_m: { v: n.z, s: '▨' }, ...(n.fonction ? { fonction: n.fonction } : {}) })); };
+    c.querySelectorAll('input[data-z]').forEach(i => i.onchange = () => {
+      explicite(); const n = e.niveaux.find(x => x.id === i.dataset.z); const v = parseFloat(i.value);
+      if (n && v >= 0) { n.z_m = { v, s: '▨' }; tout(); }
+    });
+    c.querySelectorAll('input[data-f]').forEach(i => i.onchange = () => {
+      explicite(); const n = e.niveaux.find(x => x.id === i.dataset.f); if (n) { n.fonction = i.value.trim() || undefined; tout(); }
+    });
+    c.querySelectorAll('button[data-x]').forEach(b => b.onclick = () => {
+      explicite(); e.niveaux = e.niveaux.filter(x => x.id !== b.dataset.x); if (!e.niveaux.length) delete e.niveaux; tout();
+    });
+    c.querySelector('#plus').onclick = () => {
+      explicite();
+      const haut = NV[NV.length - 1], z = +(haut.z + deb + val(HYP.epaisseur_plancher_m) + 0.4).toFixed(1);
+      if (z + deb > enveloppe(e.forme).h) { c.querySelector('#plus').textContent = 'plus de place au-dessus : agrandis la forme'; return; }
+      let k = e.niveaux.length + 1; while (e.niveaux.some(x => x.id === 'N' + k)) k++;
+      e.niveaux.push({ id: 'N' + k, z_m: { v: z, s: '▨' } }); tout();
+    };
   }
 
   // Volume, masse, lanceur
@@ -303,7 +398,7 @@ function panneau() {
   let gab = '';
   if (e.arrivee?.mode === 'in_situ') gab = `<div class="ligne"><span>Arrivée</span><span>fabriqué sur place</span></div>`;
   else if (e.arrivee) {
-    const dv = e.arrivee.dimensions_vol_m?.[0];
+    const dv = val(e.arrivee.dimensions_vol_m?.[0]);
     const du = val(veh?.diametre_utile_m), mp = val(veh?.masse_posee_kg);
     const etat = (a, b) => a == null || b == null ? `<span class="inc">?</span>` : a <= b ? `<span class="ok">✓</span>` : `<span class="non">✗</span>`;
     gab = `<div class="ligne"><span>Arrivée</span><span>${e.arrivee.mode}${e.arrivee.lot ? ' · ' + e.arrivee.lot : ''}</span></div>
@@ -323,10 +418,14 @@ function panneau() {
     const c = carte('Ports d\'amarrage', qs.map(q => {
       const l = A.liens.find(l => (l.de === e.id && l.port_de === q.id) || (l.vers === e.id && l.port_vers === q.id));
       const voisin = q.relie_a?.split('.')[0];
+      // une écoutille latérale doit s'ouvrir au-dessus d'un plancher, sous son plafond
+      const lat = Math.abs(q.n[2]) < 0.9, rr = (q.diametre || 1) / 2;
+      const nv = lat ? NV.find(n => q.p[2] - rr >= n.z - 1e-6 && q.p[2] + rr <= n.plafond + 1e-6) : true;
       return `<div class="port"><span class="pt ${q.relie_a ? '' : 'libre'}"></span>
         <span><b>${q.id}</b> ${q.nom || ''}<br><span class="note">${q.type} · Ø ${fmt(q.diametre)} m ${q.statut} · face ${(E[sel].ports.find(p => p.id === q.id) || {}).face || 'libre'}</span></span>
         ${voisin ? `<button data-v="${voisin}">→ ${q.relie_a}</button>` : '<span class="note">libre</span>'}
-        ${l && l.ecart ? `<span></span><span class="note">tunnel / couloir ${fmt(l.ecart)} m</span><span></span>` : ''}</div>`;
+        ${l && l.ecart ? `<span></span><span class="note">tunnel / couloir ${fmt(l.ecart)} m</span><span></span>` : ''}
+        ${nv ? (lat ? `<span></span><span class="note ok">s'ouvre au niveau ${nv.id}</span><span></span>` : '') : `<span></span><span class="note non">✗ à ${fmt(q.p[2])} m : sous un plancher ou dans l'épaisseur</span><span></span>`}</div>`;
     }).join(''));
     c.querySelectorAll('button[data-v]').forEach(b => b.onclick = () => choisir(b.dataset.v));
   } else if (!e.dans) carte('Ports d\'amarrage', `<div class="note">Aucun port : cet élément n'est pas placé par l'assemblage${e.forme?.type === 'butte' ? ' (la butte se calcule autour des modules)' : ''}.</div>`);

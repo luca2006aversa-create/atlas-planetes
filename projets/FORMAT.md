@@ -70,6 +70,26 @@ Une liaison entre ports s'écrit `{ "de": "M1.B", "vers": "M2.A", "type": "jonct
 Une liaison sans port (`"de": "M1"`) reste permise : elle compte pour le parcours mais ne place rien.
 `atelier.html?fiche=…&el=M2` montre un élément seul, ses ports et ses contrôles ; on peut changer ses dimensions et voir l'assemblage suivre.
 
+### Formes et niveaux
+Catalogue dans `formes.js` (enveloppe, volume, coupe horizontale à une hauteur z) :
+| `forme.type` | champs | idée |
+|---|---|---|
+| `cylindre` | `diametre_m`, `longueur_m`, `axe` (`horizontal` / `vertical`) | couché : un plancher, réseaux dessous ; debout : étages |
+| `capsule` | `diametre_m`, `hauteur_m` | gonflable vertical à fonds bombés, plusieurs niveaux |
+| `dome` | `diametre_m` | demi-sphère : grand sol, mezzanine |
+| `sphere` | `diametre_m` | la plus légère sous pression, sol étroit |
+| `voute` | `largeur_m`, `hauteur_m`, `longueur_m` | arc parabolique en régolithe imprimé (poche étanche dedans) |
+| `tore` | `diametre_m` (tube), `diametre_anneau_m` (ligne médiane) | anneau autour d'un patio |
+| `noeud` | `diametre_m`, `hauteur_m` | petit cylindre debout à plusieurs ports |
+| `boite` | `longueur_m`, `largeur_m`, `hauteur_m` ou `dim_m` | murs plats : plutôt non pressurisé |
+
+Sur la Lune on vit sur des **planchers plats** : `niveaux: [ { "id": "N1", "z_m": { "v": 2.3, "s": "▨" }, "fonction": "nuit, abri" } ]`
+(z = hauteur du plancher depuis le bas de la forme). Pour chaque niveau, `formes.js` calcule la surface du plancher (coupe à z),
+la surface où l'on tient debout (coupe à z et à z + hauteur debout) et la hauteur sous plafond (jusqu'au niveau suivant moins l'épaisseur
+du plancher, ou jusqu'au haut de la forme). Sans `niveaux` : un seul plancher, placé par défaut là où il est le plus utile (cylindre couché :
+centré sur l'axe). Hypothèses de dessin (▨, à sourcer) : hauteur debout 2 m, plancher 0,2 m (`HYP` dans `formes.js`).
+L'atelier signale une écoutille latérale qui ne s'ouvre au-dessus d'aucun plancher.
+
 ### `arrivee.mode`
 | mode | Sens | Conséquence |
 |---|---|---|

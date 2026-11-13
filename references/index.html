@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Références d'habitats Kibsu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Atkinson+Hyperlegible+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Mise en page : une colonne de lecture ; en tête les 7 familles de formes (dessins), puis le fichier filtrable, puis ce qui passe dans Kibsu. Sobre : encre, papier, une touche orange. */
+:root {
+  --papier: #f6f6f4; --carte: #ffffff; --encre: #141414; --encre-2: #5d5f62; --filet: #dcdcd8;
+  --vif: #d9551f; --vif-doux: #fbe8df; --ok: #2f7d3e; --doute: #9a6a0d; --doute-doux: #f6ecd6;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --papier: #121313; --carte: #1b1c1d; --encre: #ececea; --encre-2: #a3a5a8; --filet: #303234;
+  --vif: #f07a45; --vif-doux: #3a2219; --ok: #6cc07b; --doute: #e0b45a; --doute-doux: #33291a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --papier: #121313; --carte: #1b1c1d; --encre: #ececea; --encre-2: #a3a5a8; --filet: #303234;
+  --vif: #f07a45; --vif-doux: #3a2219; --ok: #6cc07b; --doute: #e0b45a; --doute-doux: #33291a; color-scheme: dark }
+* { box-sizing: border-box; }
+body { background: var(--papier); color: var(--encre); font: 15px/1.55 var(--sans); }
+.page { max-width: 1080px; margin: 0 auto; padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font: 600 26px/1.2 var(--sans); margin: 0 0 6px; text-wrap: balance; }
+h2 { font: 600 19px/1.3 var(--sans); margin: 40px 0 12px; text-wrap: balance; }
+.chapeau { color: var(--encre-2); max-width: 68ch; margin: 0; }
+.navsite { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; margin-bottom: 18px; }
+.navsite a { color: var(--encre-2); text-decoration: none; }
+.navsite a:hover { color: var(--vif); }
+.etiq { font: 700 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--encre-2); }
+a { color: var(--vif); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--vif); outline-offset: 2px; }
+
+/* familles de formes */
+.familles { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.fam { background: var(--carte); border: 1px solid var(--filet); border-radius: 10px; padding: 10px 12px 12px; cursor: pointer; text-align: left; color: inherit; font: inherit; display: flex; flex-direction: column; gap: 4px; }
+.fam[aria-pressed="true"] { border: 2px solid var(--vif); padding: 9px 11px 11px; }
+.fam svg { width: 100%; height: 70px; }
+.fam svg .f { fill: none; stroke: var(--encre); stroke-width: 1.4; }
+.fam svg .p { stroke: var(--vif); stroke-width: 2.4; }
+.fam svg .r { fill: var(--filet); }
+.fam b { font-weight: 600; }
+.fam span { font-size: 13px; color: var(--encre-2); }
+.fam .n { font: 700 11px var(--mono); color: var(--encre-2); }
+
+/* filtres */
+.filtres { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0 12px; }
+.filtres button { font: 500 13px var(--sans); background: var(--carte); color: var(--encre); border: 1px solid var(--filet); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.filtres button[aria-pressed="true"] { background: var(--encre); color: var(--papier); border-color: var(--encre); }
+.compte { font: 13px var(--mono); color: var(--encre-2); margin-left: auto; }
+
+/* fiches */
+.liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.ref { background: var(--carte); border: 1px solid var(--filet); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.ref .haut { display: flex; gap: 8px; align-items: baseline; justify-content: space-between; }
+.ref h3 { font: 600 15px/1.3 var(--sans); margin: 0; }
+.ref .an { font: 500 12px var(--mono); color: var(--encre-2); white-space: nowrap; }
+.ref .qui { font-size: 13px; color: var(--encre-2); }
+.ref p { margin: 0; font-size: 14px; }
+.ref .lune { font-size: 13.5px; border-left: 3px solid var(--doute); padding-left: 8px; }
+.ref .kibsu { font-size: 13.5px; background: var(--vif-doux); border-radius: 6px; padding: 5px 8px; }
+.ref .kibsu b, .ref .lune b { font: 700 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; margin-right: 4px; }
+.ref .bas { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: auto; padding-top: 4px; font-size: 12.5px; }
+.pastille { font: 500 11.5px var(--mono); border: 1px solid var(--filet); border-radius: 999px; padding: 1px 7px; color: var(--encre-2); }
+.doute { background: var(--doute-doux); color: var(--doute); border-color: transparent; }
+.ref .bas a { margin-left: auto; }
+
+/* mise en place */
+.chantiers { display: grid; gap: 8px; }
+.ch { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 4px 14px; background: var(--carte); border: 1px solid var(--filet); border-radius: 10px; padding: 12px 14px; }
+.ch .etat { font: 700 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; padding: 3px 0; }
+.ch .etat.fait { color: var(--ok); } .ch .etat.suite { color: var(--vif); } .ch .etat.plus { color: var(--encre-2); }
+.ch h3 { font: 600 15px var(--sans); margin: 0; }
+.ch p { margin: 2px 0 0; font-size: 14px; color: var(--encre-2); grid-column: 2; }
+.ch .refs { grid-column: 2; font-size: 13px; }
+.note { font-size: 13px; color: var(--encre-2); max-width: 75ch; }
+.physique { background: var(--carte); border: 1px solid var(--filet); border-radius: 10px; padding: 12px 14px; display: grid; gap: 6px; }
+.physique p { margin: 0; font-size: 14px; }
+.physique .f { font: 500 13.5px var(--mono); }
+@media (max-width: 520px) { .ch { grid-template-columns: 1fr; } .ch p, .ch .refs { grid-column: 1; } h1 { font-size: 22px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+
+<div class="page">
+  <nav class="navsite"><a href="../">← Atlas</a><a href="../etude/">Étude</a><a href="../projets/site3d.html">Habitat 3D</a><a href="../projets/atelier.html">Atelier</a><a href="../projets/controle.html">Contrôles</a><a href="../projets/rayons.html">Radiations</a></nav>
+  <div class="etiq">Kibsu · habitat du pôle sud lunaire · 13/11/2026</div>
+  <h1>Références d'habitats : du réel à la fiction</h1>
+  <p class="chapeau">63 projets, films, séries, jeux et artistes qui ont pensé la forme et l'espace d'un habitat hors de la Terre. Pour chacun : l'idée à retenir, ce qu'il faut corriger pour la Lune, et ce que Kibsu peut en faire. Clique une famille de formes ou une catégorie pour filtrer.</p>
+
+  <h2>Les 7 familles de formes</h2>
+  <div class="familles" id="familles"></div>
+
+  <h2>Le fichier</h2>
+  <div class="filtres" id="filtres"></div>
+  <div class="liste" id="liste"></div>
+
+  <h2>Ce qui change sur la Lune</h2>
+  <div class="physique">
+    <p><b>La gravité existe déjà.</b> 1/6 g : on vit sur des planchers plats, on monte des escaliers ou des échelles, et un pas va plus loin. Les anneaux qui tournent (2001, Elysium, Stanford Torus) ne servent pas à créer une gravité : ils ne serviraient qu'à retrouver 1 g pour la santé (un « manège de gravité »).</p>
+    <p class="f">Anneau sur la Lune : pesanteur ressentie = √(g_lune² + (ω²·r)²) ; le sol doit pencher de atan(g_lune / ω²·r) vers l'extérieur.</p>
+    <p><b>L'air pousse plus fort que le sol.</b> Avec 3 m de régolithe dessus, le poids fait environ 7 kPa vers le bas ; l'air de nos fiches pousse à 56,5 kPa vers l'extérieur (◇, calcul). L'enveloppe travaille donc comme un ballon : formes courbes (cylindre, sphère, dôme, tore), et les murs plats seulement à l'intérieur.</p>
+    <p><b>La protection vient du sol.</b> Pas de champ magnétique ni d'atmosphère : la couverture de régolithe (ou de glace, ou d'eau) fait l'abri. La lumière naturelle passe par des périscopes, des fentes ou des puits.</p>
+    <p><b>La poussière est abrasive.</b> Elle colle et use. Les sas, les combinaisons et les seuils entre dehors et dedans sont un sujet d'architecture à part entière.</p>
+  </div>
+
+  <h2>Comment ça entre dans Kibsu</h2>
+  <div class="chantiers" id="chantiers"></div>
+
+  <h2>Où chercher ensuite</h2>
+  <div class="liste" id="lieux"></div>
+
+  <p class="note" style="margin-top:28px">Sources : la plupart sont secondaires (Wikipédia, revues d'architecture, sites des agences, blogs). Une pastille « à vérifier » marque une date, un nom ou un chiffre qui n'a pas pu être confirmé. Les textes sont des résumés, sans citation des œuvres. Avant de citer une référence dans un rendu, ouvre la source et recoupe-la.</p>
+</div>
+
+<script>
+const FAM = {
+  capsule: { nom: 'Tour à étages', txt: 'Cylindre ou gonflable debout, plusieurs planchers', svg: '<rect class="f" x="70" y="6" width="50" height="60" rx="16"/><line class="p" x1="72" y1="26" x2="118" y2="26"/><line class="p" x1="71" y1="44" x2="119" y2="44"/><line class="p" x1="74" y1="62" x2="116" y2="62"/>' },
+  coque: { nom: 'Coque + volume dedans', txt: 'Peau lourde en régolithe ou glace, poche habitée', svg: '<path class="r" d="M30 66 Q95 -16 160 66 Z"/><path class="f" d="M55 66 Q95 10 135 66"/><line class="p" x1="58" y1="64" x2="132" y2="64"/>' },
+  roue: { nom: 'Roue, tore, cylindre', txt: 'Anneau tournant ou couloir en boucle', svg: '<ellipse class="f" cx="95" cy="38" rx="70" ry="22"/><ellipse class="f" cx="95" cy="38" rx="44" ry="12"/><line class="f" x1="95" y1="16" x2="95" y2="26"/><line class="f" x1="95" y1="50" x2="95" y2="60"/>' },
+  grappe: { nom: 'Grappe, capsules', txt: 'Un nœud, des modules greffés ou remplaçables', svg: '<rect class="f" x="82" y="25" width="26" height="26" rx="4"/><circle class="f" cx="95" cy="10" r="8"/><rect class="f" x="122" y="30" width="44" height="16" rx="8"/><rect class="f" x="24" y="30" width="44" height="16" rx="8"/><rect class="f" x="88" y="56" width="14" height="12" rx="3"/><line class="p" x1="95" y1="18" x2="95" y2="25"/><line class="p" x1="108" y1="38" x2="122" y2="38"/><line class="p" x1="68" y1="38" x2="82" y2="38"/>' },
+  serre: { nom: 'Serre, dôme, belvédère', txt: 'Grand volume de lumière et de vue', svg: '<path class="f" d="M30 66 A65 58 0 0 1 160 66"/><line class="f" x1="95" y1="8" x2="95" y2="66"/><line class="f" x1="52" y1="22" x2="138" y2="22"/><line class="f" x1="38" y1="42" x2="152" y2="42"/><line class="p" x1="30" y1="66" x2="160" y2="66"/>' },
+  strates: { nom: 'Strates, mégastructure', txt: 'Densité verticale, couches qui s\'empilent', svg: '<rect class="f" x="40" y="8" width="30" height="58"/><rect class="f" x="74" y="20" width="40" height="46"/><rect class="f" x="118" y="2" width="30" height="64"/><line class="p" x1="40" y1="36" x2="148" y2="36"/><line class="f" x1="40" y1="52" x2="148" y2="52"/>' },
+  usage: { nom: 'Vie, usure, récupération', txt: 'Intérieurs habités, réparés, recomposés', svg: '<rect class="f" x="40" y="14" width="110" height="50" rx="6"/><rect class="r" x="52" y="40" width="22" height="24"/><rect class="r" x="84" y="26" width="16" height="14"/><circle class="f" cx="128" cy="30" r="8"/><line class="p" x1="40" y1="64" x2="150" y2="64"/>' },
+};
+const CAT = { station: 'Stations', lune: 'Lune et Mars', theorie: 'Théorie, histoire', film: 'Films', serie: 'Séries', anime: 'Animés, manga', jeu: 'Jeux', artiste: 'Artistes, lieux' };
+const W = 'https://en.wikipedia.org/wiki/';
+// n nom · a année · q qui / lieu · c catégorie · t familles · i idée · l pour la Lune · k dans Kibsu · u source · d à vérifier
+const R = [
+  { n: 'Skylab', a: '1973', q: 'NASA', c: 'station', t: ['capsule'], d: true, i: 'Deux niveaux séparés par un plancher-grille ajouré : on voit à travers, on s\'y accroche.', k: 'Plancher ajouré entre deux niveaux d\'une tour : continuité visuelle dans un volume étroit.', u: 'https://centennialofflight.net/essay/SPACEFLIGHT/skylab/SP23.htm' },
+  { n: 'Mir', a: '1986–1996', q: 'Programme soviétique', c: 'station', t: ['grappe'], d: true, i: 'Un module central et des modules greffés autour, ajoutés pendant dix ans.', k: 'Un habitat qui grandit par étapes : ancre + ports libres pour les ajouts futurs.', u: 'https://www.nasa.gov/history/SP-4225/mir/mir.htm' },
+  { n: 'ISS, nœud Tranquility et Cupola', a: '2010', q: 'NASA, ESA, Thales Alenia Space', c: 'station', t: ['grappe', 'serre'], d: true, i: 'Un nœud technique (air, sport) et, greffé dessus, un belvédère vitré pour regarder la Terre.', k: 'Séparer le nœud technique et le belvédère ; règle « vue vers la Terre » par espace.', u: 'https://eoportal.org/satellite-missions/iss-cupola' },
+  { n: 'TransHab', a: '1997–2000', q: 'NASA Johnson', c: 'station', t: ['capsule'], i: 'Gonflable à quatre niveaux, dont trois habitables ; une grande table commune à l\'entrée.', k: 'Gabarit « gonflable vertical » + un niveau commun au plancher d\'entrée.', u: 'https://ntrs.nasa.gov/api/citations/20100042636/downloads/20100042636.pdf' },
+  { n: 'BEAM', a: '2016', q: 'Bigelow Aerospace, NASA', c: 'station', t: ['capsule'], i: 'Module plié pour le voyage, déployé et pressurisé sur l\'ISS.', k: 'Mode d\'arrivée « gonflable » : dimensions pliées ≠ dimensions déployées (déjà dans la fiche).', u: 'https://eoportal.org/web/eoportal/satellite-missions/i/iss-beam' },
+  { n: 'Bigelow B330', a: '2016 (jamais lancé)', q: 'Bigelow Aerospace', c: 'station', t: ['capsule'], i: 'Gonflable d\'environ 330 m³, pensé pour une station autonome.', k: 'Ordre de grandeur pour un gonflable à plusieurs niveaux.', u: 'https://www.nasaspaceflight.com/2019/09/bigelows-b330-autonomous-expandable-station/' },
+  { n: 'Base lunaire imprimée', a: '2013', q: 'Foster + Partners, ESA, Monolite', c: 'lune', t: ['coque'], i: 'Un module se déplie, un dôme gonflable sert d\'échafaudage, puis un robot imprime une coque en régolithe alvéolaire.', k: 'Élément « coque » autour d\'un volume ; paroi alvéolaire = moins de matière, même épaisseur pour les radiations.', u: 'https://www.esa.int/Enabling_Support/Space_Engineering_Technology/Building_a_lunar_base_with_3D_printing' },
+  { n: 'Moon Village', a: '2019', q: 'SOM, ESA, MIT', c: 'lune', t: ['capsule', 'grappe'], i: 'Au bord du cratère Shackleton : des gonflables de 3 à 4 niveaux, groupés en village qui grandit.', k: 'Gabarit « gonflable vertical » + plan en grappes ; chambres au niveau le plus protégé.', u: 'https://www.som.com/news/som-releases-concept-for-moon-village-the-first-permanent-human-settlement-on-the-lunar-surface/' },
+  { n: 'Project Olympus', a: '2020', q: 'BIG, ICON, SEArch+, NASA', c: 'lune', t: ['coque'], i: 'Des coques imprimées avec le sol lunaire, pour la chaleur, les radiations et les micrométéorites.', k: 'Gabarit « voûte en régolithe » ; étudier où percer la coque pour la lumière.', u: 'https://www.dezeen.com/2020/10/01/project-olympus-big-icon-nasa-moon-buildings-3d-printed/amp/' },
+  { n: 'Mars Dune Alpha', a: '2023', q: 'ICON, BIG, NASA (CHAPEA)', c: 'lune', t: ['usage'], d: true, i: 'Environ 158 m² imprimés ; le plan va du commun (cuisine) au travail puis à l\'intime (couchettes).', k: 'Règle « gradient d\'intimité » : distance de chaque fonction au sas, du public au privé.', u: 'https://www.iconbuild.com/media-gallery/3d-printed-first-simulated-mars-surface-habitat-for-nasa' },
+  { n: 'MARSHA', a: '2019', q: 'AI SpaceFactory', c: 'lune', t: ['capsule'], i: 'Une tour rigide à quatre niveaux, double paroi contre les écarts de température.', k: 'Tour à étages : peu d\'emprise au sol, donc une butte de régolithe plus petite.', u: 'https://www.designboom.com/architecture/ai-spacefactory-marsha-wins-nasa-3d-printed-habitat-challenge-finale-05-08-2019/' },
+  { n: 'Mars Ice House', a: '2015', q: 'Clouds AO, SEArch', c: 'lune', t: ['coque', 'serre'], i: 'Coques de glace translucide emboîtées, avec une cour entre les deux peaux.', k: 'Double peau + espace tampon ; matériau « glace » : protège et laisse passer la lumière.', u: 'https://www.dezeen.com/2015/09/29/3d-printed-ice-house-clouds-ao-search-nasa-mars-habitat-competition/amp/' },
+  { n: 'Mars Ice Home', a: '2016–2017', q: 'Clouds AO, SEArch, NASA Langley', c: 'lune', t: ['roue', 'coque'], i: 'Un tore gonflable dans une coque de glace, pour quatre personnes ; on circule en anneau.', k: 'Gabarit « tore » (fait) : le couloir en boucle autour d\'un noyau.', u: 'https://domusweb.it/en/news/2017/01/04/mars_ice_home_clouds_architecture_office.html' },
+  { n: 'Habitat martien', a: '2018', q: 'Hassell, Eckersley O\'Callaghan', c: 'lune', t: ['coque', 'grappe'], i: 'Une coque en régolithe qui travaille en compression, et des pods gonflables dedans, sur des racks.', k: 'Éléments « dans » une coque, remplaçables : la coque protège, les pods habitent.', u: 'https://www.designboom.com/design/hassell-eckersley-ocallaghan-martian-habitat-people-thrive-08-01-2018/' },
+  { n: '3D-Printed Habitat Challenge', a: '2015–2019', q: 'NASA Centennial Challenges', c: 'lune', t: ['coque'], i: 'Concours d\'habitats imprimés avec des matériaux locaux ; un corpus de formes à comparer.', k: 'Comparer les finalistes avec les mêmes contrôles Kibsu (volume, protection, plancher).', u: 'https://www.architectmagazine.com/technology/nasa-awards-five-teams-100-000-in-3d-printed-habitat-competition_o/' },
+  { n: 'Habitat Demonstration Unit', a: '2009–2014', q: 'NASA Johnson', c: 'lune', t: ['capsule', 'grappe'], i: 'Un étage plein, quatre ports, et une mezzanine gonflable (X-Loft) ajoutée par-dessus.', k: 'Port « +z » pour poser un niveau gonflable sur un module rigide.', u: 'https://science.nasa.gov/3d-resources/habitat-demonstration-unit/' },
+  { n: 'Gateway, module HALO', a: 'vers 2027', q: 'NASA, Northrop Grumman, Thales', c: 'station', t: ['grappe'], d: true, i: 'Un module-nœud à plusieurs ports, l\'équipage en périphérie.', k: 'Gabarit « nœud de jonction » (fait) : un hub, des branches.', u: 'https://www.collectspace.com/news/news-111124a_artemis-gateway-habitat-mockup-northrop-grumman-space-center-houston.html' },
+  { n: 'Foundation Surface Habitat', a: '2022', q: 'NASA (Burke, Howard, Kessler)', c: 'lune', t: ['coque', 'capsule'], i: 'Un bas rigide en aluminium (technique) et un haut gonflable (vie), pour le pôle sud.', k: 'Séparer niveau technique rigide et niveaux de vie souples dans la même tour.', u: 'https://ntrs.nasa.gov/api/citations/20220013669/downloads/Internal%20Layout%20of%20a%20Lunar%20Surface%20Habitat.pdf' },
+  { n: 'Cylindres d\'O\'Neill', a: '1976', q: 'Gerard K. O\'Neill', c: 'theorie', t: ['roue'], d: true, i: 'Un grand cylindre tournant : vallées habitées et bandes de fenêtres en alternance.', k: 'Alterner bandes habitées et bandes de lumière dans un long volume.', u: 'https://www.core77.com/posts/39721/space-colony-form-factors-part-2-oneill-cylinders' },
+  { n: 'Stanford Torus', a: '1975', q: 'NASA Ames, Stanford ; peintures de Rick Guidice', c: 'theorie', t: ['roue', 'serre'], i: 'Un anneau avec un paysage continu dedans, éclairé par des miroirs.', k: 'Lumière par miroirs (comme notre périscope) ; paysage intérieur continu.', u: 'https://www.sciencefriday.com/articles/this-70s-artist-painted-our-future-in-space/' },
+  { n: 'Sphère de Bernal', a: '1929', q: 'J. D. Bernal', c: 'theorie', t: ['roue'], i: 'Une sphère creuse avec une vallée habitée autour de l\'équateur.', k: 'Gabarit « sphère » : le plancher le plus large est à mi-hauteur.', u: W + 'Bernal_sphere' },
+  { n: 'Nakagin Capsule Tower', a: '1972', q: 'Kisho Kurokawa', c: 'theorie', t: ['grappe'], i: '140 capsules préfabriquées accrochées à deux noyaux, chacune remplaçable.', k: 'Capsules sur un noyau : remplacer un module sans toucher aux autres (ports normalisés).', u: 'https://architecturelab.net/the-nakagin-capsule-tower-kisho-kurokawa' },
+  { n: 'Dômes géodésiques, Dymaxion', a: '1930–1954', q: 'R. Buckminster Fuller', c: 'theorie', t: ['serre'], i: 'Un dôme sans poteau : plan libre, services regroupés au centre.', k: 'Dôme + mât technique central ; tout le reste du sol est libre.', u: 'https://www.designingbuildings.co.uk/wiki/Buckminster_Fuller' },
+  { n: 'Plug-in City', a: '1964', q: 'Peter Cook (Archigram)', c: 'theorie', t: ['grappe', 'strates'], d: true, i: 'Une ossature fixe dans laquelle on branche et débranche des cellules.', k: 'Séparer la structure (butte, coque) des modules habités qu\'on change.', u: 'https://www.designingbuildings.co.uk/wiki/Archigram' },
+  { n: 'Walking City', a: '1964', q: 'Ron Herron (Archigram)', c: 'theorie', t: ['grappe'], i: 'Une ville sur pattes qui se déplace avec ses pods.', k: 'Modules sur roues ou pattes : un habitat qui suit la lumière au pôle sud.', u: 'https://www.moma.org/collection/works/814' },
+  { n: 'Arcosanti, arcologie', a: 'depuis 1970', q: 'Paolo Soleri', c: 'theorie', t: ['strates', 'serre'], i: 'Ville compacte et verticale : habiter, travailler et cultiver au même endroit.', k: 'Serre intégrée dans la coupe, trajets courts entre fonctions.', u: 'https://arcosanti.org/arcology' },
+  { n: 'Intérieurs Soyouz et Mir', a: 'dès 1963', q: 'Galina Balashova', c: 'theorie', t: ['usage'], d: true, i: 'Un sol, un plafond et des murs de couleurs différentes pour se repérer ; un paysage peint.', k: 'Palette par plan (sol / murs / plafond) dans l\'atelier.', u: W + 'Galina_Balashova' },
+  { n: 'LUNARK', a: '2020', q: 'SAGA Space Architects', c: 'lune', t: ['capsule'], i: 'Un habitat pliable en origami, testé au Groenland.', k: 'Mode « pliable » : tester le pliage sur maquette, rapport plié / déployé.', u: 'https://www.saga.dk/projects' },
+  { n: 'Habitats déployables', a: '2021', q: 'LIQUIFER Systems Group', c: 'lune', t: ['capsule'], i: 'Des éléments lunaires qui changent de forme une fois sur place.', k: 'Deux états de forme dans la fiche : transport et usage.', u: 'https://liquifer.com/deployable-and-transformable-concepts-for-lunar-habitation-elements/' },
+
+  { n: '2001, l\'Odyssée de l\'espace', a: '1968', q: 'Base Clavius, centrifugeuse du Discovery (Tony Masters, Harry Lange)', c: 'film', t: ['roue'], i: 'Une roue qui tourne pour donner une pesanteur ; une base lunaire administrative, très propre.', l: 'Sur la Lune la gravité est déjà là (1/6 g). Une roue servirait à retrouver 1 g, avec un sol penché ; et la base doit être sous régolithe.', k: 'Calcul du « manège de gravité » : rayon, vitesse, pente du sol.', u: 'https://2001archive.org/resources/the-special-effects-of-2001-a-space-odyssey/' },
+  { n: 'Moon', a: '2009', q: 'Base Sarang (Gavin Rothery ; chef décorateur Tony Noble)', c: 'film', t: ['usage', 'coque'], i: 'Une base lunaire claire, habitée longtemps par une seule personne : usure, routine, solitude.', l: 'Plausible dans l\'esprit ; il manque la couverture de régolithe et la gestion de la poussière aux sas.', k: 'Programme « longue durée, équipage réduit » : espaces pour tenir le moral.', u: 'https://creativebloq.com/inspiration/10-questions-how-gavin-rothery-created-the-iconic-design-for-moon-1233649' },
+  { n: 'Alien', a: '1979', q: 'Nostromo (Ron Cobb, extérieur et intérieurs)', c: 'film', t: ['usage'], i: 'Un cargo de travail : coursives basses, technique visible, espaces de pause pauvres.', l: 'À 1/6 g on saute : escaliers et hauteurs de porte se dessinent autrement.', k: 'Hauteur sous plafond par niveau (fait) ; règle à sourcer pour 1/6 g.', u: W + 'Ron_Cobb' },
+  { n: 'Interstellar', a: '2014', q: 'Station Cooper (Nathan Crowley)', c: 'film', t: ['roue'], i: 'Un grand cylindre tournant où l\'on vit comme dans une ville ordinaire.', l: 'Sur la Lune on n\'a pas besoin de tourner ; la leçon est le paysage intérieur et le ciel au-dessus.', k: 'Grand volume intérieur ouvert, vu d\'un niveau à l\'autre.', u: 'https://www.kcrw.com/culture/shows/design-and-architecture/nathan-crowley-constructs-a-beautifully-grim-future-in-space-for-interstellar' },
+  { n: 'Elysium', a: '2013', q: 'Le tore Elysium', c: 'film', t: ['roue', 'serre'], i: 'Un tore ouvert, villas et jardins sur la face intérieure.', l: 'Un tore ouvert ne garde pas son air. Sur la Lune : tore fermé et enterré, jardin dedans sous lumière artificielle ou périscope.', k: 'Gabarit « tore » avec un patio au centre (fait) ; serre dans l\'anneau.', u: 'https://www.scientificamerican.com/blog/but-not-simpler/how-elysium-is-a-carnival-ride-and-why-its-atmosphere-is-a-bucket-of-water/' },
+  { n: 'Seul sur Mars', a: '2015', q: 'Le Hab (Arthur Max)', c: 'film', t: ['usage', 'serre'], i: 'Un habitat gonflable bricolé en serre de survie.', l: 'Plausible ; ajouter la protection : le Hab est nu sous les radiations.', k: 'Serre dans un module habité (SV1) : surface, lumière, eau.', u: 'https://www.motionpictures.org/2015/10/building-life-on-mars-with-the-martians-production-designer-arthur-max/' },
+  { n: 'Sunshine', a: '2007', q: 'Icarus II (Mark Tildesley)', c: 'film', t: ['coque'], i: 'Tout le vaisseau vit à l\'ombre d\'un bouclier tourné vers le Soleil.', l: 'Au pôle sud, le Soleil rase l\'horizon : un écran d\'un seul côté a du sens pour la chaleur, pas pour les radiations (elles viennent de partout).', k: 'Épaisseur par direction (déjà dans Radiations) ; ajouter l\'écran thermique côté Soleil.', u: 'https://www.awn.com/print/vfxworld/sunshine-2057-vfx-odyssey' },
+  { n: 'Ad Astra', a: '2019', q: 'Terminal lunaire (Kevin Thompson)', c: 'film', t: ['usage'], i: 'La Lune devenue banale : un terminal commercial avec boutiques et enseignes.', l: 'Le décor passe ; la poussière, la pression et les sas, non.', k: 'Programme « accueil » : flux de personnes et de fret au sas.', u: 'https://www.motionpictures.org/2019/09/how-the-vfx-team-behind-ad-astra-achieved-deep-space/' },
+  { n: 'Passengers', a: '2016', q: 'Avalon (Guy Hendrix Dyas)', c: 'film', t: ['grappe', 'roue'], i: 'Trois longs modules autour d\'un moyeu, un module par fonction.', l: 'Pas de rotation nécessaire ; garder le moyeu comme nœud de jonction enterré.', k: 'Nœud + branches spécialisées (vie, travail, serre).', u: 'https://www.space.com/34909-passengers-movie-starship-design-qanda.html' },
+  { n: 'Oblivion', a: '2013', q: 'Sky Tower (Darren Gilford)', c: 'film', t: ['capsule', 'serre'], i: 'Une tour fine, vitrée, posée au-dessus du paysage.', l: 'Une tour vitrée n\'a aucune protection : garder la silhouette, enterrer le séjour, ne vitrer que le belvédère.', k: 'Belvédère (BV1) au sommet d\'une tour enterrée.', u: 'https://www.fxguide.com/?p=42227' },
+  { n: 'Silent Running', a: '1972', q: 'Dômes-serres du Valley Forge (Douglas Trumbull)', c: 'film', t: ['serre'], i: 'Des dômes géodésiques qui gardent les dernières forêts.', l: 'Sous régolithe, la lumière vient d\'un périscope ou de lampes ; le dôme doit être enterré ou blindé.', k: 'Serre-dôme (SV2) : surface de culture, lumière, protection.', u: W + 'Silent_Running' },
+  { n: 'Solaris', a: '1972', q: 'Station (Mikhaïl Romadine)', c: 'film', t: ['usage'], i: 'Un intérieur encombré qui raconte les gens qui y vivent.', l: 'Rien à corriger : c\'est la vie quotidienne qui compte.', k: 'Laisser de la place au rangement et aux objets personnels.', u: W + 'Solaris_(1972_film)' },
+  { n: 'Blade Runner et 2049', a: '1982 / 2017', q: 'Syd Mead ; Dennis Gassner', c: 'film', t: ['strates'], i: 'Une ville verticale où le neuf se pose sur le vieux.', l: 'Hors Lune ; la leçon : empiler et reprendre l\'existant.', k: 'Coupe par couches ; un habitat qui se transforme au lieu de se remplacer.', u: 'https://theasc.com/articles/blade-runner-2049-designing-the-future' },
+  { n: 'Dune', a: '2021', q: 'Arrakeen (Patrice Vermette)', c: 'film', t: ['coque'], i: 'Du béton massif qui se fond dans le désert, la lumière entre par des fentes.', l: 'Très proche de la Lune : matière locale massive, ombre, ouvertures étroites.', k: 'Voûte en régolithe + fentes (comme F1) : cadrer une seule vue.', u: 'https://www.dezeen.com/2024/03/19/dune-part-two-production-design-patrice-vermette-interview/amp/' },
+
+  { n: 'The Expanse', a: '2015–2022', q: 'Cérès, station Tycho', c: 'serie', t: ['roue', 'strates'], i: 'Des docks, bureaux et logements répartis par niveau dans des anneaux.', l: 'Sur la Lune, les niveaux suivent la profondeur sous le régolithe, pas la rotation.', k: 'Classer les niveaux par protection : nuit en bas, belvédère en haut.', u: 'https://www.inverse.com/article/27137-the-expanse-ships-design-season-2' },
+  { n: 'For All Mankind', a: '2019–', q: 'Base Jamestown (Dan Bishop)', c: 'serie', t: ['usage', 'grappe'], i: 'Une base lunaire faite de pièces récupérées, qui grandit saison après saison.', l: 'Proche du réel ; ajouter la couverture de régolithe autour des modules.', k: 'Phases de construction : ce qui arrive en envoi 1, 2, 3 (lots de la fiche).', u: 'https://www.space.com/for-all-mankind-moon-base-tour.html' },
+  { n: 'Cosmos 1999', a: '1975', q: 'Moonbase Alpha', c: 'serie', t: ['grappe'], d: true, i: 'Une base en étoile autour d\'une tour, reliée par des tubes.', l: 'Tubes et tour à enterrer ; à 1/6 g les trajets sont plus rapides qu\'on croit.', k: 'Plan radial + temps de trajet entre espaces.', u: 'https://catacombs.space1999.net/cybermuseum/Articles/Starlog10/Starlog10.Page43.html' },
+  { n: 'Foundation', a: '2021–', q: 'Trantor (Rory Cheyne)', c: 'serie', t: ['strates'], i: 'Une planète-ville en dizaines de couches empilées.', l: 'Hors Lune ; la leçon est la coupe en strates.', k: 'Lire l\'habitat en coupe, pas seulement en plan.', u: 'https://www.creativebloq.com/features/foundation' },
+
+  { n: 'Planetes', a: '2003', q: 'Makoto Yukimura (manga), animé Sunrise', c: 'anime', t: ['usage'], i: 'Le quotidien des ramasseurs de débris : travail, repas, sommeil, ennui.', l: 'Très documenté ; la partie lunaire montre déjà la gravité réduite.', k: 'Journée type (déjà dans Radiations : heures par espace).', u: W + 'Planetes' },
+  { n: 'Mobile Suit Gundam', a: '1979', q: 'Colonies O\'Neill (Side 3)', c: 'anime', t: ['roue'], i: 'Des cylindres tournants avec terre et ciel dedans.', l: 'Sur la Lune pas de rotation : la même idée de « ciel intérieur » passe par la hauteur et la lumière.', k: 'Un grand vide central qui fait ciel dans une tour.', u: W + 'The_High_Frontier:_Human_Colonies_in_Space' },
+  { n: 'Blame!', a: '1997–2003', q: 'Tsutomu Nihei', c: 'anime', t: ['strates'], i: 'Une mégastructure infinie, des milliers de couches et de puits.', l: 'Hors Lune ; garder les puits verticaux comme circulation et lumière.', k: 'Puits vertical entre niveaux (lumière du périscope qui descend).', u: W + 'Blame!' },
+  { n: 'Akira', a: '1988', q: 'Neo-Tokyo', c: 'anime', t: ['strates'], i: 'Une ville reconstruite sur les traces de l\'ancienne.', l: 'Hors Lune ; la leçon est de construire sur ce qui existe déjà.', k: 'Réutiliser un module ou un atterrisseur comme pièce de la base.', u: 'https://huckmag.com/article/the-dystopian-megacities-of-anime-architecture' },
+
+  { n: 'Dead Space', a: '2008', q: 'USG Ishimura', c: 'jeu', t: ['usage'], i: 'Un vaisseau minier aux couloirs longs et inquiétants.', l: 'Raccourcir les couloirs ; chaque couloir est du volume pressurisé à protéger.', k: 'Contrôle « part de couloir » dans le volume total.', u: W + 'USG_Ishimura' },
+  { n: 'Prey', a: '2017', q: 'Station Talos I', c: 'jeu', t: ['usage', 'strates'], i: 'Une station néo-déco avec des halls à étages et des quartiers par fonction.', l: 'Les halls hauts demandent beaucoup de volume pressurisé et de protection.', k: 'Un seul grand volume commun, le reste compact.', u: 'https://gameinformer.com/b/features/archive/2016/12/21/a-deeper-look-at-preys-striking-neo-deco-design.aspx' },
+  { n: 'Mass Effect', a: '2007', q: 'La Citadelle', c: 'jeu', t: ['roue'], i: 'Un anneau central et cinq bras, chacun avec son quartier.', l: 'Pas de rotation sur la Lune ; garder le plan en anneau + bras.', k: 'Tore + branches : un plan en étoile à partir d\'un anneau.', u: W + 'Citadel_(Mass_Effect)' },
+  { n: 'Starfield', a: '2023', q: 'Avant-postes modulaires', c: 'jeu', t: ['grappe'], i: 'On assemble une base avec des modules, des ressources et de l\'énergie.', l: 'Ajouter pression, régolithe et masse au lancement : c\'est ce que fait Kibsu.', k: 'L\'atelier Kibsu va dans ce sens : choisir, poser, relier, contrôler.', u: 'https://pcgamer.com/starfield-outposts-guide' },
+  { n: 'Outer Wilds', a: '2019', q: 'Brittle Hollow', c: 'jeu', t: ['strates'], i: 'Une planète creuse qui s\'effrite : on habite une coquille.', l: 'Le sol lunaire est stable ; la leçon est l\'habitat dans une cavité (tubes de lave).', k: 'Forme « cavité » : habiter un tube de lave existant.', u: W + 'Outer_Wilds' },
+  { n: 'Kerbal Space Program', a: '2015', q: 'Bases sur la Mün', c: 'jeu', t: ['grappe'], i: 'On construit, lance et pose ses propres bases.', l: 'Simplifié mais juste sur la gravité et les trajectoires.', k: 'Lien lancement ↔ module (déjà : masse posée, coiffe).', u: 'https://wiki.kerbalspaceprogram.com/wiki/Mun' },
+  { n: 'Satisfactory, Factorio', a: '2016 / 2024', q: 'Usines en réseau', c: 'jeu', t: ['strates'], i: 'Une base qui se construit par flux : ressources, énergie, logistique.', l: 'Sur la Lune : eau, oxygène, énergie solaire au pôle.', k: 'Flux entre modules (air, eau, énergie) en plus des ports.', u: W + 'Factorio' },
+
+  { n: 'Syd Mead', a: '1933–2019', q: 'Blade Runner, Aliens, 2010', c: 'artiste', t: ['strates'], i: 'Des machines et des villes lisibles en un coup d\'œil.', l: 'Une méthode de dessin plus qu\'une forme.', k: 'Vues d\'ambiance par espace à côté du plan.', u: W + 'Syd_Mead' },
+  { n: 'Chris Foss', a: '1946–', q: 'Dune de Jodorowsky, Alien', c: 'artiste', t: ['strates'], i: 'Des vaisseaux massifs en blocs colorés.', l: 'Garder l\'échelle, pas la logique.', k: 'Comparer chaque volume à la taille d\'une personne.', u: W + 'Chris_Foss' },
+  { n: 'Moebius', a: '1938–2012', q: 'Arzach, L\'Incal, Dune', c: 'artiste', t: ['serre'], i: 'Des architectures ouvertes sur le paysage, des plateformes, des ponts.', l: 'Sur la Lune, l\'ouverture se fait par la vue cadrée, pas par l\'air libre.', k: 'Belvédère, terrasses intérieures, passerelles entre niveaux.', u: W + 'Jean_Giraud' },
+  { n: 'Simon Stålenhag', a: 'depuis 2014', q: 'Tales from the Loop', c: 'artiste', t: ['usage'], i: 'Des machines abandonnées dans un paysage ordinaire.', l: 'Sur la Lune rien ne rouille, mais tout s\'use à la poussière.', k: 'Cycle de vie : entretien, démontage, remplacement de chaque module.', u: W + 'Simon_St%C3%A5lenhag' },
+  { n: 'Kowloon Walled City', a: 'jusqu\'en 1994', q: 'Hong Kong', c: 'artiste', t: ['strates'], d: true, i: 'Une densité verticale extrême, construite sans plan d\'ensemble.', l: 'Sur la Lune pas de lumière par les façades : la ventilation et l\'éclairage sont la contrainte.', k: 'Calcul de densité et de lumière par niveau.', u: W + 'Kowloon_Walled_City' },
+];
+const LIEUX = [
+  { n: 'SICSA', q: 'Université de Houston', i: 'Centre d\'architecture spatiale fondé en 1987, avec un master.', u: 'https://sicsa.egr.uh.edu/welcome/sicsa-background-and-overview' },
+  { n: 'AIAA Space Architecture Technical Committee', q: 'spacearchitect.org', i: 'Les articles et comptes rendus d\'architecture spatiale (site du comité, pas celui de l\'AIAA).', u: 'https://spacearchitect.org' },
+  { n: 'ICES', q: 'Conférence annuelle', i: 'Session d\'architecture spatiale chaque année ; cible pour un résumé (16/11).', u: 'https://spacearchitect.org/pubs/ICES-2024-193.pdf' },
+  { n: 'Space-craft / TU Wien', q: 'Sandra Häuplik-Meusburger', i: 'Recherche et enseignement en architecture spatiale à Vienne.', u: 'https://www.space-craft.at/?p=1617' },
+  { n: 'LIQUIFER Systems Group', q: 'Vienne', i: 'Agence d\'architecture spatiale : habitats déployables et transformables.', u: 'https://liquifer.com/deployable-and-transformable-concepts-for-lunar-habitation-elements/' },
+  { n: 'SAGA Space Architects', q: 'Copenhague', i: 'Habitats pliables testés sur le terrain.', u: 'https://www.saga.dk/projects' },
+];
+const CH = [
+  { e: 'fait', n: 'Catalogue de formes', p: 'Cylindre couché ou debout, gonflable vertical, dôme, sphère, voûte en régolithe, tore, nœud, boîte : volume, enveloppe et coupe à toute hauteur.', r: 'TransHab, Moon Village, MARSHA, Mars Ice Home, Project Olympus, Fuller' },
+  { e: 'fait', n: 'Niveaux et planchers', p: 'Des planchers à la hauteur voulue ; Kibsu calcule la surface de chaque niveau, la surface où l\'on tient debout et la hauteur sous plafond. Il signale une écoutille sous un plancher.', r: 'Skylab, TransHab, HDU, Foundation Surface Habitat' },
+  { e: 'suite', n: 'Grappes et nœuds', p: 'Des ports à angle libre et des nœuds à 4–6 ports : plans en étoile, en anneau, en peigne, au lieu d\'un long tube.', r: 'Mir, ISS, Gateway, Nakagin, Moonbase Alpha, Passengers, Citadelle' },
+  { e: 'suite', n: 'Coque et volume dedans', p: 'Un élément « coque » (régolithe imprimé, glace) qui contient des volumes habités ; les radiations comptent la coque, la pression ne compte que la poche.', r: 'Foster + ESA, Hassell, Mars Ice House, Dune' },
+  { e: 'suite', n: 'Gradient d\'intimité', p: 'Pour chaque fonction, la distance au sas : le commun près de l\'entrée, l\'intime au fond et au mieux protégé. Un contrôle de plus, à côté des règles NASA.', r: 'Mars Dune Alpha, Moon Village, Moon' },
+  { e: 'plus', n: 'Lumière et vue', p: 'Périscopes, puits et fentes qui descendent d\'un niveau à l\'autre ; une vue cadrée vers la Terre par espace.', r: 'Cupola, Stanford Torus, Blame!, Oblivion, Dune' },
+  { e: 'plus', n: 'Manège de gravité', p: 'Un anneau tournant pour retrouver 1 g quelques heures par jour : rayon, vitesse et pente du sol calculés.', r: '2001, Elysium, Stanford Torus, Mass Effect' },
+  { e: 'plus', n: 'Matières, couleurs, usure', p: 'Une palette par plan (sol, murs, plafond), le rangement, l\'entretien et le remplacement de chaque module dans le temps.', r: 'Balashova, Solaris, Alien, For All Mankind, Stålenhag' },
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let famille = null, categorie = null;
+try { const s = JSON.parse(localStorage.getItem('kibsu-refs') || '{}'); famille = s.f || null; categorie = s.c || null; } catch (e) {}
+
+function familles() {
+  const el = document.getElementById('familles');
+  el.innerHTML = Object.entries(FAM).map(([k, f]) => `<button class="fam" data-f="${k}" aria-pressed="${famille === k}">
+    <svg viewBox="0 0 190 70" aria-hidden="true">${f.svg}</svg><b>${f.nom}</b><span>${f.txt}</span>
+    <span class="n">${R.filter(r => r.t.includes(k)).length} références</span></button>`).join('');
+  el.querySelectorAll('.fam').forEach(b => b.onclick = () => { famille = famille === b.dataset.f ? null : b.dataset.f; tout(); });
+}
+function filtres() {
+  const el = document.getElementById('filtres');
+  el.innerHTML = `<button data-c="" aria-pressed="${!categorie}">Tout</button>` + Object.entries(CAT).map(([k, n]) => `<button data-c="${k}" aria-pressed="${categorie === k}">${n}</button>`).join('') + `<span class="compte" id="compte"></span>`;
+  el.querySelectorAll('button').forEach(b => b.onclick = () => { categorie = b.dataset.c || null; tout(); });
+}
+function liste() {
+  const L = R.filter(r => (!famille || r.t.includes(famille)) && (!categorie || r.c === categorie));
+  document.getElementById('compte').textContent = `${L.length} / ${R.length}${famille ? ' · ' + FAM[famille].nom : ''}`;
+  document.getElementById('liste').innerHTML = L.map(r => `<article class="ref">
+    <div class="haut"><h3>${esc(r.n)}</h3><span class="an">${esc(r.a)}</span></div>
+    <div class="qui">${esc(r.q)}</div>
+    <p>${esc(r.i)}</p>
+    ${r.l ? `<p class="lune"><b>Pour la Lune</b>${esc(r.l)}</p>` : ''}
+    <p class="kibsu"><b>Kibsu</b>${esc(r.k)}</p>
+    <div class="bas"><span class="pastille">${CAT[r.c]}</span>${r.t.map(t => `<span class="pastille">${FAM[t].nom}</span>`).join('')}${r.d ? '<span class="pastille doute">à vérifier</span>' : ''}<a href="${r.u}" target="_blank" rel="noopener">source ↗</a></div>
+  </article>`).join('');
+}
+function chantiers() {
+  const N = { fait: 'fait', suite: 'prochain', plus: 'plus tard' };
+  document.getElementById('chantiers').innerHTML = CH.map(c => `<div class="ch"><span class="etat ${c.e}">${N[c.e]}</span><h3>${c.n}</h3><p>${c.p}</p><div class="refs">Références : ${c.r}</div></div>`).join('');
+  document.getElementById('lieux').innerHTML = LIEUX.map(r => `<article class="ref"><div class="haut"><h3>${r.n}</h3></div><div class="qui">${r.q}</div><p>${r.i}</p><div class="bas"><a href="${r.u}" target="_blank" rel="noopener">site ↗</a></div></article>`).join('');
+}
+function tout() {
+  try { localStorage.setItem('kibsu-refs', JSON.stringify({ f: famille, c: categorie })); } catch (e) {}
+  familles(); filtres(); liste();
+}
+tout(); chantiers();
+</script>
+
+</body>
+</html>
