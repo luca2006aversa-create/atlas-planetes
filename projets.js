@@ -110,8 +110,10 @@ export function initProjets(root) {
   /* ---------- COURBES ---------- */
   function courbe(f,xs){var o=[];for(var i=0;i<=xs;i++){var p=i/xs;o.push(f(p))}return o}
   function lum(p){var e=elev(p);return e<.4?{roof:0,mat:0}:{roof:Math.sin(rad(e)),mat:Math.cos(rad(e))}}
-  function surf(p){var m=SITES[S.site],mx=Math.max.apply(null,courbe(function(q){return m.elev(q)},60));var v=Math.max(0,m.elev(p))/mx;return 10+80*Math.pow(v,.8)}
-  function interieur(p){var xs=60,mean=0;for(var i=0;i<xs;i++)mean+=surf(i/xs);mean/=xs;var lag=Math.min(.3,.08*S.E);var q=(p-lag+1)%1;return mean+(surf(q)-mean)*Math.exp(-S.E/DELTA)}
+  // max et moyenne ne dépendent que du lieu : mis en cache (avant, recalculés pour chaque point : ~600 000 calculs par image)
+  var MX={},MOY={};
+  function surf(p){var m=SITES[S.site],mx=MX[S.site]||(MX[S.site]=Math.max.apply(null,courbe(function(q){return m.elev(q)},60)));var v=Math.max(0,m.elev(p))/mx;return 10+80*Math.pow(v,.8)}
+  function interieur(p){var xs=60,mean=MOY[S.site];if(mean===undefined){mean=0;for(var i=0;i<xs;i++)mean+=surf(i/xs);mean/=xs;MOY[S.site]=mean}var lag=Math.min(.3,.08*S.E);var q=(p-lag+1)%1;return mean+(surf(q)-mean)*Math.exp(-S.E/DELTA)}
   function abri(e){return 1-Math.exp(-e/LAMBDA)}
   function graphe(){
     var svg=$('ch');svg.innerHTML='';var W=800,Hh=240,m={l:20,r:20,t:24,b:34},w=W-m.l-m.r,h=Hh-m.t-m.b;

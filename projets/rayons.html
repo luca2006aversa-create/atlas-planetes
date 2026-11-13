@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kibsu · protection radiations</title>
+<link href="../tokens.css" rel="stylesheet">
+<style>
+  body { margin: 0; background: var(--fond); color: var(--texte); font: var(--t-corps)/1.45 var(--sans); }
+  main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 4px; } h2 { font-size: 16px; margin: 28px 0 8px; }
+  .sous, .note { color: var(--texte-2); } .note { font-size: 13px; }
+  .leg { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 10px 0 4px; font-size: 13px; }
+  .leg i { display: inline-block; width: 14px; height: 14px; border-radius: 3px; vertical-align: -2px; margin-right: 6px; }
+  .ciels { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .ciel { background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; padding: 10px; }
+  .ciel b { display: block; margin-bottom: 4px; }
+  .ciel svg { width: 100%; height: auto; display: block; }
+  .barre { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin-top: 6px; }
+  .chiffres { font: 12.5px var(--mono); color: var(--texte-2); margin-top: 4px; }
+  .plan { background: var(--surface); border: 1px solid var(--filet); border-radius: 10px; padding: 10px; }
+  .plan svg { width: 100%; height: auto; display: block; }
+</style>
+</head>
+<body>
+<main>
+  <nav class="liens" style="font-size:13px;margin-bottom:8px"><a href="../">← Atlas</a> · <a href="site3d.html">Habitat 3D</a> · <a href="controle.html">Contrôles</a> · <a href="rayons.html">Radiations</a></nav>
+  <h1>Protection contre les radiations</h1>
+  <p class="sous" id="sous"></p>
+  <div class="leg" id="leg"></div>
+
+  <h2>Le ciel vu depuis l'intérieur</h2>
+  <p class="note">Chaque disque est le ciel au-dessus d'un point de l'habitat (centre = zénith, bord = horizon, haut = la Terre).
+    La couleur dit combien de régolithe protège dans cette direction. Sous l'horizon, c'est la Lune elle-même.</p>
+  <div class="ciels" id="ciels"></div>
+
+  <h2>Le plan : où le ciel est le moins protégé</h2>
+  <p class="note">À 1,5 m du sol, maille de 1 m : part du ciel avec moins de 30 g/cm² de régolithe. Blanc = aucune.</p>
+  <div class="plan" id="plan"></div>
+
+  <p class="note" id="methode" style="margin-top:24px"></p>
+</main>
+<script type="module">
+const fiche = new URLSearchParams(location.search).get('fiche') || 'pole-sud-esquisse.json';
+const D = await fetch('rayons-' + fiche).then(r => r.json());
+const COUL = { faible: '#e4572e', moyen: '#f2c14e', fort: '#9fb4c7', sol: '#5b5443' };
+const cl = v => v < 0 ? 'sol' : v < 30 ? 'faible' : v < 300 ? 'moyen' : 'fort';
+document.getElementById('sous').textContent =
+  `${D.fiche} · butte de ${D.couverture_m} m au-dessus des modules, talus ${D.talus_deg}° · calcul du ${D.date}`;
+document.getElementById('leg').innerHTML = D.classes.map(c => `<span title="${c.note}"><i style="background:${COUL[c.id]}"></i>${c.nom}</span>`).join('');
+document.getElementById('methode').textContent = 'Méthode : ' + D.methode +
+  '. Pour une dose, cette distribution d\'épaisseurs se donne à un code de transport (OLTARIS, NASA).';
+
+// ciel : projection azimutale à angle zénithal égal, la Terre (+y) en haut
+const C = document.getElementById('ciels');
+for (const c of D.ciel) {
+  const pts = [];
+  D.directions.forEach((d, i) => {
+    if (d[2] < -0.09) return;                       // on montre un peu sous l'horizon
+    const zen = Math.acos(Math.max(-1, Math.min(1, d[2]))), r = 100 * zen / (Math.PI / 2) * 0.9, a = Math.atan2(d[0], d[1]);
+    const v = c.v[i], k = cl(v);
+    pts.push(`<circle cx="${(110 + r * Math.sin(a)).toFixed(1)}" cy="${(110 - r * Math.cos(a)).toFixed(1)}" r="${k === 'faible' ? 3.2 : 2.6}" fill="${COUL[k]}"/>`);
+  });
+  const p = c.part;
+  C.insertAdjacentHTML('beforeend', `<div class="ciel"><b>${c.nom}</b>
+    <svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="90" fill="none" stroke="var(--filet)"/>
+    <circle cx="110" cy="110" r="60" fill="none" stroke="var(--filet)" stroke-dasharray="2 3"/>
+    <circle cx="110" cy="110" r="30" fill="none" stroke="var(--filet)" stroke-dasharray="2 3"/>
+    ${pts.join('')}
+    <text x="110" y="12" text-anchor="middle" font-size="10" fill="var(--texte-2)">Terre ↑</text></svg>
+    <div class="barre">${['faible', 'moyen', 'fort', 'sol'].map(k => `<span style="width:${p[k]}%;background:${COUL[k]}"></span>`).join('')}</div>
+    <div class="chiffres">&lt;30 : ${p.faible} % · sol : ${p.sol} % · min ${c.min ?? '–'} g/cm²</div></div>`);
+}
+
+// plan
+const xs = D.plan.map(q => q[0]), ys = D.plan.map(q => q[1]);
+const x0 = Math.min(...xs) - 4, x1 = Math.max(...xs) + 4, y0 = Math.min(...ys) - 4, y1 = Math.max(...ys) + 6;
+const k = 900 / (x1 - x0), W = 900, H = (y1 - y0) * k, X = x => (x - x0) * k, Y = y => (y1 - y) * k;
+const mx = Math.max(1, ...D.plan.map(q => q[2]));
+const cases = D.plan.map(q => {
+  const t = q[2] / mx;
+  return `<rect x="${X(q[0] - 0.5).toFixed(1)}" y="${Y(q[1] + 0.5).toFixed(1)}" width="${k.toFixed(1)}" height="${k.toFixed(1)}"
+    fill="${q[2] > 0 ? COUL.faible : 'var(--surface)'}" fill-opacity="${q[2] > 0 ? (0.25 + 0.75 * t).toFixed(2) : 1}" stroke="var(--filet)" stroke-width=".5">
+    <title>${q[2]} % du ciel sous 30 g/cm²</title></rect>`;
+}).join('');
+document.getElementById('plan').innerHTML = `<svg viewBox="0 0 ${W} ${H.toFixed(0)}">${cases}
+  <text x="${W / 2}" y="${Y(y1) + 14}" text-anchor="middle" font-size="12" fill="var(--texte-2)">↑ vers la Terre (fenêtre)</text>
+  <text x="${W - 4}" y="${H - 6}" text-anchor="end" font-size="12" fill="var(--texte-2)">max ${mx} % du ciel</text></svg>`;
+</script>
+</body>
+</html>

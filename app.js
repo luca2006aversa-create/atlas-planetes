@@ -61,8 +61,19 @@ export function chargerCesium() {
   }));
 }
 
+// three.js est demandé en même temps que systeme.js (au lieu d'attendre que systeme.js l'importe) : un aller-retour de moins.
+const THREE = 'https://cdn.jsdelivr.net/npm/three@0.160.0/';
+const precharges = new Set();
+function precharger(...urls) {
+  for (const u of urls) {
+    if (precharges.has(u)) continue;
+    precharges.add(u);
+    const l = document.createElement('link'); l.rel = 'modulepreload'; l.href = u; l.crossOrigin = 'anonymous';
+    document.head.appendChild(l);
+  }
+}
 const modules = {
-  systeme: () => import('./systeme.js'),
+  systeme: () => (precharger(`${THREE}build/three.module.js`, `${THREE}examples/jsm/controls/OrbitControls.js`), import('./systeme.js')),
   globe: () => import('./globe.js'),
   projets: () => import('./projets.js'),
 };
@@ -102,6 +113,13 @@ document.querySelectorAll('header nav button').forEach(b => (b.onclick = () => v
 // anticipation : Cesium commence à se charger quand on approche du bouton « Globes 3D »
 const bg = document.querySelector('header nav button[data-vue="globe"]');
 ['pointerenter', 'focus', 'touchstart'].forEach(ev => bg.addEventListener(ev, () => chargerCesium().catch(() => {}), { once: true, passive: true }));
+// ... et aussi en survolant tout ce qui ouvre un globe : « voir le site », « globe », « cartographié », planète ouvrable
+const OUVRE_GLOBE = '[data-site], [data-globe], [data-carto], #etiquettes .ouvrable';
+const approche = (e) => {
+  if (!window.Cesium && e.target.closest?.(OUVRE_GLOBE)) chargerCesium().catch(() => {});
+};
+document.addEventListener('pointerover', approche, { passive: true });
+document.addEventListener('touchstart', approche, { passive: true });
 
 const params = new URLSearchParams(location.search);
 let depart = params.get('vue');

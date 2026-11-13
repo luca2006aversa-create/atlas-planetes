@@ -1,0 +1,33 @@
+{
+ "centre_xy_m": [
+  -11300.0,
+  -12180.0
+ ],
+ "z0_m": 1956.75,
+ "unite_m": 0.25,
+ "rayon_lune_m": 1737400.0,
+ "proche": {
+  "fichier": "relief_proche.bin",
+  "n": 201,
+  "pas_m": 20.0,
+  "demi_m": 2000.0,
+  "source": "LOLA LDEM_875S_20M"
+ },
+ "loin": {
+  "fichier": "relief_loin.bin",
+  "n": 401,
+  "pas_m": 400.0,
+  "demi_m": 80000.0,
+  "source": "LOLA LDEM_75S_120M"
+ },
+ "ecart_120_vs_20_au_centre_m": -2.75,
+ "repere": "x vers 90° E, y vers la longitude 0 (haut de la carte de l'étude), m ; hauteurs relatives au sol de l'habitat",
+ "min_max_proche_m": [
+  -748.6,
+  1.9
+ ],
+ "min_max_loin_m": [
+  -6333.9,
+  -2.8
+ ]
+}

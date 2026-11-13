@@ -1,0 +1,116 @@
+{
+ "sphere_creuse": {
+  "attendu": 150.0,
+  "part": {
+   "faible": 0.0,
+   "moyen": 50.0,
+   "fort": 0.0,
+   "sol": 50.0
+  },
+  "min": 149.9,
+  "max": 150.0,
+  "faces": 32256
+ },
+ "esquisse": {
+  "faces": 2346,
+  "points": {
+   "centre de M1": {
+    "part": {
+     "faible": 0.0,
+     "moyen": 0.0,
+     "fort": 51.7,
+     "sol": 48.3
+    },
+    "min": 450.9,
+    "max": 6047.6
+   },
+   "centre de M2": {
+    "part": {
+     "faible": 0.3,
+     "moyen": 0.5,
+     "fort": 50.9,
+     "sol": 48.3
+    },
+    "min": 0.0,
+    "max": 4664.1
+   },
+   "centre de M3": {
+    "part": {
+     "faible": 0.0,
+     "moyen": 0.0,
+     "fort": 51.7,
+     "sol": 48.3
+    },
+    "min": 450.9,
+    "max": 6307.9
+   },
+   "devant la fenêtre-Terre": {
+    "part": {
+     "faible": 1.0,
+     "moyen": 0.0,
+     "fort": 50.7,
+     "sol": 48.3
+    },
+    "min": 0.0,
+    "max": 5753.3
+   },
+   "bout ouest de M1": {
+    "part": {
+     "faible": 0.0,
+     "moyen": 0.0,
+     "fort": 51.7,
+     "sol": 48.3
+    },
+    "min": 450.9,
+    "max": 6524.3
+   }
+  }
+ },
+ "site": {
+  "centre de M1": {
+   "part": {
+    "faible": 0,
+    "moyen": 0,
+    "fort": 51.7,
+    "sol": 48.3
+   },
+   "min": 450
+  },
+  "centre de M2": {
+   "part": {
+    "faible": 0.3,
+    "moyen": 0.5,
+    "fort": 50.8,
+    "sol": 48.4
+   },
+   "min": 0
+  },
+  "centre de M3": {
+   "part": {
+    "faible": 0,
+    "moyen": 0,
+    "fort": 51.6,
+    "sol": 48.4
+   },
+   "min": 450
+  },
+  "devant la fenêtre-Terre": {
+   "part": {
+    "faible": 1,
+    "moyen": 0,
+    "fort": 50.7,
+    "sol": 48.3
+   },
+   "min": 0
+  },
+  "bout ouest de M1": {
+   "part": {
+    "faible": 0,
+    "moyen": 0,
+    "fort": 51.6,
+    "sol": 48.4
+   },
+   "min": 450
+  }
+ }
+}

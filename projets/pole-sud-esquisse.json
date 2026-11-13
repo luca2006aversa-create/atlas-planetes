@@ -1,0 +1,378 @@
+{
+ "format": "kibsu-projet/0.1",
+ "nom": "Habitat de crête, pôle sud lunaire (esquisse de l'étude)",
+ "auteur": "Luca Aversa",
+ "date": "2026-11-13",
+ "note": "Reprend l'esquisse du chapitre « L'habitat » de l'étude : 3 modules de 12 × 8 m sous 3 m de régolithe, sas à l'est. Ce sont des hypothèses de dessin, pas un dimensionnement. Masses non renseignées : à estimer.",
+ "site": {
+  "corps": "lune",
+  "etude": "etude/",
+  "xy_km": [
+   -11.3,
+   -12.18
+  ],
+  "alt_m": 1957,
+  "gravite_ms2": {
+   "v": 1.62,
+   "s": "◇",
+   "src": "valeur courante de la gravité lunaire"
+  },
+  "azimut_y_deg": {
+   "v": 14.1,
+   "s": "◇",
+   "src": "étude : axe de la crête à 104,1° ; +y du projet = 104,1 − 90 = 14,1° depuis le haut de la carte (longitude 0, la Terre en moyenne)"
+  }
+ },
+ "programme": {
+  "equipage": {
+   "v": 4,
+   "s": "▨"
+  },
+  "duree_jours": {
+   "v": 30,
+   "s": "▨"
+  },
+  "regime_serre": "salade",
+  "fonctions": [
+   {
+    "id": "dormir",
+    "nom": "Dormir",
+    "element": "M1"
+   },
+   {
+    "id": "vivre",
+    "nom": "Manger, se réunir, regarder la Terre",
+    "element": "M2"
+   },
+   {
+    "id": "travailler",
+    "nom": "Laboratoire, exercice",
+    "element": "M3"
+   },
+   {
+    "id": "cultiver",
+    "nom": "Cultiver (salades)",
+    "element": "SV1"
+   },
+   {
+    "id": "sortir",
+    "nom": "Entrer, sortir, poussière",
+    "element": "S1"
+   },
+   {
+    "id": "secours",
+    "nom": "Sortie de secours",
+    "element": "S2"
+   }
+  ]
+ },
+ "atmosphere": {
+  "pression_kPa": {
+   "v": 56.5,
+   "s": "▨",
+   "src": "8,2 psia (exemple « atmosphère d'exploration » du NASA-STD-3001 V2, pas une exigence)"
+  },
+  "temperature_C": {
+   "v": 21,
+   "s": "▨"
+  }
+ },
+ "elements": [
+  {
+   "id": "M1",
+   "nom": "Module ouest (nuit)",
+   "type": "module",
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 12,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    -13,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     8,
+     12
+    ],
+    "vehicule": "starship_hls",
+    "lot": "envoi 1"
+   },
+   "montage": {
+    "etape": 2,
+    "moyen": "grue + robot"
+   }
+  },
+  {
+   "id": "M2",
+   "nom": "Module central (vie, fenêtre-Terre)",
+   "type": "module",
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 12,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    0,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     8,
+     12
+    ],
+    "vehicule": "starship_hls",
+    "lot": "envoi 2"
+   },
+   "montage": {
+    "etape": 1,
+    "moyen": "grue + robot"
+   }
+  },
+  {
+   "id": "M3",
+   "nom": "Module est (travail)",
+   "type": "module",
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 8,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 12,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    13,
+    0,
+    0
+   ],
+   "pressurise": true,
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     8,
+     12
+    ],
+    "vehicule": "starship_hls",
+    "lot": "envoi 3"
+   },
+   "montage": {
+    "etape": 3,
+    "moyen": "grue + robot"
+   }
+  },
+  {
+   "id": "S1",
+   "nom": "Sas est (vers la route)",
+   "type": "sas",
+   "pressurise": false,
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 3,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 4,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    21,
+    0,
+    0
+   ],
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     3,
+     4
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 4"
+   },
+   "montage": {
+    "etape": 4,
+    "moyen": "robot"
+   }
+  },
+  {
+   "id": "S2",
+   "nom": "Sas ouest (secours)",
+   "type": "sas",
+   "pressurise": false,
+   "forme": {
+    "type": "cylindre",
+    "diametre_m": {
+     "v": 3,
+     "s": "▨"
+    },
+    "longueur_m": {
+     "v": 4,
+     "s": "▨"
+    },
+    "axe": "horizontal"
+   },
+   "position_m": [
+    -21,
+    0,
+    0
+   ],
+   "materiau": "à choisir",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     3,
+     4
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 5"
+   },
+   "montage": {
+    "etape": 4,
+    "moyen": "robot"
+   },
+   "note": "Correction du 13/11 : le module ouest était un cul-de-sac. Second chemin de sortie, à l'opposé du sas principal."
+  },
+  {
+   "id": "SV1",
+   "nom": "Serre du module central",
+   "type": "serre",
+   "dans": "M2",
+   "pressurise": false,
+   "surface_culture_m2": {
+    "v": 8,
+    "s": "▨",
+    "src": "≥ 4 × 1,35 m² (BVAD, régime salade) ; étagères éclairées, 2 niveaux sur 4 m²"
+   },
+   "materiau": "étagères + LED",
+   "masse_kg": null,
+   "arrivee": {
+    "mode": "rigide",
+    "dimensions_vol_m": [
+     1.5,
+     2.2
+    ],
+    "vehicule": "argonaut",
+    "lot": "envoi 4"
+   },
+   "montage": {
+    "etape": 6,
+    "moyen": "équipage"
+   },
+   "note": "Correction du 13/11 : la serre est au cœur de la vie commune, face à la fenêtre-Terre."
+  },
+  {
+   "id": "F1",
+   "nom": "Fenêtre-Terre",
+   "type": "ouverture",
+   "dans": "M2",
+   "forme": {
+    "type": "fente",
+    "oeil_m": [
+     0,
+     3.5,
+     2.1
+    ],
+    "largeur_oeil_m": 3,
+    "hauteur_oeil_m": 1.6,
+    "az_deg": [
+     -22.95,
+     -5.25
+    ],
+    "el_deg": [
+     -3.4,
+     7.25
+    ],
+    "direction": "+y"
+   },
+   "note": "Fente taillée dans la butte selon le chemin de la Terre (étude, chapitre L'habitat). Centrée sur la Terre : −14,1° dans le repère du projet (correction du 13/11). Point faible de la protection : vue directe."
+  },
+  {
+   "id": "B1",
+   "nom": "Butte de régolithe",
+   "type": "protection",
+   "materiau": "régolithe local",
+   "forme": {
+    "type": "butte",
+    "couverture_m": 3,
+    "talus_deg": {
+     "v": 35,
+     "s": "▨"
+    }
+   },
+   "arrivee": {
+    "mode": "in_situ"
+   },
+   "montage": {
+    "etape": 5,
+    "moyen": "engins de terrassement"
+   }
+  }
+ ],
+ "liaisons": [
+  {
+   "de": "S2",
+   "vers": "M1",
+   "type": "jonction"
+  },
+  {
+   "de": "M1",
+   "vers": "M2",
+   "type": "jonction"
+  },
+  {
+   "de": "M2",
+   "vers": "M3",
+   "type": "jonction"
+  },
+  {
+   "de": "M3",
+   "vers": "S1",
+   "type": "jonction"
+  }
+ ],
+ "protection": {
+  "materiau": "régolithe",
+  "epaisseur_m": {
+   "v": 3,
+   "s": "▨",
+   "src": "esquisse de l'étude, à dimensionner"
+  }
+ }
+}

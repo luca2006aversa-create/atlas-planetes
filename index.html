@@ -10,7 +10,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- CesiumJS (et ses widgets.css) : chargé par app.js à la première ouverture d'un globe -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Atkinson+Hyperlegible+Mono:wght@500;700&display=swap" rel="stylesheet">
+<!-- Polices : chargées sans bloquer (sinon toute la page attend Google, jusqu'à 1 s et plus) ; display=swap fait le reste -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Atkinson+Hyperlegible+Mono:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Atkinson+Hyperlegible+Mono:wght@500;700&display=swap" rel="stylesheet"></noscript>
 <link href="tokens.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 <link href="projets.css" rel="stylesheet">
@@ -29,6 +31,7 @@
     <button data-vue="missions">Missions</button>
     <button data-vue="projets">Projets</button>
     <a href="etude/">Étude</a>
+    <a href="projets/site3d.html">Habitat 3D</a>
   </nav>
   <span class="note">prospective planètes</span>
   <button id="theme" type="button" aria-label="Thème clair ou sombre" title="Thème clair / sombre">◐</button>

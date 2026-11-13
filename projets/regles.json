@@ -1,0 +1,66 @@
+{
+ "format": "kibsu-regles/0.1",
+ "date": "2026-11-13",
+ "note": "● lu dans le document source · ◇ calculé, ou lu dans une source secondaire (Wikipedia, extrait cité) · ▨ hypothèse de projet, à sourcer. Les véhicules sont des valeurs ANNONCÉES : aucun n'a encore posé de cargo sur la Lune.",
+ "documents": {
+  "STD3001-V1C": { "titre": "NASA-STD-3001 Volume 1 Rev C, Crew Health", "date": "2023-09-15", "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C//nasa-std-3001-vol-1-rev-c-signature.pdf" },
+  "STD3001-V2B": { "titre": "NASA-STD-3001 Volume 2 Rev B, Human Factors, Habitability and Environmental Health (copie historique ; une révision plus récente existe peut-être)", "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/C/Historical/nasa-std-3001_vol_2_rev_b.pdf" },
+  "HIDH": { "titre": "Human Integration Design Handbook, NASA/SP-2010-3407 Rev 1", "date": "2014-06-05", "url": "https://www.nasa.gov/sites/default/files/atoms/files/human_integration_design_handbook_revision_1.pdf" },
+  "NHV2014": { "titre": "Minimum Acceptable Net Habitable Volume for Long-Duration Exploration Missions (rapport de consensus HRP, sessions de janvier 2014)", "url": "https://ntrs.nasa.gov/api/citations/20140016951/downloads/20140016951.pdf" },
+  "BVAD": { "titre": "Life Support Baseline Values and Assumptions Document, NASA/TP-2015-218570/REV1", "date": "2018-01", "url": "https://ntrs.nasa.gov/citations/20180001338", "lu_sur": "https://simoc.space/wp-content/uploads/2018/09/BVAD-20180501.pdf" },
+  "PHAM2008": { "titre": "Pham & El-Genk, AIP Conf. Proc. 969 (2008), protection en régolithe contre les éruptions solaires", "url": "https://www.osti.gov/biblio/21049474" },
+  "ESA-MARGES": { "titre": "ESA, Margin philosophy for science assessment studies 1.3 (cite ECSS-E-ST-10-02C)", "url": "https://sci.esa.int/documents/34375/36249/1567260131067-Margin_philosophy_for_science_assessment_studies_1.3.pdf" },
+  "EDEN": { "titre": "DLR, EDEN ISS presents results (2019)", "url": "https://www.dlr.de/content/en/articles/news/2019/03/20190823_project-eden-iss-presents-results.html" }
+ },
+ "hypotheses": {
+  "fraction_nette": { "v": 0.45, "s": "▨", "src": "Volume net habitable / volume pressurisé quand la fiche ne donne pas le volume habitable. Ordre de grandeur de l'ISS, non relu." },
+  "marge_masse": { "v": 0.20, "s": "◇", "src": "ESA-MARGES : marge système 20 % sur la masse sèche (lu dans un extrait) ; marges par équipement 5 / 10 / 20 % selon maturité" },
+  "masse_volumique_regolithe": { "v": 1.5, "s": "◇", "src": "1,30-1,35 g/cm³ en surface, 1,8 à 30-60 cm, 1,92 en profondeur (Lunar Sourcebook via NTRS 20220014634, extrait) ; 1,5 = valeur de calcul pour un régolithe remanié" }
+ },
+ "vehicules": {
+  "argonaut": { "nom": "ESA Argonaut", "masse_posee_kg": { "v": 1500, "s": "●", "src": "esa.int/argonaut : masse posée (CPE + charge utile), annoncée, premier vol vers 2030" }, "diametre_utile_m": { "v": 4.6, "s": "◇", "src": "Lancé par Ariane 6 : diamètre intérieur de la coiffe (Wikipedia citant le manuel Ariane 6, non lu). Gabarit propre de l'atterrisseur non trouvé." }, "hauteur_utile_m": null, "annonce": true },
+  "blue_moon_mk1": { "nom": "Blue Origin Blue Moon MK1 (cargo)", "masse_posee_kg": { "v": 3000, "s": "◇", "src": "Wikipedia citant Aviation Week 17/07/2023" }, "diametre_utile_m": null, "hauteur_utile_m": null, "annonce": true },
+  "blue_moon_mk2_cargo": { "nom": "Blue Origin Blue Moon Mk2 (cargo, réutilisable)", "masse_posee_kg": { "v": 20000, "s": "◇", "src": "Wikipedia citant SpaceNews 19/05/2023 (30 t en usage unique)" }, "diametre_utile_m": null, "hauteur_utile_m": null, "annonce": true },
+  "starship_hls": { "nom": "SpaceX Starship HLS", "masse_posee_kg": { "v": 100000, "s": "◇", "src": "Wikipedia, infobox Starship HLS (extrait)" }, "diametre_utile_m": { "v": 8, "s": "▨", "src": "baie d'environ 8 m citée sans source" }, "hauteur_utile_m": null, "annonce": true }
+ },
+ "regles": [
+  { "id": "VOL-1", "domaine": "habiter", "nom": "Volume habitable net par personne", "test": "volume_par_personne",
+    "params": { "formule": { "a": 6.67, "b": -7.79, "s": "●", "src": "HIDH Rev 1 §8.2 : V = 6,67 × ln(jours) − 7,79 m³ par personne (tendance)" },
+                "long": { "jours_min": 900, "min_m3": { "v": 25, "s": "●", "src": "NHV2014 : 25 m³ par personne, 6 personnes, mission de 30 mois" } } },
+    "source": "HIDH §8.2 ; NHV2014. NASA-STD-3001 V2 (V2 8001) ne chiffre pas : renvoie à la méthode JSC-63557." },
+  { "id": "SOR-1", "domaine": "habiter", "nom": "Deux chemins de sortie par module habité", "test": "sorties",
+    "params": { "min": 2 },
+    "source": "▨ Hypothèse de projet. NASA-STD-3001 V2 §8.3 (V2 8015, 8020, 8021) traite des chemins d'évacuation, sans chiffre trouvé." },
+  { "id": "ATM-1", "domaine": "habiter", "nom": "Pression totale de l'habitat", "test": "plage",
+    "params": { "chemin": "atmosphere.pression_kPa", "min": 26.2, "max": 103, "unite": "kPa", "s": "●" },
+    "source": "NASA-STD-3001 V2 Rev B, V2 6006 §6.2.2.1 (3,8-15,0 psia). « 8,2 psia / 34 % O2 » n'y est qu'un exemple." },
+  { "id": "ATM-2", "domaine": "habiter", "nom": "Température intérieure", "test": "plage",
+    "params": { "chemin": "atmosphere.temperature_C", "min": 18, "max": 27, "unite": "°C", "s": "●" },
+    "source": "NASA-STD-3001 V2 Rev B, V2 6013 §6.2.4.2" },
+  { "id": "RAD-1", "domaine": "protéger", "nom": "Abri contre une éruption solaire (≤ 250 mSv par événement)", "test": "protection",
+    "params": { "min_m": { "v": 0.2, "s": "◇", "src": "≈ 30 g/cm² de régolithe pour la limite de 30 jours (PHAM2008, lu) ÷ 1,5 g/cm³ = 0,2 m (calcul)" },
+                "vise": "Limite : < 250 mSv par éruption de référence (NASA-STD-3001 V1 Rev C, V1 4031 §4.8.3)." },
+    "source": "NASA-STD-3001 V1 Rev C V1 4031 ; PHAM2008" },
+  { "id": "RAD-2", "domaine": "protéger", "nom": "Protection pour une longue présence (rayons cosmiques, carrière < 600 mSv)", "test": "protection",
+    "params": { "min_m": { "v": 2, "s": "▨", "src": "≥ 2 m de régolithe pour 150 mSv / 180 j (IAC-24 D3 IP 1) ; 3-7 m (NASA ASCEND 2021) : lus seulement dans des extraits" },
+                "vise": "Limite : < 600 mSv sur la carrière, tous âges et sexes (NASA-STD-3001 V1 Rev C, V1 4030 §4.8.2)." },
+    "source": "NASA-STD-3001 V1 Rev C V1 4030 ; épaisseur à confirmer par un calcul (OLTARIS)" },
+  { "id": "TRA-1", "domaine": "transporter", "nom": "Chaque élément tient dans la soute", "test": "gabarit_vol", "params": {},
+    "source": "Gabarits des véhicules ci-dessus (annoncés)" },
+  { "id": "TRA-2", "domaine": "transporter", "nom": "Masse de chaque envoi, marge comprise", "test": "masse_lancement", "params": {},
+    "source": "Masse posée des véhicules (annoncée) ; marge ESA-MARGES" },
+  { "id": "VIE-1", "domaine": "vivre", "nom": "Consommables à apporter (sans recyclage)", "test": "consommables",
+    "params": { "par_personne_jour": {
+      "O2": { "v": 0.816, "s": "●", "unite": "kg", "src": "BVAD Table 3-33" },
+      "eau potable": { "v": 2.5, "s": "●", "unite": "kg", "src": "BVAD Table 3-33" },
+      "nourriture": { "v": 1.51, "s": "●", "unite": "kg", "src": "BVAD Table 3-33, sans emballage" } } },
+    "source": "BVAD REV1 Table 3-33 (par membre d'équipage et par jour)" },
+  { "id": "SER-1", "domaine": "vivre", "nom": "Surface de culture de la serre", "test": "serre",
+    "params": { "regimes": {
+      "salade": { "v": 1.35, "s": "●", "src": "BVAD Table 4-99, m² par personne" },
+      "salade+feculents": { "v": 19.5, "s": "●", "src": "BVAD Table 4-99" },
+      "tout": { "v": 65.29, "s": "●", "src": "BVAD Table 4-99" } },
+      "puissance_kW_m2": { "v": 2.6, "s": "●", "src": "BVAD Table 4-95 : lampes, ballasts, ventilation et thermique (EDEN ISS a mesuré 0,8 kW/m² en moyenne)" } },
+    "source": "BVAD REV1 Tables 4-95, 4-99 ; EDEN ISS (DLR 2019)" }
+ ]
+}
