@@ -73,8 +73,10 @@ import { astres, depaqueter, jourJ2000, iauLune, repereLocal, azHaut, etoile } f
 
 const RAD = Math.PI / 180;
 const PARAMS = new URLSearchParams(location.search), EMBED = PARAMS.get('embed') === '1';
-let MEM = null; try { MEM = !EMBED && JSON.parse(sessionStorage.getItem('kibsu-fiche')); } catch (e) { /* pas de mémoire : la fiche du dossier */ }
-const fiche = PARAMS.get('fiche') || MEM?.nom || 'pole-sud-esquisse.json';   // l'onglet Fichier transmet sa fiche (curseurs compris)
+// mémoire du navigateur : la fiche telle que l'atelier ou le Fichier l'ont laissée
+let MEMS = {}, ACTIVE = null;
+try { if (!EMBED) { MEMS = JSON.parse(localStorage.getItem('kibsu-fiches')) || {}; ACTIVE = localStorage.getItem('kibsu-fiche'); } } catch (e) { /* pas de mémoire : la fiche du dossier */ }
+const fiche = PARAMS.get('fiche') || ACTIVE || 'pole-sud-esquisse.json';   // l'onglet Fichier transmet sa fiche (curseurs compris)
 if (EMBED) document.body.classList.add('embed');
 if (EMBED) addEventListener('keydown', e => { if (e.key === 'Escape') parent.postMessage('kibsu-echap', location.origin); });   // Échap : quitter le grand écran de l'onglet Projets
 const [META, F, PLAN, HAB, PLA] = await Promise.all(['site/relief.json', fiche, '../etude/donnees/plan.json',
@@ -139,12 +141,17 @@ function batir(F) {
   const habs = F.elements.filter(e => e.pressurise && e.forme?.type === 'cylindre');
   const B = F.elements.find(e => e.forme?.type === 'butte');
   const Rm = Math.max(...habs.map(e => val(e.forme.diametre_m) / 2)), couv = val(B.forme.couverture_m), tal = val(B.forme.talus_deg);
-  const xa = Math.min(...habs.map(e => e.position_m[0] - val(e.forme.longueur_m) / 2)), xb = Math.max(...habs.map(e => e.position_m[0] + val(e.forme.longueur_m) / 2));
+  // axe de chaque module (deux bouts), tourné selon rotation_deg ; la butte est l'enveloppe de ces axes élargie de c (haut) et du pied (bas)
+  const bouts = habs.flatMap(e => { const L = val(e.forme.longueur_m) / 2, r = (val(e.rotation_deg) || 0) * RAD, [x, y] = e.position_m;
+    return [[x + L * Math.cos(r), y + L * Math.sin(r)], [x - L * Math.cos(r), y - L * Math.sin(r)]]; });
   c = Rm + couv; H = 2 * Rm + couv; const pied = c + H / Math.tan(tal * RAD);
-  function stade(dist, z, N = 40) {
+  function stade(dist, z, N = 96) {
     const pts = [];
-    for (let k = 0; k <= N; k++) { const a = -Math.PI / 2 + Math.PI * k / N; pts.push(L3(xb + dist * Math.cos(a), dist * Math.sin(a), z)); }
-    for (let k = 0; k <= N; k++) { const a = Math.PI / 2 + Math.PI * k / N; pts.push(L3(xa + dist * Math.cos(a), dist * Math.sin(a), z)); }
+    for (let k = 0; k < N; k++) {
+      const a = 2 * Math.PI * k / N, u = [Math.cos(a), Math.sin(a)];
+      let m = bouts[0], best = -Infinity; for (const p of bouts) { const d = p[0] * u[0] + p[1] * u[1]; if (d > best) { best = d; m = p; } }
+      pts.push(L3(m[0] + dist * u[0], m[1] + dist * u[1], z));
+    }
     return pts;
   }
   const bas = stade(pied, -1), haut = stade(c, H), nn = bas.length, pb = [];
@@ -156,8 +163,8 @@ function batir(F) {
 
   for (const e of F.elements.filter(e => e.forme?.type === 'cylindre')) {
     const R = val(e.forme.diametre_m) / 2, Lg = val(e.forme.longueur_m);
-    const m = new THREE.Mesh(new THREE.CylinderGeometry(R, R, Lg, 48), e.pressurise ? matMod : matSas);
-    m.rotation.z = Math.PI / 2; m.position.copy(L3(e.position_m[0], e.position_m[1], R)); m.castShadow = true;
+    const g = new THREE.CylinderGeometry(R, R, Lg, 48); g.rotateZ(Math.PI / 2); g.rotateY(-(val(e.rotation_deg) || 0) * RAD);   // L3 : y du plan → z de three, d'où le signe
+    const m = new THREE.Mesh(g, e.pressurise ? matMod : matSas); m.position.copy(L3(e.position_m[0], e.position_m[1], R)); m.castShadow = true;
     projet.add(m);
   }
   for (const e of F.elements.filter(e => e.type === 'ouverture' && e.forme?.type === 'boite')) {   // puits, chambres
@@ -180,7 +187,7 @@ function batir(F) {
     projet.add(k);
   }
 }
-batir(MEM && MEM.nom === fiche && MEM.F ? MEM.F : F);
+batir(MEMS[fiche] || F);
 if (EMBED) addEventListener('message', e => { if (e.origin === location.origin && e.data?.type === 'kibsu-fiche') batir(e.data.F); });
 
 // mâts solaires et aire d'atterrissage du plan de l'étude

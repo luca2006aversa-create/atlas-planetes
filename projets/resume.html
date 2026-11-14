@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kibsu · résumé du projet</title>
+<link rel="icon" type="image/png" href="../logo-d.png">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--papier); color: var(--encre); font: 15px/1.55 var(--sans); }
+  main { max-width: 900px; margin: 0 auto; padding: 22px 16px 70px; }
+  .sur { font: 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--encre-2); }
+  h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.15; margin: 4px 0 8px; }
+  .chapo { font-size: 16px; color: var(--encre-2); max-width: 680px; margin: 0 0 14px; }
+  /* le fil des étapes */
+  .fil { display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 6px; margin: 0 0 26px; position: sticky; top: var(--kb-h, 78px); background: var(--papier); padding: 8px 0; z-index: 5; border-bottom: 1px solid var(--trait); }
+  .fil a { flex: none; white-space: nowrap; font-size: 12.5px; text-decoration: none; color: var(--encre); background: var(--blanc); border: 1px solid var(--trait); border-radius: 999px; padding: 3px 10px; }
+  .fil a b { color: var(--vif); margin-right: 4px; } .fil a:hover { border-color: var(--vif); }
+  /* une étape */
+  .etape { display: grid; grid-template-columns: 44px 1fr; gap: 0 14px; margin: 0 0 34px; scroll-margin-top: 140px; }
+  .num { width: 40px; height: 40px; border-radius: 50%; background: var(--encre); color: #fff; display: grid; place-items: center; font: 700 17px var(--sans); }
+  .etape h2 { margin: 6px 0 2px; font-size: 21px; }
+  .question { color: var(--vif); font-weight: 600; margin: 0 0 6px; font-size: 14px; }
+  .etape p { margin: 0 0 8px; max-width: 700px; }
+  .corps { grid-column: 2; min-width: 0; }
+  .visuel { background: var(--blanc); border: 1px solid var(--trait); border-radius: 12px; padding: 12px 14px; margin: 10px 0; }
+  .aller { display: inline-block; font-weight: 600; font-size: 13.5px; color: var(--encre); text-decoration: none; border-bottom: 2px solid var(--vif); }
+  .aller:hover { color: var(--vif); }
+  /* chiffres */
+  .chiffres { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+  .chiffre b { display: block; font: 700 24px var(--sans); line-height: 1.1; } .chiffre span { font-size: 12px; color: var(--encre-2); }
+  .jauge { height: 5px; border-radius: 3px; background: var(--papier-2); margin-top: 4px; overflow: hidden; } .jauge i { display: block; height: 100%; background: var(--vif); }
+  /* lignes à barre */
+  .lg { display: grid; grid-template-columns: minmax(110px, 200px) 1fr auto; gap: 8px; align-items: center; font-size: 13px; padding: 3px 0; }
+  .lg .b { height: 9px; border-radius: 4px; background: var(--papier-2); overflow: hidden; } .lg .b i { display: block; height: 100%; }
+  .lg .v { font: 12px var(--mono); color: var(--encre-2); white-space: nowrap; }
+  .note { font-size: 12.5px; color: var(--encre-2); margin: 6px 0 0; }
+  .pastilles { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+  .pastille { border-radius: 999px; padding: 4px 12px; font-weight: 700; font-size: 14px; }
+  .p-ok { background: #dcefdc; color: #1f6b2b; } .p-non { background: #f6dcd3; color: #a3320f; } .p-q { background: #eee9da; color: #6b5c1f; }
+  .regle { font-size: 13px; padding: 5px 0; border-top: 1px solid var(--trait); } .regle b { margin-right: 6px; } .regle span { color: var(--encre-2); display: block; font-size: 12px; }
+  svg text { font: 11px var(--mono); fill: var(--encre); }
+  ul.afaire { margin: 0; padding-left: 18px; font-size: 13.5px; } ul.afaire li { margin: 2px 0; }
+  @media (max-width: 560px) { .etape { grid-template-columns: 1fr; } .corps { grid-column: 1; } .num { margin-bottom: 4px; } }
+</style>
+<script src="../nav.js" defer></script>
+</head>
+<body>
+<main>
+  <div class="sur">Résumé du projet · <span id="fnom"></span></div>
+  <h1>Un habitat enterré sur une crête du pôle sud de la Lune</h1>
+  <p class="chapo">Tout le projet en six étapes, dans l'ordre où il a été pensé. Les chiffres sont calculés à partir de la fiche du projet : si tu la modifies dans l'atelier, cette page change avec elle.</p>
+  <nav class="fil" id="fil" aria-label="Étapes"></nav>
+  <div id="etapes"><p class="note">Calcul…</p></div>
+</main>
+
+<script type="module">
+import { controler, val } from './controle.js';
+import * as Rz from './rayons.js';
+
+// la fiche : celle du navigateur (atelier, Fichier) sinon celle du dossier
+let MEMS = {}, ACTIVE = null;
+try { MEMS = JSON.parse(localStorage.getItem('kibsu-fiches')) || {}; ACTIVE = localStorage.getItem('kibsu-fiche'); } catch (e) { /* pas de mémoire */ }
+const fiche = new URLSearchParams(location.search).get('fiche') || ACTIVE || 'pole-sud-esquisse.json';
+const jsn = u => fetch(u).then(r => r.json());
+const [F0, R, PLAN, HAB] = await Promise.all([jsn(fiche), jsn('regles.json'), jsn('../etude/donnees/plan.json'), jsn('../etude/donnees/habitat.json')]);
+const F = MEMS[fiche] || F0, modifiee = !!MEMS[fiche] && JSON.stringify(MEMS[fiche]) !== JSON.stringify(F0);
+document.getElementById('fnom').textContent = F.nom + (modifiee && !/modifiée/.test(F.nom) ? ' · modifiée dans le navigateur' : '');
+
+const fr = (x, d = 1) => x == null ? '—' : Number(x).toLocaleString('fr-FR', { maximumFractionDigits: d });
+const chiffre = (v, u, nom, pct) => `<div class="chiffre"><b>${v}<small style="font-size:13px;font-weight:600"> ${u}</small></b><span>${nom}</span>${pct != null ? `<div class="jauge"><i style="width:${Math.max(0, Math.min(100, pct))}%"></i></div>` : ''}</div>`;
+
+// --- données du projet ---
+const mods = F.elements.filter(e => e.pressurise && e.forme?.type === 'cylindre' && e.type !== 'sas');
+const sas = F.elements.filter(e => e.type === 'sas');
+const butte = F.elements.find(e => e.forme?.type === 'butte');
+const couv = val(butte?.forme.couverture_m), talus = val(butte?.forme.talus_deg), rho = val(R.hypotheses.masse_volumique_regolithe);
+const equipage = val(F.programme.equipage), jours = val(F.programme.duree_jours);
+const fonctions = F.programme.fonctions || [];
+
+// radiations par espace (rayons.js), puis règles (controle.js) : le même calcul que l'onglet Fichier
+const pts = R.hypotheses.dose_gcr.pts, seuil = val(R.hypotheses.abri_eruption_g_cm2);
+let zones = [], res = [];
+try {
+  const G = Rz.geometrie(F, rho), D = Rz.directions(1500);
+  zones = fonctions.map(fn => {
+    const P = Rz.pointEspace(F, fn); if (!P) return { id: fn.id, nom: fn.nom, element: fn.element, erreur: true };
+    const b = Rz.bilan(G, P, D, HAB.horizon.h), d = Rz.dosePoint(b.vals, pts), ab = b.min != null && b.min >= seuil;
+    return { id: fn.id, nom: fn.nom, element: fn.element, P, min: b.min, min_g_cm2: b.min, faible: b.part.faible, mSv_j: d.mSv_j, mSv_h: d.mSv_j / 24, abri: ab, abri_eruption: ab };
+  });
+  res = controler(F, R, { fiche, rayons: { zones } });
+} catch (e) { console.warn('calcul du résumé', e); }
+
+// d'où viennent les chiffres de la fiche : ● lu · ◇ calculé · ▨ hypothèse
+const stat = { '●': 0, '◇': 0, '▨': 0 };
+(function compter(o) { if (o && typeof o === 'object') { if ('v' in o && o.s in stat) stat[o.s]++; for (const k in o) compter(o[k]); } })(F);
+const sansMasse = F.elements.filter(e => e.forme && e.type !== 'ouverture' && e.type !== 'protection' && val(e.masse_kg) == null);
+
+// --- petit plan (vue de dessus) ---
+function plan() {
+  const E = F.elements.filter(e => e.forme?.type === 'cylindre' && e.position_m);
+  if (!E.length) return '';
+  const boites = E.map(e => {
+    const debout = e.forme.axe === 'vertical', L = debout ? val(e.forme.diametre_m) : val(e.forme.longueur_m), D = val(e.forme.diametre_m), r = (val(e.rotation_deg) || 0) * Math.PI / 180;
+    const c = Math.cos(r), s = Math.sin(r), [x, y] = e.position_m;
+    const coins = [[-L / 2, -D / 2], [L / 2, -D / 2], [L / 2, D / 2], [-L / 2, D / 2]].map(([u, v]) => [x + u * c - v * s, y + u * s + v * c]);
+    return { e, coins, x, y, debout, D };
+  });
+  const xs = boites.flatMap(b => b.coins.map(p => p[0])), ys = boites.flatMap(b => b.coins.map(p => p[1]));
+  const m = (couv || 0) + 3, x0 = Math.min(...xs) - m, x1 = Math.max(...xs) + m, y0 = Math.min(...ys) - m, y1 = Math.max(...ys) + m;
+  const W = 640, k = W / (x1 - x0), H = Math.max(120, (y1 - y0) * k), X = x => (x - x0) * k, Y = y => H - (y - y0) * k;
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Plan de l'habitat vu de dessus">
+    <rect x="${X(Math.min(...xs) - (couv || 0))}" y="${Y(Math.max(...ys) + (couv || 0))}" width="${(Math.max(...xs) - Math.min(...xs) + 2 * (couv || 0)) * k}" height="${(Math.max(...ys) - Math.min(...ys) + 2 * (couv || 0)) * k}" rx="${(couv || 0) * k}" fill="#e9e3d3" stroke="#cfc9ba" stroke-dasharray="4 3"/>
+    ${boites.map(b => b.debout ? `<circle cx="${X(b.x)}" cy="${Y(b.y)}" r="${b.D / 2 * k}" fill="${b.e.type === 'sas' ? '#fff' : '#141414'}" stroke="#141414"/>`
+      : `<polygon points="${b.coins.map(p => X(p[0]) + ',' + Y(p[1])).join(' ')}" fill="${b.e.type === 'sas' ? '#fff' : '#141414'}" stroke="#141414"/>`).join('')}
+    ${boites.map(b => `<text x="${X(b.x)}" y="${Y(b.y) + 4}" text-anchor="middle" style="fill:${b.e.type === 'sas' ? '#141414' : '#fff'}">${b.e.id}</text>`).join('')}
+    <line x1="14" y1="${H - 12}" x2="${14 + 5 * k}" y2="${H - 12}" stroke="#141414" stroke-width="2"/><text x="${20 + 5 * k}" y="${H - 8}">5 m</text>
+    <text x="${W - 8}" y="14" text-anchor="end" style="fill:#555">pointillé : la butte de régolithe</text></svg>`;
+}
+
+// --- les six étapes ---
+const h = PLAN.habitat, dk = PLAN.distances_km || {};
+const hMax = Math.max(1, ...fonctions.map(f => val(f.h_jour) || 0));
+const dMax = Math.max(1e-9, ...zones.map(z => z.mSv_h || 0));
+const n = k => res.filter(x => x.etat === k).length;
+const aRevoir = res.filter(x => x.etat === 'non' || x.etat === '?');
+const dims = mods.map(e => `${fr(val(e.forme.longueur_m))} × ${fr(val(e.forme.diametre_m))} m`);
+const memesDims = new Set(dims).size === 1;
+
+const ETAPES = [
+  ['Le site', 'Où se poser ?', `
+    <p>Le projet commence par une étude de site, comme en architecture sur Terre. Au pôle sud de la Lune, le soleil reste toujours rasant : les sommets sont éclairés presque en permanence, les fonds de cratère jamais, et c'est dans ces ombres que se trouve la glace.</p>
+    <p>L'étude croise cinq critères (relief, lumière, glace, pentes, vue sur la Terre) et retient un replat sur une crête à l'ouest du cratère Shackleton. Le projet est la suite directe de cette étude : il dessine l'habitat à cet endroit précis.</p>
+    <div class="visuel"><div class="chiffres">
+      ${chiffre(h.soleil, '%', 'du temps au soleil', h.soleil)}${chiffre(h.terre, '%', 'du temps la Terre en vue', h.terre)}
+      ${chiffre(fr(h.pente), '°', 'de pente (terrain presque plat)')}${chiffre(fr(dk.habitat_glace), 'km', 'jusqu\'à la glace')}${chiffre(fr(h.alt, 0), 'm', 'd\'altitude')}
+    </div></div>
+    <a class="aller" href="../etude/">Lire l'étude du pôle sud →</a>`],
+  ['Le programme', 'Pour qui, pour quoi faire ?', `
+    <p>Avant de dessiner, on fixe qui habite et ce qu'on y fait. Ici : <b>${equipage} personnes pendant ${jours} jours</b>. Chaque activité de la journée reçoit un espace et une durée. Cet emploi du temps sert plus loin : c'est lui qui dit où l'on passe le plus de temps, donc où la protection compte le plus.</p>
+    <div class="visuel">${fonctions.map(f => `<div class="lg"><span>${f.nom}</span><span class="b"><i style="width:${100 * (val(f.h_jour) || 0) / hMax}%;background:#141414"></i></span><span class="v">${val(f.h_jour) != null ? fr(val(f.h_jour)) + ' h/j' : '—'} · ${f.element || ''}</span></div>`).join('')}
+      <p class="note">Barre = heures par jour dans cet espace. À droite : l'élément qui l'abrite. Ces durées sont des hypothèses (▨).</p></div>
+    <a class="aller" href="../index.html?vue=projets">Changer l'équipage et la durée dans le Fichier →</a>`],
+  ['La forme', 'Quels volumes, assemblés comment ?', `
+    <p>L'habitat est fait de <b>${mods.length} module${mods.length > 1 ? 's' : ''}</b>${memesDims && dims[0] ? ` de ${dims[0]}` : ''} et de <b>${sas.length} sas</b>. Ce sont des cylindres : une forme qui tient bien la pression et qui entre dans une fusée. Chaque module a un rôle (dormir, vivre, travailler), et les sas aux deux bouts donnent deux sorties.</p>
+    <p>Les éléments ne sont pas placés à la main : ils se collent par leurs <b>ports</b>, face à face, à l'écart choisi. Changer une liaison dans l'atelier redessine tout l'ensemble.</p>
+    <div class="visuel">${plan()}</div>
+    <a class="aller" href="atelier.html">Modifier les modules et leurs liaisons dans l'atelier →</a> &nbsp; <a class="aller" href="site3d.html">Voir en 3D →</a>`],
+  ['La protection', 'Comment se protéger des radiations ?', `
+    <p>La Lune n'a ni air ni champ magnétique. Deux dangers : les <b>rayons cosmiques</b>, faibles mais permanents, et les <b>éruptions solaires</b>, rares mais violentes. La réponse du projet est simple et locale : recouvrir les modules d'une butte de régolithe, le sol lunaire, pris sur place.</p>
+    <p>Ce qui compte est la quantité de matière entre soi et le ciel, mesurée en g/cm². Depuis chaque espace, on lance des rayons dans toutes les directions et on regarde l'endroit le plus faible. Une fente dans la butte, la fenêtre-Terre, laisse voir la Terre : c'est un choix d'architecte, et c'est aussi le point faible.</p>
+    <div class="visuel"><div class="chiffres" style="margin-bottom:10px">
+      ${chiffre(fr(couv), 'm', 'de régolithe au-dessus')}${chiffre(fr(couv * 100 * rho, 0), 'g/cm²', 'de matière au plus épais')}${chiffre(fr(seuil, 0), 'g/cm²', 'minimum pour un abri')}${chiffre(fr(talus, 0), '°', 'de talus')}
+    </div>
+    ${zones.filter(z => !z.erreur).map(z => `<div class="lg"><span>${z.abri ? '🛡 ' : ''}${z.nom}</span><span class="b"><i style="width:${Math.max(2, 100 * Math.min(z.min || 0, 4 * seuil) / (4 * seuil))}%;background:${z.abri ? '#2f8a3c' : '#c23b12'}"></i></span><span class="v">min ${fr(z.min, 0)} g/cm² · ${fr(z.mSv_h * 1000, 1)} µSv/h</span></div>`).join('')}
+    <p class="note">Barre = matière au point le plus faible de cet espace (plus long = mieux, pleine à ${fr(4 * seuil, 0)} g/cm² et plus). À droite, la dose par heure : elle change peu, car les rayons cosmiques traversent presque tout. Vert 🛡 = peut servir d'abri pendant une éruption ; rouge = non, son point le plus faible est sous ${fr(seuil, 0)} g/cm².</p></div>
+    <a class="aller" href="rayons.html">Voir le ciel depuis l'intérieur (Radiations) →</a>`],
+  ['Les contrôles', 'Est-ce que ça tient ?', `
+    <p>Le projet est ensuite passé au crible de <b>${res.length} règles</b> tirées de documents publics (NASA, ESA, articles scientifiques) : volume par personne, sorties de secours, radiations, transport, consommables, serre. Chaque règle compare un chiffre du projet à un seuil.</p>
+    <div class="visuel"><div class="pastilles"><span class="pastille p-ok">✓ ${n('ok')} respectées</span><span class="pastille p-non">✗ ${n('non')} à corriger</span><span class="pastille p-q">? ${n('?')} sans réponse</span></div>
+      ${aRevoir.map(x => `<div class="regle"><b>${x.etat === 'non' ? '✗' : '?'}</b>${x.nom}<span>${x.detail || ''}</span></div>`).join('') || '<p class="note">Toutes les règles sont respectées.</p>'}
+      <p class="note">Un ✗ n'est pas un échec : il dit où retravailler le dessin. Un ? veut dire qu'il manque une donnée dans la fiche.</p></div>
+    <a class="aller" href="controle.html">Voir toutes les règles (Contrôles) →</a>`],
+  ['Où on en est', 'Qu\'est-ce qui est sûr, qu\'est-ce qui reste à faire ?', `
+    <p>C'est une <b>esquisse</b>, pas un dimensionnement. Chaque chiffre de la fiche porte un signe qui dit d'où il vient. Plus il y a de ▨, plus le projet repose sur des suppositions qu'il faudra remplacer par des valeurs sourcées.</p>
+    <div class="visuel"><div class="chiffres" style="margin-bottom:10px">
+      ${chiffre(stat['●'], '●', 'chiffres lus dans un document')}${chiffre(stat['◇'], '◇', 'calculés ou de seconde main')}${chiffre(stat['▨'], '▨', 'hypothèses à remplacer')}
+    </div>
+    <ul class="afaire">
+      ${sansMasse.length ? `<li><b>Masses :</b> ${sansMasse.length} élément${sansMasse.length > 1 ? 's' : ''} sans masse (${sansMasse.map(e => e.id).join(', ')}). Sans elles, on ne peut pas vérifier le transport.</li>` : ''}
+      ${aRevoir.length ? `<li><b>Règles :</b> ${n('non')} à corriger et ${n('?')} sans réponse (étape 5).</li>` : ''}
+      <li><b>Radiations :</b> le calcul suit une courbe publiée pour les rayons cosmiques ; il reste à le comparer à un outil de référence.</li>
+      <li><b>Structure, chantier, énergie :</b> pas encore étudiés.</li>
+    </ul></div>
+    <a class="aller" href="../references/">Comparer avec les références →</a>`]
+];
+
+document.getElementById('fil').innerHTML = ETAPES.map((e, i) => `<a href="#e${i + 1}"><b>${i + 1}</b>${e[0]}</a>`).join('');
+document.getElementById('etapes').innerHTML = ETAPES.map((e, i) => `<section class="etape" id="e${i + 1}"><div class="num">${i + 1}</div><div><h2>${e[0]}</h2><p class="question">${e[1]}</p></div><div class="corps">${e[2]}</div></section>`).join('');
+</script>
+</body>
+</html>

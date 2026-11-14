@@ -1,0 +1,95 @@
+{
+ "_lisezmoi": "Tous les textes d'explication de Kibsu. « pages » : l'intro de chaque page (bouton « Comprendre » de la barre), clé = adresse depuis atlas/ ou ?vue=… pour l'accueil. « termes » : le petit « ? » posé à côté d'un titre qui commence par la clé. Écrire court, sans jargon.",
+ "pages": {
+  "?vue=systeme": {
+   "titre": "Système",
+   "sert": "Voir où sont les planètes et les sondes à une date donnée. C'est la carte d'ensemble : tout le reste du site se passe quelque part là-dedans.",
+   "lire": "Le Soleil est au centre, chaque cercle est une orbite. Le curseur de date fait avancer le temps. L'échelle des distances peut être tassée pour tout voir à la fois.",
+   "tire": "On comprend les distances et les durées : pourquoi la Lune est à trois jours et Mars à plusieurs mois."
+  },
+  "?vue=globe": {
+   "titre": "Planètes",
+   "sert": "Regarder un corps de près : son relief, ses lieux nommés, les endroits où des missions se sont posées.",
+   "lire": "On choisit un corps dans la liste, on tourne le globe à la souris. Les calques (relief, missions, couverture détaillée) s'allument à gauche.",
+   "tire": "On repère les régions intéressantes. C'est ici qu'on voit pourquoi le pôle sud de la Lune attire tout le monde."
+  },
+  "?vue=missions": {
+   "titre": "Missions",
+   "sert": "Savoir ce qui a déjà été fait : qui est allé où, quand, et avec quelle technique.",
+   "lire": "Les graphiques comptent les missions par décennie et par agence. La liste des « premières » donne les étapes techniques (premier atterrissage, premier retour d'échantillon…).",
+   "tire": "On situe le projet dans une histoire : ce qui est acquis, ce qui reste à inventer."
+  },
+  "?vue=projets": {
+   "titre": "Fichier",
+   "sert": "C'est la fiche du projet : un seul fichier décrit l'habitat (modules, butte, équipage). Le plan, la coupe et le jouet 3D sont trois dessins de cette même fiche.",
+   "lire": "Les curseurs de gauche changent la fiche : diamètre, longueur, épaisseur de la butte, équipage, durée. Les dessins et les quatre simulations du bas (contrôle, lumière, abri, chaleur) se mettent à jour.",
+   "tire": "On voit tout de suite l'effet d'un choix. Épaissir la butte protège mieux, mais demande plus de régolithe à déplacer."
+  },
+  "etude/": {
+   "titre": "Étude du pôle sud de la Lune",
+   "sert": "Choisir où poser l'habitat. L'étude refait, avec des données publiques, l'analyse de site que la NASA fait pour Artemis.",
+   "lire": "La page se lit de haut en bas, un critère par chapitre : relief, lumière, ombre et glace, pentes, vue sur la Terre. La carte de gauche change à chaque chapitre.",
+   "tire": "Un point précis sur une crête : presque toujours au soleil, la Terre en vue, la glace à quelques kilomètres. C'est le terrain du projet."
+  },
+  "projets/site3d.html": {
+   "titre": "3D",
+   "sert": "Voir l'habitat posé sur son vrai terrain, avec le vrai ciel : le Soleil rasant, la Terre basse sur l'horizon, les étoiles.",
+   "lire": "Glisser pour tourner, molette pour zoomer. Les boutons du bas changent de point de vue et font passer le temps. La boussole montre la Terre et le Soleil.",
+   "tire": "On sent le lieu : les ombres très longues, la butte qui recouvre les modules, la fente par où l'on regarde la Terre."
+  },
+  "projets/resume.html": {
+   "titre": "Résumé",
+   "sert": "Comprendre tout le projet en une page : d'où il vient, ce qu'il contient, comment il protège, et où il en est.",
+   "lire": "De haut en bas, une étape par bloc. Les chiffres sont calculés à partir de la fiche : ils changent si tu modifies le projet dans l'atelier.",
+   "tire": "Une vue d'ensemble honnête : ce qui est vérifié, ce qui est une hypothèse, ce qui reste à faire."
+  },
+  "projets/atelier.html": {
+   "titre": "Atelier",
+   "sert": "Travailler le projet élément par élément : chaque module, chaque sas, la serre, la butte.",
+   "lire": "On clique un élément à gauche, ses cartes s'ouvrent à droite : forme, dimensions, portes, liaisons. Les modules se placent tout seuls : ils se collent par leurs ports, à l'écart que tu donnes.",
+   "tire": "Une fiche modifiée, gardée dans le navigateur. La 3D, le plan et les contrôles la reprennent aussitôt."
+  },
+  "projets/controle.html": {
+   "titre": "Contrôles",
+   "sert": "Vérifier que le projet tient debout. Chaque carte est une règle tirée d'un document (NASA, ESA, articles) et appliquée à la fiche.",
+   "lire": "✓ la règle est respectée, ✗ elle ne l'est pas, ? il manque une donnée pour le savoir. La jauge compare la valeur du projet au seuil de la règle (la moitié de la jauge = le seuil).",
+   "tire": "La liste de ce qu'il faut corriger. Un ✗ n'est pas un échec : il dit où retravailler le dessin. Les petits signes ● ◇ ▨ disent d'où vient chaque chiffre."
+  },
+  "projets/rayons.html": {
+   "titre": "Radiations",
+   "sert": "Savoir si la butte protège assez. Sur la Lune il n'y a ni air ni champ magnétique : c'est la matière autour de soi qui arrête les rayons.",
+   "lire": "Depuis un point à l'intérieur, on lance des rayons dans toutes les directions et on mesure la matière traversée, en g/cm². Les couleurs vont du bien protégé au mal protégé.",
+   "tire": "On voit les points faibles : la fenêtre, les bouts des modules, les sas. Et quel espace peut servir d'abri pendant une éruption solaire."
+  },
+  "references/": {
+   "titre": "Références",
+   "sert": "Ne pas réinventer : voir ce que d'autres ont construit ou imaginé, des bases polaires réelles aux projets lunaires et à la fiction.",
+   "lire": "Les références sont rangées par famille de forme et par thème. Chaque fiche donne ses dimensions et sa source.",
+   "tire": "Des ordres de grandeur pour comparer le projet, et des idées de formes à essayer dans l'atelier."
+  }
+ },
+ "termes": {
+  "Budget de dose par jour": "On additionne, sur une journée, le temps passé dans chaque pièce multiplié par la dose reçue dans cette pièce. Le total doit rester sous un quota journalier, qui dépend de la durée de la mission. Barre = heures passées, trait = maximum permis.",
+  "Abri contre une éruption": "Une éruption solaire envoie en quelques heures une forte dose de particules. Il faut une pièce où tout l'équipage peut attendre, entourée d'au moins 10 g/cm² de matière dans toutes les directions.",
+  "Protection pour une longue présence": "Les rayons cosmiques arrivent tout le temps, de partout. On ne peut pas les arrêter, seulement les réduire. La règle compare la dose cumulée sur la mission à la limite d'une carrière d'astronaute (600 mSv).",
+  "Volume habitable net": "Le volume où l'on peut vraiment vivre, une fois retirés les équipements et les rangements, divisé par le nombre de personnes. Trop peu, et la vie à bord devient pénible sur un long séjour.",
+  "Deux chemins de sortie": "Depuis chaque module habité, on doit pouvoir fuir par deux côtés différents. Si un feu ou une fuite bloque un passage, il en reste un.",
+  "Pression totale": "La pression de l'air à l'intérieur. Plus basse, la structure est plus légère et les sorties plus rapides, mais il faut plus d'oxygène dans le mélange.",
+  "Température intérieure": "La plage de température où l'on peut vivre et travailler normalement.",
+  "Chaque élément tient": "Chaque pièce envoyée de la Terre doit entrer dans la coiffe de la fusée : on compare son diamètre plié à la place disponible.",
+  "Masse de chaque envoi": "Chaque envoi doit peser moins que ce que l'atterrisseur peut poser sur la Lune, avec une marge de sécurité de 20 %.",
+  "Consommables": "L'eau, l'air et la nourriture à emporter si rien n'est recyclé. Cela donne la masse à livrer pour toute la mission.",
+  "Surface de culture": "La surface de serre qu'il faut par personne pour le régime choisi (ici des salades : un complément frais, pas une autonomie).",
+  "Radiations et temps": "La dose reçue dans cet espace, et le temps qu'on y passe par jour. Un espace très protégé où l'on dort 9 heures compte plus qu'un espace exposé où l'on passe 10 minutes.",
+  "Portes et ports": "Un port est un point d'amarrage sur l'enveloppe d'un élément. Relier deux ports colle les deux éléments face à face. L'écart est la longueur du tunnel entre eux.",
+  "Connexions": "Le chemin à parcourir depuis l'extérieur jusqu'à cet élément, et les règles de passage : on ne passe pas du dehors poussiéreux à la chambre sans traverser un sas.",
+  "Ce qu'il pèse": "Le volume de l'enveloppe, la masse, et le véhicule qui l'apporte. « ? à estimer » veut dire que la masse n'est pas encore connue.",
+  "Place dans l'ensemble": "Où l'élément se trouve. Un seul élément, l'ancre, a une position écrite à la main ; les autres en découlent par leurs ports.",
+  "Niveaux": "Les planchers à l'intérieur du module. Sur la Lune il y a un haut et un bas : on vit sur des planchers plats, pas en apesanteur.",
+  "Dimensions": "Les mesures de la forme. Une valeur que tu changes devient une hypothèse (▨) : elle reste à justifier.",
+  "Forme": "Le gabarit de l'élément, choisi dans un catalogue : cylindre couché ou debout, dôme, tore…",
+  "Ensemble": "L'état de tout l'assemblage : les ports reliés se font-ils bien face, et combien de règles de connexion sont respectées.",
+  "Le ciel vu depuis l'intérieur": "Une image du ciel tout autour d'un point de l'habitat. Chaque direction est colorée selon l'épaisseur de matière qu'un rayon doit traverser pour arriver jusque-là.",
+  "Le plan : où le ciel": "Le plan de l'habitat coloré selon la protection : on voit d'un coup d'œil les endroits où il vaut mieux ne pas rester longtemps."
+ }
+}

@@ -50,6 +50,8 @@
   .gros { font: 600 18px var(--mono); }
   .ok { color: #2f8a3c; } .non { color: #c23b12; } .inc { color: #b07a10; }
   .st { font: 12px var(--mono); color: var(--texte-2); }
+  .liaison { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+  .liaison input { width: 52px; } .liaison select { max-width: 190px; }
   .port { display: grid; grid-template-columns: 22px 1fr auto; gap: 2px 8px; align-items: center; font-size: 13px; padding: 5px 0; border-top: 1px solid var(--filet); }
   .port b { font: 600 13px var(--mono); }
   .port .pt { width: 12px; height: 12px; border-radius: 50%; background: #9a9a9a; }
@@ -94,8 +96,14 @@ import { ficheAssemblee } from './assemblage.js';
 import { analyser, porteDe, zoneDe, transitionDe } from './connexions.js';
 
 const Q = new URLSearchParams(location.search);
-const ficheNom = Q.get('fiche') || 'pole-sud-esquisse.json';
-const [F, R, CX] = await Promise.all([ficheNom, 'regles.json', 'connexions.json'].map(u => fetch(u).then(r => r.json())));
+// Mémoire du navigateur : ce que tu changes ici est gardé et passe au Fichier (plan, coupe, jouet) et à la 3D
+const MEM = { lire() { try { return JSON.parse(localStorage.getItem('kibsu-fiches')) || {}; } catch (e) { return {}; } },
+  ecrire(nom, G) { try { const m = MEM.lire(); m[nom] = G; localStorage.setItem('kibsu-fiches', JSON.stringify(m)); localStorage.setItem('kibsu-fiche', nom); } catch (e) { /* pas de stockage */ } },
+  oublier(nom) { try { const m = MEM.lire(); delete m[nom]; localStorage.setItem('kibsu-fiches', JSON.stringify(m)); } catch (e) { /* idem */ } } };
+let ACTIVE = null; try { ACTIVE = localStorage.getItem('kibsu-fiche'); } catch (e) { /* idem */ }
+const ficheNom = Q.get('fiche') || ACTIVE || 'pole-sud-esquisse.json';
+const [F0, R, CX] = await Promise.all([ficheNom, 'regles.json', 'connexions.json'].map(u => fetch(u).then(r => r.json())));
+const F = MEM.lire()[ficheNom] || F0;
 document.getElementById('nomfiche').textContent = F.nom;
 const FICHES = [['pole-sud-esquisse.json', 'Esquisse'], ['pole-sud-fenetre-protegee.json', 'Fenêtre protégée'], ['pole-sud-zones.json', 'Zones'], ['pole-sud-connexions.json', 'Connexions (exemple)']];
 { const s = document.getElementById('fiches');
@@ -461,7 +469,7 @@ function panneau() {
     const ch = CHAMPS.filter(([k]) => e.forme[k] != null);
     if (ch.length) {
       const c = carte('Dimensions', ch.map(([k, n]) => `<div class="ligne"><span>${n}</span><span><input type="number" step="0.1" min="0" data-k="${k}" value="${val(e.forme[k])}"> <span class="st">${stat(e.forme[k])}</span></span></div>`).join('')
-        + `<div class="note">Une valeur modifiée ici devient ▨ (hypothèse). Rien n'est enregistré tant que tu ne télécharges pas la fiche.</div>`);
+        + `<div class="note">Une valeur modifiée ici devient ▨ (hypothèse). Gardé dans ce navigateur : la 3D et le Fichier suivent.</div>`);
       c.querySelectorAll('input').forEach(inp => inp.addEventListener('change', () => {
         const v = parseFloat(inp.value); if (!(v > 0)) return;
         const k = inp.dataset.k, ancien = e.forme[k];
@@ -593,6 +601,7 @@ function panneau() {
       const P = porteDe(qf, CX);
       const l = A.liens.find(l => (l.de === e.id && l.port_de === q.id) || (l.vers === e.id && l.port_vers === q.id));
       const voisin = q.relie_a?.split('.')[0];
+      const lf = lienDe(e.id, q.id);
       const res = X.portes.find(x => x.element === e.id && x.port === q.id)?.msgs || [];
       const lat = !String(qf.face || '').includes('z');
       return `<div class="port"><span class="pt ${q.relie_a ? '' : 'libre'}"></span>
@@ -600,9 +609,11 @@ function panneau() {
         ${voisin ? `<button data-v="${voisin}">→ ${q.relie_a}</button>` : `<span class="note">${P.exterieure ? 'dehors' : 'libre'}</span>`}
         <span></span><span style="display:flex;gap:4px;flex-wrap:wrap"><select data-porte="${q.id}" aria-label="Type de porte">${optPorte(qf.porte)}</select>${lat && NV.length ? `<select data-niv="${q.id}" aria-label="Niveau de la porte">${optNiv(qf.niveau)}</select>` : ''}</span><span></span>
         ${l && l.ecart ? `<span></span><span class="note">tunnel / couloir ${fmt(l.ecart)} m${l.brut?.circulation ? ' · ' + l.brut.circulation : ''}</span><span></span>` : ''}
+        <span></span><span class="liaison">${optLien(q.id)}${lf ? `<label>écart <input type="number" step="0.5" min="0" data-ecart="${q.id}" value="${fmt(val(lf.ecart_m) || 0)}"> m</label><select data-type="${q.id}" aria-label="Type de liaison">${Object.entries(CX.liaisons).map(([k, x]) => `<option value="${k}" ${k === lf.type ? 'selected' : ''}>${x.nom || k}</option>`).join('')}</select>` : `<button data-suppr="${q.id}" title="Retirer ce port">✕</button>`}</span><span></span>
         <span></span><span>${res.map(m => `<div class="msg">${ICO[m.etat]} ${m.texte} <b>${m.regle}</b></div>`).join('')}</span><span></span></div>`;
-    }).join('') + `<details style="margin-top:6px"><summary class="note">Ce que doit faire chaque porte étanche (NASA-STD-3001 Vol. 2)</summary><div class="note">${CX.regles.exigences_porte_etanche}</div></details>`);
+    }).join('') + ajoutPort() + `<details style="margin-top:6px"><summary class="note">Ce que doit faire chaque porte étanche (NASA-STD-3001 Vol. 2)</summary><div class="note">${CX.regles.exigences_porte_etanche}</div></details>`);
     c.querySelectorAll('button[data-v]').forEach(b => b.onclick = () => choisir(b.dataset.v));
+    brancherLiaisons(c, e);
     c.querySelectorAll('select[data-porte]').forEach(s => s.onchange = () => {
       const qf = e.ports.find(p => p.id === s.dataset.porte); qf.porte = s.value || undefined;
       if (s.value) { delete qf.diametre_m; delete qf.type; }
@@ -612,7 +623,7 @@ function panneau() {
       const qf = e.ports.find(p => p.id === s.dataset.niv); if (s.value) { qf.niveau = s.value; delete qf.hauteur_m; } else delete qf.niveau;
       tout();
     });
-  } else if (!e.dans) carte('Ports d\'amarrage', `<div class="note">Aucun port : cet élément n'est pas placé par l'assemblage${e.forme?.type === 'butte' ? ' (la butte se calcule autour des modules)' : ''}.</div>`);
+  } else if (!e.dans) { const c = carte('Ports d\'amarrage', `<div class="note">Aucun port : cet élément n'est pas placé par l'assemblage${e.forme?.type === 'butte' ? ' (la butte se calcule autour des modules)' : ''}.</div>${e.forme && e.forme.type !== 'butte' ? ajoutPort() : ''}`); brancherLiaisons(c, e); }
 
   // Connexions : liaisons de cet élément, règles de l'élément, parcours depuis dehors
   {
@@ -638,31 +649,82 @@ function panneau() {
     const bon = !pose.assemble || pose.ancre || ((pose.ecart_m ?? 0) <= 0.01 && (pose.ecart_rot ?? 0) <= 0.5);
     carte('Place dans l\'ensemble', `
       <div class="ligne"><span>${pose.ancre ? 'Ancre : garde sa position' : pose.assemble ? 'Placé par les ports' : 'Placé à la main'}</span><span class="${bon ? 'ok' : 'non'}">${bon ? '✓' : '✗'}</span></div>
-      <div class="ligne"><span>Position</span><span class="st">[${pose.pos.map(x => fmt(x)).join(', ')}] m · ${fmt(pose.rot, 0)}°</span></div>
+      ${pose.ancre ? `<div class="ligne"><span>x · y · rotation</span><span class="liaison"><input type="number" step="1" data-pos="0" value="${fmt(pose.pos[0])}"> <input type="number" step="1" data-pos="1" value="${fmt(pose.pos[1])}"> <input type="number" step="15" data-rot value="${fmt(pose.rot, 0)}">°</span></div>
+      <div class="note">Les autres éléments suivent l'ancre par leurs ports.</div>`
+      : `<div class="ligne"><span>Position</span><span class="st">[${pose.pos.map(x => fmt(x)).join(', ')}] m · ${fmt(pose.rot, 0)}°</span></div>`}
       ${!bon ? `<div class="note">Écrit en [${pose.ecrit.pos.join(', ')}] : les ports le déplacent de ${fmt(pose.ecart_m, 2)} m.</div>` : ''}`);
   }
+
+  P.querySelectorAll('input[data-pos]').forEach(i => i.onchange = () => { e.position_m[+i.dataset.pos] = +i.value || 0; tout(); });
+  P.querySelectorAll('input[data-rot]').forEach(i => i.onchange = () => { const r = +i.value || 0; if (r) e.rotation_deg = r; else delete e.rotation_deg; tout(); });
 
   // Ensemble
   const msgs = [...A.erreurs.map(x => `<div class="ligne non">✗ ${x}</div>`), ...A.avertissements.map(x => `<div class="ligne inc">! ${x}</div>`)];
   const c = carte('Ensemble', (msgs.join('') || `<div class="ligne ok">✓ tous les ports reliés se font face</div>`)
     + `<div class="ligne"><span>Connexions</span><span><span class="ok">${X.resume.ok} ✓</span> · <span class="non">${X.resume.non} ✗</span> · <span class="inc">${X.resume.doute} ?</span></span></div>`
     + `<div class="actions" style="margin-top:6px"><button id="dl">Télécharger la fiche</button><a href="controle.html?fiche=${encodeURIComponent(ficheNom)}">Contrôler l'ensemble</a></div>`
-    + `<div class="note">La fiche téléchargée contient les dimensions modifiées et les positions données par les ports. Pour la garder, remplace ${ficheNom}.</div>`);
+    + `<div class="note">Tes changements sont gardés dans ce navigateur et repris par la 3D et le Fichier. « Télécharger » en fait un fichier ; « Fiche d'origine » efface tout.</div>`);
   c.querySelector('#dl').onclick = telecharger;
+  { const o = document.createElement('button'); o.textContent = '↺ Fiche d\'origine'; c.querySelector('.actions').appendChild(o);
+    o.onclick = () => { if (confirm('Effacer tes changements et revenir à la fiche d\'origine ?')) { MEM.oublier(ficheNom); location.reload(); } }; }
 }
 
-function telecharger() {
+function figee() {
   const G = structuredClone(F);
   for (const e of G.elements) {
     const p = A.poses[e.id];
     if (p?.assemble) { e.position_m = p.pos.map(x => +x.toFixed(3)); if (p.rot) e.rotation_deg = +p.rot.toFixed(3); else delete e.rotation_deg; }
   }
+  return G;
+}
+function telecharger() {
+  const G = figee();
   const url = URL.createObjectURL(new Blob([JSON.stringify(G, null, 1) + '\n'], { type: 'application/json' }));
   const a = document.createElement('a'); a.href = url; a.download = ficheNom; a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function tout() { A = assembler(F, CX); X = analyser(F, CX, A); liste(); panneau(); construire(); }
+// Liaisons : une liaison relie deux ports (« M1.B » → « M2.A ») ; l'écart est la longueur du tunnel ou du couloir
+function lienDe(id, port) { const k = `${id}.${port}`; return (F.liaisons || []).find(l => l.de === k || l.vers === k); }
+function optLien(port) {
+  const e = E[sel], lf = lienDe(e.id, port), k = `${e.id}.${port}`, cur = lf ? (lf.de === k ? lf.vers : lf.de) : '';
+  const libres = F.elements.filter(x => x.id !== e.id && x.ports?.length).flatMap(x => x.ports.map(q => `${x.id}.${q.id}`))
+    .filter(p => p === cur || !(F.liaisons || []).some(l => l.de === p || l.vers === p));
+  return `<select data-lien="${port}" aria-label="Relier ce port à"><option value="">— libre</option>${libres.map(p => `<option value="${p}" ${p === cur ? 'selected' : ''}>→ ${p}${E[p.split('.')[0]]?.nom ? ' · ' + E[p.split('.')[0]].nom.slice(0, 24) : ''}</option>`).join('')}</select>`;
+}
+function ajoutPort() {
+  return `<div class="ligne" style="margin-top:6px"><span>Ajouter un port</span><span class="liaison"><select id="face-port">${[['+x', 'bout +x'], ['-x', 'bout −x'], ['+y', 'côté +y'], ['-y', 'côté −y'], ['+z', 'dessus']].map(([k, n]) => `<option value="${k}">${n}</option>`).join('')}</select><button id="ajout-port">+ port</button></span></div>`;
+}
+function brancherLiaisons(c, e) {
+  F.liaisons ||= [];
+  c.querySelectorAll('select[data-lien]').forEach(s => s.onchange = () => {
+    const k = `${e.id}.${s.dataset.lien}`, ancien = lienDe(e.id, s.dataset.lien);
+    if (ancien) F.liaisons.splice(F.liaisons.indexOf(ancien), 1);
+    if (s.value) {
+      const autre = E[s.value.split('.')[0]];
+      if (!autre.position_m) autre.position_m = [0, 0, 0];
+      F.liaisons.push({ de: k, vers: s.value, type: ancien?.type || 'jonction', ...(ancien?.ecart_m ? { ecart_m: ancien.ecart_m } : {}) });
+    }
+    tout();
+  });
+  c.querySelectorAll('input[data-ecart]').forEach(i => i.onchange = () => {
+    const l = lienDe(e.id, i.dataset.ecart), v = Math.max(0, +i.value || 0);
+    if (v) l.ecart_m = { v, s: '▨', src: 'modifié dans l\'atelier' }; else delete l.ecart_m;
+    tout();
+  });
+  c.querySelectorAll('select[data-type]').forEach(s => s.onchange = () => { lienDe(e.id, s.dataset.type).type = s.value; tout(); });
+  c.querySelectorAll('button[data-suppr]').forEach(b => b.onclick = () => { e.ports = e.ports.filter(q => q.id !== b.dataset.suppr); tout(); });
+  const ap = c.querySelector('#ajout-port');
+  if (ap) ap.onclick = () => {
+    e.ports ||= [];
+    const pris = new Set(e.ports.map(q => q.id)); let id = 'A'; while (pris.has(id)) id = String.fromCharCode(id.charCodeAt(0) + 1);
+    const face = c.querySelector('#face-port').value, modele = e.ports[0];
+    e.ports.push({ id, face, porte: modele?.porte || CX.porte_par_defaut?.ecoutille, ...(modele?.hauteur_m && face !== '+z' ? { hauteur_m: modele.hauteur_m } : {}), type: 'ecoutille', nom: 'ajouté dans l\'atelier' });
+    if (!e.position_m) e.position_m = [0, 0, 0];
+    tout();
+  };
+}
+function tout() { A = assembler(F, CX); if (Object.values(A.poses).some(p => p.assemble && !p.ancre && (p.ecart_m > 0.01 || p.ecart_rot > 0.5))) { for (const x of F.elements) { const p = A.poses[x.id]; if (p?.assemble) { x.position_m = p.pos.map(v => +v.toFixed(3)); if (p.rot) x.rotation_deg = +p.rot.toFixed(3); else delete x.rotation_deg; } } A = assembler(F, CX); } X = analyser(F, CX, A); liste(); panneau(); construire(); MEM.ecrire(ficheNom, figee()); }
 function choisir(id) {
   sel = id;
   const u = new URL(location.href); u.searchParams.set('el', id); history.replaceState(null, '', u);

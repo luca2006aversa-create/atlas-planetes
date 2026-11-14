@@ -175,7 +175,11 @@ export function initProjets(root) {
   var CUR=[['fD','Ø modules','m',4,10,.5],['fL','Longueur modules','m',6,20,1],['fC','Couverture butte','m',0,6,.25],['fT','Talus','°',20,60,5],['fN','Équipage','pers.',1,12,1],['fJ','Durée','j',10,1000,10]];
   function libs(){return LIBS||(LIBS=Promise.all([import('./projets/rayons.js'),import('./projets/controle.js'),import('./projets/assemblage.js'),
     fetch('projets/regles.json').then(jsn),fetch('etude/donnees/habitat.json').then(jsn)]).then(function(x){return {Rz:x[0],Ct:x[1],As:x[2],R:x[3],hz:x[4].horizon.h}}))}
-  function base(nom){return BASE[nom]||(BASE[nom]=fetch('projets/'+nom).then(jsn))}
+  // mémoire du navigateur : la fiche modifiée (atelier ou curseurs) est la même pour l'atelier, le Fichier et la 3D
+  function memLire(nom){try{return (JSON.parse(localStorage.getItem('kibsu-fiches'))||{})[nom]||null}catch(e){return null}}
+  function memEcrire(nom,F){try{var m=JSON.parse(localStorage.getItem('kibsu-fiches'))||{};m[nom]=F;localStorage.setItem('kibsu-fiches',JSON.stringify(m));localStorage.setItem('kibsu-fiche',nom)}catch(e){}}
+  function memOublier(nom){try{var m=JSON.parse(localStorage.getItem('kibsu-fiches'))||{};delete m[nom];localStorage.setItem('kibsu-fiches',JSON.stringify(m))}catch(e){}}
+  function base(nom){var M=memLire(nom);return BASE[nom]||(BASE[nom]=M?Promise.resolve(M):fetch('projets/'+nom).then(jsn))}
   function lireBase(F){var m=F.elements.find(function(e){return e.pressurise&&e.forme&&e.forme.type==='cylindre'})||{forme:{}},B=F.elements.find(function(e){return e.forme&&e.forme.type==='butte'})||{forme:{}};
     return {fD:vv(m.forme.diametre_m),fL:vv(m.forme.longueur_m),fC:vv(B.forme.couverture_m),fT:vv(B.forme.talus_deg),fN:vv(F.programme.equipage),fJ:vv(F.programme.duree_jours)}}
   function valeurs(){var o={};CUR.forEach(function(c){o[c[0]]=+$(c[0]).value});return o}
@@ -185,16 +189,16 @@ export function initProjets(root) {
     var F=structuredClone(B),b=lireBase(B),dD=v.fD-b.fD;
     F.elements.forEach(function(e){
       var f=e.forme||{};
-      if(e.pressurise&&f.type==='cylindre'){setv(f,'diametre_m',v.fD);setv(f,'longueur_m',v.fL);if(e.arrivee&&e.arrivee.dimensions_vol_m)e.arrivee.dimensions_vol_m=[v.fD,v.fL]}
-      if(f.type==='butte'){setv(f,'couverture_m',v.fC);setv(f,'talus_deg',v.fT)}
+      if(e.pressurise&&f.type==='cylindre'&&(v.fD!==b.fD||v.fL!==b.fL)){if(v.fD!==b.fD)setv(f,'diametre_m',v.fD);if(v.fL!==b.fL)setv(f,'longueur_m',v.fL);if(e.arrivee&&e.arrivee.dimensions_vol_m)e.arrivee.dimensions_vol_m=[vv(f.diametre_m),vv(f.longueur_m)]}
+      if(f.type==='butte'){if(v.fC!==b.fC)setv(f,'couverture_m',v.fC);if(v.fT!==b.fT)setv(f,'talus_deg',v.fT)}
       // ouvertures : la fente directe suit la paroi du module ; le périscope (puits, chambre, fente haute) suit son plafond
       var p=f.centre_m||f.oeil_m;
       if(dD&&p&&p.length===3){if(f.type==='fente'&&e.dans==='M2')p[1]+=dD/2;else p[2]+=dD}
     });
-    if(F.protection)setv(F.protection,'epaisseur_m',v.fC);                 // une seule épaisseur : celle de la butte
-    setv(F.programme,'equipage',v.fN);setv(F.programme,'duree_jours',v.fJ);
+    if(F.protection&&v.fC!==b.fC)setv(F.protection,'epaisseur_m',v.fC);                 // une seule épaisseur : celle de la butte
+    if(v.fN!==b.fN)setv(F.programme,'equipage',v.fN);if(v.fJ!==b.fJ)setv(F.programme,'duree_jours',v.fJ);
     var G=F;try{G=As.ficheAssemblee(F)}catch(e){}
-    if(JSON.stringify(v)!==JSON.stringify(b))G.nom=B.nom+' · modifiée';
+    if(JSON.stringify(v)!==JSON.stringify(b))G.nom=/ · modifiée$/.test(B.nom)?B.nom:B.nom+' · modifiée';
     return G}
   function majFiche(vite){
     afficherCurs();var nom=S.fiche;
@@ -204,7 +208,7 @@ export function initProjets(root) {
   }
   // le jouet suit la fiche : ses valeurs viennent des modules et de la butte ; la page 3D reçoit la même fiche (sessionStorage)
   function accorder(){var G=geom();if(G){S.R=G.hm/2;S.H=G.hm;S.E=G.C;S.N=G.M.length;S.O=0}if(S.F.site&&SITES[S.F.site.corps])S.site=S.F.site.corps;
-    try{sessionStorage.setItem('kibsu-fiche',JSON.stringify({nom:S.fiche,F:S.F}))}catch(e){}rendre()}
+    memEcrire(S.fiche,S.F);rendre()}
   function nouvelleFiche(){var nom=S.fiche;base(nom).then(function(B){if(S.fiche!==nom)return;var b=lireBase(B);CUR.forEach(function(c){$(c[0]).value=b[c[0]]});majFiche(true)})}
   // un seul calcul par version de la fiche : zones (rayons.js) puis règles (controle.js, avec la dose des zones)
   function calculer(){
@@ -271,8 +275,10 @@ export function initProjets(root) {
   $('fcurs').innerHTML=CUR.map(function(c){return '<div class="pj-p"><label for="'+c[0]+'">'+c[1]+'</label><output id="o'+c[0]+'"></output><input type="range" id="'+c[0]+'" min="'+c[3]+'" max="'+c[4]+'" step="'+c[5]+'"></div>'}).join('');
   CUR.forEach(function(c){$(c[0]).addEventListener('input',function(){majFiche(false)})});
   $('fsauve').onclick=function(){if(!S.F)return;var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S.F,null,1)],{type:'application/json'}));a.download=S.fiche.replace('.json','')+'-modifiee.json';a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},2000)};
-  $('forig').onclick=nouvelleFiche;
+  $('forig').onclick=function(){memOublier(S.fiche);delete BASE[S.fiche];nouvelleFiche()};
   addEventListener('message',function(e){if(e.origin===location.origin&&e.data==='kibsu-pret'){$('site3d').dataset.pret='1';envoyer3d()}});
+  try{var fa=localStorage.getItem('kibsu-fiche');if(fa&&root.querySelector('#fiches button[data-f="'+fa+'"]'))S.fiche=fa}catch(e){}
+  [].forEach.call(root.querySelectorAll('#fiches button'),function(x){x.classList.toggle('on',x.dataset.f===S.fiche)});
   nouvelleFiche();
   $('grand').onclick=function(){var a=root.querySelector('.pj-app'),g=a.classList.toggle('pj-grand');this.textContent=g?'⤡ Réduire':'⤢ Grand écran'};
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.querySelector('.pj-app.pj-grand'))$('grand').click()});

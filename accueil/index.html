@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kibsu · accueil</title>
+<link rel="icon" type="image/png" href="../logo-d.png">
+<script src="../nav.js" defer data-fixe data-ton="sombre"></script>
+<style>
+  :root { --nuit:#070709; --craie:#f2ede4; --gris:#a8a8a8; --vif:#e4572e; --sans:Inter,"Segoe UI",system-ui,sans-serif; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--nuit); color: var(--craie); font: 15px/1.45 var(--sans); }
+  /* fond : le système solaire (orbites vues de dessus, qui tournent lentement) */
+  .ciel { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+  .ciel svg { position: absolute; left: 50%; top: 50%; width: max(150vw, 1300px); height: max(150vw, 1300px); transform: translate(-50%, -50%); opacity: 1; }
+  .orb { fill: none; stroke: #ffffff40; stroke-width: 1; }
+  .tour { transform-origin: 0 0; animation: tourne linear infinite; }
+  @keyframes tourne { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .tour { animation: none; } }
+  .ciel::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #07070900 0, #070709b0 80%); }
+  main { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 80px 16px 60px; }
+  /* en-tête */
+  .haut { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .haut img { width: 34px; height: 34px; border-radius: 8px; }
+  .haut b { font-size: 22px; letter-spacing: .5px; }
+  h1 { font-size: clamp(26px, 5vw, 44px); line-height: 1.1; margin: 0 0 6px; font-weight: 700; }
+  .sous { color: var(--gris); max-width: 620px; margin: 0 0 26px; font-size: 16px; }
+  /* le fil : explorer → étudier → concevoir → comparer */
+  .fil { display: flex; flex-wrap: wrap; gap: 6px 4px; align-items: center; margin: 0 0 22px; font-size: 13px; color: var(--gris); }
+  .fil span { background: #ffffff12; border-radius: 999px; padding: 4px 10px; color: var(--craie); }
+  .fil i { font-style: normal; color: var(--vif); }
+  .deux-min { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; padding: 12px 16px; border-radius: 14px; background: #e4572e; color: #141414; text-decoration: none; font-size: 14.5px; }
+  .deux-min svg { width: 26px; height: 26px; flex: none; } .deux-min span { flex: 1; } .deux-min i { font-style: normal; font-size: 20px; }
+  .deux-min:hover { background: #f06a42; }
+  /* les 4 grandes parties */
+  .parties { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .partie { background: #101014d9; border: 1px solid #ffffff1f; border-radius: 16px; padding: 16px; backdrop-filter: blur(4px); display: flex; flex-direction: column; gap: 10px; }
+  .partie header { display: flex; align-items: center; gap: 12px; }
+  .pico { width: 46px; height: 46px; border-radius: 12px; background: #ffffff10; display: grid; place-items: center; flex: none; color: var(--c, var(--craie)); }
+  .pico svg { width: 28px; height: 28px; }
+  .partie h2 { margin: 0; font-size: 20px; } .partie header p { margin: 0; color: var(--gris); font-size: 13px; }
+  .partie.grande { grid-column: 1 / -1; }
+  .onglets { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+  .onglet { display: flex; gap: 10px; align-items: flex-start; padding: 9px 10px; border-radius: 10px; background: #ffffff0a; color: inherit; text-decoration: none; border: 1px solid transparent; }
+  .onglet:hover, .onglet:focus-visible { border-color: var(--vif); background: #ffffff14; outline: none; }
+  .onglet svg { width: 22px; height: 22px; flex: none; margin-top: 1px; color: var(--c, var(--craie)); }
+  .onglet b { display: block; font-size: 14px; } .onglet span { color: var(--gris); font-size: 12.5px; }
+  .aller { align-self: flex-start; margin-top: auto; color: var(--craie); text-decoration: none; font-weight: 600; font-size: 14px; border-bottom: 2px solid var(--vif); padding-bottom: 1px; }
+  .aller:hover { color: var(--vif); }
+  /* mode d'emploi */
+  .astuces { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 26px 0 0; padding: 12px 14px; border-radius: 12px; background: #ffffff0a; font-size: 13px; color: var(--gris); }
+  .astuces div { display: flex; gap: 8px; align-items: center; } .astuces svg { width: 18px; height: 18px; color: var(--vif); flex: none; }
+  footer { margin-top: 22px; color: #777; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="ciel" aria-hidden="true"><svg viewBox="-600 -600 1200 1200" id="sys"></svg></div>
+
+<main>
+  <h1>Du système solaire<br>à l'habitat lunaire</h1>
+  <p class="sous">Kibsu part du ciel et arrive à un projet d'architecture : on explore le système solaire, on étudie un site, on dessine un habitat, on le compare à ce qui existe.</p>
+
+  <div class="fil" aria-label="Le fil du site"><span>Explorer</span><i>→</i><span>Étudier</span><i>→</i><span>Concevoir</span><i>→</i><span>Comparer</span></div>
+
+  <a class="deux-min" href="../projets/resume.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><b>Comprendre le projet en 2 minutes</b> · le résumé en six étapes, de l'étude du site à l'habitat</span><i>→</i></a>
+
+  <div class="parties" id="parties"></div>
+
+  <div class="astuces">
+    <div id="a1"></div><div id="a2"></div><div id="a3"></div>
+  </div>
+  <footer>Kibsu · outil de travail, données publiques (NASA, LRO, ESA…). Les calculs sont des hypothèses d'étude, pas un dimensionnement.</footer>
+</main>
+
+<script>
+// icônes : tracés simples (24 × 24), couleur = currentColor
+const I = {
+  systeme: '<circle cx="12" cy="12" r="2.5" fill="currentColor"/><ellipse cx="12" cy="12" rx="9" ry="4.5" fill="none" stroke="currentColor" stroke-width="1.6" transform="rotate(-20 12 12)"/><circle cx="19" cy="9" r="1.4" fill="currentColor"/>',
+  globe: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><ellipse cx="12" cy="12" rx="3.6" ry="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 12h17" stroke="currentColor" stroke-width="1.4"/>',
+  fusee: '<path d="M12 3c3 2.5 4 6 3.4 10H8.6C8 9 9 5.5 12 3zM8.6 13l-2.6 3.5 3-.5zM15.4 13l2.6 3.5-3-.5zM10.5 17.5h3L12 21z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="9" r="1.3" fill="currentColor"/>',
+  lune: '<path d="M15.5 3.5a8.5 8.5 0 1 0 5 12.5 7 7 0 0 1-5-12.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',
+  cube: '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z M12 12v9 M12 12L4 7.5 M12 12l8-4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  dossier: '<path d="M3.5 7.5a1.5 1.5 0 0 1 1.5-1.5h4l2 2.5h8a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 19 19.5H5A1.5 1.5 0 0 1 3.5 18z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  outils: '<path d="M14.5 5.5a4 4 0 0 0 4.6 5.4l-8.2 8.2a2 2 0 0 1-2.8-2.8l8.2-8.2a4 4 0 0 0-1.8-2.6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  coche: '<path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+  rayon: '<circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+  livre: '<path d="M5 4.5h10a3 3 0 0 1 3 3V20H8a3 3 0 0 1-3-3z M5 17a3 3 0 0 1 3-3h10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  carte: '<path d="M3.5 6.5l5.5-2 6 2 5.5-2v13l-5.5 2-6-2-5.5 2z M9 4.5v13 M15 6.5v13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>',
+  plan: '<rect x="4" y="4" width="16" height="16" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 12h8V4 M12 16h8" fill="none" stroke="currentColor" stroke-width="1.5"/>',
+  loupe: '<circle cx="10.5" cy="10.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15 15l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+  main: '<path d="M8 12V6a1.5 1.5 0 0 1 3 0v5 M11 11V4.5a1.5 1.5 0 0 1 3 0V11 M14 11V6a1.5 1.5 0 0 1 3 0v8a6 6 0 0 1-6 6h-1a5 5 0 0 1-4-2l-2.5-3.5A1.5 1.5 0 0 1 6 14l2 2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>',
+  temps: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+  fleche: '<path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'
+};
+const ic = k => `<svg viewBox="0 0 24 24" aria-hidden="true">${I[k]}</svg>`;
+
+// [titre, couleur, icône, phrase, lien, [[icône, onglet, ce qu'on y fait, lien], …]]
+const PARTIES = [
+  ['Explorer', '#f2c14e', 'systeme', 'Le ciel, les astres, les missions', '../index.html?vue=systeme', [
+    ['systeme', 'Système', 'Les planètes sur leurs orbites, à n\'importe quelle date. Faire défiler le temps.', '../index.html?vue=systeme'],
+    ['globe', 'Planètes', 'Un globe en 3D de chaque corps, avec son relief.', '../index.html?vue=globe'],
+    ['fusee', 'Missions', 'Les sondes en vol et les lieux d\'atterrissage, par décennie et par agence.', '../index.html?vue=missions']]],
+  ['Études', '#8fb8d9', 'lune', 'Choisir un site, chiffres à l\'appui', '../etude/', [
+    ['lune', 'Étude du pôle sud de la Lune', 'Relief, soleil, ombre et glace, vue sur la Terre : où poser un habitat ? Une page à lire du haut en bas, avec des cartes.', '../etude/']]],
+  ['Projet', '#e4572e', 'cube', 'L\'habitat de crête, du site au détail', '../projets/site3d.html', [
+    ['cube', '3D', 'Le site en 3D avec le soleil et la Terre qui bougent. Le plus visuel : on commence ici.', '../projets/site3d.html'],
+    ['carte', 'Résumé', 'Tout le projet en six étapes : le site, le programme, la forme, la protection, les contrôles, où on en est.', '../projets/resume.html'],
+    ['dossier', 'Fichier', 'La fiche du projet : plan, coupe et « jouet » 3D, avec des curseurs (taille, butte, équipage).', '../index.html?vue=projets'],
+    ['outils', 'Atelier', 'Relier les modules, régler les tunnels, les portes, les distances et les positions. Tout est gardé.', '../projets/atelier.html'],
+    ['coche', 'Contrôles', 'Les règles de conception : ce qui est bon (✓), mauvais (✗) ou à vérifier (?).', '../projets/controle.html'],
+    ['rayon', 'Radiations', 'Le ciel vu de l\'intérieur : où la butte protège, où elle protège moins.', '../projets/rayons.html']]],
+  ['Références', '#9bc19a', 'livre', 'Ce qui existe déjà, du réel à la fiction', '../references/', [
+    ['livre', 'Références', 'Une bibliothèque d\'habitats et de projets, classés par forme et par thème, pour s\'inspirer et comparer.', '../references/']]]
+];
+
+document.getElementById('parties').innerHTML = PARTIES.map(([nom, c, ico, phrase, lien, ongs], i) => `
+  <section class="partie ${ongs.length > 2 ? 'grande' : ''}" style="--c:${c}">
+    <header><div class="pico">${ic(ico)}</div><div><h2>${nom}</h2><p>${phrase}</p></div></header>
+    <div class="onglets">${ongs.map(([k, t, d, l]) => `<a class="onglet" href="${l}">${ic(k)}<div><b>${t}</b><span>${d}</span></div></a>`).join('')}</div>
+    <a class="aller" href="${lien}">Ouvrir ${nom} →</a>
+  </section>`).join('');
+
+document.getElementById('a1').innerHTML = ic('fleche') + 'La barre du haut est la même partout : une partie, puis un onglet. « ? Comprendre » explique chaque page.';
+document.getElementById('a2').innerHTML = ic('main') + 'Glisser pour tourner, molette pour zoomer.';
+document.getElementById('a3').innerHTML = ic('temps') + 'Cliquer sur « Kibsu » en haut à gauche ramène à cette page.';
+
+// fond : les 8 planètes sur leurs orbites (échelle d'illustration, pas à l'échelle)
+const PL = [['#a39a8f', 3, 60, 88], ['#e3c58f', 5, 95, 225], ['#6fa8dc', 5.5, 135, 365], ['#d98f6c', 4, 175, 687], ['#d9b48f', 14, 255, 1500], ['#e3cf9b', 12, 330, 2400], ['#c9cfcc', 8, 410, 3800], ['#8d8dd9', 8, 480, 5200]];
+document.getElementById('sys').innerHTML = '<circle r="26" fill="#f2c14e"/><circle r="40" fill="#f2c14e" opacity=".12"/>' +
+  PL.map(([c, r, a, p], i) => `<circle class="orb" r="${a}"/><g class="tour" style="animation-duration:${p / 4}s;transform:rotate(${i * 47}deg)"><circle cx="${a}" r="${r}" fill="${c}"/></g>`).join('');
+
+try { sessionStorage.setItem('kibsu-accueil-vu', '1'); } catch (e) { /* sans importance */ }
+</script>
+</body>
+</html>

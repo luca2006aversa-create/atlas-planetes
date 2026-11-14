@@ -11,7 +11,7 @@
   var GROUPES = [
     { nom: 'Explorer', pages: [['Système', '?vue=systeme', 'systeme'], ['Planètes', '?vue=globe', 'globe'], ['Missions', '?vue=missions', 'missions']] },
     { nom: 'Études', pages: [['Étude du pôle sud de la Lune', 'etude/']] },
-    { nom: 'Projet', pages: [['3D', 'projets/site3d.html'], ['Fichier', '?vue=projets', 'projets'], ['Atelier', 'projets/atelier.html'], ['Contrôles', 'projets/controle.html'], ['Radiations', 'projets/rayons.html']] },
+    { nom: 'Projet', pages: [['3D', 'projets/site3d.html'], ['Résumé', 'projets/resume.html'], ['Fichier', '?vue=projets', 'projets'], ['Atelier', 'projets/atelier.html'], ['Contrôles', 'projets/controle.html'], ['Radiations', 'projets/rayons.html']] },
     { nom: 'Références', pages: [['Références', 'references/']] }
   ];
   var chemin = function (p) { return p.replace(/index\.html$/, ''); };
@@ -52,7 +52,7 @@
   };
   var h = document.createElement('header');
   h.className = 'kb' + (s.dataset.ton === 'sombre' ? ' sombre' : '');
-  h.innerHTML = '<div class="kb-r1"><a class="kb-marque" href="' + BASE.href + '"><img src="' + url('logo-d.png') + '" alt=""><b>Kibsu</b></a>' +
+  h.innerHTML = '<div class="kb-r1"><a class="kb-marque" href="' + url('accueil/') + '" title="Accueil"><img src="' + url('logo-d.png') + '" alt=""><b>Kibsu</b></a>' +
     '<nav class="kb-groupes" aria-label="Parties de Kibsu">' +
     GROUPES.map(function (g, i) { return '<a class="kb-g" data-groupe="' + i + '" href="' + url(g.pages[0][1]) + '">' + g.nom + '</a>'; }).join('') +
     '</nav><span class="kb-droite"></span></div>' +
@@ -79,6 +79,7 @@
     trouve = 0;
   }
   groupe(trouve);
+  if (trouve < 0) h.querySelector('.kb-r2').style.display = 'none';   // page d'accueil : aucun groupe ouvert, pas de rangée vide
 
   var ancien = document.querySelector('body > header');   // l'accueil avait sa propre barre : remplacée
   if (ancien) ancien.replaceWith(h); else document.body.prepend(h);
@@ -88,4 +89,5 @@
     var cur = nv.querySelector('.on');
     if (cur && nv.scrollWidth > nv.clientWidth) nv.scrollLeft = cur.offsetLeft - nv.clientWidth / 2;
   });
+  var aide = document.createElement('script'); aide.src = url('aide.js'); document.head.appendChild(aide);   // intros de page et « ? » (textes : aide.json)
 })();
